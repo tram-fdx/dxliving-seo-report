@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DX Living — SEO Performance Report / Báo cáo Hiệu suất SEO</title>
+<style>
+  :root{
+    --bg:#f5f6f8; --card:#fff; --ink:#191c20; --muted:#6b7280; --faint:#9aa0a8;
+    --line:#e7e9ec; --line2:#f0f1f3;
+    --accent:#e0533d; --accent-soft:#fdece8;
+    --green:#1f9d6b; --green-soft:#e8f6ef;
+    --red:#d64545; --red-soft:#fbeaea;
+    --amber:#b7791f; --amber-soft:#fdf4e3;
+    --blue:#2b6cb0; --blue-soft:#eaf1f8;
+    --violet:#7c3aed; --violet-soft:#f3ecfa;
+    --radius:14px; --shadow:0 1px 2px rgba(16,24,40,.04),0 1px 3px rgba(16,24,40,.06);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;-webkit-font-smoothing:antialiased;font-size:14px}
+  .wrap{max-width:1120px;margin:0 auto;padding:34px 20px 72px}
+
+  /* i18n */
+  .en{display:none}
+  body.lang-en .vi{display:none}
+  body.lang-en .en{display:inline}
+
+  /* language switch */
+  .langsw{position:fixed;top:14px;right:16px;z-index:60;display:flex;background:#fff;border:1px solid var(--line);border-radius:999px;overflow:hidden;box-shadow:var(--shadow)}
+  .langsw button{border:0;background:transparent;padding:7px 15px;font-size:12.5px;font-weight:800;color:var(--muted);cursor:pointer;letter-spacing:.4px;transition:.15s}
+  .langsw button.active{background:var(--accent);color:#fff}
+  .langsw button:not(.active):hover{background:#f5f6f8}
+
+  header.top{margin-bottom:20px}
+  .eyebrow{font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin:0 0 8px}
+  .title{font-size:28px;font-weight:800;letter-spacing:-.5px;margin:0 0 8px;display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+  .title .brand-dot{width:12px;height:12px;border-radius:50%;background:var(--accent);display:inline-block}
+  .subtitle{font-size:13.5px;color:var(--muted);margin:0;max-width:840px}
+  .subtitle b{color:#3a3f45;font-weight:600}
+  .metastrip{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+  .tag{display:inline-flex;align-items:center;gap:6px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:4px 12px;font-size:12px;color:#3a3f45;font-weight:600}
+  .tag.on{background:var(--green-soft);border-color:#cdeadd;color:var(--green)}
+
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px 24px;margin-bottom:18px}
+  .section-label{font-size:12px;font-weight:800;letter-spacing:.7px;text-transform:uppercase;color:var(--muted);margin:0 0 4px;display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+  .section-label .bar{width:26px;height:3px;border-radius:2px;background:var(--accent)}
+  .section-sub{font-size:12.5px;color:var(--faint);margin:2px 0 18px;padding-left:35px}
+
+  .status{border:1px solid #cdeadd;background:linear-gradient(180deg,#f7fdfa,#fff);border-radius:12px;padding:14px 16px;display:flex;gap:13px;align-items:flex-start}
+  .status .ic{flex:0 0 auto;width:30px;height:30px;border-radius:8px;background:var(--green-soft);color:var(--green);display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800}
+  .status .body h4{margin:0 0 3px;font-size:13.5px;font-weight:700}
+  .status .body p{margin:0;font-size:12.5px;color:#55606b}
+
+  .exec{border-left:3px solid var(--accent);background:var(--accent-soft);border-radius:0 10px 10px 0;padding:16px 18px;margin-bottom:16px}
+  .exec p{margin:0;font-size:14px;color:#3a3f45}
+  .exec p b{color:var(--ink)}
+  .exec .big{font-size:15px;font-weight:700;color:var(--ink);margin-bottom:6px}
+
+  .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  .kpis.k3{grid-template-columns:repeat(3,1fr)}
+  .kpi{border:1px solid var(--line);border-radius:12px;padding:14px 15px;background:#fcfcfd}
+  .kpi .k-label{font-size:11.5px;color:var(--muted);font-weight:600}
+  .kpi .k-val{font-size:26px;font-weight:800;margin-top:4px;letter-spacing:-.6px;line-height:1.1}
+  .kpi .k-sub{font-size:11.5px;color:var(--faint);margin-top:4px}
+  .delta{display:inline-flex;align-items:center;gap:3px;font-size:11.5px;font-weight:700;border-radius:999px;padding:2px 7px;margin-top:6px}
+  .delta.up{background:var(--green-soft);color:var(--green)}
+  .delta.down{background:var(--amber-soft);color:var(--amber)}
+  .delta.flat{background:#eef0f2;color:#6b7280}
+  .delta.bad{background:var(--red-soft);color:var(--red)}
+
+  table{width:100%;border-collapse:collapse;font-size:13px;margin-top:6px}
+  thead th{text-align:left;font-size:10.5px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--muted);padding:0 10px 9px;border-bottom:1px solid var(--line)}
+  thead th.num{text-align:right}
+  tbody td{padding:10px;border-bottom:1px solid var(--line2);vertical-align:middle}
+  tbody td.num{text-align:right;font-variant-numeric:tabular-nums;font-weight:600}
+  tbody tr:last-child td{border-bottom:none}
+  .mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;color:#3a3f45}
+  .new{font-size:10px;font-weight:700;color:var(--violet);background:var(--violet-soft);border-radius:5px;padding:1px 6px;text-transform:uppercase;letter-spacing:.4px}
+  .brandq{font-size:10px;font-weight:700;color:var(--accent);background:var(--accent-soft);border-radius:5px;padding:1px 6px}
+
+  .barrow{display:grid;grid-template-columns:130px 1fr 54px;align-items:center;gap:12px;margin:9px 0;font-size:12.5px}
+  .barrow .lab{color:#3a3f45;font-weight:600}
+  .bartrack{background:#eef0f2;border-radius:6px;height:16px;overflow:hidden}
+  .barfill{height:100%;border-radius:6px}
+  .barrow .val{text-align:right;font-weight:700;font-variant-numeric:tabular-nums}
+
+  .lead{font-size:13.5px;color:#3a3f45;margin:0 0 16px}
+  .lead b{color:var(--accent);font-weight:700}
+  .snap-badge{display:inline-block;font-size:10.5px;font-weight:700;color:var(--muted);background:#f2f3f5;border:1px solid var(--line);border-radius:6px;padding:2px 8px;margin-left:4px}
+
+  .pill{display:inline-block;font-size:11px;font-weight:600;border-radius:999px;padding:3px 10px;border:1px solid transparent}
+  .pill.builder{background:var(--blue-soft);color:var(--blue);border-color:#d3e2f0}
+  .pill.media{background:var(--violet-soft);color:var(--violet);border-color:#e4d6f6}
+  .pill.plan{background:var(--green-soft);color:var(--green);border-color:#cdeadd}
+  .ai{display:inline-flex;align-items:center;gap:3px;font-size:10px;font-weight:700;color:var(--accent);background:var(--accent-soft);border-radius:6px;padding:2px 7px;margin-left:5px}
+
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+  .chip{font-size:12px;font-weight:600;color:#2f3438;background:#fff;border:1px solid var(--line);border-radius:999px;padding:5px 12px;display:inline-flex;align-items:center;gap:6px}
+  .chip .dot{width:6px;height:6px;border-radius:50%;background:var(--accent)}
+  .note{font-size:12px;color:var(--muted);margin-top:14px;line-height:1.6;border-top:1px dashed var(--line);padding-top:12px}
+  .note b{color:#55606b}
+
+  .issue{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--line2)}
+  .issue:last-child{border-bottom:none}
+  .sev{flex:0 0 auto;font-size:10px;font-weight:800;letter-spacing:.4px;text-transform:uppercase;padding:3px 8px;border-radius:6px;height:fit-content}
+  .sev.crit{background:var(--red-soft);color:var(--red)}
+  .sev.warn{background:var(--amber-soft);color:var(--amber)}
+  .sev.ok{background:var(--green-soft);color:var(--green)}
+  .issue .it h5{margin:0 0 3px;font-size:13.5px;font-weight:700}
+  .issue .it p{margin:0;font-size:12.5px;color:#55606b}
+
+  .strat{display:grid;grid-template-columns:1fr;gap:12px}
+  .scard{border:1px solid var(--line);border-radius:12px;padding:15px 17px;background:#fcfcfd;display:flex;gap:13px}
+  .scard .num{flex:0 0 auto;width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;color:#fff;background:var(--accent)}
+  .scard.two .num{background:var(--blue)} .scard.three .num{background:var(--green)}
+  .scard .sc-body h4{margin:1px 0 4px;font-size:14px;font-weight:700}
+  .scard .sc-body p{margin:0;font-size:12.8px;color:#4a5058}
+  .scard .sc-body p b{color:var(--ink);font-weight:700}
+  .tagline{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;padding:2px 8px;border-radius:6px;margin-bottom:3px}
+  .tagline.t1{color:var(--accent);background:var(--accent-soft)}
+  .tagline.t2{color:var(--blue);background:var(--blue-soft)}
+  .tagline.t3{color:var(--green);background:var(--green-soft)}
+
+  .cols2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .action-list{margin:0;padding:0;list-style:none}
+  .action-list li{padding:9px 0 9px 26px;position:relative;font-size:13px;color:#3a3f45;border-bottom:1px solid var(--line2)}
+  .action-list li:last-child{border-bottom:none}
+  .action-list li::before{content:"";position:absolute;left:4px;top:14px;width:8px;height:8px;border-radius:2px;background:var(--accent)}
+  .action-list li b{color:var(--ink)}
+  .prio{font-size:10px;font-weight:800;letter-spacing:.3px;padding:1px 6px;border-radius:5px;margin-left:6px}
+  .prio.p0{background:var(--red-soft);color:var(--red)} .prio.p1{background:var(--amber-soft);color:var(--amber)} .prio.p2{background:var(--blue-soft);color:var(--blue)}
+
+  footer.foot{margin-top:24px;font-size:11.5px;color:#9aa0a8;text-align:center;line-height:1.8}
+  footer.foot b{color:#6b7280}
+  h3.block{font-size:13px;font-weight:700;color:#3a3f45;margin:22px 0 8px}
+
+  @media (max-width:760px){
+    .kpis,.kpis.k3{grid-template-columns:repeat(2,1fr)}
+    .cols2{grid-template-columns:1fr}
+    .wrap{padding:24px 14px 52px}
+    .barrow{grid-template-columns:96px 1fr 46px}
+    .langsw{top:8px;right:8px}
+  }
+</style>
+</head>
+<body>
+
+<div class="langsw">
+  <button id="bvi" class="active" onclick="setLang('vi')">VI</button>
+  <button id="ben" onclick="setLang('en')">EN</button>
+</div>
+
+<div class="wrap">
+
+  <header class="top">
+    <p class="eyebrow"><span class="vi">DX Living · Báo cáo hiệu suất tìm kiếm</span><span class="en">DX Living · Search Performance Report</span></p>
+    <h1 class="title"><span class="brand-dot"></span> <span class="vi">Báo cáo Hiệu suất SEO — dxliving.com</span><span class="en">SEO Performance Report — dxliving.com</span></h1>
+    <p class="subtitle">
+      <span class="vi"><b>Cập nhật mới nhất: 28 ngày</b> (GSC 27/06→23/07 · GA4 29/06→26/07), đọc trực tiếp từ Chrome · kèm chi tiết tham chiếu <b>Tháng 6/2026</b>, <b>SERP Úc 30/06</b> và <b>audit kỹ thuật 21/07</b>.</span>
+      <span class="en"><b>Latest update: last 28 days</b> (GSC 27 Jun→23 Jul · GA4 29 Jun→26 Jul), read directly from Chrome · plus <b>June 2026</b> reference detail, <b>AU SERP 30 Jun</b> and <b>21 Jul technical audit</b>.</span>
+    </p>
+    <div class="metastrip">
+      <span class="tag on">✓ Google Search Console (live)</span>
+      <span class="tag on">✓ Google Analytics 4 (live)</span>
+      <span class="tag"><span class="vi">🔎 SERP snapshot · location Úc</span><span class="en">🔎 SERP snapshot · AU location</span></span>
+      <span class="tag"><span class="vi">📅 Cập nhật: 26/07/2026</span><span class="en">📅 Updated: 26 Jul 2026</span></span>
+    </div>
+  </header>
+
+  <!-- DATA NOTE -->
+  <section class="card" style="padding:16px 18px">
+    <div class="status">
+      <div class="ic">✓</div>
+      <div class="body">
+        <h4><span class="vi">Nguồn dữ liệu: đọc trực tiếp từ Chrome (GSC + GA4)</span><span class="en">Data source: read directly from Chrome (GSC + GA4)</span></h4>
+        <p>
+          <span class="vi">Số liệu <b>28 ngày mới nhất</b> ở khối bên dưới được đọc <b>trực tiếp từ Google Search Console và GA4</b> trong trình duyệt (26/07/2026, GSC cập nhật ~4.5h trước). Đã <b>bỏ hoàn toàn Supermetrics &amp; OpenSEO</b> theo yêu cầu. Các bảng chi tiết Tháng 6 giữ lại làm mốc so sánh; audit kỹ thuật 21/07 &amp; SERP 30/06 giữ nguyên.</span>
+          <span class="en">The <b>latest 28-day</b> figures below are read <b>directly from Google Search Console and GA4</b> in the browser (26 Jul 2026; GSC last updated ~4.5h earlier). <b>Supermetrics &amp; OpenSEO fully removed</b> as requested. June detail tables are kept as a comparison baseline; the 21 Jul technical audit &amp; 30 Jun SERP snapshot are unchanged.</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- LATEST 28D -->
+  <section class="card">
+    <p class="section-label"><span class="bar"></span> <span class="vi">Cập nhật mới nhất — 28 ngày</span><span class="en">Latest update — last 28 days</span> <span class="snap-badge">LIVE · GSC + GA4 · 26/07/2026</span></p>
+    <p class="section-sub"><span class="vi">GSC: 27/06 → 23/07 · GA4: 29/06 → 26/07 · so sánh với kỳ Tháng 6/2026</span><span class="en">GSC: 27 Jun → 23 Jul · GA4: 29 Jun → 26 Jul · compared with June 2026</span></p>
+
+    <h3 class="block" style="margin-top:2px"><span class="vi">Tìm kiếm — Google Search Console</span><span class="en">Search — Google Search Console</span></h3>
+    <div class="kpis">
+      <div class="kpi"><div class="k-label">Clicks</div><div class="k-val">65</div><div class="delta up"><span class="vi">▲ +38% vs T6 (47)</span><span class="en">▲ +38% vs Jun (47)</span></div></div>
+      <div class="kpi"><div class="k-label">Impressions</div><div class="k-val">900</div><div class="delta up"><span class="vi">▲ +53% vs T6 (587)</span><span class="en">▲ +53% vs Jun (587)</span></div></div>
+      <div class="kpi"><div class="k-label"><span class="vi">CTR trung bình</span><span class="en">Average CTR</span></div><div class="k-val">7.2%</div><div class="delta down"><span class="vi">▼ từ 8.0% (T6)</span><span class="en">▼ from 8.0% (Jun)</span></div></div>
+      <div class="kpi"><div class="k-label"><span class="vi">Vị trí trung bình</span><span class="en">Average position</span></div><div class="k-val">23.2</div><div class="delta down"><span class="vi">▼ từ 13.8 (phủ rộng hơn)</span><span class="en">▼ from 13.8 (broader reach)</span></div></div>
+    </div>
+
+    <h3 class="block"><span class="vi">Website — Google Analytics 4</span><span class="en">Website — Google Analytics 4</span></h3>
+    <div class="kpis">
+      <div class="kpi"><div class="k-label">Sessions</div><div class="k-val">442</div><div class="delta up"><span class="vi">▲ +37% vs T6 (322)</span><span class="en">▲ +37% vs Jun (322)</span></div></div>
+      <div class="kpi"><div class="k-label">Engaged sessions</div><div class="k-val">272</div><div class="delta up"><span class="vi">▲ ×4.5 vs T6 (61)</span><span class="en">▲ ×4.5 vs Jun (61)</span></div></div>
+      <div class="kpi"><div class="k-label">Engagement rate</div><div class="k-val">61.5%</div><div class="delta up"><span class="vi">▲ từ 18.9% (T6)</span><span class="en">▲ from 18.9% (Jun)</span></div></div>
+      <div class="kpi"><div class="k-label">Key events</div><div class="k-val">42</div><div class="k-sub"><span class="vi">Avg engage 1m40s · 3,609 events</span><span class="en">Avg engagement 1m40s · 3,609 events</span></div></div>
+    </div>
+
+    <h3 class="block"><span class="vi">Top truy vấn — GSC (lũy kế gần đây, 113 truy vấn)</span><span class="en">Top queries — GSC (recent cumulative, 113 queries)</span></h3>
+    <table>
+      <thead><tr><th><span class="vi">Truy vấn</span><span class="en">Query</span></th><th class="num">Clicks</th><th class="num">Impr.</th><th><span class="vi">Loại</span><span class="en">Type</span></th></tr></thead>
+      <tbody>
+        <tr><td>dxliving</td><td class="num">123</td><td class="num">177</td><td><span class="brandq">Brand</span></td></tr>
+        <tr><td>dx living</td><td class="num">30</td><td class="num">266</td><td><span class="brandq">Brand</span></td></tr>
+        <tr><td>3d rendering melbourne</td><td class="num">0</td><td class="num">29</td><td><span class="pill builder">Non-brand ✦</span></td></tr>
+        <tr><td>clarendon residence</td><td class="num">0</td><td class="num">28</td><td><span class="pill plan">Project</span></td></tr>
+        <tr><td>3d renders for property developers melbourne</td><td class="num">0</td><td class="num">24</td><td><span class="pill builder">Non-brand ✦</span></td></tr>
+        <tr><td>3d renders for builders melbourne</td><td class="num">0</td><td class="num">20</td><td><span class="pill builder">Non-brand ✦</span></td></tr>
+        <tr><td>dx</td><td class="num">0</td><td class="num">19</td><td><span class="brandq">Brand</span></td></tr>
+        <tr><td>deluxe living</td><td class="num">0</td><td class="num">17</td><td><span class="brandq">Brand</span></td></tr>
+        <tr><td>3d renders for developers melbourne</td><td class="num">0</td><td class="num">17</td><td><span class="pill builder">Non-brand ✦</span></td></tr>
+        <tr><td>dx architecture</td><td class="num">0</td><td class="num">15</td><td><span class="brandq">Brand</span></td></tr>
+      </tbody>
+    </table>
+    <p class="note">
+      <span class="vi"><b>Tín hiệu tích cực:</b> impressions tiếp tục tăng mạnh (900 trong 28 ngày) và <b>từ khóa non-brand có buy-intent đã nổi lên</b> — "3d rendering melbourne", "3d renders for property developers/builders melbourne". Nhưng <b>clicks vẫn ~100% từ brand</b> ("dxliving", "dx living") → đúng như chiến lược: cần đẩy các truy vấn dịch vụ này từ impression lên click. GA4 cũng ghi nhận referral từ <b>chatgpt.com / ai-assistant</b> — kênh AEO đang thành hình. Nguồn: đọc trực tiếp GSC + GA4 (26/07/2026).</span>
+      <span class="en"><b>Positive signal:</b> impressions keep climbing (900 in 28 days) and <b>buy-intent non-brand queries have surfaced</b> — "3d rendering melbourne", "3d renders for property developers/builders melbourne". But <b>clicks are still ~100% brand</b> ("dxliving", "dx living") → exactly the strategy point: these service queries must be pushed from impression into click. GA4 also logs a referral from <b>chatgpt.com / ai-assistant</b> — the AEO channel is forming. Source: read directly from GSC + GA4 (26 Jul 2026).</span>
+    </p>
+  </section>
+
+  <!-- EXECUTIVE SUMMARY -->
+  <section class="card">
+    <p class="section-label"><span class="bar"></span> <span class="vi">Tóm tắt điều hành</span><span class="en">Executive summary</span></p>
+    <div class="exec">
+      <p class="big"><span class="vi">Đà tăng trưởng tiếp tục sang cuối tháng 7 — và ngày càng sâu về chất lượng.</span><span class="en">Momentum continues into late July — and is deepening in quality.</span></p>
+      <p>
+        <span class="vi">28 ngày gần nhất tiếp nối bước ngoặt tháng 6: <b>impressions 900</b> (tiếp tục tăng), <b>clicks 65 (+38% so với T6)</b>, và website bứt phá về gắn kết — <b>442 sessions (+37%)</b>, <b>engaged sessions ×4.5 (61 → 272)</b>, <b>engagement rate 18,9% → 61,5%</b>. Từ khóa <b>non-brand buy-intent đã nổi lên</b> ("3d rendering melbourne", "3d renders for property developers/builders melbourne") dù clicks vẫn chủ yếu từ brand. Kênh <b>AI/AEO</b> xuất hiện (referral chatgpt.com). Nền tảng authority mạnh (referring domains 244 (+92), Ahrefs Health 29 → 88). Rủi ro chặn đà: audit 21/07 phát hiện <b>toàn bộ mục /articles bị timeout khi crawl</b> — nút thắt kỹ thuật đang giới hạn tăng trưởng non-brand.</span>
+        <span class="en">The latest 28 days extend June's breakthrough: <b>900 impressions</b> (still rising), <b>65 clicks (+38% vs June)</b>, and a website engagement leap — <b>442 sessions (+37%)</b>, <b>engaged sessions ×4.5 (61 → 272)</b>, <b>engagement rate 18.9% → 61.5%</b>. <b>Buy-intent non-brand queries have surfaced</b> ("3d rendering melbourne", "3d renders for property developers/builders melbourne") though clicks are still mostly brand. An <b>AI/AEO</b> channel appeared (chatgpt.com referral). Authority is strong (referring domains 244 (+92), Ahrefs Health 29 → 88). The risk capping momentum: the 21 Jul audit found <b>the entire /articles section times out on crawl</b> — a technical bottleneck limiting non-brand growth.</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- SEARCH PERFORMANCE (GSC) June ref -->
+  <section class="card">
+    <p class="section-label"><span class="bar"></span> <span class="vi">Chi tiết Tháng 6 — Google Search Console</span><span class="en">June detail — Google Search Console</span> <span class="snap-badge"><span class="vi">THAM CHIẾU</span><span class="en">REFERENCE</span></span></p>
+    <p class="section-sub"><span class="vi">Tháng 6/2026 so với Tháng 5/2026 · property *.dxliving.com/*</span><span class="en">June 2026 vs May 2026 · property *.dxliving.com/*</span></p>
+
+    <div class="kpis">
+      <div class="kpi"><div class="k-label">Clicks</div><div class="k-val">47</div><div class="delta flat"><span class="vi">■ ngang May (47)</span><span class="en">■ flat vs May (47)</span></div></div>
+      <div class="kpi"><div class="k-label">Impressions</div><div class="k-val">587</div><div class="delta up">▲ +134% (May 251)</div></div>
+      <div class="kpi"><div class="k-label"><span class="vi">CTR trung bình</span><span class="en">Average CTR</span></div><div class="k-val">8.0%</div><div class="delta down"><span class="vi">▼ từ 18.7%</span><span class="en">▼ from 18.7%</span></div></div>
+      <div class="kpi"><div class="k-label"><span class="vi">Vị trí trung bình</span><span class="en">Average position</span></div><div class="k-val">13.8</div><div class="delta down"><span class="vi">▼ từ 4.7</span><span class="en">▼ from 4.7</span></div></div>
+    </div>
+
+    <div class="kpis k3" style="margin-top:12px">
+      <div class="kpi"><div class="k-label"><span class="vi">Truy vấn hiển thị (unique)</span><span class="en">Unique queries shown</span></div><div class="k-val">55</div><div class="delta up"><span class="vi">▲ từ 14 truy vấn</span><span class="en">▲ from 14 queries</span></div></div>
+      <div class="kpi"><div class="k-label"><span class="vi">Trang được index</span><span class="en">Indexed pages</span></div><div class="k-val">29</div><div class="delta up"><span class="vi">▲ +15 (×2 từ 14)</span><span class="en">▲ +15 (×2 from 14)</span></div></div>
+      <div class="kpi"><div class="k-label"><span class="vi">Trang có impressions</span><span class="en">Pages with impressions</span></div><div class="k-val">26</div><div class="delta up"><span class="vi">▲ từ 10 trang</span><span class="en">▲ from 10 pages</span></div></div>
+    </div>
+
+    <h3 class="block"><span class="vi">Top trang đích — Tháng 6/2026</span><span class="en">Top landing pages — June 2026</span></h3>
+    <table>
+      <thead><tr><th>URL</th><th class="num">Clicks</th><th class="num">Impr.</th><th class="num"><span class="vi">vs May (impr.)</span><span class="en">vs May (impr.)</span></th></tr></thead>
+      <tbody>
+        <tr><td class="mono">dxliving.com/</td><td class="num">42</td><td class="num">242</td><td class="num" style="color:var(--green)">+223</td></tr>
+        <tr><td class="mono">/modules</td><td class="num">0</td><td class="num">137</td><td class="num" style="color:var(--green)">+131</td></tr>
+        <tr><td class="mono">/about</td><td class="num">1</td><td class="num">95</td><td class="num" style="color:var(--green)">+22</td></tr>
+        <tr><td class="mono">/suppliers</td><td class="num">0</td><td class="num">89</td><td class="num"><span class="new">new</span></td></tr>
+        <tr><td class="mono">/contact</td><td class="num">0</td><td class="num">85</td><td class="num" style="color:var(--green)">+22</td></tr>
+        <tr><td class="mono">/projects</td><td class="num">1</td><td class="num">67</td><td class="num"><span class="new">new</span></td></tr>
+        <tr><td class="mono">/articles</td><td class="num">0</td><td class="num">58</td><td class="num" style="color:var(--green)">+18</td></tr>
+        <tr><td class="mono">/projects/31-mcilwain-drive</td><td class="num">1</td><td class="num">6</td><td class="num"><span class="new">new</span></td></tr>
+      </tbody>
+    </table>
+    <p class="note"><span class="vi">Impressions đã lan ra ngoài homepage: các trang dịch vụ/dự án (<b>/modules, /suppliers, /projects</b>) bắt đầu hiển thị. Nguồn: Google Search Console.</span><span class="en">Impressions have spread beyond the homepage: service/project pages (<b>/modules, /suppliers, /projects</b>) are now showing. Source: Google Search Console.</span></p>
+  </section>
+
+  <!-- WEBSITE PERFORMANCE (GA4) June ref -->
+  <section class="card">
+    <p class="section-label"><span class="bar"></span> <span class="vi">Chi tiết Tháng 6 — Google Analytics 4</span><span class="en">June detail — Google Analytics 4</span> <span class="snap-badge"><span class="vi">THAM CHIẾU</span><span class="en">REFERENCE</span></span></p>
+    <p class="section-sub"><span class="vi">Tháng 6/2026 so với Tháng 5/2026</span><span class="en">June 2026 vs May 2026</span></p>
+
+    <div class="kpis">
+      <div class="kpi"><div class="k-label">Sessions</div><div class="k-val">322</div><div class="delta down"><span class="vi">▼ từ 409</span><span class="en">▼ from 409</span></div></div>
+      <div class="kpi"><div class="k-label">Engaged sessions</div><div class="k-val">61</div><div class="delta up">▲ +97% (May 31)</div></div>
+      <div class="kpi"><div class="k-label">Engagement rate</div><div class="k-val">18.9%</div><div class="delta up">▲ ×2.5 (May 7.6%)</div></div>
+      <div class="kpi"><div class="k-label"><span class="vi">Tổng users</span><span class="en">Total users</span></div><div class="k-val">205</div><div class="delta down"><span class="vi">▼ từ 285</span><span class="en">▼ from 285</span></div></div>
+    </div>
+
+    <h3 class="block"><span class="vi">Sessions theo kênh — Tháng 6</span><span class="en">Sessions by channel — June</span></h3>
+    <div class="barrow"><span class="lab">Organic Social</span><div class="bartrack"><div class="barfill" style="width:100%;background:var(--violet)"></div></div><span class="val">102</span></div>
+    <div class="barrow"><span class="lab">Organic Search</span><div class="bartrack"><div class="barfill" style="width:98%;background:var(--green)"></div></div><span class="val">100</span></div>
+    <div class="barrow"><span class="lab"><span class="vi">Direct + khác</span><span class="en">Direct + other</span></span><div class="bartrack"><div class="barfill" style="width:70%;background:#c3c9d0"></div></div><span class="val">~120</span></div>
+    <div class="barrow"><span class="lab">AI Assistant</span><div class="bartrack"><div class="barfill" style="width:6%;background:var(--accent)"></div></div><span class="val"><span class="vi">mới</span><span class="en">new</span></span></div>
+    <p class="note"><span class="vi">Organic Search <b>84 → 100 (+19%)</b>. Organic Social <b>102 sessions (~1/3 traffic)</b>. Kênh <b>"AI Assistant" lần đầu xuất hiện</b> — DX Living bắt đầu được công cụ AI tham chiếu.</span><span class="en">Organic Search <b>84 → 100 (+19%)</b>. Organic Social <b>102 sessions (~1/3 of traffic)</b>. The <b>"AI Assistant" channel appeared for the first time</b> — DX Living is starting to be cited by AI tools.</span></p>
+
+    <h3 class="block"><span class="vi">Người dùng theo quốc gia — Tháng 6</span><span class="en">Users by country — June</span></h3>
+    <table>
+      <thead><tr><th><span class="vi">Quốc gia</span><span class="en">Country</span></th><th class="num">Users</th><th class="num">Engaged</th><th class="num"><span class="vi">Eng. rate</span><span class="en">Eng. rate</span></th></tr></thead>
+      <tbody>
+        <tr><td>🇺🇸 United States</td><td class="num">76</td><td class="num">5</td><td class="num">6.5%</td></tr>
+        <tr><td>🇦🇺 Australia <span class="brandq"><span class="vi">mục tiêu</span><span class="en">target</span></span></td><td class="num">37</td><td class="num">12</td><td class="num" style="color:var(--green)">15.8%</td></tr>
+        <tr><td>🇻🇳 Vietnam</td><td class="num">21</td><td class="num">34</td><td class="num" style="color:var(--green)">41.0%</td></tr>
+        <tr><td>🇩🇪 Germany</td><td class="num">19</td><td class="num">0</td><td class="num">0%</td></tr>
+        <tr><td>🇵🇭 Philippines</td><td class="num">7</td><td class="num">9</td><td class="num" style="color:var(--green)">39.1%</td></tr>
+      </tbody>
+    </table>
+    <p class="note"><span class="vi">Úc mang lại nhóm khán giả gắn kết mạnh nhất trong thị trường mục tiêu (12 engaged sessions, 15.8%). Lượng users US cao nhưng engagement thấp (6.5%). Nguồn: Google Analytics 4.</span><span class="en">Australia delivers the strongest engaged audience in the target market (12 engaged sessions, 15.8%). US users are high in volume but low engagement (6.5%). Source: Google Analytics 4.</span></p>
+  </section>
+
+  <!-- TECHNICAL HEALTH + AUDIT -->
+  <section class="card">
+    <p class="section-label"><span class="bar"></span> <span class="vi">Sức khỏe kỹ thuật &amp; Audit</span><span class="en">Technical health &amp; audit</span></p>
+    <p class="section-sub"><span class="vi">Ahrefs (30/06) + crawl 50 trang (21/07/2026)</span><span class="en">Ahrefs (30 Jun) + 50-page crawl (21 Jul 2026)</span></p>
+
+    <div class="kpis">
+      <div class="kpi"><div class="k-label">Ahrefs Health Score</div><div class="k-val">88</div><div class="delta up"><span class="vi">▲ từ 29</span><span class="en">▲ from 29</span></div></div>
+      <div class="kpi"><div class="k-label">Referring domains</div><div class="k-val">244</div><div class="delta up"><span class="vi">▲ +92 / 30 ngày</span><span class="en">▲ +92 / 30 days</span></div></div>
+      <div class="kpi"><div class="k-label">Domain Rating</div><div class="k-val">0</div><div class="delta flat"><span class="vi">■ giai đoạn đầu</span><span class="en">■ early stage</span></div></div>
+      <div class="kpi"><div class="k-label"><span class="vi">Điểm audit on-page</span><span class="en">On-page audit score</span></div><div class="k-val" style="color:var(--amber)">52<span style="font-size:14px;color:var(--faint)">/100</span></div><div class="delta bad"><span class="vi">▼ cần xử lý gấp</span><span class="en">▼ urgent fix</span></div></div>
+    </div>
+
+    <h3 class="block"><span class="vi">Vấn đề cần xử lý (audit 21/07)</span><span class="en">Issues to fix (audit 21 Jul)</span></h3>
+    <div class="issue">
+      <span class="sev crit"><span class="vi">Nghiêm trọng</span><span class="en">Critical</span></span>
+      <div class="it"><h5><span class="vi">34 URL /articles timeout ở 15s → isIndexable=false</span><span class="en">34 /articles URLs time out at 15s → isIndexable=false</span></h5>
+      <p><span class="vi">Toàn bộ hub <span class="mono">/articles</span> + 33 blog post (mọi từ khóa non-brand, buy-intent) không render kịp cho crawler. <b>Đây là nguyên nhân trực tiếp khiến organic gần như chỉ toàn brand.</b> Bài vẫn sống trên WordPress — đây là lỗi tốc độ render/cache.</span><span class="en">The whole <span class="mono">/articles</span> hub + 33 blog posts (every non-brand, buy-intent keyword) can't render in time for the crawler. <b>This is the direct cause of organic being almost entirely brand.</b> The posts are live on WordPress — this is a render/cache speed failure.</span></p></div>
+    </div>
+    <div class="issue">
+      <span class="sev crit"><span class="vi">Nghiêm trọng</span><span class="en">Critical</span></span>
+      <div class="it"><h5><span class="vi">Server phản hồi chậm — TB 4.59s/trang (ngưỡng tốt &lt;1s)</span><span class="en">Slow server response — avg 4.59s/page (good is &lt;1s)</span></h5>
+      <p><span class="vi">Thời gian phản hồi dao động từng giây giữa các lần crawl → <b>không có lớp cache ổn định</b>. Lighthouse fail 20/20 trang — chưa lập được baseline Core Web Vitals.</span><span class="en">Response times swing by whole seconds between crawls → <b>no stable caching layer</b>. Lighthouse failed 20/20 pages — no Core Web Vitals baseline yet.</span></p></div>
+    </div>
+    <div class="issue">
+      <span class="sev warn"><span class="vi">Cảnh báo</span><span class="en">Warning</span></span>
+      <div class="it"><h5><span class="vi">Thiếu JSON-LD ở homepage; H1 chỉ là brand</span><span class="en">Missing homepage JSON-LD; brand-only H1</span></h5>
+      <p><span class="vi">Không có Organization/LocalBusiness schema dù có NAP + social. H1 homepage không chứa từ khóa. Template article render <b>2 thẻ H1</b> (cần dev sửa).</span><span class="en">No Organization/LocalBusiness schema despite NAP + socials. The homepage H1 carries no keyword. The article template renders <b>two H1 tags</b> (needs a dev fix).</span></p></div>
+    </div>
+    <div class="issue">
+      <span class="sev ok"><span class="vi">Đã tốt</span><span class="en">Passing</span></span>
+      <div class="it"><h5><span class="vi">Meta &amp; foundation vững</span><span class="en">Solid meta &amp; foundation</span></h5>
+      <p><span class="vi">Meta description unique 112–128 ký tự, FAQPage schema đã có trên mọi money page, Open Graph/Twitter Card đầy đủ, canonical đúng, sitemap 49/50. Đã sửa <b>21 internal link gãy</b> → còn 0.</span><span class="en">Unique meta descriptions 112–128 chars, FAQPage schema on every money page, full Open Graph/Twitter Card, correct canonicals, sitemap 49/50. Fixed <b>21 broken internal links</b> → 0 remaining.</span></p></div>
+    </div>
+    <p class="note"><span class="vi"><b>Ưu tiên:</b> (1) làm <span class="mono">/articles</span> render tĩnh (SSG/ISR) + CDN cache · (2) cache toàn site để response &lt;2s · (3) thêm structured data homepage · (4) dọn heading. <b>Cho tới khi (1) xong, mọi nỗ lực non-brand đều bị chặn.</b></span><span class="en"><b>Priority:</b> (1) make <span class="mono">/articles</span> render statically (SSG/ISR) + CDN cache · (2) cache the whole site for &lt;2s response · (3) add homepage structured data · (4) tidy headings. <b>Until (1) is done, all non-brand effort is blocked.</b></span></p>
+  </section>
+
+  <!-- SERP COMPETITIVE -->
+  <section class="card">
+    <p class="section-label"><span class="bar"></span> <span class="vi">Bối cảnh cạnh tranh — SERP Úc</span><span class="en">Competitive landscape — AU SERP</span> <span class="snap-badge">SNAPSHOT 30/06/2026</span></p>
+    <p class="section-sub"><span class="vi">Ai đang chiếm top Google tại Úc cho các chủ đề chính của bạn.</span><span class="en">Who owns the top of Google in Australia for your core topics.</span></p>
+    <p class="lead"><span class="vi"><b>dxliving.com chưa xuất hiện trong top 20</b> ở cả 3 từ khóa mục tiêu.</span><span class="en"><b>dxliving.com does not appear in the top 20</b> for any of the 3 target keywords.</span></p>
+
+    <table>
+      <thead><tr><th><span class="vi">Từ khóa</span><span class="en">Keyword</span></th><th><span class="vi">Domain top đầu (Úc)</span><span class="en">Top domains (AU)</span></th><th><span class="vi">Nhóm</span><span class="en">Group</span></th></tr></thead>
+      <tbody>
+        <tr>
+          <td style="font-weight:700">modern house design 2026</td>
+          <td class="mono">nexahomes.com.au · goldleafgroup.com.au · ableinteriors.com · devisarchitecture.com</td>
+          <td><span class="pill builder">Builder / KTS</span></td>
+        </tr>
+        <tr>
+          <td style="font-weight:700">home design trends australia<span class="ai">⚡ AI Overview</span></td>
+          <td class="mono">abiinteriors.com.au · thedesignfiles.net · kingliving.com.au · co-architecture.com · broadsheet.com.au</td>
+          <td><span class="pill media">Media / Brand</span></td>
+        </tr>
+        <tr>
+          <td style="font-weight:700">architectural house design australia</td>
+          <td class="mono">australianhousedesigns.com.au · archipro.com.au · terren.com.au · architopia.com.au · mcdonaldjoneshomes.com</td>
+          <td><span class="pill plan">Plan / Builder</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 class="block"><span class="vi">Đối thủ trực tiếp cần theo dõi</span><span class="en">Direct competitors to track</span></h3>
+    <div class="chips">
+      <span class="chip"><span class="dot"></span>terren.com.au</span>
+      <span class="chip"><span class="dot"></span>architopia.com.au</span>
+      <span class="chip"><span class="dot"></span>nexahomes.com.au</span>
+      <span class="chip"><span class="dot"></span>mcdonaldjoneshomes.com.au</span>
+      <span class="chip"><span class="dot"></span>australianhousedesigns.com.au</span>
+      <span class="chip"><span class="dot"></span>goldleafgroup.com.au</span>
+    </div>
+    <p class="note"><span class="vi">Truy vấn thông tin (trends/design) do <b>media &amp; aggregator</b> thống trị; truy vấn dịch vụ do <b>builder / nhà cung cấp bản vẽ</b> chiếm. Nguồn: SERP location Úc.</span><span class="en">Informational queries (trends/design) are dominated by <b>media &amp; aggregators</b>; service queries are held by <b>builders / plan providers</b>. Source: SERP, AU location.</span></p>
+  </section>
+
+  <!-- KEYWORD & CONTENT STRATEGY -->
+  <section class="card">
+    <p class="section-label"><span class="bar"></span> <span class="vi">Chiến lược từ khóa &amp; nội dung</span><span class="en">Keyword &amp; content strategy</span></p>
+    <p class="section-sub"><span class="vi">Mô hình 3 lớp volume — Google Keyword Planner (AU, 23/07)</span><span class="en">3-layer volume model — Google Keyword Planner (AU, 23 Jul)</span></p>
+
+    <div class="cols2">
+      <div>
+        <h3 class="block" style="margin-top:0"><span class="vi">Volume thật vừa lấy (AU)</span><span class="en">Real volumes just pulled (AU)</span></h3>
+        <table>
+          <thead><tr><th>Keyword</th><th class="num"><span class="vi">Lượt tìm</span><span class="en">Searches</span></th><th>Comp.</th></tr></thead>
+          <tbody>
+            <tr><td>bathroom renovation</td><td class="num">10K–100K</td><td><span class="pill" style="background:var(--red-soft);color:var(--red)">High</span></td></tr>
+            <tr><td>kitchen renovation</td><td class="num">1K–10K</td><td><span class="pill" style="background:var(--red-soft);color:var(--red)">High</span></td></tr>
+            <tr><td>timber flooring</td><td class="num">1K–10K</td><td><span class="pill" style="background:var(--red-soft);color:var(--red)">High</span></td></tr>
+            <tr><td>house plans</td><td class="num">1K–10K</td><td><span class="pill" style="background:var(--amber-soft);color:var(--amber)">Med</span></td></tr>
+            <tr><td><b>bathroom remodel cost</b> 💎</td><td class="num">1K–10K</td><td><span class="pill plan">Low</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <h3 class="block" style="margin-top:0"><span class="vi">Mô hình 3 lớp</span><span class="en">The 3-layer model</span></h3>
+        <div class="scard" style="margin-bottom:8px;padding:12px 14px"><div class="num" style="background:var(--red)">1</div><div class="sc-body"><h4 style="margin-bottom:2px"><span class="vi">Volume anchors</span><span class="en">Volume anchors</span></h4><p><span class="vi">Head cạnh tranh cao (renovation, home design). DR 0 chưa thắng → pillar dài hạn, <b>không ưu tiên bây giờ</b>.</span><span class="en">High-competition heads (renovation, home design). Unwinnable at DR 0 → long-term pillar, <b>not a priority now</b>.</span></p></div></div>
+        <div class="scard two" style="margin-bottom:8px;padding:12px 14px"><div class="num">2</div><div class="sc-body"><h4 style="margin-bottom:2px"><span class="vi">Mid winnable — ĐỘNG CƠ</span><span class="en">Mid winnable — THE ENGINE</span></h4><p><span class="vi">Ghép <b>geo × element × material × style</b>: "3D rendering Sydney", "bathroom remodel cost". Comp thấp, thắng được ở DR 0.</span><span class="en">Combine <b>geo × element × material × style</b>: "3D rendering Sydney", "bathroom remodel cost". Low comp, winnable at DR 0.</span></p></div></div>
+        <div class="scard three" style="padding:12px 14px"><div class="num">3</div><div class="sc-body"><h4 style="margin-bottom:2px"><span class="vi">Niche / 0-volume</span><span class="en">Niche / 0-volume</span></h4><p><span class="vi">Materials cụ thể, Project 251 → gộp vào pillar Lớp 2, dùng làm asset. Giá trị qua internal link + AI-citation.</span><span class="en">Specific materials, Project 251 → fold into a Layer-2 pillar as assets. Value via internal links + AI citation.</span></p></div></div>
+      </div>
+    </div>
+    <p class="note"><span class="vi"><b>Nguyên tắc:</b> KHÔNG viết bài SEO riêng nhắm keyword 0-volume — mỗi chủ đề 0-volume phải "có việc" (nuôi pillar / AI-citation / chuyển đổi). Ưu tiên góc vừa có volume vừa đúng lõi DXL: <b>new home designs [city], house plans, [room] renovation cost, 3D rendering Sydney/Brisbane/Perth, knockdown rebuild, interior finishes pillar</b>.</span><span class="en"><b>Principle:</b> do NOT write standalone SEO posts for 0-volume keywords — each 0-volume topic must "have a job" (feed a pillar / AI citation / conversion). Prioritise angles that have volume and fit DXL's core: <b>new home designs [city], house plans, [room] renovation cost, 3D rendering Sydney/Brisbane/Perth, knockdown rebuild, interior finishes pillar</b>.</span></p>
+  </section>
+
+  <!-- STRATEGY & ACTION -->
+  <section class="card">
+    <p class="section-label"><span class="bar"></span> <span class="vi">Hướng đi &amp; kế hoạch hành động</span><span class="en">Direction &amp; action plan</span></p>
+
+    <div class="strat" style="margin-bottom:18px">
+      <div class="scard one"><div class="num">1</div><div class="sc-body"><span class="tagline t1"><span class="vi">Giảm phụ thuộc brand</span><span class="en">Reduce brand dependency</span></span><p><span class="vi"><b>~100% click hiện đến từ truy vấn thương hiệu</b>. Tăng trưởng chỉ bền khi nội dung <b>non-brand</b> kéo người chưa biết thương hiệu leo từ impression lên click.</span><span class="en"><b>~100% of clicks currently come from brand queries</b>. Growth is only durable when <b>non-brand</b> content pulls unaware users from impression into click.</span></p></div></div>
+      <div class="scard two"><div class="num">2</div><div class="sc-body"><span class="tagline t2"><span class="vi">Chọn đúng sân chơi</span><span class="en">Pick the right battlefield</span></span><p><span class="vi">Trang dịch vụ khó top cho truy vấn <b>"trends"</b> (media thắng). Dồn lực vào (a) từ khóa dịch vụ/địa phương và (b) trang dự án thực tế (Clarendon, Project 251) làm khác biệt.</span><span class="en">Service pages can't top <b>"trends"</b> queries (media wins). Focus on (a) service/local keywords and (b) real project pages (Clarendon, Project 251) as differentiators.</span></p></div></div>
+      <div class="scard three"><div class="num">3</div><div class="sc-body"><span class="tagline t3"><span class="vi">Đón đầu AEO</span><span class="en">Get ahead on AEO</span></span><p><span class="vi"><b>"home design trends australia" đã có AI Overview</b>, và GA4 đã ghi nhận kênh "AI Assistant". Viết nội dung <b>hỏi–đáp + schema (FAQ/Article)</b> để được AI trích dẫn.</span><span class="en"><b>"home design trends australia" already shows an AI Overview</b>, and GA4 now logs an "AI Assistant" channel. Write <b>Q&amp;A content + schema (FAQ/Article)</b> to get cited by AI.</span></p></div></div>
+    </div>
+
+    <div class="cols2">
+      <div>
+        <h3 class="block" style="margin-top:0"><span class="vi">Ưu tiên tháng 7–8</span><span class="en">July–August priorities</span></h3>
+        <ul class="action-list">
+          <li><span class="vi"><b>Sửa render /articles</b> (SSG/ISR + CDN)</span><span class="en"><b>Fix /articles render</b> (SSG/ISR + CDN)</span> <span class="prio p0">P0</span></li>
+          <li><span class="vi"><b>Cache toàn site</b> đưa response &lt;2s</span><span class="en"><b>Cache the whole site</b> to &lt;2s response</span> <span class="prio p0">P0</span></li>
+          <li><span class="vi"><b>Thêm Organization/LocalBusiness JSON-LD</b> + sửa H1</span><span class="en"><b>Add Organization/LocalBusiness JSON-LD</b> + fix H1</span> <span class="prio p1">P1</span></li>
+          <li><span class="vi"><b>Dev sửa double-H1</b> template article</span><span class="en"><b>Dev fix double-H1</b> in the article template</span> <span class="prio p1">P1</span></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="block" style="margin-top:0"><span class="vi">Nội dung &amp; mở rộng</span><span class="en">Content &amp; expansion</span></h3>
+        <ul class="action-list">
+          <li><span class="vi"><b>Cluster + internal link</b> quanh BIM / chi phí / chọn builder</span><span class="en"><b>Cluster + internal links</b> around BIM / cost / builder choice</span> <span class="prio p1">P1</span></li>
+          <li><span class="vi"><b>Geo-expand:</b> 3D rendering Sydney/Brisbane/Perth/Adelaide</span><span class="en"><b>Geo-expand:</b> 3D rendering Sydney/Brisbane/Perth/Adelaide</span> <span class="prio p2">P2</span></li>
+          <li><span class="vi"><b>Gộp cannibalisation:</b> 2 trang "custom home builders Melbourne" → 1</span><span class="en"><b>Merge cannibalisation:</b> two "custom home builders Melbourne" pages → 1</span> <span class="prio p2">P2</span></li>
+          <li><span class="vi"><b>Interior finishes pillar</b> gộp từ khóa 0-volume</span><span class="en"><b>Interior finishes pillar</b> to absorb 0-volume keywords</span> <span class="prio p2">P2</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL SNAPSHOT -->
+  <section class="card">
+    <p class="section-label"><span class="bar"></span> <span class="vi">Snapshot Social (bổ trợ)</span><span class="en">Social snapshot (supporting)</span></p>
+    <p class="section-sub"><span class="vi">Tháng 6/2026 · pivot "chất lượng hơn số lượng"</span><span class="en">June 2026 · "quality over quantity" pivot</span></p>
+    <div class="kpis">
+      <div class="kpi"><div class="k-label"><span class="vi">Bài đăng</span><span class="en">Posts</span></div><div class="k-val">34</div><div class="delta down"><span class="vi">▼ từ 62 (chủ đích)</span><span class="en">▼ from 62 (intentional)</span></div></div>
+      <div class="kpi"><div class="k-label"><span class="vi">Tổng audience</span><span class="en">Total audience</span></div><div class="k-val">197</div><div class="delta up">▲ +2.6%</div></div>
+      <div class="kpi"><div class="k-label">Eng./impression</div><div class="k-val">4.6%</div><div class="delta up">▲ +43%</div></div>
+      <div class="kpi"><div class="k-label">Clicks (LinkedIn 14/17)</div><div class="k-val">17</div><div class="delta flat"><span class="vi">■ ngang May</span><span class="en">■ flat vs May</span></div></div>
+    </div>
+    <p class="note"><span class="vi">Ít bài hơn nhưng <b>tương tác/bài +20%</b> và clicks giữ nguyên. <b>LinkedIn</b> là kênh dẫn traffic chính (14/17 clicks). Snapshot 06/18–07/15: FB views +60%, LinkedIn impressions +67%. <b>Việc tháng 7:</b> tăng lại tần suất đăng để phục hồi tổng reach.</span><span class="en">Fewer posts but <b>+20% interactions per post</b> and steady clicks. <b>LinkedIn</b> is the main traffic driver (14/17 clicks). Snapshot 18 Jun–15 Jul: FB views +60%, LinkedIn impressions +67%. <b>July task:</b> lift posting cadence to rebuild total reach.</span></p>
+  </section>
+
+  <footer class="foot">
+    <b>DX Living — <span class="vi">Báo cáo Hiệu suất SEO</span><span class="en">SEO Performance Report</span></b> · dxliving.com<br>
+    <span class="vi">Số 28 ngày mới nhất đọc trực tiếp từ Google Search Console + GA4 (26/07/2026) · Chi tiết Tháng 6 &amp; audit 21/07 &amp; SERP 30/06 là tham chiếu</span><span class="en">Latest 28-day figures read directly from Google Search Console + GA4 (26 Jul 2026) · June detail, 21 Jul audit &amp; 30 Jun SERP are reference</span><br>
+    <span class="vi">Đã bỏ Supermetrics &amp; OpenSEO theo yêu cầu · Cập nhật: 26/07/2026</span><span class="en">Supermetrics &amp; OpenSEO removed as requested · Updated: 26 Jul 2026</span>
+  </footer>
+
+</div>
+
+<script>
+  function setLang(l){
+    document.body.className = (l === 'en') ? 'lang-en' : '';
+    document.documentElement.lang = l;
+    document.getElementById('bvi').classList.toggle('active', l === 'vi');
+    document.getElementById('ben').classList.toggle('active', l === 'en');
+  }
+</script>
+</body>
+</html>
