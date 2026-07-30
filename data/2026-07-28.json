@@ -1,0 +1,49 @@
+{
+  "date": "2026-07-28",
+  "site": "dxliving.com",
+  "source_commit": "03f98f5 + 8143263",
+  "provenance": "Read directly from Chrome (GSC + GA4 + Ahrefs UI). No OpenSEO, no Supermetrics. No estimated values.",
+  "windows": {
+    "gsc": "2026-06-28 → 2026-07-25",
+    "ga4": "2026-06-30 → 2026-07-27"
+  },
+  "gsc_28d": {
+    "clicks": 65,
+    "impressions": 934,
+    "ctr_pct": 7.0,
+    "avg_position": 23.7
+  },
+  "ga4_28d": {
+    "sessions": 435,
+    "engaged_sessions": 274,
+    "engagement_rate_pct": 63.0,
+    "key_events": 42
+  },
+  "ahrefs": {
+    "domain_rating": 0,
+    "url_rating": 0,
+    "referring_domains": 328,
+    "backlinks": 333,
+    "health_score": 88,
+    "organic_keywords": 0,
+    "organic_traffic": 0,
+    "ai_citations": 14,
+    "ai_by_platform": {
+      "chatgpt": 6,
+      "copilot": 8,
+      "google_ai_overviews": 0,
+      "google_ai_mode": 0,
+      "gemini": 0,
+      "perplexity": 0,
+      "grok": null
+    }
+  },
+  "notes": {
+    "vi": [
+      "Lần đầu đọc Ahrefs Site Explorer trực tiếp qua Chrome (API trả 'Insufficient plan')."
+    ],
+    "en": [
+      "First live read of Ahrefs Site Explorer via Chrome (the API returns 'Insufficient plan')."
+    ]
+  }
+}

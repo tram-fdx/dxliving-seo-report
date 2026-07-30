@@ -1,0 +1,35 @@
+{
+  "site": "dxliving.com",
+  "description": "Lịch sử snapshot dữ liệu SEO theo ngày / Daily SEO data snapshot history. Mỗi ngày một file data/YYYY-MM-DD.json + bản HTML đóng băng archive/YYYY-MM-DD.html.",
+  "latest": "2026-07-29",
+  "snapshots": [
+    {
+      "date": "2026-06-30",
+      "data": "data/2026-06-30.json",
+      "report": null,
+      "label_vi": "Baseline Tháng 6/2026",
+      "label_en": "June 2026 baseline"
+    },
+    {
+      "date": "2026-07-27",
+      "data": "data/2026-07-27.json",
+      "report": "archive/2026-07-27.html",
+      "label_vi": "Publish báo cáo song ngữ",
+      "label_en": "Bilingual report published"
+    },
+    {
+      "date": "2026-07-28",
+      "data": "data/2026-07-28.json",
+      "report": "archive/2026-07-28.html",
+      "label_vi": "Thêm Ahrefs live",
+      "label_en": "Live Ahrefs added"
+    },
+    {
+      "date": "2026-07-29",
+      "data": "data/2026-07-29.json",
+      "report": "archive/2026-07-29.html",
+      "label_vi": "Thêm Hiện diện trên AI (16/100)",
+      "label_en": "AI Visibility added (16/100)"
+    }
+  ]
+}

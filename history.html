@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DX Living — Lịch sử dữ liệu SEO theo ngày / Daily SEO data history</title>
+<style>
+  :root{
+    --bg:#f5f6f8; --card:#fff; --ink:#191c20; --muted:#6b7280; --faint:#9aa0a8;
+    --line:#e7e9ec; --line2:#f0f1f3;
+    --accent:#e0533d; --accent-soft:#fdece8;
+    --green:#1f9d6b; --green-soft:#e8f6ef;
+    --red:#d64545; --red-soft:#fbeaea;
+    --amber:#b7791f; --amber-soft:#fdf4e3;
+    --blue:#2b6cb0; --blue-soft:#eaf1f8;
+    --violet:#7c3aed; --violet-soft:#f3ecfa;
+    --radius:14px; --shadow:0 1px 2px rgba(16,24,40,.04),0 1px 3px rgba(16,24,40,.06);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;-webkit-font-smoothing:antialiased;font-size:14px}
+  .wrap{max-width:1120px;margin:0 auto;padding:34px 20px 72px}
+
+  /* i18n */
+  .en{display:none}
+  body.lang-en .vi{display:none}
+  body.lang-en .en{display:inline}
+
+  /* language switch */
+  .langsw{position:fixed;top:14px;right:16px;z-index:60;display:flex;background:#fff;border:1px solid var(--line);border-radius:999px;overflow:hidden;box-shadow:var(--shadow)}
+  .langsw button{border:0;background:transparent;padding:7px 15px;font-size:12.5px;font-weight:800;color:var(--muted);cursor:pointer;letter-spacing:.4px;transition:.15s}
+  .langsw button.active{background:var(--accent);color:#fff}
+  .langsw button:not(.active):hover{background:#f5f6f8}
+
+  header.top{margin-bottom:20px}
+  .eyebrow{font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin:0 0 8px}
+  .title{font-size:28px;font-weight:800;letter-spacing:-.5px;margin:0 0 8px;display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+  .title .brand-dot{width:12px;height:12px;border-radius:50%;background:var(--accent);display:inline-block}
+  .subtitle{font-size:13.5px;color:var(--muted);margin:0;max-width:860px}
+  .subtitle b{color:#3a3f45;font-weight:600}
+  .metastrip{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+  .tag{display:inline-flex;align-items:center;gap:6px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:4px 12px;font-size:12px;color:#3a3f45;font-weight:600}
+  .tag.on{background:var(--green-soft);border-color:#cdeadd;color:var(--green)}
+  .backlink{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:700;color:var(--accent);text-decoration:none;margin-bottom:14px}
+  .backlink:hover{text-decoration:underline}
+
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px 24px;margin-bottom:18px}
+  .section-label{font-size:12px;font-weight:800;letter-spacing:.7px;text-transform:uppercase;color:var(--muted);margin:0 0 4px;display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+  .section-label .bar{width:26px;height:3px;border-radius:2px;background:var(--accent)}
+  .section-sub{font-size:12.5px;color:var(--faint);margin:2px 0 18px;padding-left:35px}
+  h3.block{font-size:13.5px;font-weight:800;margin:22px 0 11px;color:#2a2f35;letter-spacing:.1px}
+
+  .status{border:1px solid #cdeadd;background:linear-gradient(180deg,#f7fdfa,#fff);border-radius:12px;padding:14px 16px;display:flex;gap:13px;align-items:flex-start}
+  .status .ic{flex:0 0 auto;width:30px;height:30px;border-radius:8px;background:var(--green-soft);color:var(--green);display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800}
+  .status .body h4{margin:0 0 3px;font-size:13.5px;font-weight:700}
+  .status .body p{margin:0;font-size:12.5px;color:#55606b}
+  .status.warn{border-color:#f0dcb4;background:linear-gradient(180deg,#fffdf7,#fff)}
+  .status.warn .ic{background:var(--amber-soft);color:var(--amber)}
+
+  /* stat tiles with sparkline */
+  .tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  .tile{border:1px solid var(--line);border-radius:12px;padding:14px 15px 10px;background:#fff}
+  .t-head{display:flex;align-items:center;gap:7px;margin-bottom:2px}
+  .t-dot{width:9px;height:9px;border-radius:2px;flex:0 0 auto}
+  .t-label{font-size:11.5px;font-weight:700;color:var(--muted);letter-spacing:.2px}
+  .t-val{font-size:25px;font-weight:800;letter-spacing:-.6px;line-height:1.15}
+  .t-delta{font-size:11.5px;font-weight:700;margin-top:1px;display:block}
+  .t-delta.up{color:var(--green)} .t-delta.down{color:var(--red)} .t-delta.flat{color:var(--faint)}
+  .t-spark{margin-top:8px;display:block;width:100%;height:38px}
+  .t-foot{font-size:10.5px;color:var(--faint);margin-top:3px;display:block}
+
+  /* charts */
+  .charts{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+  .chart{border:1px solid var(--line);border-radius:12px;padding:14px 14px 8px}
+  .chart .c-title{font-size:12.5px;font-weight:800;color:#2a2f35;margin:0 0 2px;display:flex;align-items:center;gap:7px}
+  .chart .c-sub{font-size:11px;color:var(--faint);margin:0 0 6px}
+  .chart svg{display:block;width:100%;height:150px;overflow:visible}
+  .grid-line{stroke:var(--line2);stroke-width:1}
+  .axis-txt{font-size:10px;fill:var(--faint)}
+  .cross{stroke:#c4c9cf;stroke-width:1;stroke-dasharray:3 3}
+  .hitbox{fill:#fff;fill-opacity:0;pointer-events:all;cursor:crosshair}
+  .tipbox{position:absolute;pointer-events:none;background:#fff;border:1px solid var(--line);border-radius:8px;box-shadow:0 3px 10px rgba(16,24,40,.10);padding:7px 10px;font-size:11.5px;opacity:0;transition:opacity .1s;z-index:40;white-space:nowrap}
+  .tipbox .tt-d{font-weight:800;color:var(--ink);display:block;margin-bottom:1px}
+  .tipbox .tt-v{color:var(--muted)}
+  .tipbox .tt-v b{color:var(--ink);font-weight:800}
+
+  /* table */
+  .tblwrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px}
+  table{width:100%;border-collapse:collapse;font-size:12px;min-width:1010px}
+  thead th{text-align:left;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.4px;color:var(--muted);padding:8px 8px;border-bottom:1px solid var(--line);background:#fafbfc;white-space:nowrap}
+  thead tr.grouphdr th{font-size:10px;color:var(--faint);border-bottom:1px solid var(--line2);padding-bottom:5px;padding-top:9px}
+  thead th.num{text-align:right}
+  tbody td{padding:8px 8px;border-bottom:1px solid var(--line2);vertical-align:top;white-space:nowrap}
+  tbody td:first-child{min-width:168px}
+  .scrollhint{font-size:11px;color:var(--faint);margin:0 0 7px;font-weight:600}
+  tbody td.num{text-align:right;font-variant-numeric:tabular-nums}
+  tbody tr:last-child td{border-bottom:0}
+  tbody tr:hover{background:#fafbfc}
+  tbody tr.newest{background:var(--accent-soft)}
+  tbody tr.newest:hover{background:#fce3dd}
+  .cellv{font-weight:700}
+  .cd{display:block;font-size:10px;font-weight:700;margin-top:1px}
+  .cd.up{color:var(--green)} .cd.down{color:var(--red)} .cd.flat{color:var(--faint)}
+  .nr{color:var(--faint);font-weight:600;font-style:normal}
+  .dlink{color:var(--accent);text-decoration:none;font-weight:700}
+  .dlink:hover{text-decoration:underline}
+  .dlink.mut{color:var(--muted);font-weight:600}
+  .lbl{font-size:11px;color:var(--muted);display:block;font-weight:600;white-space:normal;max-width:190px}
+
+  /* day cards */
+  .daylist{display:flex;flex-direction:column;gap:11px}
+  .day{border:1px solid var(--line);border-radius:12px;padding:13px 15px}
+  .day.newest{border-color:#f3c9c0;background:#fffaf9}
+  .d-top{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:5px}
+  .d-date{font-size:14px;font-weight:800}
+  .d-tag{font-size:11px;font-weight:700;color:var(--muted);background:#f5f6f8;border:1px solid var(--line);border-radius:999px;padding:2px 9px}
+  .d-links{margin-left:auto;display:flex;gap:12px;font-size:11.5px}
+  .d-note{display:block;font-size:12px;color:#55606b;margin:3px 0 0;padding-left:13px;position:relative}
+  .d-note:before{content:"·";position:absolute;left:2px;font-weight:800;color:var(--faint)}
+  .d-prov{font-size:11px;color:var(--faint);margin-top:6px}
+
+  .note{font-size:12px;color:#55606b;background:#fafbfc;border:1px solid var(--line2);border-radius:10px;padding:11px 13px;margin:14px 0 0}
+  .note b{color:#2a2f35}
+  .legendrow{display:flex;flex-wrap:wrap;gap:14px;margin:0 0 4px}
+  .lg{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;color:var(--muted);font-weight:600}
+  .lg i{width:11px;height:3px;border-radius:2px;display:inline-block}
+  .foot{font-size:11.5px;color:var(--faint);text-align:center;margin-top:26px;line-height:1.7}
+  .foot b{color:var(--muted)}
+  code.mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11.5px;background:#f5f6f8;border:1px solid var(--line2);border-radius:5px;padding:1px 5px;color:#3a3f45}
+  @media (max-width:900px){
+    .tiles{grid-template-columns:repeat(2,1fr)}
+    .charts{grid-template-columns:1fr}
+  }
+  @media (max-width:600px){
+    .wrap{padding:24px 12px 60px}
+    .tiles{grid-template-columns:1fr}
+    .title{font-size:22px}
+    .langsw{top:8px;right:8px}
+  }
+</style>
+</head>
+<body>
+
+<div class="langsw">
+  <button id="bvi" class="active" onclick="setLang('vi')">VI</button>
+  <button id="ben" onclick="setLang('en')">EN</button>
+</div>
+
+<div class="wrap">
+
+  <a class="backlink" href="index.html">← <span class="vi">Về báo cáo mới nhất</span><span class="en">Back to the latest report</span></a>
+
+  <header class="top">
+    <p class="eyebrow"><span class="vi">DX Living · Lưu trữ dữ liệu theo ngày</span><span class="en">DX Living · Daily data archive</span></p>
+    <h1 class="title"><span class="brand-dot"></span> <span class="vi">Lịch sử dữ liệu SEO — dxliving.com</span><span class="en">SEO Data History — dxliving.com</span></h1>
+    <p class="subtitle">
+      <span class="vi">Mỗi lần quét, số liệu của ngày đó được <b>đóng băng thành một file JSON</b> (<code class="mono">data/YYYY-MM-DD.json</code>) và <b>một bản HTML của báo cáo</b> (<code class="mono">archive/YYYY-MM-DD.html</code>). Nhờ vậy dữ liệu những ngày cũ <b>không bao giờ bị ghi đè hay mất</b> — có thể mở lại đúng báo cáo của từng ngày.</span>
+      <span class="en">On every scan, that day's figures are <b>frozen into a JSON file</b> (<code class="mono">data/YYYY-MM-DD.json</code>) plus <b>an HTML copy of the report</b> (<code class="mono">archive/YYYY-MM-DD.html</code>). Older days are therefore <b>never overwritten or lost</b> — each day's exact report can be reopened.</span>
+    </p>
+    <div class="metastrip" id="meta"></div>
+  </header>
+
+  <section class="card" style="padding:16px 18px">
+    <div class="status">
+      <div class="ic">✓</div>
+      <div class="body">
+        <h4><span class="vi">Chỉ số liệu đo thật — không suy đoán</span><span class="en">Measured values only — nothing estimated</span></h4>
+        <p>
+          <span class="vi">Mọi con số đọc trực tiếp từ <b>Chrome</b> (Google Search Console + GA4 + Ahrefs UI). Đã bỏ hoàn toàn Supermetrics &amp; OpenSEO. Chỉ số nào chưa đọc được ở ngày đó hiển thị <b>“chưa đọc”</b> chứ không điền số ước lượng, và đường biểu đồ sẽ <b>ngắt quãng</b> tại đúng ngày đó.</span>
+          <span class="en">Every figure is read straight from <b>Chrome</b> (Google Search Console + GA4 + Ahrefs UI). Supermetrics &amp; OpenSEO are fully removed. Any metric that could not be read on a given day shows <b>“not read”</b> rather than an estimate, and the trend line <b>breaks</b> at that day.</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div id="err" style="display:none">
+    <section class="card" style="padding:16px 18px">
+      <div class="status warn">
+        <div class="ic">!</div>
+        <div class="body">
+          <h4><span class="vi">Không tải được dữ liệu lịch sử</span><span class="en">Could not load the history data</span></h4>
+          <p>
+            <span class="vi">Trang này đọc <code class="mono">data/index.json</code> bằng <code class="mono">fetch</code>, nên cần mở qua <b>http(s)</b> (ví dụ GitHub Pages), không mở bằng đường dẫn file trực tiếp. Chi tiết lỗi: <span id="errmsg"></span></span>
+            <span class="en">This page reads <code class="mono">data/index.json</code> via <code class="mono">fetch</code>, so it must be opened over <b>http(s)</b> (e.g. GitHub Pages), not from a raw file path. Error detail: <span id="errmsg2"></span></span>
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- CURRENT + SPARKLINES -->
+  <section class="card" id="sec-tiles" style="display:none">
+    <p class="section-label"><span class="bar"></span> <span class="vi">Hiện tại &amp; xu hướng</span><span class="en">Current &amp; trend</span> <span class="tag" id="tiles-badge"></span></p>
+    <p class="section-sub"><span class="vi">Giá trị của ngày quét mới nhất, biến động so với ngày quét liền trước, và toàn bộ chuỗi ngày đã lưu.</span><span class="en">Value at the latest scan, movement versus the previous scan, and the whole stored series.</span></p>
+    <div class="tiles" id="tiles"></div>
+  </section>
+
+  <!-- TREND CHARTS -->
+  <section class="card" id="sec-charts" style="display:none">
+    <p class="section-label"><span class="bar"></span> <span class="vi">Biểu đồ theo thời gian</span><span class="en">Trend over time</span></p>
+    <p class="section-sub"><span class="vi">Trục ngang là thời gian thật, nên khoảng trống giữa mốc Tháng 6 và các ngày cuối Tháng 7 được thể hiện đúng. Mỗi biểu đồ một chỉ số, một trục — đưa chuột vào để xem giá trị từng ngày.</span><span class="en">The horizontal axis is real time, so the gap between the June baseline and the late-July scans is shown truthfully. One metric and one axis per chart — hover to read each day's value.</span></p>
+    <div class="legendrow">
+      <span class="lg"><i style="background:var(--blue)"></i> <span class="vi">Google Search Console</span><span class="en">Google Search Console</span></span>
+      <span class="lg"><i style="background:var(--green)"></i> Google Analytics 4</span>
+      <span class="lg"><i style="background:var(--violet)"></i> Ahrefs</span>
+      <span class="lg"><i style="background:var(--accent)"></i> <span class="vi">Hiện diện AI</span><span class="en">AI visibility</span></span>
+    </div>
+    <div class="charts" id="charts"></div>
+  </section>
+
+  <!-- TABLE -->
+  <section class="card" id="sec-table" style="display:none">
+    <p class="section-label"><span class="bar"></span> <span class="vi">Bảng dữ liệu từng ngày</span><span class="en">Day-by-day data table</span></p>
+    <p class="section-sub"><span class="vi">Số nhỏ bên dưới mỗi giá trị là biến động so với ngày quét liền trước. “chưa đọc” = chỉ số đó không được đọc ở ngày đó.</span><span class="en">The small figure under a value is the movement versus the previous scan. “not read” = that metric was not read on that day.</span></p>
+    <p class="scrollhint"><span class="vi">↔ Kéo ngang trong bảng để xem hết các cột (đến cột “Bản lưu”).</span><span class="en">↔ Scroll the table sideways to reach every column (through “Archive”).</span></p>
+    <div class="tblwrap">
+      <table>
+        <thead>
+          <tr class="grouphdr">
+            <th></th>
+            <th class="num" colspan="4"><span class="vi">Google Search Console (28 ngày)</span><span class="en">Google Search Console (28d)</span></th>
+            <th class="num" colspan="4"><span class="vi">Google Analytics 4 (28 ngày)</span><span class="en">Google Analytics 4 (28d)</span></th>
+            <th class="num" colspan="3">Ahrefs</th>
+            <th class="num"><span class="vi">AI</span><span class="en">AI</span></th>
+            <th></th>
+          </tr>
+          <tr>
+            <th><span class="vi">Ngày quét</span><span class="en">Scan date</span></th>
+            <th class="num">Clicks</th>
+            <th class="num">Impr.</th>
+            <th class="num">CTR</th>
+            <th class="num"><span class="vi">Vị trí</span><span class="en">Pos.</span></th>
+            <th class="num">Sessions</th>
+            <th class="num"><span class="vi">Engaged</span><span class="en">Engaged</span></th>
+            <th class="num"><span class="vi">Tỷ lệ tương tác</span><span class="en">Engag. rate</span></th>
+            <th class="num"><span class="vi">Key events</span><span class="en">Key events</span></th>
+            <th class="num">RD</th>
+            <th class="num">Backlinks</th>
+            <th class="num"><span class="vi">Trích dẫn AI</span><span class="en">AI citations</span></th>
+            <th class="num"><span class="vi">Điểm /100</span><span class="en">Score /100</span></th>
+            <th><span class="vi">Bản lưu</span><span class="en">Archive</span></th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+    <p class="note"><span class="vi"><b>Cửa sổ dữ liệu:</b> mọi số GSC/GA4 là kỳ <b>28 ngày gần nhất</b> tính tại ngày quét, nên hai ngày quét liền nhau có kỳ lệch nhau 1 ngày — biến động ngày/ngày là biến động của cửa sổ trượt, không phải của riêng một ngày. Mốc 30/06/2026 là kỳ <b>cả tháng 6</b>, dùng làm baseline.</span><span class="en"><b>Data window:</b> every GSC/GA4 figure is the <b>trailing 28 days</b> at the scan date, so two consecutive scans cover windows offset by one day — day-over-day movement is movement of a rolling window, not of a single day. The 30 Jun 2026 row is the <b>whole of June</b> and serves as the baseline.</span></p>
+  </section>
+
+  <!-- DAY CARDS -->
+  <section class="card" id="sec-days" style="display:none">
+    <p class="section-label"><span class="bar"></span> <span class="vi">Ghi chú từng ngày quét</span><span class="en">Notes per scan</span></p>
+    <p class="section-sub"><span class="vi">Ngữ cảnh của mỗi lần quét: có gì thay đổi, chỉ số nào chưa đọc được và vì sao.</span><span class="en">Context for each scan: what changed, which metrics could not be read and why.</span></p>
+    <div class="daylist" id="days"></div>
+  </section>
+
+  <footer class="foot">
+    <b>DX Living — <span class="vi">Lịch sử dữ liệu SEO</span><span class="en">SEO data history</span></b> · dxliving.com<br>
+    <span class="vi">Dữ liệu đọc trực tiếp từ Chrome (Google Search Console + GA4 + Ahrefs) · Mỗi ngày lưu <code class="mono">data/YYYY-MM-DD.json</code> + <code class="mono">archive/YYYY-MM-DD.html</code> · Không dùng Supermetrics &amp; OpenSEO · Không có số ước lượng</span><span class="en">Data read directly from Chrome (Google Search Console + GA4 + Ahrefs) · Each day stores <code class="mono">data/YYYY-MM-DD.json</code> + <code class="mono">archive/YYYY-MM-DD.html</code> · No Supermetrics &amp; no OpenSEO · No estimated values</span>
+  </footer>
+
+</div>
+
+<div class="tipbox" id="tip"></div>
+
+<script>
+function setLang(l){
+  document.body.className = (l === 'en') ? 'lang-en' : '';
+  document.documentElement.lang = l;
+  document.getElementById('bvi').classList.toggle('active', l === 'vi');
+  document.getElementById('ben').classList.toggle('active', l === 'en');
+  if (window.__redraw) window.__redraw();
+}
+function lang(){ return document.body.classList.contains('lang-en') ? 'en' : 'vi'; }
+function t(vi, en){ return lang() === 'en' ? en : vi; }
+
+/* ---------- helpers ---------- */
+const NR = '<span class="nr">' + '<span class="vi">chưa đọc</span><span class="en">not read</span>' + '</span>';
+function has(v){ return v !== null && v !== undefined && v !== ''; }
+function num(v, dp){
+  if (!has(v)) return null;
+  return dp ? Number(v).toFixed(dp) : Number(v).toLocaleString('en-US');
+}
+function dmy(iso){ const p = iso.split('-'); return p[2] + '/' + p[1] + '/' + p[0]; }
+function dm(iso){ const p = iso.split('-'); return p[2] + '/' + p[1]; }
+function tdate(iso){ return Date.parse(iso + 'T00:00:00Z'); }
+
+/* metric definitions — hue follows the data source (fixed order, never cycled) */
+const M = {
+  clicks:   {vi:'Clicks — GSC', en:'Clicks — GSC', hue:'var(--blue)',   dp:0, get:d => d.gsc_28d && d.gsc_28d.clicks},
+  impr:     {vi:'Impressions — GSC', en:'Impressions — GSC', hue:'var(--blue)', dp:0, get:d => d.gsc_28d && d.gsc_28d.impressions},
+  ctr:      {vi:'CTR — GSC', en:'CTR — GSC', hue:'var(--blue)', dp:1, unit:'%', get:d => d.gsc_28d && d.gsc_28d.ctr_pct},
+  pos:      {vi:'Vị trí TB — GSC', en:'Avg position — GSC', hue:'var(--blue)', dp:1, get:d => d.gsc_28d && d.gsc_28d.avg_position, lowerBetter:true},
+  sess:     {vi:'Sessions — GA4', en:'Sessions — GA4', hue:'var(--green)', dp:0, get:d => d.ga4_28d && d.ga4_28d.sessions},
+  eng:      {vi:'Engaged sessions — GA4', en:'Engaged sessions — GA4', hue:'var(--green)', dp:0, get:d => d.ga4_28d && d.ga4_28d.engaged_sessions},
+  er:       {vi:'Tỷ lệ tương tác — GA4', en:'Engagement rate — GA4', hue:'var(--green)', dp:1, unit:'%', get:d => d.ga4_28d && d.ga4_28d.engagement_rate_pct},
+  ke:       {vi:'Key events — GA4', en:'Key events — GA4', hue:'var(--green)', dp:0, get:d => d.ga4_28d && d.ga4_28d.key_events},
+  rd:       {vi:'Referring domains — Ahrefs', en:'Referring domains — Ahrefs', hue:'var(--violet)', dp:0, get:d => d.ahrefs && d.ahrefs.referring_domains},
+  bl:       {vi:'Backlinks — Ahrefs', en:'Backlinks — Ahrefs', hue:'var(--violet)', dp:0, get:d => d.ahrefs && d.ahrefs.backlinks},
+  ai:       {vi:'Trích dẫn AI — Ahrefs', en:'AI citations — Ahrefs', hue:'var(--accent)', dp:0, get:d => d.ahrefs && d.ahrefs.ai_citations},
+  score:    {vi:'Điểm hiện diện AI /100', en:'AI visibility score /100', hue:'var(--accent)', dp:0, get:d => d.ai_visibility && d.ai_visibility.score}
+};
+function val(snap, key){ const v = M[key].get(snap); return has(v) ? Number(v) : null; }
+
+/* series: [{date, t, v}] with nulls kept so the line breaks honestly */
+function series(rows, key){
+  return rows.map(r => ({date: r.date, t: tdate(r.date), v: val(r.data, key)}));
+}
+function deltaHTML(cur, prev, key, small){
+  const m = M[key];
+  if (!has(cur) || !has(prev)) return '';
+  const d = cur - prev;
+  const cls = d === 0 ? 'flat' : ((m.lowerBetter ? d < 0 : d > 0) ? 'up' : 'down');
+  const arrow = d === 0 ? '=' : (d > 0 ? '▲' : '▼');
+  const mag = m.dp ? Math.abs(d).toFixed(m.dp) : Math.abs(d).toLocaleString('en-US');
+  const txt = arrow + ' ' + (d === 0 ? t('không đổi', 'no change') : mag + (m.unit || ''));
+  return '<span class="' + (small ? 'cd ' : 't-delta ') + cls + '">' + txt + '</span>';
+}
+
+/* ---------- sparkline (single series, one hue, no axis) ---------- */
+function sparkSVG(pts, hue){
+  const W = 240, H = 38, pad = 3;
+  const good = pts.filter(p => p.v !== null);
+  if (good.length < 2) return '<svg class="t-spark" viewBox="0 0 ' + W + ' ' + H + '" preserveAspectRatio="none"></svg>';
+  const t0 = pts[0].t, t1 = pts[pts.length - 1].t;
+  const vs = good.map(p => p.v);
+  let lo = Math.min.apply(null, vs), hi = Math.max.apply(null, vs);
+  if (hi === lo) { hi = lo + 1; lo = lo - 1; }
+  const x = p => pad + (t1 === t0 ? 0 : (p.t - t0) / (t1 - t0)) * (W - pad * 2);
+  const y = p => H - pad - ((p.v - lo) / (hi - lo)) * (H - pad * 2);
+  let segs = [], cur = [];
+  pts.forEach(p => { if (p.v === null) { if (cur.length) segs.push(cur); cur = []; } else cur.push(p); });
+  if (cur.length) segs.push(cur);
+  let d = '';
+  segs.forEach(s => {
+    if (s.length === 1) { d += 'M' + (x(s[0]) - 0.6).toFixed(1) + ' ' + y(s[0]).toFixed(1) + 'L' + (x(s[0]) + 0.6).toFixed(1) + ' ' + y(s[0]).toFixed(1); return; }
+    d += 'M' + s.map(p => x(p).toFixed(1) + ' ' + y(p).toFixed(1)).join('L');
+  });
+  const last = good[good.length - 1];
+  const area = segs.length === 1 && segs[0].length > 1
+    ? '<path d="M' + segs[0].map(p => x(p).toFixed(1) + ' ' + y(p).toFixed(1)).join('L') + 'L' + x(segs[0][segs[0].length - 1]).toFixed(1) + ' ' + (H - pad) + 'L' + x(segs[0][0]).toFixed(1) + ' ' + (H - pad) + 'Z" fill="' + hue + '" opacity=".08"/>'
+    : '';
+  return '<svg class="t-spark" viewBox="0 0 ' + W + ' ' + H + '" preserveAspectRatio="none" aria-hidden="true">'
+    + area
+    + '<path d="' + d + '" fill="none" stroke="' + hue + '" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>'
+    + '<circle cx="' + x(last).toFixed(1) + '" cy="' + y(last).toFixed(1) + '" r="3" fill="' + hue + '" stroke="#fff" stroke-width="2"/>'
+    + '</svg>';
+}
+
+/* ---------- full chart (single series, time x-axis, hover crosshair) ---------- */
+function chartSVG(id, pts, key){
+  const m = M[key], hue = m.hue;
+  const W = 520, H = 150, L = 40, R = 12, T = 12, B = 24;
+  const good = pts.filter(p => p.v !== null);
+  if (!good.length) return '<svg viewBox="0 0 ' + W + ' ' + H + '"></svg>';
+  const t0 = pts[0].t, t1 = pts[pts.length - 1].t;
+  const vs = good.map(p => p.v);
+  let lo = Math.min.apply(null, vs), hi = Math.max.apply(null, vs);
+  if (hi === lo){
+    /* flat or single-point series: pad by a whole step so the three tick labels stay distinct */
+    const pad = m.dp ? Math.max(0.2, Math.abs(hi) * 0.02) : Math.max(2, Math.round(Math.abs(hi) * 0.1) * 2);
+    lo = Math.max(0, hi - pad); hi = hi + pad;
+  } else {
+    const span = hi - lo;
+    lo = Math.max(0, lo - span * 0.15); hi = hi + span * 0.15;
+  }
+  const x = p => L + (t1 === t0 ? 0 : (p.t - t0) / (t1 - t0)) * (W - L - R);
+  const y = v => H - B - ((v - lo) / (hi - lo)) * (H - T - B);
+  let segs = [], cur = [];
+  pts.forEach(p => { if (p.v === null) { if (cur.length) segs.push(cur); cur = []; } else cur.push(p); });
+  if (cur.length) segs.push(cur);
+  let s = '';
+  /* gridlines + y labels: 3 ticks */
+  for (let i = 0; i < 3; i++){
+    const v = lo + (hi - lo) * i / 2, yy = y(v);
+    s += '<line class="grid-line" x1="' + L + '" x2="' + (W - R) + '" y1="' + yy.toFixed(1) + '" y2="' + yy.toFixed(1) + '"/>';
+    s += '<text class="axis-txt" x="' + (L - 6) + '" y="' + (yy + 3.2).toFixed(1) + '" text-anchor="end">' + (m.dp ? v.toFixed(m.dp) : Math.round(v).toLocaleString('en-US')) + '</text>';
+  }
+  /* x labels: first and last only, avoids collisions */
+  s += '<text class="axis-txt" x="' + L + '" y="' + (H - B + 14) + '">' + dm(pts[0].date) + '</text>';
+  s += '<text class="axis-txt" x="' + (W - R) + '" y="' + (H - B + 14) + '" text-anchor="end">' + dm(pts[pts.length - 1].date) + '</text>';
+  segs.forEach(sg => {
+    if (sg.length === 1){
+      s += '<circle cx="' + x(sg[0]).toFixed(1) + '" cy="' + y(sg[0].v).toFixed(1) + '" r="3.2" fill="' + hue + '" stroke="#fff" stroke-width="2"/>';
+      return;
+    }
+    s += '<path d="M' + sg.map(p => x(p).toFixed(1) + ' ' + y(p.v).toFixed(1)).join('L') + '" fill="none" stroke="' + hue + '" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>';
+  });
+  good.forEach(p => {
+    s += '<circle class="pt" cx="' + x(p).toFixed(1) + '" cy="' + y(p.v).toFixed(1) + '" r="3.2" fill="' + hue + '" stroke="#fff" stroke-width="2"/>';
+  });
+  s += '<line class="cross" id="cr-' + id + '" x1="0" x2="0" y1="' + T + '" y2="' + (H - B) + '" style="opacity:0"/>';
+  s += '<rect class="hitbox" id="hb-' + id + '" x="' + L + '" y="0" width="' + (W - L - R) + '" height="' + H + '"/>';
+  const meta = good.map(p => ({d: p.date, v: p.v, x: x(p), y: y(p.v)}));
+  return {svg: '<svg viewBox="0 0 ' + W + ' ' + H + '" preserveAspectRatio="none">' + s + '</svg>', meta: meta, key: key};
+}
+
+function attachHover(box, id, built){
+  const svg = box.querySelector('svg');
+  const hb = box.querySelector('#hb-' + id);
+  const cr = box.querySelector('#cr-' + id);
+  const tip = document.getElementById('tip');
+  const m = M[built.key];
+  function locate(ev){
+    const r = svg.getBoundingClientRect();
+    const vx = (ev.clientX - r.left) / r.width * 520;
+    let best = built.meta[0], bd = 1e9;
+    built.meta.forEach(p => { const d = Math.abs(p.x - vx); if (d < bd){ bd = d; best = p; } });
+    return {p: best, r: r};
+  }
+  function show(ev){
+    const o = locate(ev); if (!o.p) return;
+    cr.setAttribute('x1', o.p.x); cr.setAttribute('x2', o.p.x); cr.style.opacity = 1;
+    const px = o.r.left + o.p.x / 520 * o.r.width;
+    const py = o.r.top + o.p.y / 150 * o.r.height;
+    tip.innerHTML = '<span class="tt-d">' + dmy(o.p.d) + '</span><span class="tt-v">' + t(m.vi, m.en) + ': <b>'
+      + (m.dp ? Number(o.p.v).toFixed(m.dp) : Number(o.p.v).toLocaleString('en-US')) + (m.unit || '') + '</b></span>';
+    tip.style.opacity = 1;
+    const w = tip.offsetWidth, h = tip.offsetHeight;
+    let left = px - w / 2; if (left < 6) left = 6; if (left + w > window.innerWidth - 6) left = window.innerWidth - w - 6;
+    tip.style.left = (left + window.scrollX) + 'px';
+    tip.style.top = (py + window.scrollY - h - 10) + 'px';
+  }
+  hb.addEventListener('mousemove', show);
+  hb.addEventListener('mouseenter', show);
+  hb.addEventListener('mouseleave', function(){ cr.style.opacity = 0; tip.style.opacity = 0; });
+}
+
+/* ---------- render ---------- */
+let ROWS = [], IDX = null;
+
+function renderMeta(){
+  const el = document.getElementById('meta');
+  const latest = ROWS[ROWS.length - 1];
+  el.innerHTML =
+      '<span class="tag on">✓ ' + ROWS.length + ' <span class="vi">ngày đã lưu</span><span class="en">days stored</span></span>'
+    + '<span class="tag"><span class="vi">📅 Mới nhất: ' + dmy(latest.date) + '</span><span class="en">📅 Latest: ' + dmy(latest.date) + '</span></span>'
+    + '<span class="tag"><span class="vi">🗂 Sớm nhất: ' + dmy(ROWS[0].date) + '</span><span class="en">🗂 Earliest: ' + dmy(ROWS[0].date) + '</span></span>'
+    + '<span class="tag on">✓ <span class="vi">Chrome trực tiếp (GSC + GA4 + Ahrefs)</span><span class="en">Direct from Chrome (GSC + GA4 + Ahrefs)</span></span>';
+  document.getElementById('tiles-badge').innerHTML =
+    '<span class="vi">Ngày quét ' + dmy(latest.date) + '</span><span class="en">Scan of ' + dmy(latest.date) + '</span>';
+}
+
+const TILE_KEYS = ['clicks','impr','sess','eng','rd','score'];
+function renderTiles(){
+  const host = document.getElementById('tiles');
+  host.innerHTML = TILE_KEYS.map(function(key){
+    const m = M[key], pts = series(ROWS, key);
+    const good = pts.filter(p => p.v !== null);
+    const cur = good.length ? good[good.length - 1] : null;
+    const prev = good.length > 1 ? good[good.length - 2] : null;
+    const valTxt = cur ? (m.dp ? cur.v.toFixed(m.dp) : cur.v.toLocaleString('en-US')) + (m.unit || '') : t('chưa đọc', 'not read');
+    return '<div class="tile">'
+      + '<div class="t-head"><span class="t-dot" style="background:' + m.hue + '"></span>'
+      + '<span class="t-label"><span class="vi">' + m.vi + '</span><span class="en">' + m.en + '</span></span></div>'
+      + '<div class="t-val">' + valTxt + '</div>'
+      + (prev && cur ? deltaHTML(cur.v, prev.v, key, false) + '<span class="t-foot"><span class="vi">so với ' + dmy(prev.date) + '</span><span class="en">vs ' + dmy(prev.date) + '</span></span>'
+                     : '<span class="t-foot"><span class="vi">chưa đủ 2 mốc để so sánh</span><span class="en">not enough points to compare</span></span>')
+      + sparkSVG(pts, m.hue)
+      + '<span class="t-foot">' + good.length + '/' + pts.length + ' <span class="vi">ngày có số liệu</span><span class="en">days with data</span></span>'
+      + '</div>';
+  }).join('');
+}
+
+const CHART_KEYS = ['clicks','impr','sess','eng','rd','bl','ai','score'];
+function renderCharts(){
+  const host = document.getElementById('charts');
+  host.innerHTML = '';
+  CHART_KEYS.forEach(function(key, i){
+    const m = M[key], pts = series(ROWS, key);
+    const good = pts.filter(p => p.v !== null);
+    const box = document.createElement('div');
+    box.className = 'chart';
+    const built = good.length ? chartSVG(i, pts, key) : null;
+    box.innerHTML = '<p class="c-title"><span class="t-dot" style="background:' + m.hue + '"></span>'
+      + '<span class="vi">' + m.vi + '</span><span class="en">' + m.en + '</span></p>'
+      + '<p class="c-sub">' + good.length + '/' + pts.length + ' '
+      + t('ngày có số liệu · ' + dm(pts[0].date) + ' → ' + dm(pts[pts.length - 1].date),
+          'days with data · ' + dm(pts[0].date) + ' → ' + dm(pts[pts.length - 1].date)) + '</p>'
+      + (built ? built.svg : '<p class="c-sub">' + t('Chưa có ngày nào đọc được chỉ số này.', 'No day has this metric yet.') + '</p>');
+    host.appendChild(box);
+    if (built) attachHover(box, i, built);
+  });
+}
+
+const TBL_KEYS = ['clicks','impr','ctr','pos','sess','eng','er','ke','rd','bl','ai','score'];
+function renderTable(){
+  const body = document.getElementById('tbody');
+  body.innerHTML = ROWS.map(function(r, i){
+    const prev = i > 0 ? ROWS[i - 1].data : null;
+    let cells = '';
+    TBL_KEYS.forEach(function(key){
+      const m = M[key];
+      const cv = val(r.data, key);
+      const pv = prev ? val(prev, key) : null;
+      cells += '<td class="num">' + (cv === null ? NR
+        : '<span class="cellv">' + (m.dp ? cv.toFixed(m.dp) : cv.toLocaleString('en-US')) + (m.unit || '') + '</span>'
+          + (['clicks','impr','sess','eng','rd','bl','score'].indexOf(key) >= 0 ? deltaHTML(cv, pv, key, true) : '')) + '</td>';
+    });
+    const rep = r.meta.report
+      ? '<a class="dlink" href="' + r.meta.report + '">HTML</a>'
+      : '<span class="nr">' + t('không có', 'none') + '</span>';
+    return '<tr class="' + (i === ROWS.length - 1 ? 'newest' : '') + '">'
+      + '<td><b>' + dmy(r.date) + '</b><span class="lbl"><span class="vi">' + (r.meta.label_vi || '') + '</span><span class="en">' + (r.meta.label_en || '') + '</span></span></td>'
+      + cells
+      + '<td>' + rep + ' &nbsp;<a class="dlink mut" href="' + r.meta.data + '">JSON</a></td>'
+      + '</tr>';
+  }).join('');
+}
+
+function renderDays(){
+  const host = document.getElementById('days');
+  host.innerHTML = ROWS.slice().reverse().map(function(r, i){
+    const d = r.data;
+    /* notes: {vi:[],en:[]} preferred; a flat array is split at its midpoint (VI half first) */
+    let viNotes = [], enNotes = [];
+    if (d.notes && !Array.isArray(d.notes)){ viNotes = d.notes.vi || []; enNotes = d.notes.en || []; }
+    else if (Array.isArray(d.notes)){ const h = Math.floor(d.notes.length / 2); viNotes = d.notes.slice(0, h); enNotes = d.notes.slice(h); }
+    const noteHTML = (viNotes.length || enNotes.length)
+      ? '<span class="vi">' + (viNotes.length ? viNotes : enNotes).map(n => '<span class="d-note">' + n + '</span>').join('') + '</span>'
+        + '<span class="en">' + (enNotes.length ? enNotes : viNotes).map(n => '<span class="d-note">' + n + '</span>').join('') + '</span>'
+      : '';
+    return '<div class="day' + (i === 0 ? ' newest' : '') + '">'
+      + '<div class="d-top"><span class="d-date">' + dmy(r.date) + '</span>'
+      + '<span class="d-tag"><span class="vi">' + (r.meta.label_vi || '') + '</span><span class="en">' + (r.meta.label_en || '') + '</span></span>'
+      + '<span class="d-links">'
+      + (r.meta.report ? '<a class="dlink" href="' + r.meta.report + '"><span class="vi">Xem báo cáo ngày này</span><span class="en">Open this day\'s report</span></a>' : '')
+      + '<a class="dlink mut" href="' + r.meta.data + '">JSON</a></span></div>'
+      + '<div style="display:block">' + noteHTML + '</div>'
+      + '<div class="d-prov"><span class="vi">Cửa sổ GSC ' + ((d.windows && d.windows.gsc) || '—') + ' · GA4 ' + ((d.windows && d.windows.ga4) || '—') + ' · commit <code class="mono">' + (d.source_commit || '—') + '</code></span>'
+      + '<span class="en">GSC window ' + ((d.windows && d.windows.gsc) || '—') + ' · GA4 ' + ((d.windows && d.windows.ga4) || '—') + ' · commit <code class="mono">' + (d.source_commit || '—') + '</code></span></div>'
+      + '</div>';
+  }).join('');
+}
+
+function renderAll(){
+  renderMeta(); renderTiles(); renderCharts(); renderTable(); renderDays();
+  ['sec-tiles','sec-charts','sec-table','sec-days'].forEach(id => document.getElementById(id).style.display = '');
+}
+window.__redraw = function(){ if (ROWS.length) { renderTiles(); renderCharts(); renderTable(); } };
+
+function fail(msg){
+  document.getElementById('err').style.display = '';
+  document.getElementById('errmsg').textContent = msg;
+  document.getElementById('errmsg2').textContent = msg;
+}
+
+(function load(){
+  fetch('data/index.json', {cache: 'no-store'})
+    .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status + ' data/index.json'); return r.json(); })
+    .then(function(idx){
+      IDX = idx;
+      const snaps = (idx.snapshots || []).slice().sort((a, b) => a.date < b.date ? -1 : 1);
+      return Promise.all(snaps.map(function(s){
+        return fetch(s.data, {cache: 'no-store'})
+          .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status + ' ' + s.data); return r.json(); })
+          .then(j => ({date: s.date, meta: s, data: j}));
+      }));
+    })
+    .then(function(rows){ ROWS = rows; renderAll(); })
+    .catch(function(e){ fail(e.message || String(e)); });
+})();
+</script>
+</body>
+</html>

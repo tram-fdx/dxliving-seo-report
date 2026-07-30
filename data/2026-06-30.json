@@ -1,0 +1,44 @@
+{
+  "date": "2026-06-30",
+  "site": "dxliving.com",
+  "source_commit": "(reference period — June 2026 baseline)",
+  "provenance": "Read directly from Chrome (GSC + GA4 + Ahrefs UI). No OpenSEO, no Supermetrics. No estimated values.",
+  "windows": {
+    "gsc": "2026-06-01 → 2026-06-30",
+    "ga4": "2026-06-01 → 2026-06-30"
+  },
+  "gsc_28d": {
+    "clicks": 47,
+    "impressions": 587,
+    "ctr_pct": 8.0,
+    "avg_position": 13.8,
+    "unique_queries": 55,
+    "pages_indexed": 29,
+    "pages_with_impressions": 26
+  },
+  "ga4_28d": {
+    "sessions": 322,
+    "engaged_sessions": 61,
+    "engagement_rate_pct": 18.9,
+    "total_users": 205
+  },
+  "ahrefs": {
+    "domain_rating": 0,
+    "referring_domains": 244,
+    "health_score": 88,
+    "backlinks": null,
+    "organic_keywords": null,
+    "organic_traffic": null,
+    "ai_citations": null
+  },
+  "notes": {
+    "vi": [
+      "Baseline kỳ Tháng 6/2026, dùng làm mốc so sánh cho mọi kỳ 28 ngày sau đó.",
+      "Chưa có khối Ahrefs live tại thời điểm này — backlinks / AI citations chưa được đọc."
+    ],
+    "en": [
+      "June 2026 baseline used as the comparison period for every later 28-day window.",
+      "No live Ahrefs block existed yet — backlinks / AI citations were not read."
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "date": "2026-07-27",
+  "site": "dxliving.com",
+  "source_commit": "d0bc9b0",
+  "provenance": "Read directly from Chrome (GSC + GA4 + Ahrefs UI). No OpenSEO, no Supermetrics. No estimated values.",
+  "windows": {
+    "gsc": "2026-06-27 → 2026-07-23",
+    "ga4": "2026-06-29 → 2026-07-26"
+  },
+  "gsc_28d": {
+    "clicks": 65,
+    "impressions": 900,
+    "ctr_pct": 7.2,
+    "avg_position": 23.2
+  },
+  "ga4_28d": {
+    "sessions": 442,
+    "engaged_sessions": 272,
+    "engagement_rate_pct": 61.5,
+    "key_events": 42
+  },
+  "ahrefs": {
+    "domain_rating": 0,
+    "referring_domains": 244,
+    "health_score": 88,
+    "backlinks": null,
+    "ai_citations": null,
+    "note": "Chưa đọc Ahrefs live — số RD 244 là từ audit Tháng 6 / Not read live — RD 244 comes from the June audit"
+  },
+  "notes": {
+    "vi": [
+      "Bản publish đầu tiên của báo cáo song ngữ VI/EN."
+    ],
+    "en": [
+      "First publish of the bilingual VI/EN report."
+    ]
+  }
+}

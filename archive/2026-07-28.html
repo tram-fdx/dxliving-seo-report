@@ -43,8 +43,6 @@
   .metastrip{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
   .tag{display:inline-flex;align-items:center;gap:6px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:4px 12px;font-size:12px;color:#3a3f45;font-weight:600}
   .tag.on{background:var(--green-soft);border-color:#cdeadd;color:var(--green)}
-  a.tag.hist{background:var(--accent-soft);border-color:#f3c9c0;color:var(--accent);text-decoration:none;font-weight:700}
-  a.tag.hist:hover{background:#fce3dd}
 
   .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px 24px;margin-bottom:18px}
   .section-label{font-size:12px;font-weight:800;letter-spacing:.7px;text-transform:uppercase;color:var(--muted);margin:0 0 4px;display:flex;align-items:center;gap:9px;flex-wrap:wrap}
@@ -149,6 +147,8 @@
 </style>
 </head>
 <body>
+<div data-archive-banner style="background:#fdf4e3;border-bottom:1px solid #f0dcb4;color:#b7791f;font:600 12.5px/1.55 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;padding:9px 130px 9px 16px;text-align:center"><span class="vi">🗂 Bản lưu ngày 28/07/2026 — báo cáo này đã đóng băng, không cập nhật nữa. <a href="../index.html" style="color:#b7791f;font-weight:800">Xem báo cáo mới nhất</a> · <a href="../history.html" style="color:#b7791f;font-weight:800">Lịch sử dữ liệu theo ngày</a></span><span class="en">🗂 Archived snapshot of 28 Jul 2026 — this report is frozen and no longer updated. <a href="../index.html" style="color:#b7791f;font-weight:800">Open the latest report</a> · <a href="../history.html" style="color:#b7791f;font-weight:800">Daily data history</a></span></div>
+
 
 <div class="langsw">
   <button id="bvi" class="active" onclick="setLang('vi')">VI</button>
@@ -161,17 +161,15 @@
     <p class="eyebrow"><span class="vi">DX Living · Báo cáo hiệu suất tìm kiếm</span><span class="en">DX Living · Search Performance Report</span></p>
     <h1 class="title"><span class="brand-dot"></span> <span class="vi">Báo cáo Hiệu suất SEO — dxliving.com</span><span class="en">SEO Performance Report — dxliving.com</span></h1>
     <p class="subtitle">
-      <span class="vi"><b>Cập nhật mới nhất: 28 ngày</b> (GSC 29/06→26/07 · GA4 02/07→29/07), đọc trực tiếp từ Chrome · kèm <b>Hiện diện trên AI (AEO/GEO)</b>, chi tiết tham chiếu <b>Tháng 6/2026</b>, <b>SERP Úc 30/06</b> và <b>audit kỹ thuật 21/07</b>.</span>
-      <span class="en"><b>Latest update: last 28 days</b> (GSC 29 Jun→26 Jul · GA4 02 Jul→29 Jul), read directly from Chrome · plus <b>AI Visibility (AEO/GEO)</b>, <b>June 2026</b> reference detail, <b>AU SERP 30 Jun</b> and <b>21 Jul technical audit</b>.</span>
+      <span class="vi"><b>Cập nhật mới nhất: 28 ngày</b> (GSC 28/06→25/07 · GA4 30/06→27/07), đọc trực tiếp từ Chrome · kèm chi tiết tham chiếu <b>Tháng 6/2026</b>, <b>SERP Úc 30/06</b> và <b>audit kỹ thuật 21/07</b>.</span>
+      <span class="en"><b>Latest update: last 28 days</b> (GSC 28 Jun→25 Jul · GA4 30 Jun→27 Jul), read directly from Chrome · plus <b>June 2026</b> reference detail, <b>AU SERP 30 Jun</b> and <b>21 Jul technical audit</b>.</span>
     </p>
     <div class="metastrip">
       <span class="tag on">✓ Google Search Console (live)</span>
       <span class="tag on">✓ Google Analytics 4 (live)</span>
       <span class="tag on">✓ Ahrefs (live)</span>
-      <span class="tag"><span class="vi">🤖 Hiện diện AI (AEO/GEO) · 16/100</span><span class="en">🤖 AI Visibility (AEO/GEO) · 16/100</span></span>
       <span class="tag"><span class="vi">🔎 SERP snapshot · location Úc</span><span class="en">🔎 SERP snapshot · AU location</span></span>
-      <span class="tag"><span class="vi">📅 Cập nhật: 29/07/2026</span><span class="en">📅 Updated: 29 Jul 2026</span></span>
-      <a class="tag hist" href="history.html">🗂 <span class="vi">Lịch sử dữ liệu theo ngày →</span><span class="en">Daily data history →</span></a>
+      <span class="tag"><span class="vi">📅 Cập nhật: 28/07/2026</span><span class="en">📅 Updated: 28 Jul 2026</span></span>
     </div>
   </header>
 
@@ -182,8 +180,8 @@
       <div class="body">
         <h4><span class="vi">Nguồn dữ liệu: đọc trực tiếp từ Chrome (GSC + GA4)</span><span class="en">Data source: read directly from Chrome (GSC + GA4)</span></h4>
         <p>
-          <span class="vi">Số liệu <b>28 ngày mới nhất</b> ở khối bên dưới được đọc <b>trực tiếp từ Google Search Console và GA4</b> trong trình duyệt (29/07/2026, GSC cập nhật ~6h trước). Đã <b>bỏ hoàn toàn Supermetrics &amp; OpenSEO</b> theo yêu cầu. Các bảng chi tiết Tháng 6 giữ lại làm mốc so sánh; audit kỹ thuật 21/07 &amp; SERP 30/06 giữ nguyên.</span>
-          <span class="en">The <b>latest 28-day</b> figures below are read <b>directly from Google Search Console and GA4</b> in the browser (29 Jul 2026; GSC last updated ~6h earlier). <b>Supermetrics &amp; OpenSEO fully removed</b> as requested. June detail tables are kept as a comparison baseline; the 21 Jul technical audit &amp; 30 Jun SERP snapshot are unchanged.</span>
+          <span class="vi">Số liệu <b>28 ngày mới nhất</b> ở khối bên dưới được đọc <b>trực tiếp từ Google Search Console và GA4</b> trong trình duyệt (28/07/2026, GSC cập nhật ~7h trước). Đã <b>bỏ hoàn toàn Supermetrics &amp; OpenSEO</b> theo yêu cầu. Các bảng chi tiết Tháng 6 giữ lại làm mốc so sánh; audit kỹ thuật 21/07 &amp; SERP 30/06 giữ nguyên.</span>
+          <span class="en">The <b>latest 28-day</b> figures below are read <b>directly from Google Search Console and GA4</b> in the browser (28 Jul 2026; GSC last updated ~7h earlier). <b>Supermetrics &amp; OpenSEO fully removed</b> as requested. June detail tables are kept as a comparison baseline; the 21 Jul technical audit &amp; 30 Jun SERP snapshot are unchanged.</span>
         </p>
       </div>
     </div>
@@ -191,23 +189,23 @@
 
   <!-- LATEST 28D -->
   <section class="card">
-    <p class="section-label"><span class="bar"></span> <span class="vi">Cập nhật mới nhất — 28 ngày</span><span class="en">Latest update — last 28 days</span> <span class="snap-badge">LIVE · GSC + GA4 · 29/07/2026</span></p>
-    <p class="section-sub"><span class="vi">GSC: 29/06 → 26/07 · GA4: 02/07 → 29/07 · so sánh với kỳ Tháng 6/2026</span><span class="en">GSC: 29 Jun → 26 Jul · GA4: 02 Jul → 29 Jul · compared with June 2026</span></p>
+    <p class="section-label"><span class="bar"></span> <span class="vi">Cập nhật mới nhất — 28 ngày</span><span class="en">Latest update — last 28 days</span> <span class="snap-badge">LIVE · GSC + GA4 · 28/07/2026</span></p>
+    <p class="section-sub"><span class="vi">GSC: 28/06 → 25/07 · GA4: 30/06 → 27/07 · so sánh với kỳ Tháng 6/2026</span><span class="en">GSC: 28 Jun → 25 Jul · GA4: 30 Jun → 27 Jul · compared with June 2026</span></p>
 
     <h3 class="block" style="margin-top:2px"><span class="vi">Tìm kiếm — Google Search Console</span><span class="en">Search — Google Search Console</span></h3>
     <div class="kpis">
-      <div class="kpi"><div class="k-label">Clicks</div><div class="k-val">63</div><div class="delta up"><span class="vi">▲ +38% vs T6 (47)</span><span class="en">▲ +38% vs Jun (47)</span></div></div>
-      <div class="kpi"><div class="k-label">Impressions</div><div class="k-val">952</div><div class="delta up"><span class="vi">▲ +62% vs T6 (587)</span><span class="en">▲ +62% vs Jun (587)</span></div></div>
-      <div class="kpi"><div class="k-label"><span class="vi">CTR trung bình</span><span class="en">Average CTR</span></div><div class="k-val">6.6%</div><div class="delta down"><span class="vi">▼ từ 8.0% (T6)</span><span class="en">▼ from 8.0% (Jun)</span></div></div>
-      <div class="kpi"><div class="k-label"><span class="vi">Vị trí trung bình</span><span class="en">Average position</span></div><div class="k-val">23.8</div><div class="delta down"><span class="vi">▼ từ 13.8 (phủ rộng hơn)</span><span class="en">▼ from 13.8 (broader reach)</span></div></div>
+      <div class="kpi"><div class="k-label">Clicks</div><div class="k-val">65</div><div class="delta up"><span class="vi">▲ +38% vs T6 (47)</span><span class="en">▲ +38% vs Jun (47)</span></div></div>
+      <div class="kpi"><div class="k-label">Impressions</div><div class="k-val">934</div><div class="delta up"><span class="vi">▲ +59% vs T6 (587)</span><span class="en">▲ +59% vs Jun (587)</span></div></div>
+      <div class="kpi"><div class="k-label"><span class="vi">CTR trung bình</span><span class="en">Average CTR</span></div><div class="k-val">7.0%</div><div class="delta down"><span class="vi">▼ từ 8.0% (T6)</span><span class="en">▼ from 8.0% (Jun)</span></div></div>
+      <div class="kpi"><div class="k-label"><span class="vi">Vị trí trung bình</span><span class="en">Average position</span></div><div class="k-val">23.7</div><div class="delta down"><span class="vi">▼ từ 13.8 (phủ rộng hơn)</span><span class="en">▼ from 13.8 (broader reach)</span></div></div>
     </div>
 
     <h3 class="block"><span class="vi">Website — Google Analytics 4</span><span class="en">Website — Google Analytics 4</span></h3>
     <div class="kpis">
-      <div class="kpi"><div class="k-label">Sessions</div><div class="k-val">421</div><div class="delta up"><span class="vi">▲ +31% vs T6 (322)</span><span class="en">▲ +31% vs Jun (322)</span></div></div>
-      <div class="kpi"><div class="k-label">Engaged sessions</div><div class="k-val">270</div><div class="delta up"><span class="vi">▲ ×4.4 vs T6 (61)</span><span class="en">▲ ×4.4 vs Jun (61)</span></div></div>
-      <div class="kpi"><div class="k-label">Engagement rate</div><div class="k-val">64.1%</div><div class="delta up"><span class="vi">▲ từ 18.9% (T6)</span><span class="en">▲ from 18.9% (Jun)</span></div></div>
-      <div class="kpi"><div class="k-label">Key events</div><div class="k-val">42</div><div class="k-sub"><span class="vi">Avg engage 1m45s · 3,519 events</span><span class="en">Avg engagement 1m45s · 3,519 events</span></div></div>
+      <div class="kpi"><div class="k-label">Sessions</div><div class="k-val">435</div><div class="delta up"><span class="vi">▲ +35% vs T6 (322)</span><span class="en">▲ +35% vs Jun (322)</span></div></div>
+      <div class="kpi"><div class="k-label">Engaged sessions</div><div class="k-val">274</div><div class="delta up"><span class="vi">▲ ×4.5 vs T6 (61)</span><span class="en">▲ ×4.5 vs Jun (61)</span></div></div>
+      <div class="kpi"><div class="k-label">Engagement rate</div><div class="k-val">63.0%</div><div class="delta up"><span class="vi">▲ từ 18.9% (T6)</span><span class="en">▲ from 18.9% (Jun)</span></div></div>
+      <div class="kpi"><div class="k-label">Key events</div><div class="k-val">42</div><div class="k-sub"><span class="vi">Avg engage 1m42s · 3,585 events</span><span class="en">Avg engagement 1m42s · 3,585 events</span></div></div>
     </div>
 
     <h3 class="block"><span class="vi">Top truy vấn — GSC (lũy kế gần đây, 113 truy vấn)</span><span class="en">Top queries — GSC (recent cumulative, 113 queries)</span></h3>
@@ -227,121 +225,22 @@
       </tbody>
     </table>
     <p class="note">
-      <span class="vi"><b>Tín hiệu tích cực:</b> impressions tiếp tục tăng mạnh (900 trong 28 ngày) và <b>từ khóa non-brand có buy-intent đã nổi lên</b> — "3d rendering melbourne", "3d renders for property developers/builders melbourne". Nhưng <b>clicks vẫn ~100% từ brand</b> ("dxliving", "dx living") → đúng như chiến lược: cần đẩy các truy vấn dịch vụ này từ impression lên click. GA4 cũng ghi nhận referral từ <b>chatgpt.com / ai-assistant</b> — kênh AEO đang thành hình. Nguồn: đọc trực tiếp GSC + GA4 (29/07/2026).</span>
-      <span class="en"><b>Positive signal:</b> impressions keep climbing (900 in 28 days) and <b>buy-intent non-brand queries have surfaced</b> — "3d rendering melbourne", "3d renders for property developers/builders melbourne". But <b>clicks are still ~100% brand</b> ("dxliving", "dx living") → exactly the strategy point: these service queries must be pushed from impression into click. GA4 also logs a referral from <b>chatgpt.com / ai-assistant</b> — the AEO channel is forming. Source: read directly from GSC + GA4 (29 Jul 2026).</span>
+      <span class="vi"><b>Tín hiệu tích cực:</b> impressions tiếp tục tăng mạnh (900 trong 28 ngày) và <b>từ khóa non-brand có buy-intent đã nổi lên</b> — "3d rendering melbourne", "3d renders for property developers/builders melbourne". Nhưng <b>clicks vẫn ~100% từ brand</b> ("dxliving", "dx living") → đúng như chiến lược: cần đẩy các truy vấn dịch vụ này từ impression lên click. GA4 cũng ghi nhận referral từ <b>chatgpt.com / ai-assistant</b> — kênh AEO đang thành hình. Nguồn: đọc trực tiếp GSC + GA4 (28/07/2026).</span>
+      <span class="en"><b>Positive signal:</b> impressions keep climbing (900 in 28 days) and <b>buy-intent non-brand queries have surfaced</b> — "3d rendering melbourne", "3d renders for property developers/builders melbourne". But <b>clicks are still ~100% brand</b> ("dxliving", "dx living") → exactly the strategy point: these service queries must be pushed from impression into click. GA4 also logs a referral from <b>chatgpt.com / ai-assistant</b> — the AEO channel is forming. Source: read directly from GSC + GA4 (28 Jul 2026).</span>
     </p>
   </section>
 
   <!-- AHREFS AUTHORITY -->
   <section class="card">
-    <p class="section-label"><span class="bar"></span> Authority &amp; Backlinks — Ahrefs <span class="snap-badge">LIVE · 29/07/2026</span></p>
+    <p class="section-label"><span class="bar"></span> Authority &amp; Backlinks — Ahrefs <span class="snap-badge">LIVE · 28/07/2026</span></p>
     <p class="section-sub"><span class="vi">Đọc trực tiếp Ahrefs Site Explorer qua Chrome · dxliving.com/ (subdomains)</span><span class="en">Read directly from Ahrefs Site Explorer via Chrome · dxliving.com/ (subdomains)</span></p>
     <div class="kpis">
       <div class="kpi"><div class="k-label">Domain Rating</div><div class="k-val">0</div><div class="delta flat"><span class="vi">■ giai đoạn đầu</span><span class="en">■ early stage</span></div></div>
-      <div class="kpi"><div class="k-label">Referring domains</div><div class="k-val">339</div><div class="delta up"><span class="vi">▲ từ 244 (T6) · all-time 354</span><span class="en">▲ from 244 (Jun) · all-time 354</span></div></div>
-      <div class="kpi"><div class="k-label">Backlinks</div><div class="k-val">344</div><div class="k-sub"><span class="vi">all-time 369</span><span class="en">all-time 369</span></div></div>
+      <div class="kpi"><div class="k-label">Referring domains</div><div class="k-val">328</div><div class="delta up"><span class="vi">▲ từ 244 (T6)</span><span class="en">▲ from 244 (Jun)</span></div></div>
+      <div class="kpi"><div class="k-label">Backlinks</div><div class="k-val">333</div><div class="k-sub"><span class="vi">all-time 358</span><span class="en">all-time 358</span></div></div>
       <div class="kpi"><div class="k-label"><span class="vi">Trích dẫn AI</span><span class="en">AI citations</span></div><div class="k-val">14</div><div class="k-sub">ChatGPT 6 · Copilot 8</div></div>
     </div>
-    <p class="note"><span class="vi"><b>Lưu ý:</b> Ahrefs ước tính <b>Organic keywords = 0, Organic traffic = 0</b> — index của Ahrefs chưa bắt kịp site DR 0; số tìm kiếm THẬT xem ở khối GSC phía trên (impressions 952, 63 clicks). Referring domains tăng <b>244 → 339</b> từ tháng 6 — authority đang lên. <b>Trích dẫn AI</b> (ChatGPT 6, Copilot 8) xác nhận tín hiệu AEO — chi tiết ở khối <b>Hiện diện trên AI</b> ngay bên dưới. Nguồn: Ahrefs Site Explorer (đọc qua Chrome, 29/07/2026).</span><span class="en"><b>Note:</b> Ahrefs estimates <b>Organic keywords = 0, Organic traffic = 0</b> — its index hasn't caught up with a DR-0 site; the REAL search numbers are in the GSC block above (952 impressions, 63 clicks). Referring domains grew <b>244 → 339</b> since June — authority is rising. <b>AI citations</b> (ChatGPT 6, Copilot 8) confirm the AEO signal — detail in the <b>AI Visibility</b> block just below. Source: Ahrefs Site Explorer (read via Chrome, 29 Jul 2026).</span></p>
-  </section>
-
-  <!-- AI VISIBILITY / AEO-GEO -->
-  <section class="card">
-    <p class="section-label"><span class="bar"></span> <span class="vi">Hiện diện trên AI (AEO / GEO)</span><span class="en">AI Visibility (AEO / GEO)</span> <span class="snap-badge">LIVE · 29/07/2026</span></p>
-    <p class="section-sub"><span class="vi">Ahrefs AI index + kênh "AI Assistant" của GA4 + kiểm tra kỹ thuật (robots.txt · llms.txt · schema) + đối chiếu SERP thực tế · framework <span class="mono">searchfit-seo:ai-visibility</span></span><span class="en">Ahrefs AI index + GA4 "AI Assistant" channel + technical checks (robots.txt · llms.txt · schema) + live SERP cross-check · framework <span class="mono">searchfit-seo:ai-visibility</span></span></p>
-
-    <div class="kpis">
-      <div class="kpi"><div class="k-label"><span class="vi">Điểm AI Visibility</span><span class="en">AI Visibility score</span></div><div class="k-val">16<span style="font-size:15px;color:#9aa0a8">/100</span></div><div class="delta flat"><span class="vi">■ giai đoạn đầu</span><span class="en">■ early stage</span></div></div>
-      <div class="kpi"><div class="k-label"><span class="vi">Phản hồi AI có trích dẫn</span><span class="en">AI responses citing site</span></div><div class="k-val">14</div><div class="k-sub">ChatGPT 6 · Copilot 8</div></div>
-      <div class="kpi"><div class="k-label"><span class="vi">Nền tảng có mặt</span><span class="en">Platforms present</span></div><div class="k-val">2<span style="font-size:15px;color:#9aa0a8">/6</span></div><div class="k-sub"><span class="vi">AI Overviews · AI Mode · Gemini · Perplexity = 0</span><span class="en">AI Overviews · AI Mode · Gemini · Perplexity = 0</span></div></div>
-      <div class="kpi"><div class="k-label"><span class="vi">Trang được trích dẫn</span><span class="en">Distinct cited pages</span></div><div class="k-val">2</div><div class="k-sub"><span class="vi">trên 45 bài + 16 trang lõi</span><span class="en">of 45 articles + 16 core pages</span></div></div>
-    </div>
-
-    <h3 class="block"><span class="vi">Traffic từ AI — GA4 kênh "AI Assistant" (02/07 → 29/07)</span><span class="en">AI-sourced traffic — GA4 "AI Assistant" channel (02 Jul → 29 Jul)</span></h3>
-    <div class="kpis">
-      <div class="kpi"><div class="k-label">Sessions</div><div class="k-val">2</div><div class="k-sub"><span class="vi">0,48% tổng · nguồn chatgpt.com</span><span class="en">0.48% of total · via chatgpt.com</span></div></div>
-      <div class="kpi"><div class="k-label">Engagement rate</div><div class="k-val">50%</div><div class="k-sub"><span class="vi">1/2 session gắn kết</span><span class="en">1 of 2 sessions engaged</span></div></div>
-      <div class="kpi"><div class="k-label"><span class="vi">Thời gian TB</span><span class="en">Avg engagement time</span></div><div class="k-val">7s</div><div class="k-sub"><span class="vi">5,0 event/session</span><span class="en">5.0 events/session</span></div></div>
-      <div class="kpi"><div class="k-label">Key events</div><div class="k-val">0</div><div class="delta flat"><span class="vi">■ chưa chuyển đổi</span><span class="en">■ no conversion yet</span></div></div>
-    </div>
-
-    <h3 class="block"><span class="vi">Trích dẫn theo nền tảng — Ahrefs AI index</span><span class="en">Citations by platform — Ahrefs AI index</span></h3>
-    <table>
-      <thead><tr><th><span class="vi">Nền tảng AI</span><span class="en">AI platform</span></th><th class="num"><span class="vi">Phản hồi</span><span class="en">Responses</span></th><th class="num"><span class="vi">Trang</span><span class="en">Pages</span></th><th><span class="vi">Trạng thái</span><span class="en">Status</span></th></tr></thead>
-      <tbody>
-        <tr><td>Microsoft Copilot</td><td class="num">8</td><td class="num">2</td><td><span class="pill plan"><span class="vi">Có mặt</span><span class="en">Present</span></span></td></tr>
-        <tr><td>ChatGPT</td><td class="num">6</td><td class="num">2</td><td><span class="pill plan"><span class="vi">Có mặt</span><span class="en">Present</span></span></td></tr>
-        <tr><td>Google AI Overviews</td><td class="num">0</td><td class="num">0</td><td><span class="pill media"><span class="vi">Vắng mặt</span><span class="en">Absent</span></span></td></tr>
-        <tr><td>Google AI Mode</td><td class="num">0</td><td class="num">0</td><td><span class="pill media"><span class="vi">Vắng mặt</span><span class="en">Absent</span></span></td></tr>
-        <tr><td>Google Gemini</td><td class="num">0</td><td class="num">0</td><td><span class="pill media"><span class="vi">Vắng mặt</span><span class="en">Absent</span></span></td></tr>
-        <tr><td>Perplexity</td><td class="num">0</td><td class="num">0</td><td><span class="pill media"><span class="vi">Vắng mặt</span><span class="en">Absent</span></span></td></tr>
-        <tr><td>Grok</td><td class="num">—</td><td class="num">—</td><td><span class="snap-badge"><span class="vi">Ahrefs tạm dừng index</span><span class="en">Ahrefs index paused</span></span></td></tr>
-      </tbody>
-    </table>
-
-    <h3 class="block"><span class="vi">Thẻ điểm 6 chiều (framework AI-visibility)</span><span class="en">Six-dimension scorecard (AI-visibility framework)</span></h3>
-    <table>
-      <thead><tr><th><span class="vi">Chiều đo</span><span class="en">Dimension</span></th><th class="num"><span class="vi">Điểm</span><span class="en">Score</span></th><th><span class="vi">Bằng chứng thật</span><span class="en">Real evidence</span></th></tr></thead>
-      <tbody>
-        <tr><td><b><span class="vi">Hiện diện</span><span class="en">Presence</span></b></td><td class="num">2/10</td><td><span class="vi">Chỉ 2/6 nền tảng đang trích dẫn (ChatGPT, Copilot). Google — nơi có lưu lượng lớn nhất — trích dẫn <b>0</b>.</span><span class="en">Only 2 of 6 platforms cite the site (ChatGPT, Copilot). Google — the largest surface — cites it <b>0</b> times.</span></td></tr>
-        <tr><td><b><span class="vi">Bề mặt trích dẫn</span><span class="en">Citation surface</span></b></td><td class="num">1/10</td><td><span class="vi">Chỉ <b>2 trang</b> từng được trích trên tổng 45 bài + 16 trang lõi (~3%).</span><span class="en">Just <b>2 pages</b> have ever been cited out of 45 articles + 16 core pages (~3%).</span></td></tr>
-        <tr><td><b><span class="vi">Sẵn sàng kỹ thuật</span><span class="en">Technical readiness</span></b></td><td class="num">4/10</td><td><span class="vi">robots.txt <b>không chặn</b> bot AI nào (+), sitemap đủ (+), FAQPage trên money page (+) — nhưng <b>/articles timeout</b> (−), <b>thiếu llms.txt</b> (−), <b>thiếu Organization/LocalBusiness JSON-LD</b> (−).</span><span class="en">robots.txt <b>blocks no</b> AI bot (+), sitemap complete (+), FAQPage on money pages (+) — but <b>/articles times out</b> (−), <b>no llms.txt</b> (−), <b>no Organization/LocalBusiness JSON-LD</b> (−).</span></td></tr>
-        <tr><td><b><span class="vi">Corpus bên thứ ba</span><span class="en">Third-party corpus</span></b></td><td class="num">0/10</td><td><span class="vi"><b>0/4</b> bộ truy vấn high-intent đã kiểm có DXL. AI đang trích các listicle "best of" mà DXL không nằm trong đó.</span><span class="en"><b>0 of 4</b> high-intent query sets tested contain DXL. AI cites "best of" listicles DXL does not appear in.</span></td></tr>
-        <tr><td><b><span class="vi">Năng lực đo lường</span><span class="en">Measurement</span></b></td><td class="num">1/10</td><td><span class="vi">Ahrefs Brand Radar đã có report "Dxliving" nhưng <b>0 prompt được track</b>, AI SoV = "—". Chỉ GA4 cho tín hiệu gián tiếp.</span><span class="en">Ahrefs Brand Radar has a "Dxliving" report but <b>0 prompts tracked</b>, AI SoV = "—". Only GA4 gives an indirect signal.</span></td></tr>
-        <tr><td><b><span class="vi">Độ chính xác · Sắc thái · Thứ tự</span><span class="en">Accuracy · Sentiment · Position</span></b></td><td class="num"><span class="snap-badge"><span class="vi">chưa đo</span><span class="en">not measured</span></span></td><td><span class="vi">Không thể kết luận khi chưa bật prompt tracking — <b>không suy đoán số liệu</b>. Bật Brand Radar prompts là điều kiện để đo 3 chiều này.</span><span class="en">Cannot be assessed without prompt tracking — <b>no numbers are guessed here</b>. Enabling Brand Radar prompts is the prerequisite for these three.</span></td></tr>
-      </tbody>
-    </table>
-    <p class="lead" style="margin:14px 0 0"><span class="vi">Điểm tổng = trung bình 5 chiều đo được × 10 = <b>16/100</b> — mức <b>giai đoạn đầu</b>: đã có tín hiệu AI thật (14 trích dẫn) nhưng chỉ trên 2 nền tảng phụ và 2 trang.</span><span class="en">Overall = average of the 5 measurable dimensions × 10 = <b>16/100</b> — an <b>early-stage</b> level: real AI signal exists (14 citations) but only on 2 secondary platforms and 2 pages.</span></p>
-
-    <h3 class="block"><span class="vi">Khoảng trống prompt — AI đang trích ai thay vì DXL</span><span class="en">Prompt gap — who AI cites instead of DXL</span></h3>
-    <table>
-      <thead><tr><th><span class="vi">Prompt / truy vấn mục tiêu</span><span class="en">Target prompt / query</span></th><th><span class="vi">DXL có mặt?</span><span class="en">DXL present?</span></th><th><span class="vi">Nguồn đang được trích</span><span class="en">Sources being cited</span></th></tr></thead>
-      <tbody>
-        <tr><td class="mono">best 3D rendering services Melbourne</td><td><span class="pill media"><span class="vi">Không</span><span class="en">No</span></span></td><td><span class="vi">myarchitectai ("Best… 2026 List"), 3D Revolution, ArchiCGI, RenderVision, OMEGARENDER, visengine</span><span class="en">myarchitectai ("Best… 2026 List"), 3D Revolution, ArchiCGI, RenderVision, OMEGARENDER, visengine</span></td></tr>
-        <tr><td class="mono">VR / 3D walkthrough before building (AU)</td><td><span class="pill media"><span class="vi">Không</span><span class="en">No</span></span></td><td>planitvr, Before The Slab, Montgomery Homes, CU Design</td></tr>
-        <tr><td class="mono">custom home builders Scoresby / Melbourne</td><td><span class="pill media"><span class="vi">Không</span><span class="en">No</span></span></td><td><span class="vi">Oneflare, xirconhomes "Top 20", Marton, ADIGA</span><span class="en">Oneflare, xirconhomes "Top 20", Marton, ADIGA</span></td></tr>
-        <tr><td class="mono">home design trends australia</td><td><span class="delta down" style="margin:0"><span class="vi">▼ SERP có AI Overview</span><span class="en">▼ SERP has AI Overview</span></span></td><td><span class="vi">DXL xếp hạng trong SERP nhưng Ahrefs ghi <b>0 trích dẫn AI Overview</b> → AI Overview đang lấy nguồn khác</span><span class="en">DXL ranks in the SERP but Ahrefs logs <b>0 AI Overview citations</b> → the AI Overview is sourcing others</span></td></tr>
-        <tr><td class="mono">DX Living <span class="brandq">Brand</span></td><td><span class="pill plan"><span class="vi">Có</span><span class="en">Yes</span></span></td><td><span class="vi">dxliving.com (/studio, /about, /projects) + Instagram, Facebook, LinkedIn · 1 mention bên thứ ba (3D Design Bureau)</span><span class="en">dxliving.com (/studio, /about, /projects) + Instagram, Facebook, LinkedIn · 1 third-party mention (3D Design Bureau)</span></td></tr>
-      </tbody>
-    </table>
-    <p class="note" style="margin-top:10px"><span class="vi"><b>Đọc kết quả này:</b> với truy vấn brand, AI có đủ nguồn để nói về DX Living. Với mọi truy vấn <b>non-brand có ý định mua</b>, AI không có lý do nào để nhắc DXL — vì DXL không nằm trong tập listicle/directory mà AI lấy làm nguồn. Đây là <b>khoảng trống authority</b>, không phải khoảng trống nội dung.</span><span class="en"><b>How to read this:</b> on brand queries, AI has enough sources to describe DX Living. On every <b>non-brand buy-intent</b> query, AI has no reason to mention DXL — because DXL isn't in the listicle/directory set AI draws from. This is an <b>authority gap</b>, not a content gap.</span></p>
-
-    <h3 class="block"><span class="vi">Kiểm tra sẵn sàng cho AI</span><span class="en">AI-readiness checks</span></h3>
-    <div>
-      <div class="issue"><span class="sev crit">Critical</span><div class="it"><h5><span class="vi">/articles timeout khi crawl → 45 bài vô hình với bot AI</span><span class="en">/articles times out on crawl → 45 articles invisible to AI bots</span></h5><p><span class="vi">Bề mặt trích dẫn lớn nhất của site không đọc được. Đây là <b>nút thắt số 1</b> của cả SEO và AI visibility — sửa xong mới mở được 45 trang thành nguồn AI có thể trích.</span><span class="en">The site's largest citation surface can't be read. This is the <b>single biggest bottleneck</b> for both SEO and AI visibility — fixing it unlocks 45 pages as citable AI sources.</span></p></div></div>
-      <div class="issue"><span class="sev crit">Critical</span><div class="it"><h5><span class="vi">Thiếu Organization / LocalBusiness JSON-LD trên homepage</span><span class="en">No Organization / LocalBusiness JSON-LD on the homepage</span></h5><p><span class="vi">NAP (Scoresby VIC), điện thoại và các profile social không được khai báo dạng máy đọc được → LLM không có cách xác nhận thực thể "DX Living" là ai, ở đâu, làm gì.</span><span class="en">NAP (Scoresby VIC), phone and social profiles aren't declared machine-readably → an LLM has no way to confirm what the "DX Living" entity is, where it is, or what it does.</span></p></div></div>
-      <div class="issue"><span class="sev warn">Warning</span><div class="it"><h5><span class="vi">Không có llms.txt</span><span class="en">No llms.txt</span></h5><p><span class="vi">Kiểm trực tiếp <span class="mono">dxliving.com/llms.txt</span> → <b>404</b>. Không có bản đồ hướng dẫn nào cho tác nhân AI về trang canonical, dịch vụ và NAP.</span><span class="en">Checked <span class="mono">dxliving.com/llms.txt</span> directly → <b>404</b>. No guidance map for AI agents covering canonical pages, services and NAP.</span></p></div></div>
-      <div class="issue"><span class="sev warn">Warning</span><div class="it"><h5><span class="vi">0 prompt được track trong Ahrefs Brand Radar</span><span class="en">0 prompts tracked in Ahrefs Brand Radar</span></h5><p><span class="vi">Report "Dxliving" đã tồn tại nhưng AI SoV = "—" và prompts = 0. Không đo được nội dung, sắc thái hay thứ tự AI nói về DXL. (Endpoint API "AI responses" của Ahrefs trả <b>Insufficient plan</b> → toàn bộ số ở trên đọc từ UI qua Chrome.)</span><span class="en">The "Dxliving" report exists but AI SoV = "—" and prompts = 0. What AI says about DXL, in what tone and in what order, is unmeasured. (Ahrefs' "AI responses" API endpoint returns <b>Insufficient plan</b> → every figure above was read from the UI via Chrome.)</span></p></div></div>
-      <div class="issue"><span class="sev warn">Warning</span><div class="it"><h5><span class="vi">Vắng mặt khỏi corpus listicle mà AI trích dẫn</span><span class="en">Absent from the listicle corpus AI cites</span></h5><p><span class="vi">Không xuất hiện trong bất kỳ danh sách "best 3D rendering Melbourne" / "top builders Melbourne" nào, và chưa thấy hồ sơ trên các directory Úc (Oneflare, Houzz, Archify) hay Google Business Profile có review.</span><span class="en">Appears in no "best 3D rendering Melbourne" / "top builders Melbourne" list, and has no visible profile on AU directories (Oneflare, Houzz, Archify) or a reviewed Google Business Profile.</span></p></div></div>
-      <div class="issue"><span class="sev ok">OK</span><div class="it"><h5><span class="vi">robots.txt không chặn bot AI nào</span><span class="en">robots.txt blocks no AI bot</span></h5><p><span class="vi">Nội dung thực tế: <span class="mono">User-agent: *</span> / <span class="mono">Disallow:</span> (rỗng) + <span class="mono">Sitemap: dxliving.com/sitemap.xml</span>. GPTBot, OAI-SearchBot, ClaudeBot, PerplexityBot, Google-Extended, CCBot <b>đều được phép</b> — không có rào chắn nào cần tháo.</span><span class="en">Actual contents: <span class="mono">User-agent: *</span> / <span class="mono">Disallow:</span> (empty) + <span class="mono">Sitemap: dxliving.com/sitemap.xml</span>. GPTBot, OAI-SearchBot, ClaudeBot, PerplexityBot, Google-Extended and CCBot are <b>all allowed</b> — no barrier to remove.</span></p></div></div>
-      <div class="issue"><span class="sev ok">OK</span><div class="it"><h5><span class="vi">FAQPage JSON-LD đã có trên 9 money page</span><span class="en">FAQPage JSON-LD already on all 9 money pages</span></h5><p><span class="vi">Xác nhận trong audit 21/07 — định dạng hỏi–đáp là format LLM dễ trích nhất; nền tảng này đã sẵn, chỉ cần mở rộng sang 45 bài.</span><span class="en">Confirmed in the 21 Jul audit — Q&amp;A is the format LLMs extract most easily; the foundation exists and only needs extending to the 45 articles.</span></p></div></div>
-    </div>
-
-    <div class="cols2" style="margin-top:20px">
-      <div>
-        <h3 class="block" style="margin-top:0"><span class="vi">Mở đường cho AI trích dẫn</span><span class="en">Unblock AI citation</span></h3>
-        <ul class="action-list">
-          <li><span class="vi"><b>Sửa render /articles</b> (SSG/ISR + CDN) — mở 45 bài thành nguồn AI trích được</span><span class="en"><b>Fix /articles render</b> (SSG/ISR + CDN) — unlock 45 articles as citable sources</span> <span class="prio p0">P0</span></li>
-          <li><span class="vi"><b>Organization + LocalBusiness JSON-LD</b> (NAP + <span class="mono">sameAs</span> IG/FB/LinkedIn)</span><span class="en"><b>Organization + LocalBusiness JSON-LD</b> (NAP + <span class="mono">sameAs</span> IG/FB/LinkedIn)</span> <span class="prio p0">P0</span></li>
-          <li><span class="vi"><b>Bật prompt tracking Brand Radar</b> — 15–20 prompt AU để đo SoV, sắc thái, thứ tự</span><span class="en"><b>Turn on Brand Radar prompt tracking</b> — 15–20 AU prompts to measure SoV, sentiment, position</span> <span class="prio p0">P0</span></li>
-          <li><span class="vi"><b>Thêm llms.txt</b> ở root: trang canonical, dịch vụ, NAP, dự án</span><span class="en"><b>Add llms.txt</b> at root: canonical pages, services, NAP, projects</span> <span class="prio p1">P1</span></li>
-          <li><span class="vi"><b>Article + BreadcrumbList schema</b> cho 45 bài</span><span class="en"><b>Article + BreadcrumbList schema</b> across the 45 articles</span> <span class="prio p1">P1</span></li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="block" style="margin-top:0"><span class="vi">Nội dung &amp; authority cho AI</span><span class="en">Content &amp; authority for AI</span></h3>
-        <ul class="action-list">
-          <li><span class="vi"><b>Khối trả lời trực tiếp 40–60 từ</b> ở đầu 9 money page + top article (định nghĩa, chi phí, quy trình) — LLM trích nguyên khối</span><span class="en"><b>40–60 word direct-answer block</b> atop the 9 money pages + top articles (definition, cost, process) — LLMs lift it whole</span> <span class="prio p1">P1</span></li>
-          <li><span class="vi"><b>Vào corpus bên thứ ba:</b> listicle "best 3D rendering Melbourne", Google Business Profile + review, Houzz AU / Archify / Oneflare</span><span class="en"><b>Enter the third-party corpus:</b> "best 3D rendering Melbourne" listicles, Google Business Profile + reviews, Houzz AU / Archify / Oneflare</span> <span class="prio p1">P1</span></li>
-          <li><span class="vi"><b>Trang so sánh:</b> "3D rendering vs VR walkthrough", "BIM vs 3D rendering" — bảng so sánh là format AI trích nhiều nhất</span><span class="en"><b>Comparison pages:</b> "3D rendering vs VR walkthrough", "BIM vs 3D rendering" — comparison tables are the most-cited format</span> <span class="prio p2">P2</span></li>
-          <li><span class="vi"><b>Data asset gốc:</b> benchmark chi phí visualisation/rendering tại Úc — số liệu gốc là thứ AI buộc phải dẫn nguồn</span><span class="en"><b>Original data asset:</b> an AU visualisation/rendering cost benchmark — original figures force AI to attribute</span> <span class="prio p2">P2</span></li>
-          <li><span class="vi"><b>Cộng đồng:</b> trả lời thật trên r/AusRenovation, r/melbourne, Whirlpool, Quora AU</span><span class="en"><b>Community:</b> genuine answers on r/AusRenovation, r/melbourne, Whirlpool, Quora AU</span> <span class="prio p2">P2</span></li>
-          <li><span class="vi"><b>Theo dõi 6 nền tảng hằng tháng</b> trong báo cáo này + thêm vào check 6AM</span><span class="en"><b>Track all 6 platforms monthly</b> in this report + add to the 6AM daily check</span> <span class="prio p2">P2</span></li>
-        </ul>
-      </div>
-    </div>
-
-    <p class="note"><span class="vi"><b>Nguồn (tất cả đọc trực tiếp, 29/07/2026):</b> Ahrefs Site Explorer → AI responses (New index), <span class="mono">mode=subdomains</span>, dxliving.com/ · Ahrefs Brand Radar 2.0 · GA4 Traffic acquisition, Session primary channel group, 02/07–29/07 · <span class="mono">dxliving.com/robots.txt</span> và <span class="mono">/llms.txt</span> kiểm trực tiếp · đối chiếu SERP thực tế cho 4 bộ truy vấn non-brand · audit kỹ thuật 21/07/2026. Framework: <span class="mono">searchfit-seo:ai-visibility</span> (6 chiều: Presence · Accuracy · Sentiment · Position · Completeness · Consistency — 3 chiều cuối cần prompt tracking mới đo được và <b>không được suy đoán</b> ở đây). Lưu ý về độ trễ: mô hình AI cập nhật theo chu kỳ — thay đổi hôm nay thường phản ánh vào phản hồi AI sau <b>vài tuần đến vài tháng</b>.</span><span class="en"><b>Sources (all read live, 29 Jul 2026):</b> Ahrefs Site Explorer → AI responses (New index), <span class="mono">mode=subdomains</span>, dxliving.com/ · Ahrefs Brand Radar 2.0 · GA4 Traffic acquisition, Session primary channel group, 02–29 Jul · <span class="mono">dxliving.com/robots.txt</span> and <span class="mono">/llms.txt</span> checked directly · live SERP cross-check on 4 non-brand query sets · 21 Jul 2026 technical audit. Framework: <span class="mono">searchfit-seo:ai-visibility</span> (6 dimensions: Presence · Accuracy · Sentiment · Position · Completeness · Consistency — the last three require prompt tracking and are <b>deliberately not guessed</b> here). Lag note: AI models refresh on a cycle — changes made today typically show up in AI responses after <b>weeks to months</b>.</span></p>
+    <p class="note"><span class="vi"><b>Lưu ý:</b> Ahrefs ước tính <b>Organic keywords = 0, Organic traffic = 0</b> — index của Ahrefs chưa bắt kịp site DR 0; số tìm kiếm THẬT xem ở khối GSC phía trên (impressions 934, 65 clicks). Referring domains tăng <b>244 → 328</b> từ tháng 6 — authority đang lên. <b>Trích dẫn AI</b> (ChatGPT 6, Copilot 8) xác nhận tín hiệu AEO. Nguồn: Ahrefs Site Explorer (đọc qua Chrome, 28/07/2026).</span><span class="en"><b>Note:</b> Ahrefs estimates <b>Organic keywords = 0, Organic traffic = 0</b> — its index hasn't caught up with a DR-0 site; the REAL search numbers are in the GSC block above (934 impressions, 65 clicks). Referring domains grew <b>244 → 328</b> since June — authority is rising. <b>AI citations</b> (ChatGPT 6, Copilot 8) confirm the AEO signal. Source: Ahrefs Site Explorer (read via Chrome, 28 Jul 2026).</span></p>
   </section>
 
   <!-- EXECUTIVE SUMMARY -->
@@ -350,8 +249,8 @@
     <div class="exec">
       <p class="big"><span class="vi">Đà tăng trưởng tiếp tục sang cuối tháng 7 — và ngày càng sâu về chất lượng.</span><span class="en">Momentum continues into late July — and is deepening in quality.</span></p>
       <p>
-        <span class="vi">28 ngày gần nhất tiếp nối bước ngoặt tháng 6: <b>impressions 952</b> (tiếp tục tăng), <b>clicks 63 (+34% so với T6)</b>, và website bứt phá về gắn kết — <b>421 sessions (+31%)</b>, <b>engaged sessions ×4.4 (61 → 270)</b>, <b>engagement rate 18,9% → 64,1%</b>. Từ khóa <b>non-brand buy-intent đã nổi lên</b> ("3d rendering melbourne", "3d renders for property developers/builders melbourne") dù clicks vẫn chủ yếu từ brand. Kênh <b>AI/AEO</b> xuất hiện (referral chatgpt.com) nhưng <b>điểm hiện diện AI chỉ 16/100</b> — có mặt ở ChatGPT + Copilot (14 trích dẫn), vắng mặt hoàn toàn ở Google AI Overviews, AI Mode, Gemini và Perplexity. Nền tảng authority mạnh (referring domains 339, +95 so với T6; Ahrefs Health 29 → 88). Rủi ro chặn đà: audit 21/07 phát hiện <b>toàn bộ mục /articles bị timeout khi crawl</b> — nút thắt kỹ thuật đang giới hạn tăng trưởng non-brand.</span>
-        <span class="en">The latest 28 days extend June's breakthrough: <b>952 impressions</b> (still rising), <b>63 clicks (+34% vs June)</b>, and a website engagement leap — <b>421 sessions (+31%)</b>, <b>engaged sessions ×4.4 (61 → 270)</b>, <b>engagement rate 18.9% → 64.1%</b>. <b>Buy-intent non-brand queries have surfaced</b> ("3d rendering melbourne", "3d renders for property developers/builders melbourne") though clicks are still mostly brand. An <b>AI/AEO</b> channel appeared (chatgpt.com referral) but <b>AI visibility scores just 16/100</b> — present on ChatGPT + Copilot (14 citations), entirely absent from Google AI Overviews, AI Mode, Gemini and Perplexity. Authority is strong (referring domains 339, +95 vs June; Ahrefs Health 29 → 88). The risk capping momentum: the 21 Jul audit found <b>the entire /articles section times out on crawl</b> — a technical bottleneck limiting non-brand growth.</span>
+        <span class="vi">28 ngày gần nhất tiếp nối bước ngoặt tháng 6: <b>impressions 934</b> (tiếp tục tăng), <b>clicks 65 (+38% so với T6)</b>, và website bứt phá về gắn kết — <b>435 sessions (+35%)</b>, <b>engaged sessions ×4.5 (61 → 274)</b>, <b>engagement rate 18,9% → 63,0%</b>. Từ khóa <b>non-brand buy-intent đã nổi lên</b> ("3d rendering melbourne", "3d renders for property developers/builders melbourne") dù clicks vẫn chủ yếu từ brand. Kênh <b>AI/AEO</b> xuất hiện (referral chatgpt.com). Nền tảng authority mạnh (referring domains 244 (+92), Ahrefs Health 29 → 88). Rủi ro chặn đà: audit 21/07 phát hiện <b>toàn bộ mục /articles bị timeout khi crawl</b> — nút thắt kỹ thuật đang giới hạn tăng trưởng non-brand.</span>
+        <span class="en">The latest 28 days extend June's breakthrough: <b>934 impressions</b> (still rising), <b>65 clicks (+38% vs June)</b>, and a website engagement leap — <b>435 sessions (+35%)</b>, <b>engaged sessions ×4.5 (61 → 274)</b>, <b>engagement rate 18.9% → 63.0%</b>. <b>Buy-intent non-brand queries have surfaced</b> ("3d rendering melbourne", "3d renders for property developers/builders melbourne") though clicks are still mostly brand. An <b>AI/AEO</b> channel appeared (chatgpt.com referral). Authority is strong (referring domains 244 (+92), Ahrefs Health 29 → 88). The risk capping momentum: the 21 Jul audit found <b>the entire /articles section times out on crawl</b> — a technical bottleneck limiting non-brand growth.</span>
       </p>
     </div>
   </section>
@@ -575,9 +474,8 @@
 
   <footer class="foot">
     <b>DX Living — <span class="vi">Báo cáo Hiệu suất SEO</span><span class="en">SEO Performance Report</span></b> · dxliving.com<br>
-    <span class="vi">Số 28 ngày mới nhất đọc trực tiếp từ Google Search Console + GA4 + Ahrefs (29/07/2026) · Hiện diện AI (AEO/GEO) theo khung searchfit-seo:ai-visibility, đọc từ Ahrefs AI responses + Brand Radar + GA4 + SERP · Chi tiết Tháng 6 &amp; audit 21/07 &amp; SERP 30/06 là tham chiếu</span><span class="en">Latest 28-day figures read directly from Google Search Console + GA4 + Ahrefs (29 Jul 2026) · AI Visibility (AEO/GEO) per the searchfit-seo:ai-visibility framework, read from Ahrefs AI responses + Brand Radar + GA4 + SERP · June detail, 21 Jul audit &amp; 30 Jun SERP are reference</span><br>
-    <span class="vi">Đã bỏ Supermetrics &amp; OpenSEO theo yêu cầu · Cập nhật: 29/07/2026</span><span class="en">Supermetrics &amp; OpenSEO removed as requested · Updated: 29 Jul 2026</span><br>
-    <a href="history.html" style="color:var(--accent);font-weight:700;text-decoration:none"><span class="vi">🗂 Xem lịch sử dữ liệu từng ngày (mỗi ngày một bản lưu, không mất data cũ)</span><span class="en">🗂 Open the day-by-day data history (one frozen snapshot per day, no old data lost)</span></a>
+    <span class="vi">Số 28 ngày mới nhất đọc trực tiếp từ Google Search Console + GA4 (28/07/2026) · Chi tiết Tháng 6 &amp; audit 21/07 &amp; SERP 30/06 là tham chiếu</span><span class="en">Latest 28-day figures read directly from Google Search Console + GA4 (28 Jul 2026) · June detail, 21 Jul audit &amp; 30 Jun SERP are reference</span><br>
+    <span class="vi">Đã bỏ Supermetrics &amp; OpenSEO theo yêu cầu · Cập nhật: 28/07/2026</span><span class="en">Supermetrics &amp; OpenSEO removed as requested · Updated: 28 Jul 2026</span>
   </footer>
 
 </div>

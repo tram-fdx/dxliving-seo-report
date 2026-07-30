@@ -1,0 +1,101 @@
+{
+  "date": "2026-07-29",
+  "site": "dxliving.com",
+  "source_commit": "9440e49",
+  "provenance": "Read directly from Chrome (GSC + GA4 + Ahrefs UI). No OpenSEO, no Supermetrics. No estimated values.",
+  "windows": {
+    "gsc": "2026-06-29 → 2026-07-26",
+    "ga4": "2026-07-02 → 2026-07-29"
+  },
+  "gsc_28d": {
+    "clicks": 63,
+    "impressions": 952,
+    "ctr_pct": 6.6,
+    "avg_position": 23.8,
+    "queries_with_impressions": 113
+  },
+  "ga4_28d": {
+    "sessions": 421,
+    "engaged_sessions": 270,
+    "engagement_rate_pct": 64.1,
+    "key_events": 42,
+    "avg_engagement_time": "1m45s",
+    "total_events": 3519,
+    "ai_assistant_channel": {
+      "sessions": 2,
+      "share_of_sessions_pct": 0.48,
+      "engagement_rate_pct": 50,
+      "avg_time": "7s",
+      "events_per_session": 5.0,
+      "key_events": 0,
+      "referrer": "chatgpt.com"
+    }
+  },
+  "ahrefs": {
+    "domain_rating": 0,
+    "url_rating": 0,
+    "referring_domains": 339,
+    "referring_domains_all_time": 354,
+    "backlinks": 344,
+    "backlinks_all_time": 369,
+    "health_score": 88,
+    "organic_keywords": 0,
+    "organic_traffic": 0,
+    "ai_citations": 14,
+    "ai_by_platform": {
+      "chatgpt": 6,
+      "copilot": 8,
+      "google_ai_overviews": 0,
+      "google_ai_mode": 0,
+      "gemini": 0,
+      "perplexity": 0,
+      "grok": null
+    },
+    "cited_pages": 2
+  },
+  "ai_visibility": {
+    "score": 16,
+    "score_max": 100,
+    "framework": "searchfit-seo:ai-visibility",
+    "platforms_present": 2,
+    "platforms_total": 6,
+    "cited_pages": 2,
+    "dimensions_measured": {
+      "presence": 2,
+      "citation_surface": 1,
+      "technical_readiness": 4,
+      "third_party_corpus": 0,
+      "measurement": 1
+    },
+    "dimensions_not_measured": [
+      "accuracy",
+      "sentiment",
+      "position"
+    ],
+    "not_measured_reason": "Cần Brand Radar prompt tracking; report 'Dxliving' tồn tại nhưng 0 prompt được track / Requires Brand Radar prompt tracking; the 'Dxliving' report exists but tracks 0 prompts",
+    "score_method": "Trung bình 5 dimension đo được × 10 / Average of the 5 measurable dimensions × 10",
+    "brand_radar": {
+      "report_exists": true,
+      "prompts_tracked": 0,
+      "ai_share_of_voice": null
+    },
+    "readiness": {
+      "robots_txt_blocks_ai_bots": false,
+      "llms_txt": false,
+      "faq_schema_on_money_pages": true,
+      "organization_schema": false,
+      "localbusiness_schema": false,
+      "articles_render": false
+    }
+  },
+  "notes": {
+    "vi": [
+      "Thêm khối 'Hiện diện trên AI (AEO / GEO)' — điểm 16/100.",
+      "Đọc lúc 05:17 UTC cùng ngày cho số cũ hơn (GA4 425/272, Ahrefs RD 335/BL 340); snapshot này là bản đọc cuối của ngày."
+    ],
+    "en": [
+      "Added the 'AI Visibility (AEO / GEO)' block — score 16/100.",
+      "An earlier read at 05:17 UTC the same day gave GA4 425/272 and Ahrefs RD 335/BL 340; this snapshot is the final read of the day."
+    ]
+  }
+}
