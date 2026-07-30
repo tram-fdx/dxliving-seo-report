@@ -126,18 +126,105 @@
   .legendrow{display:flex;flex-wrap:wrap;gap:14px;margin:0 0 4px}
   .lg{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;color:var(--muted);font-weight:600}
   .lg i{width:11px;height:3px;border-radius:2px;display:inline-block}
+  /* ---------- date filter ---------- */
+  .filterbar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+  .dpwrap{position:relative}
+  .dpbtn{display:inline-flex;align-items:center;gap:9px;background:#fff;border:1px solid #cfd4da;border-radius:9px;padding:9px 13px;font-family:inherit;font-size:13px;font-weight:700;line-height:1.2;color:var(--ink);cursor:pointer;transition:.15s}
+  .dpbtn:hover{border-color:#a9b0b8}
+  .dpbtn .car{color:var(--muted);font-size:10px}
+  .dppanel{position:absolute;top:calc(100% + 7px);left:0;z-index:70;display:flex;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 10px 30px rgba(16,24,40,.16);overflow:hidden}
+  .dppanel[hidden]{display:none}
+  .dp-presets{width:212px;flex:0 0 auto;border-right:1px solid var(--line);padding:9px 0;max-height:340px;overflow-y:auto}
+  .dp-preset{display:flex;align-items:center;gap:10px;padding:7px 14px;width:100%;border:0;background:transparent;font-family:inherit;font-size:13px;line-height:1.35;color:var(--ink);text-align:left;cursor:pointer}
+  .dp-preset:hover{background:#f5f6f8}
+  .dp-preset .rad{width:15px;height:15px;border-radius:50%;border:1.5px solid #b9bfc6;flex:0 0 auto;transition:.15s}
+  .dp-preset.sel{font-weight:700}
+  .dp-preset.sel .rad{border-color:var(--accent);border-width:4.5px}
+  .dp-preset .pc{margin-left:auto;font-size:10.5px;font-weight:700;color:var(--faint);font-variant-numeric:tabular-nums}
+  .dp-preset[disabled]{color:#b9bfc6;cursor:not-allowed}
+  .dp-preset[disabled]:hover{background:transparent}
+  .dp-preset[disabled] .rad{border-color:#dde1e5}
+  .dp-right{padding:14px 16px 11px;flex:1 1 auto}
+  .dp-cals{display:flex;gap:24px}
+  .dp-mhead{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:5px;min-height:26px}
+  .dp-mname{font-size:14px;font-weight:700}
+  .dp-nav{border:0;background:transparent;cursor:pointer;color:var(--muted);font-size:18px;line-height:1;padding:1px 7px;border-radius:6px;font-family:inherit}
+  .dp-nav:hover{background:#f5f6f8;color:var(--ink)}
+  .dp-nav[disabled]{color:#dde1e5;cursor:not-allowed}
+  .dp-nav[disabled]:hover{background:transparent}
+  .dp-grid{display:grid;grid-template-columns:repeat(7,30px);gap:2px 0}
+  .dp-dow{font-size:10.5px;font-weight:700;color:var(--faint);text-align:center;padding:3px 0}
+  .dp-day{height:29px;border:0;background:transparent;border-radius:7px;font-family:inherit;font-size:12.5px;font-weight:600;line-height:1;color:var(--ink);cursor:pointer;position:relative;padding:0}
+  .dp-day.blank{visibility:hidden}
+  .dp-day.off{color:#c9ced4;cursor:not-allowed}
+  .dp-day.has:hover{background:var(--accent-soft)}
+  .dp-day.inr{background:var(--accent-soft);border-radius:0}
+  .dp-day.edge{background:var(--accent);color:#fff;border-radius:7px}
+  .dp-day .dot{position:absolute;left:50%;transform:translateX(-50%);bottom:3.5px;width:3.5px;height:3.5px;border-radius:50%;background:var(--accent)}
+  .dp-day.edge .dot{background:#fff}
+  .dp-foot{display:flex;align-items:flex-end;gap:14px;flex-wrap:wrap;border-top:1px solid var(--line);margin-top:12px;padding-top:11px}
+  .dp-rng{font-size:13.5px;font-weight:700;display:block}
+  .dp-hint{font-size:11.5px;color:var(--faint);font-weight:600;display:block}
+  .dp-btns{margin-left:auto;display:flex;gap:9px}
+  .dp-b{border:1px solid #cfd4da;background:#fff;border-radius:8px;padding:8px 17px;font-family:inherit;font-size:13px;font-weight:700;line-height:1.2;color:var(--ink);cursor:pointer;transition:.15s}
+  .dp-b:hover{background:#f5f6f8}
+  .dp-b.pri{background:var(--accent);border-color:var(--accent);color:#fff}
+  .dp-b.pri:hover{background:#c9462f}
+  .dp-b[disabled]{opacity:.42;cursor:not-allowed}
+  .dp-b.pri[disabled]:hover{background:var(--accent)}
+  .dp-legend{font-size:11px;color:var(--faint);font-weight:600;margin:9px 0 0}
+  .dp-legend i{display:inline-block;width:4px;height:4px;border-radius:50%;background:var(--accent);vertical-align:1.5px;margin-right:3px}
+  .chip{display:inline-flex;align-items:center;gap:7px;background:var(--accent-soft);border:1px solid #f3c9c0;color:var(--accent);border-radius:999px;padding:4px 6px 4px 12px;font-size:12px;font-weight:700}
+  .chipx{border:0;background:transparent;color:var(--accent);cursor:pointer;font-family:inherit;font-weight:800;font-size:14px;line-height:1;padding:0 5px;border-radius:50%}
+  .chipx:hover{background:#f7cdc4}
+  .pickday{border:0;background:transparent;padding:0;font-family:inherit;font-size:12px;font-weight:800;line-height:1.4;color:var(--accent);cursor:pointer;text-align:left;text-decoration:underline;text-decoration-color:#f3c9c0;text-underline-offset:2px}
+  .pickday:hover{text-decoration-color:var(--accent)}
+  .pickday.big{font-size:14px}
+
+  /* empty state */
+  .empty{border:1px dashed #cfd4da;border-radius:12px;padding:26px 20px;text-align:center;color:#55606b;font-size:13px;line-height:1.7}
+  .empty .big{font-size:26px;display:block;margin-bottom:4px}
+
+  /* single-day report panel */
+  .dr{border:1px solid #f3c9c0;background:#fffaf9;border-radius:12px;padding:15px 17px}
+  .dr-top{display:flex;align-items:center;gap:11px;flex-wrap:wrap;margin-bottom:4px}
+  .dr-date{font-size:19px;font-weight:800;letter-spacing:-.3px}
+  .dr-btns{margin-left:auto;display:flex;gap:9px;flex-wrap:wrap}
+  .dr-open{display:inline-flex;align-items:center;gap:7px;background:var(--accent);color:#fff;border-radius:9px;padding:8px 15px;font-size:12.5px;font-weight:700;text-decoration:none}
+  .dr-open:hover{background:#c9462f}
+  .dr-json{display:inline-flex;align-items:center;gap:6px;background:#fff;border:1px solid var(--line);color:var(--muted);border-radius:9px;padding:8px 13px;font-size:12.5px;font-weight:700;text-decoration:none}
+  .dr-json:hover{border-color:#a9b0b8;color:var(--ink)}
+  .dr-sub{font-size:12px;color:var(--muted);margin:0 0 13px}
+  .drgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}
+  .drc{background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+  .drc .k{font-size:10.5px;font-weight:700;color:var(--muted);display:flex;align-items:center;gap:6px;margin-bottom:2px;line-height:1.35}
+  .drc .v{font-size:17px;font-weight:800;letter-spacing:-.3px}
+  .drnotes{margin-top:13px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:11px 13px}
+  .drnotes h5{margin:0 0 4px;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.5px;color:var(--muted)}
+
   .foot{font-size:11.5px;color:var(--faint);text-align:center;margin-top:26px;line-height:1.7}
   .foot b{color:var(--muted)}
   code.mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11.5px;background:#f5f6f8;border:1px solid var(--line2);border-radius:5px;padding:1px 5px;color:#3a3f45}
   @media (max-width:900px){
     .tiles{grid-template-columns:repeat(2,1fr)}
     .charts{grid-template-columns:1fr}
+    .drgrid{grid-template-columns:repeat(2,1fr)}
+  }
+  @media (max-width:760px){
+    .dppanel{flex-direction:column;left:0;right:auto;max-width:calc(100vw - 34px)}
+    .dp-presets{width:auto;max-height:none;border-right:0;border-bottom:1px solid var(--line);display:flex;flex-wrap:wrap;gap:2px;padding:8px}
+    .dp-preset{width:auto;padding:6px 10px;border:1px solid var(--line);border-radius:999px;font-size:12px}
+    .dp-preset .pc{margin-left:4px}
+    .dp-cals{flex-direction:column;gap:16px}
+    .dp-right{overflow-x:auto}
   }
   @media (max-width:600px){
     .wrap{padding:24px 12px 60px}
     .tiles{grid-template-columns:1fr}
     .title{font-size:22px}
     .langsw{top:8px;right:8px}
+    .drgrid{grid-template-columns:1fr}
+    .dr-btns{margin-left:0;width:100%}
   }
 </style>
 </head>
@@ -189,6 +276,54 @@
       </div>
     </section>
   </div>
+
+  <!-- DATE FILTER -->
+  <section class="card" id="sec-filter" style="display:none">
+    <p class="section-label"><span class="bar"></span> <span class="vi">Chọn ngày / khoảng ngày</span><span class="en">Pick a day or a date range</span></p>
+    <p class="section-sub"><span class="vi">Chọn <b>một ngày</b> để xem đúng báo cáo của ngày đó, hoặc <b>một khoảng ngày</b> để xem xu hướng trong khoảng đó. Chỉ những ngày <b>đã có dữ liệu lưu</b> mới chọn được — ngày chưa quét bị làm mờ, vì không có số liệu thật để hiển thị.</span><span class="en">Pick <b>a single day</b> to open exactly that day's report, or <b>a range</b> to see the trend across it. Only days that <b>have stored data</b> can be selected — unscanned days are dimmed, because there is no measured value to show.</span></p>
+    <div class="filterbar">
+      <div class="dpwrap">
+        <button class="dpbtn" id="dpbtn" type="button" aria-haspopup="dialog" aria-expanded="false">
+          <span>🗓</span> <span id="dplabel"></span> <span class="car">▾</span>
+        </button>
+        <div class="dppanel" id="dppanel" hidden role="dialog" aria-label="Date range">
+          <div class="dp-presets" id="dppresets"></div>
+          <div class="dp-right">
+            <div class="dp-cals" id="dpcals"></div>
+            <div class="dp-foot">
+              <div>
+                <span class="dp-rng" id="dprng"></span>
+                <span class="dp-hint" id="dphint"></span>
+              </div>
+              <div class="dp-btns">
+                <button class="dp-b" id="dpcancel" type="button"><span class="vi">Hủy</span><span class="en">Cancel</span></button>
+                <button class="dp-b pri" id="dpupdate" type="button"><span class="vi">Cập nhật</span><span class="en">Update</span></button>
+              </div>
+            </div>
+            <p class="dp-legend"><i></i> <span class="vi">Dấu chấm = ngày đã có dữ liệu lưu. Ngày làm mờ = chưa quét, không chọn được.</span><span class="en">A dot marks a day with stored data. Dimmed days were never scanned and cannot be selected.</span></p>
+          </div>
+        </div>
+      </div>
+      <span id="dpchip"></span>
+      <span class="dp-hint" id="dpcount"></span>
+    </div>
+  </section>
+
+  <!-- EMPTY STATE -->
+  <section class="card" id="sec-empty" style="display:none">
+    <div class="empty">
+      <span class="big">🗓</span>
+      <b><span class="vi">Không có ngày nào được lưu trong khoảng này</span><span class="en">No stored day falls in this range</span></b><br>
+      <span class="vi">Báo cáo chỉ hiển thị số liệu đã đo thật, nên khoảng không có bản lưu sẽ để trống chứ không suy đoán. Các ngày đang có dữ liệu:</span><span class="en">The report only shows measured values, so a range with no snapshot stays empty rather than being estimated. Days that do have data:</span>
+      <div id="emptydays" style="margin-top:9px;display:flex;gap:9px;justify-content:center;flex-wrap:wrap"></div>
+    </div>
+  </section>
+
+  <!-- SINGLE DAY REPORT -->
+  <section class="card" id="sec-dayreport" style="display:none">
+    <p class="section-label"><span class="bar"></span> <span class="vi">Báo cáo của ngày đã chọn</span><span class="en">Report for the selected day</span></p>
+    <div id="dayreport"></div>
+  </section>
 
   <!-- CURRENT + SPARKLINES -->
   <section class="card" id="sec-tiles" style="display:none">
@@ -429,34 +564,48 @@ function attachHover(box, id, built){
 }
 
 /* ---------- render ---------- */
-let ROWS = [], IDX = null;
+/* ALL = every stored day ever loaded. ROWS = the days inside the current date filter. */
+let ALL = [], ROWS = [], IDX = null;
+
+/* previous *scan* that actually read this metric — walked over ALL, never over the
+   filtered view, so a delta never silently compares across a gap the filter created */
+function prevGood(iso, key){
+  const i = ALL.findIndex(r => r.date === iso);
+  for (let j = i - 1; j >= 0; j--){
+    const v = val(ALL[j].data, key);
+    if (v !== null) return {date: ALL[j].date, v: v};
+  }
+  return null;
+}
 
 function renderMeta(){
   const el = document.getElementById('meta');
-  const latest = ROWS[ROWS.length - 1];
+  const latest = ALL[ALL.length - 1];
   el.innerHTML =
-      '<span class="tag on">✓ ' + ROWS.length + ' <span class="vi">ngày đã lưu</span><span class="en">days stored</span></span>'
+      '<span class="tag on">✓ ' + ALL.length + ' <span class="vi">ngày đã lưu</span><span class="en">days stored</span></span>'
     + '<span class="tag"><span class="vi">📅 Mới nhất: ' + dmy(latest.date) + '</span><span class="en">📅 Latest: ' + dmy(latest.date) + '</span></span>'
-    + '<span class="tag"><span class="vi">🗂 Sớm nhất: ' + dmy(ROWS[0].date) + '</span><span class="en">🗂 Earliest: ' + dmy(ROWS[0].date) + '</span></span>'
+    + '<span class="tag"><span class="vi">🗂 Sớm nhất: ' + dmy(ALL[0].date) + '</span><span class="en">🗂 Earliest: ' + dmy(ALL[0].date) + '</span></span>'
     + '<span class="tag on">✓ <span class="vi">Chrome trực tiếp (GSC + GA4 + Ahrefs)</span><span class="en">Direct from Chrome (GSC + GA4 + Ahrefs)</span></span>';
-  document.getElementById('tiles-badge').innerHTML =
-    '<span class="vi">Ngày quét ' + dmy(latest.date) + '</span><span class="en">Scan of ' + dmy(latest.date) + '</span>';
 }
 
 const TILE_KEYS = ['clicks','impr','sess','eng','rd','score'];
 function renderTiles(){
   const host = document.getElementById('tiles');
+  const newest = ROWS[ROWS.length - 1];
+  document.getElementById('tiles-badge').innerHTML = newest
+    ? '<span class="vi">Ngày quét ' + dmy(newest.date) + '</span><span class="en">Scan of ' + dmy(newest.date) + '</span>'
+    : '';
   host.innerHTML = TILE_KEYS.map(function(key){
     const m = M[key], pts = series(ROWS, key);
     const good = pts.filter(p => p.v !== null);
     const cur = good.length ? good[good.length - 1] : null;
-    const prev = good.length > 1 ? good[good.length - 2] : null;
+    const prev = cur ? prevGood(cur.date, key) : null;
     const valTxt = cur ? (m.dp ? cur.v.toFixed(m.dp) : cur.v.toLocaleString('en-US')) + (m.unit || '') : t('chưa đọc', 'not read');
     return '<div class="tile">'
       + '<div class="t-head"><span class="t-dot" style="background:' + m.hue + '"></span>'
       + '<span class="t-label"><span class="vi">' + m.vi + '</span><span class="en">' + m.en + '</span></span></div>'
       + '<div class="t-val">' + valTxt + '</div>'
-      + (prev && cur ? deltaHTML(cur.v, prev.v, key, false) + '<span class="t-foot"><span class="vi">so với ' + dmy(prev.date) + '</span><span class="en">vs ' + dmy(prev.date) + '</span></span>'
+      + (prev && cur ? deltaHTML(cur.v, prev.v, key, false) + '<span class="t-foot"><span class="vi">so với lần quét trước (' + dmy(prev.date) + ')</span><span class="en">vs previous scan (' + dmy(prev.date) + ')</span></span>'
                      : '<span class="t-foot"><span class="vi">chưa đủ 2 mốc để so sánh</span><span class="en">not enough points to compare</span></span>')
       + sparkSVG(pts, m.hue)
       + '<span class="t-foot">' + good.length + '/' + pts.length + ' <span class="vi">ngày có số liệu</span><span class="en">days with data</span></span>'
@@ -489,21 +638,21 @@ const TBL_KEYS = ['clicks','impr','ctr','pos','sess','eng','er','ke','rd','bl','
 function renderTable(){
   const body = document.getElementById('tbody');
   body.innerHTML = ROWS.map(function(r, i){
-    const prev = i > 0 ? ROWS[i - 1].data : null;
     let cells = '';
     TBL_KEYS.forEach(function(key){
       const m = M[key];
       const cv = val(r.data, key);
-      const pv = prev ? val(prev, key) : null;
+      const pg = cv === null ? null : prevGood(r.date, key);
       cells += '<td class="num">' + (cv === null ? NR
         : '<span class="cellv">' + (m.dp ? cv.toFixed(m.dp) : cv.toLocaleString('en-US')) + (m.unit || '') + '</span>'
-          + (['clicks','impr','sess','eng','rd','bl','score'].indexOf(key) >= 0 ? deltaHTML(cv, pv, key, true) : '')) + '</td>';
+          + (['clicks','impr','sess','eng','rd','bl','score'].indexOf(key) >= 0 && pg ? deltaHTML(cv, pg.v, key, true) : '')) + '</td>';
     });
     const rep = r.meta.report
       ? '<a class="dlink" href="' + r.meta.report + '">HTML</a>'
       : '<span class="nr">' + t('không có', 'none') + '</span>';
     return '<tr class="' + (i === ROWS.length - 1 ? 'newest' : '') + '">'
-      + '<td><b>' + dmy(r.date) + '</b><span class="lbl"><span class="vi">' + (r.meta.label_vi || '') + '</span><span class="en">' + (r.meta.label_en || '') + '</span></span></td>'
+      + '<td><button class="pickday" data-d="' + r.date + '" type="button" title="' + t('Xem báo cáo riêng của ngày này', 'Show only this day\'s report') + '">' + dmy(r.date) + '</button>'
+      + '<span class="lbl"><span class="vi">' + (r.meta.label_vi || '') + '</span><span class="en">' + (r.meta.label_en || '') + '</span></span></td>'
       + cells
       + '<td>' + rep + ' &nbsp;<a class="dlink mut" href="' + r.meta.data + '">JSON</a></td>'
       + '</tr>';
@@ -523,7 +672,7 @@ function renderDays(){
         + '<span class="en">' + (enNotes.length ? enNotes : viNotes).map(n => '<span class="d-note">' + n + '</span>').join('') + '</span>'
       : '';
     return '<div class="day' + (i === 0 ? ' newest' : '') + '">'
-      + '<div class="d-top"><span class="d-date">' + dmy(r.date) + '</span>'
+      + '<div class="d-top"><button class="pickday big" data-d="' + r.date + '" type="button" title="' + t('Xem báo cáo riêng của ngày này', 'Show only this day\'s report') + '">' + dmy(r.date) + '</button>'
       + '<span class="d-tag"><span class="vi">' + (r.meta.label_vi || '') + '</span><span class="en">' + (r.meta.label_en || '') + '</span></span>'
       + '<span class="d-links">'
       + (r.meta.report ? '<a class="dlink" href="' + r.meta.report + '"><span class="vi">Xem báo cáo ngày này</span><span class="en">Open this day\'s report</span></a>' : '')
@@ -535,11 +684,271 @@ function renderDays(){
   }).join('');
 }
 
-function renderAll(){
-  renderMeta(); renderTiles(); renderCharts(); renderTable(); renderDays();
-  ['sec-tiles','sec-charts','sec-table','sec-days'].forEach(id => document.getElementById(id).style.display = '');
+/* ---------- single-day report: the newest day inside the current selection ---------- */
+function renderDayReport(){
+  const host = document.getElementById('dayreport');
+  const r = ROWS[ROWS.length - 1];
+  if (!r){ host.innerHTML = ''; return; }
+  const d = r.data;
+  const wider = ROWS.length > 1;
+
+  const cards = TBL_KEYS.map(function(key){
+    const m = M[key];
+    const cv = val(d, key);
+    const pg = cv === null ? null : prevGood(r.date, key);
+    return '<div class="drc">'
+      + '<span class="k"><span class="t-dot" style="background:' + m.hue + '"></span>'
+      + '<span class="vi">' + m.vi + '</span><span class="en">' + m.en + '</span></span>'
+      + '<span class="v">' + (cv === null ? NR : (m.dp ? cv.toFixed(m.dp) : cv.toLocaleString('en-US')) + (m.unit || '')) + '</span>'
+      + (pg ? deltaHTML(cv, pg.v, key, true) : '')
+      + '</div>';
+  }).join('');
+
+  let viNotes = [], enNotes = [];
+  if (d.notes && !Array.isArray(d.notes)){ viNotes = d.notes.vi || []; enNotes = d.notes.en || []; }
+  else if (Array.isArray(d.notes)){ const h = Math.floor(d.notes.length / 2); viNotes = d.notes.slice(0, h); enNotes = d.notes.slice(h); }
+  const notes = (viNotes.length || enNotes.length)
+    ? '<div class="drnotes"><h5><span class="vi">Ghi chú của ngày quét này</span><span class="en">Notes for this scan</span></h5>'
+      + '<span class="vi">' + (viNotes.length ? viNotes : enNotes).map(n => '<span class="d-note">' + n + '</span>').join('') + '</span>'
+      + '<span class="en">' + (enNotes.length ? enNotes : viNotes).map(n => '<span class="d-note">' + n + '</span>').join('') + '</span></div>'
+    : '';
+
+  host.innerHTML = '<div class="dr">'
+    + '<div class="dr-top">'
+    + '<span class="dr-date">' + dmy(r.date) + '</span>'
+    + '<span class="d-tag"><span class="vi">' + (r.meta.label_vi || '') + '</span><span class="en">' + (r.meta.label_en || '') + '</span></span>'
+    + '<span class="dr-btns">'
+    + (r.meta.report ? '<a class="dr-open" href="' + r.meta.report + '">↗ <span class="vi">Mở báo cáo đầy đủ của ngày ' + dmy(r.date) + '</span><span class="en">Open the full report for ' + dmy(r.date) + '</span></a>' : '')
+    + '<a class="dr-json" href="' + r.meta.data + '">JSON</a>'
+    + '</span></div>'
+    + '<p class="dr-sub">'
+    + (wider
+        ? '<span class="vi">Đây là <b>ngày mới nhất</b> trong khoảng đang chọn (' + ROWS.length + ' ngày). Chọn đúng một ngày trên lịch để xem riêng ngày đó.</span>'
+          + '<span class="en">This is the <b>newest day</b> in the selected range (' + ROWS.length + ' days). Pick a single day on the calendar to isolate it.</span>'
+        : '<span class="vi">Toàn bộ số liệu đã đo của riêng ngày này. Số nhỏ là biến động so với lần quét trước đó.</span>'
+          + '<span class="en">Every measured figure for this day alone. The small figure is the movement versus the previous scan.</span>')
+    + '</p>'
+    + '<div class="drgrid">' + cards + '</div>'
+    + notes
+    + '<div class="d-prov"><span class="vi">Cửa sổ GSC ' + ((d.windows && d.windows.gsc) || '—') + ' · GA4 ' + ((d.windows && d.windows.ga4) || '—') + ' · nguồn ' + (d.provenance || '—') + ' · commit <code class="mono">' + (d.source_commit || '—') + '</code></span>'
+    + '<span class="en">GSC window ' + ((d.windows && d.windows.gsc) || '—') + ' · GA4 ' + ((d.windows && d.windows.ga4) || '—') + ' · source ' + (d.provenance || '—') + ' · commit <code class="mono">' + (d.source_commit || '—') + '</code></span></div>'
+    + '</div>';
 }
-window.__redraw = function(){ if (ROWS.length) { renderTiles(); renderCharts(); renderTable(); } };
+
+/* ================= date filter ================= */
+let DATASET = new Set();            /* ISO dates that actually have a stored snapshot */
+let SEL = {from: null, to: null, preset: 'all'};   /* applied */
+let DRAFT = {from: null, to: null, preset: 'all'}; /* being edited inside the panel */
+let calM = null;                    /* left-hand calendar, as {y, m} */
+
+const MN_VI = ['Tháng 1','Tháng 2','Tháng 3','Tháng 4','Tháng 5','Tháng 6','Tháng 7','Tháng 8','Tháng 9','Tháng 10','Tháng 11','Tháng 12'];
+const MN_EN = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+const DOW_VI = ['CN','T2','T3','T4','T5','T6','T7'];
+const DOW_EN = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+
+function iso(y, m, d){ return y + '-' + String(m + 1).padStart(2, '0') + '-' + String(d).padStart(2, '0'); }
+function todayISO(){ const n = new Date(); return iso(n.getFullYear(), n.getMonth(), n.getDate()); }
+function shiftISO(s, days){ const d = new Date(s + 'T00:00:00Z'); d.setUTCDate(d.getUTCDate() + days); return d.toISOString().slice(0, 10); }
+function monthAdd(o, n){ const d = new Date(Date.UTC(o.y, o.m + n, 1)); return {y: d.getUTCFullYear(), m: d.getUTCMonth()}; }
+function monthKey(o){ return o.y * 12 + o.m; }
+function monthOf(s){ return {y: Number(s.slice(0, 4)), m: Number(s.slice(5, 7)) - 1}; }
+
+/* every preset resolves against the client clock; `all` spans the whole archive */
+const PRESETS = [
+  {id:'yesterday', vi:'Hôm qua', en:'Yesterday', calc:td => ({from: shiftISO(td, -1), to: shiftISO(td, -1)})},
+  {id:'d7',  vi:'7 ngày qua',  en:'Last 7 days',  calc:td => ({from: shiftISO(td, -6),  to: td})},
+  {id:'d28', vi:'28 ngày qua', en:'Last 28 days', calc:td => ({from: shiftISO(td, -27), to: td})},
+  {id:'d90', vi:'90 ngày qua', en:'Last 90 days', calc:td => ({from: shiftISO(td, -89), to: td})},
+  {id:'wk',  vi:'Tuần này',    en:'This week',    calc:function(td){ const d = new Date(td + 'T00:00:00Z'); return {from: shiftISO(td, -d.getUTCDay()), to: td}; }},
+  {id:'mo',  vi:'Tháng này',   en:'This month',   calc:td => ({from: td.slice(0, 8) + '01', to: td})},
+  {id:'yr',  vi:'Năm nay',     en:'This year',    calc:td => ({from: td.slice(0, 4) + '-01-01', to: td})},
+  {id:'lwk', vi:'Tuần trước',  en:'Last week',    calc:function(td){ const d = new Date(td + 'T00:00:00Z'); const s = shiftISO(td, -d.getUTCDay() - 7); return {from: s, to: shiftISO(s, 6)}; }},
+  {id:'lmo', vi:'Tháng trước', en:'Last month',   calc:function(td){ const mo = monthAdd(monthOf(td), -1); const last = new Date(Date.UTC(mo.y, mo.m + 1, 0)).getUTCDate(); return {from: iso(mo.y, mo.m, 1), to: iso(mo.y, mo.m, last)}; }},
+  {id:'all', vi:'Toàn bộ dữ liệu đã lưu', en:'All stored data', calc:function(){ return {from: ALL[0].date, to: ALL[ALL.length - 1].date}; }}
+];
+function presetById(id){ return PRESETS.filter(p => p.id === id)[0] || null; }
+function inRange(dt, from, to){ return (!from || dt >= from) && (!to || dt <= to); }
+function countIn(from, to){ return ALL.filter(r => inRange(r.date, from, to)).length; }
+
+function rangeText(r){
+  if (!r.from) return t('Chưa chọn ngày', 'No day picked yet');
+  if (!r.to || r.from === r.to) return dmy(r.from);
+  return dmy(r.from) + ' – ' + dmy(r.to);
+}
+function labelFor(r){
+  const p = r.preset && r.preset !== 'custom' ? presetById(r.preset) : null;
+  if (p) return '<span class="vi">' + p.vi + '</span><span class="en">' + p.en + '</span>';
+  if (!r.from) return '<span class="vi">Chọn ngày</span><span class="en">Pick a date</span>';
+  if (!r.to || r.from === r.to) return '<span class="vi">Ngày ' + dmy(r.from) + '</span><span class="en">' + dmy(r.from) + '</span>';
+  return dmy(r.from) + ' – ' + dmy(r.to);
+}
+
+function renderPresets(){
+  const td = todayISO();
+  document.getElementById('dppresets').innerHTML = PRESETS.map(function(p){
+    const rg = p.calc(td);
+    const n = countIn(rg.from, rg.to);
+    return '<button class="dp-preset' + (DRAFT.preset === p.id ? ' sel' : '') + '" type="button" data-p="' + p.id + '"' + (n === 0 ? ' disabled' : '') + '>'
+      + '<span class="rad"></span>'
+      + '<span><span class="vi">' + p.vi + '</span><span class="en">' + p.en + '</span></span>'
+      + '<span class="pc">' + n + '</span>'
+      + '</button>';
+  }).join('');
+}
+
+function renderCals(){
+  const host = document.getElementById('dpcals');
+  const minM = monthKey(monthOf(ALL[0].date));
+  const maxM = monthKey(monthOf(todayISO()));
+  /* keep the two visible months inside [earliest stored month … current month] */
+  if (monthKey(calM) < minM) calM = {y: Math.floor(minM / 12), m: minM % 12};
+  if (monthKey(monthAdd(calM, 1)) > maxM) calM = monthAdd({y: Math.floor(maxM / 12), m: maxM % 12}, -1);
+  if (monthKey(calM) < minM) calM = {y: Math.floor(minM / 12), m: minM % 12};
+
+  const months = [calM, monthAdd(calM, 1)];
+  host.innerHTML = months.map(function(mo, side){
+    const first = new Date(Date.UTC(mo.y, mo.m, 1)).getUTCDay();
+    const days = new Date(Date.UTC(mo.y, mo.m + 1, 0)).getUTCDate();
+    const canPrev = side === 0 && monthKey(mo) > minM;
+    const canNext = side === 1 && monthKey(mo) < maxM;
+    let head = '<div class="dp-mhead">'
+      + (side === 0 ? '<button class="dp-nav" type="button" data-nav="-1"' + (canPrev ? '' : ' disabled') + ' aria-label="Previous month">‹</button>' : '<span></span>')
+      + '<span class="dp-mname"><span class="vi">' + MN_VI[mo.m] + ' ' + mo.y + '</span><span class="en">' + MN_EN[mo.m] + ' ' + mo.y + '</span></span>'
+      + (side === 1 ? '<button class="dp-nav" type="button" data-nav="1"' + (canNext ? '' : ' disabled') + ' aria-label="Next month">›</button>' : '<span></span>')
+      + '</div>';
+    let cells = DOW_VI.map((v, i) => '<div class="dp-dow"><span class="vi">' + v + '</span><span class="en">' + DOW_EN[i] + '</span></div>').join('');
+    for (let i = 0; i < first; i++) cells += '<button class="dp-day blank" type="button" disabled tabindex="-1"></button>';
+    for (let d = 1; d <= days; d++){
+      const s = iso(mo.y, mo.m, d);
+      const stored = DATASET.has(s);
+      const edge = DRAFT.from && (s === DRAFT.from || s === DRAFT.to);
+      const inr = !edge && DRAFT.from && DRAFT.to && s > DRAFT.from && s < DRAFT.to;
+      const cls = ['dp-day', stored ? 'has' : 'off', edge ? 'edge' : '', inr ? 'inr' : ''].filter(Boolean).join(' ');
+      cells += '<button class="' + cls + '" type="button" data-d="' + s + '"' + (stored ? '' : ' disabled')
+        + ' title="' + (stored ? dmy(s) : dmy(s) + ' — ' + t('chưa quét', 'never scanned')) + '">'
+        + d + (stored ? '<span class="dot"></span>' : '') + '</button>';
+    }
+    return '<div>' + head + '<div class="dp-grid">' + cells + '</div></div>';
+  }).join('');
+}
+
+function renderPanel(){
+  renderPresets(); renderCals();
+  document.getElementById('dprng').textContent = rangeText(DRAFT);
+  const n = DRAFT.from ? countIn(DRAFT.from, DRAFT.to || DRAFT.from) : 0;
+  document.getElementById('dphint').innerHTML =
+      '<span class="vi">' + n + ' ngày đã lưu trong khoảng này · ngày theo giờ Việt Nam (Asia/Ho_Chi_Minh), là giờ lúc quét</span>'
+    + '<span class="en">' + n + ' stored day(s) in this range · dates are in Vietnam time (Asia/Ho_Chi_Minh), the scan timezone</span>';
+  document.getElementById('dpupdate').disabled = !DRAFT.from || n === 0;
+}
+
+function renderFilterBar(){
+  document.getElementById('dplabel').innerHTML = labelFor(SEL);
+  const chip = document.getElementById('dpchip');
+  chip.innerHTML = SEL.preset === 'all' ? '' :
+    '<span class="chip">' + rangeText(SEL) + '<button class="chipx" type="button" id="dpreset" title="' + t('Xem lại toàn bộ dữ liệu', 'Show all stored data') + '">×</button></span>';
+  const el = document.getElementById('dpreset');
+  if (el) el.addEventListener('click', function(){ SEL = {from: ALL[0].date, to: ALL[ALL.length - 1].date, preset: 'all'}; applyFilter(); });
+  document.getElementById('dpcount').innerHTML =
+      '<span class="vi">Đang xem ' + ROWS.length + '/' + ALL.length + ' ngày đã lưu</span>'
+    + '<span class="en">Showing ' + ROWS.length + '/' + ALL.length + ' stored days</span>';
+}
+
+function openPanel(open){
+  const p = document.getElementById('dppanel');
+  const b = document.getElementById('dpbtn');
+  if (open){ DRAFT = {from: SEL.from, to: SEL.to, preset: SEL.preset}; calM = monthAdd(monthOf(DRAFT.to || ALL[ALL.length - 1].date), -1); renderPanel(); }
+  p.hidden = !open;
+  b.setAttribute('aria-expanded', open ? 'true' : 'false');
+}
+
+function selectDay(isoDate){
+  SEL = {from: isoDate, to: isoDate, preset: 'custom'};
+  applyFilter();
+  openPanel(false);
+  document.getElementById('sec-dayreport').scrollIntoView({behavior: 'smooth', block: 'start'});
+}
+
+function applyFilter(){
+  ROWS = ALL.filter(r => inRange(r.date, SEL.from, SEL.to));
+  const show = id => document.getElementById(id).style.display = '';
+  const hide = id => document.getElementById(id).style.display = 'none';
+  renderFilterBar();
+  if (!ROWS.length){
+    document.getElementById('emptydays').innerHTML = ALL.map(r =>
+      '<button class="pickday" data-d="' + r.date + '" type="button">' + dmy(r.date) + '</button>').join('');
+    show('sec-empty');
+    ['sec-dayreport','sec-tiles','sec-charts','sec-table','sec-days'].forEach(hide);
+    return;
+  }
+  hide('sec-empty');
+  renderDayReport(); renderTiles(); renderTable(); renderDays();
+  ['sec-dayreport','sec-tiles','sec-table','sec-days'].forEach(show);
+  /* one point is not a trend — a chart of a single dot would invite reading a slope that isn't there */
+  if (ROWS.length > 1){ renderCharts(); show('sec-charts'); } else hide('sec-charts');
+}
+
+function wirePicker(){
+  document.getElementById('dpbtn').addEventListener('click', function(e){
+    e.stopPropagation();
+    openPanel(document.getElementById('dppanel').hidden);
+  });
+  document.getElementById('dppanel').addEventListener('click', function(e){
+    e.stopPropagation();
+    const pb = e.target.closest('.dp-preset');
+    if (pb && !pb.disabled){
+      const p = presetById(pb.dataset.p), rg = p.calc(todayISO());
+      DRAFT = {from: rg.from, to: rg.to, preset: p.id};
+      renderPanel(); return;
+    }
+    const nav = e.target.closest('.dp-nav');
+    if (nav && !nav.disabled){ calM = monthAdd(calM, Number(nav.dataset.nav)); renderCals(); return; }
+    const day = e.target.closest('.dp-day');
+    if (day && !day.disabled){
+      const s = day.dataset.d;
+      if (!DRAFT.from || DRAFT.to) DRAFT = {from: s, to: null, preset: 'custom'};
+      else if (s >= DRAFT.from) DRAFT = {from: DRAFT.from, to: s, preset: 'custom'};
+      else DRAFT = {from: s, to: DRAFT.from, preset: 'custom'};
+      renderPanel();
+    }
+  });
+  document.getElementById('dpcancel').addEventListener('click', function(){ openPanel(false); });
+  document.getElementById('dpupdate').addEventListener('click', function(){
+    if (!DRAFT.from) return;
+    SEL = {from: DRAFT.from, to: DRAFT.to || DRAFT.from, preset: DRAFT.preset};
+    applyFilter();
+    openPanel(false);
+  });
+  document.addEventListener('click', function(){ if (!document.getElementById('dppanel').hidden) openPanel(false); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && !document.getElementById('dppanel').hidden) openPanel(false); });
+  /* any date rendered anywhere in the page is a shortcut to that day's report */
+  document.addEventListener('click', function(e){
+    const b = e.target.closest('.pickday');
+    if (b && b.dataset.d) selectDay(b.dataset.d);
+  });
+}
+
+function renderAll(){
+  DATASET = new Set(ALL.map(r => r.date));
+  SEL = {from: ALL[0].date, to: ALL[ALL.length - 1].date, preset: 'all'};
+  calM = monthAdd(monthOf(ALL[ALL.length - 1].date), -1);
+  renderMeta();
+  wirePicker();
+  document.getElementById('sec-filter').style.display = '';
+  applyFilter();
+}
+window.__redraw = function(){
+  if (!ALL.length) return;
+  renderMeta(); renderFilterBar();
+  if (!document.getElementById('dppanel').hidden) renderPanel();
+  if (ROWS.length){
+    renderDayReport(); renderTiles(); renderTable(); renderDays();
+    if (ROWS.length > 1) renderCharts();
+  } else {
+    document.getElementById('emptydays').innerHTML = ALL.map(r =>
+      '<button class="pickday" data-d="' + r.date + '" type="button">' + dmy(r.date) + '</button>').join('');
+  }
+};
 
 function fail(msg){
   document.getElementById('err').style.display = '';
@@ -559,7 +968,16 @@ function fail(msg){
           .then(j => ({date: s.date, meta: s, data: j}));
       }));
     })
-    .then(function(rows){ ROWS = rows; renderAll(); })
+    .then(function(rows){
+      ALL = rows.slice().sort((a, b) => a.date < b.date ? -1 : 1);
+      if (!ALL.length) throw new Error('data/index.json has no snapshots');
+      /* ?day=YYYY-MM-DD or ?from=…&to=… makes any selection a shareable link */
+      renderAll();
+      const q = new URLSearchParams(location.search);
+      const day = q.get('day');
+      if (day && DATASET.has(day)){ SEL = {from: day, to: day, preset: 'custom'}; applyFilter(); }
+      else if (q.get('from')){ SEL = {from: q.get('from'), to: q.get('to') || q.get('from'), preset: 'custom'}; applyFilter(); }
+    })
     .catch(function(e){ fail(e.message || String(e)); });
 })();
 </script>
