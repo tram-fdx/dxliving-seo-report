@@ -723,6 +723,11 @@
    on the chosen date. Nothing is interpolated.
    ===================================================================== */
 (function(){
+  /* A frozen archive copy of this page has the picker section stripped out (it
+     lives one folder down, where data/index.json 404s and every relative target
+     would be wrong). Bail out before anything here touches a missing node. */
+  if (!document.getElementById('sec-filter')) return;
+
   let ALL = [];                 /* [{date, report, label_vi, label_en}] ascending */
   let LATEST = null;            /* the day this page reports on */
   let DATASET = new Set();      /* stored days, for O(1) calendar lookups */
