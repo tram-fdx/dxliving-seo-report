@@ -1,7 +1,7 @@
 {
   "site": "dxliving.com",
   "description": "Lịch sử snapshot dữ liệu SEO theo ngày / Daily SEO data snapshot history. Mỗi ngày một file data/YYYY-MM-DD.json + bản HTML đóng băng archive/YYYY-MM-DD.html.",
-  "latest": "2026-07-30",
+  "latest": "2026-07-31",
   "snapshots": [
     {
       "date": "2026-06-30",
@@ -37,6 +37,13 @@
       "report": "archive/2026-07-30.html",
       "label_vi": "Ahrefs Health 88→100; GSC clicks 63→65, impressions 952→1006",
       "label_en": "Ahrefs Health 88→100; GSC clicks 63→65, impressions 952→1006"
+    },
+    {
+      "date": "2026-07-31",
+      "data": "data/2026-07-31.json",
+      "report": "archive/2026-07-31.html",
+      "label_vi": "GSC clicks 65→67, impressions 1006→1032; Ahrefs ref domains 339→341, backlinks 344→346",
+      "label_en": "GSC clicks 65→67, impressions 1006→1032; Ahrefs ref domains 339→341, backlinks 344→346"
     }
   ]
 }

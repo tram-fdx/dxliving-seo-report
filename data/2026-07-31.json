@@ -1,0 +1,107 @@
+{
+  "date": "2026-07-31",
+  "site": "dxliving.com",
+  "source_commit": "3d54eb7",
+  "provenance": "Read directly from Chrome (GSC + GA4 + Ahrefs UI) on 2026-07-31. No OpenSEO, no Supermetrics. No estimated values.",
+  "windows": {
+    "gsc": "2026-07-01 → 2026-07-28",
+    "ga4": "2026-07-03 → 2026-07-30"
+  },
+  "gsc_28d": {
+    "clicks": 67,
+    "impressions": 1032,
+    "ctr_pct": 6.5,
+    "avg_position": 24.1,
+    "queries_with_impressions": 92
+  },
+  "ga4_28d": {
+    "sessions": 405,
+    "engaged_sessions": 270,
+    "engagement_rate_pct": 66.7,
+    "key_events": 42,
+    "avg_engagement_time": "1m49s",
+    "total_events": 3461,
+    "ai_assistant_channel": {
+      "sessions": 2,
+      "share_of_sessions_pct": 0.49,
+      "engagement_rate_pct": 50,
+      "avg_time": "7s",
+      "events_per_session": 5.0,
+      "key_events": 0,
+      "referrer": "chatgpt.com"
+    }
+  },
+  "ahrefs": {
+    "domain_rating": 0,
+    "url_rating": 0,
+    "referring_domains": 341,
+    "referring_domains_all_time": 356,
+    "backlinks": 346,
+    "backlinks_all_time": 371,
+    "health_score": 100,
+    "organic_keywords": 0,
+    "organic_traffic": 0,
+    "ai_citations": 14,
+    "ai_by_platform": {
+      "chatgpt": 6,
+      "copilot": 8,
+      "google_ai_overviews": 0,
+      "google_ai_mode": 0,
+      "gemini": 0,
+      "perplexity": 0,
+      "grok": null
+    },
+    "cited_pages": 2
+  },
+  "ai_visibility": {
+    "score": 16,
+    "score_max": 100,
+    "framework": "searchfit-seo:ai-visibility",
+    "platforms_present": 2,
+    "platforms_total": 6,
+    "cited_pages": 2,
+    "dimensions_measured": {
+      "presence": 2,
+      "citation_surface": 1,
+      "technical_readiness": 4,
+      "third_party_corpus": 0,
+      "measurement": 1
+    },
+    "dimensions_not_measured": [
+      "accuracy",
+      "sentiment",
+      "position"
+    ],
+    "not_measured_reason": "Cần Brand Radar prompt tracking; report 'Dxliving' tồn tại nhưng 0 prompt được track / Requires Brand Radar prompt tracking; the 'Dxliving' report exists but tracks 0 prompts",
+    "score_method": "Trung bình 5 dimension đo được × 10 / Average of the 5 measurable dimensions × 10",
+    "brand_radar": {
+      "report_exists": true,
+      "prompts_tracked": 0,
+      "ai_share_of_voice": null
+    },
+    "readiness": {
+      "robots_txt_blocks_ai_bots": false,
+      "llms_txt": false,
+      "faq_schema_on_money_pages": true,
+      "organization_schema": false,
+      "localbusiness_schema": false,
+      "articles_render": false
+    }
+  },
+  "notes": {
+    "vi": [
+      "GSC nhích lên: clicks 65→67, impressions 1006→1032, số truy vấn có hiển thị 88→92; vị trí TB 23.7→24.1; cửa sổ GSC dịch sang 01/07→28/07.",
+      "GA4 cửa sổ mới 03/07→30/07: sessions 421→405 (rơi 1 ngày cao đầu kỳ), engaged sessions giữ 270, engagement rate 64.1%→66.7%, key events giữ 42, tổng sự kiện 3519→3461, thời lượng tương tác TB 1m45s→1m49s.",
+      "Kênh AI assistant: 2 session từ chatgpt.com (0.49% tổng), 50% engagement, 0 key event — đã xác minh nguồn trong báo cáo Session source.",
+      "Ahrefs: referring domains 339→341 (all-time 356), backlinks 344→346 (all-time 371), Health Score giữ 100, organic keywords/traffic vẫn 0; AI citations giữ 14 (ChatGPT 6, Copilot 8), cited pages 2.",
+      "AI Visibility giữ 16/100: vẫn 2/6 nền tảng hiện diện (ChatGPT + Copilot); các tín hiệu technical readiness phản ánh audit gần nhất (chưa audit lại hôm nay)."
+    ],
+    "en": [
+      "GSC ticked up: clicks 65→67, impressions 1006→1032, queries-with-impressions 88→92; avg position 23.7→24.1; GSC window shifted to 1 Jul→28 Jul.",
+      "GA4 new window 3 Jul→30 Jul: sessions 421→405 (dropped one high early-period day), engaged sessions held at 270, engagement rate 64.1%→66.7%, key events held at 42, total events 3519→3461, avg engagement time 1m45s→1m49s.",
+      "AI assistant channel: 2 sessions from chatgpt.com (0.49% of total), 50% engagement, 0 key events — source verified in the Session source report.",
+      "Ahrefs: referring domains 339→341 (all-time 356), backlinks 344→346 (all-time 371), Health Score held at 100, organic keywords/traffic still 0; AI citations held at 14 (ChatGPT 6, Copilot 8), cited pages 2.",
+      "AI Visibility held at 16/100: still 2/6 platforms present (ChatGPT + Copilot); technical-readiness signals reflect the last full audit (not re-audited today)."
+    ]
+  }
+}

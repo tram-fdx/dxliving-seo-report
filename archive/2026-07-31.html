@@ -223,6 +223,7 @@
 </style>
 </head>
 <body>
+<div data-archive-banner style="background:#fdf4e3;border-bottom:1px solid #f0dcb4;color:#b7791f;font:600 12.5px/1.55 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;padding:9px 130px 9px 16px;text-align:center"><span class="vi">🗂 Bản lưu ngày 31/07/2026 — báo cáo này đã đóng băng, không cập nhật nữa. <a href="../index.html" style="color:#b7791f;font-weight:800">Xem báo cáo mới nhất</a> · <a href="../history.html" style="color:#b7791f;font-weight:800">Lịch sử dữ liệu theo ngày</a></span><span class="en">🗂 Archived snapshot of 31 Jul 2026 — this report is frozen and no longer updated. <a href="../index.html" style="color:#b7791f;font-weight:800">Open the latest report</a> · <a href="../history.html" style="color:#b7791f;font-weight:800">Daily data history</a></span></div>
 
 <div class="langsw">
   <button id="bvi" class="active" onclick="setLang('vi')">VI</button>
@@ -245,41 +246,9 @@
       <span class="tag"><span class="vi">🤖 Hiện diện AI (AEO/GEO) · 16/100</span><span class="en">🤖 AI Visibility (AEO/GEO) · 16/100</span></span>
       <span class="tag"><span class="vi">🔎 SERP snapshot · location Úc</span><span class="en">🔎 SERP snapshot · AU location</span></span>
       <span class="tag"><span class="vi">📅 Cập nhật: 31/07/2026</span><span class="en">📅 Updated: 31 Jul 2026</span></span>
-      <a class="tag hist" href="history.html">🗂 <span class="vi">Lịch sử dữ liệu theo ngày →</span><span class="en">Daily data history →</span></a>
+      <a class="tag hist" href="../history.html">🗂 <span class="vi">Lịch sử dữ liệu theo ngày →</span><span class="en">Daily data history →</span></a>
     </div>
   </header>
-
-  <!-- DATE FILTER -->
-  <section class="card" id="sec-filter" style="display:none">
-    <p class="section-label"><span class="bar"></span> <span class="vi">Chọn ngày để xem báo cáo</span><span class="en">Pick a date to open its report</span></p>
-    <p class="section-sub"><span class="vi">Chọn <b>một ngày</b> rồi bấm <b>Cập nhật</b> để mở đúng bản báo cáo đã lưu của ngày đó. Chọn <b>một khoảng ngày</b> để xem xu hướng trong khoảng. Ngày <b>có dấu chấm</b> là ngày đã quét và có báo cáo lưu; ngày làm mờ vẫn chọn được làm đầu/cuối khoảng, nhưng không có báo cáo riêng để mở.</span><span class="en">Pick <b>a single day</b> and press <b>Update</b> to open exactly that day's stored report. Pick <b>a range</b> to see the trend across it. A <b>dot</b> marks a day that was scanned and has a stored report; a dimmed day can still bound a range, but has no report of its own to open.</span></p>
-    <div class="filterbar">
-      <div class="dpwrap">
-        <button class="dpbtn" id="dpbtn" type="button" aria-haspopup="dialog" aria-expanded="false">
-          <span>🗓</span> <span id="dplabel"></span> <span class="car">▾</span>
-        </button>
-        <div class="dppanel" id="dppanel" hidden role="dialog" aria-label="Date range">
-          <div class="dp-presets" id="dppresets"></div>
-          <div class="dp-right">
-            <div class="dp-cals" id="dpcals"></div>
-            <div class="dp-foot">
-              <div>
-                <span class="dp-rng" id="dprng"></span>
-                <span class="dp-hint" id="dphint"></span>
-              </div>
-              <div class="dp-btns">
-                <button class="dp-b" id="dpcancel" type="button"><span class="vi">Hủy</span><span class="en">Cancel</span></button>
-                <button class="dp-b pri" id="dpupdate" type="button"><span class="vi">Cập nhật</span><span class="en">Update</span></button>
-              </div>
-            </div>
-            <p class="dp-legend"><i></i> <span class="vi">Dấu chấm = ngày đã có dữ liệu lưu. Ngày làm mờ = chưa quét: dùng được làm đầu/cuối khoảng, nhưng không mở được báo cáo riêng.</span><span class="en">A dot marks a day with stored data. A dimmed day was never scanned: it can bound a range, but cannot open a report of its own.</span></p>
-          </div>
-        </div>
-      </div>
-      <span id="dpchip"></span>
-    </div>
-    <div class="daylinks" id="daylinks"></div>
-  </section>
 
   <!-- DATA NOTE -->
   <section class="card" style="padding:16px 18px">
@@ -699,7 +668,7 @@
     <b>DX Living — <span class="vi">Báo cáo Hiệu suất SEO</span><span class="en">SEO Performance Report</span></b> · dxliving.com<br>
     <span class="vi">Số 28 ngày mới nhất đọc trực tiếp từ Google Search Console + GA4 + Ahrefs (31/07/2026) · Hiện diện AI (AEO/GEO) theo khung searchfit-seo:ai-visibility, đọc từ Ahrefs AI responses + Brand Radar + GA4 + SERP · Chi tiết Tháng 6 &amp; audit 21/07 &amp; SERP 30/06 là tham chiếu</span><span class="en">Latest 28-day figures read directly from Google Search Console + GA4 + Ahrefs (31 Jul 2026) · AI Visibility (AEO/GEO) per the searchfit-seo:ai-visibility framework, read from Ahrefs AI responses + Brand Radar + GA4 + SERP · June detail, 21 Jul audit &amp; 30 Jun SERP are reference</span><br>
     <span class="vi">Đã bỏ Supermetrics &amp; OpenSEO theo yêu cầu · Cập nhật: 31/07/2026</span><span class="en">Supermetrics &amp; OpenSEO removed as requested · Updated: 31 Jul 2026</span><br>
-    <a href="history.html" style="color:var(--accent);font-weight:700;text-decoration:none"><span class="vi">🗂 Xem lịch sử dữ liệu từng ngày (mỗi ngày một bản lưu, không mất data cũ)</span><span class="en">🗂 Open the day-by-day data history (one frozen snapshot per day, no old data lost)</span></a>
+    <a href="../history.html" style="color:var(--accent);font-weight:700;text-decoration:none"><span class="vi">🗂 Xem lịch sử dữ liệu từng ngày (mỗi ngày một bản lưu, không mất data cũ)</span><span class="en">🗂 Open the day-by-day data history (one frozen snapshot per day, no old data lost)</span></a>
   </footer>
 
 </div>
