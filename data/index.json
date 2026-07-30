@@ -30,6 +30,13 @@
       "report": "archive/2026-07-29.html",
       "label_vi": "Thêm Hiện diện trên AI (16/100)",
       "label_en": "AI Visibility added (16/100)"
+    },
+    {
+      "date": "2026-07-30",
+      "data": "data/2026-07-30.json",
+      "report": null,
+      "label_vi": "Health 88→100; GSC clicks 63→65",
+      "label_en": "Health 88→100; GSC clicks 63→65"
     }
   ]
 }
