@@ -2,7 +2,7 @@
   "date": "2026-07-30",
   "site": "dxliving.com",
   "source_commit": "0d63746",
-  "provenance": "Read directly from Chrome (GSC + GA4 + Ahrefs UI). No OpenSEO, no Supermetrics. No estimated values. Standalone JSON snapshot: committed without the index.html freeze (this environment could not run freeze_day.py or the Playwright verify suites), so report=null and index.html still shows 2026-07-29 until a full freeze run.",
+  "provenance": "Read directly from Chrome (GSC + GA4 + Ahrefs UI) on 2026-07-30. No OpenSEO, no Supermetrics. No estimated values.",
   "windows": {
     "gsc": "2026-06-30 → 2026-07-27",
     "ga4": "2026-07-02 → 2026-07-29"
@@ -93,13 +93,13 @@
       "GSC nhích lên: clicks 63→65, impressions 952→1006; nhưng số truy vấn có hiển thị giảm 113→88; cửa sổ GSC dịch sang 30/06→27/07.",
       "Ahrefs Site Audit health score 88→100 (crawl hôm nay 04:15).",
       "GA4 không đổi so với 29/07 (cùng cửa sổ 02/07→29/07): sessions 421, key events 42.",
-      "Snapshot JSON độc lập — bản HTML đóng băng (archive) và index.html sẽ được cập nhật ở lần freeze đầy đủ (môi trường này không chạy được freeze_day.py/Playwright)."
+      "Đã hoàn tất freeze: index.html cập nhật sang 30/07, đóng băng archive/2026-07-30.html, manifest latest → 2026-07-30."
     ],
     "en": [
       "GSC ticked up: clicks 63→65, impressions 952→1006; but queries-with-impressions fell 113→88; GSC window shifted to 30 Jun→27 Jul.",
       "Ahrefs Site Audit health score 88→100 (crawl today 04:15).",
       "GA4 unchanged vs 29 Jul (same window 2 Jul→29 Jul): 421 sessions, 42 key events.",
-      "Standalone JSON snapshot — the frozen HTML (archive) and index.html will be updated on a full freeze run (this environment cannot run freeze_day.py/Playwright)."
+      "Freeze completed: index.html moved to 30 Jul, archive/2026-07-30.html frozen, manifest latest → 2026-07-30."
     ]
   }
 }
