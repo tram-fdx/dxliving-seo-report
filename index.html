@@ -172,8 +172,11 @@
   .dp-dow{font-size:10.5px;font-weight:700;color:var(--faint);text-align:center;padding:3px 0}
   .dp-day{height:29px;border:0;background:transparent;border-radius:7px;font-family:inherit;font-size:12.5px;font-weight:600;line-height:1;color:var(--ink);cursor:pointer;position:relative;padding:0}
   .dp-day.blank{visibility:hidden}
-  .dp-day.off{color:#c9ced4;cursor:not-allowed}
-  .dp-day.has:hover{background:var(--accent-soft)}
+  /* a day with no stored scan is drawn faint, but it can still be an end of a
+     range — what it cannot do is open a report of its own, and Update enforces that */
+  .dp-day.off{color:#c2c7cd}
+  .dp-day:not(.blank):hover{background:var(--accent-soft)}
+  .dp-day.edge:hover{background:var(--accent)}
   .dp-day.inr{background:var(--accent-soft);border-radius:0}
   .dp-day.edge{background:var(--accent);color:#fff;border-radius:7px}
   .dp-day .dot{position:absolute;left:50%;transform:translateX(-50%);bottom:3.5px;width:3.5px;height:3.5px;border-radius:50%;background:var(--accent)}
@@ -249,7 +252,7 @@
   <!-- DATE FILTER -->
   <section class="card" id="sec-filter" style="display:none">
     <p class="section-label"><span class="bar"></span> <span class="vi">Chọn ngày để xem báo cáo</span><span class="en">Pick a date to open its report</span></p>
-    <p class="section-sub"><span class="vi">Chọn <b>một ngày</b> rồi bấm <b>Cập nhật</b> để mở đúng bản báo cáo đã lưu của ngày đó. Chọn <b>một khoảng ngày</b> để xem xu hướng trong khoảng. Chỉ ngày <b>đã có dữ liệu lưu</b> mới chọn được — ngày chưa quét bị làm mờ, vì không có số liệu thật để hiển thị.</span><span class="en">Pick <b>a single day</b> and press <b>Update</b> to open exactly that day's stored report. Pick <b>a range</b> to see the trend across it. Only days that <b>have stored data</b> can be selected — unscanned days are dimmed, because there is no measured value to show.</span></p>
+    <p class="section-sub"><span class="vi">Chọn <b>một ngày</b> rồi bấm <b>Cập nhật</b> để mở đúng bản báo cáo đã lưu của ngày đó. Chọn <b>một khoảng ngày</b> để xem xu hướng trong khoảng. Ngày <b>có dấu chấm</b> là ngày đã quét và có báo cáo lưu; ngày làm mờ vẫn chọn được làm đầu/cuối khoảng, nhưng không có báo cáo riêng để mở.</span><span class="en">Pick <b>a single day</b> and press <b>Update</b> to open exactly that day's stored report. Pick <b>a range</b> to see the trend across it. A <b>dot</b> marks a day that was scanned and has a stored report; a dimmed day can still bound a range, but has no report of its own to open.</span></p>
     <div class="filterbar">
       <div class="dpwrap">
         <button class="dpbtn" id="dpbtn" type="button" aria-haspopup="dialog" aria-expanded="false">
@@ -269,7 +272,7 @@
                 <button class="dp-b pri" id="dpupdate" type="button"><span class="vi">Cập nhật</span><span class="en">Update</span></button>
               </div>
             </div>
-            <p class="dp-legend"><i></i> <span class="vi">Dấu chấm = ngày đã có dữ liệu lưu. Ngày làm mờ = chưa quét, không chọn được.</span><span class="en">A dot marks a day with stored data. Dimmed days were never scanned and cannot be selected.</span></p>
+            <p class="dp-legend"><i></i> <span class="vi">Dấu chấm = ngày đã có dữ liệu lưu. Ngày làm mờ = chưa quét: dùng được làm đầu/cuối khoảng, nhưng không mở được báo cáo riêng.</span><span class="en">A dot marks a day with stored data. A dimmed day was never scanned: it can bound a range, but cannot open a report of its own.</span></p>
           </div>
         </div>
       </div>
@@ -813,8 +816,8 @@
         const edge = DRAFT.from && (s === DRAFT.from || s === DRAFT.to);
         const inr = !edge && DRAFT.from && DRAFT.to && s > DRAFT.from && s < DRAFT.to;
         const cls = ['dp-day', stored ? 'has' : 'off', edge ? 'edge' : '', inr ? 'inr' : ''].filter(Boolean).join(' ');
-        cells += '<button class="' + cls + '" type="button" data-d="' + s + '"' + (stored ? '' : ' disabled')
-          + ' title="' + (stored ? dmy(s) : dmy(s) + ' — ' + t('chưa quét', 'never scanned')) + '">'
+        cells += '<button class="' + cls + '" type="button" data-d="' + s + '"'
+          + ' title="' + (stored ? dmy(s) : dmy(s) + ' — ' + t('chưa quét, chỉ dùng làm đầu/cuối khoảng', 'never scanned; usable only as a range edge')) + '">'
           + d + (stored ? '<span class="dot"></span>' : '') + '</button>';
       }
       return '<div>' + head + '<div class="dp-grid">' + cells + '</div></div>';
@@ -825,8 +828,12 @@
     renderPresets(); renderCals();
     el('dprng').textContent = rangeText(DRAFT);
     const n = DRAFT.from ? countIn(DRAFT.from, DRAFT.to || DRAFT.from) : 0;
-    el('dphint').innerHTML =
-        '<span class="vi">' + n + ' ngày đã lưu trong khoảng này · ngày theo giờ Việt Nam (Asia/Ho_Chi_Minh), là giờ lúc quét</span>'
+    /* when the draft holds no stored day, say why Update is dead instead of
+       leaving the reader to guess at a greyed-out button */
+    el('dphint').innerHTML = (DRAFT.from && n === 0)
+      ? '<span class="vi">Khoảng này chưa có ngày nào được quét — không có báo cáo để mở. Chọn ngày có dấu chấm.</span>'
+      + '<span class="en">No day in this range was ever scanned — there is no report to open. Pick a day with a dot.</span>'
+      : '<span class="vi">' + n + ' ngày đã lưu trong khoảng này · ngày theo giờ Việt Nam (Asia/Ho_Chi_Minh), là giờ lúc quét</span>'
       + '<span class="en">' + n + ' stored day(s) in this range · dates are in Vietnam time (Asia/Ho_Chi_Minh), the scan timezone</span>';
     el('dpupdate').disabled = !DRAFT.from || n === 0;
   }
