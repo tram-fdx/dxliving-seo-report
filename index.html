@@ -73,7 +73,10 @@
   .delta.flat{background:#eef0f2;color:#6b7280}
   .delta.bad{background:var(--red-soft);color:var(--red)}
 
-  table{width:100%;border-collapse:collapse;font-size:13px;margin-top:6px}
+  /* a table shrinks to fit where it can and scrolls inside its own box where it
+     can't, so a wide table never pushes the whole page sideways on a phone */
+  .tblwrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin-top:6px}
+  table{width:100%;border-collapse:collapse;font-size:13px}
   thead th{text-align:left;font-size:10.5px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--muted);padding:0 10px 9px;border-bottom:1px solid var(--line)}
   thead th.num{text-align:right}
   tbody td{padding:10px;border-bottom:1px solid var(--line2);vertical-align:middle}
@@ -139,12 +142,80 @@
   footer.foot b{color:#6b7280}
   h3.block{font-size:13px;font-weight:700;color:#3a3f45;margin:22px 0 8px}
 
+  /* ---------- date filter ---------- */
+  .filterbar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+  .dpwrap{position:relative}
+  .dpbtn{display:inline-flex;align-items:center;gap:9px;background:#fff;border:1px solid #cfd4da;border-radius:9px;padding:9px 13px;font-family:inherit;font-size:13px;font-weight:700;line-height:1.2;color:var(--ink);cursor:pointer;transition:.15s}
+  .dpbtn:hover{border-color:#a9b0b8}
+  .dpbtn .car{color:var(--muted);font-size:10px}
+  .dppanel{position:absolute;top:calc(100% + 7px);left:0;z-index:70;display:flex;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 10px 30px rgba(16,24,40,.16);overflow:hidden}
+  .dppanel[hidden]{display:none}
+  .dp-presets{width:212px;flex:0 0 auto;border-right:1px solid var(--line);padding:9px 0;max-height:340px;overflow-y:auto}
+  .dp-preset{display:flex;align-items:center;gap:10px;padding:7px 14px;width:100%;border:0;background:transparent;font-family:inherit;font-size:13px;line-height:1.35;color:var(--ink);text-align:left;cursor:pointer}
+  .dp-preset:hover{background:#f5f6f8}
+  .dp-preset .rad{width:15px;height:15px;border-radius:50%;border:1.5px solid #b9bfc6;flex:0 0 auto;transition:.15s}
+  .dp-preset.sel{font-weight:700}
+  .dp-preset.sel .rad{border-color:var(--accent);border-width:4.5px}
+  .dp-preset .pc{margin-left:auto;font-size:10.5px;font-weight:700;color:var(--faint);font-variant-numeric:tabular-nums}
+  .dp-preset[disabled]{color:#b9bfc6;cursor:not-allowed}
+  .dp-preset[disabled]:hover{background:transparent}
+  .dp-preset[disabled] .rad{border-color:#dde1e5}
+  .dp-right{padding:14px 16px 11px;flex:1 1 auto}
+  .dp-cals{display:flex;gap:24px}
+  .dp-mhead{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:5px;min-height:26px}
+  .dp-mname{font-size:14px;font-weight:700}
+  .dp-nav{border:0;background:transparent;cursor:pointer;color:var(--muted);font-size:18px;line-height:1;padding:1px 7px;border-radius:6px;font-family:inherit}
+  .dp-nav:hover{background:#f5f6f8;color:var(--ink)}
+  .dp-nav[disabled]{color:#dde1e5;cursor:not-allowed}
+  .dp-nav[disabled]:hover{background:transparent}
+  .dp-grid{display:grid;grid-template-columns:repeat(7,30px);gap:2px 0}
+  .dp-dow{font-size:10.5px;font-weight:700;color:var(--faint);text-align:center;padding:3px 0}
+  .dp-day{height:29px;border:0;background:transparent;border-radius:7px;font-family:inherit;font-size:12.5px;font-weight:600;line-height:1;color:var(--ink);cursor:pointer;position:relative;padding:0}
+  .dp-day.blank{visibility:hidden}
+  .dp-day.off{color:#c9ced4;cursor:not-allowed}
+  .dp-day.has:hover{background:var(--accent-soft)}
+  .dp-day.inr{background:var(--accent-soft);border-radius:0}
+  .dp-day.edge{background:var(--accent);color:#fff;border-radius:7px}
+  .dp-day .dot{position:absolute;left:50%;transform:translateX(-50%);bottom:3.5px;width:3.5px;height:3.5px;border-radius:50%;background:var(--accent)}
+  .dp-day.edge .dot{background:#fff}
+  .dp-foot{display:flex;align-items:flex-end;gap:14px;flex-wrap:wrap;border-top:1px solid var(--line);margin-top:12px;padding-top:11px}
+  .dp-rng{font-size:13.5px;font-weight:700;display:block}
+  .dp-hint{font-size:11.5px;color:var(--faint);font-weight:600;display:block}
+  .dp-btns{margin-left:auto;display:flex;gap:9px}
+  .dp-b{border:1px solid #cfd4da;background:#fff;border-radius:8px;padding:8px 17px;font-family:inherit;font-size:13px;font-weight:700;line-height:1.2;color:var(--ink);cursor:pointer;transition:.15s}
+  .dp-b:hover{background:#f5f6f8}
+  .dp-b.pri{background:var(--accent);border-color:var(--accent);color:#fff}
+  .dp-b.pri:hover{background:#c9462f}
+  .dp-b[disabled]{opacity:.42;cursor:not-allowed}
+  .dp-b.pri[disabled]:hover{background:var(--accent)}
+  .dp-legend{font-size:11px;color:var(--faint);font-weight:600;margin:9px 0 0}
+  .dp-legend i{display:inline-block;width:4px;height:4px;border-radius:50%;background:var(--accent);vertical-align:1.5px;margin-right:3px}
+  .chip{display:inline-flex;align-items:center;gap:7px;background:var(--accent-soft);border:1px solid #f3c9c0;color:var(--accent);border-radius:999px;padding:4px 12px;font-size:12px;font-weight:700}
+  .daylinks{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:12px 0 0;padding-top:12px;border-top:1px solid var(--line2)}
+  .daylinks-lb{font-size:11px;font-weight:800;letter-spacing:.4px;text-transform:uppercase;color:var(--faint);margin-right:2px}
+  .daylink{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:#fff;border-radius:999px;padding:5px 12px;font-family:inherit;font-size:12px;font-weight:700;line-height:1.3;color:var(--ink);cursor:pointer;transition:.15s;text-decoration:none}
+  .daylink:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-soft)}
+  .daylink small{font-weight:600;color:var(--faint);font-size:10.5px}
+  .daylink:hover small{color:var(--accent)}
+  .daylink.cur{border-color:var(--accent);background:var(--accent);color:#fff;cursor:default}
+  .daylink.cur small{color:#fff;opacity:.85}
+
   @media (max-width:760px){
     .kpis,.kpis.k3{grid-template-columns:repeat(2,1fr)}
     .cols2{grid-template-columns:1fr}
     .wrap{padding:24px 14px 52px}
     .barrow{grid-template-columns:96px 1fr 46px}
     .langsw{top:8px;right:8px}
+    /* narrow screens: tighten the tables so they fit instead of pushing the page sideways */
+    table{font-size:12px}
+    thead th{padding:0 6px 8px}
+    tbody td{padding:8px 6px}
+    .dppanel{flex-direction:column;left:0;right:auto;max-width:calc(100vw - 34px)}
+    .dp-presets{width:auto;max-height:none;border-right:0;border-bottom:1px solid var(--line);display:flex;flex-wrap:wrap;gap:2px;padding:8px}
+    .dp-preset{width:auto;padding:6px 10px;border:1px solid var(--line);border-radius:999px;font-size:12px}
+    .dp-preset .pc{margin-left:4px}
+    .dp-cals{flex-direction:column;gap:16px}
+    .dp-right{overflow-x:auto}
   }
 </style>
 </head>
@@ -174,6 +245,38 @@
       <a class="tag hist" href="history.html">🗂 <span class="vi">Lịch sử dữ liệu theo ngày →</span><span class="en">Daily data history →</span></a>
     </div>
   </header>
+
+  <!-- DATE FILTER -->
+  <section class="card" id="sec-filter" style="display:none">
+    <p class="section-label"><span class="bar"></span> <span class="vi">Chọn ngày để xem báo cáo</span><span class="en">Pick a date to open its report</span></p>
+    <p class="section-sub"><span class="vi">Chọn <b>một ngày</b> rồi bấm <b>Cập nhật</b> để mở đúng bản báo cáo đã lưu của ngày đó. Chọn <b>một khoảng ngày</b> để xem xu hướng trong khoảng. Chỉ ngày <b>đã có dữ liệu lưu</b> mới chọn được — ngày chưa quét bị làm mờ, vì không có số liệu thật để hiển thị.</span><span class="en">Pick <b>a single day</b> and press <b>Update</b> to open exactly that day's stored report. Pick <b>a range</b> to see the trend across it. Only days that <b>have stored data</b> can be selected — unscanned days are dimmed, because there is no measured value to show.</span></p>
+    <div class="filterbar">
+      <div class="dpwrap">
+        <button class="dpbtn" id="dpbtn" type="button" aria-haspopup="dialog" aria-expanded="false">
+          <span>🗓</span> <span id="dplabel"></span> <span class="car">▾</span>
+        </button>
+        <div class="dppanel" id="dppanel" hidden role="dialog" aria-label="Date range">
+          <div class="dp-presets" id="dppresets"></div>
+          <div class="dp-right">
+            <div class="dp-cals" id="dpcals"></div>
+            <div class="dp-foot">
+              <div>
+                <span class="dp-rng" id="dprng"></span>
+                <span class="dp-hint" id="dphint"></span>
+              </div>
+              <div class="dp-btns">
+                <button class="dp-b" id="dpcancel" type="button"><span class="vi">Hủy</span><span class="en">Cancel</span></button>
+                <button class="dp-b pri" id="dpupdate" type="button"><span class="vi">Cập nhật</span><span class="en">Update</span></button>
+              </div>
+            </div>
+            <p class="dp-legend"><i></i> <span class="vi">Dấu chấm = ngày đã có dữ liệu lưu. Ngày làm mờ = chưa quét, không chọn được.</span><span class="en">A dot marks a day with stored data. Dimmed days were never scanned and cannot be selected.</span></p>
+          </div>
+        </div>
+      </div>
+      <span id="dpchip"></span>
+    </div>
+    <div class="daylinks" id="daylinks"></div>
+  </section>
 
   <!-- DATA NOTE -->
   <section class="card" style="padding:16px 18px">
@@ -211,6 +314,7 @@
     </div>
 
     <h3 class="block"><span class="vi">Top truy vấn — GSC (lũy kế gần đây, 113 truy vấn)</span><span class="en">Top queries — GSC (recent cumulative, 113 queries)</span></h3>
+    <div class="tblwrap">
     <table>
       <thead><tr><th><span class="vi">Truy vấn</span><span class="en">Query</span></th><th class="num">Clicks</th><th class="num">Impr.</th><th><span class="vi">Loại</span><span class="en">Type</span></th></tr></thead>
       <tbody>
@@ -226,6 +330,7 @@
         <tr><td>dx architecture</td><td class="num">0</td><td class="num">15</td><td><span class="brandq">Brand</span></td></tr>
       </tbody>
     </table>
+    </div>
     <p class="note">
       <span class="vi"><b>Tín hiệu tích cực:</b> impressions tiếp tục tăng mạnh (900 trong 28 ngày) và <b>từ khóa non-brand có buy-intent đã nổi lên</b> — "3d rendering melbourne", "3d renders for property developers/builders melbourne". Nhưng <b>clicks vẫn ~100% từ brand</b> ("dxliving", "dx living") → đúng như chiến lược: cần đẩy các truy vấn dịch vụ này từ impression lên click. GA4 cũng ghi nhận referral từ <b>chatgpt.com / ai-assistant</b> — kênh AEO đang thành hình. Nguồn: đọc trực tiếp GSC + GA4 (29/07/2026).</span>
       <span class="en"><b>Positive signal:</b> impressions keep climbing (900 in 28 days) and <b>buy-intent non-brand queries have surfaced</b> — "3d rendering melbourne", "3d renders for property developers/builders melbourne". But <b>clicks are still ~100% brand</b> ("dxliving", "dx living") → exactly the strategy point: these service queries must be pushed from impression into click. GA4 also logs a referral from <b>chatgpt.com / ai-assistant</b> — the AEO channel is forming. Source: read directly from GSC + GA4 (29 Jul 2026).</span>
@@ -266,6 +371,7 @@
     </div>
 
     <h3 class="block"><span class="vi">Trích dẫn theo nền tảng — Ahrefs AI index</span><span class="en">Citations by platform — Ahrefs AI index</span></h3>
+    <div class="tblwrap">
     <table>
       <thead><tr><th><span class="vi">Nền tảng AI</span><span class="en">AI platform</span></th><th class="num"><span class="vi">Phản hồi</span><span class="en">Responses</span></th><th class="num"><span class="vi">Trang</span><span class="en">Pages</span></th><th><span class="vi">Trạng thái</span><span class="en">Status</span></th></tr></thead>
       <tbody>
@@ -278,8 +384,10 @@
         <tr><td>Grok</td><td class="num">—</td><td class="num">—</td><td><span class="snap-badge"><span class="vi">Ahrefs tạm dừng index</span><span class="en">Ahrefs index paused</span></span></td></tr>
       </tbody>
     </table>
+    </div>
 
     <h3 class="block"><span class="vi">Thẻ điểm 6 chiều (framework AI-visibility)</span><span class="en">Six-dimension scorecard (AI-visibility framework)</span></h3>
+    <div class="tblwrap">
     <table>
       <thead><tr><th><span class="vi">Chiều đo</span><span class="en">Dimension</span></th><th class="num"><span class="vi">Điểm</span><span class="en">Score</span></th><th><span class="vi">Bằng chứng thật</span><span class="en">Real evidence</span></th></tr></thead>
       <tbody>
@@ -291,9 +399,11 @@
         <tr><td><b><span class="vi">Độ chính xác · Sắc thái · Thứ tự</span><span class="en">Accuracy · Sentiment · Position</span></b></td><td class="num"><span class="snap-badge"><span class="vi">chưa đo</span><span class="en">not measured</span></span></td><td><span class="vi">Không thể kết luận khi chưa bật prompt tracking — <b>không suy đoán số liệu</b>. Bật Brand Radar prompts là điều kiện để đo 3 chiều này.</span><span class="en">Cannot be assessed without prompt tracking — <b>no numbers are guessed here</b>. Enabling Brand Radar prompts is the prerequisite for these three.</span></td></tr>
       </tbody>
     </table>
+    </div>
     <p class="lead" style="margin:14px 0 0"><span class="vi">Điểm tổng = trung bình 5 chiều đo được × 10 = <b>16/100</b> — mức <b>giai đoạn đầu</b>: đã có tín hiệu AI thật (14 trích dẫn) nhưng chỉ trên 2 nền tảng phụ và 2 trang.</span><span class="en">Overall = average of the 5 measurable dimensions × 10 = <b>16/100</b> — an <b>early-stage</b> level: real AI signal exists (14 citations) but only on 2 secondary platforms and 2 pages.</span></p>
 
     <h3 class="block"><span class="vi">Khoảng trống prompt — AI đang trích ai thay vì DXL</span><span class="en">Prompt gap — who AI cites instead of DXL</span></h3>
+    <div class="tblwrap">
     <table>
       <thead><tr><th><span class="vi">Prompt / truy vấn mục tiêu</span><span class="en">Target prompt / query</span></th><th><span class="vi">DXL có mặt?</span><span class="en">DXL present?</span></th><th><span class="vi">Nguồn đang được trích</span><span class="en">Sources being cited</span></th></tr></thead>
       <tbody>
@@ -304,6 +414,7 @@
         <tr><td class="mono">DX Living <span class="brandq">Brand</span></td><td><span class="pill plan"><span class="vi">Có</span><span class="en">Yes</span></span></td><td><span class="vi">dxliving.com (/studio, /about, /projects) + Instagram, Facebook, LinkedIn · 1 mention bên thứ ba (3D Design Bureau)</span><span class="en">dxliving.com (/studio, /about, /projects) + Instagram, Facebook, LinkedIn · 1 third-party mention (3D Design Bureau)</span></td></tr>
       </tbody>
     </table>
+    </div>
     <p class="note" style="margin-top:10px"><span class="vi"><b>Đọc kết quả này:</b> với truy vấn brand, AI có đủ nguồn để nói về DX Living. Với mọi truy vấn <b>non-brand có ý định mua</b>, AI không có lý do nào để nhắc DXL — vì DXL không nằm trong tập listicle/directory mà AI lấy làm nguồn. Đây là <b>khoảng trống authority</b>, không phải khoảng trống nội dung.</span><span class="en"><b>How to read this:</b> on brand queries, AI has enough sources to describe DX Living. On every <b>non-brand buy-intent</b> query, AI has no reason to mention DXL — because DXL isn't in the listicle/directory set AI draws from. This is an <b>authority gap</b>, not a content gap.</span></p>
 
     <h3 class="block"><span class="vi">Kiểm tra sẵn sàng cho AI</span><span class="en">AI-readiness checks</span></h3>
@@ -375,6 +486,7 @@
     </div>
 
     <h3 class="block"><span class="vi">Top trang đích — Tháng 6/2026</span><span class="en">Top landing pages — June 2026</span></h3>
+    <div class="tblwrap">
     <table>
       <thead><tr><th>URL</th><th class="num">Clicks</th><th class="num">Impr.</th><th class="num"><span class="vi">vs May (impr.)</span><span class="en">vs May (impr.)</span></th></tr></thead>
       <tbody>
@@ -388,6 +500,7 @@
         <tr><td class="mono">/projects/31-mcilwain-drive</td><td class="num">1</td><td class="num">6</td><td class="num"><span class="new">new</span></td></tr>
       </tbody>
     </table>
+    </div>
     <p class="note"><span class="vi">Impressions đã lan ra ngoài homepage: các trang dịch vụ/dự án (<b>/modules, /suppliers, /projects</b>) bắt đầu hiển thị. Nguồn: Google Search Console.</span><span class="en">Impressions have spread beyond the homepage: service/project pages (<b>/modules, /suppliers, /projects</b>) are now showing. Source: Google Search Console.</span></p>
   </section>
 
@@ -411,6 +524,7 @@
     <p class="note"><span class="vi">Organic Search <b>84 → 100 (+19%)</b>. Organic Social <b>102 sessions (~1/3 traffic)</b>. Kênh <b>"AI Assistant" lần đầu xuất hiện</b> — DX Living bắt đầu được công cụ AI tham chiếu.</span><span class="en">Organic Search <b>84 → 100 (+19%)</b>. Organic Social <b>102 sessions (~1/3 of traffic)</b>. The <b>"AI Assistant" channel appeared for the first time</b> — DX Living is starting to be cited by AI tools.</span></p>
 
     <h3 class="block"><span class="vi">Người dùng theo quốc gia — Tháng 6</span><span class="en">Users by country — June</span></h3>
+    <div class="tblwrap">
     <table>
       <thead><tr><th><span class="vi">Quốc gia</span><span class="en">Country</span></th><th class="num">Users</th><th class="num">Engaged</th><th class="num"><span class="vi">Eng. rate</span><span class="en">Eng. rate</span></th></tr></thead>
       <tbody>
@@ -421,6 +535,7 @@
         <tr><td>🇵🇭 Philippines</td><td class="num">7</td><td class="num">9</td><td class="num" style="color:var(--green)">39.1%</td></tr>
       </tbody>
     </table>
+    </div>
     <p class="note"><span class="vi">Úc mang lại nhóm khán giả gắn kết mạnh nhất trong thị trường mục tiêu (12 engaged sessions, 15.8%). Lượng users US cao nhưng engagement thấp (6.5%). Nguồn: Google Analytics 4.</span><span class="en">Australia delivers the strongest engaged audience in the target market (12 engaged sessions, 15.8%). US users are high in volume but low engagement (6.5%). Source: Google Analytics 4.</span></p>
   </section>
 
@@ -466,6 +581,7 @@
     <p class="section-sub"><span class="vi">Ai đang chiếm top Google tại Úc cho các chủ đề chính của bạn.</span><span class="en">Who owns the top of Google in Australia for your core topics.</span></p>
     <p class="lead"><span class="vi"><b>dxliving.com chưa xuất hiện trong top 20</b> ở cả 3 từ khóa mục tiêu.</span><span class="en"><b>dxliving.com does not appear in the top 20</b> for any of the 3 target keywords.</span></p>
 
+    <div class="tblwrap">
     <table>
       <thead><tr><th><span class="vi">Từ khóa</span><span class="en">Keyword</span></th><th><span class="vi">Domain top đầu (Úc)</span><span class="en">Top domains (AU)</span></th><th><span class="vi">Nhóm</span><span class="en">Group</span></th></tr></thead>
       <tbody>
@@ -486,6 +602,7 @@
         </tr>
       </tbody>
     </table>
+    </div>
 
     <h3 class="block"><span class="vi">Đối thủ trực tiếp cần theo dõi</span><span class="en">Direct competitors to track</span></h3>
     <div class="chips">
@@ -507,6 +624,7 @@
     <div class="cols2">
       <div>
         <h3 class="block" style="margin-top:0"><span class="vi">Volume thật vừa lấy (AU)</span><span class="en">Real volumes just pulled (AU)</span></h3>
+        <div class="tblwrap">
         <table>
           <thead><tr><th>Keyword</th><th class="num"><span class="vi">Lượt tìm</span><span class="en">Searches</span></th><th>Comp.</th></tr></thead>
           <tbody>
@@ -517,6 +635,7 @@
             <tr><td><b>bathroom remodel cost</b> 💎</td><td class="num">1K–10K</td><td><span class="pill plan">Low</span></td></tr>
           </tbody>
         </table>
+        </div>
       </div>
       <div>
         <h3 class="block" style="margin-top:0"><span class="vi">Mô hình 3 lớp</span><span class="en">The 3-layer model</span></h3>
@@ -588,7 +707,231 @@
     document.documentElement.lang = l;
     document.getElementById('bvi').classList.toggle('active', l === 'vi');
     document.getElementById('ben').classList.toggle('active', l === 'en');
+    if (window.__redraw) window.__redraw();
   }
+  function lang(){ return document.body.classList.contains('lang-en') ? 'en' : 'vi'; }
+  function t(vi, en){ return lang() === 'en' ? en : vi; }
+
+/* =====================================================================
+   DATE PICKER — same control as history.html, but here it NAVIGATES.
+   This page is the report of the newest scan; picking an older day opens
+   that day's frozen report instead of re-rendering this one, so the
+   numbers on screen are always the numbers that were actually measured
+   on the chosen date. Nothing is interpolated.
+   ===================================================================== */
+(function(){
+  let ALL = [];                 /* [{date, report, label_vi, label_en}] ascending */
+  let LATEST = null;            /* the day this page reports on */
+  let DATASET = new Set();      /* stored days, for O(1) calendar lookups */
+  let SEL = {from: null, to: null, preset: 'custom'};
+  let DRAFT = {from: null, to: null, preset: 'custom'};
+  let calM = null;
+
+  const MN_VI = ['Tháng 1','Tháng 2','Tháng 3','Tháng 4','Tháng 5','Tháng 6','Tháng 7','Tháng 8','Tháng 9','Tháng 10','Tháng 11','Tháng 12'];
+  const MN_EN = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  const DOW_VI = ['CN','T2','T3','T4','T5','T6','T7'];
+  const DOW_EN = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+
+  function iso(y, m, d){ return y + '-' + String(m + 1).padStart(2, '0') + '-' + String(d).padStart(2, '0'); }
+  function todayISO(){ const n = new Date(); return iso(n.getFullYear(), n.getMonth(), n.getDate()); }
+  function shiftISO(s, days){ const d = new Date(s + 'T00:00:00Z'); d.setUTCDate(d.getUTCDate() + days); return d.toISOString().slice(0, 10); }
+  function monthAdd(o, n){ const d = new Date(Date.UTC(o.y, o.m + n, 1)); return {y: d.getUTCFullYear(), m: d.getUTCMonth()}; }
+  function monthKey(o){ return o.y * 12 + o.m; }
+  function monthOf(s){ return {y: Number(s.slice(0, 4)), m: Number(s.slice(5, 7)) - 1}; }
+  function dmy(s){ const p = s.split('-'); return p[2] + '/' + p[1] + '/' + p[0]; }
+  function el(id){ return document.getElementById(id); }
+
+  /* presets resolve against the client clock; `all` spans the whole archive */
+  const PRESETS = [
+    {id:'yesterday', vi:'Hôm qua', en:'Yesterday', calc:td => ({from: shiftISO(td, -1), to: shiftISO(td, -1)})},
+    {id:'d7',  vi:'7 ngày qua',  en:'Last 7 days',  calc:td => ({from: shiftISO(td, -6),  to: td})},
+    {id:'d28', vi:'28 ngày qua', en:'Last 28 days', calc:td => ({from: shiftISO(td, -27), to: td})},
+    {id:'d90', vi:'90 ngày qua', en:'Last 90 days', calc:td => ({from: shiftISO(td, -89), to: td})},
+    {id:'wk',  vi:'Tuần này',    en:'This week',    calc:function(td){ const d = new Date(td + 'T00:00:00Z'); return {from: shiftISO(td, -d.getUTCDay()), to: td}; }},
+    {id:'mo',  vi:'Tháng này',   en:'This month',   calc:td => ({from: td.slice(0, 8) + '01', to: td})},
+    {id:'yr',  vi:'Năm nay',     en:'This year',    calc:td => ({from: td.slice(0, 4) + '-01-01', to: td})},
+    {id:'lwk', vi:'Tuần trước',  en:'Last week',    calc:function(td){ const d = new Date(td + 'T00:00:00Z'); const s = shiftISO(td, -d.getUTCDay() - 7); return {from: s, to: shiftISO(s, 6)}; }},
+    {id:'lmo', vi:'Tháng trước', en:'Last month',   calc:function(td){ const mo = monthAdd(monthOf(td), -1); const last = new Date(Date.UTC(mo.y, mo.m + 1, 0)).getUTCDate(); return {from: iso(mo.y, mo.m, 1), to: iso(mo.y, mo.m, last)}; }},
+    {id:'all', vi:'Toàn bộ dữ liệu đã lưu', en:'All stored data', calc:function(){ return {from: ALL[0].date, to: ALL[ALL.length - 1].date}; }}
+  ];
+  function presetById(id){ return PRESETS.filter(p => p.id === id)[0] || null; }
+  function inRange(dt, from, to){ return (!from || dt >= from) && (!to || dt <= to); }
+  function daysIn(from, to){ return ALL.filter(r => inRange(r.date, from, to)); }
+  function countIn(from, to){ return daysIn(from, to).length; }
+  function rowFor(d){ return ALL.filter(r => r.date === d)[0] || null; }
+
+  function rangeText(r){
+    if (!r.from) return t('Chưa chọn ngày', 'No day picked yet');
+    if (!r.to || r.from === r.to) return dmy(r.from);
+    return dmy(r.from) + ' – ' + dmy(r.to);
+  }
+  function labelFor(r){
+    const p = r.preset && r.preset !== 'custom' ? presetById(r.preset) : null;
+    if (p) return '<span class="vi">' + p.vi + '</span><span class="en">' + p.en + '</span>';
+    if (!r.from) return '<span class="vi">Chọn ngày</span><span class="en">Pick a date</span>';
+    if (!r.to || r.from === r.to) return '<span class="vi">Ngày ' + dmy(r.from) + '</span><span class="en">' + dmy(r.from) + '</span>';
+    return dmy(r.from) + ' – ' + dmy(r.to);
+  }
+
+  function renderPresets(){
+    const td = todayISO();
+    el('dppresets').innerHTML = PRESETS.map(function(p){
+      const rg = p.calc(td);
+      const n = countIn(rg.from, rg.to);
+      return '<button class="dp-preset' + (DRAFT.preset === p.id ? ' sel' : '') + '" type="button" data-p="' + p.id + '"' + (n === 0 ? ' disabled' : '') + '>'
+        + '<span class="rad"></span>'
+        + '<span><span class="vi">' + p.vi + '</span><span class="en">' + p.en + '</span></span>'
+        + '<span class="pc">' + n + '</span>'
+        + '</button>';
+    }).join('');
+  }
+
+  function renderCals(){
+    const minM = monthKey(monthOf(ALL[0].date));
+    const maxM = monthKey(monthOf(todayISO()));
+    /* keep the two visible months inside [earliest stored month … current month] */
+    if (monthKey(calM) < minM) calM = {y: Math.floor(minM / 12), m: minM % 12};
+    if (monthKey(monthAdd(calM, 1)) > maxM) calM = monthAdd({y: Math.floor(maxM / 12), m: maxM % 12}, -1);
+    if (monthKey(calM) < minM) calM = {y: Math.floor(minM / 12), m: minM % 12};
+
+    const months = [calM, monthAdd(calM, 1)];
+    el('dpcals').innerHTML = months.map(function(mo, side){
+      const first = new Date(Date.UTC(mo.y, mo.m, 1)).getUTCDay();
+      const days = new Date(Date.UTC(mo.y, mo.m + 1, 0)).getUTCDate();
+      const canPrev = side === 0 && monthKey(mo) > minM;
+      const canNext = side === 1 && monthKey(mo) < maxM;
+      let head = '<div class="dp-mhead">'
+        + (side === 0 ? '<button class="dp-nav" type="button" data-nav="-1"' + (canPrev ? '' : ' disabled') + ' aria-label="Previous month">‹</button>' : '<span></span>')
+        + '<span class="dp-mname"><span class="vi">' + MN_VI[mo.m] + ' ' + mo.y + '</span><span class="en">' + MN_EN[mo.m] + ' ' + mo.y + '</span></span>'
+        + (side === 1 ? '<button class="dp-nav" type="button" data-nav="1"' + (canNext ? '' : ' disabled') + ' aria-label="Next month">›</button>' : '<span></span>')
+        + '</div>';
+      let cells = DOW_VI.map((v, i) => '<div class="dp-dow"><span class="vi">' + v + '</span><span class="en">' + DOW_EN[i] + '</span></div>').join('');
+      for (let i = 0; i < first; i++) cells += '<button class="dp-day blank" type="button" disabled tabindex="-1"></button>';
+      for (let d = 1; d <= days; d++){
+        const s = iso(mo.y, mo.m, d);
+        const stored = DATASET.has(s);
+        const edge = DRAFT.from && (s === DRAFT.from || s === DRAFT.to);
+        const inr = !edge && DRAFT.from && DRAFT.to && s > DRAFT.from && s < DRAFT.to;
+        const cls = ['dp-day', stored ? 'has' : 'off', edge ? 'edge' : '', inr ? 'inr' : ''].filter(Boolean).join(' ');
+        cells += '<button class="' + cls + '" type="button" data-d="' + s + '"' + (stored ? '' : ' disabled')
+          + ' title="' + (stored ? dmy(s) : dmy(s) + ' — ' + t('chưa quét', 'never scanned')) + '">'
+          + d + (stored ? '<span class="dot"></span>' : '') + '</button>';
+      }
+      return '<div>' + head + '<div class="dp-grid">' + cells + '</div></div>';
+    }).join('');
+  }
+
+  function renderPanel(){
+    renderPresets(); renderCals();
+    el('dprng').textContent = rangeText(DRAFT);
+    const n = DRAFT.from ? countIn(DRAFT.from, DRAFT.to || DRAFT.from) : 0;
+    el('dphint').innerHTML =
+        '<span class="vi">' + n + ' ngày đã lưu trong khoảng này · ngày theo giờ Việt Nam (Asia/Ho_Chi_Minh), là giờ lúc quét</span>'
+      + '<span class="en">' + n + ' stored day(s) in this range · dates are in Vietnam time (Asia/Ho_Chi_Minh), the scan timezone</span>';
+    el('dpupdate').disabled = !DRAFT.from || n === 0;
+  }
+
+  function renderBar(){
+    el('dplabel').innerHTML = labelFor(SEL);
+    el('dpchip').innerHTML = (SEL.from === LATEST && SEL.to === LATEST)
+      ? '<span class="chip"><span class="vi">Đang xem báo cáo ngày ' + dmy(LATEST) + ' (mới nhất)</span><span class="en">Now showing the ' + dmy(LATEST) + ' report (latest)</span></span>'
+      : '';
+    el('daylinks').innerHTML = '<span class="daylinks-lb"><span class="vi">Mở nhanh</span><span class="en">Jump to</span></span>'
+      + ALL.slice().reverse().map(function(r){
+          const cur = r.date === LATEST;
+          const label = '<span class="vi">' + dmy(r.date) + '</span><span class="en">' + dmy(r.date) + '</span>'
+            + ' <small><span class="vi">' + r.label_vi + '</span><span class="en">' + r.label_en + '</span></small>';
+          if (cur) return '<span class="daylink cur">' + label + '</span>';
+          return '<a class="daylink" href="' + targetFor(r.date, r.date) + '">' + label + '</a>';
+        }).join('');
+  }
+
+  /* Where a chosen range should take the reader.
+     - the newest day  -> this page, which already is that report
+     - a day with a frozen HTML report -> that exact archived report
+     - a stored day with no frozen HTML (the June baseline) -> the history browser, focused on it
+     - a real range -> the history browser, filtered to the range (that page draws trends) */
+  function targetFor(from, to){
+    const rows = daysIn(from, to);
+    if (rows.length === 1){
+      const r = rows[0];
+      if (r.date === LATEST) return 'index.html';
+      if (r.report) return r.report;
+      return 'history.html?day=' + r.date;
+    }
+    return 'history.html?from=' + from + '&to=' + to;
+  }
+
+  function openPanel(open){
+    if (open){
+      DRAFT = {from: SEL.from, to: SEL.to, preset: SEL.preset};
+      calM = monthAdd(monthOf(DRAFT.to || ALL[ALL.length - 1].date), -1);
+      renderPanel();
+    }
+    el('dppanel').hidden = !open;
+    el('dpbtn').setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+
+  function wire(){
+    el('dpbtn').addEventListener('click', function(e){
+      e.stopPropagation();
+      openPanel(el('dppanel').hidden);
+    });
+    el('dppanel').addEventListener('click', function(e){
+      e.stopPropagation();
+      const pb = e.target.closest('.dp-preset');
+      if (pb && !pb.disabled){
+        const p = presetById(pb.dataset.p), rg = p.calc(todayISO());
+        DRAFT = {from: rg.from, to: rg.to, preset: p.id};
+        renderPanel(); return;
+      }
+      const nav = e.target.closest('.dp-nav');
+      if (nav && !nav.disabled){ calM = monthAdd(calM, Number(nav.dataset.nav)); renderCals(); return; }
+      const day = e.target.closest('.dp-day');
+      if (day && !day.disabled){
+        const s = day.dataset.d;
+        if (!DRAFT.from || DRAFT.to) DRAFT = {from: s, to: null, preset: 'custom'};
+        else if (s >= DRAFT.from) DRAFT = {from: DRAFT.from, to: s, preset: 'custom'};
+        else DRAFT = {from: s, to: DRAFT.from, preset: 'custom'};
+        renderPanel();
+      }
+    });
+    el('dpcancel').addEventListener('click', function(){ openPanel(false); });
+    el('dpupdate').addEventListener('click', function(){
+      if (!DRAFT.from) return;
+      const from = DRAFT.from, to = DRAFT.to || DRAFT.from;
+      if (!countIn(from, to)) return;
+      const url = targetFor(from, to);
+      if (url === 'index.html'){
+        /* already here — say so instead of reloading the same page */
+        SEL = {from: LATEST, to: LATEST, preset: 'custom'};
+        renderBar(); openPanel(false); return;
+      }
+      window.location.href = url;
+    });
+    document.addEventListener('click', function(){ if (!el('dppanel').hidden) openPanel(false); });
+    document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && !el('dppanel').hidden) openPanel(false); });
+  }
+
+  fetch('data/index.json', {cache: 'no-store'})
+    .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+    .then(function(ix){
+      ALL = (ix.snapshots || []).slice().sort((a, b) => a.date < b.date ? -1 : 1);
+      if (!ALL.length) throw new Error('no snapshots');
+      LATEST = ix.latest || ALL[ALL.length - 1].date;
+      DATASET = new Set(ALL.map(r => r.date));
+      SEL = {from: LATEST, to: LATEST, preset: 'custom'};
+      el('sec-filter').style.display = '';
+      renderBar();
+      wire();
+      window.__redraw = renderBar;
+    })
+    .catch(function(){
+      /* no manifest -> no honest way to offer dates; leave the control hidden
+         rather than showing a picker that cannot open anything */
+      el('sec-filter').style.display = 'none';
+    });
+})();
 </script>
 </body>
 </html>
