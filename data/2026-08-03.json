@@ -1,0 +1,109 @@
+{
+  "date": "2026-08-03",
+  "site": "dxliving.com",
+  "source_commit": "34695cb",
+  "provenance": "Read directly from Chrome (GSC + GA4 + Ahrefs UI) on 2026-08-03. No OpenSEO, no Supermetrics. No estimated values. Ahrefs Brand Radar and the technical-readiness signals were NOT re-read today - they carry forward from the last full audit and are flagged as such in the notes.",
+  "windows": {
+    "gsc": "2026-07-05 → 2026-08-01",
+    "ga4": "2026-07-06 → 2026-08-02"
+  },
+  "gsc_28d": {
+    "clicks": 68,
+    "impressions": 1189,
+    "ctr_pct": 5.7,
+    "avg_position": 26.2,
+    "queries_with_impressions": 105
+  },
+  "ga4_28d": {
+    "sessions": 381,
+    "engaged_sessions": 256,
+    "engagement_rate_pct": 67.2,
+    "key_events": 38,
+    "avg_engagement_time": "1m56s",
+    "total_events": 3331,
+    "ai_assistant_channel": {
+      "sessions": 2,
+      "share_of_sessions_pct": 0.52,
+      "engagement_rate_pct": 50,
+      "avg_time": "7s",
+      "events_per_session": 5.0,
+      "key_events": 0,
+      "referrer": "chatgpt.com"
+    }
+  },
+  "ahrefs": {
+    "domain_rating": 0,
+    "url_rating": 0,
+    "referring_domains": 352,
+    "referring_domains_all_time": 367,
+    "backlinks": 357,
+    "backlinks_all_time": 382,
+    "health_score": 100,
+    "organic_keywords": 0,
+    "organic_traffic": 0,
+    "ai_citations": 19,
+    "ai_by_platform": {
+      "chatgpt": 11,
+      "copilot": 8,
+      "google_ai_overviews": 0,
+      "google_ai_mode": 0,
+      "gemini": 0,
+      "perplexity": 0,
+      "grok": null
+    },
+    "cited_pages": 3,
+    "cited_pages_by_platform": { "chatgpt": 3, "copilot": 2 },
+    "cited_pages_note": "Ahrefs reports cited pages per platform, not as a de-duplicated union. ChatGPT cites 3 pages and Copilot 2; the true distinct total is between 3 and 5. The 3 recorded here is the verified floor (ChatGPT's count). / Ahrefs bao so trang duoc trich dan theo tung nen tang, khong gop trung; so 3 la muc san da xac minh."
+  },
+  "ai_visibility": {
+    "score": 16,
+    "score_max": 100,
+    "framework": "searchfit-seo:ai-visibility",
+    "platforms_present": 2,
+    "platforms_total": 6,
+    "cited_pages": 3,
+    "dimensions_measured": {
+      "presence": 2,
+      "citation_surface": 1,
+      "technical_readiness": 4,
+      "third_party_corpus": 0,
+      "measurement": 1
+    },
+    "dimensions_not_measured": ["accuracy", "sentiment", "position"],
+    "not_measured_reason": "Cần Brand Radar prompt tracking; report 'Dxliving' tồn tại nhưng 0 prompt được track (số liệu Brand Radar giữ từ lần audit trước, chưa đọc lại hôm nay) / Requires Brand Radar prompt tracking; the 'Dxliving' report exists but tracks 0 prompts (Brand Radar figures carried forward from the previous audit, not re-read today)",
+    "score_method": "Trung bình 5 dimension đo được × 10 / Average of the 5 measurable dimensions × 10",
+    "brand_radar": {
+      "report_exists": true,
+      "prompts_tracked": 0,
+      "ai_share_of_voice": null,
+      "reread_today": false
+    },
+    "readiness": {
+      "robots_txt_blocks_ai_bots": false,
+      "llms_txt": false,
+      "faq_schema_on_money_pages": true,
+      "organization_schema": false,
+      "localbusiness_schema": false,
+      "articles_render": false,
+      "reread_today": false
+    }
+  },
+  "notes": {
+    "vi": [
+      "GSC nhảy mạnh về hiển thị: impressions 1.032→1.189, số truy vấn có hiển thị 92→105, clicks 67→68. Nhưng CTR giảm 6,5%→5,7% và vị trí TB lùi 24,1→26,2 — site xuất hiện cho nhiều truy vấn hơn nhưng ở vị trí thấp hơn, đúng hình thái mở rộng vùng phủ non-brand. Cửa sổ GSC dịch sang 05/07→01/08.",
+      "GA4 cửa sổ 06/07→02/08: sessions 405→381, engaged sessions 270→256, key events 42→38, tổng sự kiện 3.461→3.331 — giảm do rơi các ngày cao đầu kỳ khỏi cửa sổ trượt. Chất lượng phiên vẫn cải thiện: engagement rate 66,7%→67,2%, thời lượng tương tác TB 1m49s→1m56s.",
+      "Kênh AI assistant giữ nguyên: 2 session từ chatgpt.com / ai-assistant (0,52% tổng), 50% engagement, 7 giây, 0 key event — đã xác minh lại trong báo cáo Session source / medium.",
+      "Ahrefs tăng đều: referring domains 341→352 (all-time 367), backlinks 346→357 (all-time 382), Health Score giữ 100 (0 lỗi trên 14 URL nội bộ được crawl), organic keywords/traffic vẫn 0.",
+      "AI citations tăng mạnh 14→19: ChatGPT 6→11 (3 trang được trích dẫn), Copilot giữ 8 (2 trang). AI Overviews, AI Mode, Gemini, Perplexity vẫn 0; Grok bị Ahrefs tạm dừng nên ghi null, không phải 0.",
+      "AI Visibility giữ 16/100: vẫn 2/6 nền tảng hiện diện. Citations tăng nhưng chưa đủ đổi bậc điểm của dimension. Brand Radar và các tín hiệu technical readiness KHÔNG được đọc lại hôm nay — giữ từ lần audit gần nhất."
+    ],
+    "en": [
+      "GSC jumped on visibility: impressions 1,032→1,189, queries-with-impressions 92→105, clicks 67→68. But CTR fell 6.5%→5.7% and average position slipped 24.1→26.2 — the site now surfaces for more queries at lower ranks, the expected shape of non-brand coverage expanding. GSC window shifted to 5 Jul→1 Aug.",
+      "GA4 window 6 Jul→2 Aug: sessions 405→381, engaged sessions 270→256, key events 42→38, total events 3,461→3,331 — down because high early-period days rolled out of the trailing window. Session quality still improved: engagement rate 66.7%→67.2%, avg engagement time 1m49s→1m56s.",
+      "AI assistant channel unchanged: 2 sessions from chatgpt.com / ai-assistant (0.52% of total), 50% engagement, 7 seconds, 0 key events — re-verified in the Session source / medium report.",
+      "Ahrefs grew steadily: referring domains 341→352 (all-time 367), backlinks 346→357 (all-time 382), Health Score held at 100 (0 errors across 14 crawled internal URLs), organic keywords/traffic still 0.",
+      "AI citations rose sharply 14→19: ChatGPT 6→11 (3 cited pages), Copilot held at 8 (2 pages). AI Overviews, AI Mode, Gemini and Perplexity remain 0; Grok is paused by Ahrefs so it is recorded as null, not 0.",
+      "AI Visibility held at 16/100: still 2/6 platforms present. Citations grew but not enough to move a dimension band. Brand Radar and the technical-readiness signals were NOT re-read today — they carry forward from the last full audit."
+    ]
+  }
+}
