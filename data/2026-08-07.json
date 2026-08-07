@@ -1,0 +1,146 @@
+{
+  "date": "2026-08-07",
+  "site": "dxliving.com",
+  "source_commit": "7f59245",
+  "provenance": "Read directly from Chrome (GSC + GA4 + Ahrefs UI) on 2026-08-07. No OpenSEO, no Supermetrics, no Ahrefs API. No estimated values. Ahrefs Brand Radar AND every technical-readiness signal WERE re-read today (unlike 2026-08-03, which carried them forward). The only figure not re-tested today is the third-party-corpus SERP cross-check — it is carried from the last full audit and flagged below.",
+  "windows": {
+    "gsc": "2026-07-08 → 2026-08-04",
+    "ga4": "2026-07-10 → 2026-08-06"
+  },
+  "gsc_28d": {
+    "clicks": 72,
+    "impressions": 1288,
+    "ctr_pct": 5.6,
+    "avg_position": 29.6,
+    "queries_with_impressions": 128
+  },
+  "ga4_28d": {
+    "sessions": 287,
+    "engaged_sessions": 194,
+    "engagement_rate_pct": 67.6,
+    "key_events": 23,
+    "users": 140,
+    "new_users": 121,
+    "returning_users": 26,
+    "avg_engagement_time": "1m22s",
+    "events_per_session": 7.31,
+    "total_events": 2099,
+    "ai_assistant_channel": {
+      "sessions": 1,
+      "share_of_sessions_pct": 0.35,
+      "engagement_rate_pct": 100,
+      "avg_time": "15s",
+      "events_per_session": 7.0,
+      "key_events": 0,
+      "referrer": "chatgpt.com"
+    },
+    "collection_outage": {
+      "detected": true,
+      "sessions_2026_07_26_to_2026_07_28": 5,
+      "sessions_2026_07_29_to_2026_07_30": 0,
+      "sessions_2026_07_31_to_2026_08_06": 1,
+      "sessions_2026_07_22_to_2026_08_06": 72,
+      "realtime_active_users_last_30min_at_read": 0,
+      "tag_check_on_live_homepage": {
+        "gtm_container_id_in_markup": "GTM-PZ9N8QTR",
+        "gtag_or_gtm_script_tag_loaded": false,
+        "window_dataLayer_defined": false,
+        "window_gtag_defined": false,
+        "ga4_measurement_id_found": null
+      },
+      "caveat": "Tag check was run in one browser profile; an extension-level blocker cannot be fully excluded. GSC still records clicks daily through 2026-08-04, so the site is being visited — what stopped is GA4 collection, not traffic. The 28-day GA4 totals above are therefore an UNDER-COUNT and must not be read as a traffic decline. / Kiểm tra tag chạy trên một profile trình duyệt; chưa loại trừ hoàn toàn khả năng bị extension chặn. GSC vẫn ghi nhận clicks mỗi ngày đến 04/08/2026, nên cái dừng là việc THU THẬP của GA4, không phải lưu lượng. Số GA4 28 ngày ở trên là số THIẾU, không được đọc như một cú giảm traffic."
+    }
+  },
+  "ahrefs": {
+    "domain_rating": 0,
+    "url_rating": 0,
+    "referring_domains": 366,
+    "referring_domains_all_time": 381,
+    "backlinks": 372,
+    "backlinks_all_time": 397,
+    "health_score": 100,
+    "site_audit_crawl": {
+      "crawled_at": "2026-08-07 04:16 (Ahrefs project time)",
+      "status": "Completed",
+      "urls_crawled": 15,
+      "internal_urls_with_errors": 0
+    },
+    "organic_keywords": 0,
+    "organic_traffic": 0,
+    "ai_citations": 19,
+    "ai_by_platform": {
+      "chatgpt": 11,
+      "copilot": 8,
+      "google_ai_overviews": 0,
+      "google_ai_mode": 0,
+      "gemini": 0,
+      "perplexity": 0,
+      "grok": null
+    },
+    "cited_pages": 3,
+    "cited_pages_by_platform": { "chatgpt": 3, "copilot": 2 },
+    "cited_pages_note": "Ahrefs reports cited pages per platform, not as a de-duplicated union. ChatGPT cites 3 pages and Copilot 2; the true distinct total is between 3 and 5. The 3 recorded here is the verified floor (ChatGPT's count). / Ahrefs báo số trang được trích dẫn theo từng nền tảng, không gộp trùng; số 3 là mức sàn đã xác minh."
+  },
+  "ai_visibility": {
+    "score": 26,
+    "score_max": 100,
+    "framework": "searchfit-seo:ai-visibility",
+    "platforms_present": 2,
+    "platforms_total": 6,
+    "cited_pages": 3,
+    "dimensions_measured": {
+      "presence": 2,
+      "citation_surface": 1,
+      "technical_readiness": 9,
+      "third_party_corpus": 0,
+      "measurement": 1
+    },
+    "dimensions_not_measured": ["accuracy", "sentiment", "position"],
+    "not_measured_reason": "Cần Brand Radar prompt tracking; report 'Dxliving' tồn tại nhưng 0 prompt được track (đã đọc lại hôm nay) / Requires Brand Radar prompt tracking; the 'Dxliving' report exists but tracks 0 prompts (re-read today)",
+    "score_method": "Trung bình 5 dimension đo được × 10 = (2+1+9+0+1)/5 × 10 = 26 / Average of the 5 measurable dimensions × 10 = (2+1+9+0+1)/5 × 10 = 26",
+    "technical_readiness_method": "7 tín hiệu được kiểm; điểm = tỷ lệ đạt × 10, làm tròn. Hôm nay 6/7 đạt → 9/10 (03/08: 3/7 → 4/10). / 7 signals checked; score = share passing × 10, rounded. Today 6 of 7 pass → 9/10 (on 3 Aug it was 3 of 7 → 4/10).",
+    "brand_radar": {
+      "report_exists": true,
+      "prompts_tracked": 0,
+      "ai_share_of_voice": null,
+      "reread_today": true
+    },
+    "readiness": {
+      "robots_txt_blocks_ai_bots": false,
+      "sitemap_complete": true,
+      "sitemap_url_count": 75,
+      "llms_txt": false,
+      "faq_schema_on_money_pages": true,
+      "organization_schema": true,
+      "localbusiness_schema": true,
+      "articles_render": true,
+      "reread_today": true,
+      "evidence": "Homepage JSON-LD now contains LocalBusiness, Organization, WebSite and PostalAddress (absent on 2026-08-03). /articles returns HTTP 200 in ~1.9s with server-rendered body copy; /articles/3d-rendering-sydney returns 200 with Article + BlogPosting + FAQPage + BreadcrumbList schema and ~2,600 words of server HTML; Ahrefs Site Audit crawl today: 15 URLs, 0 internal URLs with errors, health 100. /llms.txt still returns 404."
+    },
+    "third_party_corpus_note": "Không được kiểm lại hôm nay — giữ 0/10 từ lần audit SERP gần nhất (4 bộ truy vấn non-brand). / Not re-tested today — held at 0/10 from the last SERP audit (4 non-brand query sets)."
+  },
+  "notes": {
+    "vi": [
+      "GSC cửa sổ 08/07→04/08 (đếm tay đủ 28 dòng trong tab Days để lấy số chính xác thay vì ô '1.29K' làm tròn): clicks 68→72, impressions 1.189→1.288, truy vấn có hiển thị 105→128. CTR 5,7%→5,6% và vị trí TB lùi 26,2→29,6 — vẫn đúng hình thái mở rộng vùng phủ non-brand ở vị trí thấp.",
+      "CẢNH BÁO ĐO LƯỜNG — GA4 đã ngừng thu thập từ khoảng 29/07. Đo được: 29–30/07 = 0 session, 31/07–06/08 = 1 session, trong khi 26–28/07 = 5 và 22/07–06/08 = 72. Realtime 0 người dùng đang hoạt động. Kiểm trên trang chủ live: có chuỗi GTM-PZ9N8QTR trong markup nhưng KHÔNG có thẻ script gtag/GTM nào được tải, window.dataLayer và window.gtag đều undefined, không tìm thấy measurement ID G-. GSC vẫn ghi clicks mỗi ngày đến 04/08 → site vẫn có khách, thứ hỏng là tracking. Đây là việc cần sửa trước tiên.",
+      "VÌ VẬY: mọi số GA4 28 ngày trong snapshot này (sessions 287, engaged 194, key events 23, users 140, total events 2.099) là số THIẾU và không được diễn giải như traffic giảm. So sánh với 03/08 (381/256/38) là vô nghĩa về mặt kinh doanh.",
+      "Kênh AI assistant: 1 session từ chatgpt.com / ai-assistant (0,35% tổng), 100% engagement, 15 giây, 0 key event — cũng nằm trong vùng bị ảnh hưởng bởi lỗi tracking.",
+      "Ahrefs tăng đều: referring domains 352→366 (all-time 381), backlinks 357→372 (all-time 397), Health Score giữ 100 (crawl 04:16 hôm nay, 15 URL, 0 lỗi). DR vẫn 0, organic keywords/traffic vẫn 0.",
+      "Trích dẫn AI đi ngang: 19 (ChatGPT 11 trên 3 trang, Copilot 8 trên 2 trang). AI Overviews, AI Mode, Gemini, Perplexity vẫn 0; Grok bị Ahrefs tạm dừng nên ghi null, không phải 0.",
+      "AI Visibility 16→26/100 — toàn bộ mức tăng đến từ chiều Sẵn sàng kỹ thuật 4→9/10, do hai rào cản cũ đã được gỡ: homepage nay đã có Organization + LocalBusiness JSON-LD, và /articles không còn timeout (HTTP 200 ~1,9s, nội dung render sẵn; bài viết có Article + BlogPosting + FAQPage). Còn thiếu: llms.txt.",
+      "Các chiều khác giữ nguyên vì số liệu nền không đổi: Hiện diện 2/10 (2/6 nền tảng), Bề mặt trích dẫn 1/10 (3 trang), Đo lường 1/10 (Brand Radar 0 prompt — đã đọc lại hôm nay). Corpus bên thứ ba giữ 0/10 nhưng KHÔNG được kiểm lại hôm nay — đã đánh dấu rõ.",
+      "Không backfill 04, 05, 06/08: có thể dựng lại cửa sổ GSC/GA4 bằng khoảng ngày tùy chọn, nhưng Ahrefs (referring domains, backlinks, trích dẫn AI, health score, Brand Radar) không thể tua ngược về một ngày đã qua — nên chỉ thêm ngày hôm nay thay vì bịa số cho các ngày đó."
+    ],
+    "en": [
+      "GSC window 8 Jul→4 Aug (counted all 28 rows in the Days tab to get the exact total instead of the rounded '1.29K' tile): clicks 68→72, impressions 1,189→1,288, queries-with-impressions 105→128. CTR 5.7%→5.6% and average position slipped 26.2→29.6 — still the shape of non-brand coverage widening at low ranks.",
+      "MEASUREMENT ALERT — GA4 stopped collecting around 29 Jul. Measured: 29–30 Jul = 0 sessions, 31 Jul–6 Aug = 1 session, against 5 for 26–28 Jul and 72 for 22 Jul–6 Aug. Realtime showed 0 active users. Checked on the live homepage: the string GTM-PZ9N8QTR is present in the markup but NO gtag/GTM script tag is loaded, window.dataLayer and window.gtag are both undefined, and no G- measurement ID appears. GSC still logs clicks every day through 4 Aug, so the site is being visited — what broke is the tracking. This is the first thing to fix.",
+      "CONSEQUENTLY: every 28-day GA4 figure in this snapshot (sessions 287, engaged 194, key events 23, users 140, total events 2,099) is an under-count and must not be read as a traffic decline. Comparing it with 3 Aug (381/256/38) is meaningless as a business signal.",
+      "AI assistant channel: 1 session from chatgpt.com / ai-assistant (0.35% of total), 100% engagement, 15 seconds, 0 key events — also inside the window affected by the tracking fault.",
+      "Ahrefs grew steadily: referring domains 352→366 (all-time 381), backlinks 357→372 (all-time 397), Health Score held at 100 (crawl at 04:16 today, 15 URLs, 0 errors). DR still 0, organic keywords/traffic still 0.",
+      "AI citations flat at 19 (ChatGPT 11 across 3 pages, Copilot 8 across 2). AI Overviews, AI Mode, Gemini and Perplexity remain 0; Grok is paused by Ahrefs so it is recorded as null, not 0.",
+      "AI Visibility 16→26/100 — the entire gain comes from Technical readiness 4→9/10, because two long-standing blockers are cleared: the homepage now carries Organization + LocalBusiness JSON-LD, and /articles no longer times out (HTTP 200 in ~1.9s, server-rendered; article pages carry Article + BlogPosting + FAQPage). Still missing: llms.txt.",
+      "The other dimensions are unchanged because the underlying numbers are unchanged: Presence 2/10 (2 of 6 platforms), Citation surface 1/10 (3 pages), Measurement 1/10 (Brand Radar tracks 0 prompts — re-read today). Third-party corpus stays at 0/10 but was NOT re-tested today and is flagged as such.",
+      "No backfill for 4, 5 and 6 Aug: the GSC/GA4 windows could be rebuilt with custom date ranges, but Ahrefs (referring domains, backlinks, AI citations, health score, Brand Radar) cannot be rewound to a past date — so today alone was added rather than inventing figures for those days."
+    ]
+  }
+}
