@@ -1,7 +1,7 @@
 {
   "site": "dxliving.com",
   "description": "Lịch sử snapshot dữ liệu SEO theo ngày / Daily SEO data snapshot history. Mỗi ngày một file data/YYYY-MM-DD.json + bản HTML đóng băng archive/YYYY-MM-DD.html.",
-  "latest": "2026-08-11",
+  "latest": "2026-08-12",
   "snapshots": [
     {
       "date": "2026-06-30",
@@ -72,6 +72,13 @@
       "report": "archive/2026-08-11.html",
       "label_vi": "GSC 1.371 impressions / 140 truy vấn nhưng clicks 74→72 và vị trí TB 29,2→29,4; Ahrefs RD 395→397, BL 401→404 (chậm hẳn); trích dẫn AI giữ 18; AI Visibility giữ 26; GA4 vẫn hỏng (ngày 13), snippet GTM tăng lại 3→4",
       "label_en": "GSC 1,371 impressions / 140 queries but clicks 74→72 and avg position 29.2→29.4; Ahrefs RD 395→397, BL 401→404 (growth stalled); AI citations flat at 18; AI Visibility flat at 26; GA4 still broken (day 13), GTM snippets back up 3→4"
+    },
+    {
+      "date": "2026-08-12",
+      "data": "data/2026-08-12.json",
+      "report": "archive/2026-08-12.html",
+      "label_vi": "GSC 1.415 impressions / 148 truy vấn nhưng clicks đứng yên 72 và vị trí TB 29,4→30,6; Ahrefs RD 397→404, BL 404→415 (tăng tốc lại); trích dẫn AI giữ 18; AI Visibility giữ 26; GA4 vẫn hỏng (ngày 14), 7 ngày gần nhất về 0 session",
+      "label_en": "GSC 1,415 impressions / 148 queries but clicks flat at 72 and avg position 29.4→30.6; Ahrefs RD 397→404, BL 404→415 (re-accelerating); AI citations flat at 18; AI Visibility flat at 26; GA4 still broken (day 14), latest 7-day window at 0 sessions"
     }
   ]
 }
