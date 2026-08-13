@@ -148,10 +148,10 @@
     padding:17px 22px;font-family:inherit;font-size:14.5px;line-height:1.4;color:var(--ink);
     cursor:pointer;text-align:left;border-radius:var(--radius);transition:.15s}
   .acc-head:hover{background:#fafbfc}
-  .acc-tt{font-weight:600}
-  .acc-meta{margin-left:auto;font-size:12px;color:var(--faint);font-weight:600;white-space:nowrap}
+  .acc-tt{font-weight:600;margin-right:auto}
+  .acc-meta{font-size:12px;color:var(--faint);font-weight:600;white-space:nowrap}
   /* chevron drawn from two borders so it needs no font or icon file */
-  .acc-car{flex:0 0 auto;width:9px;height:9px;margin-right:2px;
+  .acc-car{flex:0 0 auto;width:9px;height:9px;margin-left:2px;
     border-right:1.7px solid #9aa0a8;border-bottom:1.7px solid #9aa0a8;
     transform:rotate(45deg) translate(-2px,-2px);transition:transform .18s}
   .acc-head[aria-expanded="true"] .acc-car{transform:rotate(-135deg) translate(-3px,-3px)}
@@ -1027,13 +1027,13 @@
   function chart(pts, m){
     if (pts.length < 2)
       return '<div class="t-empty"><span class="vi">Chưa đủ điểm để vẽ</span><span class="en">Not enough points to plot</span></div>';
-    const W = 240, H = 56, PT = 7, PB = 7;
+    const W = 240, H = 56, PT = 7, PB = 7, PX = 4;
     const xs = pts.map(p => p.ms), ys = pts.map(p => p.y);
     const x0 = Math.min.apply(null, xs), x1 = Math.max.apply(null, xs);
     let y0 = Math.min.apply(null, ys), y1 = Math.max.apply(null, ys);
     if (y1 === y0){ y0 -= 1; y1 += 1; }
     const pad = (y1 - y0) * 0.15; y0 -= pad; y1 += pad;
-    const X = v => x1 === x0 ? W / 2 : ((v - x0) / (x1 - x0)) * W;
+    const X = v => x1 === x0 ? W / 2 : PX + ((v - x0) / (x1 - x0)) * (W - PX * 2);
     const Y = v => H - PB - ((v - y0) / (y1 - y0)) * (H - PT - PB);
     const col = m.flagged ? 'var(--amber)' : 'var(--accent)';
     const line = pts.map((p, i) => (i ? 'L' : 'M') + X(p.ms).toFixed(1) + ' ' + Y(p.y).toFixed(1)).join(' ');
