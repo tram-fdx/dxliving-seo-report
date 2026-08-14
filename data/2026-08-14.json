@@ -1,0 +1,263 @@
+{
+  "date": "2026-08-14",
+  "site": "dxliving.com",
+  "source_commit": "5982794",
+  "provenance": "Read directly from Chrome (GSC + GA4 + Ahrefs UI) on 2026-08-14. No OpenSEO, no Supermetrics, no Ahrefs API. No estimated values. GSC impressions were summed by hand across all 28 rows of the Days tab (the tile rounds to '1.6K'); the hand-summed clicks total of 87 matches the Total clicks tile and the hand-computed CTR of 5.42% matches the 5.4% tile. Ahrefs Site Explorer, Site Audit, Brand Radar AND every technical-readiness signal were re-read today. The only figure not re-tested today is the third-party-corpus SERP cross-check — it is carried from the last full audit and flagged below. / Đọc trực tiếp qua Chrome (GSC + GA4 + Ahrefs UI) ngày 14/08/2026. Không OpenSEO, không Supermetrics, không Ahrefs API. Không ước lượng.",
+  "windows": {
+    "gsc": "2026-07-15 → 2026-08-11",
+    "ga4": "2026-07-17 → 2026-08-13"
+  },
+  "gsc_28d": {
+    "clicks": 87,
+    "impressions": 1604,
+    "ctr_pct": 5.4,
+    "avg_position": 29.6,
+    "queries_with_impressions": 147
+  },
+  "ga4_28d": {
+    "sessions": 174,
+    "engaged_sessions": 118,
+    "engagement_rate_pct": 67.82,
+    "key_events": 13,
+    "users": 97,
+    "new_users": 81,
+    "returning_users": 20,
+    "avg_engagement_time": "1m26s",
+    "events_per_session": 7.03,
+    "total_events": 1224,
+    "ai_assistant_channel": {
+      "sessions": 1,
+      "share_of_sessions_pct": 0.57,
+      "engagement_rate_pct": 100,
+      "avg_time": "15s",
+      "events_per_session": 7.0,
+      "key_events": 0,
+      "referrer": "chatgpt.com"
+    },
+    "collection_outage": {
+      "detected": true,
+      "still_broken_on": "2026-08-14",
+      "sessions_2026_07_31_to_2026_08_06": 1,
+      "sessions_2026_08_07_to_2026_08_13": 1,
+      "sessions_2026_07_17_to_2026_08_13": 174,
+      "tag_check_on_live_homepage": {
+        "gtm_container_id_in_markup": "GTM-PZ9N8QTR",
+        "gtm_snippet_copies_on_page": 4,
+        "gtm_snippet_count_method": "inline <script> blocks whose text contains googletagmanager.com/gtm.js (raw string occurrences in outerHTML = 7; noscript ns.html iframes = 2)",
+        "gtag_or_gtm_script_tag_loaded": false,
+        "window_dataLayer_defined": true,
+        "window_dataLayer_entries": 1,
+        "window_gtag_defined": false,
+        "window_google_tag_manager_defined": false,
+        "ga4_measurement_id_found": null,
+        "dx_analytics_dedupe_script_present": true,
+        "window___dxGtmLoaded": true,
+        "window___dxAnalyticsDedupe": true
+      },
+      "change_since_2026_08_13": "Không có gì thay đổi ở nguyên nhân gốc: vẫn đúng 4 bản sao snippet GTM, 7 lần xuất hiện chuỗi gtm.js trong outerHTML, 2 iframe <noscript>, script #dx-analytics-dedupe vẫn còn, 0 thẻ script được tải, gtag và google_tag_manager vẫn undefined, dataLayer vẫn chỉ 1 entry, vẫn không có measurement ID G-. Cửa sổ 7 ngày gần nhất (07–13/08) ghi nhận 1 session Organic Search, đúng bằng 7 ngày trước đó (31/07–06/08) — nhiễu ngẫu nhiên ở mức gần 0, không phải dấu hiệu phục hồi. / Nothing about the root cause changed: still exactly 4 GTM snippet copies, 7 raw gtm.js string occurrences in outerHTML, 2 <noscript> iframes, the #dx-analytics-dedupe script still present, 0 script tags loaded, gtag and google_tag_manager still undefined, dataLayer still holds a single entry, still no G- measurement ID. The latest 7-day window (7–13 Aug) records 1 Organic Search session, identical to the 7 days before it (31 Jul–6 Aug) — noise at a near-zero floor, not a recovery signal.",
+      "root_cause": {
+        "identified": true,
+        "traced_at": "2026-08-07, re-confirmed 2026-08-14 (live site, Chrome)",
+        "summary": "Script #dx-analytics-dedupe của chính site ghi đè Node.prototype.insertBefore để chặn trùng lặp googletagmanager.com/gtm.js, nhưng bật cờ window.__dxGtmLoaded = true mà không thực sự chèn thẻ script — nên không bản snippet GTM nào chạy. / The site's own #dx-analytics-dedupe script overrides Node.prototype.insertBefore to de-duplicate googletagmanager.com/gtm.js, but sets window.__dxGtmLoaded = true without actually inserting the script tag — so none of the GTM snippets ever load.",
+        "blocking_script_id": "dx-analytics-dedupe",
+        "patched_api": "Node.prototype.insertBefore",
+        "guard_flags": [
+          "window.__dxAnalyticsDedupe",
+          "window.__dxGtmLoaded"
+        ],
+        "fix": [
+          "Xoá hẳn script #dx-analytics-dedupe / Delete the #dx-analytics-dedupe script",
+          "Xoá 3 trong 4 bản snippet GTM còn lại, giữ đúng 1 bản trong <head> kèm <noscript> / Remove 3 of the 4 remaining GTM snippets, keep exactly one in <head> with its <noscript>",
+          "Kiểm chứng: window.google_tag_manager khác undefined, Network có request gtm.js, GA4 DebugView nhận hit / Verify: window.google_tag_manager defined, a gtm.js request in Network, hits in GA4 DebugView"
+        ],
+        "data_loss": "Dữ liệu GA4 từ 29/07 đã mất vĩnh viễn — GA4 không truy hồi được hit chưa từng gửi. Đã sang ngày thứ 16. / GA4 data since 29 Jul is permanently lost — GA4 cannot backfill hits that were never sent. This is now day 16."
+      },
+      "caveat": "GSC vẫn ghi nhận clicks mỗi ngày đến 11/08/2026 (87 clicks/28 ngày, ngày 11/08 riêng lẻ có 10 clicks/117 impressions), nên cái dừng là việc THU THẬP của GA4, không phải lưu lượng. Số GA4 28 ngày ở trên là số THIẾU, không được đọc như một cú giảm traffic. / GSC still records clicks every day through 11 Aug 2026 (87 clicks over 28 days; 11 Aug alone had 10 clicks on 117 impressions), so what stopped is GA4 collection, not traffic. The 28-day GA4 totals above are an UNDER-COUNT and must not be read as a traffic decline."
+    }
+  },
+  "ahrefs": {
+    "domain_rating": 0,
+    "url_rating": 0,
+    "referring_domains": 410,
+    "referring_domains_all_time": 425,
+    "referring_domains_followed": 6,
+    "backlinks": 422,
+    "backlinks_all_time": 447,
+    "backlinks_followed": 6,
+    "health_score": 100,
+    "site_audit_crawl": {
+      "crawled_at": "2026-08-14 04:23 (Ahrefs project time)",
+      "status": "Completed",
+      "urls_crawled": 14,
+      "internal_urls_with_errors": 0
+    },
+    "crawled_pages_site_explorer": 102,
+    "crawled_pages_404": 5,
+    "organic_keywords": 0,
+    "organic_traffic": 0,
+    "ai_citations": 18,
+    "ai_by_platform": {
+      "chatgpt": 10,
+      "copilot": 8,
+      "google_ai_overviews": 0,
+      "google_ai_mode": 0,
+      "gemini": 0,
+      "perplexity": 0,
+      "grok": null
+    },
+    "cited_pages": 3,
+    "cited_pages_by_platform": {
+      "chatgpt": 3,
+      "copilot": 2
+    },
+    "cited_pages_note": "Ahrefs reports cited pages per platform, not as a de-duplicated union. ChatGPT cites 3 pages and Copilot 2; the true distinct total is between 3 and 5. The 3 recorded here is the verified floor (ChatGPT's count). / Ahrefs báo số trang được trích dẫn theo từng nền tảng, không gộp trùng; số 3 là mức sàn đã xác minh."
+  },
+  "ai_visibility": {
+    "score": 26,
+    "score_max": 100,
+    "framework": "searchfit-seo:ai-visibility",
+    "platforms_present": 2,
+    "platforms_total": 6,
+    "cited_pages": 3,
+    "dimensions_measured": {
+      "presence": 2,
+      "citation_surface": 1,
+      "technical_readiness": 9,
+      "third_party_corpus": 0,
+      "measurement": 1
+    },
+    "dimensions_not_measured": [
+      "accuracy",
+      "sentiment",
+      "position"
+    ],
+    "not_measured_reason": "Cần Brand Radar prompt tracking; report 'Dxliving' tồn tại nhưng 0 prompt được track, AI SoV = '—' (đã đọc lại hôm nay) / Requires Brand Radar prompt tracking; the 'Dxliving' report exists but tracks 0 prompts and AI SoV = '—' (re-read today)",
+    "score_method": "Trung bình 5 dimension đo được × 10 = (2+1+9+0+1)/5 × 10 = 26 / Average of the 5 measurable dimensions × 10 = (2+1+9+0+1)/5 × 10 = 26",
+    "technical_readiness_method": "7 tín hiệu được kiểm; điểm = tỷ lệ đạt × 10, làm tròn. Hôm nay 6/7 đạt → 9/10 (giữ nguyên so với 13/08). / 7 signals checked; score = share passing × 10, rounded. Today 6 of 7 pass → 9/10 (unchanged from 13 Aug).",
+    "brand_radar": {
+      "report_exists": true,
+      "prompts_tracked": 0,
+      "ai_share_of_voice": null,
+      "reread_today": true
+    },
+    "readiness": {
+      "robots_txt_blocks_ai_bots": false,
+      "sitemap_complete": true,
+      "sitemap_url_count": 79,
+      "llms_txt": false,
+      "faq_schema_on_money_pages": true,
+      "organization_schema": true,
+      "localbusiness_schema": true,
+      "articles_render": true,
+      "reread_today": true,
+      "evidence": "Re-measured on 2026-08-14 from the dxliving.com origin: robots.txt is 'User-agent: * / Disallow:' plus the sitemap line and names no AI bot; sitemap.xml returns 200 with 79 <loc> entries (unchanged from 13 Aug); /llms.txt still returns 404; homepage JSON-LD contains LocalBusiness, Organization, WebSite, PostalAddress and Country; /faq returns 200 in ~0.9s with FAQPage + Question + Answer; /articles returns 200 in ~1.4s with CollectionPage + ItemList + ListItem + Article + BreadcrumbList and server-rendered copy; /articles/3d-rendering-sydney returns 200 in ~0.6s with Article + BlogPosting + FAQPage + BreadcrumbList + WebPage + Organization + ImageObject. Ahrefs Site Audit crawl today 04:23: 14 URLs, 0 internal URLs with errors, health 100."
+    },
+    "third_party_corpus_note": "Không được kiểm lại hôm nay — giữ 0/10 từ lần audit SERP gần nhất (4 bộ truy vấn non-brand). / Not re-tested today — held at 0/10 from the last SERP audit (4 non-brand query sets)."
+  },
+  "gsc_top_queries": [
+    {
+      "query": "dxliving",
+      "clicks": 51,
+      "impressions": 70,
+      "position": 1.6,
+      "type": "brand"
+    },
+    {
+      "query": "dx living",
+      "clicks": 24,
+      "impressions": 120,
+      "position": 3.4,
+      "type": "brand"
+    },
+    {
+      "query": "best home builders adelaide",
+      "clicks": 0,
+      "impressions": 114,
+      "position": 34.5,
+      "type": "non-brand"
+    },
+    {
+      "query": "3d renders for property developers melbourne",
+      "clicks": 0,
+      "impressions": 41,
+      "position": 57.5,
+      "type": "non-brand"
+    },
+    {
+      "query": "3d renders for builders melbourne",
+      "clicks": 0,
+      "impressions": 36,
+      "position": 28.3,
+      "type": "non-brand"
+    },
+    {
+      "query": "quality home builders adelaide",
+      "clicks": 0,
+      "impressions": 33,
+      "position": 48.4,
+      "type": "non-brand"
+    },
+    {
+      "query": "3d renders for developers melbourne",
+      "clicks": 0,
+      "impressions": 31,
+      "position": 53.4,
+      "type": "non-brand"
+    },
+    {
+      "query": "best house builders adelaide",
+      "clicks": 0,
+      "impressions": 26,
+      "position": 39.9,
+      "type": "non-brand"
+    },
+    {
+      "query": "3d renders for real estate melbourne",
+      "clicks": 0,
+      "impressions": 26,
+      "position": 54.5,
+      "type": "non-brand"
+    },
+    {
+      "query": "best home builders in adelaide",
+      "clicks": 0,
+      "impressions": 21,
+      "position": 35.4,
+      "type": "non-brand"
+    }
+  ],
+  "notes": {
+    "vi": [
+      "GSC cửa sổ 15/07→11/08 (đếm tay đủ 28 dòng trong tab Days để lấy số chính xác thay vì ô '1,6K' làm tròn; tổng clicks cộng tay = 87, khớp ô Total clicks, và CTR tính tay 5,42% khớp ô 5,4%): clicks 79→87, impressions 1.521→1.604, CTR 5,2%→5,4% và vị trí TB cải thiện mạnh 30,4→29,6.",
+      "Nhắc lại: GSC/GA4 là cửa sổ trượt 28 ngày. Delta so với 13/08 là dịch chuyển cửa sổ (1 ngày mới vào, 1 ngày cũ rơi ra), không phải traffic của riêng một ngày. Cửa sổ hôm nay đã đẩy ngày 14/07 ra ngoài và kéo ngày 11/08 (117 impressions, 10 clicks — ngày mạnh nhất trong cửa sổ) vào.",
+      "NHƯNG có một tín hiệu ngược chiều cần ghi rõ: số truy vấn có hiển thị GIẢM lần đầu sau nhiều ngày tăng liên tục, 153→147 (−6). Vùng phủ đang co lại trong khi impressions vẫn tăng — nghĩa là mức tăng đến từ việc các truy vấn CŨ được hiển thị nhiều hơn, không phải từ truy vấn mới.",
+      "Chất lượng của +8 clicks vẫn là vấn đề: gần như toàn bộ là brand. 'dxliving' 43→51 (+8) trong khi 'dx living' đứng yên 24. Tổng brand 67→75 clicks, chiếm 86,2% tổng 87 clicks (13/08 là 84,8%) — tỷ trọng brand còn TĂNG. Cả 8 truy vấn non-brand trong top 10 vẫn 0 click.",
+      "Cấu trúc non-brand: 'best home builders adelaide' 110→114 impressions, vẫn 0 click ở vị trí TB 34,5 (y hệt hôm qua); 'quality home builders adelaide' 32→33 ở vị trí 48,4; 'best home builders in adelaide' (21, vị trí 35,4) lọt top 10 thay cho 'quality home builder adelaide'. Toàn bộ nhóm non-brand vẫn nằm ở dải thứ hạng 28–58 — quá sâu để có click.",
+      "CẢNH BÁO ĐO LƯỜNG — GA4 VẪN CHƯA ĐƯỢC SỬA, đã sang ngày thứ 16. Đo được hôm nay: 31/07–06/08 = 1 session, 07–13/08 = 1 session. Hai cửa sổ 7 ngày liên tiếp cùng ở mức 1 session là nhiễu quanh mức 0, KHÔNG phải dấu hiệu phục hồi. Kiểm trực tiếp trên trang chủ live: 0 thẻ script GTM/gtag được tải, window.gtag và window.google_tag_manager đều undefined, dataLayer chỉ có 1 entry, không có measurement ID G-.",
+      "So với 13/08, nguyên nhân gốc KHÔNG đổi một chi tiết nào: vẫn 4 bản sao snippet GTM, 7 lần xuất hiện chuỗi gtm.js trong outerHTML, 2 iframe <noscript>, cùng container GTM-PZ9N8QTR, script #dx-analytics-dedupe vẫn còn và cờ __dxGtmLoaded vẫn = true. Việc cần làm vẫn y nguyên: xoá hẳn #dx-analytics-dedupe rồi xoá 3/4 bản snippet còn lại.",
+      "VÌ VẬY: mọi số GA4 28 ngày trong snapshot này (sessions 174, engaged 118, key events 13, users 97, total events 1.224) là số THIẾU. Mức giảm so 13/08 (203/136/15/111/1.395) KHÔNG phải traffic giảm — đó là phần cửa sổ còn dữ liệu trước 29/07 đang teo lại mỗi ngày. Trong ~12 ngày nữa cửa sổ 28 ngày sẽ về gần 0 nếu không sửa.",
+      "Kênh AI assistant: vẫn đúng 1 session từ chatgpt.com / ai-assistant (0,57% tổng), 100% engagement, 15 giây, 7 event, 0 key event — không có Perplexity, Gemini hay Copilot nào trong bảng nguồn/phương tiện (10 dòng, đã đọc hết). Con số này cũng nằm trong vùng bị lỗi tracking.",
+      "Ahrefs tăng đều: referring domains 406→410 (all-time 421→425), backlinks 418→422 (all-time 443→447). Điểm đáng chú ý nhất hôm nay là CHẤT LƯỢNG: số referring domain followed nhảy 3→6 và backlink followed 3→6 — gấp đôi, dù nền tảng vẫn rất mỏng (6/410 = 1,5% domain followed, 416/422 backlink là nofollow). DR vẫn 0, organic keywords/traffic vẫn 0. Health Score giữ 100 (crawl 04:23 hôm nay, 14 URL, 0 lỗi). Crawled pages trong Site Explorer giữ 102, số trang 404 giữ 5.",
+      "Trích dẫn AI ĐỨNG YÊN ở 18 ngày thứ năm liên tiếp (ChatGPT 10 trên 3 trang, Copilot 8 trên 2 trang). AI Overviews, AI Mode, Gemini, Perplexity vẫn 0; Grok bị Ahrefs tạm dừng nên ghi null, không phải 0.",
+      "AI Visibility giữ 26/100. Cả 5 chiều đo được đều không đổi: Hiện diện 2/10, Bề mặt trích dẫn 1/10, Sẵn sàng kỹ thuật 9/10 (6/7 tín hiệu, chỉ thiếu llms.txt), Đo lường 1/10. Corpus bên thứ ba giữ 0/10 nhưng KHÔNG được kiểm lại hôm nay — đã đánh dấu rõ.",
+      "Tất cả 7 tín hiệu kỹ thuật được đo lại hôm nay trực tiếp trên origin dxliving.com: robots.txt không chặn bot AI nào (đạt), sitemap.xml 79 URL — giữ nguyên so với 13/08 (đạt), /faq có FAQPage + Question + Answer, 200 trong ~0,9s (đạt), /articles 200 trong ~1,4s có CollectionPage + ItemList + ListItem + Article + BreadcrumbList (đạt), homepage có Organization + LocalBusiness JSON-LD (đạt × 2), /llms.txt vẫn 404 (không đạt). llms.txt là việc rẻ nhất còn tồn đọng và đã tồn đọng liên tục từ 29/07.",
+      "Brand Radar đọc lại hôm nay: report 'Dxliving' vẫn tồn tại, 0 prompt được track, AI SoV = '—'. Không đo được độ chính xác, sắc thái hay thứ tự — 3 chiều này để trống, không suy đoán."
+    ],
+    "en": [
+      "GSC window 15 Jul→11 Aug (all 28 rows of the Days tab summed by hand for the exact total instead of the rounded '1.6K' tile; the hand-summed clicks total of 87 matches the Total clicks tile and the hand-computed CTR of 5.42% matches the 5.4% tile): clicks 79→87, impressions 1,521→1,604, CTR 5.2%→5.4% and average position improved sharply 30.4→29.6.",
+      "Reminder: GSC and GA4 are rolling 28-day windows. The delta against 13 Aug is the window shifting (one new day in, one old day out), not any single day's traffic. Today's window dropped 14 Jul off the back and pulled in 11 Aug (117 impressions, 10 clicks — the strongest day in the window).",
+      "But one signal moved the other way and should be stated plainly: queries-with-impressions FELL for the first time after a long run of increases, 153→147 (−6). Coverage is contracting while impressions rise — meaning the gain came from existing queries being shown more often, not from new ones.",
+      "The quality of those +8 clicks is still the problem: almost all of it is brand. 'dxliving' went 43→51 (+8) while 'dx living' held flat at 24. Brand totals moved 67→75 clicks, which is 86.2% of all 87 clicks (84.8% on 13 Aug) — the brand share actually WIDENED. All 8 non-brand queries in the top 10 still return zero clicks.",
+      "Non-brand structure: 'best home builders adelaide' 110→114 impressions, still 0 clicks at average position 34.5 (identical to yesterday); 'quality home builders adelaide' 32→33 at position 48.4; 'best home builders in adelaide' (21, position 35.4) entered the top 10 in place of 'quality home builder adelaide'. The whole non-brand group remains parked in the 28–58 rank band — too deep to earn clicks.",
+      "MEASUREMENT ALERT — GA4 IS STILL NOT FIXED, now day 16. Measured today: 31 Jul–6 Aug = 1 session, 7–13 Aug = 1 session. Two consecutive 7-day windows both reading 1 session is noise around a zero floor, NOT a recovery signal. Checked directly on the live homepage: 0 GTM/gtag script tags loaded, window.gtag and window.google_tag_manager both undefined, dataLayer holds a single entry, no G- measurement ID.",
+      "Against 13 Aug not one detail of the root cause changed: still 4 GTM snippet copies, 7 raw gtm.js string occurrences in outerHTML, 2 <noscript> iframes, the same GTM-PZ9N8QTR container, the #dx-analytics-dedupe script still present and the __dxGtmLoaded flag still true. The remedy is identical: delete #dx-analytics-dedupe outright, then remove 3 of the 4 remaining snippets.",
+      "CONSEQUENTLY: every 28-day GA4 figure in this snapshot (sessions 174, engaged 118, key events 13, users 97, total events 1,224) is an under-count. The drop against 13 Aug (203/136/15/111/1,395) is NOT a traffic decline — it is the pre-29-Jul portion of the window shrinking a day at a time. In roughly 12 more days the 28-day window will read close to zero unless this is fixed.",
+      "AI assistant channel: still exactly 1 session from chatgpt.com / ai-assistant (0.57% of total), 100% engagement, 15 seconds, 7 events, 0 key events — no Perplexity, Gemini or Copilot appears anywhere in the source/medium table (all 10 rows read). This figure also sits inside the window affected by the tracking fault.",
+      "Ahrefs grew steadily: referring domains 406→410 (all-time 421→425), backlinks 418→422 (all-time 443→447). The notable change today is QUALITY: followed referring domains jumped 3→6 and followed backlinks 3→6 — a doubling, though the base remains very thin (6 of 410 domains followed = 1.5%; 416 of 422 backlinks are nofollow). DR still 0, organic keywords and traffic still 0. Health Score held at 100 (crawl at 04:23 today, 14 URLs, 0 errors). Crawled pages in Site Explorer held at 102 and the 404 count held at 5.",
+      "AI citations are FLAT at 18 for a fifth consecutive day (ChatGPT 10 across 3 pages, Copilot 8 across 2). AI Overviews, AI Mode, Gemini and Perplexity remain 0; Grok is paused by Ahrefs so it is recorded as null, not 0.",
+      "AI Visibility holds at 26/100. All 5 measurable dimensions are unchanged: Presence 2/10, Citation surface 1/10, Technical readiness 9/10 (6 of 7 signals, only llms.txt missing), Measurement 1/10. Third-party corpus stays at 0/10 but was NOT re-tested today and is flagged as such.",
+      "All 7 technical signals were re-measured today directly on the dxliving.com origin: robots.txt names no AI bot (pass), sitemap.xml carries 79 URLs — unchanged from 13 Aug (pass), /faq serves FAQPage + Question + Answer and returns 200 in ~0.9s (pass), /articles returns 200 in ~1.4s with CollectionPage + ItemList + ListItem + Article + BreadcrumbList (pass), the homepage carries Organization + LocalBusiness JSON-LD (2 passes), /llms.txt still 404 (fail). llms.txt is the cheapest outstanding item and has been outstanding continuously since 29 Jul.",
+      "Brand Radar re-read today: the 'Dxliving' report still exists, tracks 0 prompts and shows AI SoV = '—'. Accuracy, sentiment and position remain unmeasurable — those three dimensions are left blank rather than guessed."
+    ]
+  }
+}

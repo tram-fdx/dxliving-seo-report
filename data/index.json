@@ -1,7 +1,7 @@
 {
   "site": "dxliving.com",
   "description": "Lịch sử snapshot dữ liệu SEO theo ngày / Daily SEO data snapshot history. Mỗi ngày một file data/YYYY-MM-DD.json + bản HTML đóng băng archive/YYYY-MM-DD.html.",
-  "latest": "2026-08-13",
+  "latest": "2026-08-14",
   "snapshots": [
     {
       "date": "2026-06-30",
@@ -86,6 +86,13 @@
       "report": "archive/2026-08-13.html",
       "label_vi": "GSC 1.521 impressions / 79 clicks, vị trí TB cải thiện 30,6→30,4 nhưng 7 click tăng thêm gần như toàn brand; Ahrefs RD 404→406, BL 415→418 (chậm lại); trích dẫn AI giữ 18; AI Visibility giữ 26; GA4 vẫn hỏng (ngày 15), sitemap 78→79 URL",
       "label_en": "GSC 1,521 impressions / 79 clicks, avg position improved 30.6→30.4 but the 7 extra clicks are almost all brand; Ahrefs RD 404→406, BL 415→418 (slowing); AI citations flat at 18; AI Visibility flat at 26; GA4 still broken (day 15), sitemap 78→79 URLs"
+    },
+    {
+      "date": "2026-08-14",
+      "data": "data/2026-08-14.json",
+      "report": "archive/2026-08-14.html",
+      "label_vi": "GSC 1.604 impressions / 87 clicks, vị trí TB 30,4→29,6 — cửa sổ mạnh nhất từ trước tới nay, nhưng truy vấn có hiển thị giảm lần đầu 153→147 và brand chiếm 86,2% clicks; Ahrefs RD 406→410, BL 418→422, backlink followed nhân đôi 3→6; trích dẫn AI giữ 18; AI Visibility giữ 26; GA4 vẫn hỏng (ngày 16)",
+      "label_en": "GSC 1,604 impressions / 87 clicks, avg position 30.4→29.6 — the strongest window yet, but queries-with-impressions fell for the first time 153→147 and brand is 86.2% of clicks; Ahrefs RD 406→410, BL 418→422, followed backlinks doubled 3→6; AI citations flat at 18; AI Visibility flat at 26; GA4 still broken (day 16)"
     }
   ]
 }
