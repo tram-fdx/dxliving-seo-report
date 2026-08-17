@@ -1,7 +1,7 @@
 {
   "site": "dxliving.com",
   "description": "Lịch sử snapshot dữ liệu SEO theo ngày / Daily SEO data snapshot history. Mỗi ngày một file data/YYYY-MM-DD.json + bản HTML đóng băng archive/YYYY-MM-DD.html.",
-  "latest": "2026-08-17",
+  "latest": "2026-08-18",
   "snapshots": [
     {
       "date": "2026-06-30",
@@ -100,6 +100,13 @@
       "report": "archive/2026-08-17.html",
       "label_vi": "GSC 1.749 impressions / vị trí TB 29,2 (tốt nhất từ trước tới nay) và truy vấn 147→154, nhưng clicks 87→77 do cửa sổ trượt; Ahrefs RD 410→422, BL 422→438 (+16, mạnh nhất từ 10/08), followed 6→8; trích dẫn AI giữ 18 nhưng ChatGPT 10→12 / Copilot 8→6; AI Visibility giữ 26; GA4 có hit trở lại từ ~13/08 (10–16/08 = 13 session) nhưng trang chủ vẫn hỏng y nguyên",
       "label_en": "GSC 1,749 impressions / avg position 29.2 (best yet) and queries 147→154, but clicks 87→77 on the rolling window; Ahrefs RD 410→422, BL 422→438 (+16, largest since 10 Aug), followed 6→8; AI citations flat at 18 but ChatGPT 10→12 / Copilot 8→6; AI Visibility flat at 26; GA4 hits resumed ~13 Aug (10–16 Aug = 13 sessions) but the homepage is still broken"
+    },
+    {
+      "date": "2026-08-18",
+      "data": "data/2026-08-18.json",
+      "report": "archive/2026-08-18.html",
+      "label_vi": "Impressions đỉnh mới 1.761; GA4 thu thập lại ổn định; đọc được 5 lỗi 404",
+      "label_en": "Impressions peak 1,761; GA4 collection steady again; 404 count read (5)"
     }
   ]
 }
