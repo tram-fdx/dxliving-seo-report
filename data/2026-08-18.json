@@ -2,7 +2,7 @@
   "date": "2026-08-18",
   "site": "dxliving.com",
   "source_commit": "5c34bf6",
-  "provenance": "Read directly from Chrome (GSC + GA4 + Ahrefs UI) on 2026-08-18. No OpenSEO, no Supermetrics, no Ahrefs API. No estimated values. GSC impressions were summed by hand across all 28 rows of the Days tab (the tile rounds to '1.76K'); the hand-summed clicks total of 76 matches the Total clicks tile and the hand-computed CTR of 4.32% matches the 4.3% tile. Ahrefs Site Explorer, Site Audit, Brand Radar AND every technical-readiness signal were re-read today. The Site Explorer 404 count, recorded as null on 17 Aug, was read today from the Crawled pages HTTP-code breakdown (5 of 124). One figure is NOT re-verified today and is flagged in place: the third-party-corpus SERP cross-check. / Đọc trực tiếp qua Chrome (GSC + GA4 + Ahrefs UI) ngày 18/08/2026. Không OpenSEO, không Supermetrics, không Ahrefs API. Không ước lượng.",
+  "provenance": "Read directly from Chrome (GSC + GA4 + Ahrefs UI) on 2026-08-18. No OpenSEO, no Supermetrics, no Ahrefs API. No estimated values. GSC impressions were summed by hand across all 28 rows of the Days tab (the tile rounds to '1.76K'); the hand-summed clicks total of 76 matches the Total clicks tile and the hand-computed CTR of 4.32% matches the 4.3% tile. Ahrefs Site Explorer, Site Audit, Brand Radar AND every technical-readiness signal were re-read today. The Site Explorer 404 count, recorded as null on 17 Aug, was read today from the Crawled pages HTTP-code breakdown (5 of 124). The technical-readiness signals were re-checked a second time later the same morning, at which point /llms.txt had gone live (404 on the first pass, 200 on re-check) and sitemap.xml had grown 81 -> 82 URLs; both are recorded with their timing. One figure is NOT re-verified today and is flagged in place: the third-party-corpus SERP cross-check. / Đọc trực tiếp qua Chrome (GSC + GA4 + Ahrefs UI) ngày 18/08/2026. Không OpenSEO, không Supermetrics, không Ahrefs API. Không ước lượng.",
   "windows": {
     "gsc": "2026-07-19 -> 2026-08-15",
     "ga4": "2026-07-21 -> 2026-08-17"
@@ -128,7 +128,7 @@
     "cited_pages_note": "Ahrefs báo số trang được trích dẫn theo từng nền tảng, không gộp trùng: ChatGPT 3 trang, Copilot 2 trang, nên tổng thực nằm giữa 3 và 5. Số 3 ghi ở đây là mức sàn đã xác minh. / Ahrefs reports cited pages per platform, not as a de-duplicated union. ChatGPT cites 3 pages and Copilot 2, so the true distinct total is between 3 and 5. The 3 recorded here is the verified floor."
   },
   "ai_visibility": {
-    "score": 26,
+    "score": 28,
     "score_max": 100,
     "framework": "searchfit-seo:ai-visibility",
     "platforms_present": 2,
@@ -137,7 +137,7 @@
     "dimensions_measured": {
       "presence": 2,
       "citation_surface": 1,
-      "technical_readiness": 9,
+      "technical_readiness": 10,
       "third_party_corpus": 0,
       "measurement": 1
     },
@@ -147,8 +147,8 @@
       "position"
     ],
     "not_measured_reason": "Cần Brand Radar prompt tracking; report 'Dxliving' tồn tại nhưng 0 prompt được track, AI SoV = '—' (đã đọc lại hôm nay) / Requires Brand Radar prompt tracking; the 'Dxliving' report exists but tracks 0 prompts and AI SoV = '—' (re-read today)",
-    "score_method": "Trung bình 5 dimension đo được × 10 = (2+1+9+0+1)/5 × 10 = 26 / Average of the 5 measurable dimensions × 10 = (2+1+9+0+1)/5 × 10 = 26",
-    "technical_readiness_method": "7 tín hiệu được kiểm; điểm = tỷ lệ đạt × 10, làm tròn. Hôm nay 6/7 đạt → 9/10 (giữ nguyên so với 17/08). / 7 signals checked; score = share passing × 10, rounded. Today 6 of 7 pass → 9/10 (unchanged from 17 Aug).",
+    "score_method": "Trung bình 5 dimension đo được × 10 = (2+1+10+0+1)/5 × 10 = 28 / Average of the 5 measurable dimensions × 10 = (2+1+10+0+1)/5 × 10 = 28",
+    "technical_readiness_method": "7 tín hiệu được kiểm; điểm = tỷ lệ đạt × 10. Hôm nay 7/7 đạt → 10/10 (từ 9/10 hôm 17/08) sau khi llms.txt lên sóng. / 7 signals checked; score = share passing × 10. Today 7 of 7 pass → 10/10 (up from 9/10 on 17 Aug) now that llms.txt is live.",
     "brand_radar": {
       "report_exists": true,
       "prompts_tracked": 0,
@@ -158,14 +158,25 @@
     "readiness": {
       "robots_txt_blocks_ai_bots": false,
       "sitemap_complete": true,
-      "sitemap_url_count": 81,
-      "llms_txt": false,
+      "sitemap_url_count": 82,
+      "llms_txt": true,
       "faq_schema_on_money_pages": true,
       "organization_schema": true,
       "localbusiness_schema": true,
       "articles_render": true,
       "reread_today": true,
-      "evidence": "Re-measured on 2026-08-18 from the dxliving.com origin: robots.txt is 'User-agent: * / Disallow:' plus the sitemap line and names no AI bot; sitemap.xml returns 200 with 81 <loc> entries (up from 80 on 17 Aug) and is a flat sitemap, not an index; /llms.txt still returns 404; homepage JSON-LD parses to LocalBusiness, Organization, WebSite, PostalAddress and Country (24 script blocks but only 2 distinct payloads, so the block is duplicated 12x); /faq returns 200 in ~0.7s with FAQPage + Question + Answer; /articles returns 200 in ~1.4s with CollectionPage + ItemList + ListItem + Article + BreadcrumbList and server-rendered copy; /articles/3d-rendering-sydney returns 200 in ~0.8s with Article + BlogPosting + FAQPage + BreadcrumbList + WebPage + Organization + ImageObject. Ahrefs Site Audit crawl today 04:11: 15 URLs, 0 internal URLs with errors, health 100."
+      "evidence": "Re-measured on 2026-08-18 from the dxliving.com origin, then RE-CHECKED later the same morning after llms.txt went live: robots.txt is 'User-agent: * / Disallow:' plus the sitemap line and names no AI bot; sitemap.xml returns 200 with 82 <loc> entries (81 at the first pass earlier the same morning, 80 on 17 Aug) and is a flat sitemap, not an index; /llms.txt NOW RETURNS 200 — 12,695 bytes, 128 lines, 82 outbound links, structured as # DX Living / positioning summary / What DX Living is and is not / Core pages / Modules / Interactive tools / Featured projects / five article clusters / Optional; a companion /llms-full.txt also returns 200 at 21,951 bytes. It is NOT listed in sitemap.xml. Timing recorded honestly: /llms.txt returned 404 on the first pass of this scan and 200 on re-check the same morning, so it went live between the two checks. homepage JSON-LD parses to LocalBusiness, Organization, WebSite, PostalAddress and Country (24 script blocks but only 2 distinct payloads, so the block is duplicated 12x); /faq returns 200 with FAQPage + Question + Answer; /articles returns 200 with CollectionPage + ItemList + ListItem + Article + BreadcrumbList and server-rendered copy; /articles/3d-rendering-sydney returns 200 with Article + BlogPosting + FAQPage + BreadcrumbList + WebPage + Organization + ImageObject. Ahrefs Site Audit crawl today 04:11: 15 URLs, 0 internal URLs with errors, health 100.",
+      "llms_txt_first_seen": "2026-08-18",
+      "llms_txt_detail": {
+        "status": 200,
+        "bytes": 12695,
+        "lines": 128,
+        "outbound_links": 82,
+        "companion_file": "/llms-full.txt",
+        "companion_status": 200,
+        "companion_bytes": 21951,
+        "listed_in_sitemap": false
+      }
     },
     "third_party_corpus_note": "Không được kiểm lại hôm nay — giữ 0/10 từ lần audit SERP gần nhất (4 bộ truy vấn non-brand). / Not re-tested today — held at 0/10 from the last SERP audit (4 non-brand query sets)."
   },
@@ -260,9 +271,9 @@
       "Health Score giữ 100 (crawl mới hôm nay 04:11, 15 URL, 0 lỗi — tăng 14→15 URL). Crawled pages trong Site Explorer 121→124.",
       "SỐ 404 ĐÃ ĐỌC ĐƯỢC hôm nay, khắc phục chỗ để null hôm 17/08: bảng HTTP code cho thấy 124 trang crawl gồm 117 mã 200 (94,4%), 2 mã 3XX (1,6%) và 5 mã 404 (4,0%). Không có lỗi 4XX khác, không có 5XX.",
       "Trích dẫn AI giữ TỔNG 18 ngày thứ chín liên tiếp, và lần này cơ cấu cũng ĐỨNG YÊN: ChatGPT 12, Copilot 6 (hôm qua vừa đảo 10→12 và 8→6). Số trang được trích dẫn giữ nguyên (ChatGPT 3, Copilot 2). AI Overviews, AI Mode, Gemini, Perplexity vẫn 0; Grok bị Ahrefs tạm dừng nên ghi null, không phải 0.",
-      "AI Visibility giữ 26/100 ngày thứ tư liên tiếp. Cả 5 chiều đo được đều không đổi: Hiện diện 2/10, Bề mặt trích dẫn 1/10, Sẵn sàng kỹ thuật 9/10 (6/7 tín hiệu, chỉ thiếu llms.txt), Đo lường 1/10. Corpus bên thứ ba giữ 0/10 nhưng KHÔNG được kiểm lại hôm nay — đã đánh dấu rõ.",
-      "Tất cả 7 tín hiệu kỹ thuật được đo lại hôm nay trực tiếp trên origin dxliving.com: robots.txt không chặn bot AI nào (đạt), sitemap.xml 81 URL — tăng 80→81 (đạt), /faq có FAQPage + Question + Answer, 200 trong ~0,7s (đạt), /articles 200 trong ~1,4s có CollectionPage + ItemList + ListItem + Article + BreadcrumbList (đạt), homepage có Organization + LocalBusiness JSON-LD (đạt × 2), /llms.txt vẫn 404 (không đạt). Tốc độ cả ba trang đều nhanh hơn hôm qua.",
-      "llms.txt là việc rẻ nhất còn tồn đọng và đã tồn đọng liên tục từ 29/07 — 20 ngày. Đây là tín hiệu duy nhất chặn Sẵn sàng kỹ thuật đạt 10/10.",
+      "AI Visibility TĂNG 26 → 28/100 — lần tăng đầu tiên kể từ 07/08. Nguyên nhân duy nhất là Sẵn sàng kỹ thuật 9/10 → 10/10 khi llms.txt lên sóng, đủ 7/7 tín hiệu. Bốn chiều còn lại đứng yên: Hiện diện 2/10, Bề mặt trích dẫn 1/10, Đo lường 1/10, Corpus bên thứ ba 0/10 (KHÔNG được kiểm lại hôm nay — đã đánh dấu rõ).",
+      "Cả 7 tín hiệu kỹ thuật nay đều ĐẠT, đo trực tiếp trên origin dxliving.com: robots.txt không chặn bot AI nào, sitemap.xml 82 URL (81 ở lần quét đầu sáng nay, 80 hôm 17/08), /faq có FAQPage + Question + Answer trả 200, /articles trả 200 render sẵn với CollectionPage + ItemList + Article + BreadcrumbList, homepage có Organization + LocalBusiness JSON-LD, và /llms.txt trả 200. Nền kỹ thuật giờ đã kịch trần — mọi điểm còn thiếu nằm ở authority bên ngoài.",
+      "llms.txt ĐÃ LÊN SÓNG HÔM NAY — chấm dứt 20 ngày tồn đọng kể từ 29/07. Ghi nhận trung thực về thời điểm: lần quét đầu sáng nay /llms.txt vẫn trả 404, kiểm lại cùng buổi sáng đã trả 200, tức file lên trong khoảng giữa hai lần kiểm. Nội dung: 12.695 byte, 128 dòng, 82 liên kết, có đủ khối định vị 'What DX Living is and is not', Core pages, 4 module, dự án tiêu biểu và 5 cụm bài viết; kèm /llms-full.txt cũng trả 200 (21.951 byte). Chưa được liệt kê trong sitemap.xml.",
       "Ghi chú kỹ thuật phụ: khối JSON-LD trang chủ vẫn xuất hiện 24 lần nhưng chỉ có 2 payload khác nhau — mỗi khối bị lặp 12 lần. Không ảnh hưởng tính hợp lệ nhưng cùng gốc với lỗi nhân bản đang tạo ra 4 bản snippet GTM.",
       "Brand Radar đọc lại hôm nay: report 'Dxliving' vẫn tồn tại, 0 prompt được track, AI SoV = '—'. Không đo được độ chính xác, sắc thái hay thứ tự — 3 chiều này để trống, không suy đoán."
     ],
@@ -284,9 +295,9 @@
       "Health Score held at 100 (fresh crawl today at 04:11, 15 URLs, 0 errors — up from 14 URLs). Crawled pages in Site Explorer moved 121→124.",
       "THE 404 COUNT WAS READ TODAY, closing the null left on 17 Aug: the HTTP-code table shows 124 crawled pages comprising 117 at 200 (94.4%), 2 at 3XX (1.6%) and 5 at 404 (4.0%). No other 4XX errors and no 5XX.",
       "AI citations hold at a TOTAL of 18 for a ninth consecutive day, and this time the mix is FLAT too: ChatGPT 12, Copilot 6 (yesterday they had just swapped 10→12 and 8→6). Cited-page counts are unchanged (ChatGPT 3, Copilot 2). AI Overviews, AI Mode, Gemini and Perplexity remain 0; Grok is paused by Ahrefs so it is recorded as null, not 0.",
-      "AI Visibility holds at 26/100 for a fourth consecutive day. All 5 measurable dimensions are unchanged: Presence 2/10, Citation surface 1/10, Technical readiness 9/10 (6 of 7 signals, only llms.txt missing), Measurement 1/10. Third-party corpus stays at 0/10 but was NOT re-tested today and is flagged as such.",
-      "All 7 technical signals were re-measured today directly on the dxliving.com origin: robots.txt names no AI bot (pass), sitemap.xml carries 81 URLs — up from 80 (pass), /faq serves FAQPage + Question + Answer and returns 200 in ~0.7s (pass), /articles returns 200 in ~1.4s with CollectionPage + ItemList + ListItem + Article + BreadcrumbList (pass), the homepage carries Organization + LocalBusiness JSON-LD (2 passes), /llms.txt still 404 (fail). All three pages responded faster than yesterday.",
-      "llms.txt is the cheapest outstanding item and has been outstanding continuously since 29 Jul — 20 days. It is the only signal keeping Technical readiness off 10/10.",
+      "AI Visibility ROSE 26 → 28/100 — the first increase since 7 Aug. The sole driver is Technical readiness moving 9/10 → 10/10 as llms.txt went live, completing all 7 of 7 signals. The other four dimensions are unchanged: Presence 2/10, Citation surface 1/10, Measurement 1/10, Third-party corpus 0/10 (NOT re-tested today and flagged as such).",
+      "All 7 technical signals now PASS, measured directly on the dxliving.com origin: robots.txt names no AI bot, sitemap.xml carries 82 URLs (81 on this morning's first pass, 80 on 17 Aug), /faq serves FAQPage + Question + Answer at 200, /articles returns 200 server-rendered with CollectionPage + ItemList + Article + BreadcrumbList, the homepage carries Organization + LocalBusiness JSON-LD, and /llms.txt returns 200. The technical base is now maxed out — everything still missing is off-site authority.",
+      "llms.txt WENT LIVE TODAY — ending 20 days outstanding since 29 Jul. The timing is recorded honestly: /llms.txt returned 404 on the first pass of this morning's scan and 200 on re-check the same morning, so it shipped between the two checks. Content: 12,695 bytes, 128 lines, 82 links, carrying a positioning block ('What DX Living is and is not'), Core pages, the four modules, featured projects and five article clusters; a companion /llms-full.txt also returns 200 (21,951 bytes). It is not yet listed in sitemap.xml.",
       "Secondary technical note: the homepage JSON-LD block still appears 24 times but resolves to only 2 distinct payloads, meaning each block is duplicated 12 times. This does not affect validity, but it shares a root with the duplication fault producing the 4 GTM snippet copies.",
       "Brand Radar re-read today: the 'Dxliving' report still exists, tracks 0 prompts and shows AI SoV = '—'. Accuracy, sentiment and position remain unmeasurable — those three dimensions are left blank rather than guessed."
     ]
