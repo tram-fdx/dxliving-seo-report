@@ -1,7 +1,7 @@
 {
   "site": "dxliving.com",
   "description": "Lịch sử snapshot dữ liệu SEO theo ngày / Daily SEO data snapshot history. Mỗi ngày một file data/YYYY-MM-DD.json + bản HTML đóng băng archive/YYYY-MM-DD.html.",
-  "latest": "2026-08-18",
+  "latest": "2026-08-19",
   "snapshots": [
     {
       "date": "2026-06-30",
@@ -107,6 +107,13 @@
       "report": "archive/2026-08-18.html",
       "label_vi": "llms.txt lên sóng → kỹ thuật 10/10, AI 26→28; impressions đỉnh mới 1.761; GA4 thu thập lại ổn định",
       "label_en": "llms.txt live → technical 10/10, AI 26→28; impressions peak 1,761; GA4 collection steady"
+    },
+    {
+      "date": "2026-08-19",
+      "data": "data/2026-08-19.json",
+      "report": "archive/2026-08-19.html",
+      "label_vi": "Tracking GA4/GTM ĐÃ SỬA (dedupe script gỡ bỏ, 4 thẻ tag tải thật, G-43HE633LGK); GSC không đọc được — mất quyền tài sản; Ahrefs RD 423→425, BL 439→440; AI Visibility giữ 28",
+      "label_en": "GA4/GTM tracking FIXED (dedupe script removed, 4 tag scripts load, G-43HE633LGK); GSC unreadable — property access lost; Ahrefs RD 423->425, BL 439->440; AI Visibility flat at 28"
     }
   ]
 }

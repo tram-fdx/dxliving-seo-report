@@ -1,0 +1,237 @@
+{
+  "date": "2026-08-19",
+  "site": "dxliving.com",
+  "source_commit": "aa86f12",
+  "provenance": "Read directly from Chrome (GA4 + Ahrefs UI) on 2026-08-19. No OpenSEO, no Supermetrics, no Ahrefs API. No estimated values. GOOGLE SEARCH CONSOLE COULD NOT BE READ TODAY: the Chrome profile is signed in as thtram.work@gmail.com and tram@kvytechnology.com only, and neither account has access to sc-domain:dxliving.com or to the https://dxliving.com/ URL-prefix property (both return 'you do not have access to this property'). Ahrefs' GSC Insights was tried as a fallback and is paywalled ('Upgrade to unlock GSC Insights'). Every GSC field is therefore null and gsc_top_queries is null - yesterday's GSC numbers are NOT carried forward. GA4, Ahrefs Site Explorer, Site Audit, Brand Radar and every technical-readiness signal WERE re-read today. One figure is NOT re-verified today and is flagged in place: the third-party-corpus SERP cross-check. / Doc truc tiep qua Chrome (GA4 + Ahrefs UI) ngay 19/08/2026. Khong OpenSEO, khong Supermetrics, khong Ahrefs API. Khong uoc luong. KHONG DOC DUOC GOOGLE SEARCH CONSOLE HOM NAY: Chrome chi dang nhap thtram.work@gmail.com va tram@kvytechnology.com, ca hai deu khong co quyen voi tai san dxliving.com. Moi truong GSC ghi null, KHONG be so hom qua sang.",
+  "windows": {
+    "gsc": null,
+    "ga4": "2026-07-22 -> 2026-08-18"
+  },
+  "gsc_28d": {
+    "clicks": null,
+    "impressions": null,
+    "ctr_pct": null,
+    "avg_position": null,
+    "queries_with_impressions": null,
+    "unavailable_reason": "No signed-in Google account in this Chrome profile has access to the dxliving.com property (sc-domain and URL-prefix both refused). Ahrefs GSC Insights fallback is paywalled."
+  },
+  "ga4_28d": {
+    "sessions": 112,
+    "engaged_sessions": 63,
+    "engagement_rate_pct": 56.25,
+    "key_events": 5,
+    "users": 56,
+    "new_users": 45,
+    "returning_users": 16,
+    "avg_engagement_time": "29s",
+    "events_per_session": 4.77,
+    "total_events": 534,
+    "ai_assistant_channel": {
+      "sessions": 3,
+      "share_of_sessions_pct": 2.68,
+      "engagement_rate_pct": 66.67,
+      "avg_time": "15s",
+      "events_per_session": 6.67,
+      "key_events": 0,
+      "referrer": "chatgpt.com"
+    },
+    "collection_outage": {
+      "detected": true,
+      "resolved_on": "2026-08-19",
+      "still_broken_on": null,
+      "collection_confirmed_running": true,
+      "sessions_2026_08_05_to_2026_08_11": 0,
+      "sessions_2026_08_12_to_2026_08_18": 40,
+      "sessions_2026_08_18_single_day": 24,
+      "events_2026_08_18_single_day": 155,
+      "sessions_2026_07_22_to_2026_08_18": 112,
+      "sessions_2026_07_21_single_day": 23,
+      "events_2026_07_21_single_day": 115,
+      "key_events_2026_07_21_single_day": 4,
+      "hits_resumed_approx": "2026-08-13",
+      "tag_check_on_live_homepage": {
+        "gtm_container_id_in_markup": "GTM-PZ9N8QTR",
+        "gtm_snippet_copies_on_page": 2,
+        "gtm_snippet_count_method": "inline script blocks whose text contains the googletagmanager gtm.js path (raw string occurrences in outerHTML = 3; noscript ns.html iframes = 2)",
+        "gtag_or_gtm_script_tag_loaded": true,
+        "loaded_tag_script_count": 4,
+        "loaded_tag_script_paths": [
+          "www.googletagmanager.com/gtag/js",
+          "www.googletagmanager.com/gtag/js",
+          "www.googletagmanager.com/gtm.js",
+          "googleads.g.doubleclick.net/pagead/viewthroughconversion/18039433307/"
+        ],
+        "window_dataLayer_defined": true,
+        "window_dataLayer_entries": 3,
+        "dataLayer_events_observed": ["gtm.js", "gtm.dom", "gtm.load"],
+        "window_gtag_defined": false,
+        "window_google_tag_manager_defined": true,
+        "google_tag_manager_containers": ["GTM-PZ9N8QTR", "G-43HE633LGK", "AW-18039433307"],
+        "ga4_measurement_id_found": "G-43HE633LGK",
+        "google_ads_id_found": "AW-18039433307",
+        "dx_analytics_dedupe_script_present": false,
+        "window___dxGtmLoaded": null,
+        "window___dxAnalyticsDedupe": null
+      },
+      "change_since_2026_08_18": "DA SUA XONG. Trang chu live hom nay khac hoan toan 18/08: script #dx-analytics-dedupe DA BI XOA, co __dxGtmLoaded va __dxAnalyticsDedupe khong con ton tai, so ban sao snippet GTM giam 4 -> 2, chuoi gtm.js trong outerHTML giam 7 -> 3, va quan trong nhat: 4 the script tag da THUC SU TAI, window.google_tag_manager nay la object chua GTM-PZ9N8QTR + G-43HE633LGK + AW-18039433307, dataLayer co 3 entry voi du chuoi su kien gtm.js -> gtm.dom -> gtm.load, va measurement ID G-43HE633LGK lan dau tien doc duoc tren trang. / FIXED. The live homepage today differs completely from 18 Aug: the #dx-analytics-dedupe script has been DELETED, the __dxGtmLoaded and __dxAnalyticsDedupe flags no longer exist, GTM snippet copies fell 4 -> 2, raw gtm.js occurrences fell 7 -> 3, and most importantly 4 tag script tags ACTUALLY LOAD. window.google_tag_manager is now an object carrying GTM-PZ9N8QTR + G-43HE633LGK + AW-18039433307, dataLayer holds 3 entries with the full gtm.js -> gtm.dom -> gtm.load sequence, and the measurement ID G-43HE633LGK is readable on the page for the first time (null on 18 Aug). window.gtag remains undefined, which is EXPECTED when tags load through GTM rather than a direct gtag snippet.",
+      "root_cause": {
+        "identified": true,
+        "traced_at": "2026-08-07, fix confirmed on the homepage 2026-08-19 (live site, Chrome)",
+        "status": "FIXED",
+        "summary": "Script #dx-analytics-dedupe cua chinh site ghi de Node.prototype.insertBefore de chan trung lap googletagmanager gtm.js, nhung bat co window.__dxGtmLoaded = true ma khong thuc su chen the script. Script nay DA DUOC XOA va GTM nay tai binh thuong. / The site's own #dx-analytics-dedupe script overrode Node.prototype.insertBefore to de-duplicate the googletagmanager gtm.js tag, but set window.__dxGtmLoaded = true without actually inserting the script tag. That script has now been REMOVED and GTM loads normally.",
+        "blocking_script_id": "dx-analytics-dedupe",
+        "patched_api": "Node.prototype.insertBefore",
+        "fix_verified": [
+          "#dx-analytics-dedupe no longer present on the page",
+          "window.google_tag_manager is an object containing GTM-PZ9N8QTR",
+          "4 tag script tags actually load",
+          "dataLayer carries gtm.js, gtm.dom, gtm.load",
+          "measurement ID G-43HE633LGK is readable"
+        ],
+        "remaining": "Van con 2 ban sao snippet GTM (giam tu 4). Nen rut ve dung 1 ban trong head kem 1 noscript. / Two GTM snippet copies remain (down from 4). Reduce to exactly one in head with a single noscript.",
+        "data_loss": "Du lieu GA4 tu 29/07 den ~12/08 da mat vinh vien. / GA4 data from 29 Jul to ~12 Aug is permanently lost."
+      },
+      "caveat": "Cua so 22/07-18/08 van chua phan lon giai doan hong 29/07-12/08, nen so GA4 28 ngay o tren VAN la so THIEU, du viec thu thap nay da chay dung. / The 22 Jul-18 Aug window still contains most of the 29 Jul-12 Aug outage, so the 28-day GA4 totals above remain an UNDER-COUNT even though collection is now working correctly."
+    }
+  },
+  "ahrefs": {
+    "domain_rating": 0,
+    "url_rating": 0,
+    "referring_domains": 425,
+    "referring_domains_all_time": 441,
+    "referring_domains_followed": 8,
+    "backlinks": 440,
+    "backlinks_all_time": 467,
+    "backlinks_followed": 8,
+    "health_score": 100,
+    "site_audit_crawl": {
+      "crawled_at": "2026-08-19 04:20 (Ahrefs project time)",
+      "status": "Completed",
+      "urls_crawled": 14,
+      "internal_urls_with_errors": 0
+    },
+    "crawled_pages_site_explorer": 127,
+    "crawled_pages_404": 5,
+    "crawled_pages_http_breakdown": {
+      "200": 120,
+      "3xx": 2,
+      "404": 5,
+      "4xx_other": 0,
+      "5xx": 0
+    },
+    "organic_keywords": 0,
+    "organic_traffic": 0,
+    "ai_citations": 18,
+    "ai_by_platform": {
+      "chatgpt": 12,
+      "copilot": 6,
+      "google_ai_overviews": 0,
+      "google_ai_mode": 0,
+      "gemini": 0,
+      "perplexity": 0,
+      "grok": null
+    },
+    "cited_pages": 3,
+    "cited_pages_by_platform": {
+      "chatgpt": 3,
+      "copilot": 2
+    },
+    "cited_pages_note": "Ahrefs bao so trang duoc trich dan theo tung nen tang, khong gop trung: ChatGPT 3 trang, Copilot 2 trang, nen tong thuc nam giua 3 va 5. So 3 ghi o day la muc san da xac minh. / Ahrefs reports cited pages per platform, not as a de-duplicated union. The 3 recorded here is the verified floor."
+  },
+  "ai_visibility": {
+    "score": 28,
+    "score_max": 100,
+    "framework": "searchfit-seo:ai-visibility",
+    "platforms_present": 2,
+    "platforms_total": 6,
+    "cited_pages": 3,
+    "dimensions_measured": {
+      "presence": 2,
+      "citation_surface": 1,
+      "technical_readiness": 10,
+      "third_party_corpus": 0,
+      "measurement": 1
+    },
+    "dimensions_not_measured": ["accuracy", "sentiment", "position"],
+    "not_measured_reason": "Can Brand Radar prompt tracking; report 'Dxliving' ton tai nhung 0 prompt duoc track, AI SoV = '-' (da doc lai hom nay) / Requires Brand Radar prompt tracking; the 'Dxliving' report exists but tracks 0 prompts and AI SoV = '-' (re-read today)",
+    "score_method": "Trung binh 5 dimension do duoc x 10 = (2+1+10+0+1)/5 x 10 = 28 / Average of the 5 measurable dimensions x 10 = (2+1+10+0+1)/5 x 10 = 28",
+    "technical_readiness_method": "7 tin hieu duoc kiem; diem = ty le dat x 10. Hom nay 7/7 dat -> 10/10, giu nguyen muc kich tran dat duoc hom 18/08. / 7 signals checked; score = share passing x 10. Today 7 of 7 pass -> 10/10, holding the ceiling reached on 18 Aug.",
+    "brand_radar": {
+      "report_exists": true,
+      "prompts_tracked": 0,
+      "ai_share_of_voice": null,
+      "reread_today": true
+    },
+    "readiness": {
+      "robots_txt_blocks_ai_bots": false,
+      "sitemap_complete": true,
+      "sitemap_url_count": 81,
+      "llms_txt": true,
+      "faq_schema_on_money_pages": true,
+      "organization_schema": true,
+      "localbusiness_schema": true,
+      "articles_render": true,
+      "reread_today": true,
+      "evidence": "Re-measured on 2026-08-19 from the dxliving.com origin: robots.txt is 'User-agent: * / Disallow:' plus the sitemap line and names no AI bot; sitemap.xml returns 200 with 81 loc entries (82 on 18 Aug, so it lost one URL) and is a flat sitemap, not an index; /llms.txt returns 200 at 12,695 bytes over 128 lines - identical in size to 18 Aug, so the file is unchanged - and /llms-full.txt also returns 200 at 21,951 bytes; it is still NOT listed in sitemap.xml. Homepage JSON-LD now parses from just 2 script blocks with 2 distinct payloads (24 blocks / 2 payloads on 18 Aug - the 12x duplication has been cleaned up alongside the GTM fix) and yields LocalBusiness, Organization, WebSite, PostalAddress and Country. /faq returns 200 in 812ms with FAQPage + Question + Answer; /articles returns 200 in 1,192ms with CollectionPage + ItemList + ListItem + Article + BreadcrumbList and server-rendered copy; /articles/3d-rendering-sydney returns 200 in 799ms with Article + BlogPosting + FAQPage + BreadcrumbList + WebPage + Organization + ImageObject. Ahrefs Site Audit crawl today 04:20: 14 URLs, 0 internal URLs with errors, health 100.",
+      "llms_txt_first_seen": "2026-08-18",
+      "llms_txt_detail": {
+        "status": 200,
+        "bytes": 12695,
+        "lines": 128,
+        "companion_file": "/llms-full.txt",
+        "companion_status": 200,
+        "companion_bytes": 21951,
+        "listed_in_sitemap": false,
+        "changed_since_yesterday": false
+      },
+      "homepage_jsonld_blocks": 2,
+      "homepage_jsonld_distinct_payloads": 2
+    },
+    "third_party_corpus_note": "Khong duoc kiem lai hom nay - giu 0/10 tu lan audit SERP gan nhat (4 bo truy van non-brand). / Not re-tested today - held at 0/10 from the last SERP audit (4 non-brand query sets)."
+  },
+  "gsc_top_queries": null,
+  "notes": {
+    "vi": [
+      "KHONG DOC DUOC GOOGLE SEARCH CONSOLE HOM NAY. Chrome dang dang nhap hai tai khoan Google - thtram.work@gmail.com va tram@kvytechnology.com - va CA HAI deu bi Search Console tu choi voi thong bao 'ban khong co quyen truy cap vao san pham nay', thu ca tai san sc-domain:dxliving.com lan tai san URL-prefix https://dxliving.com/. Da thu phuong an du phong GSC Insights trong Ahrefs nhung bi khoa theo goi. Vi vay toan bo chi so GSC hom nay ghi null va bang Top truy van KHONG duoc cap nhat - so hien thi van la cua lan quet 18/08 va da duoc ghi nhan ro. Khong be so hom qua sang lam so hom nay.",
+      "Viec can lam de khoi phuc: cap quyen tai san dxliving.com cho mot trong hai tai khoan Google dang dang nhap, hoac dang nhap vao Chrome bang tai khoan von co quyen (thuong la tai khoan marketing cua FeelDX).",
+      "TIN LON NHAT HOM NAY - TRACKING GA4/GTM DA DUOC SUA. Loi Critical ton tai tu 29/07 nay da het. Trang chu live kiem hom nay: script #dx-analytics-dedupe DA BI XOA, hai co __dxGtmLoaded va __dxAnalyticsDedupe khong con, so ban sao snippet GTM giam 4 -> 2, chuoi gtm.js trong outerHTML giam 7 -> 3.",
+      "Bang chung tracking da chay that, khong phai suy doan: 4 the script duoc TAI THAT (2 x gtag/js, 1 x gtm.js, 1 x Google Ads conversion) so voi 0 hom qua; window.google_tag_manager nay la object chua GTM-PZ9N8QTR, G-43HE633LGK va AW-18039433307; dataLayer co 3 entry voi du chuoi gtm.js -> gtm.dom -> gtm.load; va measurement ID G-43HE633LGK lan dau tien doc duoc tren trang (18/08 con null).",
+      "window.gtag van undefined - nhung day la dieu BINH THUONG khi tag duoc nap qua GTM chu khong qua snippet gtag truc tiep. Bang chung thu thap chay la window.google_tag_manager va su kien gtm.load, ca hai deu da co.",
+      "Viec con lai nho: trang chu van con 2 ban sao snippet GTM (giam tu 4). Nen rut ve dung 1 ban trong head kem 1 noscript de loai han nguy co dem trung session.",
+      "Loi nhan ban script cung da duoc don: khoi JSON-LD trang chu tu 24 lan lap (chi 2 payload) nay con dung 2 khoi / 2 payload. Day la cung mot goc voi loi 4 ban snippet GTM, va ca hai da duoc xu ly cung luc.",
+      "GA4 xac nhan thu thap chay manh: ngay 18/08 rieng le dat 24 session va 155 event - ngay cao nhat ke tu khi hong. Cua so 12-18/08 dat 40 session, trong khi 05-11/08 van dung 0 session (khop voi giai doan hong).",
+      "GA4 28 ngay (22/07 -> 18/08): sessions 111 -> 112, engaged 61 -> 63, engagement rate 54,95% -> 56,25%, events 494 -> 534, users 59 -> 56, key events 9 -> 5. Moi bien dong giai thich DUOC BANG SO HOC: cua so day ngay 21/07 (23 session, 115 event, 4 key event) ra ngoai va keo ngay 18/08 (24 session, 155 event, 0 key event) vao. 111 - 23 + 24 = 112 session; 494 - 115 + 155 = 534 event; 9 - 4 + 0 = 5 key event. Khop chinh xac ca ba.",
+      "Nhac lai: GA4 la cua so truot 28 ngay. Moi delta so voi 18/08 la dich chuyen cua so, KHONG phai traffic cua rieng mot ngay.",
+      "So GA4 28 ngay VAN la so THIEU vi cua so 22/07-18/08 con chua phan lon giai doan hong 29/07-12/08. Du lieu 29/07-12/08 da mat vinh vien. Cua so se tu sach dan va du kien het han vung hong vao khoang 09/09/2026.",
+      "Kenh AI assistant TANG GAP BA: 1 -> 3 session tu chatgpt.com / ai-assistant (0,9% -> 2,68% tong), 66,67% engagement, 15 giay, 6,67 event/session, 20 event, van 0 key event. Bang nguon/phuong tien co 10 dong (tang tu 8), da doc het - van khong co Perplexity, Gemini hay Copilot; hai dong moi la bing/organic va linkedin.com/referral.",
+      "Ahrefs tang cham va deu: referring domains 423 -> 425 (+2, all-time 439 -> 441), backlinks 439 -> 440 (+1, all-time 464 -> 467). Chat luong DUNG YEN ngay thu tu lien tiep: van dung 8 domain followed va 8 backlink followed, tuc 8/425 = 1,9%. DR van 0, UR van 0, organic keywords va organic traffic van 0.",
+      "Health Score giu 100 (crawl moi hom nay 04:20). So URL crawl giam nhe 15 -> 14, van 0 URL noi bo loi. Crawled pages trong Site Explorer 124 -> 127, co cau HTTP gan nhu y nguyen: 120 ma 200 (94,5%), 2 ma 3XX (1,6%), 5 ma 404 (3,9%) - so 404 giu nguyen 5, khong co 4XX khac, khong co 5XX.",
+      "Trich dan AI giu TONG 18 ngay thu muoi lien tiep, co cau cung dung yen ngay thu hai: ChatGPT 12, Copilot 6. So trang duoc trich dan giu nguyen (ChatGPT 3, Copilot 2). AI Overviews, AI Mode, Gemini, Perplexity van 0; Grok bi Ahrefs tam dung nen ghi null, khong phai 0.",
+      "AI Visibility GIU 28/100. Ca 5 chieu do duoc deu dung yen: Hien dien 2/10, Be mat trich dan 1/10, San sang ky thuat 10/10, Corpus ben thu ba 0/10 (KHONG duoc kiem lai hom nay - da danh dau ro), Do luong 1/10. Viec sua tracking hom nay chua nang diem vi chieu Do luong van bi chan boi Brand Radar 0 prompt.",
+      "Ca 7 tin hieu ky thuat van DAT, do truc tiep tren origin dxliving.com: robots.txt khong chan bot AI nao, /llms.txt tra 200 (12.695 byte, 128 dong - khong doi so voi hom qua) kem /llms-full.txt 200, /faq co FAQPage tra 200 trong 0,8s, /articles tra 200 trong 1,2s render san, homepage co Organization + LocalBusiness JSON-LD, bai mau co Article + BlogPosting + FAQPage + BreadcrumbList.",
+      "Mot diem lui nho can theo doi: sitemap.xml giam 82 -> 81 URL. Khong ro URL nao bi bo; can kiem lai neu tiep tuc giam. llms.txt van CHUA duoc liet ke trong sitemap.xml - viec ton dong duy nhat con lai cua khoi ky thuat.",
+      "Brand Radar doc lai hom nay: report 'Dxliving' van ton tai, 0 prompt duoc track, AI SoV = '-'. Khong do duoc do chinh xac, sac thai hay thu tu - 3 chieu nay de trong, khong suy doan. Day gio la nut that DUY NHAT cua chieu Do luong, vi phia tracking da duoc sua."
+    ],
+    "en": [
+      "GOOGLE SEARCH CONSOLE COULD NOT BE READ TODAY. Chrome is signed in to two Google accounts - thtram.work@gmail.com and tram@kvytechnology.com - and BOTH are refused by Search Console with 'you do not have access to this property', tested against the sc-domain:dxliving.com property and the https://dxliving.com/ URL-prefix property alike. The Ahrefs GSC Insights fallback was tried and is paywalled. Every GSC metric today is therefore recorded as null and the Top queries table is NOT updated - the figures shown are still those of the 18 Aug scan and are labelled as such. Yesterday's numbers are not carried forward as today's.",
+      "To restore it: grant the dxliving.com property to one of the two Google accounts already signed in, or sign Chrome in with the account that holds access (normally the FeelDX marketing account).",
+      "THE BIG NEWS TODAY - GA4/GTM TRACKING IS FIXED. The Critical fault outstanding since 29 Jul is resolved. Checked on the live homepage today: the #dx-analytics-dedupe script has been DELETED, the __dxGtmLoaded and __dxAnalyticsDedupe flags are gone, GTM snippet copies fell 4 -> 2, and raw gtm.js occurrences in outerHTML fell 7 -> 3.",
+      "The evidence that tracking genuinely runs, rather than being inferred: 4 tag script tags ACTUALLY LOAD (2 x gtag/js, 1 x gtm.js, 1 x Google Ads conversion) against 0 yesterday; window.google_tag_manager is now an object carrying GTM-PZ9N8QTR, G-43HE633LGK and AW-18039433307; dataLayer holds 3 entries with the full gtm.js -> gtm.dom -> gtm.load sequence; and the measurement ID G-43HE633LGK is readable on the page for the first time (null on 18 Aug).",
+      "window.gtag is still undefined - but that is EXPECTED when tags load through GTM rather than a direct gtag snippet. The proof of collection is window.google_tag_manager and the gtm.load event, and both are present.",
+      "One small item remains: the homepage still carries 2 GTM snippet copies (down from 4). Reduce to exactly one in head with a single noscript to remove any residual duplicate-counting risk.",
+      "The script-duplication fault has been cleaned up too: the homepage JSON-LD went from 24 repeated blocks (only 2 distinct payloads) to exactly 2 blocks / 2 payloads. That shared a root cause with the 4 GTM snippet copies, and both were addressed together.",
+      "GA4 confirms collection is running strongly: 18 Aug alone recorded 24 sessions and 155 events - the highest single day since the outage began. The 12-18 Aug window reached 40 sessions, while 5-11 Aug still reads exactly 0 sessions, consistent with the outage period.",
+      "GA4 28 days (22 Jul -> 18 Aug): sessions 111 -> 112, engaged 61 -> 63, engagement rate 54.95% -> 56.25%, events 494 -> 534, users 59 -> 56, key events 9 -> 5. Every movement is explained ARITHMETICALLY: the window pushed out 21 Jul (23 sessions, 115 events, 4 key events) and pulled in 18 Aug (24 sessions, 155 events, 0 key events). 111 - 23 + 24 = 112 sessions; 494 - 115 + 155 = 534 events; 9 - 4 + 0 = 5 key events. All three match exactly.",
+      "Reminder: GA4 is a rolling 28-day window. Every delta against 18 Aug is the window shifting, NOT any single day's traffic.",
+      "The 28-day GA4 totals REMAIN an UNDER-COUNT because the 22 Jul-18 Aug window still contains most of the 29 Jul-12 Aug outage. That data is permanently lost. The window will clear progressively and should exit the outage entirely around 9 Sep 2026.",
+      "The AI assistant channel TRIPLED: 1 -> 3 sessions from chatgpt.com / ai-assistant (0.9% -> 2.68% of total), 66.67% engagement, 15 seconds, 6.67 events per session, 20 events, still 0 key events. The source/medium table now holds 10 rows (up from 8), all read - still no Perplexity, Gemini or Copilot; the two new rows are bing/organic and linkedin.com/referral.",
+      "Ahrefs grew slowly and steadily: referring domains 423 -> 425 (+2, all-time 439 -> 441), backlinks 439 -> 440 (+1, all-time 464 -> 467). Quality is FLAT for a fourth consecutive day: still exactly 8 followed domains and 8 followed backlinks, i.e. 8 of 425 = 1.9%. DR still 0, UR still 0, organic keywords and organic traffic still 0.",
+      "Health Score held at 100 (fresh crawl today at 04:20). URLs crawled eased 15 -> 14, still 0 internal URLs with errors. Crawled pages in Site Explorer moved 124 -> 127 with the HTTP mix almost unchanged: 120 at 200 (94.5%), 2 at 3XX (1.6%), 5 at 404 (3.9%) - the 404 count holds at 5, no other 4XX and no 5XX.",
+      "AI citations hold at a TOTAL of 18 for a tenth consecutive day, with the mix flat for a second day: ChatGPT 12, Copilot 6. Cited-page counts are unchanged (ChatGPT 3, Copilot 2). AI Overviews, AI Mode, Gemini and Perplexity remain 0; Grok is paused by Ahrefs so it is recorded as null, not 0.",
+      "AI Visibility HOLDS at 28/100. All five measurable dimensions are unchanged: Presence 2/10, Citation surface 1/10, Technical readiness 10/10, Third-party corpus 0/10 (NOT re-tested today and flagged as such), Measurement 1/10. Today's tracking fix does not lift the score because the Measurement dimension is still blocked by Brand Radar tracking 0 prompts.",
+      "All 7 technical signals still PASS, measured directly on the dxliving.com origin: robots.txt names no AI bot; /llms.txt returns 200 at 12,695 bytes over 128 lines - unchanged from yesterday - with /llms-full.txt also at 200; /faq serves FAQPage at 200 in 0.8s; /articles returns 200 in 1.2s server-rendered; the homepage carries Organization + LocalBusiness JSON-LD; and sampled articles carry Article + BlogPosting + FAQPage + BreadcrumbList.",
+      "One small regression to watch: sitemap.xml fell 82 -> 81 URLs. Which URL was dropped is not established; worth re-checking if it keeps falling. llms.txt is still NOT listed in sitemap.xml - the only outstanding item left in the technical block.",
+      "Brand Radar re-read today: the 'Dxliving' report still exists, tracks 0 prompts and shows AI SoV = '-'. Accuracy, sentiment and position remain unmeasurable - those three dimensions are left blank rather than guessed. With tracking now fixed, this is the SOLE remaining bottleneck on the Measurement dimension."
+    ]
+  }
+}
