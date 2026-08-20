@@ -126,8 +126,8 @@
       "date": "2026-08-21",
       "data": "data/2026-08-21.json",
       "report": "archive/2026-08-21.html",
-      "label_vi": "GSC 63 clicks / 1.824 impressions, vị trí TB 29,1 (tốt nhất từ trước tới nay) nhưng chỉ 2/150 truy vấn có click và cả hai đều brand (82,5%); GA4 120→133 session, engagement 50,0%→45,1%, key events 3→1; Ahrefs RD 425→426, BL 440→441, trích dẫn AI giữ 17 (Copilot pages 2→3); sitemap.xml vẫn hỏng ngày thứ hai trong khi bài viết 59→63; AI Visibility giữ 26",
-      "label_en": "GSC 63 clicks / 1,824 impressions, avg position 29.1 (best yet) but only 2 of 150 queries drew clicks and both are brand (82.5%); GA4 120->133 sessions, engagement 50.0%->45.1%, key events 3->1; Ahrefs RD 425->426, BL 440->441, AI citations flat at 17 (Copilot pages 2->3); sitemap.xml still broken on day two while articles grew 59->63; AI Visibility flat at 26"
+      "label_vi": "GSC 63 clicks / 1.824 impressions, vị trí TB 29,1 (tốt nhất từ trước tới nay) nhưng chỉ 2/150 truy vấn có click và cả hai đều brand (82,5%); GA4 120→133 session, engagement 50,0%→45,1%, key events 3→1; Ahrefs RD 425→426, BL 440→441, trích dẫn AI giữ 17 (Copilot pages 2→3); sitemap.xml vẫn hỏng ngày thứ hai trong khi bài viết 59→63; AI Visibility giữ 26. Gỡ 3 khối tham chiếu đóng băng từ 27/07 (Chi tiết T6 GSC + GA4, SERP Úc 30/06), thay bằng khối So sánh theo tháng T7 vs T6 đọc mới và tự cuộn mỗi đầu tháng",
+      "label_en": "GSC 63 clicks / 1,824 impressions, avg position 29.1 (best yet) but only 2 of 150 queries drew clicks and both are brand (82.5%); GA4 120->133 sessions, engagement 50.0%->45.1%, key events 3->1; Ahrefs RD 425->426, BL 440->441, AI citations flat at 17 (Copilot pages 2->3); sitemap.xml still broken on day two while articles grew 59->63; AI Visibility flat at 26. Removed 3 reference blocks frozen since 27 Jul (June GSC + GA4 detail, AU SERP 30 Jun), replaced with a freshly-read month-over-month block (Jul vs Jun) that rolls forward each month"
     }
   ]
 }
