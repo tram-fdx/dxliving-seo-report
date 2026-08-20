@@ -1,0 +1,382 @@
+{
+  "date": "2026-08-21",
+  "site": "dxliving.com",
+  "source_commit": "4929628",
+  "provenance": "Read directly from Chrome (GSC + GA4 + Ahrefs UI + live dxliving.com origin) on 2026-08-21. No OpenSEO, no Supermetrics, no Ahrefs API. No estimated values, nothing carried over from yesterday. All four sources were reachable on the first pass today. GSC impressions were verified by summing all 28 rows of the DAYS tab (1,824) and cross-checked against the day-sum of clicks (63), which matches the Total clicks tile exactly. Two items are NOT re-verified today and are flagged in place: the third-party-corpus SERP cross-check, and one crawled page out of 135 that falls into none of the four HTTP buckets Ahrefs offers. / Doc truc tiep qua Chrome (GSC + GA4 + Ahrefs UI + origin dxliving.com) ngay 21/08/2026. Khong dung OpenSEO, khong Supermetrics, khong Ahrefs API. Khong uoc luong, khong be so hom qua sang. Ca bon nguon deu doc duoc ngay lan quet dau. Impressions GSC duoc cong tay du 28 dong tab DAYS (1.824) va doi chieu tong clicks (63) khop chinh xac o o Total clicks. Hai muc KHONG kiem lai hom nay va duoc danh dau ro: doi chieu SERP cho corpus ben thu ba, va 1 trang trong 135 trang crawl khong roi vao bon nhom HTTP ma Ahrefs cung cap.",
+  "windows": {
+    "gsc": "2026-07-22 -> 2026-08-18",
+    "ga4": "2026-07-24 -> 2026-08-20"
+  },
+  "gsc_28d": {
+    "clicks": 63,
+    "impressions": 1824,
+    "ctr_pct": 3.5,
+    "avg_position": 29.1,
+    "queries_with_impressions": 150,
+    "impressions_method": "Summed all 28 rows of the GSC DAYS tab. Cross-check: the same 28 rows sum to 63 clicks, which matches the Total clicks tile exactly, so the impressions sum is trusted. The Total impressions tile only displays a rounded '1.82K'.",
+    "brand_clicks": 52,
+    "brand_clicks_share_pct": 82.5,
+    "brand_clicks_note": "dxliving 34 + dx living 18 = 52 of 63 clicks. These are the ONLY two queries in the whole 150-row table with a non-zero click count; the remaining 11 clicks sit in Google's anonymised-query bucket."
+  },
+  "ga4_28d": {
+    "sessions": 133,
+    "engaged_sessions": 60,
+    "engagement_rate_pct": 45.11,
+    "key_events": 1,
+    "users": 63,
+    "new_users": 49,
+    "returning_users": 17,
+    "avg_engagement_time": "43s",
+    "events_per_session": 4.56,
+    "total_events": 606,
+    "ai_assistant_channel": {
+      "sessions": 3,
+      "share_of_sessions_pct": 2.26,
+      "engagement_rate_pct": 66.67,
+      "avg_time": "15s",
+      "events_per_session": 6.67,
+      "key_events": 0,
+      "referrer": "chatgpt.com",
+      "events": 20
+    },
+    "collection_outage": {
+      "detected": true,
+      "resolved_on": "2026-08-19",
+      "still_broken_on": null,
+      "collection_confirmed_running": true,
+      "collection_confirmed_via": "GA4 reporting UI (two custom 7-day windows) plus live homepage tag inspection on the dxliving.com origin",
+      "sessions_2026_08_07_to_2026_08_13": 1,
+      "sessions_2026_08_14_to_2026_08_20": 92,
+      "tag_check_on_live_homepage": {
+        "gtm_container_id_in_markup": "GTM-PZ9N8QTR",
+        "gtag_or_gtm_script_tag_loaded": true,
+        "loaded_tag_script_count": 4,
+        "loaded_tag_script_paths": [
+          "www.googletagmanager.com/gtag/js",
+          "www.googletagmanager.com/gtag/js",
+          "www.googletagmanager.com/gtm.js",
+          "googleads.g.doubleclick.net/pagead/viewthroughconversion/18039433307/"
+        ],
+        "window_dataLayer_defined": true,
+        "window_dataLayer_entries": 3,
+        "window_gtag_defined": false,
+        "window_google_tag_manager_defined": true,
+        "google_tag_manager_containers": [
+          "GTM-PZ9N8QTR",
+          "AW-18039433307",
+          "G-43HE633LGK"
+        ],
+        "ga4_measurement_id_found": "G-43HE633LGK",
+        "google_ads_id_found": "AW-18039433307",
+        "dx_analytics_dedupe_script_present": false,
+        "changed_since_yesterday": false
+      },
+      "change_since_2026_08_20": "Tracking tren site VAN TOT va khong doi so voi 19/08 va 20/08: 4 the script tag tai that, google_tag_manager giu ca ba container GTM-PZ9N8QTR / AW-18039433307 / G-43HE633LGK, script dedupe van da bi go. Hai cua so 7 ngay cho thay ro ranh gioi hong: 07-13/08 chi 1 session, 14-20/08 dat 92 session. Cua so 28 ngay tiep tuc truot qua vung hong nen so tang 120 -> 133. / Site-side tracking is unchanged and healthy versus 19 and 20 Aug: 4 tag scripts actually load, google_tag_manager holds all three containers GTM-PZ9N8QTR / AW-18039433307 / G-43HE633LGK, and the dedupe script is still gone. The two 7-day windows show the outage boundary clearly: 7-13 Aug holds just 1 session while 14-20 Aug holds 92. The 28-day window keeps rolling past the outage, so totals rose 120 -> 133.",
+      "root_cause": {
+        "identified": true,
+        "traced_at": "2026-08-07, fix confirmed on the homepage 2026-08-19, re-confirmed still holding 2026-08-21",
+        "status": "FIXED",
+        "summary": "Script #dx-analytics-dedupe cua chinh site ghi de Node.prototype.insertBefore, dat window.__dxGtmLoaded = true ma khong chen the script. Script DA BI XOA va GTM tai binh thuong; kiem lai hom nay van dung nhu vay. / The site's own #dx-analytics-dedupe script overrode Node.prototype.insertBefore and set window.__dxGtmLoaded = true without inserting the script tag. It has been REMOVED and GTM loads normally; re-verified today and still holding.",
+        "remaining": "Van con 2 khoi inline snippet GTM. Nen rut ve dung 1 khoi trong head kem 1 noscript. / Two inline GTM snippet blocks remain. Reduce to exactly one in head with a single noscript.",
+        "data_loss": "Du lieu GA4 tu 29/07 den ~12/08 da mat vinh vien. / GA4 data from 29 Jul to ~12 Aug is permanently lost."
+      },
+      "caveat": "Cua so 24/07-20/08 van con chua phan lon giai doan hong 29/07-12/08 (chinh xac: 07-13/08 chi ghi duoc 1 session), nen so GA4 28 ngay VAN la so THIEU, du viec thu thap da chay dung tu 13/08. Du kien sach han khoang 09/09/2026. / The 24 Jul-20 Aug window still contains most of the 29 Jul-12 Aug outage (concretely: 7-13 Aug recorded just 1 session), so the 28-day GA4 totals remain an UNDER-COUNT even though collection has been working since 13 Aug. Expected to clear fully around 9 Sep 2026."
+    },
+    "channel_breakdown": {
+      "direct": 52,
+      "organic_search": 45,
+      "organic_social": 33,
+      "ai_assistant": 3
+    }
+  },
+  "ahrefs": {
+    "domain_rating": 0,
+    "url_rating": 0,
+    "referring_domains": 426,
+    "referring_domains_all_time": 442,
+    "referring_domains_followed": 8,
+    "backlinks": 441,
+    "backlinks_all_time": 468,
+    "backlinks_followed": 8,
+    "health_score": 100,
+    "site_audit_crawl": {
+      "crawled_at": "2026-08-21 04:06 (Ahrefs project time)",
+      "status": "Completed",
+      "urls_crawled": 15,
+      "internal_urls_with_errors": 0,
+      "workspace": "Nguyen Thi Thanh Tram's workspace",
+      "note": "Fresh crawl today, so the figures are used. URLs crawled 14 -> 15."
+    },
+    "crawled_pages_site_explorer": 135,
+    "crawled_pages_404": 5,
+    "crawled_pages_http_breakdown": {
+      "200": 127,
+      "3xx": 2,
+      "404": 5,
+      "4xx_other": 0,
+      "5xx": 0
+    },
+    "crawled_pages_http_breakdown_note": "Each bucket was read by applying the HTTP code filter one at a time. The four buckets sum to 134 of the 135 pages Ahrefs reports unfiltered; 1 page falls into none of the offered buckets and is NOT explained here rather than being silently assigned. / Moi nhom duoc doc bang cach ap tung bo loc HTTP code. Bon nhom cong lai duoc 134 trong tong 135 trang; 1 trang khong roi vao nhom nao va duoc de NGO thay vi gan bua.",
+    "organic_keywords": 0,
+    "organic_traffic": 0,
+    "ai_citations": 17,
+    "ai_by_platform": {
+      "chatgpt": 11,
+      "copilot": 6,
+      "google_ai_overviews": 0,
+      "google_ai_mode": 0,
+      "gemini": 0,
+      "perplexity": 0,
+      "grok": null
+    },
+    "cited_pages": 3,
+    "cited_pages_by_platform": {
+      "chatgpt": 3,
+      "copilot": 3
+    },
+    "cited_pages_note": "Ahrefs bao so trang duoc trich dan theo tung nen tang, khong gop trung: ChatGPT 3 trang, Copilot 3 trang (tang tu 2), nen tong thuc nam giua 3 va 6. So 3 ghi o day la muc san da xac minh. / Ahrefs reports cited pages per platform, not as a de-duplicated union: ChatGPT 3 pages, Copilot 3 pages (up from 2), so the true union sits between 3 and 6. The 3 recorded here is the verified floor."
+  },
+  "ai_visibility": {
+    "score": 26,
+    "score_max": 100,
+    "framework": "searchfit-seo:ai-visibility",
+    "platforms_present": 2,
+    "platforms_total": 6,
+    "cited_pages": 3,
+    "dimensions_measured": {
+      "presence": 2,
+      "citation_surface": 1,
+      "technical_readiness": 9,
+      "third_party_corpus": 0,
+      "measurement": 1
+    },
+    "dimensions_not_measured": [
+      "accuracy",
+      "sentiment",
+      "position"
+    ],
+    "not_measured_reason": "Can Brand Radar prompt tracking; report 'Dxliving' TON TAI trong workspace 'Nguyen Thi Thanh Tram' nhung van 0 prompt duoc track, AI SoV = '-'. / Requires Brand Radar prompt tracking; the 'Dxliving' report EXISTS in the 'Nguyen Thi Thanh Tram' workspace but still tracks 0 prompts and AI SoV = '-'.",
+    "score_method": "Trung binh 5 dimension do duoc x 10 = (2+1+9+0+1)/5 x 10 = 26 / Average of the 5 measurable dimensions x 10 = (2+1+9+0+1)/5 x 10 = 26",
+    "score_change_explanation": "GIU NGUYEN 26. Ca nam chieu do duoc deu dung yen so voi 20/08: Hien dien 2 (ChatGPT + Copilot), Be mat trich dan 1 (3 trang - muc san da xac minh), San sang ky thuat 9 (6/7 tin hieu, sitemap van hong), Corpus ben thu ba 0 (khong kiem lai), Do luong 1 (Brand Radar 0 prompt). / HOLDS at 26. All five measurable dimensions are flat versus 20 Aug: Presence 2 (ChatGPT + Copilot), Citation surface 1 (3 pages, the verified floor), Technical readiness 9 (6 of 7 signals, sitemap still broken), Third-party corpus 0 (not re-tested), Measurement 1 (Brand Radar tracks 0 prompts).",
+    "technical_readiness_method": "7 tin hieu duoc kiem; diem = ty le dat x 10. Hom nay 6/7 dat -> 8,57 lam tron 9. / 7 signals checked; score = share passing x 10. Today 6 of 7 pass -> 8.57, rounded to 9.",
+    "brand_radar": {
+      "report_exists": true,
+      "prompts_tracked": 0,
+      "ai_share_of_voice": null,
+      "reread_today": true,
+      "workspace": "Nguyen Thi Thanh Tram's workspace",
+      "note": "Report 'Dxliving' listed with AI SoV '-', Prompts 0, Shared. Unchanged for a third consecutive day."
+    },
+    "readiness": {
+      "robots_txt_blocks_ai_bots": false,
+      "sitemap_complete": false,
+      "sitemap_url_count": 16,
+      "llms_txt": true,
+      "faq_schema_on_money_pages": true,
+      "organization_schema": true,
+      "localbusiness_schema": true,
+      "articles_render": true,
+      "signals_passing": 6,
+      "signals_total": 7,
+      "reread_today": true,
+      "evidence": "Re-measured on 2026-08-21 from the dxliving.com origin. robots.txt is UNCHANGED from yesterday at 430 bytes, naming six AI crawlers with explicit Allow: / directives (GPTBot, OAI-SearchBot, ChatGPT-User, PerplexityBot, ClaudeBot, Google-Extended), with header comments pointing at /llms.txt and /llms-full.txt and a catch-all User-agent: * block that is Allow: / with Disallow: /register and Disallow: /pages/. No AI bot is blocked, so the signal PASSES. sitemap.xml is STILL BROKEN and unchanged from yesterday: 200, 2,499 bytes, 16 <loc> entries, stamped 'created with Free Online Sitemap Generator www.xml-sitemaps.com', containing ZERO article URLs - only the /articles hub - and still listing /login. The regression is now on its SECOND day with no repair. Meanwhile the /articles hub links 63 distinct article slugs today, up from 59 yesterday, so the gap between published articles and submitted URLs is WIDENING, not closing. /llms.txt returns 200 at 12,695 bytes over 128 lines, byte-identical to 18, 19 and 20 Aug, and /llms-full.txt returns 200 at 21,951 bytes; llms.txt is still NOT listed in sitemap.xml. Homepage JSON-LD parses from exactly 2 script blocks with 2 distinct payloads and yields LocalBusiness, Organization, WebSite, PostalAddress and Country. /faq returns 200 in 972ms with FAQPage + Question + Answer. /articles returns 200 in 1,123ms (faster than yesterday's 1,739ms) with CollectionPage + ItemList + ListItem + Article + BreadcrumbList. /articles/3d-rendering-sydney returns 200 in 748ms with Article + BlogPosting + FAQPage + BreadcrumbList + WebPage + Organization + ImageObject. Ahrefs Site Audit corroborates the healthy side: fresh crawl today at 04:06, Health Score 100, 15 URLs crawled, 0 internal URLs with errors - but note Ahrefs only crawls 15 URLs, which is the sitemap's shape, not the site's.",
+      "llms_txt_first_seen": "2026-08-18",
+      "llms_txt_detail": {
+        "status": 200,
+        "bytes": 12695,
+        "lines": 128,
+        "companion_file": "/llms-full.txt",
+        "companion_status": 200,
+        "companion_bytes": 21951,
+        "listed_in_sitemap": false,
+        "changed_since_yesterday": false
+      },
+      "robots_txt_detail": {
+        "status": 200,
+        "bytes": 430,
+        "ai_bots_named_with_allow": [
+          "GPTBot",
+          "OAI-SearchBot",
+          "ChatGPT-User",
+          "PerplexityBot",
+          "ClaudeBot",
+          "Google-Extended"
+        ],
+        "ai_bots_blocked": [],
+        "wildcard_disallows": [
+          "/register",
+          "/pages/"
+        ],
+        "references_llms_txt": true,
+        "changed_since_yesterday": false
+      },
+      "sitemap_detail": {
+        "status": 200,
+        "bytes": 2499,
+        "loc_count": 16,
+        "loc_count_previous": 16,
+        "loc_count_before_regression": 81,
+        "days_broken": 2,
+        "is_sitemap_index": false,
+        "contains_article_urls": false,
+        "generator_comment": "Free Online Sitemap Generator www.xml-sitemaps.com",
+        "article_slugs_linked_from_hub": 63,
+        "article_slugs_linked_from_hub_previous": 59,
+        "changed_since_yesterday": false,
+        "urls_listed": [
+          "https://dxliving.com/",
+          "https://dxliving.com/start-interactive",
+          "https://dxliving.com/about",
+          "https://dxliving.com/modules",
+          "https://dxliving.com/projects",
+          "https://dxliving.com/suppliers",
+          "https://dxliving.com/apply",
+          "https://dxliving.com/articles",
+          "https://dxliving.com/contact",
+          "https://dxliving.com/login",
+          "https://dxliving.com/studio",
+          "https://dxliving.com/interiors",
+          "https://dxliving.com/model",
+          "https://dxliving.com/prestige",
+          "https://dxliving.com/privacy-policy",
+          "https://dxliving.com/terms-of-service"
+        ]
+      },
+      "homepage_jsonld_blocks": 2,
+      "homepage_jsonld_distinct_payloads": 2
+    },
+    "third_party_corpus_note": "Khong duoc kiem lai hom nay - giu 0/10 tu lan audit SERP gan nhat (4 bo truy van non-brand). / Not re-tested today - held at 0/10 from the last SERP audit (4 non-brand query sets)."
+  },
+  "gsc_top_queries": [
+    {
+      "query": "best home builders adelaide",
+      "clicks": 0,
+      "impressions": 114,
+      "ctr_pct": 0.0,
+      "position": 34.5,
+      "type": "non-brand"
+    },
+    {
+      "query": "dx living",
+      "clicks": 18,
+      "impressions": 109,
+      "ctr_pct": 16.5,
+      "position": 3.3,
+      "type": "brand"
+    },
+    {
+      "query": "3d renders for developers melbourne",
+      "clicks": 0,
+      "impressions": 53,
+      "ctr_pct": 0.0,
+      "position": 43.2,
+      "type": "non-brand"
+    },
+    {
+      "query": "dxliving",
+      "clicks": 34,
+      "impressions": 50,
+      "ctr_pct": 68.0,
+      "position": 1.7,
+      "type": "brand"
+    },
+    {
+      "query": "3d renders for builders melbourne",
+      "clicks": 0,
+      "impressions": 50,
+      "ctr_pct": 0.0,
+      "position": 19.9,
+      "type": "non-brand"
+    },
+    {
+      "query": "3d renders for property developers melbourne",
+      "clicks": 0,
+      "impressions": 50,
+      "ctr_pct": 0.0,
+      "position": 43.8,
+      "type": "non-brand"
+    },
+    {
+      "query": "3d rendering services melbourne",
+      "clicks": 0,
+      "impressions": 49,
+      "ctr_pct": 0.0,
+      "position": 35.9,
+      "type": "non-brand"
+    },
+    {
+      "query": "3d rendering melbourne",
+      "clicks": 0,
+      "impressions": 37,
+      "ctr_pct": 0.0,
+      "position": 26.8,
+      "type": "non-brand"
+    },
+    {
+      "query": "interior finishing",
+      "clicks": 0,
+      "impressions": 32,
+      "ctr_pct": 0.0,
+      "position": 39.8,
+      "type": "non-brand"
+    },
+    {
+      "query": "quality home builders adelaide",
+      "clicks": 0,
+      "impressions": 31,
+      "ctr_pct": 0.0,
+      "position": 48.5,
+      "type": "non-brand"
+    }
+  ],
+  "notes": {
+    "vi": [
+      "Ca bon nguon deu doc duoc ngay lan quet dau hom nay: GSC, GA4, Ahrefs Site Explorer va Site Audit, Brand Radar. Khong con su co quyen truy cap nhu hom 20/08. Moi con so duoi day deu doc truc tiep hom nay, khong be so hom qua sang.",
+      "GSC 28 NGAY (22/07 -> 18/08): clicks 63, impressions 1.824, CTR 3,5%, vi tri TB 29,1, 150 truy van co hien thi. Impressions duoc CONG TAY du 28 dong tab DAYS chu khong lay o o hien thi lam tron '1.82K'. Kiem chung: cong clicks 28 dong duoc dung 63, khop chinh xac o Total clicks.",
+      "So voi 20/08: impressions 1.829 -> 1.824 (-5), clicks 65 -> 63 (-2), CTR 3,6% -> 3,5%, truy van co hien thi 151 -> 150. Diem sang duy nhat la vi tri TB 29,2 -> 29,1, muc TOT NHAT tu truoc toi nay. Nhac lai: day la cua so truot 28 ngay nen bien dong la do cua so dich chuyen, khong phai traffic cua rieng mot ngay.",
+      "Phu thuoc brand van rat cao: dxliving 34 clicks + dx living 18 clicks = 52/63 = 82,5% tong clicks. Dang chu y hon: trong TOAN BO bang 150 truy van, CHI CO DUNG HAI truy van co click khac 0 - va ca hai deu la brand. 11 click con lai nam trong nhom truy van an danh cua Google.",
+      "Toan bo top truy van non-brand co impressions lon nhung 0 CLICK: 'best home builders adelaide' 114 impressions o vi tri 34,5; '3d renders for developers melbourne' 53 o vi tri 43,2; '3d renders for builders melbourne' 50 o vi tri 19,9; '3d rendering services melbourne' 49 o vi tri 35,9. Van de la THU HANG chu khong phai thieu hien thi.",
+      "GA4 28 NGAY (24/07 -> 20/08): sessions 133, engaged 60, engagement rate 45,11%, thoi gian TB 43s, 4,56 event/session, 606 event, 1 key event. Users 63 (49 moi, 17 quay lai). So voi 20/08: sessions 120 -> 133, events 569 -> 606, users 59 -> 63.",
+      "Engagement rate tiep tuc giam 50,0% -> 45,11% va key events 3 -> 1. Key event con lai den tu Direct. Kenh: Direct 52 session, Organic Search 45, Organic Social 33, AI Assistant 3.",
+      "KIEM TRA SUC KHOE GA4 - VAN TOT. Hai cua so 7 ngay tuy chinh cho thay ro ranh gioi: 07-13/08 chi 1 session, 14-20/08 dat 92 session va 426 event. Tracking tren trang chu khong doi: 4 the script tag tai that, google_tag_manager giu ca ba container GTM-PZ9N8QTR / AW-18039433307 / G-43HE633LGK, do luong GA4 G-43HE633LGK hien dien, script #dx-analytics-dedupe van da bi go.",
+      "Tuy vay so GA4 VAN la so THIEU vi cua so 24/07-20/08 con chua phan lon giai doan hong 29/07-12/08. Du lieu giai doan do da mat vinh vien. Du kien cua so sach han khoang 09/09/2026. KHONG duoc doc con so 133 nhu la traffic that cua 28 ngay.",
+      "Kenh AI assistant giu 3 session tu chatgpt.com (2,26% tong), 66,67% engagement, 15 giay, 6,67 event/session, 20 event, van 0 key event - ngay thu ba dung yen.",
+      "Ahrefs authority nhich rat nhe sau mot ngay dung yen tuyet doi: referring domains 425 -> 426 (+1, all-time 441 -> 442), backlinks 440 -> 441 (+1, all-time 467 -> 468). Followed giu 8/8, tuc 8/426 = 1,9%, ngay thu sau lien tiep. DR van 0, UR van 0, organic keywords va organic traffic van 0.",
+      "Ahrefs Site Audit: crawl moi hom nay luc 04:06, Health Score 100, 15 URL crawl (tang tu 14), 0 URL noi bo loi. Luu y: Ahrefs chi crawl 15 URL - do la hinh dang cua sitemap dang hong, khong phai hinh dang cua site. Health 100 o day KHONG co nghia la site khoe.",
+      "Crawled pages trong Site Explorer 131 -> 135. Co cau HTTP doc bang cach ap tung bo loc: 127 ma 200, 2 ma 3XX, 5 ma 404, 0 ma 4XX khac, 0 ma 5XX. Bon nhom cong lai duoc 134/135; 1 trang khong roi vao nhom nao va duoc de NGO thay vi gan bua. So 404 giu nguyen 5 ngay thu tu.",
+      "TRICH DAN AI GIU 17. ChatGPT 11, Copilot 6 - ca hai deu dung yen. Diem thay doi duy nhat: so trang duoc Copilot trich dan 2 -> 3, nen tong trang duoc trich dan (khong gop trung) la ChatGPT 3 + Copilot 3. Muc san da xac minh van la 3. AI Overviews, AI Mode, Gemini, Perplexity van 0; Grok bi Ahrefs tam dung nen ghi null, khong phai 0.",
+      "SITEMAP.XML VAN HONG - NGAY THU HAI, KHONG DUOC SUA. File giu nguyen 200 / 2.499 byte / 16 URL, van mang dau 'Free Online Sitemap Generator', van KHONG co bat ky URL bai viet nao, va van liet ke /login.",
+      "Va khoang cach dang RONG THEM: trang hub /articles hom nay lien ket 63 slug bai viet, tang tu 59 hom qua. Tuc la co bai moi duoc xuat ban nhung KHONG duoc submit cho Google hay bot AI. Moi ngay de nguyen la moi ngay noi dung moi bi vo hinh.",
+      "Cac tin hieu ky thuat con lai VAN DAT va mot so con nhanh hon: robots.txt khong doi (430 byte, 6 bot AI duoc Allow tuong minh); /llms.txt 200 (12.695 byte, 128 dong, khong doi tu 18/08) kem /llms-full.txt 200; /faq 200 trong 0,97s voi FAQPage; /articles 200 trong 1,12s (nhanh hon 1,74s hom qua) voi CollectionPage + ItemList + Article + BreadcrumbList; /articles/3d-rendering-sydney 200 trong 0,75s voi Article + BlogPosting + FAQPage + BreadcrumbList; trang chu co dung 2 khoi JSON-LD voi Organization + LocalBusiness + WebSite.",
+      "SAN SANG KY THUAT GIU 9 (6/7 tin hieu). Chi mot tin hieu truot va do van la sitemap.",
+      "AI VISIBILITY GIU 26. Ca nam chieu do duoc deu dung yen: Hien dien 2, Be mat trich dan 1, San sang ky thuat 9, Corpus ben thu ba 0, Do luong 1. Cong thuc: (2+1+9+0+1)/5 x 10 = 26.",
+      "Ba chieu Do chinh xac, Sac thai, Thu tu van de trong vi Brand Radar chua bat prompt tracking. Report 'Dxliving' van ton tai voi 0 prompt va AI SoV '-' - ngay thu ba khong doi. Khong suy doan.",
+      "Corpus ben thu ba giu 0/10 va KHONG duoc kiem lai hom nay - danh dau ro, khong be so.",
+      "VIEC CAN LAM: (P0, qua han 2 ngay) dung lai sitemap.xml day du bao gom toan bo 63 bai viet, bo /login, va liet ke luon /llms.txt; (P0) bat prompt tracking Brand Radar 15-20 prompt AU de mo khoa ba chieu con thieu; (P1) tan cong thu hang cho cum truy van non-brand dang o vi tri 19-44 nhung co 49-114 impressions - dac biet '3d renders for builders melbourne' o vi tri 19,9 la muc gan trang 2 nhat va dang la co hoi de nhat."
+    ],
+    "en": [
+      "All four sources were readable on the first pass today: GSC, GA4, Ahrefs Site Explorer and Site Audit, and Brand Radar. There was no repeat of the 20 Aug access outage. Every figure below was read directly today; nothing was carried over from yesterday.",
+      "GSC 28 DAYS (22 Jul -> 18 Aug): 63 clicks, 1,824 impressions, 3.5% CTR, average position 29.1, 150 queries with impressions. Impressions were SUMMED BY HAND across all 28 rows of the DAYS tab rather than taken from the rounded '1.82K' tile. Verification: the same 28 rows sum to exactly 63 clicks, matching the Total clicks tile.",
+      "Against 20 Aug: impressions 1,829 -> 1,824 (-5), clicks 65 -> 63 (-2), CTR 3.6% -> 3.5%, queries with impressions 151 -> 150. The one bright spot is average position 29.2 -> 29.1, the BEST reading recorded so far. Reminder: this is a rolling 28-day window, so movements are the window shifting rather than any single day's traffic.",
+      "Brand dependence remains very high: dxliving 34 clicks + dx living 18 clicks = 52 of 63 = 82.5% of all clicks. More striking: across the ENTIRE 150-row query table, EXACTLY TWO queries have a non-zero click count, and both are brand. The remaining 11 clicks sit in Google's anonymised-query bucket.",
+      "Every top non-brand query draws impressions but ZERO clicks: 'best home builders adelaide' 114 impressions at position 34.5; '3d renders for developers melbourne' 53 at 43.2; '3d renders for builders melbourne' 50 at 19.9; '3d rendering services melbourne' 49 at 35.9. The problem is RANK, not exposure.",
+      "GA4 28 DAYS (24 Jul -> 20 Aug): 133 sessions, 60 engaged, 45.11% engagement rate, 43s average engagement time, 4.56 events per session, 606 events, 1 key event. 63 users (49 new, 17 returning). Against 20 Aug: sessions 120 -> 133, events 569 -> 606, users 59 -> 63.",
+      "Engagement rate keeps sliding 50.0% -> 45.11% and key events 3 -> 1. The one remaining key event came from Direct. By channel: Direct 52 sessions, Organic Search 45, Organic Social 33, AI Assistant 3.",
+      "GA4 HEALTH CHECK - STILL GOOD. Two custom 7-day windows show the boundary cleanly: 7-13 Aug holds just 1 session while 14-20 Aug holds 92 sessions and 426 events. Homepage tracking is unchanged: 4 tag scripts actually load, google_tag_manager holds all three containers GTM-PZ9N8QTR / AW-18039433307 / G-43HE633LGK, the GA4 measurement ID G-43HE633LGK is present, and the #dx-analytics-dedupe script is still gone.",
+      "Even so the GA4 figures REMAIN an UNDER-COUNT, because the 24 Jul-20 Aug window still contains most of the 29 Jul-12 Aug outage. That data is permanently lost. The window should clear fully around 9 Sep 2026. Do NOT read 133 as a true 28-day traffic figure.",
+      "The AI assistant channel holds at 3 sessions from chatgpt.com (2.26% of total), 66.67% engagement, 15 seconds, 6.67 events per session, 20 events, still 0 key events - flat for a third day.",
+      "Ahrefs authority ticked up very slightly after yesterday's completely flat day: referring domains 425 -> 426 (+1, all-time 441 -> 442) and backlinks 440 -> 441 (+1, all-time 467 -> 468). Followed held at 8/8, i.e. 8 of 426 = 1.9%, for a sixth consecutive day. DR still 0, UR still 0, organic keywords and organic traffic still 0.",
+      "Ahrefs Site Audit: a fresh crawl ran today at 04:06 with Health Score 100, 15 URLs crawled (up from 14) and 0 internal URLs with errors. Note the caveat: Ahrefs only crawls 15 URLs, which is the shape of the broken sitemap, not the shape of the site. A Health Score of 100 here does NOT mean the site is healthy.",
+      "Crawled pages in Site Explorer moved 131 -> 135. The HTTP mix was read by applying each filter in turn: 127 at 200, 2 at 3XX, 5 at 404, 0 at other 4XX, 0 at 5XX. Those four buckets sum to 134 of 135; 1 page falls into none of them and is left UNEXPLAINED rather than being silently assigned. The 404 count holds at 5 for a fourth day.",
+      "AI CITATIONS HOLD AT 17. ChatGPT 11 and Copilot 6, both flat. The only movement: Copilot's cited-page count went 2 -> 3, so the per-platform totals are now ChatGPT 3 pages + Copilot 3 pages. The verified floor stays at 3. AI Overviews, AI Mode, Gemini and Perplexity remain 0; Grok is paused by Ahrefs so it is recorded as null, not 0.",
+      "SITEMAP.XML IS STILL BROKEN - DAY TWO, UNREPAIRED. The file is unchanged at 200 / 2,499 bytes / 16 URLs, still carrying the 'Free Online Sitemap Generator' marker, still containing NO article URLs at all, and still listing /login.",
+      "And the gap is WIDENING: the /articles hub links 63 distinct article slugs today, up from 59 yesterday. New articles are being published but are NOT being submitted to Google or to AI crawlers. Every day this sits unfixed is another day of new content going invisible.",
+      "The remaining technical signals all still PASS and some got faster: robots.txt unchanged (430 bytes, six AI bots with explicit Allow); /llms.txt 200 (12,695 bytes, 128 lines, unchanged since 18 Aug) with /llms-full.txt at 200; /faq 200 in 0.97s with FAQPage; /articles 200 in 1.12s (faster than yesterday's 1.74s) with CollectionPage + ItemList + Article + BreadcrumbList; /articles/3d-rendering-sydney 200 in 0.75s with Article + BlogPosting + FAQPage + BreadcrumbList; and the homepage carries exactly 2 JSON-LD blocks with Organization + LocalBusiness + WebSite.",
+      "TECHNICAL READINESS HOLDS AT 9 (6 of 7 signals). Only one signal is broken and it is still the sitemap.",
+      "AI VISIBILITY HOLDS AT 26. All five measurable dimensions are flat: Presence 2, Citation surface 1, Technical readiness 9, Third-party corpus 0, Measurement 1. Formula: (2+1+9+0+1)/5 x 10 = 26.",
+      "Accuracy, Sentiment and Position remain blank because Brand Radar prompt tracking is still off. The 'Dxliving' report still exists with 0 prompts and AI SoV '-' - unchanged for a third day. Nothing is guessed.",
+      "Third-party corpus holds at 0/10 and was NOT re-tested today - flagged as such rather than carried forward silently.",
+      "WHAT TO DO: (P0, now two days overdue) rebuild a complete sitemap.xml covering all 63 articles, drop /login and list /llms.txt; (P0) turn on Brand Radar prompt tracking with 15-20 AU prompts to unlock the three blank dimensions; (P1) attack rank for the non-brand cluster sitting at positions 19-44 with 49-114 impressions - '3d renders for builders melbourne' at position 19.9 is the closest to page two and the easiest win on the board."
+    ]
+  }
+}

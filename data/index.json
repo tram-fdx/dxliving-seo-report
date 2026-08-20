@@ -1,7 +1,7 @@
 {
   "site": "dxliving.com",
   "description": "Lịch sử snapshot dữ liệu SEO theo ngày / Daily SEO data snapshot history. Mỗi ngày một file data/YYYY-MM-DD.json + bản HTML đóng băng archive/YYYY-MM-DD.html.",
-  "latest": "2026-08-20",
+  "latest": "2026-08-21",
   "snapshots": [
     {
       "date": "2026-06-30",
@@ -121,6 +121,13 @@
       "report": "archive/2026-08-20.html",
       "label_vi": "Quyền Google cấp lại trong ngày: GSC 65 clicks / 1.829 impressions (đỉnh mới) / vị trí 29,2, brand 83,1%; GA4 112→120 session; Ahrefs đứng yên 425/440, Health 100; trích dẫn AI 18→17; sitemap sập 81→16 URL; AI Visibility 28→26",
       "label_en": "Google access restored same day: GSC 65 clicks / 1,829 impressions (new peak) / position 29.2, brand 83.1%; GA4 112->120 sessions; Ahrefs flat 425/440, Health 100; AI citations 18->17; sitemap collapsed 81->16 URLs; AI Visibility 28->26"
+    },
+    {
+      "date": "2026-08-21",
+      "data": "data/2026-08-21.json",
+      "report": "archive/2026-08-21.html",
+      "label_vi": "GSC 63 clicks / 1.824 impressions, vị trí TB 29,1 (tốt nhất từ trước tới nay) nhưng chỉ 2/150 truy vấn có click và cả hai đều brand (82,5%); GA4 120→133 session, engagement 50,0%→45,1%, key events 3→1; Ahrefs RD 425→426, BL 440→441, trích dẫn AI giữ 17 (Copilot pages 2→3); sitemap.xml vẫn hỏng ngày thứ hai trong khi bài viết 59→63; AI Visibility giữ 26",
+      "label_en": "GSC 63 clicks / 1,824 impressions, avg position 29.1 (best yet) but only 2 of 150 queries drew clicks and both are brand (82.5%); GA4 120->133 sessions, engagement 50.0%->45.1%, key events 3->1; Ahrefs RD 425->426, BL 440->441, AI citations flat at 17 (Copilot pages 2->3); sitemap.xml still broken on day two while articles grew 59->63; AI Visibility flat at 26"
     }
   ]
 }
