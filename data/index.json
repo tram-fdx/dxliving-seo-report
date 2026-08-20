@@ -119,8 +119,8 @@
       "date": "2026-08-20",
       "data": "data/2026-08-20.json",
       "report": "archive/2026-08-20.html",
-      "label_vi": "Mất quyền GA4 + xoá 2 project Ahrefs; sitemap sập 81→16 URL (không còn bài viết); GSC mất ngày 2; trích dẫn AI 18→17; AI Visibility 28→24",
-      "label_en": "GA4 access lost + both Ahrefs projects deleted; sitemap collapsed 81->16 URLs (no articles); GSC day 2 unreadable; AI citations 18->17; AI Visibility 28->24"
+      "label_vi": "Quyền Google cấp lại trong ngày: GSC 65 clicks / 1.829 impressions (đỉnh mới) / vị trí 29,2, brand 83,1%; GA4 112→120 session; Ahrefs đứng yên 425/440, Health 100; trích dẫn AI 18→17; sitemap sập 81→16 URL; AI Visibility 28→26",
+      "label_en": "Google access restored same day: GSC 65 clicks / 1,829 impressions (new peak) / position 29.2, brand 83.1%; GA4 112->120 sessions; Ahrefs flat 425/440, Health 100; AI citations 18->17; sitemap collapsed 81->16 URLs; AI Visibility 28->26"
     }
   ]
 }
