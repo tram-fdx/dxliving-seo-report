@@ -179,7 +179,7 @@
       "signals_passing": 6,
       "signals_total": 7,
       "reread_today": true,
-      "evidence": "Re-measured on 2026-08-21 from the dxliving.com origin. robots.txt is UNCHANGED from yesterday at 430 bytes, naming six AI crawlers with explicit Allow: / directives (GPTBot, OAI-SearchBot, ChatGPT-User, PerplexityBot, ClaudeBot, Google-Extended), with header comments pointing at /llms.txt and /llms-full.txt and a catch-all User-agent: * block that is Allow: / with Disallow: /register and Disallow: /pages/. No AI bot is blocked, so the signal PASSES. sitemap.xml is STILL BROKEN and unchanged from yesterday: 200, 2,499 bytes, 16 <loc> entries, stamped 'created with Free Online Sitemap Generator www.xml-sitemaps.com', containing ZERO article URLs - only the /articles hub - and still listing /login. The regression is now on its SECOND day with no repair. Meanwhile the /articles hub links 63 distinct article slugs today, up from 59 yesterday, so the gap between published articles and submitted URLs is WIDENING, not closing. /llms.txt returns 200 at 12,695 bytes over 128 lines, byte-identical to 18, 19 and 20 Aug, and /llms-full.txt returns 200 at 21,951 bytes; llms.txt is still NOT listed in sitemap.xml. Homepage JSON-LD parses from exactly 2 script blocks with 2 distinct payloads and yields LocalBusiness, Organization, WebSite, PostalAddress and Country. /faq returns 200 in 972ms with FAQPage + Question + Answer. /articles returns 200 in 1,123ms (faster than yesterday's 1,739ms) with CollectionPage + ItemList + ListItem + Article + BreadcrumbList. /articles/3d-rendering-sydney returns 200 in 748ms with Article + BlogPosting + FAQPage + BreadcrumbList + WebPage + Organization + ImageObject. Ahrefs Site Audit corroborates the healthy side: fresh crawl today at 04:06, Health Score 100, 15 URLs crawled, 0 internal URLs with errors - but note Ahrefs only crawls 15 URLs, which is the sitemap's shape, not the site's.",
+      "evidence": "Re-measured on 2026-08-21 from the dxliving.com origin. robots.txt is UNCHANGED from yesterday at 430 bytes, naming six AI crawlers with explicit Allow: / directives (GPTBot, OAI-SearchBot, ChatGPT-User, PerplexityBot, ClaudeBot, Google-Extended), with header comments pointing at /llms.txt and /llms-full.txt and a catch-all User-agent: * block that is Allow: / with Disallow: /register and Disallow: /pages/. No AI bot is blocked, so the signal PASSES. sitemap.xml is STILL BROKEN and unchanged from yesterday: 200, 2,499 bytes, 16 <loc> entries, stamped 'created with Free Online Sitemap Generator www.xml-sitemaps.com', containing ZERO article URLs - only the /articles hub - and still listing /login. The regression is now on its SECOND day with no repair. Meanwhile the /articles hub links 60 articles today (counted by href, all 60 returning HTTP 200) against 16 submitted URLs, so 44 live articles are not submitted at all. /llms.txt returns 200 at 12,695 bytes over 128 lines, byte-identical to 18, 19 and 20 Aug, and /llms-full.txt returns 200 at 21,951 bytes; llms.txt is still NOT listed in sitemap.xml. Homepage JSON-LD parses from exactly 2 script blocks with 2 distinct payloads and yields LocalBusiness, Organization, WebSite, PostalAddress and Country. /faq returns 200 in 972ms with FAQPage + Question + Answer. /articles returns 200 in 1,123ms (faster than yesterday's 1,739ms) with CollectionPage + ItemList + ListItem + Article + BreadcrumbList. /articles/3d-rendering-sydney returns 200 in 748ms with Article + BlogPosting + FAQPage + BreadcrumbList + WebPage + Organization + ImageObject. Ahrefs Site Audit corroborates the healthy side: fresh crawl today at 04:06, Health Score 100, 15 URLs crawled, 0 internal URLs with errors - but note Ahrefs only crawls 15 URLs, which is the sitemap's shape, not the site's.",
       "llms_txt_first_seen": "2026-08-18",
       "llms_txt_detail": {
         "status": 200,
@@ -220,8 +220,7 @@
         "is_sitemap_index": false,
         "contains_article_urls": false,
         "generator_comment": "Free Online Sitemap Generator www.xml-sitemaps.com",
-        "article_slugs_linked_from_hub": 63,
-        "article_slugs_linked_from_hub_previous": 59,
+        "article_slugs_linked_from_hub": 60,
         "changed_since_yesterday": false,
         "urls_listed": [
           "https://dxliving.com/",
@@ -240,12 +239,14 @@
           "https://dxliving.com/prestige",
           "https://dxliving.com/privacy-policy",
           "https://dxliving.com/terms-of-service"
-        ]
+        ],
+        "article_slugs_linked_from_hub_method": "Counted by <a href> anchors on the /articles hub and HEAD-checked: 60 links, all HTTP 200. CORRECTION: the first pass today reported 63 using a loose regex that also matched non-anchor substrings in inline JSON; the href-based count of 60 supersedes it. / Dem theo the <a href> tren hub /articles va kiem HEAD: 60 link, tat ca HTTP 200. SUA: lan quet dau hom nay bao 63 do regex bat ca chuoi khong phai anchor trong JSON inline; con so 60 theo href thay the."
       },
       "homepage_jsonld_blocks": 2,
       "homepage_jsonld_distinct_payloads": 2
     },
-    "third_party_corpus_note": "Khong duoc kiem lai hom nay - giu 0/10 tu lan audit SERP gan nhat (4 bo truy van non-brand). / Not re-tested today - held at 0/10 from the last SERP audit (4 non-brand query sets)."
+    "third_party_corpus_note": "Khong duoc kiem lai hom nay - giu 0/10 tu lan audit SERP gan nhat (4 bo truy van non-brand). / Not re-tested today - held at 0/10 from the last SERP audit (4 non-brand query sets).",
+    "dimensions_measured_note": "Technical readiness holds at 9/10 (6 of 7 signals). Re-verified 21 Aug against GSC Page indexing, GSC Sitemaps and the live origin."
   },
   "gsc_top_queries": [
     {
@@ -352,7 +353,14 @@
       "AI VISIBILITY GIU 26. Ca nam chieu do duoc deu dung yen: Hien dien 2, Be mat trich dan 1, San sang ky thuat 9, Corpus ben thu ba 0, Do luong 1. Cong thuc: (2+1+9+0+1)/5 x 10 = 26.",
       "Ba chieu Do chinh xac, Sac thai, Thu tu van de trong vi Brand Radar chua bat prompt tracking. Report 'Dxliving' van ton tai voi 0 prompt va AI SoV '-' - ngay thu ba khong doi. Khong suy doan.",
       "Corpus ben thu ba giu 0/10 va KHONG duoc kiem lai hom nay - danh dau ro, khong be so.",
-      "VIEC CAN LAM: (P0, qua han 2 ngay) dung lai sitemap.xml day du bao gom toan bo 63 bai viet, bo /login, va liet ke luon /llms.txt; (P0) bat prompt tracking Brand Radar 15-20 prompt AU de mo khoa ba chieu con thieu; (P1) tan cong thu hang cho cum truy van non-brand dang o vi tri 19-44 nhung co 49-114 impressions - dac biet '3d renders for builders melbourne' o vi tri 19,9 la muc gan trang 2 nhat va dang la co hoi de nhat."
+      "VIEC CAN LAM: (P0, qua han 2 ngay) dung lai sitemap.xml day du bao gom toan bo 60 bai viet, bo /login, va liet ke luon /llms.txt; (P0) bat prompt tracking Brand Radar 15-20 prompt AU de mo khoa ba chieu con thieu; (P1) tan cong thu hang cho cum truy van non-brand dang o vi tri 19-44 nhung co 49-114 impressions - dac biet '3d renders for builders melbourne' o vi tri 19,9 la muc gan trang 2 nhat va dang la co hoi de nhat.",
+      "RA LAI BON KHOI TINH (chay bo sung trong ngay, theo yeu cau). Bon khoi con lai o nua duoi bao cao deu dong bang tu 27/07: Suc khoe ky thuat, Chien luoc tu khoa, Ke hoach hanh dong, Snapshot Social. Ca bon da duoc dung lai bang so do lai hom nay.",
+      "SUA SO DA CONG BO SANG NAY: so bai viet tren hub /articles la 60, KHONG phai 63. Lan quet dau dung regex bat ca chuoi khong phai the <a href> trong JSON inline. Dem lai theo href: dung 60 link, ca 60 deu tra HTTP 200. Con so 16 URL trong sitemap khong doi, nen ket luan khong doi - chi con so bi anh huong.",
+      "KY THUAT: GSC bao 109 trang da index / 68 chua index (31 noindex, 18 da crawl chua index, 7 phat hien chua crawl, 6 loi 404, 4 redirect, 1 loi redirect, 1 trung canonical). GSC Sitemaps xac nhan Google chi doc duoc 16 trang tu sitemap, doc lan cuoi 20/08, trang thai Success. HTTPS sach: 0 URL non-HTTPS.",
+      "BON LOI CUA AUDIT 21/07 DA HET: /articles khong con timeout (12 bai mau, TB 0,89s), server khong con cham (8 trang chinh TB 1,23s so voi 4,59s cu), homepage da co Organization + LocalBusiness JSON-LD, va template bai viet chi con 1 the H1 (kiem 20 trang). Khong con link noi bo gay: 60/60 link bai tra 200.",
+      "CORE WEB VITALS KHONG DO DUOC: GSC tra 'Not enough usage data in the last 90 days' cho ca mobile lan desktop. Ghi null. KHONG duoc doc la diem kem. Ghi chu cu 'Lighthouse fail 20/20 trang' da bo vi la ket qua lab mot lan crawl 21/07, khong kiem lai duoc.",
+      "CANNIBALISATION RONG HON GHI NHAN CU: cum rendering Melbourne co 4 trang cung nham mot y dinh (phat hien moi hom nay), cum custom home builders Melbourne co 2 trang. GSC dong thoi bao 1 trang 'Google chon canonical khac'.",
+      "SOCIAL: doc tu dashboard social rieng (cap nhat hang ngay) thay vi giu so Thang 6. Tong follower 4 kenh 197 -> 266 (+35%). FB 4.978 views / 115 follower; LinkedIn 1.708 impressions / 101 follower / 48 follower moi trong 30 ngay; IG reach 317 voi 300 den tu nguoi chua follow / 46 follower; YouTube 60 views / 4 subscriber / 0,1 gio watch time."
     ],
     "en": [
       "All four sources were readable on the first pass today: GSC, GA4, Ahrefs Site Explorer and Site Audit, and Brand Radar. There was no repeat of the 20 Aug access outage. Every figure below was read directly today; nothing was carried over from yesterday.",
@@ -376,7 +384,114 @@
       "AI VISIBILITY HOLDS AT 26. All five measurable dimensions are flat: Presence 2, Citation surface 1, Technical readiness 9, Third-party corpus 0, Measurement 1. Formula: (2+1+9+0+1)/5 x 10 = 26.",
       "Accuracy, Sentiment and Position remain blank because Brand Radar prompt tracking is still off. The 'Dxliving' report still exists with 0 prompts and AI SoV '-' - unchanged for a third day. Nothing is guessed.",
       "Third-party corpus holds at 0/10 and was NOT re-tested today - flagged as such rather than carried forward silently.",
-      "WHAT TO DO: (P0, now two days overdue) rebuild a complete sitemap.xml covering all 63 articles, drop /login and list /llms.txt; (P0) turn on Brand Radar prompt tracking with 15-20 AU prompts to unlock the three blank dimensions; (P1) attack rank for the non-brand cluster sitting at positions 19-44 with 49-114 impressions - '3d renders for builders melbourne' at position 19.9 is the closest to page two and the easiest win on the board."
+      "WHAT TO DO: (P0, now two days overdue) rebuild a complete sitemap.xml covering all 60 articles, drop /login and list /llms.txt; (P0) turn on Brand Radar prompt tracking with 15-20 AU prompts to unlock the three blank dimensions; (P1) attack rank for the non-brand cluster sitting at positions 19-44 with 49-114 impressions - '3d renders for builders melbourne' at position 19.9 is the closest to page two and the easiest win on the board.",
+      "FOUR STATIC BLOCKS REVIEWED (follow-up run the same day, on request). The four remaining blocks in the lower half of the report had all been frozen since 27 Jul: Technical health, Keyword strategy, Action plan, Social snapshot. All four were rebuilt from figures re-measured today.",
+      "CORRECTION TO A FIGURE PUBLISHED THIS MORNING: the /articles hub carries 60 articles, NOT 63. The first pass used a loose regex that also matched non-anchor substrings inside inline JSON. Re-counted by <a href>: exactly 60 links, all returning HTTP 200. The 16-URL sitemap figure is unchanged, so the conclusion stands - only the number was affected.",
+      "TECHNICAL: GSC reports 109 pages indexed / 68 not indexed (31 noindex, 18 crawled-not-indexed, 7 discovered-not-crawled, 6 404s, 4 redirects, 1 redirect error, 1 duplicate canonical). GSC Sitemaps confirms Google discovers only 16 pages from the sitemap, last read 20 Aug, status Success. HTTPS is clean: 0 non-HTTPS URLs.",
+      "ALL FOUR FAULTS FROM THE 21 JUL AUDIT ARE GONE: /articles no longer times out (12 sample articles, avg 0.89s), the server is no longer slow (8 core pages avg 1.23s against the old 4.59s), the homepage now carries Organization + LocalBusiness JSON-LD, and the article template renders exactly 1 H1 (checked across 20 pages). No broken internal links: 60 of 60 article links return 200.",
+      "CORE WEB VITALS ARE UNMEASURABLE: GSC returns 'Not enough usage data in the last 90 days' for both mobile and desktop. Recorded as null. This must NOT be read as a poor score. The old 'Lighthouse fails on 20/20 pages' line was dropped because it was a one-off lab result from the 21 Jul crawl and could not be re-verified.",
+      "CANNIBALISATION IS WIDER THAN PREVIOUSLY RECORDED: the Melbourne rendering cluster has 4 pages chasing one intent (new finding today), and the custom home builders Melbourne cluster has 2. GSC independently reports 1 page where Google chose a different canonical.",
+      "SOCIAL: read from the dedicated social dashboard (refreshed daily) instead of holding June figures. Total followers across 4 channels 197 -> 266 (+35%). FB 4,978 views / 115 followers; LinkedIn 1,708 impressions / 101 followers / 48 new followers in 30 days; IG reach 317 with 300 from non-followers / 46 followers; YouTube 60 views / 4 subscribers / 0.1 hours watch time."
     ]
+  },
+  "technical_health": {
+    "measured_at": "2026-08-21",
+    "source": "GSC Page indexing (updated 2026-08-17), GSC Sitemaps (Google last read 2026-08-20), GSC Core Web Vitals + HTTPS (updated 2026-08-19), plus direct fetches on the dxliving.com origin",
+    "pages_indexed": 109,
+    "pages_not_indexed": 68,
+    "not_indexed_reasons": {
+      "excluded_by_noindex": 31,
+      "crawled_not_indexed": 18,
+      "discovered_not_indexed": 7,
+      "not_found_404": 6,
+      "page_with_redirect": 4,
+      "redirect_error": 1,
+      "duplicate_google_chose_different_canonical": 1
+    },
+    "sitemap_discovered_pages_per_google": 16,
+    "sitemap_submitted_on": "2026-06-03",
+    "sitemap_last_read_by_google": "2026-08-20",
+    "sitemap_status_per_google": "Success",
+    "hub_article_links": 60,
+    "hub_article_links_all_200": true,
+    "avg_response_ms_12_articles": 890,
+    "avg_response_ms_8_core_pages": 1234,
+    "slowest_core_page": {
+      "path": "/",
+      "ms": 2574
+    },
+    "h1_per_page": 1,
+    "h1_pages_checked": 20,
+    "all_pages_have_canonical": true,
+    "meta_description_length_range": [
+      125,
+      178
+    ],
+    "core_web_vitals": null,
+    "core_web_vitals_note": "GSC Core Web Vitals returns 'Not enough usage data in the last 90 days' for BOTH mobile and desktop (source: Chrome UX Report). Recorded as null, NOT as a failing score. / GSC Core Web Vitals tra 'Not enough usage data in the last 90 days' cho CA mobile lan desktop. Ghi null, KHONG phai diem kem.",
+    "https_non_https_urls": 0,
+    "https_urls_known_to_google": 15,
+    "resolved_since_2026_07_21_audit": [
+      "/articles render timeout (34 URLs at 15s) - now all 200, avg 890ms",
+      "slow server avg 4.59s/page - now avg 1.23s across 8 core pages",
+      "missing homepage Organization/LocalBusiness JSON-LD - now present, 2 blocks",
+      "double H1 in the article template - now exactly 1 H1 across 20 pages checked"
+    ],
+    "not_audited_today": [
+      "the list of 31 noindex pages",
+      "the 18 crawled-but-not-indexed pages"
+    ]
+  },
+  "cannibalisation": {
+    "measured_at": "2026-08-21",
+    "method": "Counted <a href> slugs on the /articles hub",
+    "melbourne_rendering_cluster": [
+      "3d-rendering-company-melbourne",
+      "3d-rendering-melbourne-pre-construction-planning",
+      "architectural-rendering-melbourne-pre-construction-planning",
+      "photorealistic-rendering-melbourne-developers"
+    ],
+    "custom_home_builders_melbourne_cluster": [
+      "custom-home-builders-melbourne-3d-visualisation",
+      "custom-home-builders-melbourne-pre-build-clarity"
+    ],
+    "note": "The 4-page Melbourne rendering cluster is a NEW finding on 21 Aug; the previous record only noted the 2 builder pages. GSC independently reports 1 page where Google chose a different canonical. / Cum rendering Melbourne 4 trang la phat hien MOI ngay 21/08; ban ghi truoc do chi neu 2 trang builders."
+  },
+  "social_snapshot": {
+    "measured_at": "2026-08-21",
+    "source": "https://tram-fdx.github.io/dxl-social-dashboard-site/ (dedicated dashboard, refreshed daily)",
+    "window": "28 days",
+    "total_followers": 266,
+    "total_followers_june_2026": 197,
+    "facebook": {
+      "followers": 115,
+      "views_28d": 4978,
+      "reach": 546,
+      "content_interactions": 170,
+      "views_from_non_followers_pct": 54.7
+    },
+    "linkedin": {
+      "followers": 101,
+      "impressions": 1708,
+      "reactions": 62,
+      "page_views": 106,
+      "unique_visitors": 39,
+      "new_followers_30d": 48
+    },
+    "instagram": {
+      "followers": 46,
+      "views_28d": 925,
+      "reach_28d": 317,
+      "content_interactions": 74,
+      "reach_from_non_followers": 300
+    },
+    "youtube": {
+      "subscribers": 4,
+      "views_28d": 60,
+      "watch_time_hours": 0.1,
+      "videos_published": 27
+    },
+    "tiktok_x": null,
+    "ga4_organic_social_sessions_28d": 33
   }
 }
