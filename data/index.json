@@ -1,7 +1,7 @@
 {
   "site": "dxliving.com",
   "description": "Lịch sử snapshot dữ liệu SEO theo ngày / Daily SEO data snapshot history. Mỗi ngày một file data/YYYY-MM-DD.json + bản HTML đóng băng archive/YYYY-MM-DD.html.",
-  "latest": "2026-08-21",
+  "latest": "2026-08-24",
   "snapshots": [
     {
       "date": "2026-06-30",
@@ -128,6 +128,13 @@
       "report": "archive/2026-08-21.html",
       "label_vi": "GSC 63 clicks / 1.824 impressions, vị trí TB 29,1 (tốt nhất từ trước tới nay) nhưng chỉ 2/150 truy vấn có click, cả hai đều brand (82,5%); GA4 120→133 session; Ahrefs RD 425→426, BL 440→441, trích dẫn AI giữ 17; AI Visibility giữ 26. RÀ TOÀN BỘ KHỐI TĨNH: gỡ 3 khối tham chiếu T6/SERP đóng băng từ 27/07, thay bằng So sánh theo tháng T7 vs T6 tự cuộn; dựng lại 4 khối còn lại (Kỹ thuật, Từ khoá, Kế hoạch, Social) bằng số đo mới — GSC 109 index/68 chưa index, sitemap Google chỉ đọc 16 URL, 4 lỗi audit 21/07 đều đã hết, social 197→266 follower. Sửa số bài viết 63→60 (đếm theo href)",
       "label_en": "GSC 63 clicks / 1,824 impressions, avg position 29.1 (best yet) but only 2 of 150 queries drew clicks, both brand (82.5%); GA4 120->133 sessions; Ahrefs RD 425->426, BL 440->441, AI citations flat at 17; AI Visibility flat at 26. FULL STATIC-BLOCK SWEEP: removed 3 Jun/SERP reference blocks frozen since 27 Jul, replaced with a rolling Jul-vs-Jun comparison; rebuilt the remaining 4 blocks (Technical, Keywords, Action plan, Social) from fresh measurements - GSC 109 indexed/68 not, Google discovers only 16 sitemap URLs, all 4 faults from the 21 Jul audit resolved, social 197->266 followers. Corrected the article count 63->60 (counted by href)"
+    },
+    {
+      "date": "2026-08-24",
+      "data": "data/2026-08-24.json",
+      "report": "archive/2026-08-24.html",
+      "label_vi": "sitemap.xml ĐÃ SỬA: 16 → 85 URL, đủ 61 bài viết (Google chưa đọc lại — cần submit lại); GSC clicks 63→68, vị trí TB 29,1→28,0; AI Visibility 26→28; trích dẫn AI 17→19",
+      "label_en": "sitemap.xml FIXED: 16 → 85 URLs, all 61 articles (Google has not re-read it — needs resubmitting); GSC clicks 63→68, avg position 29.1→28.0; AI Visibility 26→28; AI citations 17→19"
     }
   ]
 }
