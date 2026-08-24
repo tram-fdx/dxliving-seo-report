@@ -2,7 +2,7 @@
   "date": "2026-08-24",
   "site": "dxliving.com",
   "source_commit": "5f41b73",
-  "provenance": "Read directly from Chrome (GSC + GA4 + Ahrefs Site Explorer + Site Audit + Brand Radar + the live dxliving.com origin) on 2026-08-24. No OpenSEO, no Supermetrics, no Ahrefs API. No estimated values, nothing carried over from a previous day and presented as today's. ACCESS NOTE: on the first pass of the day, GSC returned not-verified, GA4 returned 'Missing permissions', and the Ahrefs 'Nguyen Thi Thanh Tram' workspace was absent from the workspace switcher. Permissions were restored during the day and all four sources were then read in full; every figure in this file is a real measurement taken on 2026-08-24. GSC impressions were verified by summing all 28 rows of the DAYS tab (1,849) and cross-checked against the day-sum of clicks (68), which matches the Total clicks tile exactly. THREE items are NOT measured and are flagged in place: the third-party-corpus SERP cross-check, the followed-backlink count, and one crawled page out of 144 that falls into none of the four HTTP buckets Ahrefs offers. / Doc truc tiep qua Chrome (GSC + GA4 + Ahrefs Site Explorer + Site Audit + Brand Radar + origin dxliving.com) ngay 24/08/2026. Khong OpenSEO, khong Supermetrics, khong Ahrefs API. Khong uoc luong, khong be so ngay truoc sang lam so hom nay. GHI CHU VE QUYEN: lan quet dau trong ngay, GSC bao not-verified, GA4 bao 'Thieu quyen', va workspace Ahrefs 'Nguyen Thi Thanh Tram' khong co trong bo chon. Quyen da duoc khoi phuc trong ngay va ca bon nguon sau do doc duoc day du; moi con so trong file nay la so do that ngay 24/08/2026. Impressions GSC duoc cong tay du 28 dong tab DAYS (1.849) va doi chieu tong clicks (68) khop chinh xac o o Total clicks. BA muc KHONG do duoc va duoc danh dau ro: doi chieu SERP cho corpus ben thu ba, so backlink followed, va 1 trang trong 144 trang crawl khong roi vao bon nhom HTTP ma Ahrefs cung cap.",
+  "provenance": "Read directly from Chrome (GSC + GA4 + Ahrefs Site Explorer + Site Audit + Brand Radar + the live dxliving.com origin) on 2026-08-24. No OpenSEO, no Supermetrics, no Ahrefs API. No estimated values, nothing carried over from a previous day and presented as today's. ACCESS NOTE: on the first pass of the day, GSC returned not-verified, GA4 returned 'Missing permissions', and the Ahrefs 'Nguyen Thi Thanh Tram' workspace was absent from the workspace switcher. Permissions were restored during the day and all four sources were then read in full; every figure in this file is a real measurement taken on 2026-08-24. GSC impressions were verified by summing all 28 rows of the DAYS tab (1,849) and cross-checked against the day-sum of clicks (68), which matches the Total clicks tile exactly. THREE items are NOT measured and are flagged in place: the third-party-corpus SERP cross-check, the followed-backlink count, and one crawled page out of 144 that falls into none of the four HTTP buckets Ahrefs offers. / Doc truc tiep qua Chrome (GSC + GA4 + Ahrefs Site Explorer + Site Audit + Brand Radar + origin dxliving.com) ngay 24/08/2026. Khong OpenSEO, khong Supermetrics, khong Ahrefs API. Khong uoc luong, khong be so ngay truoc sang lam so hom nay. GHI CHU VE QUYEN: lan quet dau trong ngay, GSC bao not-verified, GA4 bao 'Thieu quyen', va workspace Ahrefs 'Nguyen Thi Thanh Tram' khong co trong bo chon. Quyen da duoc khoi phuc trong ngay va ca bon nguon sau do doc duoc day du; moi con so trong file nay la so do that ngay 24/08/2026. Impressions GSC duoc cong tay du 28 dong tab DAYS (1.849) va doi chieu tong clicks (68) khop chinh xac o o Total clicks. BA muc KHONG do duoc va duoc danh dau ro: doi chieu SERP cho corpus ben thu ba, so backlink followed, va 1 trang trong 144 trang crawl khong roi vao bon nhom HTTP ma Ahrefs cung cap. END-OF-DAY UPDATE 24 Aug: the sitemap was RESUBMITTED in GSC and Google RE-READ IT THE SAME DAY - Discovered pages 16 -> 86, an exact match to the 86 URLs on the origin. CAP NHAT CUOI NGAY 24/08: sitemap da duoc SUBMIT LAI trong GSC va Google DA DOC NGAY TRONG NGAY - Discovered pages 16 -> 86, khop chinh xac 86 URL tren origin.",
   "windows": {
     "gsc": "2026-07-25 -> 2026-08-21",
     "ga4": "2026-07-27 -> 2026-08-23"
@@ -56,10 +56,31 @@
     },
     "channel_quality": {
       "note": "Engagement quality differs sharply by channel and this is the most actionable GA4 finding today. Organic Search: 62.96% engagement rate, 1m 40s average engagement time, 7.35 events per session. Direct: 33.75%, 21s, 4.15. Organic Social: 21.21%, 3s, 4.00. AI Assistant: 50%, 15s, 6.50. Search traffic is by far the highest-quality source; social brings volume that leaves almost immediately. / Chat luong tuong tac khac nhau ro ret theo kenh va day la phat hien GA4 dang hanh dong nhat hom nay. Organic Search: 62,96% / 1 phut 40 giay / 7,35 event. Direct: 33,75% / 21 giay / 4,15. Organic Social: 21,21% / 3 giay / 4,00. AI Assistant: 50% / 15 giay / 6,50. Traffic tim kiem co chat luong vuot troi; social mang luong vao nhung roi di gan nhu ngay lap tuc.",
-      "organic_search": {"engagement_rate_pct": 62.96, "avg_time": "1m 40s", "events_per_session": 7.35, "events": 397},
-      "direct": {"engagement_rate_pct": 33.75, "avg_time": "21s", "events_per_session": 4.15, "events": 332, "key_events": 2},
-      "organic_social": {"engagement_rate_pct": 21.21, "avg_time": "3s", "events_per_session": 4.0, "events": 132},
-      "ai_assistant": {"engagement_rate_pct": 50.0, "avg_time": "15s", "events_per_session": 6.5, "events": 13}
+      "organic_search": {
+        "engagement_rate_pct": 62.96,
+        "avg_time": "1m 40s",
+        "events_per_session": 7.35,
+        "events": 397
+      },
+      "direct": {
+        "engagement_rate_pct": 33.75,
+        "avg_time": "21s",
+        "events_per_session": 4.15,
+        "events": 332,
+        "key_events": 2
+      },
+      "organic_social": {
+        "engagement_rate_pct": 21.21,
+        "avg_time": "3s",
+        "events_per_session": 4.0,
+        "events": 132
+      },
+      "ai_assistant": {
+        "engagement_rate_pct": 50.0,
+        "avg_time": "15s",
+        "events_per_session": 6.5,
+        "events": 13
+      }
     },
     "delta_vs_2026_08_21": {
       "sessions": "133 -> 169",
@@ -89,7 +110,11 @@
         "window_dataLayer_entries": 3,
         "window_gtag_defined": false,
         "window_google_tag_manager_defined": true,
-        "google_tag_manager_containers": ["GTM-PZ9N8QTR", "AW-18039433307", "G-43HE633LGK"],
+        "google_tag_manager_containers": [
+          "GTM-PZ9N8QTR",
+          "AW-18039433307",
+          "G-43HE633LGK"
+        ],
         "ga4_measurement_id_found": "G-43HE633LGK",
         "google_ads_id_found": "AW-18039433307",
         "dx_analytics_dedupe_script_present": false,
@@ -131,7 +156,13 @@
     },
     "crawled_pages_site_explorer": 144,
     "crawled_pages_404": 5,
-    "crawled_pages_http_breakdown": {"200": 136, "3xx": 2, "404": 5, "4xx_other": 0, "5xx": 0},
+    "crawled_pages_http_breakdown": {
+      "200": 136,
+      "3xx": 2,
+      "404": 5,
+      "4xx_other": 0,
+      "5xx": 0
+    },
     "crawled_pages_http_breakdown_note": "Each bucket read by applying the HTTP code filter one at a time. The four buckets sum to 143 of the 144 pages Ahrefs reports unfiltered; 1 page falls into none of the offered buckets and is left UNEXPLAINED rather than silently assigned. Same 1-page discrepancy as 21 Aug. / Moi nhom doc bang cach ap tung bo loc HTTP code. Bon nhom cong lai duoc 143 trong tong 144 trang; 1 trang khong roi vao nhom nao va duoc de NGO thay vi gan bua.",
     "organic_keywords": 0,
     "organic_traffic": 0,
@@ -146,7 +177,10 @@
       "grok": null
     },
     "cited_pages": 4,
-    "cited_pages_by_platform": {"chatgpt": 4, "copilot": 3},
+    "cited_pages_by_platform": {
+      "chatgpt": 4,
+      "copilot": 3
+    },
     "cited_pages_note": "Ahrefs reports cited pages per platform without de-duplicating: ChatGPT 4 pages (up from 3), Copilot 3 pages (flat), so the true union sits between 4 and 7. The 4 recorded here is the verified floor. / Ahrefs bao so trang duoc trich dan theo tung nen tang, khong gop trung: ChatGPT 4 trang (tang tu 3), Copilot 3 trang (giu nguyen), nen tong thuc nam giua 4 va 7. So 4 la muc san da xac minh."
   },
   "ai_visibility": {
@@ -163,11 +197,15 @@
       "third_party_corpus": 0,
       "measurement": 1
     },
-    "dimensions_not_measured": ["accuracy", "sentiment", "position"],
+    "dimensions_not_measured": [
+      "accuracy",
+      "sentiment",
+      "position"
+    ],
     "not_measured_reason": "Requires Brand Radar prompt tracking. The 'Dxliving' report EXISTS in the 'Nguyen Thi Thanh Tram' workspace (re-verified today after access was restored) but still tracks 0 prompts and AI SoV = '-'. / Can Brand Radar prompt tracking; report 'Dxliving' TON TAI trong workspace 'Nguyen Thi Thanh Tram' (kiem lai hom nay sau khi khoi phuc quyen) nhung van 0 prompt duoc track, AI SoV = '-'.",
     "score_method": "Average of the 5 measurable dimensions x 10 = (2+1+10+0+1)/5 x 10 = 28 / Trung binh 5 chieu do duoc x 10 = (2+1+10+0+1)/5 x 10 = 28",
     "score_change_explanation": "26 -> 28, and the single driver is Technical readiness 9 -> 10. sitemap.xml has been REBUILT: it now carries 85 URLs including all 61 live articles, so the last failing signal now passes and the score returns to the 28 it last held on 18 Aug, before the sitemap regression. The other four dimensions are unchanged: Presence 2, Citation surface 1, Third-party corpus 0, Measurement 1. / 26 -> 28, dong luc duy nhat la San sang ky thuat 9 -> 10. sitemap.xml DA DUOC DUNG LAI: nay co 85 URL bao gom day du 61 bai viet, nen tin hieu duy nhat con truot da dat, va diem tro lai muc 28 nhu ngay 18/08.",
-    "score_caveat": "This scores the STATE OF THE FILES ON THE ORIGIN. Google has not yet re-read the new sitemap (Discovered pages still 16, last read 20 Aug), so the practical benefit of the repair is still pending. / Diem nay do TRANG THAI FILE TREN ORIGIN. Google chua doc lai sitemap moi (Discovered pages van 16, doc lan cuoi 20/08), nen loi ich thuc te cua viec sua van dang treo.",
+    "score_caveat": "This scores the STATE OF THE FILES ON THE ORIGIN - and as of the end of 24 Aug that state is also reflected on Google's side: the sitemap was resubmitted and Google's Discovered pages moved 16 -> 86. / Diem nay do TRANG THAI FILE TREN ORIGIN - va den cuoi ngay 24/08, trang thai do cung da duoc phan anh o phia Google: sitemap duoc submit lai va Discovered pages nhay 16 -> 86.",
     "citation_surface_note": "Held at 1/10. The cited-page count moved 3 -> 4, but 4 of 61 live articles sits in the same low band as 3 of 60; the band was not re-scaled in order to avoid inventing a new scoring rule. The denominator is finally meaningful now that all 61 articles are in the sitemap. / Giu 1/10. So trang duoc trich dan tang 3 -> 4, nhung 4 tren 61 van cung mot muc voi 3 tren 60; khong doi thang diem de tranh bia quy tac cham moi.",
     "technical_readiness_method": "7 signals checked; score = share passing x 10. Today 7 of 7 pass -> 10. / 7 tin hieu duoc kiem; diem = ty le dat x 10. Hom nay 7/7 dat -> 10.",
     "brand_radar": {
@@ -182,7 +220,7 @@
       "measured_at": "2026-08-24",
       "robots_txt_blocks_ai_bots": false,
       "sitemap_complete": true,
-      "sitemap_url_count": 85,
+      "sitemap_url_count": 86,
       "llms_txt": true,
       "faq_schema_on_money_pages": true,
       "organization_schema": true,
@@ -191,7 +229,7 @@
       "signals_passing": 7,
       "signals_total": 7,
       "reread_today": true,
-      "evidence": "Re-measured on 2026-08-24 directly from the dxliving.com origin. THE HEADLINE CHANGE: sitemap.xml HAS BEEN REBUILT. It returns 200 at 15,883 bytes with 85 <loc> entries, up from 2,499 bytes / 16 URLs on 21 Aug and past the 81 URLs it held before the regression. The 'Free Online Sitemap Generator www.xml-sitemaps.com' marker is GONE. It now contains 61 article URLs, /login has been REMOVED, and both /llms.txt and /llms-full.txt are listed. Cross-checked against the /articles hub: the hub links 61 distinct article slugs counted by <a href>, every one returns HTTP 200, and the two sets match EXACTLY - zero articles in the hub are missing from the sitemap and zero sitemap articles are absent from the hub. The last failing AI-readiness signal therefore passes and technical readiness reaches 7 of 7 for the first time since 18 Aug. robots.txt is unchanged at 430 bytes with explicit Allow: / for GPTBot, OAI-SearchBot, ChatGPT-User, PerplexityBot, ClaudeBot and Google-Extended, header comments pointing at /llms.txt and /llms-full.txt, and a User-agent: * block that is Allow: / with Disallow: /register and Disallow: /pages/. /llms.txt returns 200 at 12,695 bytes over 128 lines, byte-identical to 18-21 Aug, and /llms-full.txt returns 200 at 21,951 bytes; both are now listed in the sitemap, closing the last outstanding item on that file. Homepage JSON-LD parses from exactly 2 script blocks with 2 distinct payloads and yields LocalBusiness, Organization, WebSite, PostalAddress and Country. /faq returns 200 in 870ms with FAQPage + Question + Answer. /articles returns 200 in 1,541ms with CollectionPage + ItemList + ListItem + Article + BreadcrumbList. /articles/3d-rendering-sydney returns 200 in 1,367ms with Article + BlogPosting + FAQPage + Question + Answer + BreadcrumbList + ListItem + WebPage + Organization + ImageObject. IMPORTANT CAVEAT: GSC Sitemaps shows Google last read the sitemap on 20 Aug with Discovered pages = 16, i.e. Google has NOT yet fetched the rebuilt file, so from Google's perspective the 61 articles are still not submitted.",
+      "evidence": "Re-measured on 2026-08-24 directly from the dxliving.com origin. THE HEADLINE CHANGE: sitemap.xml HAS BEEN REBUILT. It returns 200 at 16,071 bytes with 86 <loc> entries, up from 2,499 bytes / 16 URLs on 21 Aug and past the 81 URLs it held before the regression. The 'Free Online Sitemap Generator www.xml-sitemaps.com' marker is GONE. It now contains 62 article URLs, /login has been REMOVED, and both /llms.txt and /llms-full.txt are listed. Cross-checked against the /articles hub: the hub links 62 distinct article slugs counted by <a href>, every one returns HTTP 200, and the two sets match EXACTLY - zero articles in the hub are missing from the sitemap and zero sitemap articles are absent from the hub. The last failing AI-readiness signal therefore passes and technical readiness reaches 7 of 7 for the first time since 18 Aug. robots.txt is unchanged at 430 bytes with explicit Allow: / for GPTBot, OAI-SearchBot, ChatGPT-User, PerplexityBot, ClaudeBot and Google-Extended, header comments pointing at /llms.txt and /llms-full.txt, and a User-agent: * block that is Allow: / with Disallow: /register and Disallow: /pages/. /llms.txt returns 200 at 12,695 bytes over 128 lines, byte-identical to 18-21 Aug, and /llms-full.txt returns 200 at 21,951 bytes; both are now listed in the sitemap, closing the last outstanding item on that file. Homepage JSON-LD parses from exactly 2 script blocks with 2 distinct payloads and yields LocalBusiness, Organization, WebSite, PostalAddress and Country. /faq returns 200 in 870ms with FAQPage + Question + Answer. /articles returns 200 in 1,541ms with CollectionPage + ItemList + ListItem + Article + BreadcrumbList. /articles/3d-rendering-sydney returns 200 in 1,367ms with Article + BlogPosting + FAQPage + Question + Answer + BreadcrumbList + ListItem + WebPage + Organization + ImageObject. RESOLVED THE SAME DAY: the sitemap was resubmitted in GSC and Google re-read it on 24 Aug, taking Discovered pages from 16 to 86 - an exact match to the 86 <loc> entries. From Google's perspective all 62 articles are now genuinely submitted. Discovered is not the same as Indexed, so Pages indexed (106) and the crawled-not-indexed bucket (22) are the next metrics to follow.",
       "llms_txt_first_seen": "2026-08-18",
       "llms_txt_detail": {
         "status": 200,
@@ -207,17 +245,27 @@
       "robots_txt_detail": {
         "status": 200,
         "bytes": 430,
-        "ai_bots_named_with_allow": ["GPTBot", "OAI-SearchBot", "ChatGPT-User", "PerplexityBot", "ClaudeBot", "Google-Extended"],
+        "ai_bots_named_with_allow": [
+          "GPTBot",
+          "OAI-SearchBot",
+          "ChatGPT-User",
+          "PerplexityBot",
+          "ClaudeBot",
+          "Google-Extended"
+        ],
         "ai_bots_blocked": [],
-        "wildcard_disallows": ["/register", "/pages/"],
+        "wildcard_disallows": [
+          "/register",
+          "/pages/"
+        ],
         "references_llms_txt": true,
         "changed_since_2026_08_21": false
       },
       "sitemap_detail": {
         "status": 200,
-        "bytes": 15883,
+        "bytes": 16071,
         "bytes_previous": 2499,
-        "loc_count": 85,
+        "loc_count": 86,
         "loc_count_previous": 16,
         "loc_count_before_regression": 81,
         "days_broken": 0,
@@ -225,41 +273,136 @@
         "regression_resolved_note": "Broken on 20 and 21 Aug at 16 URLs. Rebuilt at some point between 21 and 24 Aug; this scan is the first to observe the repair. The exact repair date is NOT known because no scan ran on 22 or 23 Aug, and it is not guessed here. / Hong ngay 20 va 21/08 o muc 16 URL. Da dung lai o thoi diem nao do giua 21 va 24/08; lan quet nay la lan dau ghi nhan viec sua. KHONG biet chinh xac ngay sua vi khong co lan quet nao ngay 22 va 23/08.",
         "is_sitemap_index": false,
         "contains_article_urls": true,
-        "article_url_count": 61,
+        "article_url_count": 62,
         "contains_login": false,
         "lists_llms_txt": true,
         "lists_llms_full_txt": true,
         "generator_comment": null,
         "generator_comment_note": "The 'Free Online Sitemap Generator www.xml-sitemaps.com' marker present on 20-21 Aug is gone, indicating the file is now generated from the system rather than an online tool. / Dau 'Free Online Sitemap Generator' co ngay 20-21/08 nay khong con.",
-        "article_slugs_linked_from_hub": 61,
+        "article_slugs_linked_from_hub": 62,
         "hub_vs_sitemap_match": "exact",
         "articles_in_hub_missing_from_sitemap": 0,
         "articles_in_sitemap_missing_from_hub": 0,
         "hub_links_all_200": true,
-        "google_has_read_new_file": false,
-        "google_last_read": "2026-08-20",
-        "google_discovered_pages": 16,
-        "article_slugs_linked_from_hub_method": "Counted by <a href> anchors on the /articles hub, de-duplicated, then HEAD-checked one by one: 61 links, all HTTP 200. The href-based method is used deliberately; a loose regex over the raw HTML also matches non-anchor substrings inside inline JSON and over-counts. / Dem theo the <a href> tren hub /articles, loai trung, roi kiem HEAD tung link: 61 link, tat ca HTTP 200."
+        "google_has_read_new_file": true,
+        "google_last_read": "2026-08-24",
+        "google_discovered_pages": 86,
+        "article_slugs_linked_from_hub_method": "Counted by <a href> anchors on the /articles hub, de-duplicated, then HEAD-checked one by one: 61 links, all HTTP 200. The href-based method is used deliberately; a loose regex over the raw HTML also matches non-anchor substrings inside inline JSON and over-counts. / Dem theo the <a href> tren hub /articles, loai trung, roi kiem HEAD tung link: 61 link, tat ca HTTP 200.",
+        "google_submitted": "2026-08-24",
+        "google_discovered_matches_sitemap": true,
+        "google_read_note": "Checked twice on 24 Aug. MORNING: submitted 3 Jun 2026, last read 20 Aug 2026, Discovered pages 16 - Google had not seen the rebuilt file. END OF DAY: the sitemap was resubmitted in GSC; Google read it the same day and Discovered pages went 16 -> 86, an exact match to the 86 <loc> entries on the origin. The 44-article submission gap is closed from Google's side as well as the server's. NOTE: Discovered is not Indexed - Pages indexed (106) and crawled-not-indexed (22) are the metrics to watch next. / Kiem hai lan ngay 24/08. BUOI SANG: submit 03/06/2026, doc lan cuoi 20/08/2026, Discovered pages 16 - Google chua thay file moi. CUOI NGAY: sitemap duoc submit lai trong GSC; Google doc ngay trong ngay va Discovered pages nhay 16 -> 86, khop chinh xac 86 URL tren origin. LUU Y: Discovered khac Indexed - can theo doi Pages indexed (106) va nhom da-crawl-chua-index (22).",
+        "count_change_note": "The sitemap grew 85 -> 86 URLs and articles 61 -> 62 between the morning scan and the end-of-day re-check, because a new article was published in between. Both figures were measured directly, not inferred. / Sitemap tang 85 -> 86 URL va bai viet 61 -> 62 giua lan quet sang va lan kiem cuoi ngay, do co bai moi duoc xuat ban. Ca hai deu do truc tiep, khong suy dien."
       },
       "homepage_jsonld_blocks": 2,
       "homepage_jsonld_distinct_payloads": 2,
-      "homepage_jsonld_types": ["LocalBusiness", "Organization", "WebSite", "PostalAddress", "Country"]
+      "homepage_jsonld_types": [
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "PostalAddress",
+        "Country"
+      ]
     },
-    "third_party_corpus_note": "Not re-tested today - held at 0/10 from the last SERP audit (4 non-brand query sets). / Khong duoc kiem lai hom nay - giu 0/10 tu lan audit SERP gan nhat."
+    "third_party_corpus_note": "Not re-tested today - held at 0/10 from the last SERP audit (4 non-brand query sets). / Khong duoc kiem lai hom nay - giu 0/10 tu lan audit SERP gan nhat.",
+    "cited_pages_denominator_note": "4 cited pages out of 62 live articles. / 4 trang duoc trich dan tren 62 bai viet dang song."
   },
   "gsc_top_queries": [
-    {"query": "dxliving", "clicks": 36, "impressions": 51, "ctr_pct": 70.6, "position": 1.7, "type": "brand"},
-    {"query": "dx living", "clicks": 19, "impressions": 111, "ctr_pct": 17.1, "position": 3.3, "type": "brand"},
-    {"query": "best home builders adelaide", "clicks": 0, "impressions": 111, "ctr_pct": 0.0, "position": 34.6, "type": "non-brand"},
-    {"query": "3d renders for developers melbourne", "clicks": 0, "impressions": 57, "ctr_pct": 0.0, "position": 35.6, "type": "non-brand"},
-    {"query": "3d renders for builders melbourne", "clicks": 0, "impressions": 53, "ctr_pct": 0.0, "position": 12.8, "type": "non-brand"},
-    {"query": "3d rendering melbourne", "clicks": 0, "impressions": 52, "ctr_pct": 0.0, "position": 22.1, "type": "non-brand"},
-    {"query": "3d renders for property developers melbourne", "clicks": 0, "impressions": 50, "ctr_pct": 0.0, "position": 33.7, "type": "non-brand"},
-    {"query": "3d rendering services melbourne", "clicks": 0, "impressions": 49, "ctr_pct": 0.0, "position": 35.9, "type": "non-brand"},
-    {"query": "architectural rendering melbourne", "clicks": 0, "impressions": 37, "ctr_pct": 0.0, "position": 25.7, "type": "non-brand"},
-    {"query": "interior finishing", "clicks": 0, "impressions": 32, "ctr_pct": 0.0, "position": 39.8, "type": "non-brand"},
-    {"query": "best house builders adelaide", "clicks": 0, "impressions": 26, "ctr_pct": 0.0, "position": 39.9, "type": "non-brand"},
-    {"query": "quality home builders adelaide", "clicks": 0, "impressions": 24, "ctr_pct": 0.0, "position": 48.7, "type": "non-brand"}
+    {
+      "query": "dxliving",
+      "clicks": 36,
+      "impressions": 51,
+      "ctr_pct": 70.6,
+      "position": 1.7,
+      "type": "brand"
+    },
+    {
+      "query": "dx living",
+      "clicks": 19,
+      "impressions": 111,
+      "ctr_pct": 17.1,
+      "position": 3.3,
+      "type": "brand"
+    },
+    {
+      "query": "best home builders adelaide",
+      "clicks": 0,
+      "impressions": 111,
+      "ctr_pct": 0.0,
+      "position": 34.6,
+      "type": "non-brand"
+    },
+    {
+      "query": "3d renders for developers melbourne",
+      "clicks": 0,
+      "impressions": 57,
+      "ctr_pct": 0.0,
+      "position": 35.6,
+      "type": "non-brand"
+    },
+    {
+      "query": "3d renders for builders melbourne",
+      "clicks": 0,
+      "impressions": 53,
+      "ctr_pct": 0.0,
+      "position": 12.8,
+      "type": "non-brand"
+    },
+    {
+      "query": "3d rendering melbourne",
+      "clicks": 0,
+      "impressions": 52,
+      "ctr_pct": 0.0,
+      "position": 22.1,
+      "type": "non-brand"
+    },
+    {
+      "query": "3d renders for property developers melbourne",
+      "clicks": 0,
+      "impressions": 50,
+      "ctr_pct": 0.0,
+      "position": 33.7,
+      "type": "non-brand"
+    },
+    {
+      "query": "3d rendering services melbourne",
+      "clicks": 0,
+      "impressions": 49,
+      "ctr_pct": 0.0,
+      "position": 35.9,
+      "type": "non-brand"
+    },
+    {
+      "query": "architectural rendering melbourne",
+      "clicks": 0,
+      "impressions": 37,
+      "ctr_pct": 0.0,
+      "position": 25.7,
+      "type": "non-brand"
+    },
+    {
+      "query": "interior finishing",
+      "clicks": 0,
+      "impressions": 32,
+      "ctr_pct": 0.0,
+      "position": 39.8,
+      "type": "non-brand"
+    },
+    {
+      "query": "best house builders adelaide",
+      "clicks": 0,
+      "impressions": 26,
+      "ctr_pct": 0.0,
+      "position": 39.9,
+      "type": "non-brand"
+    },
+    {
+      "query": "quality home builders adelaide",
+      "clicks": 0,
+      "impressions": 24,
+      "ctr_pct": 0.0,
+      "position": 48.7,
+      "type": "non-brand"
+    }
   ],
   "gsc_rank_movement": {
     "note": "The clearest positive signal in this scan. Three non-brand queries improved materially over three days. / Tin hieu tich cuc ro nhat cua lan quet nay. Ba truy van non-brand cai thien ro trong ba ngay.",
@@ -283,23 +426,32 @@
       "discovered_not_indexed": 1
     },
     "not_indexed_reasons_note": "Sums to 67 exactly. Versus 21 Aug: indexed 109 -> 106, not indexed 68 -> 67. Crawled-not-indexed rose 18 -> 22 and 404s rose 6 -> 7, while discovered-not-indexed fell 7 -> 1. The rise in crawled-not-indexed is worth watching - it usually signals a quality or duplication problem, and the cannibalised Melbourne clusters are the obvious suspect. / Cong lai dung 67. So voi 21/08: index 109 -> 106, chua index 68 -> 67. Da crawl chua index tang 18 -> 22 va 404 tang 6 -> 7, trong khi da phat hien chua crawl giam 7 -> 1. Viec da-crawl-chua-index tang dang theo doi - thuong la dau hieu van de chat luong hoac trung lap, va cum Melbourne bi cannibalisation la nghi van ro nhat.",
-    "sitemap_discovered_pages_per_google": 16,
-    "sitemap_submitted_on": "2026-06-03",
-    "sitemap_last_read_by_google": "2026-08-20",
+    "sitemap_discovered_pages_per_google": 86,
+    "sitemap_submitted_on": "2026-08-24",
+    "sitemap_last_read_by_google": "2026-08-24",
     "sitemap_status_per_google": "Success",
-    "sitemap_url_count_on_origin": 85,
-    "sitemap_google_lag_note": "CRITICAL AND ACTIONABLE. The origin file is correct at 85 URLs covering all 61 articles, but Google's last read was 20 Aug - BEFORE the repair - and Discovered pages is still 16. From Google's point of view the 61 articles are still not submitted, so the entire benefit of the sitemap fix is sitting idle. Resubmitting sitemap.xml in GSC is a two-minute job and is the single highest-value action available right now. / QUAN TRONG VA LAM DUOC NGAY. File tren origin da dung voi 85 URL bao gom du 61 bai viet, nhung Google doc lan cuoi la 20/08 - TRUOC khi sua - va Discovered pages van 16. Duoi goc nhin cua Google, 61 bai van chua duoc submit, nen toan bo loi ich cua viec sua sitemap dang bi treo. Submit lai sitemap.xml trong GSC la viec 2 phut va la hanh dong gia tri nhat hien nay.",
-    "hub_article_links": 61,
+    "sitemap_url_count_on_origin": 86,
+    "sitemap_google_lag_note": "RESOLVED on 24 Aug. In the morning the origin file was correct at 86 URLs but Google's last read was 20 Aug with Discovered pages = 16. The sitemap was resubmitted in GSC and Google read it the same day: Submitted 24 Aug, Last read 24 Aug, Success, Discovered pages = 86 - an exact match to the origin. All 62 articles are now submitted from Google's point of view. The next thing to watch is whether they move from discovered to INDEXED: Pages indexed is 106 and crawled-not-indexed is 22 (up from 18). / DA XU LY ngay 24/08. Buoi sang file tren origin da dung 86 URL nhung Google doc lan cuoi 20/08 voi Discovered pages = 16. Sitemap duoc submit lai trong GSC va Google doc ngay trong ngay: Submitted 24/08, Last read 24/08, Success, Discovered pages = 86 - khop chinh xac origin. Toan bo 62 bai nay da duoc submit duoi goc nhin Google. Viec can theo doi tiep: chung co chuyen tu phat hien sang DUOC INDEX khong - Pages indexed 106 va da-crawl-chua-index 22 (tang tu 18).",
+    "hub_article_links": 62,
     "hub_article_links_all_200": true,
     "avg_response_ms_12_articles": 1294,
     "avg_response_ms_8_core_pages": 1299,
-    "slowest_page": {"path": "/articles/luxury-home-cinema-design", "ms": 2286},
-    "slowest_core_page": {"path": "/", "ms": 2058},
+    "slowest_page": {
+      "path": "/articles/luxury-home-cinema-design",
+      "ms": 2286
+    },
+    "slowest_core_page": {
+      "path": "/",
+      "ms": 2058
+    },
     "response_time_note": "Measured today with cache disabled across 20 pages. Both averages are slower than 21 Aug (articles 890ms -> 1,294ms; core 1,234ms -> 1,299ms) but every page still returns 200 well under 2.6s, against a 21 Jul audit baseline of 4,590ms. Single-run fetch timings vary with network conditions, so this is recorded as an observation rather than called a regression. / Do hom nay voi cache tat, tren 20 trang. Ca hai muc trung binh cham hon 21/08 nhung moi trang van tra 200 duoi 2,6s, con moc audit 21/07 la 4.590ms. Ghi nhan nhu quan sat chu khong ket luan la thut lui.",
     "h1_per_page": 1,
     "h1_pages_checked": 20,
     "all_pages_have_canonical": true,
-    "meta_description_length_range": [125, 180],
+    "meta_description_length_range": [
+      125,
+      180
+    ],
     "core_web_vitals": null,
     "core_web_vitals_note": "GSC Core Web Vitals (source Chrome UX Report, updated 2026-08-22) returns 'Not enough usage data in the last 90 days' for BOTH mobile and desktop. Recorded as null, NOT as a failing score. / GSC Core Web Vitals (cap nhat 22/08) tra 'Not enough usage data in the last 90 days' cho CA mobile lan desktop. Ghi null, KHONG phai diem kem.",
     "https_non_https_urls": 0,
@@ -310,11 +462,16 @@
       "slow server avg 4.59s/page - re-confirmed today, 20 pages average ~1.3s, slowest 2.29s",
       "missing homepage Organization/LocalBusiness JSON-LD - re-confirmed today, 2 blocks present",
       "double H1 in the article template - re-confirmed today, exactly 1 H1 across 20 pages checked",
-      "sitemap.xml regression to 16 URLs - RESOLVED on the origin, rebuilt to 85 URLs covering all 61 articles"
+      "sitemap.xml regression to 16 URLs - FULLY RESOLVED: rebuilt to 86 URLs covering all 62 articles, resubmitted in GSC, and confirmed read by Google (Discovered pages 16 -> 86)"
     ],
     "not_audited_today": [
       "the list of 31 noindex pages",
       "the 22 crawled-but-not-indexed pages"
+    ],
+    "next_to_watch": [
+      "Pages indexed (106) - does it rise as the 62 newly-submitted articles get crawled?",
+      "Crawled - currently not indexed (22, up from 18) - if this climbs instead, the blocker is quality/duplication, not discoverability",
+      "The 4-page Melbourne rendering cluster and 2-page builders cluster are the prime suspects if indexing stalls"
     ]
   },
   "cannibalisation": {
@@ -330,7 +487,8 @@
       "custom-home-builders-melbourne-3d-visualisation",
       "custom-home-builders-melbourne-pre-build-clarity"
     ],
-    "note": "Unchanged from 21 Aug in size: 4 pages in the Melbourne rendering cluster, 2 in the custom home builders Melbourne cluster. But the urgency has risen. All six are now in the rebuilt sitemap, so the moment Google re-reads it they all enter the crawl queue together - and GSC already shows crawled-not-indexed climbing 18 -> 22 plus 1 page where Google chose a different canonical. Consolidate BEFORE Google crawls the full set. / Khong doi ve so luong so voi 21/08, nhung do gap thi tang. Ca sau trang nay deu da nam trong sitemap moi, nen ngay khi Google doc lai, ca sau se vao hang doi crawl cung luc - va GSC da cho thay da-crawl-chua-index tang 18 -> 22 kem 1 trang Google chon canonical khac. Gop cum TRUOC khi Google crawl du tap."
+    "note": "Unchanged from 21 Aug in size: 4 pages in the Melbourne rendering cluster, 2 in the custom home builders Melbourne cluster. But the urgency has risen. All six are now in the rebuilt sitemap, and Google HAS now re-read it (Discovered pages 16 -> 86 on 24 Aug), so all six are already in the crawl queue - and GSC already shows crawled-not-indexed climbing 18 -> 22 plus 1 page where Google chose a different canonical. Consolidate BEFORE Google crawls the full set. / Khong doi ve so luong so voi 21/08, nhung do gap thi tang. Ca sau trang nay deu da nam trong sitemap moi, nen ngay khi Google doc lai, ca sau se vao hang doi crawl cung luc - va GSC da cho thay da-crawl-chua-index tang 18 -> 22 kem 1 trang Google chon canonical khac. Gop cum TRUOC khi Google crawl du tap.",
+    "urgency_note": "Raised to urgent on 24 Aug: Google has now discovered all 86 sitemap URLs, so the six competing pages are queued for crawl together. Consolidate before indexing settles. / Nang muc gap ngay 24/08: Google da phat hien du 86 URL trong sitemap, nen sau trang canh tranh nhau da vao hang doi crawl cung luc. Gop cum truoc khi viec index on dinh."
   },
   "social_snapshot": {
     "measured_at": "2026-08-24",
@@ -341,10 +499,34 @@
     "window": "28 days",
     "total_followers": 266,
     "total_followers_june_2026": 197,
-    "facebook": {"followers": 115, "views_28d": 4978, "reach": 546, "content_interactions": 170, "views_from_non_followers_pct": 54.7},
-    "linkedin": {"followers": 101, "impressions": 1708, "reactions": 62, "page_views": 106, "unique_visitors": 39, "new_followers_30d": 48},
-    "instagram": {"followers": 46, "views_28d": 925, "reach_28d": 317, "content_interactions": 74, "reach_from_non_followers": 300},
-    "youtube": {"subscribers": 4, "views_28d": 60, "watch_time_hours": 0.1, "videos_published": 27},
+    "facebook": {
+      "followers": 115,
+      "views_28d": 4978,
+      "reach": 546,
+      "content_interactions": 170,
+      "views_from_non_followers_pct": 54.7
+    },
+    "linkedin": {
+      "followers": 101,
+      "impressions": 1708,
+      "reactions": 62,
+      "page_views": 106,
+      "unique_visitors": 39,
+      "new_followers_30d": 48
+    },
+    "instagram": {
+      "followers": 46,
+      "views_28d": 925,
+      "reach_28d": 317,
+      "content_interactions": 74,
+      "reach_from_non_followers": 300
+    },
+    "youtube": {
+      "subscribers": 4,
+      "views_28d": 60,
+      "watch_time_hours": 0.1,
+      "videos_published": 27
+    },
     "tiktok_x": null,
     "ga4_organic_social_sessions_28d": 33,
     "ga4_organic_social_quality": {
@@ -359,6 +541,9 @@
       "VIEC LON NHAT DA XONG: SITEMAP.XML DUOC DUNG LAI. File hong suot ngay 20 va 21/08 o muc 16 URL; hom nay tra 200 voi 15.883 byte va 85 URL, vuot ca muc 81 URL truoc khi thut lui. Dau 'Free Online Sitemap Generator' da bien mat, /login da duoc go, va ca /llms.txt lan /llms-full.txt deu da duoc liet ke.",
       "Quan trong hon con so tong: sitemap moi khop CHINH XAC voi hub. Hub /articles lien ket 61 slug bai viet (dem theo the <a href>, ca 61 deu tra HTTP 200), sitemap chua dung 61 URL bai viet do - khong bai nao thieu o chieu nao. Khoang cach 44 bai bi bo roi cua 21/08 da bien mat hoan toan.",
       "NHUNG CO MOT CANH BAO PHAI DOC KEM: GSC -> Sitemaps cho thay Google doc lan cuoi van la 20/08 va Discovered pages van = 16. File da sua tren server, nhung Google chua fetch lai ke tu truoc khi sua - nen duoi goc nhin cua Google, 61 bai viet VAN CHUA duoc submit. Toan bo loi ich cua viec sua dang bi treo.",
+      "CAP NHAT CUOI NGAY 24/08 - VONG LAP DA KHEP KIN: sitemap duoc SUBMIT LAI trong GSC va Google DA DOC NGAY TRONG NGAY. GSC -> Sitemaps: Submitted 24/08/2026, Last read 24/08/2026, Success, Discovered pages = 86. Buoi sang con la 16. Con so 86 khop CHINH XAC voi 86 URL tren origin - khong thieu, khong thua. Toan bo 62 bai viet nay da thuc su duoc submit duoi goc nhin cua Google, va khoang cach ton tai tu 20/08 da bi xoa hoan toan.",
+      "LUU Y QUAN TRONG: Discovered pages la so trang Google PHAT HIEN, chua phai so trang DA INDEX. Chi so can theo doi trong 3-7 ngay toi la Pages indexed (hien 106) va nhom 'da crawl chua index' (hien 22, tang tu 18). Neu index khong nhich, van de chuyen tu kha nang phat hien sang chat luong / trung lap - va cum cannibalisation la nghi van so mot.",
+      "So lieu sitemap tang nhe giua hai lan kiem trong ngay: 85 -> 86 URL va 61 -> 62 bai viet, do co mot bai moi duoc xuat ban giua lan quet sang va lan kiem cuoi ngay. Ca hai lan deu do truc tiep tren origin, khong suy dien.",
       "VIEC P0 SO MOT: vao GSC -> Sitemaps, nhap lai sitemap.xml va bam Submit de buoc Google doc lai. Viec 2 phut. Sau do theo doi Discovered pages nhay tu 16 len gan 85 - do la bang chung tu chinh Google rang viec sua da an.",
       "Cung ly do do, Ahrefs Site Audit sang nay (04:17) van chi crawl 15 URL: no cung di theo ban sitemap cu. Health Score 100 tren 15 URL KHONG co nghia site khoe. Lan crawl 25/08 moi phan anh dung.",
       "Khong biet chinh xac sitemap duoc sua ngay nao. Khong co lan quet nao ngay 22 va 23/08, nen chi biet viec sua xay ra o dau do giua 21 va 24/08. Khong doan ngay.",
@@ -381,12 +566,15 @@
       "Toc do: do lai 20 trang voi cache tat. Trung binh 8 trang chinh 1,30s, 12 bai viet 1,29s, cham nhat /articles/luxury-home-cinema-design 2,29s, trang chu 2,06s. Cham hon 21/08 nhung moi trang van duoi 2,6s va moc audit 21/07 la 4,59s. Ghi nhan nhu quan sat, khong ket luan la thut lui. 20 trang deu co dung 1 the H1, deu co canonical, meta description 125-180 ky tu.",
       "CANNIBALISATION khong doi ve so luong (4 trang rendering Melbourne, 2 trang custom home builders Melbourne) nhung DO GAP DA TANG: ca sau trang nay deu da nam trong sitemap moi, nen ngay khi Google doc lai, ca sau se vao hang doi crawl cung luc. Gop cum TRUOC thoi diem do.",
       "SNAPSHOT SOCIAL BI CU: dashboard van ghi 21/08 voi 21 ngay luu, chua lam moi. Tac vu rieng dxl-social-dashboard-daily-refresh co ve khong chay ngay 22, 23, 24/08 - nen kiem tra.",
-      "UU TIEN SAU HOM NAY: (P0) submit lai sitemap trong GSC - viec 2 phut, dang chan toan bo gia tri cua viec sua sitemap; (P0) bat prompt tracking Brand Radar 15-20 prompt AU - quyen workspace da co lai, khong con ly do tri hoan; (P1) gop cum cannibalisation truoc khi Google crawl du sau trang; (P1) day '3d renders for builders melbourne' tu vi tri 12,8 len trang 1 - co hoi click non-brand gan nhat tu truoc toi nay."
+      "UU TIEN SAU HOM NAY: (P0 DA XONG) submit lai sitemap trong GSC - Google da doc, Discovered pages 16 -> 86; (P0) bat prompt tracking Brand Radar 15-20 prompt AU - quyen workspace da co lai, khong con ly do tri hoan; (P1) gop cum cannibalisation truoc khi Google crawl du sau trang; (P1) day '3d renders for builders melbourne' tu vi tri 12,8 len trang 1 - co hoi click non-brand gan nhat tu truoc toi nay."
     ],
     "en": [
       "THE BIGGEST JOB IS DONE: SITEMAP.XML HAS BEEN REBUILT. The file was broken at 16 URLs through 20 and 21 Aug; today it returns 200 at 15,883 bytes with 85 URLs, comfortably past the 81 it held before the regression. The 'Free Online Sitemap Generator' marker is gone, /login has been removed, and both /llms.txt and /llms-full.txt are now listed.",
       "More important than the headline count: the new sitemap matches the hub EXACTLY. The /articles hub links 61 article slugs (counted by <a href>, all 61 returning HTTP 200) and the sitemap contains those same 61 article URLs - nothing missing in either direction. The 44-article submission gap recorded on 21 Aug is entirely gone.",
       "BUT THERE IS A CAVEAT THAT MUST BE READ ALONGSIDE IT: GSC -> Sitemaps shows Google's last read is still 20 Aug and Discovered pages is still 16. The file is fixed on the server, but Google has not fetched it since before the repair - so from Google's point of view, the 61 articles are STILL NOT submitted. The entire benefit of the fix is sitting idle.",
+      "END-OF-DAY UPDATE 24 Aug - THE LOOP IS CLOSED: the sitemap was RESUBMITTED in GSC and Google RE-READ IT THE SAME DAY. GSC -> Sitemaps now shows: Submitted 24 Aug 2026, Last read 24 Aug 2026, Success, Discovered pages = 86. In the morning it was still 16. The 86 matches EXACTLY the 86 URLs on the origin - nothing missing, nothing extra. All 62 articles are now genuinely submitted from Google's point of view, and the gap open since 20 Aug is closed.",
+      "IMPORTANT CAVEAT: Discovered pages counts what Google has FOUND, not what it has INDEXED. The metrics to follow over the next 3-7 days are Pages indexed (currently 106) and the 'crawled - currently not indexed' bucket (currently 22, up from 18). If indexing does not move, the problem shifts from discoverability to quality/duplication - and the cannibalised clusters are the prime suspect.",
+      "The sitemap figures ticked up between the two checks on the same day: 85 -> 86 URLs and 61 -> 62 articles, because a new article was published between the morning scan and the end-of-day re-check. Both readings were measured directly on the origin, not inferred.",
       "THE NUMBER ONE P0: go to GSC -> Sitemaps, re-enter sitemap.xml and hit Submit to force a re-read. A two-minute job. Then watch Discovered pages climb from 16 toward 85 - that is Google's own confirmation the repair has taken effect.",
       "For the same reason, this morning's Ahrefs Site Audit (04:17) still crawled only 15 URLs: it followed the old sitemap too. A Health Score of 100 across 15 URLs does NOT mean the site is healthy. The 25 Aug crawl is the first that will reflect reality.",
       "The exact repair date is unknown. No scan ran on 22 or 23 Aug, so all that can be said is that the fix landed somewhere between 21 and 24 Aug. The date is not guessed.",
@@ -409,7 +597,7 @@
       "Speed: 20 pages re-measured with cache disabled. The 8 core pages average 1.30s, the 12 articles average 1.29s, the slowest page is /articles/luxury-home-cinema-design at 2.29s and the homepage is 2.06s. Slower than 21 Aug but every page is still under 2.6s against a 21 Jul audit baseline of 4.59s. Recorded as an observation, not called a regression. All 20 pages carry exactly 1 H1, all have a canonical, and meta descriptions run 125-180 characters.",
       "CANNIBALISATION is unchanged in size (4 Melbourne rendering pages, 2 custom home builders Melbourne pages) but the URGENCY HAS RISEN: all six are now in the rebuilt sitemap, so the moment Google re-reads it they all enter the crawl queue together. Consolidate BEFORE that happens.",
       "THE SOCIAL SNAPSHOT IS STALE: the dashboard still reads 21 Aug with 21 stored days and has not refreshed. The dedicated dxl-social-dashboard-daily-refresh task appears not to have run on 22, 23 or 24 Aug and is worth checking.",
-      "PRIORITIES AFTER TODAY: (P0) resubmit the sitemap in GSC - a two-minute job currently gating the entire value of the sitemap fix; (P0) turn on Brand Radar prompt tracking with 15-20 AU prompts - workspace access is back, so there is no reason left to delay; (P1) consolidate the cannibalised clusters before Google crawls all six pages; (P1) push '3d renders for builders melbourne' from position 12.8 onto page one - the closest non-brand click opportunity the site has ever had."
+      "PRIORITIES AFTER TODAY: (P0 DONE) resubmit the sitemap in GSC - Google has read it, Discovered pages 16 -> 86; (P0) turn on Brand Radar prompt tracking with 15-20 AU prompts - workspace access is back, so there is no reason left to delay; (P1) consolidate the cannibalised clusters before Google crawls all six pages; (P1) push '3d renders for builders melbourne' from position 12.8 onto page one - the closest non-brand click opportunity the site has ever had."
     ]
   }
 }

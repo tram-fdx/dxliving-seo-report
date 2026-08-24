@@ -133,8 +133,8 @@
       "date": "2026-08-24",
       "data": "data/2026-08-24.json",
       "report": "archive/2026-08-24.html",
-      "label_vi": "sitemap.xml ĐÃ SỬA: 16 → 85 URL, đủ 61 bài viết (Google chưa đọc lại — cần submit lại); GSC clicks 63→68, vị trí TB 29,1→28,0; AI Visibility 26→28; trích dẫn AI 17→19",
-      "label_en": "sitemap.xml FIXED: 16 → 85 URLs, all 61 articles (Google has not re-read it — needs resubmitting); GSC clicks 63→68, avg position 29.1→28.0; AI Visibility 26→28; AI citations 17→19"
+      "label_vi": "sitemap.xml ĐÃ SỬA và Google ĐÃ ĐỌC LẠI: Discovered pages 16 → 86, đủ 62 bài viết; GSC clicks 63→68, vị trí TB 29,1→28,0; AI Visibility 26→28; trích dẫn AI 17→19",
+      "label_en": "sitemap.xml FIXED and RE-READ BY GOOGLE: Discovered pages 16 → 86, all 62 articles; GSC clicks 63→68, avg position 29.1→28.0; AI Visibility 26→28; AI citations 17→19"
     }
   ]
 }
