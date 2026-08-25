@@ -1,7 +1,7 @@
 {
   "site": "dxliving.com",
   "description": "Lịch sử snapshot dữ liệu SEO theo ngày / Daily SEO data snapshot history. Mỗi ngày một file data/YYYY-MM-DD.json + bản HTML đóng băng archive/YYYY-MM-DD.html.",
-  "latest": "2026-08-24",
+  "latest": "2026-08-25",
   "snapshots": [
     {
       "date": "2026-06-30",
@@ -135,6 +135,13 @@
       "report": "archive/2026-08-24.html",
       "label_vi": "sitemap.xml ĐÃ SỬA và Google ĐÃ ĐỌC LẠI: Discovered pages 16 → 86, đủ 62 bài viết; GSC clicks 63→68, vị trí TB 29,1→28,0; AI Visibility 26→28; trích dẫn AI 17→19",
       "label_en": "sitemap.xml FIXED and RE-READ BY GOOGLE: Discovered pages 16 → 86, all 62 articles; GSC clicks 63→68, avg position 29.1→28.0; AI Visibility 26→28; AI citations 17→19"
+    },
+    {
+      "date": "2026-08-25",
+      "data": "data/2026-08-25.json",
+      "report": "archive/2026-08-25.html",
+      "label_vi": "Google đã đọc sitemap: Discovered pages 16 → 86; Perplexity trích dẫn lần đầu; AI Visibility 28 → 30",
+      "label_en": "Google read the sitemap: Discovered pages 16 → 86; first-ever Perplexity citation; AI Visibility 28 → 30"
     }
   ]
 }
