@@ -1,7 +1,7 @@
 {
   "site": "dxliving.com",
   "description": "Lịch sử snapshot dữ liệu SEO theo ngày / Daily SEO data snapshot history. Mỗi ngày một file data/YYYY-MM-DD.json + bản HTML đóng băng archive/YYYY-MM-DD.html.",
-  "latest": "2026-08-26",
+  "latest": "2026-08-27",
   "snapshots": [
     {
       "date": "2026-06-30",
@@ -149,6 +149,13 @@
       "report": "archive/2026-08-26.html",
       "label_vi": "Key event GA4 5 → 9 (7/9 từ Organic Search); GSC clicks 68 → 70 nhưng cả hai click tăng thêm đều là brand (81,4%) và vị trí TB 27,9 → 28,1; sitemap origin 86 → 88 URL / 62 → 64 bài, Google mới đọc tới 86; JSON-LD trang chủ đổi Organization+LocalBusiness → LocalBusiness+WebSite, thêm sameAs 4 kênh; Ahrefs followed RD 14 → 16 nhưng Site Audit lùi 15 → 14 URL; AI Visibility giữ 30, trích dẫn Perplexity trụ ngày thứ hai; dashboard Social cũ một ngày",
       "label_en": "GA4 key events 5 → 9 (7 of 9 from Organic Search); GSC clicks 68 → 70 but both extra clicks are brand (81.4%) and avg position 27.9 → 28.1; origin sitemap 86 → 88 URLs / 62 → 64 articles, Google has read only 86; homepage JSON-LD changed Organization+LocalBusiness → LocalBusiness+WebSite, adding sameAs for 4 channels; Ahrefs followed RDs 14 → 16 but Site Audit went backwards 15 → 14 URLs; AI Visibility flat at 30, the Perplexity citation persisted a second day; Social dashboard one day stale"
+    },
+    {
+      "date": "2026-08-27",
+      "data": "data/2026-08-27.json",
+      "report": "archive/2026-08-27.html",
+      "label_vi": "GSC giảm toàn bảng, GA4 tăng ngược chiều; Organic Social và Organic Search bằng nhau ở 82 session",
+      "label_en": "GSC fell across the board, GA4 rose against it; Organic Social and Organic Search now level at 82 sessions"
     }
   ]
 }
