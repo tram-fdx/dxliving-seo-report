@@ -1,7 +1,7 @@
 {
   "site": "dxliving.com",
   "description": "Lịch sử snapshot dữ liệu SEO theo ngày / Daily SEO data snapshot history. Mỗi ngày một file data/YYYY-MM-DD.json + bản HTML đóng băng archive/YYYY-MM-DD.html.",
-  "latest": "2026-08-27",
+  "latest": "2026-08-28",
   "snapshots": [
     {
       "date": "2026-06-30",
@@ -156,6 +156,13 @@
       "report": "archive/2026-08-27.html",
       "label_vi": "GSC giảm toàn bảng, GA4 tăng ngược chiều; Organic Social và Organic Search bằng nhau ở 82 session",
       "label_en": "GSC fell across the board, GA4 rose against it; Organic Social and Organic Search now level at 82 sessions"
+    },
+    {
+      "date": "2026-08-28",
+      "data": "data/2026-08-28.json",
+      "report": "archive/2026-08-28.html",
+      "label_vi": "P0 sitemap ĐÓNG (92 URL khớp 68 bài) · GSC 65 clicks / 1.836 impr / 158 truy vấn · GA4 306 session · cannibalisation xấu đi: cụm Melbourne 9 trang, 0 click",
+      "label_en": "Sitemap P0 CLOSED (92 URLs matching 68 articles) · GSC 65 clicks / 1,836 impr / 158 queries · GA4 306 sessions · cannibalisation worsened: 9 Melbourne pages, 0 clicks"
     }
   ]
 }
