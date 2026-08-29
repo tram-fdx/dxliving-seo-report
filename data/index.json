@@ -1,7 +1,7 @@
 {
   "site": "dxliving.com",
   "description": "Lịch sử snapshot dữ liệu SEO theo ngày / Daily SEO data snapshot history. Mỗi ngày một file data/YYYY-MM-DD.json + bản HTML đóng băng archive/YYYY-MM-DD.html.",
-  "latest": "2026-08-28",
+  "latest": "2026-08-29",
   "snapshots": [
     {
       "date": "2026-06-30",
@@ -163,6 +163,13 @@
       "report": "archive/2026-08-28.html",
       "label_vi": "P0 sitemap ĐÓNG (92 URL khớp 68 bài) · GSC 65 clicks / 1.836 impr / 158 truy vấn · GA4 306 session · cannibalisation xấu đi: cụm Melbourne 9 trang, 0 click",
       "label_en": "Sitemap P0 CLOSED (92 URLs matching 68 articles) · GSC 65 clicks / 1,836 impr / 158 queries · GA4 306 sessions · cannibalisation worsened: 9 Melbourne pages, 0 clicks"
+    },
+    {
+      "date": "2026-08-29",
+      "data": "data/2026-08-29.json",
+      "report": "archive/2026-08-29.html",
+      "label_vi": "THỤT LÙI: hub /articles chỉ dẫn tới 35/70 bài, 9 bài mồ côi (hôm qua 68/68) · GSC 65 clicks / 1.820 impr / 154 truy vấn · GA4 357 session, Organic Social lần đầu vượt Organic Search (114 vs 109) nhưng 2 giây, 0 key event · Ahrefs RD 385→368, BL 399→382 · AI Visibility giữ 30",
+      "label_en": "REGRESSION: the /articles hub links only 35 of 70 articles, 9 orphaned (68/68 yesterday) · GSC 65 clicks / 1,820 impr / 154 queries · GA4 357 sessions, Organic Social overtook Organic Search for the first time (114 vs 109) but at 2 seconds and 0 key events · Ahrefs RD 385→368, BL 399→382 · AI Visibility flat at 30"
     }
   ]
 }
