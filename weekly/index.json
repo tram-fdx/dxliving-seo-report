@@ -1,7 +1,20 @@
 {
   "kind": "weekly",
-  "latest": "2026-08-22",
+  "latest": "2026-08-28",
   "weeks": [
+    {
+      "id": "2026-08-28",
+      "vi": "22–28/08/2026",
+      "en": "22–28 Aug 2026",
+      "start": "2026-08-22",
+      "end": "2026-08-28",
+      "compare_start": "2026-08-15",
+      "compare_end": "2026-08-21",
+      "scanned_on": "2026-08-31",
+      "sources": ["Google Search Console (Chrome)", "Google Analytics 4 (Chrome)", "Ahrefs Site Explorer (Chrome)"],
+      "notes_vi": "GSC trễ 3 ngày, mới nhất 28/08. Cửa sổ chồng 1 ngày (22/08) với tuần trước. GA4 đã so sánh được vì cả hai tuần đều sau khi tracking khôi phục 15/08. Ahrefs cảnh báo 'Google keyword ranking data disruption' ngày 28/08.",
+      "notes_en": "GSC lags 3 days; latest data 28 Aug. The window overlaps the prior week by one day (22 Aug). GA4 is comparable because both weeks sit after tracking was restored on 15 Aug. Ahrefs posted a 'Google keyword ranking data disruption' notice on 28 Aug."
+    },
     {
       "id": "2026-08-22",
       "vi": "16–22/08/2026",
