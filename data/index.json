@@ -1,7 +1,7 @@
 {
   "site": "dxliving.com",
   "description": "Lịch sử snapshot dữ liệu SEO theo ngày / Daily SEO data snapshot history. Mỗi ngày một file data/YYYY-MM-DD.json + bản HTML đóng băng archive/YYYY-MM-DD.html.",
-  "latest": "2026-08-29",
+  "latest": "2026-08-31",
   "snapshots": [
     {
       "date": "2026-06-30",
@@ -170,6 +170,13 @@
       "report": "archive/2026-08-29.html",
       "label_vi": "THỤT LÙI: hub /articles chỉ dẫn tới 35/70 bài, 9 bài mồ côi (hôm qua 68/68) · GSC 65 clicks / 1.820 impr / 154 truy vấn · GA4 357 session, Organic Social lần đầu vượt Organic Search (114 vs 109) nhưng 2 giây, 0 key event · Ahrefs RD 385→368, BL 399→382 · AI Visibility giữ 30",
       "label_en": "REGRESSION: the /articles hub links only 35 of 70 articles, 9 orphaned (68/68 yesterday) · GSC 65 clicks / 1,820 impr / 154 queries · GA4 357 sessions, Organic Social overtook Organic Search for the first time (114 vs 109) but at 2 seconds and 0 key events · Ahrefs RD 385→368, BL 399→382 · AI Visibility flat at 30"
+    },
+    {
+      "date": "2026-08-31",
+      "data": "data/2026-08-31.json",
+      "report": "archive/2026-08-31.html",
+      "label_vi": "Hub /articles đã SỬA (71/71 bài, 0 mồ côi); lớp phủ trắng /articles nâng lên mức CAO; GSC 67 clicks / 1.757 impr / 151 truy vấn; Ahrefs đọc lại được followed 19 RD / 20 BL",
+      "label_en": "The /articles hub is FIXED (71 of 71 articles, 0 orphans); the /articles white overlay raised to HIGH; GSC 67 clicks / 1,757 impr / 151 queries; Ahrefs followed split readable again at 19 RD / 20 BL"
     }
   ]
 }
