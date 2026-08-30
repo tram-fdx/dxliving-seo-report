@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DX Living — Weekly SEO + AEO Report (16–22 Aug 2026)</title>
+<style>
+:root{
+--bg-primary:#f5f6f8;--bg-card:#fff;--bg-header:#15161c;
+--text-primary:#1b1c20;--text-secondary:#6b7280;--text-on-dark:#fff;
+--positive:#1f9254;--negative:#d13438;--neutral:#6b7280;
+--gap:16px;--radius:10px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg-primary);color:var(--text-primary);line-height:1.5}
+.wrap{max-width:1400px;margin:0 auto;padding:var(--gap)}
+header.top{background:var(--bg-header);color:#fff;padding:22px 26px;border-radius:var(--radius);margin-bottom:var(--gap);display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:14px}
+header.top h1{font-size:20px;font-weight:650;letter-spacing:-.2px}
+header.top .sub{font-size:13px;color:#a5adba;margin-top:4px}
+.hdr-right{display:flex;align-items:center;gap:10px}
+.badge{font-size:12px;background:rgba(255,255,255,.12);padding:6px 12px;border-radius:20px;white-space:nowrap}
+/* Nút VI/EN ghim cố định — khớp dxliving-seo-report */
+.langsw{position:fixed;top:14px;right:16px;z-index:60;display:flex;background:#fff;
+  border:1px solid #e7e9ec;border-radius:999px;overflow:hidden;
+  box-shadow:0 1px 2px rgba(16,24,40,.04),0 1px 3px rgba(16,24,40,.06)}
+.langsw button{border:0;background:transparent;padding:7px 15px;font-size:12.5px;font-weight:800;
+  color:var(--text-secondary);cursor:pointer;letter-spacing:.4px;transition:.15s;line-height:1}
+.langsw button:not(.active):hover{background:#f5f6f8}
+.langsw button.active{background:#e0533d;color:#fff}
+/* Hàng chip trạng thái — khớp dxliving-seo-report */
+.chiprow{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:var(--gap)}
+.tagchip{font-size:12px;padding:4px 12px;border-radius:999px;background:#eef1f5;color:#374151;text-decoration:none;white-space:nowrap}
+.tagchip.on{background:#e8f6ef;color:#1f7a45}
+.tagchip.hist{background:#fdece8;color:#b42318}
+.tagchip.hist:hover,.tagchip.back:hover{filter:brightness(.96)}
+.tagchip.back{background:#eef2ff;color:#4338ca}
+/* Bộ chọn tuần */
+.picker{background:var(--bg-card);border-radius:var(--radius);padding:14px 18px;box-shadow:0 1px 3px rgba(0,0,0,.07);
+  margin-bottom:var(--gap);display:flex;align-items:center;gap:12px;flex-wrap:wrap;justify-content:space-between}
+.picker .plabel{font-size:13.5px;font-weight:600}
+.picker .pright{display:flex;align-items:center;gap:10px}
+.picker select{padding:6px 12px;border:1px solid #e5e7eb;border-radius:8px;font-size:13px;background:#fff;color:var(--text-primary)}
+.picker .pmeta{font-size:12px;color:var(--text-secondary)}
+.section-title{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:var(--text-secondary);margin:26px 0 10px}
+.kpi-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:var(--gap)}
+.kpi{background:var(--bg-card);border-radius:var(--radius);padding:16px 18px;box-shadow:0 1px 3px rgba(0,0,0,.07)}
+.kpi .lbl{font-size:11.5px;color:var(--text-secondary);text-transform:uppercase;letter-spacing:.5px}
+.kpi .val{font-size:26px;font-weight:700;margin:4px 0 2px}
+.kpi .chg{font-size:12.5px;font-weight:600}
+.kpi .prev{font-size:11.5px;color:var(--text-secondary)}
+.positive{color:var(--positive)}.negative{color:var(--negative)}.neutralc{color:var(--neutral)}
+.chart-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(380px,1fr));gap:var(--gap)}
+.card{background:var(--bg-card);border-radius:var(--radius);padding:18px 20px;box-shadow:0 1px 3px rgba(0,0,0,.07)}
+.card h3{font-size:14px;font-weight:650;margin-bottom:4px}
+.card .hint{font-size:12px;color:var(--text-secondary);margin-bottom:12px}
+.chartbox{width:100%}
+.chartbox svg{width:100%;height:auto;display:block;overflow:visible}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:12px;color:var(--text-secondary);margin-bottom:8px}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+.axis{font-size:9.5px;fill:#8b919c}
+.axlab{font-size:10px;fill:#6b7280}
+.grid{stroke:#eceef1;stroke-width:1}
+.dlbl{font-size:9.5px;fill:#4b5563;font-weight:600}
+table{width:100%;border-collapse:collapse;font-size:13px}
+thead th{text-align:left;padding:9px 10px;border-bottom:2px solid #e5e7eb;color:var(--text-secondary);font-size:11.5px;text-transform:uppercase;letter-spacing:.4px;white-space:nowrap;cursor:pointer;user-select:none}
+thead th:hover{color:var(--text-primary);background:#fafafa}
+tbody td{padding:9px 10px;border-bottom:1px solid #f1f2f4;vertical-align:top}
+tbody tr:hover{background:#fafbfc}
+td.num,th.num{text-align:right}
+.tag{display:inline-block;font-size:11px;padding:2px 7px;border-radius:4px;font-weight:600}
+.tag.brand{background:#eef2ff;color:#4338ca}
+.tag.none{background:#f3f4f6;color:#6b7280}
+.tag.win{background:#e7f6ed;color:#1f7a45}
+.tag.risk{background:#fdecec;color:#b42318}
+.tag.op{background:#fff4e5;color:#b45309}
+.scroll{overflow-x:auto}
+.tabs{display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap}
+.tabs button{border:1px solid #e5e7eb;background:#fff;padding:6px 12px;border-radius:20px;font-size:12.5px;cursor:pointer;color:var(--text-secondary)}
+.tabs button.active{background:var(--bg-header);color:#fff;border-color:var(--bg-header)}
+.note{background:#fffbeb;border:1px solid #fde68a;border-radius:var(--radius);padding:14px 18px;font-size:13px;margin-bottom:var(--gap)}
+.note b{color:#92400e}
+.note ul{margin:6px 0 0 18px}
+.note li{margin-bottom:4px}
+.rec{background:var(--bg-card);border-radius:var(--radius);padding:18px 20px;box-shadow:0 1px 3px rgba(0,0,0,.07)}
+.rec ol{margin-left:18px}
+.rec li{margin-bottom:12px;font-size:13.5px}
+.rec .why{color:var(--text-secondary);font-size:12.5px;display:block;margin-top:2px}
+.pri{display:inline-block;font-size:10.5px;font-weight:700;padding:2px 7px;border-radius:4px;margin-right:6px;vertical-align:1px}
+.p1{background:#fdecec;color:#b42318}.p2{background:#fff4e5;color:#b45309}.p3{background:#eef2ff;color:#4338ca}
+.bullets{font-size:13.5px;margin-left:18px;line-height:1.75}
+footer{color:var(--text-secondary);font-size:12px;padding:18px 4px 30px}
+@media(max-width:768px){.kpi-row{grid-template-columns:repeat(2,1fr)}.chart-row{grid-template-columns:1fr}
+  .langsw{top:8px;right:8px}header.top{padding-top:46px}}
+@media print{body{background:#fff}.card,.kpi{box-shadow:none;border:1px solid #e5e7eb}.langsw{display:none}}
+</style>
+</head>
+<body>
+<div class="langsw">
+  <button id="btn-vi" onclick="setLang('vi')">VI</button>
+  <button id="btn-en" onclick="setLang('en')">EN</button>
+</div>
+
+<div class="wrap">
+
+<header class="top">
+  <div>
+    <h1 data-t="hdrTitle"></h1>
+    <div class="sub" data-t="hdrSub"></div>
+  </div>
+  <div class="hdr-right">
+    <span class="badge" data-t="hdrBadge"></span>
+  </div>
+</header>
+
+<div class="chiprow">
+  <span class="tagchip on" data-t="chipUpdated"></span>
+  <span class="tagchip" data-t="chipWindow"></span>
+  <a class="tagchip back" href="../index.html" data-t="chipBack28"></a>
+  <a class="tagchip hist" href="../history.html" data-t="chipHistory"></a>
+</div>
+
+<div class="picker">
+  <span class="plabel" data-t="pickLabel"></span>
+  <span class="pright">
+    <select id="weekSel" onchange="gotoWeek(this.value)"></select>
+    <span class="pmeta" id="weekMeta"></span>
+  </span>
+</div>
+
+<div class="note" data-html="noteBlock"></div>
+
+<div class="section-title" data-t="secGsc"></div>
+<div class="kpi-row" id="kpi-gsc"></div>
+
+<div class="section-title" data-t="sec28"></div>
+<div class="kpi-row" id="kpi-28"></div>
+
+<div class="section-title" data-t="secGa4"></div>
+<div class="kpi-row" id="kpi-ga4"></div>
+
+<div class="section-title" data-t="secCharts"></div>
+<div class="chart-row">
+  <div class="card">
+    <h3 data-t="c1t"></h3>
+    <div class="hint" data-t="c1h"></div>
+    <div class="chartbox" id="chartDaily"></div>
+  </div>
+  <div class="card">
+    <h3 data-t="c2t"></h3>
+    <div class="hint" data-t="c2h"></div>
+    <div class="chartbox" id="chartArticles"></div>
+  </div>
+</div>
+<div class="chart-row">
+  <div class="card">
+    <h3 data-t="c3t"></h3>
+    <div class="hint" data-t="c3h"></div>
+    <div class="chartbox" id="chartChannel"></div>
+  </div>
+  <div class="card">
+    <h3 data-t="c4t"></h3>
+    <div class="hint" data-t="c4h"></div>
+    <div class="chartbox" id="chartQueries"></div>
+  </div>
+</div>
+
+<div class="section-title" data-t="secTracked"></div>
+<div class="card scroll">
+  <div class="hint" data-html="trackedHint" style="margin-bottom:12px"></div>
+  <table id="tblTracked"></table>
+</div>
+
+<div class="section-title" data-t="secQueries"></div>
+<div class="card scroll">
+  <div class="tabs" id="qTabs">
+    <button data-f="all" class="active" data-t="tabAll"></button>
+    <button data-f="op" data-t="tabOp"></button>
+    <button data-f="up" data-t="tabUp"></button>
+    <button data-f="down" data-t="tabDown"></button>
+    <button data-f="lost" data-t="tabLost"></button>
+  </div>
+  <table id="tblQueries"></table>
+</div>
+
+<div class="section-title" data-t="secAeo"></div>
+<div class="chart-row">
+  <div class="card scroll">
+    <h3 data-t="srcTitle"></h3>
+    <div class="hint" data-t="srcHint"></div>
+    <table id="tblSrc"></table>
+  </div>
+  <div class="card scroll">
+    <h3 data-t="aeoTitle"></h3>
+    <div class="hint" data-t="aeoHint"></div>
+    <table id="tblAI"></table>
+    <ul class="bullets" data-html="aeoList" style="margin-top:14px"></ul>
+  </div>
+</div>
+
+<div class="section-title" data-t="secPages"></div>
+<div class="card scroll">
+  <div class="hint" data-html="pagesHint" style="margin-bottom:12px"></div>
+  <table id="tblPages"></table>
+</div>
+
+<div class="section-title" data-t="secRecs"></div>
+<div class="rec"><ol id="recList"></ol></div>
+
+<footer data-t="footer"></footer>
+
+</div>
+
+<script>
+const COLORS=['#4C72B0','#DD8452','#55A868','#C44E52','#8172B3','#937860'];
+
+/* ==================== DATA (ngôn ngữ trung tính) ====================
+   Cửa sổ thật: GSC 22–28/08 vs 15–21/08 (GSC trễ 3 ngày, mới nhất 28/08).
+   GA4 căn theo đúng cửa sổ đó để hai nguồn so được với nhau. */
+const GSC7={clicks:12,clicksPrev:13,impr:284,imprPrev:371,ctr:4.2,ctrPrev:3.5,pos:36.8,posPrev:22.7};
+const GSC28={clicks:67,clicksPrev:68,impr:1757,imprPrev:1140,ctr:3.8,ctrPrev:5.9,pos:29.4,posPrev:25.4};
+// impr 28d cộng tay từ 28 dòng tab DAYS (1.757); tile GSC chỉ hiện "1.76K" đã làm tròn.
+// imprPrev là giá trị tile "1.14K" — không cộng tay được vì tab DAYS không trả kỳ trước.
+const GA4={sessions:220,sessionsPrev:129,organic:57,organicPrev:49,ai:1,aiPrev:2,keyEvents:5,keyEventsPrev:2};
+
+const DAILY=[
+["Aug 1",1,51],["Aug 2",0,73],["Aug 3",5,109],["Aug 4",6,57],["Aug 5",1,39],["Aug 6",2,66],["Aug 7",3,54],
+["Aug 8",1,56],["Aug 9",1,114],["Aug 10",8,135],["Aug 11",10,117],["Aug 12",1,94],["Aug 13",2,54],["Aug 14",1,83],
+["Aug 15",0,26],["Aug 16",0,37],["Aug 17",4,123],["Aug 18",1,39],["Aug 19",1,44],["Aug 20",3,47],["Aug 21",4,55],
+["Aug 22",1,34],["Aug 23",2,30],["Aug 24",0,38],["Aug 25",1,82],["Aug 26",2,54],["Aug 27",5,31],["Aug 28",1,15]
+];
+const ART_DAILY=[["22/08",25],["23/08",16],["24/08",21],["25/08",66],["26/08",40],["27/08",15],["28/08",6]];
+const CHANNELS=[["Organic Social",100],["Direct",62],["Organic Search",57],["AI Assistant",1]];
+
+const SRC=[
+["(direct) / (none)",62,28.18,"—"],
+["google / organic",54,24.55,"Organic Search"],
+["facebook / social",43,19.55,"Organic Social"],
+["m.facebook.com / referral",32,14.55,"Referral"],
+["facebook.com / referral",21,9.55,"Referral"],
+["bing / organic",3,1.36,"Organic Search"],
+["youtube / social",2,0.91,"Organic Social"],
+["chatgpt.com / ai-assistant",1,0.45,"AI Assistant"],
+["linkedin / social",1,0.45,"Organic Social"],
+["lm.facebook.com / referral",1,0.45,"Referral"]
+];
+
+/* Ahrefs — đọc trực tiếp web UI 31/08, so với snapshot ngày 29/08 */
+const AHREFS={dr:0,drPrev:0,backlinks:364,backlinksPrev:382,refdomains:349,refdomainsPrev:368,
+  orgKeywords:0,orgTraffic:0,aiTotal:21,aiTotalPrev:20,citedPages:8,citedPagesPrev:8};
+const AI_PLATFORMS=[
+["ChatGPT",15,14,5],["Copilot",5,5,4],["Perplexity",1,1,1],
+["Google AI Overviews",0,0,0],["Google AI Mode",0,0,0],["Gemini",0,0,0]
+];
+
+// [query, clicks7, clicksPrev, impr7, imprPrev, pos7, posPrev]
+const QUERIES=[
+["dxliving",7,6,9,8,1.1,1.1],
+["dx living",4,4,29,21,7.6,2.6],
+["3d renders for property developers melbourne",0,0,9,14,26.6,16.5],
+["custom living spaces melbourne",0,0,8,6,36.1,37.2],
+["custom living space melbourne",0,0,7,9,36.7,33.1],
+["3d renders for developers melbourne",0,0,6,24,11.5,25.4],
+["architectural rendering melbourne",0,0,6,21,56.0,13.7],
+["architectural visualisation australia",0,0,6,0,73.2,null],
+["3d renders for builders melbourne",0,0,5,25,6.4,8.6],
+["high-end residential rendering services",0,0,5,0,43.2,null],
+["dx building",0,0,5,0,55.8,null],
+["architectural rendering cost",0,0,5,0,61.6,null],
+["architectural renderings cost",0,0,5,0,78.6,null],
+["interior design for property developers",0,0,5,7,86.8,82.9],
+["compare the interior finishes across different premium models",0,0,4,5,10.5,10.4],
+["dx architecture",0,0,4,4,20.5,19.8],
+["dx house",0,0,4,0,36.5,null],
+["3d rendering for construction australia",0,0,4,0,54.0,null],
+["architectural rendering costs",0,0,4,0,60.0,null],
+["architectural rendering australia",0,0,4,0,68.3,null],
+["cost of architectural renderings",0,0,4,0,70.3,null],
+["3d architectural rendering cost",0,0,4,0,72.0,null],
+["how much does an architectural rendering cost",0,0,4,0,72.3,null],
+["how much do architectural renderings cost",0,0,4,0,72.8,null],
+["architectural rendering sydney",0,0,4,0,75.5,null],
+["luxury rendering",0,0,3,0,12.0,null],
+["architectural visualisation sydney",0,0,3,0,62.7,null],
+["interior rendering cost",0,0,3,2,66.7,67.5],
+["architectural visualization melbourne",0,0,3,0,69.3,null],
+["architecture visualization sydney",0,0,3,0,73.0,null],
+["cost of renderings",0,0,3,0,74.0,null],
+["interior design property development",0,0,3,0,97.0,null],
+["dx model",0,0,2,0,4.5,null],
+["dx homes",0,0,2,0,5.5,null],
+["3d rendering melbourne",0,0,2,35,11.0,18.9],
+["architectural visualisation melbourne",0,0,2,0,51.0,null],
+["apartment rendering",0,0,2,0,62.0,null],
+["residential bim modeling",0,0,2,0,70.5,null],
+["architectural visualization australia",0,0,2,0,76.5,null],
+["what is a project home",0,0,2,8,88.0,70.1],
+["3d rendering services melbourne",0,0,0,16,null,34.8],
+["3d rendering company melbourne",0,0,0,5,null,33.0],
+["3d rendering companies melbourne",0,0,0,4,null,28.8],
+["3d property rendering melbourne",0,0,0,3,null,45.7],
+["3d rendering service melbourne",0,0,0,3,null,56.0],
+["melbourne 3d rendering",0,0,0,2,null,39.0],
+["3d rendering services in melbourne",0,0,0,1,null,41.0],
+["developers adelaide",0,0,0,1,null,42.0],
+["de builders",0,0,0,1,null,49.0],
+["de living",0,0,0,1,null,62.0]
+];
+
+const TRACKED=[
+["dxliving","branded",7,9,1.1,1.1],
+["dx living","branded",4,29,7.6,2.6],
+["architectural visualisation australia","new",0,6,73.2,null],
+["3d architectural rendering australia","none",0,0,null,null],
+["3d rendering services australia","none",0,0,null,null],
+["3d house rendering","none",0,0,null,null],
+["photorealistic rendering services","none",0,0,null,null],
+["interior rendering services australia","none",0,0,null,null],
+["bim home design","none",0,0,null,null],
+["bim modelling services australia","none",0,0,null,null],
+["luxury home design australia","none",0,0,null,null],
+["modern house design australia","none",0,0,null,null],
+["modern house design 2026","none",0,0,null,null],
+["vr home walkthrough","none",0,0,null,null],
+["virtual reality home design","none",0,0,null,null],
+["3d home design australia","none",0,0,null,null],
+["home design perth","none",0,0,null,null],
+["custom home design australia","none",0,0,null,null]
+];
+
+// [url, clicks7, clicksPrev, impr7, imprPrev, pos7, posPrev, suffixKey]
+const PAGES=[
+["/articles",0,0,100,21,60.6,24.0,"indexPage"],
+["/articles/3d-rendering-melbourne-pre-construction-planning",0,0,17,101,9.4,10.6],
+["/articles/custom-home-builders-melbourne-3d-visualisation",0,0,15,15,36.4,34.7],
+["stage.dxliving.com/articles",0,0,11,10,84.0,73.7],
+["/articles/3d-rendering-company-melbourne",0,0,9,62,32.3,45.4],
+["/articles/interior-finishes",0,0,6,15,9.0,11.1],
+["/articles/bim-3d-4d-5d-explained-what-s-the-real-difference",0,0,6,2,20.7,10.5],
+["stage.dxliving.com/articles/custom-home-builders-vs-project-builders",0,0,5,12,69.4,55.7],
+["/articles/duplex-house-design-in-australia",0,0,3,1,4.0,5.0],
+["/articles/program-for-construction-estimates-explained",0,0,3,8,19.7,19.6],
+["/articles/3d-house-design-guide-from-sketch-to-walkthrough",0,0,2,0,13.0,null],
+["/articles/project-cost-management-using-bim-and-digital-twins",1,0,1,0,10.0,null],
+["/articles/construction-program-management-software-a-practical-guide-for-aec",0,0,1,0,2.0,null],
+["/articles/contemporary-houses-a-practical-guide-to-design-costs-and-planning",0,0,1,0,5.0,null],
+["/articles/custom-home-builders-melbourne-pre-build-clarity",0,0,1,0,6.0,null],
+["/articles/house-renovation-3d-design-melbourne",0,0,1,0,6.0,null]
+];
+
+const REC_PRI=[1,1,1,2,2,2,2,3,3];
+
+function renderAI(){
+  const el=document.getElementById('tblAI'); if(!el)return;
+  buildTable(el,
+   [{label:T('thPlatform')},{label:T('thResponses'),num:true},{label:T('thPrevWk'),num:true},{label:T('thCitedPages'),num:true}],
+   AI_PLATFORMS.map(p=>({sort:[p[0],p[1],p[2],p[3]],
+     cells:[esc(p[0]),nf(p[1]),arrowNum(p[1],p[2]),nf(p[3])]})),1);
+}
+
+/* ==================== I18N ==================== */
+const I18N={
+vi:{
+docTitle:'DX Living — Báo cáo SEO + AEO tuần (22–28/08/2026)',
+hdrTitle:'DX Living — Báo cáo SEO + AEO tuần',
+hdrSub:'dxliving.com · Tuần 22–28/08/2026 so với 15–21/08/2026 · Nguồn: Google Search Console + GA4 + Ahrefs, đọc trực tiếp từ Chrome',
+hdrBadge:'Tạo ngày 31/08/2026',
+chipUpdated:'📅 Cập nhật: 31/08/2026',
+chipWindow:'📊 Tuần đang xem: 22–28/08/2026',
+chipBack28:'← Báo cáo 28 ngày',
+chipHistory:'🗂 Lịch sử dữ liệu theo ngày →',
+pickLabel:'Chọn tuần để mở báo cáo của tuần đó',
+weekOnly:'tuần đã lưu',weeksStored:'tuần đã lưu',latestWord:'mới nhất',
+pickNote:'Mỗi tuần được đóng băng thành một bản riêng — số liệu không bao giờ được tính lại.',
+noteBlock:`<b>Lưu ý về dữ liệu (đọc trước khi kết luận)</b><ul>
+<li><b>Khung ngày:</b> GSC trễ 3 ngày, dữ liệu mới nhất là 28/08. Cửa sổ thật là <b>22–28/08</b> vs <b>15–21/08</b>, không phải Thứ 2–Chủ nhật 24–30/08. Cửa sổ này <b>chồng 1 ngày (22/08)</b> với báo cáo tuần trước, vì độ trễ GSC thay đổi giữa hai lần quét.</li>
+<li><b>GA4 đã so sánh được:</b> cả hai tuần đều nằm sau khi tracking hoạt động trở lại (15/08), nên chênh lệch tuần này là thật, không phải hiệu ứng khôi phục tracking.</li>
+<li><b>Ahrefs cảnh báo ngày 28/08:</b> "Google keyword ranking data disruption" — số liệu thứ hạng của Ahrefs tuần này có thể nhiễu. Số backlink và AI citations không bị ảnh hưởng.</li>
+<li><b>Vị trí TB xấu đi 22,7 → 36,8 chủ yếu do pha loãng</b>, không phải mất hạng đồng loạt: một cụm truy vấn mới về chi phí rendering vừa vào index ở vị trí 60–79, kéo trung bình xuống. Chi tiết ở mục 3.</li><li><b>Impressions 28 ngày (1.757) được cộng tay</b> từ 28 dòng của tab DAYS, vì ô tổng của GSC chỉ hiện “1.76K” đã làm tròn. Con số kỳ trước (1.14K) là giá trị làm tròn của GSC, không cộng tay được.</li></ul>`,
+secGsc:'1. Tổng quan — Google Search Console (7 ngày)',
+sec28:'Bối cảnh 28 ngày (01–28/08 vs 28 ngày trước)',
+secGa4:'Tổng quan — GA4 (22–28/08)',
+secCharts:'Biểu đồ',
+secTracked:'2. Từ khóa theo dõi (tracked set — qua GSC)',
+secQueries:'3. Từ khóa phát sinh & cơ hội',
+secAeo:'4. Hiện diện AEO — AI citations (Ahrefs) + traffic từ AI (GA4)',
+secPages:'5. Trang bài viết có traffic (GSC, 7 ngày)',
+secRecs:'6. Gợi ý cải thiện (ưu tiên theo dữ liệu tuần này)',
+kClicks:'Clicks',kImpr:'Impressions',kCtr:'CTR',kPos:'Vị trí TB',
+kClicks28:'Clicks 28 ngày',kImpr28:'Impressions 28 ngày',kCtr28:'CTR 28 ngày',kPos28:'Vị trí TB 28 ngày',
+kSessions:'Tổng sessions',kOrganic:'Organic Search sessions',kAi:'AI Assistant sessions',kKey:'Key events',
+noCompare:'Không so sánh được',ga4Outage:'GA4 mất tracking 27/07–14/08',
+organicNote:'39 engaged · ER 68,4%',organicPrev:'Kỳ trước: 49',
+aiNote:'0,45% tổng traffic',aiPrev:'Nguồn: chatgpt.com · kỳ trước: 2',
+keyNote:'100% từ Organic Search',keyPrev:'Kỳ trước: 2 (100% từ Direct)',
+prevLabel:'Kỳ trước:',posUnit:' vị trí',ppUnit:' đ.p.trăm',
+c1t:'Clicks & Impressions theo ngày — 28 ngày',
+c1h:'Impressions tháng 8 vẫn cao hơn tháng trước (+54%) nhưng tuần cuối tụt rõ: 3 ngày cuối chỉ 31, 15 impressions.',
+c2t:'Bài viết (/articles) — impressions theo ngày, 7 ngày',
+c2h:'189 impressions, 1 click (click đầu tiên từ trước tới nay). Peak 66 ngày 25/08, rơi còn 6 ngày 28/08.',
+c3t:'GA4 — Sessions theo kênh (22–28/08)',
+c3h:'Tổng 220 sessions. Organic Social vọt 14 → 100. AI Assistant còn 1.',
+c4t:'Top truy vấn theo impressions (7 ngày)',
+c4h:'Cụm Melbourne co lại, thay bằng cụm "architectural rendering cost" mới vào index ở vị trí 60–79.',
+lgImpr:'Impressions (cột, trục phải)',lgClicks:'Clicks (đường, trục trái)',
+lgThis:'Impressions tuần này',lgPrev:'Tuần trước',
+axClicks:'Clicks',axImpr:'Impr.',sessionsWord:'sessions',
+trackedHint:'15/18 từ khóa theo dõi vẫn <b>chưa có hiển thị nào</b>. Tin mới: <b>"architectural visualisation australia" lần đầu xuất hiện</b> — 6 impressions, vị trí 73,2.',
+thTracked:'Từ khóa theo dõi',thStatus:'Trạng thái',thPos7:'Vị trí (7 ngày)',thPosDelta:'Thay đổi vs tuần trước',
+thImpr:'Impressions',thClicks:'Clicks',thQuery:'Truy vấn',thImprDelta:'Δ Impressions',thPos:'Vị trí',
+thPosD:'Δ Vị trí',thPage:'Trang bài viết',thImprD:'Δ Impr',thCtr:'CTR',
+thSource:'Nguồn / phương tiện',thSessions:'Sessions',thPctTotal:'% tổng',thChannel:'Kênh',
+thPlatform:'Nền tảng AI',thResponses:'Số câu trả lời trích dẫn',thPrevWk:'Δ vs 29/08',thCitedPages:'Số trang được trích',
+tabAll:'Tất cả',tabOp:'Cơ hội (vị trí 5–20)',tabUp:'Tăng hiển thị',tabDown:'Giảm hiển thị',tabLost:'Mất hiển thị',
+tagBrand:'branded',tagNone:'chưa có hiển thị',tagOp:'cơ hội',tagLost:'mất hiển thị',tagUp:'tăng',tagStage:'stage',tagNew:'mới xuất hiện',
+srcTitle:'Nguồn / phương tiện (session source / medium)',
+srcHint:'Đủ 10/10 nguồn. Chỉ ChatGPT gửi traffic AI, và giảm còn 1 session.',
+aeoTitle:'AI citations — Ahrefs (số liệu thật, không phải proxy)',
+aeoHint:'Đây là số lần dxliving.com được trích dẫn trong câu trả lời AI, đọc từ Ahrefs Site Explorer ngày 31/08.',
+aeoList:`<li><b>21 câu trả lời AI</b> có trích dẫn dxliving.com trên <b>8 trang</b> — tăng 1 so với snapshot 29/08 (ChatGPT 14 → 15).</li>
+<li><b>Google AI Overviews, AI Mode và Gemini vẫn đúng 0</b> — ba nền tảng lớn nhất chưa từng trích site này lần nào.</li>
+<li>GA4 chỉ ghi <b>1 session</b> từ chatgpt.com (tuần trước 2). Được trích dẫn ≠ có traffic: 21 lần trích chỉ đổi lấy 1 lượt truy cập.</li>
+<li>Ahrefs: DR vẫn <b>0</b>, organic keywords <b>0</b> dù có 349 referring domains — hồ sơ backlink không tạo được thẩm quyền.</li>
+<li>Backlinks <b>382 → 364</b>, referring domains <b>368 → 349</b>: đang mất link, trong khi số all-time vẫn tăng.</li>`,
+pagesHint:'Toàn bộ /articles: <b>189 impressions, 1 click, CTR 0,5%, vị trí TB 46,5</b> (tuần trước: 295 impressions, 0 click, vị trí 25,2). <b>Click đầu tiên từ trước tới nay</b> — từ bài project-cost-management-using-bim-and-digital-twins ở vị trí 10.',
+indexPage:' (trang danh sách)',
+footer:'Nguồn: Google Search Console (sc-domain:dxliving.com), Google Analytics 4 (property 513249954 – DX LIVING) và Ahrefs Site Explorer, đọc trực tiếp từ Chrome ngày 31/08/2026. Không dùng Supermetrics, không dùng OpenSEO. Ahrefs API không khả dụng trên gói hiện tại nên số liệu Ahrefs đọc từ giao diện web.',
+recs:[
+["Cụm Melbourne sụp gần hết — kiểm tra ngay","“3d rendering services melbourne” 16 → 0 impressions, “3d rendering company melbourne” 5 → 0, “3d rendering melbourne” 35 → 2, và “architectural rendering melbourne” rơi từ vị trí 13,7 xuống 56. Kéo theo trang /articles/3d-rendering-melbourne-pre-construction-planning rơi 101 → 17 impressions. Đây là mất hạng thật, không phải pha loãng. Kiểm tra index status, thay đổi nội dung gần đây và biến động SERP của cụm Melbourne."],
+["Cụm “architectural rendering cost” vừa vào index nhưng ở vị trí 60–79","Có tới 8 biến thể mới cùng lúc (“architectural rendering cost/costs”, “cost of architectural renderings”, “how much does an architectural rendering cost”…), mỗi cái 3–5 impressions, không cái nào tốt hơn vị trí 60. Chính cụm này kéo vị trí TB toàn site từ 22,7 xuống 36,8. Gom về một trang pricing duy nhất, trả lời trực tiếp câu hỏi chi phí, thay vì để tản mát."],
+["stage.dxliving.com vẫn đang được index — đã báo tuần trước, chưa xử lý","Tuần này stage vẫn còn 11 + 5 impressions ở vị trí 84 và 69,4. Duplicate content vẫn đang ăn tín hiệu của domain chính. Chặn bằng noindex + HTTP auth rồi submit Removals trong GSC."],
+["/articles (trang danh sách) tăng 21 → 100 impressions nhưng 0 click, vị trí 60,6","Trang list đang hút hiển thị thay cho chính các bài viết, ở vị trí quá sâu để có click. Hoặc tối ưu nó thành một trang hub thật sự (mô tả, phân nhóm chủ đề), hoặc cân nhắc noindex để dồn tín hiệu cho từng bài."],
+["Nhân rộng bài vừa có click đầu tiên","/articles/project-cost-management-using-bim-and-digital-twins đạt vị trí 10 và mang về click đầu tiên cho toàn bộ khu /articles. Chủ đề cost + BIM đang có lực. Đây cũng là hướng khớp với cụm “architectural rendering cost” ở khuyến nghị 2."],
+["“architectural visualisation australia” lần đầu có hiển thị — cần landing page riêng","6 impressions, vị trí 73,2. Đây là từ khóa nằm trong bộ theo dõi và lần đầu tiên site xuất hiện cho nó. Hiện chưa có trang dịch vụ cấp quốc gia nhắm đúng cụm này; đang hiển thị nhờ bài viết. Một service page riêng sẽ đưa nó khỏi vùng 70+."],
+["Key events 2 → 5 và 100% đến từ Organic Search — xác nhận đây là lead thật","Tuần trước 2 key event đều từ Direct, Organic Search 0. Tuần này cả 5 đều từ Organic Search (session key event rate 5,26%). Cần đối chiếu với CRM/inbox xem 5 sự kiện này có phải liên hệ thật không, hay chỉ là event cấu hình sai."],
+["Ahrefs: đang mất backlink, DR vẫn 0","Backlinks 382 → 364, referring domains 368 → 349 so với snapshot 29/08, trong khi all-time vẫn tăng (483 → 485). Có 349 referring domains mà DR = 0 và organic keywords = 0 nghĩa là hồ sơ link gần như không có giá trị. Cần audit nguồn link trước khi tính chuyện xây thêm."],
+["Organic Social vọt 14 → 100 sessions nhưng gần như không engage","Engagement rate chỉ 26%, thời gian trung bình 2 giây, 0 key event. Traffic từ Facebook (43 + 32 + 21 + 1 = 97 sessions) vào rồi thoát ngay. Nếu đây là kết quả của một đợt đẩy bài, cần xem lại trang đích — hoặc đừng tính nó là thành tích."]
+]},
+en:{
+docTitle:'DX Living — Weekly SEO + AEO Report (22–28 Aug 2026)',
+hdrTitle:'DX Living — Weekly SEO + AEO Report',
+hdrSub:'dxliving.com · 22–28 Aug 2026 vs 15–21 Aug 2026 · Source: Google Search Console + GA4 + Ahrefs, read directly from Chrome',
+hdrBadge:'Generated 31 Aug 2026',
+chipUpdated:'📅 Updated: 31 Aug 2026',
+chipWindow:'📊 Week shown: 22–28 Aug 2026',
+chipBack28:'← 28-day report',
+chipHistory:'🗂 Daily data history →',
+pickLabel:'Pick a week to open its report',
+weekOnly:'stored week',weeksStored:'stored weeks',latestWord:'latest',
+pickNote:'Each week is frozen as its own copy — no figure is ever recomputed.',
+noteBlock:`<b>Data caveats (read before drawing conclusions)</b><ul>
+<li><b>Date window:</b> GSC lags 3 days; latest available data is 28 Aug. The real window is <b>22–28 Aug</b> vs <b>15–21 Aug</b>, not Mon–Sun 24–30 Aug. It <b>overlaps the previous report by one day (22 Aug)</b> because the GSC lag changed between the two scans.</li>
+<li><b>GA4 is now comparable:</b> both weeks sit after tracking came back online (15 Aug), so this week's differences are real rather than an artefact of recovery.</li>
+<li><b>Ahrefs banner dated 28 Aug:</b> "Google keyword ranking data disruption" — Ahrefs ranking figures may be noisy this week. Backlink counts and AI citations are unaffected.</li>
+<li><b>Average position worsening from 22.7 to 36.8 is mostly dilution</b>, not a broad ranking loss: a new cluster of rendering-cost queries entered the index at positions 60–79 and dragged the average down. Detail in section 3.</li><li><b>The 28-day impression total (1,757) was summed by hand</b> across the 28 rows of the DAYS tab, because the GSC tile only shows a rounded “1.76K”. The prior-period figure (1.14K) is GSC’s rounded tile value and could not be summed.</li></ul>`,
+secGsc:'1. Overview — Google Search Console (7 days)',
+sec28:'28-day context (1–28 Aug vs prior 28 days)',
+secGa4:'Overview — GA4 (22–28 Aug)',
+secCharts:'Charts',
+secTracked:'2. Tracked keywords (via GSC)',
+secQueries:'3. Emerging queries & opportunities',
+secAeo:'4. AEO presence — AI citations (Ahrefs) + AI traffic (GA4)',
+secPages:'5. Article pages with traffic (GSC, 7 days)',
+secRecs:'6. Recommendations (prioritised from this week’s data)',
+kClicks:'Clicks',kImpr:'Impressions',kCtr:'CTR',kPos:'Avg. position',
+kClicks28:'Clicks, 28 days',kImpr28:'Impressions, 28 days',kCtr28:'CTR, 28 days',kPos28:'Avg. position, 28 days',
+kSessions:'Total sessions',kOrganic:'Organic Search sessions',kAi:'AI Assistant sessions',kKey:'Key events',
+noCompare:'Not comparable',ga4Outage:'GA4 tracking down 27 Jul–14 Aug',
+organicNote:'39 engaged · 68.4% engagement rate',organicPrev:'Prior period: 49',
+aiNote:'0.45% of total traffic',aiPrev:'Source: chatgpt.com · prior: 2',
+keyNote:'100% from Organic Search',keyPrev:'Prior period: 2 (100% from Direct)',
+prevLabel:'Prior period:',posUnit:' positions',ppUnit:' pp',
+c1t:'Daily clicks & impressions — 28 days',
+c1h:'August impressions still beat the prior month (+54%) but the final week fell away sharply: 31 and 15 impressions on the last two days.',
+c2t:'Articles (/articles) — daily impressions, 7 days',
+c2h:'189 impressions and 1 click — the first article click ever recorded. Peak of 66 on 25 Aug, down to 6 by 28 Aug.',
+c3t:'GA4 — sessions by channel (22–28 Aug)',
+c3h:'220 sessions total. Organic Social jumped 14 → 100. AI Assistant down to 1.',
+c4t:'Top queries by impressions (7 days)',
+c4h:'The Melbourne cluster contracted, replaced by a new "architectural rendering cost" cluster sitting at positions 60–79.',
+lgImpr:'Impressions (bars, right axis)',lgClicks:'Clicks (line, left axis)',
+lgThis:'Impressions this week',lgPrev:'Prior week',
+axClicks:'Clicks',axImpr:'Impr.',sessionsWord:'sessions',
+trackedHint:'15 of 18 tracked keywords still returned <b>no impressions at all</b>. New this week: <b>"architectural visualisation australia" surfaced for the first time</b> — 6 impressions at position 73.2.',
+thTracked:'Tracked keyword',thStatus:'Status',thPos7:'Position (7 days)',thPosDelta:'Change vs prior week',
+thImpr:'Impressions',thClicks:'Clicks',thQuery:'Query',thImprDelta:'Δ Impressions',thPos:'Position',
+thPosD:'Δ Position',thPage:'Article page',thImprD:'Δ Impr',thCtr:'CTR',
+thSource:'Source / medium',thSessions:'Sessions',thPctTotal:'% of total',thChannel:'Channel',
+thPlatform:'AI platform',thResponses:'Citing responses',thPrevWk:'Δ vs 29 Aug',thCitedPages:'Cited pages',
+tabAll:'All',tabOp:'Opportunities (pos. 5–20)',tabUp:'Gaining impressions',tabDown:'Losing impressions',tabLost:'Lost visibility',
+tagBrand:'branded',tagNone:'no impressions',tagOp:'opportunity',tagLost:'lost visibility',tagUp:'gaining',tagStage:'staging',tagNew:'newly surfaced',
+srcTitle:'Source / medium (session source / medium)',
+srcHint:'All 10 of 10 sources. Only ChatGPT sent AI traffic, and it fell to a single session.',
+aeoTitle:'AI citations — Ahrefs (measured, not a proxy)',
+aeoHint:'This counts how often dxliving.com is cited inside AI answers, read from Ahrefs Site Explorer on 31 Aug.',
+aeoList:`<li><b>21 AI responses</b> cite dxliving.com across <b>8 pages</b> — up 1 from the 29 Aug snapshot (ChatGPT 14 → 15).</li>
+<li><b>Google AI Overviews, AI Mode and Gemini remain at exactly 0</b> — the three largest surfaces have never cited this site.</li>
+<li>GA4 recorded just <b>1 session</b> from chatgpt.com (2 the prior week). Being cited is not the same as being visited: 21 citations converted into one click.</li>
+<li>Ahrefs still shows DR <b>0</b> and organic keywords <b>0</b> despite 349 referring domains — the backlink profile is generating no authority.</li>
+<li>Backlinks <b>382 → 364</b> and referring domains <b>368 → 349</b>: links are being lost even as the all-time totals keep rising.</li>`,
+pagesHint:'All /articles combined: <b>189 impressions, 1 click, 0.5% CTR, avg. position 46.5</b> (prior week: 295 impressions, 0 clicks, position 25.2). <b>The first article click ever</b>, from project-cost-management-using-bim-and-digital-twins at position 10.',
+indexPage:' (index page)',
+footer:'Sources: Google Search Console (sc-domain:dxliving.com), Google Analytics 4 (property 513249954 – DX LIVING) and Ahrefs Site Explorer, all read directly from Chrome on 31 Aug 2026. No Supermetrics, no OpenSEO. The Ahrefs API is unavailable on the current plan, so Ahrefs figures come from the web interface.',
+recs:[
+["The Melbourne cluster has almost entirely collapsed — investigate now","“3d rendering services melbourne” fell 16 → 0 impressions, “3d rendering company melbourne” 5 → 0, “3d rendering melbourne” 35 → 2, and “architectural rendering melbourne” dropped from position 13.7 to 56. /articles/3d-rendering-melbourne-pre-construction-planning fell with it, 101 → 17 impressions. This is a genuine ranking loss, not dilution. Check index status, recent content edits, and SERP volatility across the Melbourne cluster."],
+["The “architectural rendering cost” cluster has entered the index, but at positions 60–79","Eight new variants appeared at once (“architectural rendering cost/costs”, “cost of architectural renderings”, “how much does an architectural rendering cost” and so on), each with 3–5 impressions and none better than position 60. This cluster is what pulled site-wide average position from 22.7 to 36.8. Consolidate it into a single pricing page that answers the cost question directly rather than leaving it scattered."],
+["stage.dxliving.com is still indexed — flagged last week, still unresolved","Staging still drew 11 and 5 impressions this week, at positions 84 and 69.4. The duplicate content continues to absorb signals meant for the main domain. Block it with noindex plus HTTP auth, then submit Removals in GSC."],
+["/articles rose 21 → 100 impressions but converted 0 clicks at position 60.6","The listing page is now absorbing impressions that belong to the articles themselves, and sits far too deep to earn clicks. Either build it into a real hub page (description, topic grouping) or noindex it so the signals concentrate on individual posts."],
+["Build on the article that earned the first click","/articles/project-cost-management-using-bim-and-digital-twins reached position 10 and produced the first click the whole /articles section has ever seen. Cost plus BIM is where the traction is — the same direction as the rendering-cost cluster in recommendation 2."],
+["“architectural visualisation australia” surfaced for the first time — it needs its own landing page","6 impressions at position 73.2. This is a tracked keyword appearing for the very first time, and it is currently surfacing through a blog post rather than a service page. A dedicated national service page should lift it out of the 70s."],
+["Key events rose 2 → 5 and all came from Organic Search — verify they are real leads","Last week both key events came from Direct and Organic Search produced none. This week all five came from Organic Search, a 5.26% session key event rate. Cross-check against the CRM or inbox to confirm these are genuine enquiries rather than a misconfigured event."],
+["Ahrefs: links are being lost and DR is still 0","Backlinks fell 382 → 364 and referring domains 368 → 349 against the 29 Aug snapshot, while the all-time totals kept climbing (483 → 485). Holding 349 referring domains at DR 0 with 0 organic keywords means the link profile carries almost no value. Audit the existing sources before investing in more."],
+["Organic Social jumped 14 → 100 sessions with almost no engagement","Engagement rate was 26%, average time 2 seconds, and zero key events. Facebook accounted for 97 of those sessions (43 + 32 + 21 + 1) and they bounced immediately. If this came from a posting push, the landing experience needs review — or it should not be counted as a win."]
+]}};
+
+/* ==================== HELPERS ==================== */
+let LANG='vi';
+const T=k=>I18N[LANG][k];
+const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+const nf=n=>LANG==='vi'?n.toLocaleString('vi-VN'):n.toLocaleString('en-US');
+const dec=(n,d=1)=>LANG==='vi'?n.toFixed(d).replace('.',','):n.toFixed(d);
+function pct(cur,prev){if(!prev)return null;return (cur-prev)/prev*100;}
+
+function kpiCard(label,value,prev,opt={}){
+  let chg='',cls='neutralc';
+  if(opt.invert&&prev!=null){
+    const d=value-prev;
+    cls=d<0?'positive':d>0?'negative':'neutralc';
+    chg=(d>0?'+':d<0?'−':'')+dec(Math.abs(d))+T('posUnit');
+  } else if(opt.pp&&prev!=null){
+    const d=value-prev;
+    cls=d>0?'positive':d<0?'negative':'neutralc';
+    chg=(d>0?'+':d<0?'−':'')+dec(Math.abs(d))+T('ppUnit');
+  } else if(!opt.raw&&prev!=null){
+    const p=pct(value,prev);
+    cls=p>0?'positive':p<0?'negative':'neutralc';
+    chg=(p>0?'+':p<0?'−':'')+dec(Math.abs(p))+'%';
+  } else { chg=opt.note||''; }
+  const disp=opt.suffix!=null?dec(value)+opt.suffix:nf(value);
+  const prevTxt=prev!=null?(T('prevLabel')+' '+(opt.suffix!=null?dec(prev)+opt.suffix:nf(prev))):(opt.prevNote||'');
+  return `<div class="kpi"><div class="lbl">${esc(label)}</div><div class="val">${disp}</div>
+  <div class="chg ${cls}">${chg}</div><div class="prev">${esc(prevTxt)}</div></div>`;
+}
+
+function renderKPIs(){
+  document.getElementById('kpi-gsc').innerHTML=
+   kpiCard(T('kClicks'),GSC7.clicks,GSC7.clicksPrev)+
+   kpiCard(T('kImpr'),GSC7.impr,GSC7.imprPrev)+
+   kpiCard(T('kCtr'),GSC7.ctr,GSC7.ctrPrev,{suffix:'%',pp:true})+
+   kpiCard(T('kPos'),GSC7.pos,GSC7.posPrev,{suffix:'',invert:true});
+  document.getElementById('kpi-28').innerHTML=
+   kpiCard(T('kClicks28'),GSC28.clicks,GSC28.clicksPrev)+
+   kpiCard(T('kImpr28'),GSC28.impr,GSC28.imprPrev)+
+   kpiCard(T('kCtr28'),GSC28.ctr,GSC28.ctrPrev,{suffix:'%',pp:true})+
+   kpiCard(T('kPos28'),GSC28.pos,GSC28.posPrev,{suffix:'',invert:true});
+  document.getElementById('kpi-ga4').innerHTML=
+   kpiCard(T('kSessions'),GA4.sessions,null,{raw:true,note:T('noCompare'),prevNote:T('ga4Outage')})+
+   kpiCard(T('kOrganic'),GA4.organic,null,{raw:true,note:T('organicNote'),prevNote:T('organicPrev')})+
+   kpiCard(T('kAi'),GA4.ai,null,{raw:true,note:T('aiNote'),prevNote:T('aiPrev')})+
+   kpiCard(T('kKey'),GA4.keyEvents,null,{raw:true,note:T('keyNote'),prevNote:T('keyPrev')});
+}
+
+/* ==================== CHARTS (SVG thuần / pure SVG) ==================== */
+function niceMax(v){if(v<=0)return 1;const p=Math.pow(10,Math.floor(Math.log10(v)));const n=v/p;
+  const s=n<=1?1:n<=1.5?1.5:n<=2?2:n<=3?3:n<=4?4:n<=5?5:n<=7.5?7.5:10;return s*p;}
+function legend(items){return '<div class="legend">'+items.map(i=>
+  `<span><i style="background:${i.c}"></i>${esc(i.t)}</span>`).join('')+'</div>';}
+
+function comboChart(el,rows){
+  const W=760,H=300,mL=44,mR=46,mT=14,mB=52;
+  const iw=W-mL-mR, ih=H-mT-mB;
+  const maxI=niceMax(Math.max(...rows.map(r=>r[2])));
+  const maxC=niceMax(Math.max(...rows.map(r=>r[1])));
+  const bw=iw/rows.length, bar=bw*0.62;
+  let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(T('c1t'))}">`;
+  for(let i=0;i<=4;i++){const y=mT+ih-ih*i/4;
+    s+=`<line class="grid" x1="${mL}" y1="${y}" x2="${mL+iw}" y2="${y}"/>`;
+    s+=`<text class="axis" x="${mL-7}" y="${y+3.5}" text-anchor="end">${Math.round(maxC*i/4)}</text>`;
+    s+=`<text class="axis" x="${mL+iw+7}" y="${y+3.5}">${Math.round(maxI*i/4)}</text>`;}
+  rows.forEach((r,i)=>{const h=ih*r[2]/maxI;const x=mL+i*bw+(bw-bar)/2;
+    s+=`<rect x="${x.toFixed(1)}" y="${(mT+ih-h).toFixed(1)}" width="${bar.toFixed(1)}" height="${Math.max(h,0).toFixed(1)}" fill="#4C72B0" opacity=".28" rx="2"><title>${esc(r[0])}: ${r[2]} ${esc(T('kImpr').toLowerCase())}</title></rect>`;});
+  const pts=rows.map((r,i)=>[mL+i*bw+bw/2, mT+ih-ih*r[1]/maxC]);
+  s+=`<polyline fill="none" stroke="#DD8452" stroke-width="2.2" stroke-linejoin="round" points="${pts.map(p=>p[0].toFixed(1)+','+p[1].toFixed(1)).join(' ')}"/>`;
+  pts.forEach((p,i)=>{s+=`<circle cx="${p[0].toFixed(1)}" cy="${p[1].toFixed(1)}" r="2.8" fill="#DD8452"><title>${esc(rows[i][0])}: ${rows[i][1]} ${esc(T('kClicks').toLowerCase())}</title></circle>`;});
+  rows.forEach((r,i)=>{if(i%2)return;const x=mL+i*bw+bw/2;
+    s+=`<text class="axis" transform="translate(${x.toFixed(1)},${mT+ih+13}) rotate(-45)" text-anchor="end">${esc(r[0])}</text>`;});
+  s+=`<text class="axlab" x="${mL}" y="${mT-3}" text-anchor="middle">${esc(T('axClicks'))}</text>`;
+  s+=`<text class="axlab" x="${mL+iw}" y="${mT-3}" text-anchor="middle">${esc(T('axImpr'))}</text>`;
+  s+='</svg>';
+  el.innerHTML=legend([{c:'#4C72B0',t:T('lgImpr')},{c:'#DD8452',t:T('lgClicks')}])+s;
+}
+
+function barChart(el,rows,color){
+  const W=560,H=280,mL=40,mR=12,mT=22,mB=34;
+  const iw=W-mL-mR, ih=H-mT-mB;
+  const max=niceMax(Math.max(...rows.map(r=>r[1])));
+  const bw=iw/rows.length, bar=Math.min(bw*0.6,54);
+  let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(T('c2t'))}">`;
+  for(let i=0;i<=4;i++){const y=mT+ih-ih*i/4;
+    s+=`<line class="grid" x1="${mL}" y1="${y}" x2="${mL+iw}" y2="${y}"/>`;
+    s+=`<text class="axis" x="${mL-7}" y="${y+3.5}" text-anchor="end">${Math.round(max*i/4)}</text>`;}
+  rows.forEach((r,i)=>{const h=ih*r[1]/max;const x=mL+i*bw+(bw-bar)/2;const y=mT+ih-h;
+    s+=`<rect x="${x.toFixed(1)}" y="${y.toFixed(1)}" width="${bar.toFixed(1)}" height="${Math.max(h,0).toFixed(1)}" fill="${color}" rx="3"><title>${esc(r[0])}: ${r[1]}</title></rect>`;
+    s+=`<text class="dlbl" x="${(x+bar/2).toFixed(1)}" y="${(y-5).toFixed(1)}" text-anchor="middle">${r[1]}</text>`;
+    s+=`<text class="axis" x="${(mL+i*bw+bw/2).toFixed(1)}" y="${mT+ih+15}" text-anchor="middle">${esc(r[0])}</text>`;});
+  s+='</svg>';el.innerHTML=s;
+}
+
+function donutChart(el,rows){
+  const S=250,cx=125,cy=125,rO=100,rI=60;
+  const total=rows.reduce((a,r)=>a+r[1],0);
+  let a0=-Math.PI/2,s=`<svg viewBox="0 0 ${S} ${S}" role="img" aria-label="${esc(T('c3t'))}">`;
+  rows.forEach((r,i)=>{
+    const ang=r[1]/total*Math.PI*2, a1=a0+ang, big=ang>Math.PI?1:0;
+    const p=(rr,a)=>[(cx+rr*Math.cos(a)).toFixed(2),(cy+rr*Math.sin(a)).toFixed(2)];
+    const [x0,y0]=p(rO,a0),[x1,y1]=p(rO,a1),[x2,y2]=p(rI,a1),[x3,y3]=p(rI,a0);
+    s+=`<path d="M${x0},${y0} A${rO},${rO} 0 ${big},1 ${x1},${y1} L${x2},${y2} A${rI},${rI} 0 ${big},0 ${x3},${y3} Z" fill="${COLORS[i%COLORS.length]}" stroke="#fff" stroke-width="2"><title>${esc(r[0])}: ${r[1]} (${dec(r[1]/total*100)}%)</title></path>`;
+    if(r[1]/total>0.05){const [lx,ly]=p((rO+rI)/2,a0+ang/2);
+      s+=`<text x="${lx}" y="${+ly+4}" text-anchor="middle" style="font-size:12px;font-weight:700;fill:#fff">${r[1]}</text>`;}
+    a0=a1;});
+  s+=`<text x="${cx}" y="${cy-2}" text-anchor="middle" style="font-size:24px;font-weight:700;fill:#1b1c20">${total}</text>`;
+  s+=`<text x="${cx}" y="${cy+16}" text-anchor="middle" style="font-size:11px;fill:#6b7280">${esc(T('sessionsWord'))}</text></svg>`;
+  el.innerHTML=legend(rows.map((r,i)=>({c:COLORS[i%COLORS.length],t:`${r[0]} — ${r[1]} (${dec(r[1]/total*100)}%)`})))+
+    `<div style="max-width:280px;margin:0 auto">${s}</div>`;
+}
+
+function groupedBarChart(el,rows){
+  const n=rows.length,rowH=30,mT=10,mB=26,mL=232,mR=44,W=760;
+  const H=mT+mB+n*rowH, iw=W-mL-mR;
+  const max=niceMax(Math.max(...rows.map(r=>Math.max(r[1],r[2]))));
+  let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(T('c4t'))}">`;
+  for(let i=0;i<=4;i++){const x=mL+iw*i/4;
+    s+=`<line class="grid" x1="${x}" y1="${mT}" x2="${x}" y2="${mT+n*rowH}"/>`;
+    s+=`<text class="axis" x="${x}" y="${mT+n*rowH+15}" text-anchor="middle">${Math.round(max*i/4)}</text>`;}
+  rows.forEach((r,i)=>{
+    const y=mT+i*rowH, h=9;
+    const w1=iw*r[1]/max, w2=iw*r[2]/max;
+    s+=`<text class="axis" x="${mL-8}" y="${y+rowH/2+3}" text-anchor="end" style="font-size:10px;fill:#374151">${esc(r[0].length>36?r[0].slice(0,34)+'…':r[0])}</text>`;
+    s+=`<rect x="${mL}" y="${y+4}" width="${Math.max(w1,0).toFixed(1)}" height="${h}" fill="#4C72B0" rx="2"><title>${esc(T('lgThis'))}: ${r[1]}</title></rect>`;
+    s+=`<rect x="${mL}" y="${y+15}" width="${Math.max(w2,0).toFixed(1)}" height="${h}" fill="#c3cad6" rx="2"><title>${esc(T('lgPrev'))}: ${r[2]}</title></rect>`;
+    s+=`<text class="dlbl" x="${(mL+Math.max(w1,w2)+6).toFixed(1)}" y="${y+rowH/2+3.5}">${r[1]} / ${r[2]}</text>`;});
+  s+='</svg>';
+  el.innerHTML=legend([{c:'#4C72B0',t:T('lgThis')},{c:'#c3cad6',t:T('lgPrev')}])+s;
+}
+
+function renderCharts(){
+  comboChart(document.getElementById('chartDaily'),DAILY);
+  barChart(document.getElementById('chartArticles'),ART_DAILY,'#55A868');
+  donutChart(document.getElementById('chartChannel'),CHANNELS);
+  groupedBarChart(document.getElementById('chartQueries'),
+    QUERIES.filter(q=>q[3]>0).slice(0,12).map(q=>[q[0],q[3],q[4]]));
+}
+
+/* ==================== TABLES ==================== */
+function arrowPos(cur,prev){
+  if(cur==null||prev==null)return '<span class="neutralc">—</span>';
+  const d=cur-prev;
+  if(Math.abs(d)<0.05)return '<span class="neutralc">→ '+dec(0)+'</span>';
+  return d<0?`<span class="positive">▲ ${dec(Math.abs(d))}</span>`:`<span class="negative">▼ ${dec(d)}</span>`;
+}
+function arrowNum(cur,prev){
+  const d=cur-prev;
+  if(d===0)return '<span class="neutralc">0</span>';
+  return d>0?`<span class="positive">+${d}</span>`:`<span class="negative">${d}</span>`;
+}
+function buildTable(el,cols,rows,sortIdx){
+  let dir=-1,idx=sortIdx;
+  function draw(){
+    const sorted=[...rows].sort((a,b)=>{
+      const x=a.sort[idx],y=b.sort[idx];
+      if(x==null)return 1; if(y==null)return -1;
+      return x<y?dir:x>y?-dir:0;
+    });
+    el.innerHTML='<thead><tr>'+cols.map((c,i)=>
+      `<th class="${c.num?'num':''}" data-i="${i}">${esc(c.label)}${i===idx?(dir===-1?' ▼':' ▲'):''}</th>`).join('')+'</tr></thead><tbody>'+
+      sorted.map(r=>'<tr>'+r.cells.map((c,i)=>`<td class="${cols[i].num?'num':''}">${c}</td>`).join('')+'</tr>').join('')+'</tbody>';
+    el.querySelectorAll('th').forEach(th=>th.onclick=()=>{
+      const i=+th.dataset.i; if(i===idx)dir=-dir; else{idx=i;dir=-1;} draw();
+    });
+  }
+  draw();
+}
+
+let currentFilter='all';
+
+function renderTables(){
+  // Tracked
+  buildTable(document.getElementById('tblTracked'),
+   [{label:T('thTracked')},{label:T('thStatus')},{label:T('thPos7'),num:true},{label:T('thPosDelta'),num:true},{label:T('thImpr'),num:true},{label:T('thClicks'),num:true}],
+   TRACKED.map(t=>({
+     sort:[t[0],t[1],t[4]==null?999:t[4],t[4]==null?0:(t[4]-t[5]),t[3],t[2]],
+     cells:[esc(t[0]),
+       t[1]==='branded'?`<span class="tag brand">${T('tagBrand')}</span>`:t[1]==='new'?`<span class="tag win">${T('tagNew')}</span>`:`<span class="tag none">${T('tagNone')}</span>`,
+       t[4]==null?'—':dec(t[4]),
+       arrowPos(t[4],t[5]),
+       nf(t[3]),nf(t[2])]
+   })),4);
+
+  // Queries
+  const qRows=QUERIES.map(q=>{
+    const brand=/dxliving|dx living/i.test(q[0]);
+    const lost=q[3]===0&&q[4]>0;
+    const op=!brand&&q[3]>0&&q[5]!=null&&q[5]>=5&&q[5]<=20;
+    const up=q[3]>q[4], down=q[3]<q[4]&&q[3]>0;
+    let tags=[];
+    if(brand)tags.push(`<span class="tag brand">${T('tagBrand')}</span>`);
+    if(op)tags.push(`<span class="tag op">${T('tagOp')}</span>`);
+    if(lost)tags.push(`<span class="tag risk">${T('tagLost')}</span>`);
+    else if(up)tags.push(`<span class="tag win">${T('tagUp')}</span>`);
+    return {f:{all:1,op:op?1:0,up:up?1:0,down:down?1:0,lost:lost?1:0},
+      sort:[q[0],q[3],q[3]-q[4],q[5]==null?999:q[5],q[1],0],
+      cells:[esc(q[0])+' '+tags.join(' '),nf(q[3]),arrowNum(q[3],q[4]),
+        q[5]==null?'—':dec(q[5]),arrowPos(q[5],q[6]),nf(q[1])]};
+  });
+  const qCols=[{label:T('thQuery')},{label:T('thImpr'),num:true},{label:T('thImprDelta'),num:true},{label:T('thPos'),num:true},{label:T('thPosD'),num:true},{label:T('thClicks'),num:true}];
+  buildTable(document.getElementById('tblQueries'),qCols,qRows.filter(r=>r.f[currentFilter]),1);
+
+  // Pages
+  buildTable(document.getElementById('tblPages'),
+   [{label:T('thPage')},{label:T('thImpr'),num:true},{label:T('thImprD'),num:true},{label:T('thClicks'),num:true},{label:T('thCtr'),num:true},{label:T('thPos'),num:true},{label:T('thPosD'),num:true}],
+   PAGES.map(p=>({
+     sort:[p[0],p[3],p[3]-p[4],p[1],p[3]?p[1]/p[3]:0,p[5]==null?999:p[5],0],
+     cells:[(/^stage\./.test(p[0])?`<span class="tag risk">${T('tagStage')}</span> `:'')+esc(p[0])+(p[7]?T(p[7]):''),
+       nf(p[3]),arrowNum(p[3],p[4]),nf(p[1]),
+       dec(p[3]?p[1]/p[3]*100:0)+'%',
+       p[5]==null?'—':dec(p[5]),arrowPos(p[5],p[6])]
+   })),1);
+
+  // Source / medium
+  buildTable(document.getElementById('tblSrc'),
+   [{label:T('thSource')},{label:T('thSessions'),num:true},{label:T('thPctTotal'),num:true},{label:T('thChannel')}],
+   SRC.map(s=>({sort:[s[0],s[1],s[1],s[3]],
+     cells:[(/ai-assistant/.test(s[0])?'<span class="tag op">AI</span> ':'')+esc(s[0]),nf(s[1]),dec(s[2],2)+'%',esc(s[3])]})),1);
+}
+
+function renderRecs(){
+  document.getElementById('recList').innerHTML=I18N[LANG].recs.map((r,i)=>
+   `<li><span class="pri p${REC_PRI[i]}">P${REC_PRI[i]}</span><b>${esc(r[0])}</b><span class="why">${esc(r[1])}</span></li>`).join('');
+}
+
+/* ==================== WEEK PICKER ====================
+   Cùng bất biến với báo cáo ngày: bộ chọn ĐIỀU HƯỚNG, không tính lại số.
+   Same invariant as the daily report: the picker NAVIGATES, it never recomputes. */
+const THIS_WEEK='2026-08-28';                       // id tuần = ngày kết thúc / week id = end date
+let WEEKS=[{id:'2026-08-28',vi:'22–28/08/2026',en:'22–28 Aug 2026'},{id:'2026-08-22',vi:'16–22/08/2026',en:'16–22 Aug 2026'}];  // fallback khi fetch lỗi
+
+function gotoWeek(id){
+  if(!id||id===THIS_WEEK)return;
+  location.href=id+'.html';
+}
+function renderPicker(){
+  const sel=document.getElementById('weekSel'),meta=document.getElementById('weekMeta');
+  if(!sel)return;
+  sel.innerHTML=WEEKS.map(w=>
+    `<option value="${w.id}"${w.id===THIS_WEEK?' selected':''}>${LANG==='vi'?w.vi:w.en}</option>`).join('');
+  const n=WEEKS.length;
+  meta.textContent=`${n} ${n===1?T('weekOnly'):T('weeksStored')} · ${T('latestWord')}: `+
+    (LANG==='vi'?WEEKS[0].vi:WEEKS[0].en)+' — '+T('pickNote');
+}
+(async()=>{
+  try{
+    const r=await fetch('index.json',{cache:'no-store'});
+    if(!r.ok)return;
+    const j=await r.json();
+    if(Array.isArray(j.weeks)&&j.weeks.length){
+      WEEKS=j.weeks.slice().sort((a,b)=>b.id.localeCompare(a.id));
+      renderPicker();
+    }
+  }catch(e){/* mở từ ổ đĩa hoặc chưa có manifest — giữ fallback */}
+})();
+
+/* ==================== LANGUAGE ==================== */
+function setLang(l){
+  LANG=l;
+  document.documentElement.lang=l;
+  document.title=T('docTitle');
+  document.querySelectorAll('[data-t]').forEach(e=>{e.textContent=T(e.dataset.t);});
+  document.querySelectorAll('[data-html]').forEach(e=>{e.innerHTML=T(e.dataset.html);});
+  document.getElementById('btn-vi').classList.toggle('active',l==='vi');
+  document.getElementById('btn-en').classList.toggle('active',l==='en');
+  document.body.classList.toggle('lang-vi',l==='vi');
+  document.body.classList.toggle('lang-en',l==='en');
+  try{localStorage.setItem('dxl-report-lang',l);}catch(e){}
+  renderKPIs();renderCharts();renderTables();renderRecs();renderPicker();renderAI();
+}
+
+document.querySelectorAll('#qTabs button').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('#qTabs button').forEach(x=>x.classList.remove('active'));
+  b.classList.add('active');currentFilter=b.dataset.f;renderTables();
+});
+
+let saved='vi';
+try{saved=localStorage.getItem('dxl-report-lang')||'vi';}catch(e){}
+setLang(saved==='en'?'en':'vi');
+</script>
+</body>
+</html>
