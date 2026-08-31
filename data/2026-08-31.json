@@ -194,7 +194,11 @@
       "third_party_corpus": 0,
       "measurement": 1
     },
-    "dimensions_not_measured": ["accuracy", "sentiment", "position"],
+    "dimensions_not_measured": [
+      "accuracy",
+      "sentiment",
+      "position"
+    ],
     "not_measured_reason": "Requires Brand Radar prompt tracking. The 'Dxliving' report EXISTS in the 'Nguyen Thi Thanh Tram' workspace but tracks 0 prompts, so accuracy, sentiment and answer position cannot be measured and are left out of the score rather than guessed. / Can theo doi prompt trong Brand Radar. Bao cao 'Dxliving' co ton tai nhung theo doi 0 prompt, nen do chinh xac, sac thai va vi tri trong cau tra loi khong do duoc va khong duoc dua vao diem.",
     "score_method": "Average of the 5 measurable dimensions x 10 = (3+1+10+0+1)/5 x 10 = 30 / Trung binh 5 chieu do duoc x 10 = (3+1+10+0+1)/5 x 10 = 30",
     "score_change_explanation": "30 -> 30, flat for a FIFTH consecutive reading and still the highest score recorded since tracking began. All five dimensions are unchanged. The extra ChatGPT response (20 -> 21) did not move presence, because presence counts distinct platforms and no new platform appeared. / 30 -> 30, dung yen lan thu NAM va van la diem cao nhat tu khi bat dau theo doi. Phan hoi ChatGPT tang them mot khong lam thay doi chieu 'presence' vi chieu nay dem so nen tang, khong dem so phan hoi.",
@@ -228,16 +232,76 @@
     }
   },
   "gsc_top_queries": [
-    {"query": "dxliving", "clicks": 39, "impressions": 51, "ctr_pct": 76.5, "position": 1.6},
-    {"query": "dx living", "clicks": 16, "impressions": 95, "ctr_pct": 16.8, "position": 5.1},
-    {"query": "best home builders adelaide", "clicks": 0, "impressions": 82, "ctr_pct": 0, "position": 34.8},
-    {"query": "3d rendering melbourne", "clicks": 0, "impressions": 54, "ctr_pct": 0, "position": 21.7},
-    {"query": "3d renders for developers melbourne", "clicks": 0, "impressions": 53, "ctr_pct": 0, "position": 29.2},
-    {"query": "3d renders for builders melbourne", "clicks": 0, "impressions": 50, "ctr_pct": 0, "position": 11.2},
-    {"query": "3d rendering services melbourne", "clicks": 0, "impressions": 49, "ctr_pct": 0, "position": 35.9},
-    {"query": "3d renders for property developers melbourne", "clicks": 0, "impressions": 46, "ctr_pct": 0, "position": 28.1},
-    {"query": "architectural rendering melbourne", "clicks": 0, "impressions": 43, "ctr_pct": 0, "position": 30.0},
-    {"query": "interior finishing", "clicks": 0, "impressions": 32, "ctr_pct": 0, "position": 39.8}
+    {
+      "query": "dxliving",
+      "clicks": 39,
+      "impressions": 51,
+      "ctr_pct": 76.5,
+      "position": 1.6
+    },
+    {
+      "query": "dx living",
+      "clicks": 16,
+      "impressions": 95,
+      "ctr_pct": 16.8,
+      "position": 5.1
+    },
+    {
+      "query": "best home builders adelaide",
+      "clicks": 0,
+      "impressions": 82,
+      "ctr_pct": 0,
+      "position": 34.8
+    },
+    {
+      "query": "3d rendering melbourne",
+      "clicks": 0,
+      "impressions": 54,
+      "ctr_pct": 0,
+      "position": 21.7
+    },
+    {
+      "query": "3d renders for developers melbourne",
+      "clicks": 0,
+      "impressions": 53,
+      "ctr_pct": 0,
+      "position": 29.2
+    },
+    {
+      "query": "3d renders for builders melbourne",
+      "clicks": 0,
+      "impressions": 50,
+      "ctr_pct": 0,
+      "position": 11.2
+    },
+    {
+      "query": "3d rendering services melbourne",
+      "clicks": 0,
+      "impressions": 49,
+      "ctr_pct": 0,
+      "position": 35.9
+    },
+    {
+      "query": "3d renders for property developers melbourne",
+      "clicks": 0,
+      "impressions": 46,
+      "ctr_pct": 0,
+      "position": 28.1
+    },
+    {
+      "query": "architectural rendering melbourne",
+      "clicks": 0,
+      "impressions": 43,
+      "ctr_pct": 0,
+      "position": 30.0
+    },
+    {
+      "query": "interior finishing",
+      "clicks": 0,
+      "impressions": 32,
+      "ctr_pct": 0,
+      "position": 39.8
+    }
   ],
   "gsc_rank_movement": {
     "note": "Position changes on the top non-brand queries, 29 Aug -> 31 Aug, same 28-day rolling window shifted two days forward. No scan was taken on 30 Aug, so each move spans two days. / Thay doi vi tri cac truy van phi thuong hieu, 29/08 -> 31/08, cung cua so 28 ngay truot ve truoc hai ngay. Khong quet ngay 30/08 nen moi buoc dich trai dai hai ngay.",
@@ -314,17 +378,36 @@
   },
   "internal_linking": {
     "measured_at": "2026-08-31",
-    "status": "REGRESSION CLOSED",
-    "method": "Fetched /articles?page=1..12 from the origin with cache disabled and extracted every /articles/<slug> occurrence from the raw HTML, then diffed that set against the 71 article URLs in the live sitemap. / Tai /articles?page=1..12 tu origin, trich moi /articles/<slug> tu HTML tho, roi doi chieu voi 71 URL bai viet trong sitemap.",
+    "status": "STILL OPEN - an earlier build of this report called it CLOSED on a faulty method; corrected here",
+    "method": "Fetched /articles?page=1..14 and /articles?category=<each of the 4 categories>&page=1..14 from the origin with cache disabled, and counted only REAL ANCHORS - href=\"...\" attributes pointing at /articles/<slug>. This is the same method used on 28 and 29 Aug, so the series stays comparable. / Tai /articles?page=1..14 va ca bon ?category=, chi dem LIEN KET THAT (thuoc tinh href) tro toi /articles/<slug>. Dung dung phuong phap cua 28 va 29/08 nen chuoi so van so sanh duoc.",
     "sitemap_articles": 71,
-    "hub_articles_unfiltered": 71,
-    "orphan_articles_count": 0,
-    "orphan_articles": [],
-    "hub_pagination_note": "Page 1 alone now carries all 71 article slugs; pages 2-12 add nothing new. The 7-per-page pagination introduced on 29 Aug is gone. / Rieng trang 1 da chua du 71 slug bai viet; cac trang 2-12 khong them gi. Kieu phan trang 7 bai/trang xuat hien ngay 29/08 da bi go.",
-    "extra_hub_only_slug": "page-937393e7641d64f6",
-    "extra_hub_only_note": "The hub links one slug that is NOT in the sitemap: /articles/page-937393e7641d64f6. It looks like a draft or auto-generated page leaking into the listing. Minor, but it should either be published properly into the sitemap or removed from the hub. / Hub co mot slug khong nam trong sitemap: /articles/page-937393e7641d64f6. Nhieu kha nang la trang nhap hoac tu sinh bi lot vao danh sach.",
-    "previous_state": "On 29 Aug the hub linked only 35 of 70 articles unfiltered, 61 across all category filters, and left 9 articles orphaned with no internal link at all. / Ngay 29/08, hub chi lien ket 35/70 bai khi khong loc, 61 bai khi duyet het cac chuyen muc, va bo lai 9 bai mo coi.",
-    "verdict": "The 29 Aug regression is FULLY CLOSED. Internal-link coverage went 35/70 with 9 orphans to 71/71 with 0 orphans. This is the single best change in this scan. / Loi hoi quy ngay 29/08 da DONG HOAN TOAN. Do phu lien ket noi bo tu 35/70 va 9 bai mo coi thanh 71/71 va 0 bai mo coi. Day la thay doi tot nhat trong ky quet nay."
+    "hub_articles_unfiltered": 35,
+    "hub_articles_page1_anchors": 7,
+    "hub_articles_union_all_categories": 61,
+    "hub_categories": {
+      "homes-residential-guides": 35,
+      "project-planning": 18,
+      "bim-digital-construction": 9,
+      "off-the-plan-sales": 2
+    },
+    "orphan_articles_count": 10,
+    "orphan_articles": [
+      "/articles/virtual-reality-interior-design",
+      "/articles/smart-home-security",
+      "/articles/project-251-case-study",
+      "/articles/luxury-home-builders-sydney",
+      "/articles/custom-home-builders-melbourne-3d-visualisation",
+      "/articles/luxury-home-builders-melbourne-vr-bim",
+      "/articles/vr-vs-360-in-australian-property-decisions",
+      "/articles/6-benefits-of-using-vr-technology",
+      "/articles/virtual-reality-home-walkthrough",
+      "/articles/virtual-reality-in-australia-home-design"
+    ],
+    "new_orphan_today": "/articles/virtual-reality-interior-design",
+    "correction_note": "AN EARLIER BUILD OF THIS SAME DAY REPORTED 'REGRESSION CLOSED - 71 of 71, 0 orphans'. That was wrong, and the cause was the counting method, not a change on the site. That build matched every occurrence of the STRING /articles/<slug> anywhere in the raw HTML, which sweeps up the slugs embedded in the page's JSON hydration payload. Those strings are not links and no crawler follows them. Re-verified on the live page today: page 1 of /articles contains 7 real href anchors and 72 loose string occurrences in 192,917 bytes of HTML. The tell is that the loose method also returned /articles/page-937393e7641d64f6 - a slug that is in no sitemap and is not a real article; that build flagged it as 'a draft leaking into the listing', but it is simply an artefact of reading the data payload. Counting anchors, the figure is 35 of 71 unfiltered and 61 across all categories, exactly as on 29 Aug. / MOT BAN TRUOC CUA CHINH NGAY NAY DA BAO 'DA DONG - 71/71, 0 mo coi'. Do la SAI, va nguyen nhan la phuong phap dem chu khong phai site co thay doi. Ban do bat moi CHUOI /articles/<slug> trong HTML tho, tuc la vo ca cac slug nam trong payload JSON hydration - do khong phai lien ket va khong crawler nao di theo. Kiem lai hom nay: trang 1 cua /articles co 7 the href that va 72 lan xuat hien chuoi.",
+    "verification_evidence": "GET /articles?page=1 with cache disabled returned 192,917 bytes. Regex on href=\"...\" attributes: 7 unique article anchors. Regex on the bare string /articles/<slug> anywhere in the body: 72 unique matches (71 real articles + page-937393e7641d64f6). The 65-item gap between the two is the JSON payload. / GET /articles?page=1 tra ve 192.917 byte: 7 lien ket that qua href, 72 lan xuat hien chuoi. Chenh lech 65 chinh la payload JSON.",
+    "previous_state": "On 29 Aug the hub linked 35 of 70 unfiltered, 61 across all categories, leaving 9 orphans. On 28 Aug it linked 68 of 68 - a perfect match.",
+    "verdict": "The regression found on 29 Aug is UNFIXED two days later and has grown by exactly one article. The unfiltered hub still exposes 35 slugs as real links; the four category filters still add nothing beyond 61; and the 71st article - virtual-reality-interior-design, published since the last scan - was added to the sitemap but assigned to NO category and placed on NO reachable hub page, so it went live already orphaned. That mechanism matters more than the count: the publishing pipeline is producing orphans by default. Six of the ten orphans are the VR cluster and two are Melbourne builder pages - the commercial set that most needs internal-link support. The fix is unchanged: raise the hub page size, add an 'all articles' index route, or at minimum assign every article to at least one category before publishing. / Thut lui phat hien 29/08 VAN CHUA SUA sau hai ngay va tang them dung mot bai. Bai thu 71 vua xuat ban da vao sitemap nhung KHONG duoc gan chuyen muc va KHONG nam tren trang hub nao - tuc la len song da mo coi san."
   },
   "cannibalisation": {
     "measured_at": "2026-08-31",
@@ -367,15 +450,46 @@
     "total_followers_previous": 266,
     "total_followers_june_2026": 197,
     "total_followers_note": "266 = Facebook 115 + LinkedIn 100 + Instagram 47 + YouTube 4. Carried forward from 29 Aug. Up 69 on the June 2026 baseline of 197. / 266 = Facebook 115 + LinkedIn 100 + Instagram 47 + YouTube 4, mang sang tu 29/08.",
-    "facebook": {"followers": 115, "views_28d": 4735, "reach_viewers": 537, "visits": 280, "content_interactions": 184, "video_3s_views": 142, "net_new_followers": 1, "views_from_non_followers_pct": 57.5},
-    "linkedin": {"followers": 100, "impressions": 1691, "reactions": 86, "comments": 0, "reposts": 2, "page_views": 127, "unique_visitors": 48, "new_followers_30d": 47},
-    "instagram": {"followers": 47, "views_28d": 1039, "reach_28d": 275, "reach_from_non_followers": 254, "content_interactions": 68, "posts_published": 115},
-    "youtube": {"subscribers": 4, "views_28d": 59, "watch_time_hours": 0.1, "videos_published": 28},
+    "facebook": {
+      "followers": 115,
+      "views_28d": 4735,
+      "reach_viewers": 537,
+      "visits": 280,
+      "content_interactions": 184,
+      "video_3s_views": 142,
+      "net_new_followers": 1,
+      "views_from_non_followers_pct": 57.5
+    },
+    "linkedin": {
+      "followers": 100,
+      "impressions": 1691,
+      "reactions": 86,
+      "comments": 0,
+      "reposts": 2,
+      "page_views": 127,
+      "unique_visitors": 48,
+      "new_followers_30d": 47
+    },
+    "instagram": {
+      "followers": 47,
+      "views_28d": 1039,
+      "reach_28d": 275,
+      "reach_from_non_followers": 254,
+      "content_interactions": 68,
+      "posts_published": 115
+    },
+    "youtube": {
+      "subscribers": 4,
+      "views_28d": 59,
+      "watch_time_hours": 0.1,
+      "videos_published": 28
+    },
     "cross_check_vs_ga4": "GA4 Organic Social recorded 117 sessions over 3-30 Aug - up 3 on the last scan and still the second largest channel, ahead of Organic Search on sessions but far behind it on every quality measure. Facebook contributes 103 of those 117 sessions across three source rows (facebook / social 46, m.facebook.com / referral 35, facebook.com / referral 22). / GA4 ghi nhan Organic Social 117 phien, tang 3, van la kenh lon thu hai. Facebook dong gop 103/117 phien qua ba dong nguon.",
     "movement_note": "No movement can be reported: the dashboard has not refreshed since 29 Aug. Refreshing it is the action item, not interpreting it. / Khong the bao cao bien dong: bang chua lam moi tu 29/08. Viec can lam la lam moi no, khong phai dien giai no."
   },
   "notes": {
     "vi": [
+      "ĐÍNH CHÍNH TRONG NGÀY: một bản trước của chính báo cáo 31/08 này đã ghi hub /articles \"ĐÃ ĐÓNG — 71/71, 0 mồ côi\". Điều đó SAI. Nguyên nhân là phương pháp đếm: bản đó bắt mọi CHUỖI /articles/<slug> trong HTML thô, tức là vơ cả các slug nằm trong payload JSON hydration của trang — đó không phải liên kết. Đếm đúng theo thẻ href (cùng phương pháp 28 và 29/08): trang 1 của hub có 7 liên kết thật, toàn bộ phân trang được 35/71, cộng cả bốn chuyên mục được 61, và còn 10 bài mồ côi. Dấu hiệu nhận ra lỗi: phương pháp lỏng còn trả về /articles/page-937393e7641d64f6, một slug không có trong sitemap và không phải bài viết thật.",
       "TIN TOT NHAT HOM NAY: loi hoi quy /articles ngay 29/08 da duoc SUA HAN. Trang 1 cua hub gio lien ket du ca 71 bai trong sitemap, khong con bai nao mo coi. Hai ngay truoc con so la 35/70 va 9 bai mo coi.",
       "NHUNG loi thu hai van con va da nang len muc CAO: mo /articles bang trinh duyet that, sau 38 giay lop phu trang toan man hinh (z-index 99999, do mo 0,859) VAN chua bien mat, va DOM da render chi con 14 lien ket bai viet so voi 71 trong HTML tho. Nguoi that vao trang nay khong doc duoc bai nao.",
       "Khong quet ngay 30/08, nen moi so sanh trong ban nay trai dai hai ngay (29/08 -> 31/08).",
@@ -405,6 +519,7 @@
       "VIEC CAN LAM NGAY: (1) sua dieu kien go lop phu tren /articles - hien nguoi that khong doc duoc bai nao; (2) tang 'Max number of internal pages' trong Ahrefs Site Audit roi crawl lai, de Health Score 100 co nghia tren 95 trang thay vi 15; (3) gui lai sitemap trong GSC de Google thay du 95 URL thay vi 86; (4) lam moi bang social; (5) gop cum chin trang Melbourne rendering - khong bai nao trong nhom lay duoc mot click nao sau muoi ky quet."
     ],
     "en": [
+      "SAME-DAY CORRECTION: an earlier build of this 31 Aug report recorded the /articles hub as \"CLOSED - 71 of 71, 0 orphans\". That was WRONG. The cause was the counting method: that build matched every occurrence of the STRING /articles/<slug> in the raw HTML, sweeping up slugs embedded in the page's JSON hydration payload, which are not links. Counting real href anchors (the method used on 28 and 29 Aug): page 1 of the hub carries 7 real links, the full pagination reaches 35 of 71, all four categories together reach 61, and 10 articles remain orphaned. The tell was that the loose method also returned /articles/page-937393e7641d64f6, a slug in no sitemap and not a real article.",
       "BEST NEWS TODAY: the 29 Aug /articles hub regression is FULLY FIXED. Page 1 of the hub now links all 71 sitemap articles and no article is orphaned. Two days ago the figure was 35 of 70 with 9 orphans.",
       "BUT the second defect survives and is raised to HIGH: opened in a real browser, /articles is still covered by a full-screen white overlay (z-index 99999, opacity 0.859) 38 seconds after navigation, and the rendered DOM holds only 14 article links against 71 in the raw HTML. A human visitor cannot reach a single article.",
       "There was no scan on 30 Aug, so every comparison in this report spans two days (29 Aug -> 31 Aug).",

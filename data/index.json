@@ -175,8 +175,8 @@
       "date": "2026-08-31",
       "data": "data/2026-08-31.json",
       "report": "archive/2026-08-31.html",
-      "label_vi": "Hub /articles đã SỬA (71/71 bài, 0 mồ côi); lớp phủ trắng /articles nâng lên mức CAO; GSC 67 clicks / 1.757 impr / 151 truy vấn; Ahrefs đọc lại được followed 19 RD / 20 BL",
-      "label_en": "The /articles hub is FIXED (71 of 71 articles, 0 orphans); the /articles white overlay raised to HIGH; GSC 67 clicks / 1,757 impr / 151 queries; Ahrefs followed split readable again at 19 RD / 20 BL"
+      "label_vi": "ĐÍNH CHÍNH: hub /articles CHƯA sửa — 35/71 bài, mồ côi 9→10 (bài thứ 71 vừa publish đã mồ côi sẵn vì thiếu chuyên mục); bản trước đếm nhầm chuỗi trong payload JSON nên báo 71/71 · lớp phủ trắng vẫn che kín ở giây 38 · GSC 67 clicks / 1.757 impr / 151 truy vấn, vị trí giữ 29,4 · GA4 375 session nhưng key event dính 7 · Ahrefs RD 368→349, BL 382→364 · AI 20→21 · AI Visibility giữ 30",
+      "label_en": "CORRECTION: the /articles hub is NOT fixed — 35 of 71 articles, orphans 9→10 (the newly published 71st article went live orphaned, no category); the earlier build counted strings in the JSON payload and reported 71/71 · the white overlay still covers the page at second 38 · GSC 67 clicks / 1,757 impr / 151 queries, position flat at 29.4 · GA4 375 sessions but key events stuck at 7 · Ahrefs RD 368→349, BL 382→364 · AI 20→21 · AI Visibility flat at 30"
     }
   ]
 }
