@@ -1,7 +1,7 @@
 {
   "site": "dxliving.com",
   "description": "Lịch sử snapshot dữ liệu SEO theo ngày / Daily SEO data snapshot history. Mỗi ngày một file data/YYYY-MM-DD.json + bản HTML đóng băng archive/YYYY-MM-DD.html.",
-  "latest": "2026-08-31",
+  "latest": "2026-09-01",
   "snapshots": [
     {
       "date": "2026-06-30",
@@ -177,6 +177,13 @@
       "report": "archive/2026-08-31.html",
       "label_vi": "ĐÍNH CHÍNH: hub /articles CHƯA sửa — 35/71 bài, mồ côi 9→10 (bài thứ 71 vừa publish đã mồ côi sẵn vì thiếu chuyên mục); bản trước đếm nhầm chuỗi trong payload JSON nên báo 71/71 · lớp phủ trắng vẫn che kín ở giây 38 · GSC 67 clicks / 1.757 impr / 151 truy vấn, vị trí giữ 29,4 · GA4 375 session nhưng key event dính 7 · Ahrefs RD 368→349, BL 382→364 · AI 20→21 · AI Visibility giữ 30",
       "label_en": "CORRECTION: the /articles hub is NOT fixed — 35 of 71 articles, orphans 9→10 (the newly published 71st article went live orphaned, no category); the earlier build counted strings in the JSON payload and reported 71/71 · the white overlay still covers the page at second 38 · GSC 67 clicks / 1,757 impr / 151 queries, position flat at 29.4 · GA4 375 sessions but key events stuck at 7 · Ahrefs RD 368→349, BL 382→364 · AI 20→21 · AI Visibility flat at 30"
+    },
+    {
+      "date": "2026-09-01",
+      "data": "data/2026-09-01.json",
+      "report": "archive/2026-09-01.html",
+      "label_vi": "47/71 bài viết biến mất; sitemap 95→48 URL; AI 30→36 (tương đương 30)",
+      "label_en": "47 of 71 articles gone; sitemap 95→48 URLs; AI 30→36 (like-for-like 30)"
     }
   ]
 }
