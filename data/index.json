@@ -1,7 +1,7 @@
 {
   "site": "dxliving.com",
   "description": "Lịch sử snapshot dữ liệu SEO theo ngày / Daily SEO data snapshot history. Mỗi ngày một file data/YYYY-MM-DD.json + bản HTML đóng băng archive/YYYY-MM-DD.html.",
-  "latest": "2026-09-01",
+  "latest": "2026-09-03",
   "snapshots": [
     {
       "date": "2026-06-30",
@@ -184,6 +184,13 @@
       "report": "archive/2026-09-01.html",
       "label_vi": "47/71 bài viết biến mất; sitemap 95→48 URL; AI 30→36 (tương đương 30)",
       "label_en": "47 of 71 articles gone; sitemap 95→48 URLs; AI 30→36 (like-for-like 30)"
+    },
+    {
+      "date": "2026-09-03",
+      "data": "data/2026-09-03.json",
+      "report": "archive/2026-09-03.html",
+      "label_vi": "Vụ mất 47/71 bài viết chưa khắc phục sang ngày thứ ba — sitemap dựng lại 02/09 lúc 22:46 UTC vẫn 48 URL / 24 bài · thiệt hại nay hiện ở CẢ BA hệ thống: Ahrefs 404 11→14, GSC index 109→101 & chưa index 68→88, GSC mất 12 truy vấn (148→136) · GSC 65 clicks / 1.657 impr / vị trí 28,7 (tốt lên là SỐ HỌC, không phải tiến bộ) · GA4 440 phiên nhưng 0 KEY EVENT trong 7 ngày gần nhất · Ahrefs RD 340→322, BL 356→340, trích dẫn AI 22→20 (ChatGPT 14→11) · AI Visibility giữ 36 (tương đương 30) · Dashboard Social cũ NĂM ngày · tỷ lệ followed của Ahrefs KHÔNG đọc được → null",
+      "label_en": "The loss of 47 of 71 articles is unresolved into a third day — the sitemap regenerated at 22:46 UTC on 2 Sep still holds 48 URLs / 24 articles · the damage is now visible in ALL THREE systems: Ahrefs 404s 11→14, GSC indexed 109→101 and not-indexed 68→88, GSC lost 12 queries (148→136) · GSC 65 clicks / 1,657 impr / position 28.7 (the improvement is ARITHMETIC, not progress) · GA4 440 sessions but ZERO KEY EVENTS in the last 7 days · Ahrefs RD 340→322, BL 356→340, AI citations 22→20 (ChatGPT 14→11) · AI Visibility flat at 36 (like-for-like 30) · the social dashboard is FIVE days stale · the Ahrefs followed split could not be read → null"
     }
   ]
 }
