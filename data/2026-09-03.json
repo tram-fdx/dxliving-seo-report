@@ -1,8 +1,8 @@
 {
   "date": "2026-09-03",
   "site": "dxliving.com",
-  "source_commit": "714eaf0",
-  "provenance": "Read directly from Chrome (GSC + GA4 + Ahrefs Site Explorer + Site Audit + Brand Radar + live fetches against the dxliving.com origin). No OpenSEO, no Supermetrics, no Ahrefs API. / Doc truc tiep qua Chrome (GSC + GA4 + Ahrefs Site Explorer + Site Audit + Brand Radar + fetch truc tiep origin dxliving.com). Khong dung OpenSEO, khong Supermetrics, khong Ahrefs API.",
+  "source_commit": "743ab83",
+  "provenance": "SECOND SCAN OF THE DAY, run at 12:30 ICT on 3 Sep 2026 (the first ran at ~06:00). Read directly from Chrome (GSC + GA4 + Ahrefs Site Explorer + Site Audit + Brand Radar + live fetches against the dxliving.com origin + the social dashboard). No OpenSEO, no Supermetrics, no Ahrefs API. This re-scan caught a deployment that landed DURING the scan: the sitemap was rebuilt at 05:37 UTC (12:37 ICT) today. / LAN QUET THU HAI TRONG NGAY, chay luc 12:30 ICT ngay 03/09/2026 (lan dau chay khoang 06:00). Doc truc tiep qua Chrome (GSC + GA4 + Ahrefs Site Explorer + Site Audit + Brand Radar + fetch truc tiep origin dxliving.com + dashboard Social). Khong dung OpenSEO, khong Supermetrics, khong Ahrefs API. Lan quet lai nay bat duoc mot ban trien khai roi vao GIUA lan quet: sitemap duoc dung lai luc 05:37 UTC (12:37 ICT) hom nay.",
   "windows": {
     "gsc": "2026-08-04 -> 2026-08-31",
     "ga4": "2026-08-06 -> 2026-09-02"
@@ -30,7 +30,8 @@
       "avg_position": "29.2 -> 28.7 (better by 0.5)",
       "queries": "148 -> 136 (down 12)",
       "note": "The window slid two days forward (2-29 Aug becomes 4-31 Aug). The 12-query fall is the first GSC-side trace of the article deletion: queries served by now-deleted pages are ageing out of the window. Impressions fell 61 and will keep falling. The apparent position improvement is arithmetic - low-ranking non-brand queries dropping out lifts the average. / Cua so truot ve truoc hai ngay (02-29/08 thanh 04-31/08). Muc giam 12 truy van la dau vet dau tien phia GSC cua viec xoa bai: cac truy van do trang da xoa phuc vu dang roi khoi cua so. Hien thi giam 61 va se con giam tiep. Vi tri co ve tot len la do so hoc - cac truy van phi thuong hieu thu hang thap roi ra lam trung binh nhich len."
-    }
+    },
+    "reread_note": "RE-READ at 12:30 ICT and byte-for-byte identical to the 06:00 scan: the 28 DAYS rows still sum to 65 clicks and 1,657 impressions, the queries table still holds 136 rows, and dxliving 37 + dx living 17 are still the only two queries with any clicks. GSC has not yet seen this morning's restoration - its Page indexing build is still dated 28 Aug. / DOC LAI luc 12:30 ICT va khop tung chu voi lan quet 06:00: 28 dong DAYS van cong ra 65 clicks va 1.657 hien thi, bang truy van van 136 dong, va dxliving 37 + dx living 17 van la hai truy van duy nhat co click. GSC CHUA thay dot khoi phuc sang nay - ban Page indexing van de ngay 28/08."
   },
   "ga4_28d": {
     "sessions": 440,
@@ -111,7 +112,7 @@
     }
   },
   "ahrefs": {
-    "read_at": "2026-09-03",
+    "read_at": "2026-09-03 12:30 ICT",
     "workspace": "Nguyen Thi Thanh Tram",
     "domain_rating": 0,
     "url_rating": 0,
@@ -119,56 +120,53 @@
     "referring_domains_all_time": 463,
     "referring_domains_followed": null,
     "referring_domains_followed_pct": null,
-    "backlinks": 340,
+    "backlinks": 339,
     "backlinks_all_time": 495,
     "backlinks_followed": null,
     "backlinks_followed_pct": null,
-    "followed_note": "NOT READ TODAY. The followed / not-followed split was not exposed on the Site Explorer Overview or the Backlink profile tab on this visit - Ahrefs did not render that panel. Recorded as null rather than carried forward from the 2026-09-01 reading of 22 domains / 23 links at 6.5 percent. / KHONG DOC DUOC HOM NAY. Ty le followed / not-followed khong hien tren Site Explorer Overview lan tab Backlink profile trong lan truy cap nay - Ahrefs khong render khoi do. Ghi null chu khong mang so 22 ten mien / 23 link o muc 6,5% cua ngay 01/09 sang.",
-    "authority_direction_note": "Pruning continued for a FIFTH consecutive scan and accelerated: referring domains 340 -> 322 live (-18, against -9 last time) while all-time ROSE 460 -> 463. Backlinks 356 -> 340 live (-16) while all-time rose 489 -> 495. Ahrefs is retiring spam links faster than new ones appear. DR and UR both remain 0. The anchor profile is still dominated by a single SEO-spam testimonial anchor on 166 referring domains (51.9 percent). / Viec cat tia tiep dien lan thu NAM lien tiep va tang toc: ten mien tro toi 340 -> 322 live (-18, so voi -9 lan truoc) trong khi all-time TANG 460 -> 463. Backlink 356 -> 340 live (-16) trong khi all-time tang 489 -> 495. Ahrefs dang loai link rac nhanh hon toc do link moi xuat hien. DR va UR deu van bang 0. Ho so anchor van bi mot anchor quang cao SEO rac chiem uu the tren 166 ten mien tro toi (51,9%).",
+    "followed_note": "NOT READABLE, second scan running. Ahrefs would only render the Dofollow / Nofollow tabs in GROUPED form - 23 groups dofollow and 299 groups nofollow - and those group counts do not reconcile to the 339 live backlinks (nor to the 320 groups shown on the unfiltered tab). A group count is not a backlink count, so the followed / not-followed split is recorded as null rather than guessed. / KHONG DOC DUOC, lan quet thu hai lien tiep. Ahrefs chi render tab Dofollow / Nofollow o dang GOP NHOM - 23 nhom dofollow va 299 nhom nofollow - va cac con so nhom nay khong khop voi 339 backlink dang song (cung khong khop 320 nhom o tab khong loc). So nhom khong phai so backlink, nen ty le followed / khong-followed duoc ghi null chu khong doan.",
+    "authority_direction_note": "DR 0 and UR 0, unchanged. Referring domains held exactly flat at 322 across both of today's scans; backlinks slipped 340 -> 339, a single link. All-time totals 463 domains / 495 links. The link profile is stable; it is the on-site content that moved today. / DR 0 va UR 0, khong doi. So domain tro toi dung yen o 322 qua ca hai lan quet hom nay; backlinks tut 340 -> 339, dung mot lien ket. Tong tich luy 463 domain / 495 lien ket. Ho so lien ket on dinh; thu thay doi hom nay la noi dung tren site.",
     "health_score": 100,
-    "site_audit_crawl": {
-      "crawled_at": "2026-09-03 04:16 (Ahrefs project time)",
-      "status": "Completed",
-      "urls_crawled": 14,
-      "internal_urls_with_errors": 0,
-      "next_scheduled": "2026-09-04 04:00-05:00",
-      "note": "TENTH CONSECUTIVE WARNING, and the sample shrank again: 15 -> 14 URLs crawled. Health 100 percent on FOURTEEN URLs is NOT a statement about site health - Ahrefs follows the sitemap and the sitemap now exposes 48 URLs, of which the crawler reached 14. The site has 160 pages in Ahrefs' own crawled-pages index. Do NOT quote Health 100 as evidence the site is fine. / CANH BAO LAN THU MUOI LIEN TIEP, va mau lai co lai: 15 -> 14 URL duoc quet. Health 100% tren MUOI BON URL KHONG phai la mot phat bieu ve suc khoe site - Ahrefs di theo sitemap va sitemap gio phoi ra 48 URL, trong do crawler cham toi 14. Site co 160 trang trong chinh chi muc crawled-pages cua Ahrefs. KHONG duoc trich Health 100 nhu bang chung site on."
-    },
-    "crawled_pages_site_explorer": 160,
-    "crawled_pages_404": 14,
+    "site_audit_crawl": "Crawled TODAY at 04:16 AM, Completed, Health 100 percent, 14 URLs crawled, 0 internal URLs having errors. Next run scheduled 4 Sep 4-5 AM. CRITICAL CAVEAT: that crawl ran at 04:16, BEFORE the 05:37 UTC sitemap rebuild, so it walked the collapsed 48-URL sitemap and saw only 14 URLs. Health 100 on 14 URLs says nothing about the 75-article site that exists now. The next crawl will be the first meaningful one. / Crawl HOM NAY luc 04:16, Completed, Health 100%, 14 URL, 0 URL noi bo loi. Lan sau hen 04/09, 4-5 AM. LUU Y QUAN TRONG: crawl do chay luc 04:16, TRUOC khi sitemap duoc dung lai luc 05:37 UTC, nen no di theo sitemap 48 URL da sup va chi thay 14 URL. Health 100 tren 14 URL khong noi len dieu gi ve site 75 bai hien tai. Lan crawl sau moi la lan dau tien co y nghia.",
+    "crawled_pages_site_explorer": 162,
+    "crawled_pages_404": 15,
     "crawled_pages_http_breakdown": {
-      "200": 143,
+      "200": 144,
       "3xx": 2,
-      "404": 14,
+      "404": 15,
       "4xx_other": 0,
       "5xx": 0
     },
-    "crawled_pages_http_breakdown_note": "The buckets sum to 159 against a header figure of 160 - a gap of ONE page that Ahrefs does not attribute to any status bucket. Recorded as observed; not assigned. / Cac nhom cong lai 159 so voi con so tieu de 160 - lech MOT trang ma Ahrefs khong xep vao nhom trang thai nao. Ghi dung nhu quan sat; khong gan bua.",
-    "crawled_pages_404_note": "404s rose again 11 -> 14 (+3) as Ahrefs continues to re-crawl the deleted articles. This is the second consecutive rise (6 -> 11 -> 14) and tracks the article deletion directly. Expect it to keep climbing toward the 47 deleted URLs as the crawler works through them. / So 404 lai tang 11 -> 14 (+3) khi Ahrefs tiep tuc quet lai cac bai da xoa. Day la lan tang thu hai lien tiep (6 -> 11 -> 14) va bam sat viec xoa bai. Du kien con tang tiep ve phia 47 URL da xoa khi crawler quet het.",
+    "crawled_pages_http_breakdown_note": "144 + 2 + 15 + 0 + 0 = 161 against a reported total of 162 - one page unaccounted for. The gap is recorded, not assigned to a bucket. / 144 + 2 + 15 + 0 + 0 = 161 so voi tong bao cao 162 - lech mot trang. Ghi nhan khoang lech chu khong gan bua vao nhom nao.",
+    "crawled_pages_404_note": "404s rose again, 14 -> 15, and this is EXPECTED LAG rather than new damage: Ahrefs last crawled these URLs before the restoration and has not re-checked them. The 404 count is the clearest number to watch over the next few days - if the fix holds, it should fall back toward the 6 seen on 31 Aug. / So 404 lai tang, 14 -> 15, va day la DO TRE chu khong phai thiet hai moi: Ahrefs crawl cac URL nay truoc dot khoi phuc va chua kiem lai. So 404 la con so ro nhat can theo doi vai ngay toi - neu ban va giu duoc, no phai tut ve muc 6 nhu ngay 31/08.",
     "organic_keywords": 0,
     "organic_traffic": 0,
     "ai_citations": 20,
     "ai_by_platform": {
+      "ai_overviews": 0,
+      "ai_mode": 0,
       "chatgpt": 11,
-      "copilot": 8,
-      "perplexity": 1,
-      "google_ai_overviews": 0,
-      "google_ai_mode": 0,
       "gemini": 0,
+      "perplexity": 1,
+      "copilot": 8,
       "grok": null
     },
     "cited_pages": 9,
     "cited_pages_by_platform": {
+      "ai_overviews": 0,
+      "ai_mode": 0,
       "chatgpt": 4,
+      "gemini": 0,
+      "perplexity": 1,
       "copilot": 6,
-      "perplexity": 1
+      "grok": null
     },
-    "cited_pages_note": "Ahrefs' own de-duplicated header figure reads Pages 9 against 20 responses, unchanged from the last scan. The per-platform page counts (4 + 6 + 1 = 11) exceed 9 because the same page is cited on more than one platform. Use the header figure of 9. / Con so tieu de da khu trung cua chinh Ahrefs doc la Pages 9 tren 20 phan hoi, khong doi so voi lan quet truoc. Tong so trang theo tung nen tang (4 + 6 + 1 = 11) lon hon 9 vi cung mot trang duoc trich tren nhieu nen tang. Dung con so tieu de la 9.",
-    "ai_platform_change_note": "Total responses fell 22 -> 20. ChatGPT dropped 14 -> 11 (-3) and its cited pages 5 -> 4, while Copilot rose 7 -> 8 (+1) and its pages 6 -> 6. Perplexity held at 1. This is the SECOND consecutive scan in which ChatGPT citations fell. Whether this is the article deletion working through the AI crawlers or normal index churn CANNOT be determined from a two-point series. / Tong phan hoi giam 22 -> 20. ChatGPT tut 14 -> 11 (-3) va so trang duoc trich 5 -> 4, trong khi Copilot tang 7 -> 8 (+1) va giu 6 trang. Perplexity giu 1. Day la lan quet thu HAI lien tiep trich dan ChatGPT giam. Day la tac dong cua viec xoa bai lan toi cac crawler AI hay chi la bien dong chi muc binh thuong thi KHONG the ket luan tu chuoi hai diem.",
-    "notice": "The platform-wide Ahrefs banner dated 28 Aug about a Google keyword ranking data disruption is STILL displayed. Ahrefs organic keyword and position figures remain unreliable for now. / Bang thong bao toan nen tang cua Ahrefs de ngay 28/08 ve gian doan du lieu thu hang tu khoa Google VAN dang hien. So lieu tu khoa va vi tri organic cua Ahrefs tam thoi van khong dang tin."
+    "cited_pages_note": "All-platforms panel reads 20 responses across 9 pages. Grok is paused by Ahrefs and is recorded as null, not 0. / Bang tat ca nen tang doc 20 phan hoi tren 9 trang. Grok bi Ahrefs tam dung nen ghi null, khong ghi 0.",
+    "ai_platform_change_note": "Unchanged from the 06:00 scan: 20 citations across ChatGPT 11, Copilot 8, Perplexity 1. AI Overviews and Gemini remain at zero, AI Mode at zero, Grok paused. The restoration landed too recently to have moved anything here. / Khong doi so voi lan quet 06:00: 20 trich dan gom ChatGPT 11, Copilot 8, Perplexity 1. AI Overviews va Gemini van bang khong, AI Mode bang khong, Grok tam dung. Dot khoi phuc vua moi dien ra nen chua the tac dong gi o day.",
+    "notice": "Ahrefs is showing two banners: a Google keyword ranking data disruption notice, and an opt-in adaptive organic traffic model. Neither has been enabled. / Ahrefs dang hien hai thong bao: canh bao gian doan du lieu thu hang tu Google, va mo hinh uoc luong traffic thich ung dang opt-in. Ca hai deu chua duoc bat."
   },
   "ai_visibility": {
-    "score": 36,
+    "score": 30,
     "score_max": 100,
     "framework": "searchfit-seo:ai-visibility",
     "platforms_present": 3,
@@ -176,7 +174,7 @@
     "cited_pages": 9,
     "dimensions_measured": {
       "presence": 3,
-      "citation_surface": 4,
+      "citation_surface": 1,
       "technical_readiness": 10,
       "third_party_corpus": 0,
       "measurement": 1
@@ -187,27 +185,27 @@
       "position"
     ],
     "not_measured_reason": "Requires Brand Radar prompt tracking. The 'Dxliving' report EXISTS in the 'Nguyen Thi Thanh Tram' workspace but still tracks 0 prompts and shows AI SoV as a dash, so accuracy, sentiment and position cannot be measured at all. Re-checked today. / Can theo doi prompt trong Brand Radar. Bao cao 'Dxliving' CO TON TAI trong workspace 'Nguyen Thi Thanh Tram' nhung van theo doi 0 prompt va AI SoV hien dau gach, nen do chinh xac, sac thai va vi tri hoan toan khong do duoc. Da kiem lai hom nay.",
-    "score_method": "Average of the 5 measurable dimensions x 10 = (3+4+10+0+1)/5 x 10 = 36 / Trung binh 5 chieu do duoc x 10 = (3+4+10+0+1)/5 x 10 = 36",
-    "score_change_explanation": "36 -> 36, flat. Every one of the five dimensions is byte-for-byte unchanged from 2026-09-01. Note that citation_surface of 4 still rests on the COLLAPSED 24-article denominator: 9 cited pages against 24 live articles. Measured against the 71-article library that existed before 1 Sep, the same 9 pages give a score of 30. When comparing with any date before 2026-09-01, USE 30. / 36 -> 36, di ngang. Ca nam chieu deu khong doi mot chut nao so voi 01/09. Luu y citation_surface bang 4 van dua tren mau so 24 bai DA SUP: 9 trang duoc trich tren 24 bai dang song. Neu do theo thu vien 71 bai ton tai truoc 01/09, cung 9 trang do cho diem 30. Khi so voi bat ky ngay nao truoc 01/09, HAY DUNG 30.",
+    "score_method": "Average of the 5 measurable dimensions x 10 = (3+1+10+0+1)/5 x 10 = 30 / Trung binh 5 chieu do duoc x 10 = (3+1+10+0+1)/5 x 10 = 30",
+    "score_change_explanation": "36 -> 30, and this is NOT a decline. Nothing about the site's AI presence got worse: the same 9 pages are cited by the same 3 platforms with the same 20 responses. What changed is the DENOMINATOR. The 06:00 score of 36 rested on citation_surface 4, which was 9 cited pages against a COLLAPSED library of 24 live articles. The library was restored to 75 articles at 05:37 UTC today, so the same 9 pages now sit against 75 - citation_surface returns to 1 and the score returns to 30. 30 is the number that has always been comparable with every date before 1 Sep, and the 06:00 scan published it as the like-for-like figure for exactly this reason. Measured like-for-like, AI visibility is FLAT for a thirteenth consecutive scan. / 36 -> 30, va day KHONG phai la tut giam. Khong co gi ve hien dien AI cua site xau di: van 9 trang do duoc 3 nen tang do trich dan voi dung 20 phan hoi. Thu thay doi la MAU SO. Diem 36 luc 06:00 dua tren citation_surface bang 4, tuc 9 trang duoc trich tren thu vien DA SUP con 24 bai. Thu vien da duoc khoi phuc ve 75 bai luc 05:37 UTC hom nay, nen cung 9 trang do gio dat tren mau so 75 - citation_surface tro lai 1 va diem tro lai 30. 30 chinh la con so xua nay van so sanh duoc voi moi ngay truoc 01/09, va lan quet 06:00 da cong bo no lam so tuong duong dung vi ly do nay. Do tuong duong, hien dien AI DI NGANG lan thu muoi ba lien tiep.",
     "like_for_like_score": 30,
-    "like_for_like_note": "36 on the 24-article denominator; 30 on the pre-collapse 71-article denominator. Quote 30 for any comparison reaching back before 2026-09-01. / 36 tren mau so 24 bai; 30 tren mau so 71 bai truoc khi sup. Dung 30 cho moi phep so sanh lui ve truoc 01/09.",
-    "score_caveat": "The score is still capped by two things no amount of on-site work will move: third_party_corpus at 0 and measurement at 1. Technical readiness has been maxed at 10 for eleven consecutive scans, so further on-site technical work cannot raise this number. / Diem van bi chan boi hai thu ma khong luong cong viec on-site nao lam nhuc duoc: third_party_corpus bang 0 va measurement bang 1. San sang ky thuat da kich tran 10 suot muoi mot lan quet, nen lam them ky thuat on-site khong the nang con so nay.",
-    "citation_surface_note": "4/10, unchanged. 9 cited pages against 24 live articles = 37.5 percent. Both numerator and denominator held exactly steady today. / 4/10, khong doi. 9 trang duoc trich tren 24 bai dang song = 37,5%. Ca tu so lan mau so hom nay deu dung yen.",
-    "third_party_corpus_note": "Held at 0 and NOT re-checked today. Flagged explicitly rather than silently carried forward. / Giu bang 0 va KHONG kiem lai hom nay. Danh dau ro rang chu khong am tham mang sang.",
-    "technical_readiness_method": "7 signals checked; score = share passing x 10. Today 7 of 7 pass -> 10, for an ELEVENTH consecutive scan. See readiness.sitemap_complete_caveat - the sitemap signal passes on internal consistency only. / Kiem 7 tin hieu; diem = ty le dat x 10. Hom nay 7/7 dat -> 10, lan thu MUOI MOT lien tiep. Xem readiness.sitemap_complete_caveat - tin hieu sitemap chi dat ve mat nhat quan noi bo.",
+    "like_for_like_note": "36 and 30 have now converged. With the 75-article library back, the like-for-like basis IS the headline basis - there are no longer two numbers. Quote 30. / 36 va 30 nay da hoi tu. Voi thu vien 75 bai da tro lai, co so tuong duong CHINH LA co so chinh - khong con hai con so nua. Hay dung 30.",
+    "score_caveat": "The score remains capped by two things no on-site work will move: third_party_corpus at 0 and measurement at 1. Technical readiness is at its 10 ceiling for a twelfth consecutive scan. The only lever left that would raise this number is getting cited on more pages - which now means citations against a 75-article denominator, a harder target than the 24 it was measured against this morning. / Diem van bi chan boi hai thu ma khong luong viec on-site nao lam nhuc duoc: third_party_corpus bang 0 va measurement bang 1. San sang ky thuat cham tran 10 lan thu muoi hai lien tiep. Don bay duy nhat con lai de nang con so nay la duoc trich dan tren nhieu trang hon - ma gio nghia la trich dan tren mau so 75 bai, kho hon nhieu so voi mau so 24 sang nay.",
+    "citation_surface_note": "1/10, down from 4/10 purely because the denominator was restored. 9 cited pages against 75 live articles = 12.0 percent, versus 9 against 24 = 37.5 percent this morning. The numerator did not move. The real reading: only 12 percent of the article library has ever been cited by an AI platform, and that was equally true before the outage - the collapse had briefly flattered the ratio. / 1/10, giam tu 4/10 hoan toan vi mau so duoc khoi phuc. 9 trang duoc trich tren 75 bai dang song = 12,0%, so voi 9 tren 24 = 37,5% sang nay. Tu so khong he thay doi. Y nghia that: chi 12% thu vien bai viet tung duoc mot nen tang AI trich dan, va dieu do cung dung truoc khi su co xay ra - vu sup chi tam thoi lam ty le dep len.",
+    "third_party_corpus_note": "Held at 0 and NOT re-checked in this second scan either. Flagged explicitly rather than silently carried forward. / Giu bang 0 va CUNG KHONG kiem lai o lan quet thu hai nay. Danh dau ro rang chu khong am tham mang sang.",
+    "technical_readiness_method": "7 signals checked; score = share passing x 10. Today 7 of 7 pass -> 10, for a TWELFTH consecutive scan - but for the first time in three days the sitemap signal passes on substance rather than on internal consistency alone. / Kiem 7 tin hieu; diem = ty le dat x 10. Hom nay 7/7 dat -> 10, lan thu MUOI HAI lien tiep - nhung lan dau sau ba ngay, tin hieu sitemap dat ve BAN CHAT chu khong chi ve nhat quan noi bo.",
     "brand_radar": {
       "report_exists": true,
       "prompts_tracked": 0,
       "ai_share_of_voice": null,
       "reread_today": true,
       "workspace": "Nguyen Thi Thanh Tram",
-      "note": "Report 'Dxliving' still listed with AI SoV as a dash and Prompts 0, unchanged for an eleventh scan. Prompt tracking is a paid add-on ('See pricing' link shown). Turning it on is the only route to the three unmeasured dimensions. / Bao cao 'Dxliving' van liet ke AI SoV la dau gach va Prompts 0, khong doi lan thu muoi mot. Theo doi prompt la goi tra tien bo sung (co link 'See pricing'). Bat len la duong duy nhat de do ba chieu con lai."
+      "note": "Report 'Dxliving' still lists AI SoV as a dash and Prompts 0, unchanged for a twelfth scan and re-checked in this second pass. Prompt tracking is a paid add-on. Turning it on is the only route to the three unmeasured dimensions. / Bao cao 'Dxliving' van liet ke AI SoV la dau gach va Prompts 0, khong doi lan thu muoi hai va da kiem lai o lan quet thu hai nay. Theo doi prompt la goi tra tien bo sung. Bat len la duong duy nhat de do ba chieu con lai."
     },
     "readiness": {
-      "measured_at": "2026-09-03",
+      "measured_at": "2026-09-03 12:30 ICT",
       "robots_txt_blocks_ai_bots": false,
       "sitemap_complete": true,
-      "sitemap_url_count": 48,
+      "sitemap_url_count": 99,
       "llms_txt": true,
       "faq_schema_on_money_pages": true,
       "organization_schema": true,
@@ -216,10 +214,11 @@
       "signals_passing": 7,
       "signals_total": 7,
       "reread_today": true,
-      "evidence": "Re-measured on 2026-09-03 from the dxliving.com origin with cache disabled. robots.txt 200, 430 bytes, no global disallow, 5 explicit AI user-agent entries. /llms.txt 200, 12,678 bytes, 128 lines; /llms-full.txt 200, 21,934 bytes. sitemap.xml 200, 9,109 bytes, 48 URLs of which 24 are articles, lastmod 2026-09-02T22:46:19Z. Homepage carries exactly 2 JSON-LD blocks: LocalBusiness with @id #organization, and WebSite whose publisher points at that same @id. /faq 200 in 566ms with FAQPage present. /articles 200 in 587ms. All 24 sitemap article URLs were fetched and all 24 return 200. / Do lai ngay 03/09/2026 tu origin dxliving.com voi cache tat. robots.txt 200, 430 byte, khong chan toan bo, 5 muc user-agent AI tuong minh. /llms.txt 200, 12.678 byte, 128 dong; /llms-full.txt 200, 21.934 byte. sitemap.xml 200, 9.109 byte, 48 URL trong do 24 la bai viet, lastmod 02/09/2026 22:46 UTC. Trang chu co dung 2 khoi JSON-LD: LocalBusiness voi @id #organization, va WebSite co publisher tro toi dung @id do. /faq 200 trong 566ms co FAQPage. /articles 200 trong 587ms. Da fetch ca 24 URL bai trong sitemap va ca 24 deu tra 200.",
-      "sitemap_complete_caveat": "This signal passes on INTERNAL CONSISTENCY only: every one of the 24 live articles is in the sitemap and every one returns 200. It does NOT mean the sitemap is right. The sitemap was regenerated at 22:46 UTC on 2 Sep and still carries only 48 URLs - the 47 articles deleted on 1 Sep have NOT come back. A sitemap can be perfectly consistent and still describe a site that has lost two thirds of its content. / Tin hieu nay chi dat ve NHAT QUAN NOI BO: ca 24 bai dang song deu co trong sitemap va deu tra 200. Dieu do KHONG co nghia sitemap dung. Sitemap duoc tao lai luc 22:46 UTC ngay 02/09 va van chi mang 48 URL - 47 bai bi xoa ngay 01/09 CHUA quay lai. Mot sitemap co the hoan toan nhat quan ma van mo ta mot site da mat hai phan ba noi dung.",
-      "articles_render_caveat": "Individual article pages return 200 with exactly one H1 and a canonical. The /articles HUB is a different matter - see internal_linking: it exposes only 7 anchors unfiltered and 17 across all four category filters, against 24 articles in the sitemap. / Tung trang bai le tra 200 voi dung mot H1 va co canonical. Trang HUB /articles lai la chuyen khac - xem internal_linking: chi phoi ra 7 anchor khi khong loc va 17 khi gop ca bon chuyen muc, so voi 24 bai trong sitemap.",
-      "jsonld_note": "The homepage carries exactly 2 JSON-LD blocks, unchanged: a LocalBusiness node carrying @id https://dxliving.com/#organization (so it serves as the organisation entity), and a WebSite node whose publisher references that same @id. Both signals are scored as passing on this basis, consistent with every prior scan. There is no separate node typed literally 'Organization'. / Trang chu co dung 2 khoi JSON-LD, khong doi: mot node LocalBusiness mang @id https://dxliving.com/#organization (nen dong vai tro thuc the to chuc), va mot node WebSite co publisher tro toi dung @id do. Ca hai tin hieu duoc cham dat tren co so nay, nhat quan voi moi lan quet truoc. Khong co node nao duoc gan kieu dung chu 'Organization'."
+      "evidence": "Re-measured at 12:30 ICT from the dxliving.com origin with cache disabled. robots.txt 200, 430 bytes, no global disallow, SIX explicit AI user-agent Allow entries (GPTBot, OAI-SearchBot, ChatGPT-User, PerplexityBot, ClaudeBot, Google-Extended). /llms.txt 200, 12,678 bytes, 128 lines; /llms-full.txt 200, 21,934 bytes. sitemap.xml 200, 18,540 bytes, 99 URLs of which 75 are articles, lastmod 2026-09-03T05:37:15.348Z. Homepage carries exactly 2 JSON-LD blocks, unchanged: LocalBusiness with @id #organization, and WebSite whose publisher points at that same @id. /faq 200 in 671ms with FAQPage present. /articles 200 in 1,451ms. ALL 75 sitemap article URLs were fetched and ALL 75 return 200. / Do lai luc 12:30 ICT tu origin dxliving.com voi cache tat. robots.txt 200, 430 byte, khong chan toan bo, SAU muc user-agent AI Allow tuong minh (GPTBot, OAI-SearchBot, ChatGPT-User, PerplexityBot, ClaudeBot, Google-Extended). /llms.txt 200, 12.678 byte, 128 dong; /llms-full.txt 200, 21.934 byte. sitemap.xml 200, 18.540 byte, 99 URL trong do 75 la bai viet, lastmod 03/09/2026 05:37:15 UTC. Trang chu co dung 2 khoi JSON-LD, khong doi: LocalBusiness voi @id #organization, va WebSite co publisher tro toi dung @id do. /faq 200 trong 671ms co FAQPage. /articles 200 trong 1.451ms. Da fetch CA 75 URL bai trong sitemap va CA 75 deu tra 200.",
+      "sitemap_complete_caveat": "This signal now passes on SUBSTANCE, not just internal consistency. The sitemap was rebuilt at 05:37 UTC today and carries 99 URLs of which 75 are articles - up from 48 and 24. All 75 articles were fetched individually and all 75 return 200. The 47 articles lost on 1 Sep are back, and the library is now LARGER than the 71 that existed before the outage. Remaining caveat: a correct sitemap is not the same as a crawlable site - see internal_linking, where 10 articles are still reachable only by direct URL. / Tin hieu nay gio dat ve BAN CHAT, khong chi ve nhat quan noi bo. Sitemap duoc dung lai luc 05:37 UTC hom nay va mang 99 URL trong do 75 la bai viet - tang tu 48 va 24. Da fetch rieng ca 75 bai va ca 75 deu tra 200. 47 bai mat ngay 01/09 da quay lai, va thu vien gio con LON HON 71 bai ton tai truoc su co. Luu y con lai: sitemap dung khong dong nghia site crawl duoc - xem internal_linking, van con 10 bai chi vao duoc bang URL truc tiep.",
+      "articles_render_caveat": "articles_render passes on the same basis as every prior scan - /articles returns HTTP 200 quickly (1,451ms). That method is kept unchanged so the series stays comparable, but it must be read alongside the separate finding that the hub is covered by a full-screen white overlay that never clears and exposes only 7 anchors to a crawler. The HTTP check passes; the page does not actually work. / articles_render dat theo dung co so moi lan quet truoc - /articles tra HTTP 200 nhanh (1.451ms). Giu nguyen phuong phap de chuoi so lieu so sanh duoc, nhung phai doc kem phat hien rieng rang trang hub bi mot lop phu trang toan man hinh khong bao gio tan va chi lo ra 7 anchor cho crawler. Kiem tra HTTP thi dat; trang thi thuc te khong chay.",
+      "jsonld_note": "The homepage carries exactly 2 JSON-LD blocks, unchanged: a LocalBusiness node carrying @id https://dxliving.com/#organization (so it serves as the organisation entity), and a WebSite node whose publisher references that same @id. Both signals are scored as passing on this basis, consistent with every prior scan. There is no separate node typed literally 'Organization'. / Trang chu co dung 2 khoi JSON-LD, khong doi: mot node LocalBusiness mang @id https://dxliving.com/#organization (nen dong vai tro thuc the to chuc), va mot node WebSite co publisher tro toi dung @id do. Ca hai tin hieu duoc cham dat tren co so nay, nhat quan voi moi lan quet truoc. Khong co node nao duoc gan kieu dung chu 'Organization'.",
+      "sitemap_article_count": 75
     }
   },
   "gsc_top_queries": [
@@ -305,27 +304,31 @@
     "warning": "EVERY ONE of these eight non-brand queries is still served by a URL that returns 404. These positions are residual - Google has not yet re-crawled and dropped them. They will decay. Do NOT read the position improvements above as progress. / TAT CA tam truy van phi thuong hieu nay van duoc phuc vu boi mot URL tra ve 404. Cac vi tri nay la tan du - Google chua quet lai va chua go. Chung se muc dan. KHONG duoc doc cac muc cai thien vi tri o tren nhu tien bo."
   },
   "technical_health": {
-    "measured_at": "2026-09-03",
-    "source": "GSC Page indexing (updated 2026-08-28), GSC Sitemaps (Google last read 2026-08-24), GSC Core Web Vitals (updated 2026-09-01), GSC HTTPS (updated 2026-09-02), plus live fetches against the dxliving.com origin with cache disabled. / GSC Page indexing (cap nhat 28/08/2026), GSC Sitemaps (Google doc lan cuoi 24/08/2026), GSC Core Web Vitals (cap nhat 01/09/2026), GSC HTTPS (cap nhat 02/09/2026), kem fetch truc tiep origin dxliving.com voi cache tat.",
+    "measured_at": "2026-09-03 12:30 ICT",
+    "source": "GSC Page indexing (build dated 2026-08-28), GSC Sitemaps (Google last read 2026-08-24), GSC Core Web Vitals (2026-09-01), GSC HTTPS (2026-09-02), plus live fetches against the dxliving.com origin with cache disabled at 12:30 ICT. / GSC Page indexing (ban ngay 28/08/2026), GSC Sitemaps (Google doc lan cuoi 24/08/2026), GSC Core Web Vitals (01/09/2026), GSC HTTPS (02/09/2026), kem fetch truc tiep origin dxliving.com voi cache tat luc 12:30 ICT.",
     "article_library_collapse": {
-      "severity": "critical",
-      "observed_at": "2026-09-03",
+      "severity": "resolved",
+      "status": "RESOLVED 2026-09-03 05:37 UTC",
+      "observed_at": "2026-09-03 12:30 ICT",
       "first_seen": "2026-09-01",
+      "resolved_at": "2026-09-03T05:37:15.348Z",
       "days_unresolved": 3,
-      "live_articles_today": 24,
-      "live_articles_before": 71,
-      "articles_lost": 47,
-      "sitemap_urls_today": 48,
-      "sitemap_urls_before": 95,
-      "sitemap_lastmod": "2026-09-02T22:46:19.327Z",
-      "evidence": "UNRESOLVED FOR A THIRD DAY. The sitemap was regenerated again at 22:46 UTC on 2 Sep - so the publishing system IS running - and it still carries 48 URLs of which 24 are articles. All 24 return 200. The 47 deleted articles have not been restored. / CHUA XU LY SANG NGAY THU BA. Sitemap lai duoc tao lai luc 22:46 UTC ngay 02/09 - tuc he thong xuat ban VAN chay - va van chi mang 48 URL trong do 24 la bai viet. Ca 24 deu tra 200. 47 bai da xoa chua duoc khoi phuc.",
-      "impact": "The damage is now visible in three independent systems. Ahrefs 404s 6 -> 11 -> 14. GSC 'Not found (404)' now 7 pages and GSC indexed pages fell 109 -> 101 while not-indexed rose 68 -> 88. GSC query count fell 148 -> 136 as queries served by deleted pages age out of the 28-day window. All eight non-brand queries on today's top-10 board are still served by URLs that 404. / Thiet hai gio da hien o ba he thong doc lap. So 404 cua Ahrefs 6 -> 11 -> 14. GSC 'Not found (404)' gio 7 trang va so trang duoc index tut 109 -> 101 trong khi chua index tang 68 -> 88. So truy van GSC giam 148 -> 136 khi cac truy van do trang da xoa phuc vu roi khoi cua so 28 ngay. Ca tam truy van phi thuong hieu trong bang top 10 hom nay van duoc phuc vu boi URL tra 404.",
-      "what_is_not_known": "Still no explanation. Three scans on, this report can establish WHAT changed and that it has NOT been reversed, but not WHY. Whether this was intentional pruning, a CMS fault or a publishing-pipeline failure is not visible from outside and MUST NOT be guessed. Asking the site owner remains the single highest-value action. / Van chua co giai thich. Qua ba lan quet, bao cao nay xac dinh duoc cai gi da doi va rang no CHUA duoc dao nguoc, nhung khong biet TAI SAO. Day la cat tia co chu dich, loi CMS hay loi quy trinh xuat ban thi khong nhin thay tu ben ngoai va KHONG DUOC doan. Hoi chu site van la hanh dong gia tri nhat."
+      "live_articles_today": 75,
+      "live_articles_this_morning": 24,
+      "live_articles_before_collapse": 71,
+      "articles_restored": 51,
+      "sitemap_urls_today": 99,
+      "sitemap_urls_this_morning": 48,
+      "sitemap_lastmod": "2026-09-03T05:37:15.348Z",
+      "evidence": "RESOLVED, and caught mid-scan. At 06:00 this morning the sitemap held 48 URLs / 24 articles. At 12:30 it holds 99 URLs / 75 articles, with every lastmod stamped 2026-09-03T05:37:15.348Z - a single rebuild at 05:37 UTC (12:37 ICT). All 75 article URLs were fetched individually and all 75 return HTTP 200, average 0.87s. Six spot-checks spread across the list returned 94KB-150KB of real HTML, so these are restored pages and not empty shells. The library is now LARGER than the 71 that existed before the 1 Sep collapse. / DA XU LY, va bat duoc ngay giua lan quet. Luc 06:00 sang nay sitemap con 48 URL / 24 bai. Luc 12:30 no co 99 URL / 75 bai, moi lastmod deu dong dau 03/09/2026T05:37:15.348Z - mot lan dung lai duy nhat luc 05:37 UTC (12:37 ICT). Da fetch rieng ca 75 URL bai va ca 75 deu tra HTTP 200, trung binh 0,87 giay. Sau bai kiem ngau nhien rai deu danh sach tra ve 94KB-150KB HTML that, tuc day la trang duoc khoi phuc chu khong phai vo rong. Thu vien gio con LON HON 71 bai ton tai truoc vu sup ngay 01/09.",
+      "impact": "The recovery has NOT yet reached the measurement systems, and will not for days. Ahrefs still shows 15 404s (up from 14) because it last crawled before the fix; its Site Audit crawl ran at 04:16, ninety minutes too early, and saw only 14 URLs. GSC's Page indexing build is dated 28 Aug and its last sitemap read 24 Aug, so GSC has seen neither the collapse nor the recovery - it still reports 101 indexed / 88 not indexed and Discovered pages 86. GSC's 28-day window still carries the 12 lost queries. EXPECT the numbers to look worse before they look better. / Dot khoi phuc CHUA cham toi cac he thong do luong, va con lau moi cham. Ahrefs van hien 15 loi 404 (tang tu 14) vi lan crawl cuoi dien ra truoc khi sua; ban Site Audit chay luc 04:16, som hon chin muoi phut, va chi thay 14 URL. Ban Page indexing cua GSC de ngay 28/08 va lan doc sitemap cuoi la 24/08, nen GSC chua thay ca vu sup lan dot khoi phuc - van bao 101 trang index / 88 chua index va Discovered pages 86. Cua so 28 ngay cua GSC van mang 12 truy van da mat. HAY LUONG TRUOC rang cac con so se xau di truoc khi dep len.",
+      "what_to_watch": "Three numbers confirm the fix has propagated: Ahrefs 404s falling back toward 6; GSC indexed pages rising off 101; GSC Discovered pages moving off 86 once Google re-reads the sitemap. None of these will move today. / Ba con so xac nhan ban sua da lan toa: so 404 cua Ahrefs tut ve muc 6; so trang index cua GSC nhich len khoi 101; Discovered pages cua GSC roi khoi 86 khi Google doc lai sitemap. Khong con nao trong so nay se doi trong hom nay.",
+      "cause_still_unknown": "WHY the 47 articles vanished on 1 Sep and why they returned on 3 Sep is still not visible from outside and is not guessed here. Asking the site owner remains the single most valuable action - an unexplained fix is only marginally safer than an unexplained outage, because nothing prevents a recurrence. / VI SAO 47 bai bien mat ngay 01/09 va vi sao chung quay lai ngay 03/09 van khong nhin thay duoc tu ben ngoai va khong duoc doan o day. Hoi chu site van la viec gia tri nhat - mot ban sua khong ro nguyen nhan chi an toan hon mot su co khong ro nguyen nhan mot chut, vi khong co gi ngan no tai dien."
     },
     "gsc_page_indexing": {
-      "last_updated": "2026-08-28",
       "indexed": 101,
       "not_indexed": 88,
+      "build_dated": "2026-08-28",
       "reasons": {
         "excluded_by_noindex": 34,
         "crawled_currently_not_indexed": 26,
@@ -336,25 +339,26 @@
         "redirect_error": 1,
         "blocked_by_robots_txt": 1
       },
-      "note": "GSC finally refreshed - it had been frozen on its 2026-08-21 reading for a fortnight. Indexed 109 -> 101 (-8), not indexed 68 -> 88 (+20). Reason count went 7 -> 8: 'Blocked by robots.txt' is NEW at 1 page. noindex 31 -> 34, crawled-not-indexed 18 -> 26, discovered-not-indexed 7 -> 13, 404 6 -> 7. Note this is the 28 Aug state, BEFORE the 1 Sep deletion, so it does not yet include the 47 lost articles. It will get worse. / GSC cuoi cung cung lam moi - truoc do dung o ban doc 21/08/2026 suot nua thang. Da index 109 -> 101 (-8), chua index 68 -> 88 (+20). So ly do 7 -> 8: 'Blocked by robots.txt' la MOI voi 1 trang. noindex 31 -> 34, crawled-not-indexed 18 -> 26, discovered-not-indexed 7 -> 13, 404 6 -> 7. Luu y day la trang thai ngay 28/08, TRUOC vu xoa ngay 01/09, nen chua tinh 47 bai da mat. Se con xau di."
+      "reasons_note": "The eight reasons sum to 88, matching the tile exactly. This build predates both the collapse and the recovery. / Tam ly do cong lai bang 88, khop chinh xac voi tile. Ban nay co truoc ca vu sup lan dot khoi phuc."
     },
     "gsc_sitemap": {
+      "submitted": "2026-08-24",
       "last_read_by_google": "2026-08-24",
       "status": "Success",
       "discovered_pages": 86,
-      "note": "Google has not re-read the sitemap for TEN days. Its stored figure of 86 discovered pages is from 24 Aug and describes the PRE-COLLAPSE site. The live sitemap today holds 48 URLs. Google is therefore still working from a map of a site that no longer exists, which is why 404s are surfacing gradually rather than all at once. / Google chua doc lai sitemap suot MUOI ngay. Con so 86 trang duoc phat hien la tu 24/08 va mo ta site TRUOC KHI SUP. Sitemap song hom nay co 48 URL. Vi vay Google van dang lam viec voi ban do cua mot site khong con ton tai, va do la ly do 404 noi len tu tu chu khong dong loat."
+      "note": "Google has not re-read the sitemap since 24 Aug, so Discovered pages 86 reflects neither the 48-URL collapse nor today's 99-URL rebuild. This is the number to watch for confirmation that the fix has propagated. / Google chua doc lai sitemap tu 24/08, nen Discovered pages 86 khong phan anh ca vu sup con 48 URL lan ban dung lai 99 URL hom nay. Day la con so can theo doi de xac nhan ban sua da lan toa."
     },
     "gsc_core_web_vitals": {
-      "last_updated": "2026-09-01",
       "mobile": null,
       "desktop": null,
-      "note": "Both device types return 'Not enough usage data in the last 90 days'. Recorded as null. This is an ABSENCE of data, NOT a poor score - do not read it as a performance problem. / Ca hai loai thiet bi deu tra 'Not enough usage data in the last 90 days'. Ghi null. Day la THIEU du lieu, KHONG phai diem kem - dung doc thanh van de hieu nang."
+      "last_updated": "2026-09-01",
+      "note": "Chrome UX Report returns 'Not enough usage data in the last 90 days' for BOTH mobile and desktop. Recorded as null. This is an absence of data, NOT a poor score, and no number may be inferred from it. / Chrome UX Report tra ve 'Not enough usage data in the last 90 days' cho CA mobile lan desktop. Ghi null. Day la thieu du lieu, KHONG phai diem kem, va khong duoc suy ra con so nao tu do."
     },
     "gsc_https": {
-      "last_updated": "2026-09-02",
       "non_https_urls": 0,
       "https_urls": 15,
-      "issues": "none in the last 90 days"
+      "last_updated": "2026-09-02",
+      "verdict": "clean / sach"
     },
     "response_times": {
       "articles_sampled": 12,
@@ -391,79 +395,110 @@
       "noindex_pages": 34,
       "crawled_not_indexed_pages": 26,
       "note": "STILL NOT REVIEWED. The 34 noindex pages and 26 crawled-not-indexed pages have never been listed out of GSC. Both counts GREW this scan (31 -> 34 and 18 -> 26). Labelled unreviewed rather than assumed benign. / VAN CHUA RA SOAT. 34 trang noindex va 26 trang crawled-not-indexed chua bao gio duoc xuat danh sach tu GSC. Ca hai con so deu TANG o lan quet nay (31 -> 34 va 18 -> 26). Dan nhan chua ra soat chu khong mac dinh la vo hai."
+    },
+    "origin_response_times": {
+      "faq_ms": 671,
+      "articles_hub_ms": 1451,
+      "article_pages_avg_ms": 870,
+      "article_pages_checked": 75,
+      "note": "All 75 article pages fetched, average 0.87s, every one HTTP 200. / Da fetch ca 75 trang bai, trung binh 0,87 giay, tat ca deu HTTP 200."
+    },
+    "articles_hub_overlay": {
+      "status": "STILL BROKEN - day seven",
+      "observed_at": "2026-09-03 12:30 ICT",
+      "seconds_waited": 45,
+      "rendered_article_links": 7,
+      "evidence": "A div with classes 'fixed inset-0 flex items-center justify-center bg-white' at z-index 99999 still covers the entire viewport after 45 seconds. document.elementFromPoint at the centre of the screen returns BODY, so nothing beneath is reachable. Only 7 article anchors render against 75 in the sitemap. A screenshot at 10 seconds shows a blank white page with only the DXL logo. / Mot div co class 'fixed inset-0 flex items-center justify-center bg-white' o z-index 99999 van phu kin toan bo khung nhin sau 45 giay. document.elementFromPoint o giua man hinh tra ve BODY, tuc khong cham duoc gi ben duoi. Chi 7 anchor bai viet duoc render so voi 75 trong sitemap. Anh chup luc giay thu 10 cho thay trang trang tron chi co logo DXL.",
+      "verdict": "This is now the single largest unresolved on-site problem, and the article restoration has made it MORE costly, not less: there are now 75 articles behind a hub that exposes 7. / Day gio la van de on-site lon nhat chua xu ly, va viec khoi phuc bai viet lam no TON KEM HON chu khong it hon: gio co 75 bai nam sau mot trang hub chi lo ra 7."
     }
   },
   "internal_linking": {
-    "measured_at": "2026-09-03",
-    "status": "STILL OPEN - sixth consecutive day",
+    "measured_at": "2026-09-03 12:30 ICT",
+    "status": "IMPROVED but STILL OPEN - seventh consecutive day",
     "method": "Fetched /articles?page=1..6 and /articles?category=<each of the 4 categories>&page=1..6 from the origin with cache disabled, and counted only REAL ANCHORS - href attributes pointing at /articles/<slug>. Same method as every scan since 28 Aug, so the series stays comparable. / Tai /articles?page=1..6 va cac trang loc theo 4 chuyen muc tu origin, tat cache, va CHI dem ANCHOR THAT - thuoc tinh href tro toi /articles/<slug>. Cung phuong phap voi moi lan quet tu 28/08 nen chuoi so lieu van so sanh duoc.",
-    "sitemap_articles": 24,
-    "hub_articles_unfiltered": 7,
-    "hub_articles_union_all_categories": 17,
+    "sitemap_articles": 75,
+    "hub_articles_unfiltered": 36,
+    "hub_articles_union_all_categories": 65,
     "hub_categories": {
-      "homes-residential-guides": 8,
-      "project-planning": 5,
-      "bim-digital-construction": 5,
-      "off-the-plan-sales": 2
+      "homes-residential-guides": 36,
+      "project-planning": 19,
+      "bim-digital-construction": 10,
+      "off-the-plan-sales": 3
     },
-    "orphan_articles_count": 7,
-    "previous_state": "On 1 Sep the unfiltered hub exposed 8 slugs, the categories reached 17, the sitemap held 24, leaving 7 orphans.",
-    "verdict": "Byte-for-byte unchanged except the unfiltered hub slipped 8 -> 7. The four category filters still reach 17 of the 24 sitemap articles, leaving the SAME 7 articles reachable only by direct URL. The hub regression is unfixed for a sixth day. / Khong doi mot chut nao ngoai viec hub khong loc tut 8 -> 7. Bon bo loc chuyen muc van cham toi 17 trong 24 bai co trong sitemap, de lai DUNG 7 bai chi vao duoc bang URL truc tiep. Loi thut lui cua hub chua sua sang ngay thu sau."
+    "orphan_articles_count": 10,
+    "previous_state": "At 06:00 today: sitemap 24, unfiltered hub 7, categories reached 17, 7 orphans. / Luc 06:00 hom nay: sitemap 24, hub khong loc 7, chuyen muc cham toi 17, 7 bai mo coi.",
+    "verdict": "Large improvement in absolute terms and a small worsening in relative terms. The category filters now reach 65 of the 75 sitemap articles (87 percent) against 17 of 24 (71 percent) this morning, so reachability genuinely improved. But the orphan count rose 7 -> 10: ten articles - including project-251-case-study, luxury-home-builders-sydney and custom-home-builders-melbourne-3d-visualisation - carry no category and can only be reached by typing the URL. And the unfiltered hub still exposes just 36 of 75 because of the overlay. / Cai thien lon ve tuyet doi va xau di mot chut ve tuong doi. Cac bo loc chuyen muc gio cham toi 65 trong 75 bai co trong sitemap (87%) so voi 17 tren 24 (71%) sang nay, tuc kha nang tiep can that su tot len. Nhung so bai mo coi tang 7 -> 10: muoi bai - trong do co project-251-case-study, luxury-home-builders-sydney va custom-home-builders-melbourne-3d-visualisation - khong co chuyen muc va chi vao duoc bang cach go URL. Va hub khong loc van chi lo ra 36 tren 75 vi lop phu.",
+    "orphan_sample": [
+      "virtual-reality-interior-design",
+      "smart-home-security",
+      "project-251-case-study",
+      "luxury-home-builders-sydney",
+      "custom-home-builders-melbourne-3d-visualisation"
+    ]
   },
   "cannibalisation": {
-    "measured_at": "2026-09-03",
-    "method": "Counted /articles/<slug> URLs in the 48-URL sitemap and grouped them by the pattern in the slug. / Dem cac URL /articles/<slug> trong sitemap 48 URL va nhom theo mau trong slug.",
-    "melbourne_articles_total": 1,
+    "measured_at": "2026-09-03 12:30 ICT",
+    "method": "Counted /articles/<slug> URLs in the rebuilt 99-URL sitemap and grouped them by the pattern in the slug. Same method as prior scans. / Dem cac URL /articles/<slug> trong sitemap 99 URL vua dung lai va nhom theo mau trong slug. Cung phuong phap voi cac lan quet truoc.",
+    "melbourne_articles_total": 17,
     "melbourne_articles_total_before_collapse": 16,
-    "melbourne_rendering_cluster_size": 0,
+    "melbourne_rendering_cluster_size": 12,
     "melbourne_rendering_cluster_size_before_collapse": 9,
-    "home_builders_cluster_size": 3,
-    "verdict": "Unchanged from 1 Sep and still NOT a win. Both clusters remain at or near zero because the pages were deleted, not consolidated. Meanwhile the queries those clusters used to serve are still drawing impressions in GSC against URLs that 404 - the worst of both worlds: no cannibalisation and no page either. / Khong doi so voi 01/09 va van KHONG phai tin vui. Ca hai cum van bang hoac gan bang khong vi cac trang bi xoa chu khong phai duoc gop lai. Trong khi do cac truy van ma hai cum tung phuc vu van dang keo hien thi trong GSC ve nhung URL tra 404 - te ca doi duong: khong con trung lap ma cung khong con trang."
+    "home_builders_cluster_size": 8,
+    "verdict": "The cannibalisation risk came back WITH the content, and it is now larger than it was before the outage. Twelve separate articles target Melbourne rendering - 3d-rendering-melbourne, 3d-rendering-services-melbourne, 3d-rendering-company-melbourne, architectural-rendering-melbourne-pre-construction-planning and eight more - against a cluster of 9 before the collapse. Eight articles target custom or luxury home builders. This matters because GSC shows those very queries drawing impressions at positions 9.8 to 35 with ZERO clicks across twelve scans: a dozen pages splitting the authority for one intent is a plausible contributor. Consolidation is now a live recommendation again, and should be handled deliberately rather than by deletion. / Rui ro trung lap noi dung quay lai CUNG voi noi dung, va gio con lon hon truoc su co. Muoi hai bai rieng biet nham vao rendering Melbourne - 3d-rendering-melbourne, 3d-rendering-services-melbourne, 3d-rendering-company-melbourne, architectural-rendering-melbourne-pre-construction-planning va tam bai nua - so voi cum 9 bai truoc vu sup. Tam bai nham vao custom hoac luxury home builders. Dieu nay dang ke vi GSC cho thay dung nhung truy van do dang keo hien thi o vi tri 9,8 den 35 voi KHONG click nao suot muoi hai lan quet: muoi hai trang chia nhau tham quyen cho mot y dinh la mot nguyen nhan hop ly. Gop cum lai gio lai la khuyen nghi song, va nen lam co chu dich chu khong phai bang cach xoa.",
+    "melbourne_articles_this_morning": 1,
+    "melbourne_rendering_cluster_size_this_morning": 0,
+    "home_builders_cluster_size_this_morning": 3
   },
   "social_snapshot": {
-    "measured_at": "2026-09-03",
+    "measured_at": "2026-09-03 12:30 ICT",
     "source": "https://tram-fdx.github.io/dxl-social-dashboard-site/",
-    "dashboard_last_refreshed": "2026-08-29",
-    "is_stale": true,
-    "stale_note": "STALE BY FIVE DAYS and still worsening - it was three days stale on the last scan and two before that. The header still reads 'Snapshot 29 Aug 2026' and the stored-day picker still tops out at 29/08/2026 with 27 stored days. EVERY figure below is the 29 Aug reading carried forward and IS NOT a measurement of 3 Sep. The dashboard's footer claims a daily auto-refresh, so the dxl-social-dashboard-daily-refresh job has now been failing for five consecutive days and needs attention in its own right. / CU NAM NGAY va van dang xau di - lan quet truoc cu ba ngay, truoc nua la hai. Tieu de van ghi 'Snapshot 29 Aug 2026' va bo chon ngay van dung o 29/08/2026 voi 27 ngay luu tru. MOI con so duoi day la ban doc ngay 29/08 mang sang, KHONG phai phep do ngay 03/09. Chan trang bang do khang dinh tu lam moi hang ngay, nen tac vu dxl-social-dashboard-daily-refresh da hong nam ngay lien tiep va can duoc xu ly rieng.",
+    "dashboard_last_refreshed": "2026-09-03",
+    "is_stale": false,
+    "stale_note": "NO LONGER STALE. The dashboard refreshed between this morning's scan and now: the header reads 'Snapshot 3 Sep 2026 - all four channels read live' and the picker shows 28 stored days, up from 27. The dxl-social-dashboard-daily-refresh job that had failed for five consecutive days has run. Every figure below is a 3 Sep measurement, not a carried-forward one. / KHONG CON CU. Dashboard da lam moi giua lan quet sang nay va bay gio: tieu de ghi 'Snapshot 3 Sep 2026 - ca bon kenh doc truc tiep' va bo chon ngay hien 28 ngay luu tru, tang tu 27. Tac vu dxl-social-dashboard-daily-refresh von hong nam ngay lien tiep da chay lai. Moi con so duoi day la phep do ngay 03/09, khong phai so mang sang.",
     "window": "28 days",
     "total_followers": 266,
     "total_followers_previous": 266,
     "total_followers_june_2026": 197,
-    "total_followers_note": "266 = Facebook 115 + LinkedIn 100 + Instagram 47 + YouTube 4. Carried forward from 29 Aug for a third consecutive scan. / 266 = Facebook 115 + LinkedIn 100 + Instagram 47 + YouTube 4. Mang sang tu 29/08, lan thu ba lien tiep.",
+    "total_followers_note": "266 = Facebook 115 + LinkedIn 100 + Instagram 47 + YouTube 4. Flat against the 29 Aug reading, but this is now a real 3 Sep measurement rather than a carried-forward one. Net new followers on Facebook were ZERO over the period and LinkedIn, Instagram and YouTube all held exactly flat. / 266 = Facebook 115 + LinkedIn 100 + Instagram 47 + YouTube 4. Di ngang so voi ban doc 29/08, nhung day gio la phep do that ngay 03/09 chu khong phai so mang sang. Follower moi rong tren Facebook la KHONG trong ky, va LinkedIn, Instagram, YouTube deu dung yen hoan toan.",
     "facebook": {
       "followers": 115,
-      "views_28d": 4735,
-      "reach_viewers": 537,
-      "visits": 280,
-      "content_interactions": 184,
-      "video_3s_views": 142,
-      "net_new_followers": 1,
-      "views_from_non_followers_pct": 57.5
+      "views_28d": 4194,
+      "reach_viewers": 450,
+      "visits": 245,
+      "content_interactions": 172,
+      "video_3s_views": 140,
+      "net_new_followers": 0,
+      "views_from_non_followers_pct": 54.9,
+      "change_note": "Every engagement metric fell: views 4,735 -> 4,194 (down 541, 11.4 percent), reach 537 -> 450 (down 16.2 percent), visits 280 -> 245, interactions 184 -> 172, net new followers 1 -> 0. / Moi chi so tuong tac deu giam: luot xem 4.735 -> 4.194 (giam 541, 11,4%), tiep can 537 -> 450 (giam 16,2%), luot ghe tham 280 -> 245, tuong tac 184 -> 172, follower moi rong 1 -> 0."
     },
     "linkedin": {
       "followers": 100,
-      "impressions": 1691,
-      "reactions": 86,
+      "impressions": 1537,
+      "reactions": 96,
       "comments": 0,
       "reposts": 2,
-      "page_views": 127,
-      "unique_visitors": 48,
-      "new_followers_30d": 47
+      "page_views": 116,
+      "unique_visitors": 44,
+      "new_followers_30d": 46,
+      "change_note": "Impressions 1,691 -> 1,537 (down 9.1 percent) and page views 127 -> 116, but reactions rose 86 -> 96 (up 11.6 percent). Comments remain at zero, as they have all series. / Hien thi 1.691 -> 1.537 (giam 9,1%) va luot xem trang 127 -> 116, nhung phan ung tang 86 -> 96 (tang 11,6%). Binh luan van bang khong, nhu suot ca chuoi."
     },
     "instagram": {
       "followers": 47,
-      "views_28d": 1039,
-      "reach_28d": 275,
-      "content_interactions": 68,
-      "reach_from_non_followers": 254
+      "views_28d": 1104,
+      "reach_28d": 273,
+      "content_interactions": 64,
+      "reach_from_non_followers": 253,
+      "posts_published": 116,
+      "change_note": "The only channel growing on reach quality: views 1,039 -> 1,104 (up 6.3 percent) and 253 of 273 reach (92.7 percent) came from non-followers. Interactions slipped 68 -> 64. / Kenh duy nhat tang ve chat luong tiep can: luot xem 1.039 -> 1.104 (tang 6,3%) va 253 trong 273 luot tiep can (92,7%) den tu nguoi chua follow. Tuong tac tut 68 -> 64."
     },
     "youtube": {
       "subscribers": 4,
       "views_28d": 59,
-      "watch_time_hours": 0.1
+      "watch_time_hours": 0.1,
+      "videos_published": 28,
+      "change_note": "Completely flat on every metric. 59 views and 0.1 hours of watch time over 28 days is not a channel in any meaningful sense. / Di ngang hoan toan o moi chi so. 59 luot xem va 0,1 gio thoi luong xem trong 28 ngay khong phai la mot kenh theo bat ky nghia nao."
     },
-    "cross_check_vs_ga4": "GA4 Organic Social recorded 141 sessions over 6 Aug - 2 Sep, up 9 on the last scan, and it remains the second largest channel ahead of Organic Search (128). Facebook contributes 126 of those 141 across three source rows. But Organic Social converts nothing at all: 24.11 percent engagement, 2 SECONDS average time, ZERO key events. Organic Search at 128 sessions delivers 5 of the site's 7 key events. Social volume is actively dragging the blended engagement rate down for a third consecutive scan. / GA4 ghi nhan Organic Social 141 phien trong 06/08 - 02/09, tang 9 so voi lan quet truoc, va van la kenh lon thu hai, tren ca Organic Search (128). Facebook dong gop 126 trong 141 phien do qua ba dong nguon. Nhung Organic Social khong chuyen doi gi ca: tuong tac 24,11%, HAI GIAY trung binh, KHONG key event nao. Organic Search voi 128 phien mang lai 5 trong 7 key event cua site. Luong social dang keo tut ty le tuong tac tong hop lan thu ba lien tiep."
+    "cross_check_vs_ga4": "The social dashboard reports 4,194 Facebook views and 1,104 Instagram views over 28 days, while GA4 records 141 Organic Social sessions at 24.11 percent engagement, 2 SECONDS average time and ZERO key events. Roughly five thousand social views produce 141 sessions that bounce almost immediately. Social is generating impressions, not visits, and no conversions at all. / Dashboard social bao 4.194 luot xem Facebook va 1.104 luot xem Instagram trong 28 ngay, trong khi GA4 ghi 141 phien Organic Social voi tuong tac 24,11%, trung binh HAI GIAY va KHONG key event nao. Khoang nam nghin luot xem social tao ra 141 phien roi thoat gan nhu ngay lap tuc. Social dang tao hien thi chu khong tao luot truy cap, va khong tao chuyen doi nao."
   },
   "monthly_comparison": {
     "rolled_to": "August 2026 vs July 2026",
@@ -523,40 +558,44 @@
   },
   "notes": {
     "vi": [
-      "VỤ XOÁ 47 BÀI VIẾT CHƯA ĐƯỢC KHẮC PHỤC SANG NGÀY THỨ BA. Sitemap được tạo lại lúc 22:46 UTC ngày 02/09 — tức hệ thống xuất bản vẫn chạy bình thường — nhưng vẫn chỉ có 48 URL, trong đó 24 bài. Cả 24 bài đều trả 200. 47 bài mất ngày 01/09 chưa quay lại. Vẫn CHƯA BIẾT TẠI SAO: đây là cắt nội dung có chủ đích, lỗi CMS hay lỗi quy trình xuất bản thì không nhìn thấy từ bên ngoài và không được đoán. Hỏi chủ site vẫn là việc giá trị nhất.",
-      "Thiệt hại nay đã hiện ở BA hệ thống độc lập. Ahrefs: số 404 tăng 6 → 11 → 14. GSC: 'Not found (404)' lên 7 trang, trang được index tụt 109 → 101 trong khi chưa index tăng 68 → 88. GSC cũng mất 12 truy vấn (148 → 136) khi các truy vấn do trang đã xoá phục vụ rơi khỏi cửa sổ 28 ngày. Đây mới là khởi đầu — bản Page indexing của GSC là trạng thái ngày 28/08, TRƯỚC vụ xoá.",
-      "GSC 28 ngày (04-31/08): 65 clicks · 1.657 hiển thị · CTR 3,9% · vị trí TB 28,7 · 136 truy vấn. Vị trí TB có vẻ tốt lên (29,2 → 28,7) nhưng ĐỪNG đọc là tiến bộ — đó là hệ quả số học của việc các truy vấn phi thương hiệu thứ hạng thấp rơi khỏi cửa sổ. Cả tám truy vấn phi thương hiệu trong bảng top 10 vẫn được phục vụ bởi URL trả 404; các vị trí đó là tàn dư và sẽ mục dần.",
-      "Thương hiệu vẫn chiếm 54/65 clicks (83,1%). Lần quét thứ MƯỜI HAI liên tiếp chỉ có đúng hai truy vấn 'dxliving' và 'dx living' là có click — 134 truy vấn còn lại đều bằng không.",
-      "GA4 28 ngày (06/08-02/09): 440 phiên · 254 người dùng · tương tác 41,14% · 33 giây · 2.233 sự kiện · 7 key event. Thu thập dữ liệu KHOẺ (7 ngày gần nhất có 164 phiên / 824 sự kiện) nhưng KEY EVENT TRONG 7 NGÀY ĐÓ LÀ KHÔNG — cả 7 key event của cửa sổ đều cũ hơn 27/08. Số GA4 28 ngày vẫn là SỐ THIẾU: cửa sổ còn chồng lấn vùng mất dữ liệu 29/07-12/08 khoảng bảy ngày, sẽ hết vào khoảng 09/09.",
-      "Cơ cấu kênh xấu đi lần thứ ba liên tiếp. Organic Social 141 phiên (kênh lớn thứ hai) nhưng chỉ 24,11% tương tác, HAI GIÂY và KHÔNG key event nào. Organic Search 128 phiên nhưng tương tác 66,41%, 53 giây và mang lại 5 trong 7 key event. Luồng social đang kéo tụt tỷ lệ tương tác tổng hợp.",
-      "Ahrefs cắt tỉa link tăng tốc, lần thứ NĂM liên tiếp: tên miền trỏ tới 340 → 322 live (-18) trong khi all-time tăng 460 → 463; backlink 356 → 340 live (-16) trong khi all-time tăng 489 → 495. DR và UR vẫn bằng 0. Tỷ lệ followed/not-followed KHÔNG ĐỌC ĐƯỢC hôm nay (Ahrefs không render khối đó) — ghi null chứ không mang số cũ sang.",
-      "Trích dẫn AI giảm: tổng phản hồi 22 → 20, ChatGPT 14 → 11 (-3) và số trang được trích 5 → 4; Copilot 7 → 8; Perplexity giữ 1. Số trang được trích (đã khử trùng) giữ 9. Đây là lần thứ HAI liên tiếp ChatGPT giảm, nhưng chuỗi hai điểm chưa đủ để kết luận là do vụ xoá bài hay chỉ là biến động chỉ mục.",
-      "Điểm Hiện diện AI 36/100, đi ngang. Cả năm chiều đều không đổi. LƯU Ý: 36 dựa trên mẫu số 24 bài đã sụp; nếu so với bất kỳ ngày nào trước 01/09 hãy dùng 30. Sẵn sàng kỹ thuật vẫn 7/7 (kịch trần lần thứ mười một) nên làm thêm kỹ thuật on-site không nâng được điểm — chỉ third_party_corpus (0) và measurement (1) mới nâng được, và measurement cần bật theo dõi prompt trong Brand Radar (vẫn 0 prompt).",
-      "Hub /articles thụt lùi sang ngày thứ sáu: không lọc chỉ phơi 7 anchor, gộp cả bốn chuyên mục được 17, trong khi sitemap có 24 bài — 7 bài vẫn mồ côi, chỉ vào được bằng URL trực tiếp.",
-      "Trang bài CHẬM đi rõ: trung bình 12 trang 0,89s → 1,12s (+26%). Ngược lại trang chính nhanh lên 1,23s → 0,66s và trang chủ 2,57s → 0,77s. Cả 20 trang kiểm tra đều đúng một H1 và có canonical.",
-      "Core Web Vitals vẫn trả 'Not enough usage data in the last 90 days' cho cả mobile lẫn desktop → ghi null. Đây là THIẾU dữ liệu, không phải điểm kém.",
-      "Google chưa đọc lại sitemap suốt MƯỜI ngày (lần cuối 24/08, ghi 86 trang). Google vẫn đang làm việc với bản đồ của một site không còn tồn tại — đó là lý do 404 nổi lên từ từ.",
-      "Bảng social CŨ NĂM NGÀY (vẫn là ảnh 29/08) và đang xấu đi. Mọi số social ở đây là mang sang, KHÔNG phải đo ngày 03/09. Tác vụ dxl-social-dashboard-daily-refresh đã hỏng năm ngày liên tiếp và cần xử lý riêng.",
-      "Khối So sánh theo tháng đã kiểm lại: tháng trọn vẹn gần nhất vẫn là T8/2026 so với T7/2026 nên khối VẪN ĐÚNG, không đổi số. Sẽ tự cuộn sang T9 so T8 ở lần quét đầu tháng 10.",
-      "P0 không đổi: (1) xác minh với chủ site xem vụ xoá 47 bài có chủ đích không, và khôi phục nếu không; (2) sửa hub /articles để hết 7 bài mồ côi; (3) bật theo dõi prompt trong Brand Radar."
+      "KHẮC PHỤC RỒI — VÀ BẮT ĐƯỢC NGAY GIỮA LẦN QUÉT. Lúc 06:00 sáng nay sitemap còn 48 URL / 24 bài. Lúc 12:30 nó có 99 URL / 75 bài, mọi lastmod đều đóng dấu 03/09/2026 05:37:15 UTC — một lần dựng lại duy nhất lúc 12:37 giờ Việt Nam. Đã fetch riêng cả 75 URL bài và CẢ 75 đều trả HTTP 200, trung bình 0,87 giây. Vụ mất 47 bài kéo dài ba ngày đã kết thúc, và thư viện giờ còn lớn hơn 71 bài từng có trước sự cố.",
+      "NHƯNG CÁC HỆ THỐNG ĐO CHƯA THẤY, VÀ CÒN LÂU MỚI THẤY. Ahrefs vẫn hiện 15 lỗi 404 (tăng từ 14) vì lần crawl cuối diễn ra trước khi sửa; bản Site Audit chạy lúc 04:16 — sớm hơn đúng chín mươi phút — nên chỉ thấy 14 URL và Health 100% đó không nói lên điều gì. GSC còn tệ hơn: bản Page indexing đề ngày 28/08 và lần đọc sitemap cuối là 24/08, nên GSC chưa thấy cả vụ sụp lẫn dot khôi phục — vẫn báo 101 trang index / 88 chưa index, Discovered pages 86. HÃY LƯỜNG TRƯỚC rằng các con số sẽ xấu đi trước khi đẹp lên.",
+      "BA CON SỐ XÁC NHẬN BẢN SỬA ĐÃ LAN TOẢ, cần theo dõi vài ngày tới: số 404 của Ahrefs tụt về mức 6 như ngày 31/08; số trang index của GSC nhích lên khỏi 101; Discovered pages của GSC rời khỏi 86. Không con nào trong số này sẽ đổi trong hôm nay.",
+      "GSC 28 ngày (04–31/08) — ĐỌC LẠI, KHỚP TỪNG CHỮ với lần quét 06:00: 65 clicks · 1.657 hiển thị · CTR 3,9% · vị trí TB 28,7 · 136 truy vấn. Cộng tay đủ 28 dòng tab DAYS ra đúng 1.657; kiểm chứng bằng tổng clicks 65 khớp chính xác tile Total clicks và 65/1.657 = 3,92% khớp tile CTR. Tile Total impressions chỉ hiện làm tròn 1,66K.",
+      "LẦN THỨ MƯỜI HAI LIÊN TIẾP, chỉ có ĐÚNG HAI truy vấn trên toàn site tạo ra click: dxliving 37 và dx living 17 — tức 54 trong 65 clicks, 83,1% là brand. Cả 134 truy vấn còn lại đều bằng KHÔNG. Truy vấn phi thương hiệu lớn nhất, 'best home builders adelaide', kéo 60 hiển thị ở vị trí 34,4 và chưa từng có một click nào.",
+      "GA4 28 ngày (06/08–02/09) — cũng đọc lại và khớp từng chữ: 440 phiên · 181 phiên tương tác · 41,14% · 33 giây · 5,08 sự kiện/phiên · 2.233 sự kiện · 7 key event · 254 người dùng. Kênh: Direct 165 · Organic Social 141 · Organic Search 128 · AI Assistant 4 · Unassigned 1.",
+      "SỐ GA4 VẪN LÀ SỐ THIẾU. Cửa sổ 28 ngày vẫn chồng lấn vùng mất dữ liệu 29/07 – ~12/08 khoảng BẢY ngày. Mọi con số GA4 ở đây là MỨC SÀN, không phải phép đo. Chồng lấn sẽ hết khoảng 09/09/2026.",
+      "THU THẬP TỐT, CHUYỂN ĐỔI THÌ KHÔNG. Bảy ngày đầy gần nhất (27/08–02/09) có 164 phiên và 824 sự kiện — tracking chắc chắn đang chạy. Nhưng key event trong đúng bảy ngày đó là KHÔNG. Cả 7 key event trong cửa sổ 28 ngày đều cũ hơn 27/08.",
+      "CƠ CẤU KÊNH VẪN LÀ VẤN ĐỀ. Organic Search 128 phiên nhưng tương tác 66,41%, 53 giây, 7,20 sự kiện/phiên và 5 trong 7 key event. Organic Social 141 phiên — lớn hơn về lượng — nhưng chỉ 24,11%, HAI GIÂY và KHÔNG key event nào. Dashboard social báo khoảng năm nghìn lượt xem tạo ra 141 phiên thoát gần như tức thì: social đang tạo hiển thị, không tạo truy cập.",
+      "HIỆN DIỆN AI 36 → 30, VÀ ĐÂY KHÔNG PHẢI TỤT GIẢM. Vẫn 9 trang được 3 nền tảng trích dẫn với đúng 20 phản hồi (ChatGPT 11, Copilot 8, Perplexity 1). Thứ thay đổi là MẪU SỐ: điểm 36 lúc 06:00 dựa trên 9 trang / 24 bài đã sụp; giờ là 9 trang / 75 bài. 30 chính là con số xưa nay vẫn so sánh được với mọi ngày trước 01/09, và bản 06:00 đã công bố nó làm số tương đương đúng vì lý do này. Đo tương đương: ĐI NGANG lần thứ mười ba liên tiếp.",
+      "SẴN SÀNG KỸ THUẬT 7/7 — và lần đầu sau ba ngày, tín hiệu sitemap đạt về BẢN CHẤT chứ không chỉ về nhất quán nội bộ. robots.txt 430 byte cho phép tường minh sáu bot AI; /llms.txt 200 (12.678 byte) kèm /llms-full.txt 200; trang chủ đúng 2 khối JSON-LD (LocalBusiness @id #organization + WebSite trỏ publisher về đúng @id đó); /faq 200 trong 671ms có FAQPage.",
+      "VẤN ĐỀ ON-SITE LỚN NHẤT CÒN LẠI: /articles vẫn bị lớp phủ trắng che kín — SANG NGÀY THỨ BẢY. Một div 'fixed inset-0 bg-white' ở z-index 99999 vẫn phủ toàn khung nhìn sau 45 giây; elementFromPoint giữa màn hình trả về BODY. Chỉ 7 anchor bài viết render được so với 75 trong sitemap. Việc khôi phục bài viết làm lỗi này TỐN KÉM HƠN chứ không ít hơn: giờ có 75 bài nằm sau một hub chỉ lộ ra 7.",
+      "LIÊN KẾT NỘI BỘ cải thiện lớn về tuyệt đối, xấu nhẹ về tương đối: bộ lọc chuyên mục chạm tới 65 trong 75 bài (87%) so với 17 trên 24 (71%) sáng nay. Nhưng số bài mồ côi tăng 7 → 10 — trong đó có project-251-case-study, luxury-home-builders-sydney và custom-home-builders-melbourne-3d-visualisation — không có chuyên mục, chỉ vào được bằng URL trực tiếp.",
+      "TRÙNG LẶP NỘI DUNG QUAY LẠI CÙNG NỘI DUNG, và lớn hơn trước sự cố: 12 bài riêng biệt nhắm vào rendering Melbourne (so với cụm 9 bài trước khi sụp) và 8 bài nhắm vào custom/luxury home builders. Đáng kể vì GSC cho thấy đúng những truy vấn đó đang kéo hiển thị ở vị trí 9,8–35 với KHÔNG click nào suốt mười hai lần quét. Gộp cụm lại giờ lại là khuyến nghị sống — và nên làm có chủ đích, không phải bằng cách xoá.",
+      "DASHBOARD SOCIAL ĐÃ HẾT CŨ. Tác vụ dxl-social-dashboard-daily-refresh vốn hỏng năm ngày liên tiếp đã chạy lại: tiêu đề ghi 'Snapshot 3 Sep 2026', 28 ngày lưu trữ. Tổng follower 266 (FB 115 · LI 100 · IG 47 · YT 4), đi ngang. Facebook giảm trên mọi chỉ số (lượt xem 4.735 → 4.194, giảm 11,4%; follower mới ròng 1 → 0). LinkedIn hiển thị giảm 9,1% nhưng phản ứng tăng 11,6%. Instagram là kênh duy nhất tăng chất lượng tiếp cận: 92,7% lượt tiếp cận đến từ người chưa follow.",
+      "AHREFS: DR 0 · UR 0 · 322 domain trỏ tới (đi ngang) · 339 backlink (giảm 1). Tỷ lệ followed/không-followed GHI NULL lần thứ hai liên tiếp — Ahrefs chỉ render tab Dofollow/Nofollow ở dạng gộp nhóm (23 và 299 nhóm) và các số đó không khớp với 339 backlink, nên không đoán.",
+      "KHÔNG ĐỌC ĐƯỢC HÔM NAY (ghi null, nói rõ lý do): Core Web Vitals — Chrome UX Report trả 'Not enough usage data in the last 90 days' cho CẢ mobile lẫn desktop, đây là thiếu dữ liệu chứ không phải điểm kém; AI share of voice trong Brand Radar — báo cáo 'Dxliving' tồn tại nhưng theo dõi 0 prompt và SoV hiện dấu gạch; tỷ lệ followed của Ahrefs; và corpus bên thứ ba — GIỮ bằng 0 và KHÔNG kiểm lại hôm nay, đánh dấu rõ chứ không âm thầm mang sang.",
+      "NGUYÊN NHÂN VẪN CHƯA RÕ. Vì sao 47 bài biến mất ngày 01/09 và vì sao chúng quay lại ngày 03/09 đều không nhìn thấy được từ bên ngoài và không được đoán ở đây. Hỏi chủ site vẫn là việc giá trị nhất — một bản sửa không rõ nguyên nhân chỉ an toàn hơn một sự cố không rõ nguyên nhân một chút, vì không có gì ngăn nó tái diễn."
     ],
     "en": [
-      "THE 47-ARTICLE DELETION IS UNRESOLVED FOR A THIRD DAY. The sitemap was regenerated at 22:46 UTC on 2 Sep, so the publishing system is running normally, yet it still holds only 48 URLs of which 24 are articles. All 24 return 200. The 47 articles lost on 1 Sep have not come back. Still NO EXPLANATION: whether this was intentional pruning, a CMS fault or a publishing-pipeline failure is not visible from outside and must not be guessed. Asking the site owner remains the highest-value action.",
-      "The damage is now visible in THREE independent systems. Ahrefs: 404s 6 -> 11 -> 14. GSC: 'Not found (404)' up to 7 pages, indexed pages down 109 -> 101 while not-indexed rose 68 -> 88. GSC also lost 12 queries (148 -> 136) as queries served by deleted pages age out of the 28-day window. This is only the beginning - GSC's Page indexing view is the 28 Aug state, BEFORE the deletion.",
-      "GSC 28 days (4-31 Aug): 65 clicks · 1,657 impressions · CTR 3.9% · average position 28.7 · 136 queries. Average position appears to improve (29.2 -> 28.7) but DO NOT read it as progress - it is the arithmetic consequence of low-ranking non-brand queries dropping out of the window. All eight non-brand queries on the top-10 board are still served by URLs that return 404; those positions are residual and will decay.",
-      "Brand still takes 54 of 65 clicks (83.1%). For a TWELFTH consecutive scan only two queries, 'dxliving' and 'dx living', have any clicks at all - the other 134 sit at exactly zero.",
-      "GA4 28 days (6 Aug - 2 Sep): 440 sessions · 254 users · 41.14% engagement · 33s · 2,233 events · 7 key events. Collection is HEALTHY (164 sessions / 824 events in the last 7 full days) but KEY EVENTS OVER THOSE 7 DAYS ARE ZERO - all 7 in the window are older than 27 Aug. GA4 28-day figures remain an UNDER-COUNT: the window still overlaps the 29 Jul - 12 Aug outage by about seven days, clearing around 9 Sep.",
-      "The channel mix worsened for a third consecutive scan. Organic Social is 141 sessions - the second largest channel - at just 24.11% engagement, TWO SECONDS average time and ZERO key events. Organic Search is 128 sessions at 66.41%, 53s, and delivers 5 of the 7 key events. Social volume is dragging the blended engagement rate down.",
-      "Ahrefs link pruning accelerated for a FIFTH consecutive scan: referring domains 340 -> 322 live (-18) while all-time rose 460 -> 463; backlinks 356 -> 340 live (-16) while all-time rose 489 -> 495. DR and UR both remain 0. The followed / not-followed split COULD NOT BE READ today (Ahrefs did not render that panel) - recorded as null rather than carried forward.",
-      "AI citations fell: total responses 22 -> 20, ChatGPT 14 -> 11 (-3) with cited pages 5 -> 4; Copilot 7 -> 8; Perplexity held at 1. De-duplicated cited pages held at 9. This is the SECOND consecutive ChatGPT fall, but a two-point series cannot establish whether it is the article deletion reaching the AI crawlers or ordinary index churn.",
-      "AI Visibility 36/100, flat. All five dimensions unchanged. NOTE: 36 rests on the collapsed 24-article denominator; use 30 for any comparison reaching back before 1 Sep. Technical readiness is 7 of 7 for an eleventh scan, so further on-site technical work cannot raise the score - only third_party_corpus (0) and measurement (1) can, and measurement requires turning on Brand Radar prompt tracking (still 0 prompts).",
-      "The /articles hub regression runs to a sixth day: 7 anchors unfiltered, 17 across all four category filters, against 24 articles in the sitemap - 7 articles remain orphaned, reachable only by direct URL.",
-      "Article pages SLOWED noticeably: 12-page average 0.89s -> 1.12s (+26%). Main pages moved the other way, 1.23s -> 0.66s, and the homepage 2.57s -> 0.77s. All 20 pages checked carry exactly one H1 and a canonical.",
-      "Core Web Vitals still returns 'Not enough usage data in the last 90 days' for both mobile and desktop, recorded as null. That is an ABSENCE of data, not a poor score.",
-      "Google has not re-read the sitemap for TEN days (last read 24 Aug, recording 86 pages). It is still working from a map of a site that no longer exists, which is why the 404s are surfacing gradually.",
-      "The social dashboard is STALE BY FIVE DAYS (still the 29 Aug snapshot) and worsening. Every social figure here is carried forward and is NOT a measurement of 3 Sep. The dxl-social-dashboard-daily-refresh job has now failed five days running and needs attention in its own right.",
-      "The monthly comparison block was re-checked: the latest complete month is still August 2026 against July 2026, so the block is STILL CORRECT with unchanged numbers. It will roll to September vs August on the first scan of October.",
-      "P0 unchanged: (1) confirm with the site owner whether the 47-article deletion was intentional, and restore if not; (2) fix the /articles hub so the 7 orphans are reachable; (3) turn on Brand Radar prompt tracking."
+      "FIXED - AND CAUGHT MID-SCAN. At 06:00 this morning the sitemap held 48 URLs / 24 articles. At 12:30 it holds 99 URLs / 75 articles, with every lastmod stamped 2026-09-03T05:37:15Z - a single rebuild at 12:37 Vietnam time. All 75 article URLs were fetched individually and ALL 75 return HTTP 200, averaging 0.87s. The three-day loss of 47 articles is over, and the library is now larger than the 71 that existed before the outage.",
+      "BUT THE MEASUREMENT SYSTEMS HAVE NOT SEEN IT, AND WILL NOT FOR DAYS. Ahrefs still shows 15 404s (up from 14) because it last crawled before the fix; its Site Audit ran at 04:16 - ninety minutes too early - so it saw only 14 URLs and that Health 100 means nothing. GSC is worse: its Page indexing build is dated 28 Aug and its last sitemap read 24 Aug, so GSC has seen neither the collapse nor the recovery - it still reports 101 indexed / 88 not indexed and Discovered pages 86. EXPECT the numbers to look worse before they look better.",
+      "THREE NUMBERS WILL CONFIRM THE FIX HAS PROPAGATED, worth watching over the next few days: Ahrefs 404s falling back toward the 6 seen on 31 Aug; GSC indexed pages rising off 101; GSC Discovered pages moving off 86. None of them will change today.",
+      "GSC 28 days (4-31 Aug) - RE-READ AND BYTE-FOR-BYTE IDENTICAL to the 06:00 scan: 65 clicks, 1,657 impressions, 3.9 percent CTR, average position 28.7, 136 queries. Summing all 28 DAYS rows gives exactly 1,657; cross-checked because the same rows sum to 65 clicks, matching the Total clicks tile, and 65/1,657 = 3.92 percent matches the CTR tile. The Total impressions tile only shows a rounded 1.66K.",
+      "FOR A TWELFTH CONSECUTIVE SCAN, exactly TWO queries on the entire site produce any clicks: dxliving 37 and dx living 17 - 54 of 65 clicks, 83.1 percent brand. All 134 other queries sit at ZERO. The largest non-brand exposure, 'best home builders adelaide', draws 60 impressions at position 34.4 and has never produced a single click.",
+      "GA4 28 days (6 Aug - 2 Sep) - also re-read and byte-for-byte identical: 440 sessions, 181 engaged, 41.14 percent, 33s, 5.08 events per session, 2,233 events, 7 key events, 254 users. Channels: Direct 165, Organic Social 141, Organic Search 128, AI Assistant 4, Unassigned 1.",
+      "GA4 FIGURES REMAIN AN UNDER-COUNT. The 28-day window still overlaps the 29 Jul - ~12 Aug collection outage by about SEVEN days. Every GA4 number here is a FLOOR, not a measurement. The overlap clears around 9 Sep 2026.",
+      "COLLECTION HEALTHY, CONVERSION NOT. The last seven full days (27 Aug - 2 Sep) hold 164 sessions and 824 events, so tracking is unambiguously running. But key events over those same seven days are ZERO. All 7 key events in the 28-day window are older than 27 Aug.",
+      "THE CHANNEL MIX IS STILL THE PROBLEM. Organic Search delivers 128 sessions at 66.41 percent engagement, 53s, 7.20 events per session and 5 of the 7 key events. Organic Social delivers 141 sessions - more by volume - at 24.11 percent, TWO SECONDS and ZERO key events. The social dashboard reports roughly five thousand views producing 141 sessions that bounce almost immediately: social is generating impressions, not visits.",
+      "AI VISIBILITY 36 -> 30, AND THIS IS NOT A DECLINE. The same 9 pages are cited by the same 3 platforms with the same 20 responses (ChatGPT 11, Copilot 8, Perplexity 1). What changed is the DENOMINATOR: the 06:00 score of 36 rested on 9 pages against a collapsed 24-article library; it is now 9 against 75. 30 is the number that has always been comparable with every date before 1 Sep, and the 06:00 scan published it as the like-for-like figure for exactly this reason. Measured like-for-like, AI visibility is FLAT for a thirteenth consecutive scan.",
+      "TECHNICAL READINESS 7/7 - and for the first time in three days the sitemap signal passes on SUBSTANCE rather than internal consistency alone. robots.txt is 430 bytes and explicitly allows six AI bots; /llms.txt 200 (12,678 bytes) with /llms-full.txt 200; the homepage carries exactly 2 JSON-LD blocks (LocalBusiness @id #organization plus WebSite whose publisher points at that same @id); /faq 200 in 671ms with FAQPage present.",
+      "THE LARGEST REMAINING ON-SITE PROBLEM: /articles is still covered by a full-screen white overlay - DAY SEVEN. A div with 'fixed inset-0 bg-white' at z-index 99999 still covers the viewport after 45 seconds; elementFromPoint at the centre of the screen returns BODY. Only 7 article anchors render against 75 in the sitemap. The restoration has made this MORE costly, not less: there are now 75 articles behind a hub that exposes 7.",
+      "INTERNAL LINKING improved sharply in absolute terms and slipped slightly in relative terms: the category filters now reach 65 of 75 articles (87 percent) versus 17 of 24 (71 percent) this morning. But orphans rose 7 -> 10 - including project-251-case-study, luxury-home-builders-sydney and custom-home-builders-melbourne-3d-visualisation - carrying no category and reachable only by typing the URL.",
+      "CANNIBALISATION CAME BACK WITH THE CONTENT, and it is larger than before the outage: 12 separate articles target Melbourne rendering (against a cluster of 9 pre-collapse) and 8 target custom or luxury home builders. This matters because GSC shows those very queries drawing impressions at positions 9.8 to 35 with ZERO clicks across twelve scans. Consolidation is a live recommendation again - and should be done deliberately, not by deletion.",
+      "THE SOCIAL DASHBOARD IS NO LONGER STALE. The dxl-social-dashboard-daily-refresh job that had failed for five consecutive days has run: the header reads 'Snapshot 3 Sep 2026' with 28 stored days. Total followers 266 (FB 115, LI 100, IG 47, YT 4), flat. Facebook fell on every metric (views 4,735 -> 4,194, down 11.4 percent; net new followers 1 -> 0). LinkedIn impressions fell 9.1 percent but reactions rose 11.6 percent. Instagram is the only channel improving on reach quality: 92.7 percent of reach came from non-followers.",
+      "AHREFS: DR 0, UR 0, 322 referring domains (flat), 339 backlinks (down 1). The followed / not-followed split is RECORDED AS NULL for a second consecutive scan - Ahrefs would only render the Dofollow/Nofollow tabs in grouped form (23 and 299 groups) and those counts do not reconcile to 339 backlinks, so it is not guessed.",
+      "NOT READABLE TODAY (recorded as null, with the reason stated): Core Web Vitals - the Chrome UX Report returns 'Not enough usage data in the last 90 days' for BOTH mobile and desktop, which is an absence of data and not a poor score; AI share of voice in Brand Radar - the 'Dxliving' report exists but tracks 0 prompts and shows SoV as a dash; the Ahrefs followed ratio; and the third-party corpus score - HELD at 0 and NOT re-checked today, flagged explicitly rather than silently carried forward.",
+      "THE CAUSE IS STILL UNKNOWN. Why 47 articles vanished on 1 Sep and why they returned on 3 Sep is not visible from outside and is not guessed here. Asking the site owner remains the single most valuable action - an unexplained fix is only marginally safer than an unexplained outage, because nothing prevents a recurrence."
     ]
   }
 }
