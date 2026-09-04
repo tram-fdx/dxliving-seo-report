@@ -1,7 +1,7 @@
 {
   "site": "dxliving.com",
   "description": "Lịch sử snapshot dữ liệu SEO theo ngày / Daily SEO data snapshot history. Mỗi ngày một file data/YYYY-MM-DD.json + bản HTML đóng băng archive/YYYY-MM-DD.html.",
-  "latest": "2026-09-03",
+  "latest": "2026-09-04",
   "snapshots": [
     {
       "date": "2026-06-30",
@@ -191,6 +191,13 @@
       "report": "archive/2026-09-03.html",
       "label_vi": "KHẮC PHỤC: 47 bài viết đã quay lại — sitemap dựng lại 05:37 UTC hôm nay với 99 URL / 75 bài, cả 75 đều trả 200 (bắt được ngay giữa lần quét thứ hai lúc 12:30) · Nhưng các hệ thống đo còn tụt hậu: Ahrefs vẫn 15 lỗi 404 và Site Audit chạy 04:16 trước bản sửa 90 phút, GSC vẫn ở bản 28/08 với 101 index / 88 chưa index · GSC đọc lại khớp từng chữ: 65 clicks / 1.657 impressions / 28,7 / 136 truy vấn · GA4 440 phiên nhưng 0 key event trong 7 ngày · Lớp phủ /articles sang ngày thứ bảy, nay NGHIÊM TRỌNG vì che 75 bài chứ không phải 24 · Trùng lặp nội dung quay lại: 12 trang rendering Melbourne, 8 trang home builders · Dashboard Social đã hết cũ · AI Visibility 36 → 30 vì mẫu số được khôi phục, đo tương đương thì đi ngang",
       "label_en": "FIXED: the 47 articles are back — the sitemap was rebuilt at 05:37 UTC today with 99 URLs / 75 articles, all 75 returning 200 (caught mid-scan during the second pass at 12:30) · But the measurement systems lag: Ahrefs still shows 15 404s and its Site Audit ran at 04:16, ninety minutes before the fix, while GSC is still on its 28 Aug build at 101 indexed / 88 not indexed · GSC re-read byte-for-byte identical: 65 clicks / 1,657 impressions / 28.7 / 136 queries · GA4 440 sessions but zero key events in 7 days · The /articles overlay is into a seventh day and is upgraded to CRITICAL because it now hides 75 articles rather than 24 · Cannibalisation returned: 12 Melbourne rendering pages, 8 home-builder pages · The social dashboard is no longer stale · AI Visibility 36 → 30 because the denominator was restored; like-for-like it is flat"
+    },
+    {
+      "date": "2026-09-04",
+      "data": "data/2026-09-04.json",
+      "report": "archive/2026-09-04.html",
+      "label_vi": "GOOGLE ĐÃ ĐỌC LẠI SITEMAP — GSC Sitemaps ghi last read 03/09, Discovered pages 86 → 99, khớp chính xác origin: xác nhận cứng đầu tiên rằng việc khôi phục 75 bài đã đến được Google · Nhưng lập chỉ mục chưa theo kịp, bản Page indexing vẫn kẹt ở 28/08 (101 index / 88 chưa index) · BƯỚC LÙI MỚI: trang chủ mất node JSON-LD LocalBusiness (vẫn còn 4 node trên /contact) → sẵn sàng kỹ thuật 7/7 → 6/7, AI Visibility 30 → 28 · GSC 62 clicks / 1.679 impr / CTR 3,7% / vị trí 29,1 / 134 truy vấn · GA4 462 phiên, cơ cấu cải thiện lần đầu sau 4 lần quét (Organic Search +13 vs Organic Social +4) nhưng vẫn 0 key event trong 7 ngày · Ahrefs RD 322→319, BL 339→336, 404 đứng yên 15, trích dẫn AI giữ 20 nhưng trang được trích dẫn 9→10 · Lớp phủ /articles sang ngày thứ TÁM, chỉ 7/75 bài render · Dashboard Social cũ một ngày",
+      "label_en": "GOOGLE HAS RE-READ THE SITEMAP — GSC Sitemaps shows last read 3 Sep and Discovered pages 86 → 99, an exact match for the origin: the first hard confirmation that the 75-article restoration reached Google · But indexing has not caught up; the Page indexing build is still stuck on 28 Aug (101 indexed / 88 not indexed) · NEW REGRESSION: the homepage lost its LocalBusiness JSON-LD node (four remain on /contact), taking technical readiness 7/7 → 6/7 and AI Visibility 30 → 28 · GSC 62 clicks / 1,679 impr / 3.7% CTR / position 29.1 / 134 queries · GA4 462 sessions, the first mix improvement in four scans (Organic Search +13 vs Organic Social +4) but still zero key events in 7 days · Ahrefs RD 322→319, BL 339→336, 404s flat at 15, AI citations flat at 20 but cited pages 9→10 · The /articles overlay is into an EIGHTH day, only 7 of 75 articles rendering · The social dashboard is one day stale"
     }
   ]
 }
