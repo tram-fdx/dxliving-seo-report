@@ -260,6 +260,7 @@
 </style>
 </head>
 <body class="lang-en">
+<div data-archive-banner style="background:#fdf4e3;border-bottom:1px solid #f0dcb4;color:#b7791f;font:600 12.5px/1.55 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;padding:9px 130px 9px 16px;text-align:center"><span class="vi">🗂 Bản lưu ngày 05/09/2026 — báo cáo này đã đóng băng, không cập nhật nữa. <a href="../index.html" style="color:#b7791f;font-weight:800">Xem báo cáo mới nhất</a> · <a href="../history.html" style="color:#b7791f;font-weight:800">Lịch sử dữ liệu theo ngày</a></span><span class="en">🗂 Archived snapshot of 5 Sep 2026 — this report is frozen and no longer updated. <a href="../index.html" style="color:#b7791f;font-weight:800">Open the latest report</a> · <a href="../history.html" style="color:#b7791f;font-weight:800">Daily data history</a></span></div>
 
 <div class="langsw">
   <button id="bvi" onclick="setLang('vi')">VI</button>
@@ -284,48 +285,10 @@
       <span class="tag" style="background:var(--red-soft);border-color:#f3c9c9;color:var(--red)"><span class="vi">⚠ /articles vẫn bị lớp phủ trắng che kín — sang ngày thứ CHÍN, chỉ 7/77 bài đọc được</span><span class="en">⚠ /articles still blocked by a white overlay — a NINTH day, only 7 of 77 articles readable</span></span>
       <span class="tag"><span class="vi">🔎 SERP snapshot · location Úc</span><span class="en">🔎 SERP snapshot · AU location</span></span>
       <span class="tag"><span class="vi">📅 Cập nhật: 05/09/2026</span><span class="en">📅 Updated: 5 Sep 2026</span></span>
-      <a class="tag hist" href="history.html">🗂 <span class="vi">Lịch sử dữ liệu theo ngày →</span><span class="en">Daily data history →</span></a>
+      <a class="tag hist" href="../history.html">🗂 <span class="vi">Lịch sử dữ liệu theo ngày →</span><span class="en">Daily data history →</span></a>
       <a class="tag hist" href="weekly/2026-08-28.html">📊 <span class="vi">Báo cáo tuần (22–28/08) →</span><span class="en">Weekly report (22–28 Aug) →</span></a>
     </div>
   </header>
-
-  <!-- DATE FILTER -->
-  <section class="card acc" id="sec-filter" style="display:none">
-    <button class="acc-head" type="button" id="acctoggle" aria-expanded="false" aria-controls="acc-body">
-      <span class="acc-tt"><span class="vi">Chọn ngày để xem báo cáo</span><span class="en">Pick a date to open its report</span></span>
-      <span class="acc-meta" id="accmeta"></span>
-      <span class="acc-car"></span>
-    </button>
-    <div class="acc-body" id="acc-body" hidden>
-    <p class="section-sub" style="padding-left:0;margin-top:0"><span class="vi">Chọn <b>một ngày</b> rồi bấm <b>Cập nhật</b> để mở đúng bản báo cáo đã lưu của ngày đó. Chọn <b>một khoảng ngày</b> để xem xu hướng trong khoảng. Ngày <b>có dấu chấm</b> là ngày đã quét và có báo cáo lưu; ngày làm mờ vẫn chọn được làm đầu/cuối khoảng, nhưng không có báo cáo riêng để mở.</span><span class="en">Pick <b>a single day</b> and press <b>Update</b> to open exactly that day's stored report. Pick <b>a range</b> to see the trend across it. A <b>dot</b> marks a day that was scanned and has a stored report; a dimmed day can still bound a range, but has no report of its own to open.</span></p>
-    <div class="filterbar">
-      <div class="dpwrap">
-        <button class="dpbtn" id="dpbtn" type="button" aria-haspopup="dialog" aria-expanded="false">
-          <span>🗓</span> <span id="dplabel"></span> <span class="car">▾</span>
-        </button>
-        <div class="dppanel" id="dppanel" hidden role="dialog" aria-label="Date range">
-          <div class="dp-presets" id="dppresets"></div>
-          <div class="dp-right">
-            <div class="dp-cals" id="dpcals"></div>
-            <div class="dp-foot">
-              <div>
-                <span class="dp-rng" id="dprng"></span>
-                <span class="dp-hint" id="dphint"></span>
-              </div>
-              <div class="dp-btns">
-                <button class="dp-b" id="dpcancel" type="button"><span class="vi">Hủy</span><span class="en">Cancel</span></button>
-                <button class="dp-b pri" id="dpupdate" type="button"><span class="vi">Cập nhật</span><span class="en">Update</span></button>
-              </div>
-            </div>
-            <p class="dp-legend"><i></i> <span class="vi">Dấu chấm = ngày đã có dữ liệu lưu. Ngày làm mờ = chưa quét: dùng được làm đầu/cuối khoảng, nhưng không mở được báo cáo riêng.</span><span class="en">A dot marks a day with stored data. A dimmed day was never scanned: it can bound a range, but cannot open a report of its own.</span></p>
-          </div>
-        </div>
-      </div>
-      <span id="dpchip"></span>
-    </div>
-    <div class="daylinks" id="daylinks"></div>
-    </div>
-  </section>
 
   <!-- DATA NOTE -->
   <section class="card" style="padding:16px 18px">
@@ -745,7 +708,7 @@
     <b>DX Living — <span class="vi">Báo cáo Hiệu suất SEO</span><span class="en">SEO Performance Report</span></b> · dxliving.com<br>
     <span class="vi">Số 28 ngày đọc trực tiếp từ GSC + GA4 + Ahrefs (05/09/2026) · <b>THƯ VIỆN LỚN LÊN NGÀY THỨ HAI LIÊN TIẾP: sitemap 100 → 101 URL / 76 → 77 bài, cả 77 trả 200, bài mới không mồ côi (off-the-plan-sales 3 → 4)</b> · <b>CƠ CẤU TRAFFIC CẢI THIỆN LẦN THỨ HAI: Organic Search 141 → 152 đã vượt Organic Social 145 → 148</b> · <b>Bản sửa LocalBusiness giữ được trọn một ngày — JSON-LD 5.205 byte giống hệt từng byte, sẵn sàng kỹ thuật 7/7, AI Visibility 30</b> · Impressions GSC cộng tay đủ 28 dòng tab DAYS · <b>GSC: 64 clicks · 1.704 impressions · CTR 3,8% · vị trí TB 29,4 · 134 truy vấn</b> · <b>GA4: 485 session · 41,9% engagement · 2.472 event · 7 key event</b> (vẫn là số thiếu; <b>0 key event trong 7 ngày, lần thứ BA liên tiếp — ít nhất tám ngày</b>) · <b>Ahrefs: referring domains 317 → 314, backlinks 334 → 329, 404 đứng yên 15 ngày thứ ba, trích dẫn AI giữ 20 trên 10 trang (đọc tất cả quốc gia)</b> · <b>Lớp phủ /articles sang ngày thứ CHÍN — chỉ 7/77 bài đọc được, lỗi on-site lớn nhất còn mở</b> · <b>10 bài mồ côi ngày thứ MƯỜI, và BẢY trong mười là một cụm VR duy nhất</b> · Không bịa số: corpus bên thứ ba, Core Web Vitals và AI share of voice đều ghi <b>null</b> · Dashboard Social <b>bị cũ</b>, mọi số social là số 04/09 mang sang và được dán nhãn rõ</span><span class="en">28-day figures read directly from GSC + GA4 + Ahrefs (5 Sep 2026) · <b>THE LIBRARY GREW FOR A SECOND CONSECUTIVE DAY: sitemap 100 → 101 URLs / 76 → 77 articles, all 77 returning 200, the new one not orphaned (off-the-plan-sales 3 → 4)</b> · <b>TRAFFIC MIX IMPROVED FOR A SECOND SCAN: Organic Search 141 → 152 has overtaken Organic Social 145 → 148</b> · <b>The LocalBusiness fix held for a full day — JSON-LD byte-identical at 5,205 bytes, technical readiness 7/7, AI Visibility 30</b> · GSC impressions summed by hand across all 28 rows of the DAYS tab · <b>GSC: 64 clicks · 1,704 impressions · CTR 3.8% · avg position 29.4 · 134 queries</b> · <b>GA4: 485 sessions · 41.9% engagement · 2,472 events · 7 key events</b> (still an under-count; <b>zero key events across 7 days, a THIRD consecutive scan — at least eight days</b>) · <b>Ahrefs: referring domains 317 → 314, backlinks 334 → 329, 404s flat at 15 for a third day, AI citations flat at 20 across 10 pages (read all countries)</b> · <b>The /articles overlay is into a NINTH day — only 7 of 77 articles readable, the largest open on-site defect</b> · <b>10 orphans on a TENTH static day, and SEVEN of the ten are a single VR cluster</b> · Nothing invented: third-party corpus, Core Web Vitals and AI share of voice are all recorded as <b>null</b> · The social dashboard is <b>stale</b>, so every social figure is a clearly labelled 4 Sep carry-forward</span><br>
     <span class="vi">Đã bỏ Supermetrics &amp; OpenSEO theo yêu cầu · Cập nhật: 05/09/2026</span><span class="en">Supermetrics &amp; OpenSEO removed as requested · Updated: 5 Sep 2026</span><br>
-    <a href="history.html" style="color:var(--accent);font-weight:700;text-decoration:none"><span class="vi">🗂 Xem lịch sử dữ liệu từng ngày (mỗi ngày một bản lưu, không mất data cũ)</span><span class="en">🗂 Open the day-by-day data history (one frozen snapshot per day, no old data lost)</span></a>
+    <a href="../history.html" style="color:var(--accent);font-weight:700;text-decoration:none"><span class="vi">🗂 Xem lịch sử dữ liệu từng ngày (mỗi ngày một bản lưu, không mất data cũ)</span><span class="en">🗂 Open the day-by-day data history (one frozen snapshot per day, no old data lost)</span></a>
   </footer>
 
 </div>

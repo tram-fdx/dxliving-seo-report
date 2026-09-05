@@ -1,7 +1,7 @@
 {
   "site": "dxliving.com",
   "description": "Lịch sử snapshot dữ liệu SEO theo ngày / Daily SEO data snapshot history. Mỗi ngày một file data/YYYY-MM-DD.json + bản HTML đóng băng archive/YYYY-MM-DD.html.",
-  "latest": "2026-09-04",
+  "latest": "2026-09-05",
   "snapshots": [
     {
       "date": "2026-06-30",
@@ -198,6 +198,13 @@
       "report": "archive/2026-09-04.html",
       "label_vi": "QUÉT LẠI 13:00 — BA VIỆC TỐT TRONG MỘT NGÀY: (1) Google đã đọc lại sitemap, Discovered pages 86 → 99; (2) bước lùi buổi sáng ĐÃ ĐƯỢC SỬA trong ngày — node LocalBusiness quay lại trang chủ với @type [\"Organization\",\"LocalBusiness\"], tức đúng hơn cả bản 03/09, kéo sẵn sàng kỹ thuật 6/7 → 7/7 và AI Visibility 28 → 30; (3) có bài viết mới, sitemap 99 → 100 URL / 75 → 76 bài, cả 76 trả 200 và bài mới KHÔNG mồ côi (hub 36 → 37, hợp chuyên mục 65 → 66) · Dashboard Social đã làm mới, mọi số social là đo thật 04/09 · Ahrefs tiếp tục cắt tỉa: RD 322 → 317, BL 339 → 334 trong ngày · NHƯNG lớp phủ /articles sang ngày thứ TÁM và không nhúc nhích — chỉ 7/76 bài render, nay là lỗi DUY NHẤT còn mở trong ba việc nêu sáng nay · GSC và GA4 đọc lại khớp từng chữ: 62 clicks / 1.679 impr / 29,1 / 134 truy vấn; 462 phiên, 0 key event trong 7 ngày",
       "label_en": "RE-SCANNED 13:00 — THREE GOOD THINGS IN ONE DAY: (1) Google re-read the sitemap, Discovered pages 86 → 99; (2) this morning's regression was FIXED the same day — the LocalBusiness node is back on the homepage with @type [\"Organization\",\"LocalBusiness\"], more correct than the 3 Sep form, taking technical readiness 6/7 → 7/7 and AI Visibility 28 → 30; (3) a new article shipped, sitemap 99 → 100 URLs / 75 → 76 articles, all 76 return 200 and the new one is NOT orphaned (hub 36 → 37, category union 65 → 66) · The social dashboard refreshed, so every social figure is a real 4 Sep measurement · Ahrefs kept pruning: RD 322 → 317, BL 339 → 334 across the day · BUT the /articles overlay is into an EIGHTH day and unmoved — only 7 of 76 articles render, now the ONLY one of this morning's three findings still open · GSC and GA4 re-read byte-for-byte identical: 62 clicks / 1,679 impr / 29.1 / 134 queries; 462 sessions, zero key events in 7 days"
+    },
+    {
+      "date": "2026-09-05",
+      "data": "data/2026-09-05.json",
+      "report": "archive/2026-09-05.html",
+      "label_vi": "BÀI MỚI NGÀY THỨ HAI LIÊN TIẾP — sitemap 100 → 101 URL / 76 → 77 bài, cả 77 trả 200, và bài mới KHÔNG mồ côi (off-the-plan-sales 3 → 4, hợp chuyên mục 66 → 67) · CƠ CẤU TRAFFIC CẢI THIỆN LẦN THỨ HAI: Organic Search +11 phiên (141 → 152) đã VƯỢT Organic Social +3 (145 → 148) lần đầu kể từ sự cố, thời gian tương tác TB 36s → 51s · Bản sửa LocalBusiness hôm qua GIỮ ĐƯỢC trọn một ngày (JSON-LD giống hệt từng byte 5.205 byte) nên sẵn sàng kỹ thuật 7/7 và AI Visibility giữ 30 · NHƯNG lớp phủ /articles sang NGÀY THỨ CHÍN và không đổi một chỉ số nào — chỉ 7/77 bài render, hub vẫn đúng 696 ký tự · 10 bài mồ côi ngày thứ MƯỜI, ghi cả danh sách: BẢY trong mười là một cụm VR duy nhất, tức một đầu việc gọn · 0 key event suốt 7 ngày lần thứ BA liên tiếp (ít nhất tám ngày) · GSC 64 clicks / 1.704 impressions / 3,8% / 29,4 / 134 truy vấn · Ahrefs RD 317 → 314, BL 334 → 329, 404 giữ 15 ngày thứ ba · Dashboard Social BỊ CŨ, mọi số social là số 04/09 mang sang",
+      "label_en": "A NEW ARTICLE FOR A SECOND CONSECUTIVE DAY — sitemap 100 → 101 URLs / 76 → 77 articles, all 77 returning 200, and the new one is NOT orphaned (off-the-plan-sales 3 → 4, category union 66 → 67) · TRAFFIC MIX IMPROVED FOR A SECOND SCAN: Organic Search +11 sessions (141 → 152) has OVERTAKEN Organic Social +3 (145 → 148) for the first time since the outage, average engagement time 36s → 51s · Yesterday's LocalBusiness fix HELD for a full day (JSON-LD byte-identical at 5,205 bytes) so technical readiness stays 7/7 and AI Visibility holds at 30 · BUT the /articles overlay is into a NINTH day with not one measured quantity changed — only 7 of 77 articles render and the hub still carries exactly 696 characters · 10 orphans on a TENTH static day, full list recorded: SEVEN of the ten are a single VR cluster, which makes it one small job · zero key events across 7 days for a THIRD consecutive scan (at least eight days) · GSC 64 clicks / 1,704 impressions / 3.8% / 29.4 / 134 queries · Ahrefs RD 317 → 314, BL 334 → 329, 404s flat at 15 for a third day · The social dashboard is STALE, so every social figure is a labelled 4 Sep carry-forward"
     }
   ]
 }
