@@ -1,7 +1,24 @@
 {
   "kind": "weekly",
-  "latest": "2026-08-28",
+  "latest": "2026-09-04",
   "weeks": [
+    {
+      "id": "2026-09-04",
+      "vi": "29/08–04/09/2026",
+      "en": "29 Aug – 4 Sep 2026",
+      "start": "2026-08-29",
+      "end": "2026-09-04",
+      "compare_start": "2026-08-22",
+      "compare_end": "2026-08-28",
+      "scanned_on": "2026-09-07",
+      "sources": [
+        "Google Search Console (Chrome)",
+        "Google Analytics 4 (Chrome)",
+        "Ahrefs Site Explorer (Chrome)"
+      ],
+      "notes_vi": "GSC trễ 3 ngày, mới nhất 04/09. Su co 404 tuan truoc da khac phuc: ca 16 URL bai viet tro lai HTTP 200. Phan lon bien dong tuan nay la hau qua cua viec Google index lai cac trang do. stage.dxliving.com van chua sua.",
+      "notes_en": "GSC lags 3 days; latest data 4 Sep. The 404 incident is resolved: all 16 article URLs return HTTP 200 again. Most of this week's movement is fallout from Google re-indexing those pages. stage.dxliving.com is still unfixed."
+    },
     {
       "id": "2026-08-28",
       "vi": "22–28/08/2026",
@@ -11,7 +28,11 @@
       "compare_start": "2026-08-15",
       "compare_end": "2026-08-21",
       "scanned_on": "2026-08-31",
-      "sources": ["Google Search Console (Chrome)", "Google Analytics 4 (Chrome)", "Ahrefs Site Explorer (Chrome)"],
+      "sources": [
+        "Google Search Console (Chrome)",
+        "Google Analytics 4 (Chrome)",
+        "Ahrefs Site Explorer (Chrome)"
+      ],
       "notes_vi": "GSC trễ 3 ngày, mới nhất 28/08. Cửa sổ chồng 1 ngày (22/08) với tuần trước. GA4 đã so sánh được vì cả hai tuần đều sau khi tracking khôi phục 15/08. Ahrefs cảnh báo 'Google keyword ranking data disruption' ngày 28/08.",
       "notes_en": "GSC lags 3 days; latest data 28 Aug. The window overlaps the prior week by one day (22 Aug). GA4 is comparable because both weeks sit after tracking was restored on 15 Aug. Ahrefs posted a 'Google keyword ranking data disruption' notice on 28 Aug."
     },
@@ -24,7 +45,10 @@
       "compare_start": "2026-08-09",
       "compare_end": "2026-08-15",
       "scanned_on": "2026-08-25",
-      "sources": ["Google Search Console (Chrome)", "Google Analytics 4 (Chrome)"],
+      "sources": [
+        "Google Search Console (Chrome)",
+        "Google Analytics 4 (Chrome)"
+      ],
       "notes_vi": "GSC trễ 2 ngày nên dùng cửa sổ 7 ngày trượt kết thúc 22/08. GA4 mất tracking 27/07–14/08 nên không so sánh WoW.",
       "notes_en": "GSC lags 2 days, so a rolling 7-day window ending 22 Aug is used. GA4 tracking was down 27 Jul–14 Aug, so week-over-week is not comparable."
     }
