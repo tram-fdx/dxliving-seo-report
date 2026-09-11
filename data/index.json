@@ -1,7 +1,7 @@
 {
   "site": "dxliving.com",
   "description": "Lịch sử snapshot dữ liệu SEO theo ngày / Daily SEO data snapshot history. Mỗi ngày một file data/YYYY-MM-DD.json + bản HTML đóng băng archive/YYYY-MM-DD.html.",
-  "latest": "2026-09-10",
+  "latest": "2026-09-11",
   "snapshots": [
     {
       "date": "2026-06-30",
@@ -233,6 +233,13 @@
       "report": "archive/2026-09-10.html",
       "label_vi": "HAI BÀI MỚI TRONG MỘT NGÀY — lần đầu trong chuỗi: sitemap 104 → 106 URL / 80 → 82 bài, cả 82 trả 200, bài mồ côi giữ 0 ngày thứ tư · Hồ sơ backlink có ngày tốt nhất tuần: referring domains 315 → 320, backlinks 336 → 344, tỷ lệ followed tăng lần đầu từ 26/08 (30 domain / 32 backlink) · NHƯNG GSC TỤT TRÊN MỌI CHỈ SỐ VÌ CỬA SỔ TRƯỢT: 53 clicks (−8), 1.546 impressions (−50), CTR 3,4%, vị trí 29,4 (xấu đi 0,9), 107 truy vấn — cửa sổ bỏ ngày 10/08 và thêm ngày 07/09 (0 click / 85 impressions) · GA4 tăng: 557 session, 2.830 event, 307 user, và HẾT NHÃN SỐ THIẾU từ hôm nay · 0 key event suốt 7 ngày lần thứ BẢY, cả 7 ngày trước đó cũng 0 · Google chưa đọc lại sitemap ngày thứ BẢY, lệch 7 URL · Lớp phủ /articles sang ngày thứ MƯỜI BỐN · Dashboard Social chậm một ngày (vẫn snapshot 09/09)",
       "label_en": "TWO NEW ARTICLES IN ONE DAY — a first for this series: sitemap 104 → 106 URLs / 80 → 82 articles, all 82 returning 200, orphans hold at zero for a fourth day · The backlink profile had its best day of the week: referring domains 315 → 320, backlinks 336 → 344, followed share up for the first time since 26 Aug (30 domains / 32 backlinks) · BUT GSC FELL ON EVERY METRIC ON A ROLLED WINDOW: 53 clicks (down 8), 1,546 impressions (down 50), CTR 3.4%, position 29.4 (worse by 0.9), 107 queries — the window dropped 10 Aug and added 7 Sep (0 clicks / 85 impressions) · GA4 rose: 557 sessions, 2,830 events, 307 users, and DROPS ITS UNDER-COUNT LABEL from today · zero key events for 7 days for a SEVENTH scan, with the prior 7 days at zero too · Google has not re-read the sitemap for a SEVENTH day, seven URLs behind · The /articles overlay is into a FOURTEENTH day · The social dashboard is one day stale (still the 9 Sep snapshot)"
+    },
+    {
+      "date": "2026-09-11",
+      "data": "data/2026-09-11.json",
+      "report": "archive/2026-09-11.html",
+      "label_vi": "Backlink tăng ngày thứ hai: referring domains 320 → 329, backlinks 344 → 354, followed 35 / 37 · GA4 571 phiên (+14), Organic Search 188 dẫn Organic Social 168, AI Assistant 7 → 8 · Không có bài mới: sitemap giữ 106 URL / 82 bài; crawl toàn bộ 105/105 trang trả 200, mỗi trang 1 H1 + canonical + meta, mồ côi 0 ngày thứ năm · GSC lùi tiếp do cửa sổ: 48 clicks (−5), 1.468 impressions (−78), CTR 3,3%, vị trí 30,3 (xấu đi 0,9), 107 truy vấn · 0 key event suốt 7 ngày lần thứ TÁM, cả 7 ngày trước đó cũng 0 · GSC vẫn bản index 04/09 (lần đọc thứ năm), Google chưa đọc lại sitemap ngày thứ tám · Crawled pages Ahrefs cộng khớp đúng 173, 404 giữ 15 lần thứ chín · Tốc độ đo bằng crawl toàn bộ (đổi phương pháp): bài viết TB 982ms · Lớp phủ /articles ngày thứ MƯỜI LĂM · Dashboard Social tươi lại (11/09)",
+      "label_en": "Backlinks rose for a second day: referring domains 320 → 329, backlinks 344 → 354, followed 35 / 37 · GA4 571 sessions (up 14), Organic Search 188 ahead of Organic Social 168, AI Assistant 7 → 8 · No new article: sitemap holds at 106 URLs / 82 articles; full crawl 105 of 105 pages return 200, each with one H1 + canonical + meta, orphans 0 for a fifth day · GSC slipped again on the window: 48 clicks (down 5), 1,468 impressions (down 78), CTR 3.3%, position 30.3 (worse by 0.9), 107 queries · Zero key events across 7 days for an EIGHTH scan, the prior 7 days zero too · GSC still shows the 4 Sep index build (fifth reading), Google has not re-read the sitemap for an eighth day · Ahrefs crawled pages sum exactly to 173, 404s flat at 15 for a ninth reading · Speed measured by full crawl (method change): articles avg 982 ms · The /articles overlay is on day FIFTEEN · Social dashboard fresh again (11 Sep)"
     }
   ]
 }
