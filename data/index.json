@@ -1,7 +1,7 @@
 {
   "site": "dxliving.com",
   "description": "Lịch sử snapshot dữ liệu SEO theo ngày / Daily SEO data snapshot history. Mỗi ngày một file data/YYYY-MM-DD.json + bản HTML đóng băng archive/YYYY-MM-DD.html.",
-  "latest": "2026-09-11",
+  "latest": "2026-09-14",
   "snapshots": [
     {
       "date": "2026-06-30",
@@ -240,6 +240,13 @@
       "report": "archive/2026-09-11.html",
       "label_vi": "Backlink tăng ngày thứ hai: referring domains 320 → 329, backlinks 344 → 354, followed 35 / 37 · GA4 571 phiên (+14), Organic Search 188 dẫn Organic Social 168, AI Assistant 7 → 8 · Không có bài mới: sitemap giữ 106 URL / 82 bài; crawl toàn bộ 105/105 trang trả 200, mỗi trang 1 H1 + canonical + meta, mồ côi 0 ngày thứ năm · GSC lùi tiếp do cửa sổ: 48 clicks (−5), 1.468 impressions (−78), CTR 3,3%, vị trí 30,3 (xấu đi 0,9), 107 truy vấn · 0 key event suốt 7 ngày lần thứ TÁM, cả 7 ngày trước đó cũng 0 · GSC vẫn bản index 04/09 (lần đọc thứ năm), Google chưa đọc lại sitemap ngày thứ tám · Crawled pages Ahrefs cộng khớp đúng 173, 404 giữ 15 lần thứ chín · Tốc độ đo bằng crawl toàn bộ (đổi phương pháp): bài viết TB 982ms · Lớp phủ /articles ngày thứ MƯỜI LĂM · Dashboard Social tươi lại (11/09)",
       "label_en": "Backlinks rose for a second day: referring domains 320 → 329, backlinks 344 → 354, followed 35 / 37 · GA4 571 sessions (up 14), Organic Search 188 ahead of Organic Social 168, AI Assistant 7 → 8 · No new article: sitemap holds at 106 URLs / 82 articles; full crawl 105 of 105 pages return 200, each with one H1 + canonical + meta, orphans 0 for a fifth day · GSC slipped again on the window: 48 clicks (down 5), 1,468 impressions (down 78), CTR 3.3%, position 30.3 (worse by 0.9), 107 queries · Zero key events across 7 days for an EIGHTH scan, the prior 7 days zero too · GSC still shows the 4 Sep index build (fifth reading), Google has not re-read the sitemap for an eighth day · Ahrefs crawled pages sum exactly to 173, 404s flat at 15 for a ninth reading · Speed measured by full crawl (method change): articles avg 982 ms · The /articles overlay is on day FIFTEEN · Social dashboard fresh again (11 Sep)"
+    },
+    {
+      "date": "2026-09-14",
+      "data": "data/2026-09-14.json",
+      "report": "archive/2026-09-14.html",
+      "label_vi": "Tốc độ toàn site hồi phục (cả 108 trang <1s); Google đọc lại sitemap 13/09 (109 trang); 3 bài mới; nhưng cụm Adelaide trang một biến mất, GSC 46 clicks / vị trí 30,8",
+      "label_en": "Site-wide speed recovery (all 108 pages <1s); Google re-read the sitemap 13 Sep (109 pages); 3 new articles; but the Adelaide page-one cluster vanished, GSC 46 clicks / position 30.8"
     }
   ]
 }
