@@ -1,7 +1,7 @@
 {
   "site": "dxliving.com",
   "description": "Lịch sử snapshot dữ liệu SEO theo ngày / Daily SEO data snapshot history. Mỗi ngày một file data/YYYY-MM-DD.json + bản HTML đóng băng archive/YYYY-MM-DD.html.",
-  "latest": "2026-09-14",
+  "latest": "2026-09-15",
   "snapshots": [
     {
       "date": "2026-06-30",
@@ -247,6 +247,13 @@
       "report": "archive/2026-09-14.html",
       "label_vi": "Tốc độ toàn site hồi phục (cả 108 trang <1s); Google đọc lại sitemap 13/09 (109 trang); 3 bài mới; nhưng cụm Adelaide trang một biến mất, GSC 46 clicks / vị trí 30,8",
       "label_en": "Site-wide speed recovery (all 108 pages <1s); Google re-read the sitemap 13 Sep (109 pages); 3 new articles; but the Adelaide page-one cluster vanished, GSC 46 clicks / position 30.8"
+    },
+    {
+      "date": "2026-09-15",
+      "data": "data/2026-09-15.json",
+      "report": "archive/2026-09-15.html",
+      "label_vi": "Tốc độ tốt lên lần nữa (TTFB 571→350ms, cả 109 trang dưới 1s); GSC 46 clicks / 1.318 impressions / vị trí 30,8 (đứng yên); GA4 614 phiên, 7 ngày 110→116; backlink 368→376; bài mới lại thiếu FAQPage",
+      "label_en": "Speed improved again (TTFB 571→350ms, all 109 pages under 1s); GSC 46 clicks / 1,318 impressions / position 30.8 (flat); GA4 614 sessions, 7-day 110→116; backlinks 368→376; the new article again lacks FAQPage"
     }
   ]
 }
