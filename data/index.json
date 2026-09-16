@@ -1,7 +1,7 @@
 {
   "site": "dxliving.com",
   "description": "Lịch sử snapshot dữ liệu SEO theo ngày / Daily SEO data snapshot history. Mỗi ngày một file data/YYYY-MM-DD.json + bản HTML đóng băng archive/YYYY-MM-DD.html.",
-  "latest": "2026-09-15",
+  "latest": "2026-09-16",
   "snapshots": [
     {
       "date": "2026-06-30",
@@ -254,6 +254,13 @@
       "report": "archive/2026-09-15.html",
       "label_vi": "Tốc độ tốt lên lần nữa (TTFB 571→350ms, cả 109 trang dưới 1s); GSC 46 clicks / 1.318 impressions / vị trí 30,8 (đứng yên); GA4 614 phiên, 7 ngày 110→116; backlink 368→376; bài mới lại thiếu FAQPage",
       "label_en": "Speed improved again (TTFB 571→350ms, all 109 pages under 1s); GSC 46 clicks / 1,318 impressions / position 30.8 (flat); GA4 614 sessions, 7-day 110→116; backlinks 368→376; the new article again lacks FAQPage"
+    },
+    {
+      "date": "2026-09-16",
+      "data": "data/2026-09-16.json",
+      "report": "archive/2026-09-16.html",
+      "label_vi": "GSC 47 clicks / 1.299 impr / vị trí 30,6 (nhích lên); hai bài mới, bài Adelaide CÓ FAQPage lần đầu sau năm bài (75,0%); TTFB 350 → 344 ms, hub /articles 920 → 558 ms; trích dẫn AI 21 → 18",
+      "label_en": "GSC 47 clicks / 1,299 impr / position 30.6 (improved); two new articles, the Adelaide one DOES carry FAQPage, a first in five (75.0%); TTFB 350 → 344 ms, /articles hub 920 → 558 ms; AI citations 21 → 18"
     }
   ]
 }
