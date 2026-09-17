@@ -1,0 +1,511 @@
+{
+  "date": "2026-09-17",
+  "site": "dxliving.com",
+  "source_commit": "",
+  "provenance": "Read directly from Chrome on macOS, 17 Sep 2026 (~06:10-07:40 ICT): Google Search Console (Performance 28 days with the CTR and Position tiles enabled, the QUERIES table and the DAYS tab, Page indexing, Sitemaps, Core Web Vitals, HTTPS), GA4 property 'DX LIVING' (a375259331p513249954) traffic-acquisition and user-acquisition explorer reports plus two explicit 7-day windows, and the Ahrefs WEB UI (Site Explorer overview in subdomains mode, the Backlink profile tab, Crawled pages across both result pages, Site Audit and Brand Radar). No OpenSEO, no Supermetrics, no Ahrefs API. GSC 28-day totals were taken by summing the 28 rows of the DAYS tab exactly (43 clicks, 1,192 impressions), which matches the rounded 1.19K tile. The 89-row QUERIES table was read in full from the DOM. GA4 'avg engagement time per active user' was NOT read this run and is null rather than carried. The Ahrefs Brand Radar page text could not be extracted programmatically (the reader blocked it) so that card was read from a screenshot: report 'Dxliving', AI SoV a dash, Prompts 0. Site crawl figures come from a full same-origin crawl of all 110 sitemap pages plus /login run from a Chrome tab against the live origin with cache no-store and a 15 s timeout. Social figures come from the DX Living social dashboard refreshed earlier in this same run. The TTFB figures below are from the same 07:45 ICT crawl that today's dxl-seo-audit report publishes, so the two reports agree.",
+  "scan_note": "A ONE-DAY STEP. The previous scan is 16 Sep, so every delta in this file is against 2026-09-16. The GSC window advanced one day (17 Aug-13 Sep becomes 18 Aug-14 Sep) and the GA4 window advanced one day (19 Aug-15 Sep becomes 20 Aug-16 Sep). THE HEADLINE OF THE DAY IS NOT A TRAFFIC MOVE: the GSC Page indexing build, frozen at 4 Sep for ten consecutive readings, finally refreshed to 14 Sep, and the refreshed data shows indexed pages 87 -> 76 and not-indexed 119 -> 146.",
+  "windows": {
+    "gsc": "2026-08-18 -> 2026-09-14",
+    "ga4": "2026-08-20 -> 2026-09-16"
+  },
+  "gsc_28d": {
+    "clicks": 43,
+    "impressions": 1192,
+    "ctr_pct": 3.6,
+    "avg_position": 31.1,
+    "queries_with_impressions": 89,
+    "impressions_method": "Summed the 28 rows of the DAYS tab exactly (1,192). The Total impressions tile rounds this to 1.19K.",
+    "queries_table_sums": {
+      "rows": 89,
+      "clicks": 38,
+      "impressions": 801,
+      "note": "The visible 89-query table accounts for 38 of the 43 clicks and 801 of the 1,192 impressions; the remainder sits in queries GSC suppresses for privacy."
+    },
+    "brand_clicks": 37,
+    "brand_clicks_share_pct": 86.0,
+    "brand_clicks_note": "dxliving 20 + dx living 16 + dx_models 1 = 37 of 43 clicks. dx_models held its 1 click for an ELEVENTH reading. The only non-brand click in the window is 'i want 3 months' (1 click, 1 impression, position 2.0), which is not a commercial query.",
+    "clicked_queries": [
+      {
+        "query": "dxliving",
+        "clicks": 20,
+        "impressions": 30,
+        "ctr_pct": 66.7,
+        "position": 1.3
+      },
+      {
+        "query": "dx living",
+        "clicks": 16,
+        "impressions": 75,
+        "ctr_pct": 21.3,
+        "position": 4.7
+      },
+      {
+        "query": "dx_models",
+        "clicks": 1,
+        "impressions": 15,
+        "ctr_pct": 6.7,
+        "position": 3.7
+      },
+      {
+        "query": "i want 3 months",
+        "clicks": 1,
+        "impressions": 1,
+        "ctr_pct": 100.0,
+        "position": 2.0
+      }
+    ],
+    "delta_vs_2026_09_16": {
+      "clicks": "47 -> 43 (down 4)",
+      "impressions": "1299 -> 1192 (down 107)",
+      "ctr_pct": "3.6 -> 3.6 (flat)",
+      "avg_position": "30.6 -> 31.1 (worse 0.5)",
+      "queries": "93 -> 89 (down 4)",
+      "note": "The window slid one day forward (17 Aug-13 Sep becomes 18 Aug-14 Sep). 17 Aug dropped out and 14 Sep came in with only 16 impressions and 0 clicks, the weakest day in the window, which is most of the 107-impression fall."
+    }
+  },
+  "gsc_rank_movement": {
+    "note": "Position and impressions on the tracked non-brand queries, 16 Sep -> 17 Sep, across a 28-day window that advanced one day.",
+    "3d renders for property developers melbourne": "28.8 -> 30.0 (impressions 62 -> 58) - still the best-placed of the developer queries but it lost ground",
+    "3d rendering melbourne": "37.2 -> 39.6 (impressions 51 -> 38) - the biggest impression fall of the tracked set",
+    "3d renders for builders melbourne": "13.3 -> 13.1 (impressions 46 -> 39) - still the closest non-brand query to page one, and it recovered 0.2 after two slips",
+    "3d renders melbourne": "57.7 (impressions 50, both unchanged)",
+    "3d renders for developers melbourne": "35.0 -> 34.1 (impressions 46 -> 33)",
+    "3d rendering services melbourne": "DROPPED OUT of the query table entirely (was 34.8 with 16 impressions)",
+    "architectural rendering melbourne": "23.1 -> 25.7 (impressions 27 -> 21)",
+    "interior finishing": "still absent from the query table",
+    "adelaide_page_one": "The Adelaide cluster is still down to ONE query, best house builders adelaide, at position 38.0 with a single impression (38.0 today against nothing comparable yesterday beyond its presence).",
+    "page_one_composition": "All 18 page-one queries in this window are brand terms except 'i want 3 months' (position 2.0, 1 impression, 1 click). Page-one count is unchanged at 18.",
+    "warning": "Every commercial non-brand query in the table remains at ZERO clicks across the whole 28-day window - unchanged for the entire series."
+  },
+  "ga4_28d": {
+    "sessions": 599,
+    "engaged_sessions": 246,
+    "engagement_rate_pct": 41.07,
+    "key_events": 7,
+    "session_key_event_rate_pct": 0.67,
+    "users": 366,
+    "new_users": 343,
+    "returning_users": 31,
+    "avg_engagement_time": "40s",
+    "avg_engagement_time_per_active_user": null,
+    "avg_engagement_time_per_active_user_note": "NOT read this run - left null rather than carried forward from 16 Sep.",
+    "events_per_session": 5.0,
+    "total_events": 2994,
+    "ai_assistant_channel": {
+      "sessions": 7,
+      "share_of_sessions_pct": 1.17,
+      "engaged_sessions": 5,
+      "engagement_rate_pct": 71.43,
+      "avg_time": "36s",
+      "events_per_session": 5.0,
+      "events": 35,
+      "key_events": 0,
+      "referrer": "chatgpt.com / ai-assistant",
+      "note": "7 sessions, 5 engaged, 35 events - identical to 16 Sep. Still the highest-engaging channel on the site by rate (71.43%), and still worth 0 key events."
+    },
+    "channel_breakdown": {
+      "direct": 212,
+      "organic_search": 190,
+      "organic_social": 186,
+      "ai_assistant": 7,
+      "unassigned": 5,
+      "referral": 1
+    },
+    "channel_breakdown_note": "The six channel rows sum to 601 against a reported total of 599 - GA4's usual rounding/attribution gap. A Referral row (1 session) appeared for the first time in this series, and Unassigned grew 1 -> 5.",
+    "source_medium_top": {
+      "(direct) / (none)": 212,
+      "google / organic": 178,
+      "m.facebook.com / referral": 72,
+      "facebook / social": 54,
+      "facebook.com / referral": 40,
+      "chatgpt.com / ai-assistant": 7,
+      "linkedin / social": 7,
+      "bing / organic": 6,
+      "l.facebook.com / referral": 5,
+      "lm.facebook.com / referral": 5
+    },
+    "source_medium_note": "Top ten rows as displayed. Facebook contributes 176 sessions across five source rows (72 + 54 + 40 + 5 + 5), which is 29.4 percent of all sessions and almost exactly the Organic Social channel total of 186.",
+    "channel_quality": {
+      "note": "Organic Search 190 sessions at 65.26% engagement, 1m 26s and 5 of the 7 key events; Direct 212 sessions at 33.02%, 30s and 2 key events; Organic Social 186 sessions at 24.73% and THREE SECONDS average engagement time, with 0 key events. Social is the largest source of arrivals that read nothing."
+    },
+    "first_user_channel": {
+      "organic_social": 170,
+      "direct": 156,
+      "organic_search": 32,
+      "ai_assistant": 6,
+      "unassigned": 3,
+      "note": "User acquisition (first touch), 20 Aug-16 Sep: 366 users, 343 new, 31 returning."
+    },
+    "tracking_health": {
+      "last_7_days_2026_09_10_to_09_16": {
+        "sessions": 112,
+        "engaged_sessions": 33,
+        "engagement_rate_pct": 29.46,
+        "events": 506,
+        "key_events": 0
+      },
+      "prior_7_days_2026_09_03_to_09_09": {
+        "sessions": 118,
+        "engaged_sessions": 59,
+        "engagement_rate_pct": 50.0,
+        "events": 599,
+        "key_events": 0
+      },
+      "verdict": "GA4 IS COLLECTING - 112 sessions and 506 events in the most recent 7 days.",
+      "concern": "ENGAGEMENT FELL SHARPLY WEEK ON WEEK: 50.00% -> 29.46%, with average engagement time 1m 45s -> 8s and engaged sessions 59 -> 33 on almost the same volume (118 -> 112). This is the second consecutive weekly fall in engagement rate (46.15 -> 37.07 -> 29.46 across the last three readings of shifting windows).",
+      "key_events_flag": "ZERO key events across BOTH 7-day windows for a TWELFTH consecutive scan. All 7 key events in the 28-day window predate 3 Sep.",
+      "tag_check": "Re-run on the dxliving.com homepage today: 14 script tags with src of which 4 are tag scripts, window.google_tag_manager carries GTM-PZ9N8QTR, AW-18039433307 and G-43HE633LGK, and window.dataLayer has 3 entries. Tagging is installed and firing; the key-event gap is a configuration question, not a collection failure."
+    },
+    "undercount_note": "The 29 Jul - 12 Aug data loss does not overlap this window (it starts 20 Aug).",
+    "delta_vs_2026_09_16": {
+      "sessions": "614 -> 599 (down 15)",
+      "total_events": "3082 -> 2994 (down 88)",
+      "users": "368 -> 366 (down 2)",
+      "key_events": "7 -> 7 (flat)",
+      "engagement_rate_pct": "42.02 -> 41.07 (down 0.95)",
+      "channel_note": "Direct 219 -> 212 (-7), Organic Search 197 -> 190 (-7), Organic Social 189 -> 186 (-3), AI Assistant 7 -> 7 (flat), Unassigned 1 -> 5 (+4), Referral 0 -> 1 (new).",
+      "window_caveat": "This is a 28-day rolling window that advanced one day, so part of every move is the window itself rather than site behaviour."
+    }
+  },
+  "ahrefs": {
+    "read_at": "2026-09-17 ICT",
+    "workspace": "Nguyen Thi Thanh Tram",
+    "country_filter": "All countries, matching every prior day in this series.",
+    "domain_rating": 0,
+    "url_rating": 0,
+    "ahrefs_rank": null,
+    "referring_domains": 353,
+    "referring_domains_all_time": 530,
+    "referring_domains_followed": 42,
+    "referring_domains_followed_pct": 11.9,
+    "backlinks": 386,
+    "backlinks_all_time": 590,
+    "backlinks_followed": 47,
+    "backlinks_followed_pct": 12.2,
+    "followed_note": "READ TODAY from the Backlink profile tab: referring domains followed 42 (11.9%) / not followed 311 (88.1%), backlinks followed 47 (12.2%) / not followed 339 (87.8%). The followed COUNTS did not move at all (42 and 47); every new link this cycle is nofollow.",
+    "authority_direction_note": "DR 0 and UR 0, unchanged for the whole series. Live referring domains 346 -> 353 and live backlinks 378 -> 386; all-time 524 -> 530 and 582 -> 590. Seven new referring domains in a day, none of them followed, which is the signature of the SEO-spam link pattern already visible in the anchor list.",
+    "health_score": 100,
+    "site_audit_crawl": "FRESH CRAWL TODAY 04:19 AM. Completed. Health 100 percent, 15 URLs crawled (13 -> 15), 0 internal URLs having errors. Next scheduled 18 Sep 4-5 AM.",
+    "site_audit_caveat": "Health 100 on a 15-URL crawl does not describe a 110-page site with 88 articles. The Ahrefs project crawl is on the Basic plan and only reaches 15 URLs, so this score is not a site-wide health measure. The website-audit report in dxl-seo-audit crawls all 111 pages and is the number to trust.",
+    "crawled_pages_site_explorer": 179,
+    "crawled_pages_404": 15,
+    "crawled_pages_http_breakdown": {
+      "200": 160,
+      "3xx": 3,
+      "404": 15,
+      "4xx_other": 0,
+      "5xx": 0
+    },
+    "crawled_pages_http_breakdown_note": "160 + 3 + 15 = 178 against a reported total of 179. The breakdown was read row by row from the two result pages (100 + 79 rows); one row on the second page carried no readable status code.",
+    "crawled_pages_404_note": "404s held flat at 15 for a THIRTEENTH consecutive reading. 200s rose 159 -> 160 and 3xx redirects held at 3 (one 301 and two 308).",
+    "organic_keywords": 0,
+    "organic_traffic": 0,
+    "top_3_keywords": 0,
+    "ai_citations": 18,
+    "ai_by_platform": {
+      "ai_overviews": 0,
+      "ai_mode": 0,
+      "chatgpt": 9,
+      "gemini": 0,
+      "perplexity": 1,
+      "copilot": 8,
+      "grok": null
+    },
+    "cited_pages": 10,
+    "cited_pages_by_platform": {
+      "ai_overviews": 0,
+      "ai_mode": 0,
+      "chatgpt": 5,
+      "gemini": 0,
+      "perplexity": 1,
+      "copilot": 6,
+      "grok": null
+    },
+    "cited_pages_note": "AI responses HELD at 18 and cited pages at 10, with the same platform split as 16 Sep (ChatGPT 9 responses / 5 pages, Copilot 8 / 6, Perplexity 1 / 1). Google AI Overviews and AI Mode remain at zero; Grok is paused in the Ahrefs index and is recorded as null, not zero."
+  },
+  "ai_visibility": {
+    "score": 30,
+    "score_max": 100,
+    "framework": "searchfit-seo:ai-visibility",
+    "platforms_present": 3,
+    "platforms_total": 6,
+    "cited_pages": 10,
+    "dimensions_measured": {
+      "presence": 3,
+      "citation_surface": 1,
+      "technical_readiness": 10,
+      "third_party_corpus": 0,
+      "measurement": 1
+    },
+    "dimensions_not_measured": [
+      "accuracy",
+      "sentiment",
+      "position"
+    ],
+    "not_measured_reason": "Requires Brand Radar prompt tracking. The 'Dxliving' report EXISTS in the 'Nguyen Thi Thanh Tram' workspace but still tracks 0 prompts and shows AI share of voice as a dash, so these three dimensions cannot be scored without guessing.",
+    "score_method": "Average of the 5 measurable dimensions x 10 = (3+1+10+0+1)/5 x 10 = 30 / Trung binh 5 chieu do duoc x 10.",
+    "score_change_explanation": "Flat at 30 for an ELEVENTH consecutive scan. Technical readiness 7/7, presence 3 platforms, citation surface 1. Nothing moved on any dimension this cycle.",
+    "score_caveat": "The score is capped by two dimensions no on-site work will move: third_party_corpus at 0 and measurement at 1. Even a perfect on-site result leaves the ceiling near 50 until prompt tracking is bought and third-party mentions exist.",
+    "citation_surface_note": "10 cited pages against 88 live articles = 11.4 percent, rounds to 1/10. No new articles were published this cycle, so both sides of that ratio are unchanged.",
+    "third_party_corpus_note": "Held at 0 and NOT re-checked today. Flagged explicitly rather than silently carried forward.",
+    "technical_readiness_method": "7 signals checked; score = share passing x 10. All 7 pass -> 10.",
+    "brand_radar": {
+      "report_exists": true,
+      "prompts_tracked": 0,
+      "ai_share_of_voice": null,
+      "reread_today": true,
+      "workspace": "Nguyen Thi Thanh Tram",
+      "note": "Report 'Dxliving' still lists AI SoV as a dash and Prompts 0, unchanged for a TWENTY-THIRD scan. Read from a screenshot because the page text could not be extracted programmatically. Prompt tracking is a paid add-on and has still not been bought."
+    },
+    "readiness": {
+      "measured_at": "2026-09-17 ICT",
+      "robots_txt_blocks_ai_bots": false,
+      "sitemap_complete": true,
+      "sitemap_url_count": 112,
+      "sitemap_article_count": 88,
+      "llms_txt": true,
+      "faq_schema_on_money_pages": true,
+      "organization_schema": true,
+      "localbusiness_schema_homepage": true,
+      "localbusiness_schema_sitewide": true,
+      "articles_render": true,
+      "signals_passing": 7,
+      "signals_total": 7,
+      "reread_today": true,
+      "evidence": "Re-measured from the dxliving.com origin with cache no-store: robots.txt 200 (430 bytes, byte-identical to yesterday) explicitly Allows GPTBot, OAI-SearchBot, ChatGPT-User, PerplexityBot, ClaudeBot and Google-Extended, and disallows only /register and /pages/. llms.txt 200 (12,678 bytes) and llms-full.txt 200 (21,934 bytes, 'Last updated: 17 August 2026'). sitemap.xml 200 with 112 URLs. All 111 crawled pages returned HTTP 200.",
+      "sitemap_note": "Sitemap HELD at 112 URLs and 88 articles - no new articles published since the 16 Sep scan.",
+      "articles_render_caveat": "articles_render still passes on HTTP 200 only; the method does not see the full-viewport overlay on /articles, which is still present today (day 21) and still blocks human readers.",
+      "jsonld_note": "109 of 111 crawled pages carry at least one JSON-LD block; 67 pages carry FAQPage, of which 66 are articles (75.0 percent of the 88). The two pages without JSON-LD are unchanged from yesterday."
+    }
+  },
+  "technical_health": {
+    "measured_at": "2026-09-17 ICT",
+    "source": "GSC Page indexing, Sitemaps, Core Web Vitals and HTTPS, plus a full same-origin crawl of all 110 sitemap pages plus /login run from Chrome.",
+    "gsc_page_indexing": {
+      "indexed": 76,
+      "not_indexed": 146,
+      "build_dated": "2026-09-14",
+      "reasons": {
+        "Excluded by 'noindex' tag": 34,
+        "Blocked by robots.txt": 20,
+        "Not found (404)": 9,
+        "Page with redirect": 4,
+        "Redirect error": 1,
+        "Crawled - currently not indexed": 57,
+        "Duplicate, Google chose different canonical than user": 3,
+        "Discovered - currently not indexed": 18
+      },
+      "reasons_note": "The eight reasons sum to 146, matching the tile exactly.",
+      "staleness_flag": "RESOLVED. The Page indexing build had been frozen at 4 Sep for ten consecutive readings (7, 8, 9, 10, 11, 14, 15 and 16 Sep). It has now refreshed to 14 Sep, and the refreshed data is materially different.",
+      "delta_note": "INDEXED PAGES FELL 87 -> 76 (down 11) and not-indexed rose 119 -> 146 (up 27). 'Blocked by robots.txt' jumped 6 -> 20, 'Crawled - currently not indexed' 38 -> 57 and 'Not found (404)' 7 -> 9, while 'Discovered - currently not indexed' fell 25 -> 18 and 'Excluded by noindex' 35 -> 34. Because the previous figures came from a 4 Sep build, this is ten days of change arriving at once, not a one-day collapse.",
+      "blocked_by_robots_flag": "'Blocked by robots.txt' 6 -> 20 is the single biggest mover and needs checking. robots.txt itself was re-read live today and is byte-identical at 430 bytes, disallowing only /register and /pages/. So the 14 extra blocked URLs are almost certainly /pages/* and /register URLs Google has newly discovered, not sitemap pages - but that has NOT been confirmed URL by URL in this run and should be."
+    },
+    "gsc_sitemap": {
+      "submitted": "2026-08-24",
+      "last_read_by_google": "2026-09-13",
+      "status": "Success",
+      "discovered_pages": 109,
+      "note": "Google's last sitemap read is still 13 Sep and Discovered pages still 109, while the live sitemap declares 112 URLs. The three-URL gap is unchanged."
+    },
+    "gsc_core_web_vitals": {
+      "mobile": null,
+      "desktop": null,
+      "last_updated": "2026-09-15",
+      "note": "Chrome UX Report still returns 'Not enough usage data in the last 90 days' for BOTH device types. The report date advanced 13 Sep -> 15 Sep but the verdict did not change: real-user speed data cannot be measured at this traffic level. Lab TTFB from the crawl below is the only speed signal available."
+    },
+    "gsc_https": {
+      "non_https_urls": 0,
+      "https_urls": 14,
+      "last_update": null,
+      "verdict": "clean - no issues detected in the last 90 days",
+      "last_update_note": "The tile's own 'last update' date was not captured this run and is null rather than carried."
+    },
+    "response_times": {
+      "measurement_note": "Full sequential crawl of every sitemap page plus /login (TTFB measured as time to fetch resolution, cache no-store, 15 s abort). These are the figures from the SAME crawl the dxl-seo-audit report publishes today (07:45 ICT), so the two reports agree page for page. An earlier pass in this session at 06:30 ICT gave a mean of 312 ms and a median of 267 ms - within the normal swing for a live TTFB measurement.",
+      "articles_sampled": 88,
+      "articles_avg_ms": 307,
+      "articles_max_ms": 584,
+      "articles_min_ms": 231,
+      "core_pages_sampled": 17,
+      "core_pages_avg_ms": 368,
+      "project_pages_sampled": 6,
+      "project_pages_avg_ms": 287,
+      "slowest_page": "/articles/construction-programme-visualisation at 584ms",
+      "homepage_ms": 502,
+      "articles_hub_ms": 414,
+      "homepage_rereads_ms": [
+        467,
+        532,
+        465,
+        391
+      ],
+      "studio_rereads_ms": [
+        278,
+        352,
+        319,
+        507
+      ],
+      "articles_rereads_ms": [
+        304,
+        417,
+        330,
+        498
+      ],
+      "homepage_navigation_ttfb_ms": 625,
+      "articles_navigation_ttfb_ms": 493,
+      "site_mean_ms": 315,
+      "site_median_ms": 265,
+      "under_1s": 111,
+      "between_1s_3s": 0,
+      "over_3s": 0,
+      "max_ms": 584,
+      "note": "SPEED IMPROVED AGAIN. The site mean fell 344 -> 315 ms and the median 283 -> 265 ms, with all 111 pages under one second for a fourth consecutive day - and for the first time NO page exceeded 600 ms (slowest 706 -> 584 ms). The /articles hub went 558 -> 414 ms and the article group 338 -> 307 ms. The homepage went the other way, 322 -> 502 ms, and is now the slowest core page; single pages swing by a few hundred ms between live passes, so the mean and median are the figures to read. Cache-busted re-reads are slower than the crawl, as expected (homepage 391-532 ms)."
+    },
+    "h1_and_canonical": {
+      "pages_checked": 111,
+      "pages_with_exactly_one_h1": 111,
+      "pages_with_canonical": 111,
+      "note": "All 111 crawled pages (110 sitemap pages + /login) carry exactly one H1 and a canonical tag."
+    },
+    "meta_descriptions": {
+      "pages_checked": 111,
+      "min_len": 83,
+      "max_len": 189,
+      "note": "All 111 pages carry a meta description; lengths 83-189 characters across the full crawl, identical to yesterday."
+    },
+    "headings_and_images": {
+      "pages_with_heading_before_h1": 89,
+      "pages_with_level_skips": 1,
+      "images_total": 1292,
+      "images_with_alt": 1181,
+      "images_lazy": 713,
+      "note": "111 images across the site still have no alt text (1,181 of 1,292 do) - exactly one per page, the same sitewide template image as every previous reading. Unchanged from 16 Sep."
+    }
+  },
+  "internal_linking": {
+    "measured_at": "2026-09-17 ICT",
+    "status": "HOLDING - the /articles hub links ALL 88 articles from a single server response; orphan count stays at zero.",
+    "method": "Fetched every sitemap page from the origin (cache no-store), parsed internal links, and computed the inbound-link graph across all 111 crawled pages.",
+    "sitemap_articles": 88,
+    "hub_articles_unfiltered": 88,
+    "hub_html_bytes": 261475,
+    "hub_distinct_articles": 88,
+    "hub_change": "The hub is essentially unchanged: 261,561 -> 261,475 bytes and 88 linked articles both days. No new articles were published.",
+    "hub_categories_note": "Category slugs still return the identical full article set, so per-category membership CANNOT be verified from the server HTML.",
+    "orphan_articles_count": 0,
+    "orphan_articles": [],
+    "verification": "Inbound-link graph computed over all 111 crawled pages: every one of the 88 articles has at least one inbound internal link.",
+    "new_articles": [],
+    "new_articles_note": "NO new articles since 16 Sep. The sitemap held at 112 URLs and 88 articles, and total word volume held at 222,873. This is the first day in this series with no publishing at all.",
+    "articles_overlay": {
+      "day": 21,
+      "status": "UNCHANGED",
+      "evidence": "Opened /articles in Chrome and waited 17 s: one fixed div (class 'fixed inset-0 flex items-center justify-center bg-white') with z-index 99999 covering the full viewport, and document.elementFromPoint at the viewport centre returns BODY rather than any article card.",
+      "severity_note": "It blocks HUMAN READERS, not crawlers: the server HTML for /articles links all 88 articles and the hub responded in 269 ms. Twenty-one days is a long time for a visitor-facing hub to be unusable."
+    },
+    "verdict": "Internal linking is structurally sound: all 88 sitemap articles are linked from the hub and from the wider graph, with zero orphans. The weakness is depth, not coverage - 23 articles are reachable only from the hub, and the hub is the page covered by the overlay.",
+    "hub_distinct_internal_paths": 105,
+    "articles_linked_only_from_hub": 23
+  },
+  "cannibalisation": {
+    "measured_at": "2026-09-17 ICT",
+    "method": "Counted /articles/<slug> URLs in the 112-URL sitemap and grouped by slug pattern. Melbourne rendering cluster = Melbourne articles whose slug carries a rendering, render, visualisation, 3D or floor-plan term.",
+    "melbourne_articles_total": 17,
+    "melbourne_rendering_cluster_size": 12,
+    "builder_cluster_size": 13,
+    "builder_cluster_melbourne_subset": 4,
+    "adelaide_cluster_size": 5,
+    "verdict": "Every cluster is unchanged from 16 Sep because nothing was published. 17 Melbourne articles with 12 of them competing on rendering terms remains the clearest cannibalisation risk on the site, and GSC now shows it directly: '3d rendering services melbourne' dropped out of the query table entirely this cycle while four other Melbourne rendering queries lost impressions."
+  },
+  "social_snapshot": {
+    "measured_at": "2026-09-17 ICT",
+    "source": "https://tram-fdx.github.io/dxl-social-dashboard-site/",
+    "dashboard_last_refreshed": "2026-09-17",
+    "is_stale": false,
+    "stale_note": "FRESH: the dashboard was refreshed in the same run as this report - 'Snapshot 17 Sep 2026, all four channels read live'.",
+    "window": "28 days (19 Aug - 15 Sep for Meta and YouTube; LinkedIn still 16 Aug - 14 Sep, its window did not advance)",
+    "total_followers": 269,
+    "total_followers_note": "269 = Facebook 116 + LinkedIn 101 + Instagram 48 + YouTube 4. Completely unchanged for a fourth day.",
+    "facebook": {
+      "followers": 116,
+      "views_28d": 4436,
+      "reach_viewers": 284,
+      "visits": 390,
+      "content_interactions": 153,
+      "video_3s_views": 335,
+      "net_new_followers": 1,
+      "views_from_non_followers_pct": 56.9,
+      "link_clicks": 5
+    },
+    "linkedin": {
+      "followers": 101,
+      "impressions": 1466,
+      "reactions": 86,
+      "comments": 0,
+      "reposts": 0,
+      "page_views": 113,
+      "unique_visitors": 40,
+      "new_followers_30d": 44
+    },
+    "instagram": {
+      "followers": 48,
+      "views_28d": 2316,
+      "reach_28d": 211,
+      "content_interactions": 42,
+      "reach_from_non_followers": 194,
+      "posts_published": 126
+    },
+    "youtube": {
+      "subscribers": 4,
+      "views_28d": 531,
+      "watch_time_hours": 0.4,
+      "videos_published": 31
+    },
+    "movement_note": "Against 16 Sep: FB views 4,487 -> 4,436, IG views 2,052 -> 2,316, IG reach 177 -> 211, YT views 409 -> 531 as the 15 Sep Short entered the window, LI impressions flat at 1,466 on an unchanged window. Facebook 3-second video views 282 -> 335 and watch time 1h31m -> 1h46m.",
+    "ga4_cross_check": "GA4 Organic Social 186 sessions (20 Aug-16 Sep) at 24.73 percent engagement and THREE SECONDS average engagement time, with 0 key events. The social dashboard's rising views and the GA4 three-second dwell describe the same audience: social delivers arrivals, not readers."
+  },
+  "notes": {
+    "vi": [
+      "TIÊU ĐIỂM: bản dựng Page indexing của GSC cuối cùng đã làm mới sau mười lần đọc đứng yên (4/9 -> 14/9) và số trang được lập chỉ mục giảm 87 -> 76 trong khi số trang không được lập chỉ mục tăng 119 -> 146.",
+      "'Blocked by robots.txt' nhảy 6 -> 20 và 'Crawled - currently not indexed' 38 -> 57. robots.txt giống hệt từng byte ở 430 byte và chỉ chặn /register và /pages/, nên các URL bị chặn thêm gần như chắc chắn là /pages/* mới được phát hiện - cần xác nhận từng URL.",
+      "Vì số liệu trước đó đến từ bản dựng ngày 4/9, đây là mười ngày thay đổi dồn về một lúc, không phải sụp đổ trong một ngày. Hãy coi 14/9 là mốc nền mới.",
+      "Traffic GSC lùi nhẹ khi cửa sổ trượt một ngày: click 47 -> 43, hiển thị 1.299 -> 1.192, vị trí trung bình 30,6 -> 31,1. CTR giữ 3,6%.",
+      "Ngày 14/9 vào cửa sổ với 16 hiển thị và 0 click, ngày yếu nhất trong 28 ngày, chiếm phần lớn mức giảm hiển thị.",
+      "Thương hiệu vẫn gánh tìm kiếm: 37 trên 43 click (86,0%) là dxliving, dx living và dx_models. Mọi truy vấn thương mại phi thương hiệu vẫn ở mức không click.",
+      "'3d rendering services melbourne' BIẾN MẤT hoàn toàn khỏi bảng truy vấn, và bốn truy vấn rendering Melbourne khác mất hiển thị - cụm 12 bài Melbourne về rendering nay tự ăn thịt nhau một cách rõ ràng.",
+      "'3d renders for builders melbourne' vẫn là truy vấn phi thương hiệu gần trang một nhất ở 13,1, hồi 0,2 sau hai kỳ tụt liên tiếp.",
+      "GA4 phiên 614 -> 599 và sự kiện 3.082 -> 2.994 do cửa sổ trượt một ngày; người dùng 368 -> 366 và key event giữ 7.",
+      "TƯƠNG TÁC TUẦN GIẢM MẠNH: 50,00% -> 29,46% so tuần trước, thời gian tương tác trung bình 1 phút 45 giây -> 8 giây, trên lượng gần như không đổi (118 -> 112 phiên). Đây là lần giảm thứ ba liên tiếp.",
+      "Không có key event nào ở CẢ HAI cửa sổ 7 ngày, kỳ thứ mười hai. Kiểm tra tag trên trang chủ vẫn đạt (GTM, GA4 và Ads đều chạy), nên đây là lỗ hổng cấu hình key event chứ không phải lỗi thu thập.",
+      "Organic Social có 186 phiên với 24,73% tương tác và BA GIÂY thời gian trung bình. Mạng xã hội mang người ghé qua, không mang người đọc.",
+      "Organic Search là kênh chất lượng duy nhất: 190 phiên, 65,26%, 1 phút 26 giây, và 5 trên 7 key event.",
+      "TỐC ĐỘ LẠI CẢI THIỆN: TTFB trung bình 344 -> 315 ms, trung vị 283 -> 265 ms, cả 111 trang dưới 1 giây ngày thứ tư - và lần đầu không trang nào vượt 600 ms. Hub /articles đi 558 -> 414 ms; trang chủ đọc chậm hơn, 322 -> 502 ms, đây là dao động của phép đo trực tiếp chứ không phải hồi quy.",
+      "Lớp phủ /articles VẪN CÒN ở ngày thứ 21: một div cố định phủ toàn màn hình với z-index 99999. Bot thấy đủ 88 bài; người thật thấy màn hình trắng.",
+      "HÔM NAY KHÔNG XUẤT BẢN GÌ - sitemap giữ 112 URL và 88 bài, tổng số từ đứng yên ở 222.873. Ngày đầu tiên không xuất bản trong chuỗi này.",
+      "Ahrefs backlink 378 -> 386 và referring domain 346 -> 353, nhưng số lượng FOLLOWED không hề nhúc nhích (47 và 42). Mọi link mới đều là nofollow.",
+      "Hiện diện AI đứng yên ở 30/100 kỳ thứ mười một: 18 phản hồi AI trên 10 trang được trích dẫn, ChatGPT 9, Copilot 8, Perplexity 1, Google AI Overviews vẫn 0. Prompt của Brand Radar vẫn 0.",
+      "Mạng xã hội: views YouTube 409 -> 531 khi Short mới vào cửa sổ, reach Instagram 177 -> 211 và view video 3 giây Facebook 282 -> 335. Tệp follower không đổi ở 269 trên cả bốn kênh."
+    ],
+    "en": [
+      "HEADLINE: the GSC Page indexing build finally refreshed after ten stale readings (4 Sep -> 14 Sep) and indexed pages fell 87 -> 76 while not-indexed rose 119 -> 146.",
+      "'Blocked by robots.txt' jumped 6 -> 20 and 'Crawled - currently not indexed' 38 -> 57. robots.txt is byte-identical at 430 bytes and disallows only /register and /pages/, so the extra blocked URLs are almost certainly /pages/* discoveries - this needs confirming URL by URL.",
+      "Because the previous numbers came from a 4 Sep build, this is ten days of change landing at once, not a one-day collapse. Treat 14 Sep as the new baseline.",
+      "GSC traffic eased on a one-day window shift: clicks 47 -> 43, impressions 1,299 -> 1,192, average position 30.6 -> 31.1. CTR held at 3.6%.",
+      "14 Sep entered the window with 16 impressions and 0 clicks, the weakest day in the 28, which accounts for most of the impression fall.",
+      "Brand still carries search: 37 of 43 clicks (86.0%) are dxliving, dx living and dx_models. Every commercial non-brand query is still at zero clicks.",
+      "'3d rendering services melbourne' DROPPED OUT of the query table entirely, and four other Melbourne rendering queries lost impressions - the 12-article Melbourne rendering cluster is now visibly cannibalising itself.",
+      "'3d renders for builders melbourne' remains the closest non-brand query to page one at 13.1, recovering 0.2 after two consecutive slips.",
+      "GA4 sessions 614 -> 599 and events 3,082 -> 2,994 on the one-day window shift; users 368 -> 366 and key events flat at 7.",
+      "WEEKLY ENGAGEMENT FELL SHARPLY: 50.00% -> 29.46% week on week, average engagement time 1m 45s -> 8s, on almost the same volume (118 -> 112 sessions). Third consecutive fall.",
+      "Zero key events in BOTH 7-day windows for a twelfth scan. The homepage tag check passes (GTM, GA4 and Ads all firing), so this is a key-event configuration gap, not a collection failure.",
+      "Organic Social is 186 sessions at 24.73% engagement and THREE SECONDS average time. Social sends arrivals, not readers.",
+      "Organic Search is the only quality channel: 190 sessions at 65.26%, 1m 26s, and 5 of the 7 key events.",
+      "SPEED IMPROVED AGAIN: site mean TTFB 344 -> 315 ms, median 283 -> 265 ms, all 111 pages under one second for a fourth day - and for the first time no page above 600 ms. The /articles hub went 558 -> 414 ms; the homepage read slower at 322 -> 502 ms, which is live-measurement swing rather than a regression.",
+      "The /articles overlay is STILL THERE on day 21: a full-viewport fixed div at z-index 99999. Crawlers see all 88 articles; humans see a white screen.",
+      "NOTHING WAS PUBLISHED today - sitemap held at 112 URLs and 88 articles, word volume flat at 222,873. The first zero-publishing day in this series.",
+      "Ahrefs backlinks 378 -> 386 and referring domains 346 -> 353, but the FOLLOWED counts did not move at all (47 and 42). Every new link is nofollow.",
+      "AI visibility flat at 30/100 for an eleventh scan: 18 AI responses across 10 cited pages, ChatGPT 9, Copilot 8, Perplexity 1, Google AI Overviews still 0. Brand Radar prompts still 0.",
+      "Social: YouTube views 409 -> 531 as the new Short entered the window, Instagram reach 177 -> 211 and Facebook video 3-second views 282 -> 335. Follower base unchanged at 269 across all four channels."
+    ]
+  }
+}
