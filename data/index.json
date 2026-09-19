@@ -1,7 +1,7 @@
 {
   "site": "dxliving.com",
   "description": "Lịch sử snapshot dữ liệu SEO theo ngày / Daily SEO data snapshot history. Mỗi ngày một file data/YYYY-MM-DD.json + bản HTML đóng băng archive/YYYY-MM-DD.html.",
-  "latest": "2026-09-18",
+  "latest": "2026-09-19",
   "snapshots": [
     {
       "date": "2026-06-30",
@@ -275,6 +275,13 @@
       "report": "archive/2026-09-18.html",
       "label_vi": "GSC cải thiện cả bốn chỉ số lần đầu (44 click · 1.203 impr · CTR 3,7% · vị trí 30,8); một bài mới (sitemap 112→113 URL, 88→89 bài, từ 222.873→224.773) nhưng rơi vào cụm Adelaide nay sáu bài; tốc độ lập kỷ lục (TB 315→309 ms, chậm nhất 584→500 ms, cả 112 trang <1s); Page indexing KHÔNG dựng lại (vẫn bản 14/09); GA4 599→606 phiên nhưng 7 ngày engagement 47,27%→33,86% và 0 key event lần thứ 13; backlink 386→392; trích dẫn AI giữ 18/10 trang; lớp phủ /articles ngày 22; đính chính: LocalBusiness chỉ có trên 2/111 trang",
       "label_en": "GSC improved on all four headline metrics for the first time (44 clicks · 1,203 impr · CTR 3.7% · position 30.8); one new article (sitemap 112→113 URLs, 88→89 articles, words 222,873→224,773) but it lands in an Adelaide cluster now six deep; speed set a new best (mean 315→309 ms, slowest 584→500 ms, all 112 pages under 1s); Page indexing did NOT rebuild (still the 14 Sep build); GA4 599→606 sessions but 7-day engagement 47.27%→33.86% and zero key events for a 13th scan; backlinks 386→392; AI citations flat at 18 across 10 pages; /articles overlay on day 22; correction: LocalBusiness is on only 2 of 111 pages"
+    },
+    {
+      "date": "2026-09-19",
+      "data": "data/2026-09-19.json",
+      "report": "archive/2026-09-19.html",
+      "label_vi": "GSC trả lại mức tăng (43 click · 1.188 impr · CTR 3,6%); hai bài mới lên 91 bài; backlink Ahrefs bùng nổ 392 → 607 kiểu spam",
+      "label_en": "GSC gives back the gain (43 clicks · 1,188 impr · CTR 3.6%); two new articles take the library to 91; Ahrefs backlinks explode 392 → 607, spam-shaped"
     }
   ]
 }
