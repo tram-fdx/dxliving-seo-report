@@ -1,7 +1,41 @@
 {
   "kind": "weekly",
-  "latest": "2026-09-04",
+  "latest": "2026-09-18",
   "weeks": [
+    {
+      "id": "2026-09-18",
+      "vi": "12–18/09/2026",
+      "en": "12–18 Sep 2026",
+      "start": "2026-09-12",
+      "end": "2026-09-18",
+      "compare_start": "2026-09-05",
+      "compare_end": "2026-09-11",
+      "scanned_on": "2026-09-21",
+      "sources": [
+        "Google Search Console (Chrome)",
+        "Google Analytics 4 (Chrome)",
+        "Ahrefs snapshot (dxliving-seo-report)"
+      ],
+      "notes_vi": "Dung bu ngay 21/09. Toan bo cum truy van melbourne ve 0 impression, thay bang Sydney/Brisbane/Adelaide va cap quoc gia — vi the vi tri TB nhay 30,7 xuong 17,2 trong khi impressions va clicks cung giam. Direct tang 37 len 63 session voi thoi luong 2 giay, can kiem tra bot. Khong con session AI nao. Ahrefs va trich dan AI lay tu snapshot 18/09.",
+      "notes_en": "Backfilled on 21 Sep. The whole melbourne query cluster went to zero impressions, replaced by Sydney/Brisbane/Adelaide and national variants — which is why average position jumped 30.7 to 17.2 while impressions and clicks both fell. Direct rose 37 to 63 sessions at 2 seconds each and needs a bot check. No AI sessions at all. Ahrefs and AI citations come from the 18 Sep snapshot."
+    },
+    {
+      "id": "2026-09-11",
+      "vi": "05–11/09/2026",
+      "en": "5–11 Sep 2026",
+      "start": "2026-09-05",
+      "end": "2026-09-11",
+      "compare_start": "2026-08-29",
+      "compare_end": "2026-09-04",
+      "scanned_on": "2026-09-21",
+      "sources": [
+        "Google Search Console (Chrome)",
+        "Google Analytics 4 (Chrome)",
+        "Ahrefs snapshot (dxliving-seo-report)"
+      ],
+      "notes_vi": "Dung bu ngay 21/09 — tuan nay le ra duoc quet 14/09 nhung bao cao tuan khi do chi tra ket qua ra chat, khong tao file. GSC va GA4 doc lai truc tiep cho dung cua so; Ahrefs va trich dan AI lay tu snapshot 11/09. Nam bai moi lot thang vao top 10 nhung moi bai chi 2-12 impressions. stage.dxliving.com van chua sua.",
+      "notes_en": "Backfilled on 21 Sep — this week should have been scanned on 14 Sep, but the weekly report then only returned its result to chat without writing a file. GSC and GA4 were re-read directly for the exact window; Ahrefs and AI citations come from the 11 Sep snapshot. Five new articles landed straight in the top 10 but each drew only 2-12 impressions. stage.dxliving.com is still unfixed."
+    },
     {
       "id": "2026-09-04",
       "vi": "29/08–04/09/2026",
