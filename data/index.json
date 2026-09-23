@@ -1,7 +1,7 @@
 {
   "site": "dxliving.com",
   "description": "Lịch sử snapshot dữ liệu SEO theo ngày / Daily SEO data snapshot history. Mỗi ngày một file data/YYYY-MM-DD.json + bản HTML đóng băng archive/YYYY-MM-DD.html.",
-  "latest": "2026-09-22",
+  "latest": "2026-09-23",
   "snapshots": [
     {
       "date": "2026-06-30",
@@ -296,6 +296,13 @@
       "report": "archive/2026-09-22.html",
       "label_vi": "GSC ổn lại (click giữ 36, CTR 3,1→3,2%, vị trí 31,3→31,1) nhưng GA4 mất 63 phiên (615→552) và key event 5→2; toàn site chậm lại TTFB 330→536 ms (vẫn 116/116 trang dưới 1 giây); một bài mới (92→93 bài); spam backlink chậm lại +12",
       "label_en": "GSC steadied (clicks flat at 36, CTR 3.1→3.2%, position 31.3→31.1) but GA4 lost 63 sessions (615→552) and key events 5→2; the whole site slowed, TTFB 330→536 ms (still 116/116 pages under 1s); one new article (92→93); backlink spam slowing at +12"
+    },
+    {
+      "date": "2026-09-23",
+      "data": "data/2026-09-23.json",
+      "report": "archive/2026-09-23.html",
+      "label_vi": "Key event về 0 (2→0) trên cả 28 ngày; GSC 36→34 click, 1.130→1.104 impressions; tốc độ hồi hoàn toàn 536→331 ms; backlink 668→684; lớp phủ /articles ngày 27",
+      "label_en": "Key events hit zero (2→0) on the 28-day window; GSC 36→34 clicks, 1,130→1,104 impressions; speed fully recovered 536→331 ms; backlinks 668→684; /articles overlay day 27"
     }
   ]
 }
