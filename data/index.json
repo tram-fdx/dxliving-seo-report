@@ -1,7 +1,7 @@
 {
   "site": "dxliving.com",
   "description": "Lịch sử snapshot dữ liệu SEO theo ngày / Daily SEO data snapshot history. Mỗi ngày một file data/YYYY-MM-DD.json + bản HTML đóng băng archive/YYYY-MM-DD.html.",
-  "latest": "2026-09-23",
+  "latest": "2026-09-24",
   "snapshots": [
     {
       "date": "2026-06-30",
@@ -303,6 +303,13 @@
       "report": "archive/2026-09-23.html",
       "label_vi": "Key event về 0 (2→0) trên cả 28 ngày; GSC 36→34 click, 1.130→1.104 impressions; tốc độ hồi hoàn toàn 536→331 ms; backlink 668→684; lớp phủ /articles ngày 27",
       "label_en": "Key events hit zero (2→0) on the 28-day window; GSC 36→34 clicks, 1,130→1,104 impressions; speed fully recovered 536→331 ms; backlinks 668→684; /articles overlay day 27"
+    },
+    {
+      "date": "2026-09-24",
+      "data": "data/2026-09-24.json",
+      "report": "archive/2026-09-24.html",
+      "label_vi": "Bước một ngày · key event đầu tiên sau 18 lần quét (0 → 1); Page indexing dựng lại (bản 21/09) và xác minh 'Crawled — currently not indexed' bật FAILED trên 51 URL; GSC giữ click 34 nhưng impressions 1.104 → 1.087; TTFB TB 331 → 328 ms, trần 698 → 545 ms; sitemap 118 → 119 URL; trích dẫn AI 15 → 12",
+      "label_en": "One-day step · the first key event in eighteen scans (0 to 1); Page indexing rebuilt (21 Sep build) and the validation on 'Crawled - currently not indexed' now reads FAILED across 51 URLs; GSC held clicks at 34 but impressions 1,104 to 1,087; mean TTFB 331 to 328 ms, ceiling 698 to 545 ms; sitemap 118 to 119 URLs; AI citations 15 to 12"
     }
   ]
 }
