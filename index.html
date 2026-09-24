@@ -742,6 +742,221 @@
     <p class="note"><span class="vi"><b>ĐỐI CHIẾU VỚI GA4:</b> GA4 (26/08 → 22/09) ghi <b>Organic Social 156 phiên</b> (▲8), tương tác <b>25,64%</b>, thời gian TB <b>4 giây</b>, 0 key event. Bảng Session source/medium chỉ thẳng nguyên nhân: <span class="mono">m.facebook.com / referral</span> gửi <b>81 phiên</b> với <b>4,94%</b> tương tác và <b>0 giây</b>. Facebook qua bốn dòng nguồn gửi <b>142 phiên</b>, nhiều hơn cả <span class="mono">google / organic</span> (141), nhưng gần như không mang lại chút chú ý nào: <b>0 key event</b>. Social vẫn đẩy được lượng, chưa đẩy được người đọc.</span><span class="en"><b>GA4 CROSS-CHECK:</b> GA4 (26 Aug → 22 Sep) records <b>Organic Social at 156 sessions</b> (▲8), engagement <b>25.64%</b>, average time <b>4 seconds</b>, 0 key events. The Session source/medium table points straight at the cause: <span class="mono">m.facebook.com / referral</span> sends <b>81 sessions</b> at <b>4.94%</b> engagement and <b>zero seconds</b>. Facebook across four source rows sends <b>142 sessions</b>, more than <span class="mono">google / organic</span> (141), but brings almost no attention with it: <b>0 key events</b>. Social still moves volume, not readers.</span></p>
   </section>
 
+
+<style id="dxr-css">
+#dxr{margin:18px 0}
+#dxr .dxr-h{display:flex;align-items:center;gap:9px;font-weight:700;font-size:15px;margin:0 0 4px}
+#dxr .dxr-badge{font-size:10.5px;font-weight:700;letter-spacing:.04em;padding:3px 7px;border-radius:5px;background:#eef1f5;color:#5b6472}
+#dxr .dxr-tabs{display:flex;gap:6px;margin:10px 0 8px;flex-wrap:wrap}
+#dxr .dxr-tab{font:inherit;font-size:12.5px;font-weight:600;padding:6px 12px;border:1px solid #cfd4da;background:#fff;color:#454c56;border-radius:7px;cursor:pointer}
+#dxr .dxr-tab.on{background:#2c3440;border-color:#2c3440;color:#fff}
+#dxr .dxr-ctrl{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin:0 0 6px}
+#dxr .dxr-ctrl label{font-size:12.5px;font-weight:600;color:#454c56;display:flex;align-items:center;gap:6px}
+#dxr .dxr-ctrl select{font:inherit;font-size:12.5px;padding:5px 8px;border:1px solid #cfd4da;border-radius:6px;background:#fff;color:#22262c}
+#dxr .dxr-hint{font-size:11.5px;color:#7b828c;font-weight:400}
+#dxr .dxr-note{font-size:11.5px;line-height:1.6;color:#5b6472;background:#f7f8fa;border:1px solid #e6e9ee;border-radius:7px;padding:9px 11px;margin:8px 0 12px}
+#dxr .dxr-warn{font-size:12.5px;line-height:1.6;color:#8a5a12;background:#fdf6e7;border:1px solid #f0e0bc;border-radius:7px;padding:10px 12px;margin:4px 0 0}
+#dxr .dxr-rangelbl{font-size:12px;font-weight:700;color:#5b6472;margin:2px 0 7px}
+#dxr .dxr-tbl{width:100%;border-collapse:collapse;font-size:12.5px}
+#dxr .dxr-tbl th{text-align:left;font-weight:700;font-size:11px;letter-spacing:.03em;text-transform:uppercase;color:#7b828c;border-bottom:1px solid #e6e9ee;padding:7px 9px}
+#dxr .dxr-tbl td{padding:7px 9px;border-bottom:1px solid #f0f2f5;vertical-align:middle}
+#dxr .dxr-tbl .dxr-n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+#dxr .dxr-tbl tr:last-child td{border-bottom:none}
+#dxr .dxr-up{color:#0b7a53;font-weight:600}
+#dxr .dxr-down{color:#b4231c;font-weight:600}
+#dxr .dxr-flat{color:#7b828c}
+#dxr .dxr-sparkcell{width:130px;text-align:right}
+#dxr .dxr-spark{width:120px;height:28px;display:block;margin-left:auto}
+#dxr .dxr-nospark{font-size:11px;color:#a4abb4}
+@media(max-width:620px){#dxr .dxr-sparkcell,#dxr .dxr-tbl th:last-child{display:none}}
+#dxr .dxr-grp{margin:16px 0 0}
+#dxr .dxr-grpt{font-size:11px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;padding:5px 9px;border-radius:6px;display:inline-block}
+#dxr .dxr-g-day{background:#e6f5ed;color:#0b6b49}
+#dxr .dxr-g-window28{background:#fdf1e3;color:#8a5a12}
+#dxr .dxr-g-state{background:#eef1f5;color:#4a5260}
+#dxr .dxr-grpn{font-size:11.5px;line-height:1.55;color:#6b727c;margin:6px 0 4px}
+#dxr .dxr-strong{font-weight:800;color:#12161c}
+</style>
+
+<section class="card" id="dxr" style="display:none">
+  <div class="dxr-h"><span id="dxr-title"></span><span class="dxr-badge" id="dxr-badge"></span></div>
+  <div id="dxr-body"></div>
+</section>
+<script>
+(function(){var h=document.getElementById("dxr-title"),b=document.getElementById("dxr-badge");
+var L=function(){return document.body.classList.contains("lang-en")?"en":"vi";};
+function up(){if(h)h.textContent=(L()==="en")?"Range explorer":"Xem theo kho\u1ea3ng th\u1eddi gian";
+if(b)b.textContent=(L()==="en")?"DERIVED FROM STORED DAYS":"D\u1eaaN XU\u1ea4T T\u1eea C\u00c1C NG\u00c0Y \u0110\u00c3 L\u01afU";}
+up();setInterval(up,400);})();
+window.__DXR_CFG={rollup:"data/rollup.json",lang:function(){return document.body.classList.contains("lang-en")?"en":"vi";}};
+/* ==== DX RANGE EXPLORER v2 =====================================
+   Đọc data/rollup.json (FILE DẪN XUẤT, dựng lại mỗi sáng từ các
+   file ngày bất biến). Mỗi chuỗi có nhãn grain và chỉ được phép
+   làm đúng phép tính hợp lệ với nhãn đó:
+     day       -> cộng dồn được trong khoảng
+     window28  -> KHÔNG cộng (các ngày chồng nhau), chỉ đầu->cuối
+     state     -> trung bình / giá trị cuối kỳ
+   Tự ẩn nếu không đọc được rollup (bản archive).
+   ================================================================ */
+(function(){
+  var CFG=window.__DXR_CFG; if(!CFG) return;
+  var S={ser:null,dates:[],mode:'trend',from:null,to:null,a:null,b:null,lang:null,ready:false};
+  function L(){ try{return CFG.lang();}catch(e){return 'vi';} }
+  function t(vi,en){ return L()==='en'?en:vi; }
+  function esc(s){ return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); }
+  function nf(v,dp){ if(v===null||v===undefined||!isFinite(v)) return '—';
+    return v.toLocaleString(L()==='en'?'en-US':'vi-VN',{minimumFractionDigits:dp||0,maximumFractionDigits:dp||0}); }
+  function fd(d){ if(L()==='en') return d; var p=d.split('-'); return p[2]+'/'+p[1]+'/'+p[0]; }
+  function dp(k){ return /pct|ctr|position/.test(k)?(/position/.test(k)?1:2):0; }
+  function lower(k){ return /position|ttfb/.test(k); }
+
+  function spark(vals){
+    var nums=vals.filter(function(v){return v!==null;});
+    if(nums.length<2) return '<span class="dxr-nospark">'+t('chưa đủ điểm','too few points')+'</span>';
+    var mn=Math.min.apply(null,nums),mx=Math.max.apply(null,nums),rg=(mx-mn)||1,W=120,H=28,n=vals.length;
+    var seg=[],cur=[],i;
+    for(i=0;i<n;i++){ if(vals[i]===null){ if(cur.length){seg.push(cur);cur=[];} continue; }
+      cur.push(((n===1?0:i/(n-1)*W)).toFixed(1)+','+(H-2-((vals[i]-mn)/rg)*(H-6)).toFixed(1)); }
+    if(cur.length) seg.push(cur);
+    var g=seg.map(function(s){ return s.length===1
+      ?'<circle cx="'+s[0].split(',')[0]+'" cy="'+s[0].split(',')[1]+'" r="1.7" fill="currentColor"/>'
+      :'<polyline points="'+s.join(' ')+'" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>';}).join('');
+    var last=null; for(i=n-1;i>=0;i--){ if(vals[i]!==null){last=i;break;} }
+    if(last!==null) g+='<circle cx="'+((n===1?0:last/(n-1)*W)).toFixed(1)+'" cy="'+(H-2-((vals[last]-mn)/rg)*(H-6)).toFixed(1)+'" r="2.4" fill="currentColor"/>';
+    return '<svg class="dxr-spark" viewBox="0 0 '+W+' '+H+'" preserveAspectRatio="none" aria-hidden="true">'+g+'</svg>';
+  }
+  function deltaCell(key,a,b){
+    if(a===null||b===null) return {txt:'—',cls:'dxr-flat'};
+    var diff=b-a,better=lower(key)?diff<0:diff>0,d=dp(key);
+    var cls=diff===0?'dxr-flat':(better?'dxr-up':'dxr-down');
+    var txt=(diff===0?'▬':(diff>0?'▲':'▼'))+' '+(diff>0?'+':'')+nf(diff,d);
+    if(a!==0) txt+=' ('+(diff/Math.abs(a)*100>0?'+':'')+(diff/Math.abs(a)*100).toFixed(1)+'%)';
+    return {txt:txt,cls:cls};
+  }
+  function inR(d){ return d>=S.from && d<=S.to; }
+  function opts(sel,list){ return list.map(function(d){
+    return '<option value="'+d+'"'+(d===sel?' selected':'')+'>'+fd(d)+'</option>';}).join(''); }
+
+  var GRAINS=[
+    {g:'day',  vi:'Số theo ngày thật — cộng dồn được',      en:'True daily figures — summable'},
+    {g:'window28',vi:'Ảnh chụp cửa sổ 28 ngày — KHÔNG cộng được', en:'28-day rolling snapshots — NOT summable'},
+    {g:'state',vi:'Chỉ số trạng thái — lấy đầu kỳ / cuối kỳ',en:'State metrics — first / last of range'}
+  ];
+  function grainNote(g){
+    if(g==='day') return t('Mỗi điểm là số đo của đúng ngày đó, nên tổng trong khoảng là con số thật.',
+                           'Each point is that day’s own measurement, so the range total is a real number.');
+    if(g==='window28') return t('Mỗi điểm đã là tổng của 28 ngày trước đó; hai ngày liền nhau chồng nhau 27 ngày. Cộng lại sẽ đếm trùng, nên chỉ so đầu kỳ với cuối kỳ.',
+                           'Each point is already a 28-day total; consecutive days overlap by 27. Summing would double-count, so only the first and last are compared.');
+    return t('Giá trị tại thời điểm quét (không phải luỹ kế), nên chỉ so đầu kỳ với cuối kỳ.',
+             'A value at the moment of the scan, not a cumulative figure, so only first and last are compared.');
+  }
+
+  function render(){
+    var el=document.getElementById('dxr-body'); if(!el) return; S.lang=L();
+    var head='<div class="dxr-tabs">'+
+      '<button class="dxr-tab'+(S.mode==='trend'?' on':'')+'" data-m="trend">'+t('Xu hướng theo khoảng','Trend over a range')+'</button>'+
+      '<button class="dxr-tab'+(S.mode==='cmp'?' on':'')+'" data-m="cmp">'+t('So sánh hai ngày','Compare two days')+'</button></div>';
+    var ctrl = S.mode==='trend'
+      ? '<div class="dxr-ctrl"><label>'+t('Từ','From')+' <select id="dxr-from">'+opts(S.from,S.dates)+'</select></label>'+
+        '<label>'+t('Đến','To')+' <select id="dxr-to">'+opts(S.to,S.dates)+'</select></label>'+
+        '<span class="dxr-hint" id="dxr-count"></span></div>'
+      : '<div class="dxr-ctrl"><label>'+t('Ngày A','Day A')+' <select id="dxr-a">'+opts(S.a,S.dates)+'</select></label>'+
+        '<label>'+t('Ngày B','Day B')+' <select id="dxr-b">'+opts(S.b,S.dates)+'</select></label></div>';
+    var note='<p class="dxr-note">'+t(
+      '<b>Đọc từ <code>data/rollup.json</code></b> — file dẫn xuất dựng lại mỗi sáng từ các file ngày bất biến, không sửa tay. Mỗi chỉ số mang một <b>nhãn grain</b> và bảng dưới chỉ làm đúng phép tính hợp lệ với nhãn đó. Ngày không quét <b>không bao giờ được nội suy</b>; ô “—” nghĩa là ngày đó không đo chỉ số này.',
+      '<b>Read from <code>data/rollup.json</code></b> — a derived file rebuilt each morning from the immutable day files, never hand-edited. Every metric carries a <b>grain label</b>, and the table below only performs the arithmetic that label allows. Unscanned days are <b>never interpolated</b>; a “—” means that metric was not measured that day.')+'</p>';
+    el.innerHTML=head+ctrl+note+'<div id="dxr-out"></div>';
+    el.querySelectorAll('.dxr-tab').forEach(function(b){ b.onclick=function(){S.mode=b.dataset.m;render();};});
+    var f=document.getElementById('dxr-from'),to=document.getElementById('dxr-to'),
+        a=document.getElementById('dxr-a'),b2=document.getElementById('dxr-b');
+    if(f) f.onchange=function(){S.from=f.value; if(S.from>S.to)S.to=S.from; render();};
+    if(to) to.onchange=function(){S.to=to.value; if(S.to<S.from)S.from=S.to; render();};
+    if(a) a.onchange=function(){S.a=a.value;draw();};
+    if(b2) b2.onchange=function(){S.b=b2.value;draw();};
+    draw();
+  }
+
+  function draw(){
+    var out=document.getElementById('dxr-out'); if(!out) return;
+    var keys=Object.keys(S.ser), html='';
+    if(S.mode==='trend'){
+      var span=S.dates.filter(inR).length;
+      var c=document.getElementById('dxr-count');
+      if(c) c.innerHTML=span+' '+t('ngày có dữ liệu trong khoảng','days with data in range');
+      html='<div class="dxr-rangelbl">'+fd(S.from)+' → '+fd(S.to)+'</div>';
+      GRAINS.forEach(function(G){
+        var ks=keys.filter(function(k){return S.ser[k].grain===G.g;});
+        if(!ks.length) return;
+        var any=false, rows='';
+        ks.forEach(function(k){
+          var s=S.ser[k], pts=s.points.filter(function(p){return inR(p.d);});
+          if(!pts.length){ rows+='<tr><td>'+esc(s.label)+'</td><td class="dxr-n" colspan="4">—</td></tr>'; return; }
+          any=true; var vals=pts.map(function(p){return p.v;}), d=dp(k);
+          if(G.g==='day'){
+            var sum=vals.reduce(function(x,y){return x+y;},0);
+            var avg=sum/vals.length, mx=Math.max.apply(null,vals);
+            var mxd=pts[vals.indexOf(mx)].d;
+            rows+='<tr><td>'+esc(s.label)+'</td><td class="dxr-n dxr-strong">'+nf(sum,d)+'</td><td class="dxr-n">'+nf(avg,1)+
+              '</td><td class="dxr-n">'+nf(mx,d)+' <span class="dxr-hint">'+fd(mxd)+'</span></td>'+
+              '<td class="dxr-sparkcell">'+spark(vals)+'</td></tr>';
+          } else {
+            var va=vals[0],vb=vals[vals.length-1],dd=deltaCell(k,va,vb);
+            rows+='<tr><td>'+esc(s.label)+'</td><td class="dxr-n">'+nf(va,d)+'</td><td class="dxr-n">'+nf(vb,d)+
+              '</td><td class="dxr-n '+dd.cls+'">'+dd.txt+'</td><td class="dxr-sparkcell '+dd.cls+'">'+spark(vals)+'</td></tr>';
+          }
+        });
+        var hdr = G.g==='day'
+          ? '<th>'+t('Chỉ số','Metric')+'</th><th class="dxr-n">'+t('Tổng trong khoảng','Range total')+'</th><th class="dxr-n">'+t('TB/ngày','Per day')+'</th><th class="dxr-n">'+t('Ngày cao nhất','Peak day')+'</th><th>'+t('Đường đi','Path')+'</th>'
+          : '<th>'+t('Chỉ số','Metric')+'</th><th class="dxr-n">'+t('Đầu kỳ','First')+'</th><th class="dxr-n">'+t('Cuối kỳ','Last')+'</th><th class="dxr-n">'+t('Chênh lệch','Change')+'</th><th>'+t('Đường đi','Path')+'</th>';
+        html+='<div class="dxr-grp"><div class="dxr-grpt dxr-g-'+G.g+'">'+t(G.vi,G.en)+'</div>'+
+              '<p class="dxr-grpn">'+grainNote(G.g)+'</p>'+
+              '<table class="dxr-tbl"><thead><tr>'+hdr+'</tr></thead><tbody>'+rows+'</tbody></table></div>';
+      });
+      if(!html) html='<p class="dxr-warn">'+t('Không có chỉ số nào trong khoảng này.','No metrics in this range.')+'</p>';
+    } else {
+      html='<div class="dxr-rangelbl">'+fd(S.a)+' → '+fd(S.b)+(S.a===S.b?' <span class="dxr-hint">('+t('cùng một ngày','same day')+')</span>':'')+'</div>';
+      GRAINS.forEach(function(G){
+        var ks=keys.filter(function(k){return S.ser[k].grain===G.g;});
+        if(!ks.length) return; var rows='';
+        ks.forEach(function(k){
+          var s=S.ser[k],d=dp(k);
+          function at(dt){ var p=s.points.filter(function(x){return x.d===dt;})[0]; return p?p.v:null; }
+          var va=at(S.a),vb=at(S.b),dd=deltaCell(k,va,vb);
+          rows+='<tr><td>'+esc(s.label)+'</td><td class="dxr-n">'+nf(va,d)+'</td><td class="dxr-n">'+nf(vb,d)+
+                '</td><td class="dxr-n '+dd.cls+'">'+dd.txt+'</td></tr>';
+        });
+        html+='<div class="dxr-grp"><div class="dxr-grpt dxr-g-'+G.g+'">'+t(G.vi,G.en)+'</div>'+
+              '<table class="dxr-tbl"><thead><tr><th>'+t('Chỉ số','Metric')+'</th><th class="dxr-n">'+fd(S.a)+
+              '</th><th class="dxr-n">'+fd(S.b)+'</th><th class="dxr-n">'+t('Chênh lệch','Change')+'</th></tr></thead><tbody>'+rows+'</tbody></table></div>';
+      });
+    }
+    out.innerHTML=html;
+  }
+
+  function hide(){ var s=document.getElementById('dxr'); if(s) s.style.display='none'; }
+  function start(){
+    fetch(CFG.rollup,{cache:'no-store'}).then(function(r){ if(!r.ok) throw 0; return r.json(); })
+    .then(function(j){
+      if(!j || !j.series) throw 0;
+      S.ser=j.series;
+      var set={};
+      Object.keys(S.ser).forEach(function(k){ S.ser[k].points.forEach(function(p){ set[p.d]=1; }); });
+      S.dates=Object.keys(set).sort();
+      if(S.dates.length<2){ hide(); return; }
+      var n=S.dates.length;
+      S.to=S.dates[n-1]; S.from=S.dates[Math.max(0,n-15)];
+      S.b=S.dates[n-1]; S.a=S.dates[n-2];
+      S.ready=true;
+      var sec=document.getElementById('dxr'); if(sec) sec.style.display='';
+      render();
+      setInterval(function(){ if(S.ready&&L()!==S.lang) render(); },400);
+    }).catch(hide);
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',start); else start();
+})();
+
+</script>
+
   <footer class="foot">
     <b>DX Living — <span class="vi">Báo cáo Hiệu suất SEO</span><span class="en">SEO Performance Report</span></b> · dxliving.com<br>
       <span class="vi">Số 28 ngày đọc trực tiếp từ GSC + GA4 + Ahrefs (24/09/2026) · <b>bước một ngày, mọi so sánh là với 23/09</b> · <b>KEY EVENT ĐẦU TIÊN SAU MƯỜI TÁM LẦN QUÉT (0 → 1)</b> · <b>Page indexing dựng lại (bản 21/09): index 83, chưa index 142 → 148, xác minh “Crawled” bật FAILED</b> · <b>tốc độ siết thêm: TTFB TB 331 → 328 ms, trung vị 271 → 267 ms, trần 698 → 545 ms, 118/118 trang dưới 1 giây</b> · <b>Google chưa đọc lại sitemap, Discovered giữ 116 trong khi sitemap sống đã 119 URL</b> · <b>backlink 684 → 697, referring domain 648 → 661, followed 44,5% — P0 disavow vẫn mở</b> · <b>GA4 575 phiên (▲12); 7 ngày 113 → 180 phiên nhưng engagement 33,63% → 28,89%</b> · GSC 34 click, 1.087 impressions, vị trí 31,1 · <b>một bài mới: sitemap 118 → 119 URL, 94 → 95 bài</b> · lớp phủ /articles ngày thứ 28 · <b>trích dẫn AI 15 → 12</b></span><span class="en">28-day figures read directly from GSC + GA4 + Ahrefs (24 Sep 2026) · <b>a one-day step, so every comparison is against 23 Sep</b> · <b>THE FIRST KEY EVENT IN EIGHTEEN SCANS (0 → 1)</b> · <b>Page indexing rebuilt (21 Sep build): indexed 83, not indexed 142 → 148, the “Crawled” validation now reads FAILED</b> · <b>speed tightened: mean TTFB 331 → 328 ms, median 271 → 267 ms, ceiling 698 → 545 ms, 118 of 118 pages under 1 second</b> · <b>Google has not re-read the sitemap, Discovered holds at 116 while the live sitemap is 119 URLs</b> · <b>backlinks 684 → 697, referring domains 648 → 661, followed 44.5% — the P0 disavow is still open</b> · <b>GA4 575 sessions (▲12); 7-day 113 → 180 sessions but engagement 33.63% → 28.89%</b> · GSC 34 clicks, 1,087 impressions, position 31.1 · <b>one new article: sitemap 118 → 119 URLs, 94 → 95 articles</b> · the /articles overlay is on day 28 · <b>AI citations 15 → 12</b></span>
