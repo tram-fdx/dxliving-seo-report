@@ -1,0 +1,1315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DX Living — SEO Performance Report / Báo cáo Hiệu suất SEO</title>
+<style>
+  :root{
+    --bg:#f5f6f8; --card:#fff; --ink:#191c20; --muted:#6b7280; --faint:#9aa0a8;
+    --line:#e7e9ec; --line2:#f0f1f3;
+    --accent:#e0533d; --accent-soft:#fdece8;
+    --green:#1f9d6b; --green-soft:#e8f6ef;
+    --red:#d64545; --red-soft:#fbeaea;
+    --amber:#b7791f; --amber-soft:#fdf4e3;
+    --blue:#2b6cb0; --blue-soft:#eaf1f8;
+    --violet:#7c3aed; --violet-soft:#f3ecfa;
+    --radius:14px; --shadow:0 1px 2px rgba(16,24,40,.04),0 1px 3px rgba(16,24,40,.06);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;-webkit-font-smoothing:antialiased;font-size:14px}
+  .wrap{max-width:1120px;margin:0 auto;padding:34px 20px 72px}
+
+  /* i18n */
+  .en{display:none}
+  body.lang-en .vi{display:none}
+  body.lang-en .en{display:inline}
+
+  /* language switch */
+  .langsw{position:fixed;top:14px;right:16px;z-index:60;display:flex;background:#fff;border:1px solid var(--line);border-radius:999px;overflow:hidden;box-shadow:var(--shadow)}
+  .langsw button{border:0;background:transparent;padding:7px 15px;font-size:12.5px;font-weight:800;color:var(--muted);cursor:pointer;letter-spacing:.4px;transition:.15s}
+  .langsw button.active{background:var(--accent);color:#fff}
+  .langsw button:not(.active):hover{background:#f5f6f8}
+
+  header.top{margin-bottom:20px}
+  .eyebrow{font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin:0 0 8px}
+  .title{font-size:28px;font-weight:800;letter-spacing:-.5px;margin:0 0 8px;display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+  .title .brand-dot{width:12px;height:12px;border-radius:50%;background:var(--accent);display:inline-block}
+  .subtitle{font-size:13.5px;color:var(--muted);margin:0;max-width:840px}
+  .subtitle b{color:#3a3f45;font-weight:600}
+  .metastrip{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+  .tag{display:inline-flex;align-items:center;gap:6px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:4px 12px;font-size:12px;color:#3a3f45;font-weight:600}
+  .tag.on{background:var(--green-soft);border-color:#cdeadd;color:var(--green)}
+  a.tag.hist{background:var(--accent-soft);border-color:#f3c9c0;color:var(--accent);text-decoration:none;font-weight:700}
+  a.tag.hist:hover{background:#fce3dd}
+
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px 24px;margin-bottom:18px}
+  .section-label{font-size:12px;font-weight:800;letter-spacing:.7px;text-transform:uppercase;color:var(--muted);margin:0 0 4px;display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+  .section-label .bar{width:26px;height:3px;border-radius:2px;background:var(--accent)}
+  .section-sub{font-size:12.5px;color:var(--faint);margin:2px 0 18px;padding-left:35px}
+
+  .status{border:1px solid #cdeadd;background:linear-gradient(180deg,#f7fdfa,#fff);border-radius:12px;padding:14px 16px;display:flex;gap:13px;align-items:flex-start}
+  .status .ic{flex:0 0 auto;width:30px;height:30px;border-radius:8px;background:var(--green-soft);color:var(--green);display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800}
+  .status .body h4{margin:0 0 3px;font-size:13.5px;font-weight:700}
+  .status .body p{margin:0;font-size:12.5px;color:#55606b}
+
+  .exec{border-left:3px solid var(--accent);background:var(--accent-soft);border-radius:0 10px 10px 0;padding:16px 18px;margin-bottom:16px}
+  .exec p{margin:0;font-size:14px;color:#3a3f45}
+  .exec p b{color:var(--ink)}
+  .exec .big{font-size:15px;font-weight:700;color:var(--ink);margin-bottom:6px}
+
+  .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  .kpis.k3{grid-template-columns:repeat(3,1fr)}
+  .kpi{border:1px solid var(--line);border-radius:12px;padding:14px 15px;background:#fcfcfd}
+  .kpi .k-label{font-size:11.5px;color:var(--muted);font-weight:600}
+  .kpi .k-val{font-size:26px;font-weight:800;margin-top:4px;letter-spacing:-.6px;line-height:1.1}
+  .kpi .k-sub{font-size:11.5px;color:var(--faint);margin-top:4px}
+  .delta{display:inline-flex;align-items:center;gap:3px;font-size:11.5px;font-weight:700;border-radius:999px;padding:2px 7px;margin-top:6px}
+  .delta.up{background:var(--green-soft);color:var(--green)}
+  .delta.down{background:var(--amber-soft);color:var(--amber)}
+  .delta.flat{background:#eef0f2;color:#6b7280}
+  .delta.bad{background:var(--red-soft);color:var(--red)}
+
+  /* a table shrinks to fit where it can and scrolls inside its own box where it
+     can't, so a wide table never pushes the whole page sideways on a phone */
+  .tblwrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin-top:6px}
+  table{width:100%;border-collapse:collapse;font-size:13px}
+  thead th{text-align:left;font-size:10.5px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--muted);padding:0 10px 9px;border-bottom:1px solid var(--line)}
+  thead th.num{text-align:right}
+  tbody td{padding:10px;border-bottom:1px solid var(--line2);vertical-align:middle}
+  tbody td.num{text-align:right;font-variant-numeric:tabular-nums;font-weight:600}
+  tbody tr:last-child td{border-bottom:none}
+  .mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;color:#3a3f45}
+  .new{font-size:10px;font-weight:700;color:var(--violet);background:var(--violet-soft);border-radius:5px;padding:1px 6px;text-transform:uppercase;letter-spacing:.4px}
+  .brandq{font-size:10px;font-weight:700;color:var(--accent);background:var(--accent-soft);border-radius:5px;padding:1px 6px}
+
+  .barrow{display:grid;grid-template-columns:130px 1fr 54px;align-items:center;gap:12px;margin:9px 0;font-size:12.5px}
+  .barrow .lab{color:#3a3f45;font-weight:600}
+  .bartrack{background:#eef0f2;border-radius:6px;height:16px;overflow:hidden}
+  .barfill{height:100%;border-radius:6px}
+  .barrow .val{text-align:right;font-weight:700;font-variant-numeric:tabular-nums}
+
+  .lead{font-size:13.5px;color:#3a3f45;margin:0 0 16px}
+  .lead b{color:var(--accent);font-weight:700}
+  .snap-badge{display:inline-block;font-size:10.5px;font-weight:700;color:var(--muted);background:#f2f3f5;border:1px solid var(--line);border-radius:6px;padding:2px 8px;margin-left:4px}
+
+  .pill{display:inline-block;font-size:11px;font-weight:600;border-radius:999px;padding:3px 10px;border:1px solid transparent}
+  .pill.builder{background:var(--blue-soft);color:var(--blue);border-color:#d3e2f0}
+  .pill.media{background:var(--violet-soft);color:var(--violet);border-color:#e4d6f6}
+  .pill.plan{background:var(--green-soft);color:var(--green);border-color:#cdeadd}
+  .ai{display:inline-flex;align-items:center;gap:3px;font-size:10px;font-weight:700;color:var(--accent);background:var(--accent-soft);border-radius:6px;padding:2px 7px;margin-left:5px}
+
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+  .chip{font-size:12px;font-weight:600;color:#2f3438;background:#fff;border:1px solid var(--line);border-radius:999px;padding:5px 12px;display:inline-flex;align-items:center;gap:6px}
+  .chip .dot{width:6px;height:6px;border-radius:50%;background:var(--accent)}
+  .note{font-size:12px;color:var(--muted);margin-top:14px;line-height:1.6;border-top:1px dashed var(--line);padding-top:12px}
+  .note b{color:#55606b}
+
+  .issue{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--line2)}
+  .issue:last-child{border-bottom:none}
+  .sev{flex:0 0 auto;font-size:10px;font-weight:800;letter-spacing:.4px;text-transform:uppercase;padding:3px 8px;border-radius:6px;height:fit-content}
+  .sev.crit{background:var(--red-soft);color:var(--red)}
+  .sev.warn{background:var(--amber-soft);color:var(--amber)}
+  .sev.ok{background:var(--green-soft);color:var(--green)}
+  .issue .it h5{margin:0 0 3px;font-size:13.5px;font-weight:700}
+  .issue .it p{margin:0;font-size:12.5px;color:#55606b}
+
+  .strat{display:grid;grid-template-columns:1fr;gap:12px}
+  .scard{border:1px solid var(--line);border-radius:12px;padding:15px 17px;background:#fcfcfd;display:flex;gap:13px}
+  .scard .num{flex:0 0 auto;width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;color:#fff;background:var(--accent)}
+  .scard.two .num{background:var(--blue)} .scard.three .num{background:var(--green)}
+  .scard .sc-body h4{margin:1px 0 4px;font-size:14px;font-weight:700}
+  .scard .sc-body p{margin:0;font-size:12.8px;color:#4a5058}
+  .scard .sc-body p b{color:var(--ink);font-weight:700}
+  .tagline{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;padding:2px 8px;border-radius:6px;margin-bottom:3px}
+  .tagline.t1{color:var(--accent);background:var(--accent-soft)}
+  .tagline.t2{color:var(--blue);background:var(--blue-soft)}
+  .tagline.t3{color:var(--green);background:var(--green-soft)}
+
+  .cols2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .action-list{margin:0;padding:0;list-style:none}
+  .action-list li{padding:9px 0 9px 26px;position:relative;font-size:13px;color:#3a3f45;border-bottom:1px solid var(--line2)}
+  .action-list li:last-child{border-bottom:none}
+  .action-list li::before{content:"";position:absolute;left:4px;top:14px;width:8px;height:8px;border-radius:2px;background:var(--accent)}
+  .action-list li b{color:var(--ink)}
+  .prio{font-size:10px;font-weight:800;letter-spacing:.3px;padding:1px 6px;border-radius:5px;margin-left:6px}
+  .prio.p0{background:var(--red-soft);color:var(--red)} .prio.p1{background:var(--amber-soft);color:var(--amber)} .prio.p2{background:var(--blue-soft);color:var(--blue)}
+
+  footer.foot{margin-top:24px;font-size:11.5px;color:#9aa0a8;text-align:center;line-height:1.8}
+  footer.foot b{color:#6b7280}
+  h3.block{font-size:13px;font-weight:700;color:#3a3f45;margin:22px 0 8px}
+
+  /* ---------- collapsible card ---------- */
+  .card.acc{padding:0}
+  .acc-head{display:flex;align-items:center;gap:12px;width:100%;border:0;background:transparent;
+    padding:17px 22px;font-family:inherit;font-size:14.5px;line-height:1.4;color:var(--ink);
+    cursor:pointer;text-align:left;border-radius:var(--radius);transition:.15s}
+  .acc-head:hover{background:#fafbfc}
+  .acc-tt{font-weight:600;margin-right:auto}
+  .acc-meta{font-size:12px;color:var(--faint);font-weight:600;white-space:nowrap}
+  /* chevron drawn from two borders so it needs no font or icon file */
+  .acc-car{flex:0 0 auto;width:9px;height:9px;margin-left:2px;
+    border-right:1.7px solid #9aa0a8;border-bottom:1.7px solid #9aa0a8;
+    transform:rotate(45deg) translate(-2px,-2px);transition:transform .18s}
+  .acc-head[aria-expanded="true"] .acc-car{transform:rotate(-135deg) translate(-3px,-3px)}
+  .acc-body{padding:0 22px 20px}
+  .acc-body[hidden]{display:none}
+
+  /* ---------- trend charts ---------- */
+  .tgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  .tcard{border:1px solid var(--line);border-radius:12px;padding:12px 13px 9px;background:#fcfcfd}
+  .tcard.flagged{background:var(--amber-soft);border-color:#f0dcb4}
+  .t-lb{font-size:11.5px;color:var(--muted);font-weight:600}
+  .t-top{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin-top:2px}
+  .t-val{font-size:22px;font-weight:800;letter-spacing:-.5px;line-height:1.15;font-variant-numeric:tabular-nums}
+  .t-top .delta{margin-top:0}
+  .t-svg{display:block;width:100%;height:56px;margin-top:7px}
+  .t-foot{display:flex;justify-content:space-between;gap:8px;font-size:10px;color:var(--faint);
+    font-weight:600;margin-top:3px;font-variant-numeric:tabular-nums}
+  .t-empty{height:56px;display:flex;align-items:center;justify-content:center;margin-top:7px;
+    border:1px dashed var(--line);border-radius:8px;font-size:11px;color:var(--faint);font-weight:600}
+  .t-hint{font-size:11px;color:var(--faint);font-weight:600;margin:11px 0 0}
+
+  /* ---------- date filter ---------- */
+  .filterbar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+  .dpwrap{position:relative}
+  .dpbtn{display:inline-flex;align-items:center;gap:9px;background:#fff;border:1px solid #cfd4da;border-radius:9px;padding:9px 13px;font-family:inherit;font-size:13px;font-weight:700;line-height:1.2;color:var(--ink);cursor:pointer;transition:.15s}
+  .dpbtn:hover{border-color:#a9b0b8}
+  .dpbtn .car{color:var(--muted);font-size:10px}
+  .dppanel{position:absolute;top:calc(100% + 7px);left:0;z-index:70;display:flex;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 10px 30px rgba(16,24,40,.16);overflow:hidden}
+  .dppanel[hidden]{display:none}
+  .dp-presets{width:212px;flex:0 0 auto;border-right:1px solid var(--line);padding:9px 0;max-height:340px;overflow-y:auto}
+  .dp-preset{display:flex;align-items:center;gap:10px;padding:7px 14px;width:100%;border:0;background:transparent;font-family:inherit;font-size:13px;line-height:1.35;color:var(--ink);text-align:left;cursor:pointer}
+  .dp-preset:hover{background:#f5f6f8}
+  .dp-preset .rad{width:15px;height:15px;border-radius:50%;border:1.5px solid #b9bfc6;flex:0 0 auto;transition:.15s}
+  .dp-preset.sel{font-weight:700}
+  .dp-preset.sel .rad{border-color:var(--accent);border-width:4.5px}
+  .dp-preset .pc{margin-left:auto;font-size:10.5px;font-weight:700;color:var(--faint);font-variant-numeric:tabular-nums}
+  .dp-preset[disabled]{color:#b9bfc6;cursor:not-allowed}
+  .dp-preset[disabled]:hover{background:transparent}
+  .dp-preset[disabled] .rad{border-color:#dde1e5}
+  .dp-right{padding:14px 16px 11px;flex:1 1 auto}
+  .dp-cals{display:flex;gap:24px}
+  .dp-mhead{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:5px;min-height:26px}
+  .dp-mname{font-size:14px;font-weight:700}
+  .dp-nav{border:0;background:transparent;cursor:pointer;color:var(--muted);font-size:18px;line-height:1;padding:1px 7px;border-radius:6px;font-family:inherit}
+  .dp-nav:hover{background:#f5f6f8;color:var(--ink)}
+  .dp-nav[disabled]{color:#dde1e5;cursor:not-allowed}
+  .dp-nav[disabled]:hover{background:transparent}
+  .dp-grid{display:grid;grid-template-columns:repeat(7,30px);gap:2px 0}
+  .dp-dow{font-size:10.5px;font-weight:700;color:var(--faint);text-align:center;padding:3px 0}
+  .dp-day{height:29px;border:0;background:transparent;border-radius:7px;font-family:inherit;font-size:12.5px;font-weight:600;line-height:1;color:var(--ink);cursor:pointer;position:relative;padding:0}
+  .dp-day.blank{visibility:hidden}
+  /* a day with no stored scan is drawn faint, but it can still be an end of a
+     range — what it cannot do is open a report of its own, and Update enforces that */
+  .dp-day.off{color:#c2c7cd}
+  .dp-day:not(.blank):hover{background:var(--accent-soft)}
+  .dp-day.edge:hover{background:var(--accent)}
+  .dp-day.inr{background:var(--accent-soft);border-radius:0}
+  .dp-day.edge{background:var(--accent);color:#fff;border-radius:7px}
+  .dp-day .dot{position:absolute;left:50%;transform:translateX(-50%);bottom:3.5px;width:3.5px;height:3.5px;border-radius:50%;background:var(--accent)}
+  .dp-day.edge .dot{background:#fff}
+  .dp-foot{display:flex;align-items:flex-end;gap:14px;flex-wrap:wrap;border-top:1px solid var(--line);margin-top:12px;padding-top:11px}
+  .dp-rng{font-size:13.5px;font-weight:700;display:block}
+  .dp-hint{font-size:11.5px;color:var(--faint);font-weight:600;display:block}
+  .dp-btns{margin-left:auto;display:flex;gap:9px}
+  .dp-b{border:1px solid #cfd4da;background:#fff;border-radius:8px;padding:8px 17px;font-family:inherit;font-size:13px;font-weight:700;line-height:1.2;color:var(--ink);cursor:pointer;transition:.15s}
+  .dp-b:hover{background:#f5f6f8}
+  .dp-b.pri{background:var(--accent);border-color:var(--accent);color:#fff}
+  .dp-b.pri:hover{background:#c9462f}
+  .dp-b[disabled]{opacity:.42;cursor:not-allowed}
+  .dp-b.pri[disabled]:hover{background:var(--accent)}
+  .dp-legend{font-size:11px;color:var(--faint);font-weight:600;margin:9px 0 0}
+  .dp-legend i{display:inline-block;width:4px;height:4px;border-radius:50%;background:var(--accent);vertical-align:1.5px;margin-right:3px}
+  .chip{display:inline-flex;align-items:center;gap:7px;background:var(--accent-soft);border:1px solid #f3c9c0;color:var(--accent);border-radius:999px;padding:4px 12px;font-size:12px;font-weight:700}
+  .daylinks{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:12px 0 0;padding-top:12px;border-top:1px solid var(--line2)}
+  .daylinks-lb{font-size:11px;font-weight:800;letter-spacing:.4px;text-transform:uppercase;color:var(--faint);margin-right:2px}
+  .daylink{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:#fff;border-radius:999px;padding:5px 12px;font-family:inherit;font-size:12px;font-weight:700;line-height:1.3;color:var(--ink);cursor:pointer;transition:.15s;text-decoration:none}
+  .daylink:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-soft)}
+  .daylink small{font-weight:600;color:var(--faint);font-size:10.5px}
+  .daylink:hover small{color:var(--accent)}
+  .daylink.cur{border-color:var(--accent);background:var(--accent);color:#fff;cursor:default}
+  .daylink.cur small{color:#fff;opacity:.85}
+
+  @media (max-width:1000px){ .tgrid{grid-template-columns:repeat(3,1fr)} }
+  @media (max-width:760px){
+    .tgrid{grid-template-columns:repeat(2,1fr)}
+    .acc-meta{display:none}
+    .acc-head{padding:15px 16px}
+    .acc-body{padding:0 16px 18px}
+    .kpis,.kpis.k3{grid-template-columns:repeat(2,1fr)}
+    .cols2{grid-template-columns:1fr}
+    .wrap{padding:24px 14px 52px}
+    .barrow{grid-template-columns:96px 1fr 46px}
+    .langsw{top:8px;right:8px}
+    /* narrow screens: tighten the tables so they fit instead of pushing the page sideways */
+    table{font-size:12px}
+    thead th{padding:0 6px 8px}
+    tbody td{padding:8px 6px}
+    .dppanel{flex-direction:column;left:0;right:auto;max-width:calc(100vw - 34px)}
+    .dp-presets{width:auto;max-height:none;border-right:0;border-bottom:1px solid var(--line);display:flex;flex-wrap:wrap;gap:2px;padding:8px}
+    .dp-preset{width:auto;padding:6px 10px;border:1px solid var(--line);border-radius:999px;font-size:12px}
+    .dp-preset .pc{margin-left:4px}
+    .dp-cals{flex-direction:column;gap:16px}
+    .dp-right{overflow-x:auto}
+  }
+  @media (max-width:460px){ .tgrid{grid-template-columns:1fr} }
+</style>
+</head>
+<body class="lang-en">
+<div data-archive-banner style="background:#fdf4e3;border-bottom:1px solid #f0dcb4;color:#b7791f;font:600 12.5px/1.55 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;padding:9px 130px 9px 16px;text-align:center"><span class="vi">🗂 Bản lưu ngày 25/09/2026 — báo cáo này đã đóng băng, không cập nhật nữa. <a href="../index.html" style="color:#b7791f;font-weight:800">Xem báo cáo mới nhất</a> · <a href="../history.html" style="color:#b7791f;font-weight:800">Lịch sử dữ liệu theo ngày</a></span><span class="en">🗂 Archived snapshot of 25 Sep 2026 — this report is frozen and no longer updated. <a href="../index.html" style="color:#b7791f;font-weight:800">Open the latest report</a> · <a href="../history.html" style="color:#b7791f;font-weight:800">Daily data history</a></span></div>
+
+<div class="langsw">
+  <button id="bvi" onclick="setLang('vi')">VI</button>
+  <button id="ben" class="active" onclick="setLang('en')">EN</button>
+</div>
+
+<div class="wrap">
+
+  <header class="top">
+    <p class="eyebrow"><span class="vi">DX Living · Báo cáo hiệu suất tìm kiếm</span><span class="en">DX Living · Search Performance Report</span></p>
+    <h1 class="title"><span class="brand-dot"></span> <span class="vi">Báo cáo Hiệu suất SEO — dxliving.com</span><span class="en">SEO Performance Report — dxliving.com</span></h1>
+    <p class="subtitle">
+      <span class="vi"><b>Cập nhật mới nhất: 28 ngày</b> (GSC 26/08→22/09 · GA4 28/08→24/09), đọc trực tiếp từ Chrome · kèm <b>Hiện diện trên AI (AEO/GEO)</b> và <b>so sánh tháng trọn vẹn gần nhất (T8/2026 vs T7/2026)</b>. <b>Đây là bước một ngày so với lần quét 24/09</b>. <b>VỊ TRÍ TRUNG BÌNH CẢI THIỆN 2,0 BẬC</b>: 31,1 → <b>29,1</b>, mức tăng trong một ngày lớn nhất của chuỗi — nhưng đến từ <b>chín truy vấn yếu rời bảng</b> (95 → 86), không phải truy vấn thương mại đi lên. Click giữ <b>34</b>, impressions 1.087 → <b>1.034</b>, CTR 3,1% → <b>3,3%</b>. <b>TAB DAYS CỦA GSC LẦN ĐẦU ĐƯỢC LƯU</b> — 28 dòng theo ngày vào <span class="mono">gsc_28d.daily</span>, cho báo cáo dữ liệu thật theo ngày. <b>GA4: LƯU LƯỢNG TĂNG NHƯNG TƯƠNG TÁC GIẢM</b> — phiên 575 → <b>584</b>, người dùng 383 → <b>399</b>, nhưng phiên có tương tác <b>giảm</b> 212 → <b>198</b> và tỷ lệ tương tác 36,87% → <b>33,90%</b>. <b>Key event 1 → 3</b>, cả ba trong 7 ngày gần nhất. <b>Spam backlink gần như dừng</b>: chỉ +2 domain, +2 backlink. <b>Trích dẫn AI ngừng rơi ở 12</b>, trang được trích dẫn 8 → <b>9</b>. <b>MỘT TRƯỜNG NULL HÔM NAY</b>: không mở được bộ chọn chiều GA4 nên <b>Session source / medium không đọc được</b> — ghi null, không mang số hôm qua sang. <b>Lớp phủ /articles sang ngày thứ HAI MƯƠI CHÍN.</b></span>
+      <span class="en"><b>Latest update: last 28 days</b> (GSC 26 Aug→22 Sep · GA4 28 Aug→24 Sep), read directly through Chrome · with <b>AI presence (AEO/GEO)</b> and the <b>latest complete-month comparison (Aug 2026 vs Jul 2026)</b>. <b>This is a ONE-day step from the 24 Sep scan</b>. <b>AVERAGE POSITION IMPROVED 2.0 PLACES</b>: 31.1 → <b>29.1</b>, the largest single-day gain in this series — but it came from <b>nine weak queries leaving the table</b> (95 → 86), not from commercial queries rising. Clicks held at <b>34</b>, impressions 1,087 → <b>1,034</b>, CTR 3.1% → <b>3.3%</b>. <b>THE GSC DAYS TAB IS NOW STORED</b> — 28 per-day rows written into <span class="mono">gsc_28d.daily</span>, giving the report true day-grain. <b>GA4: VOLUME UP, ENGAGEMENT DOWN</b> — sessions 575 → <b>584</b>, users 383 → <b>399</b>, but engaged sessions <b>fell</b> 212 → <b>198</b> and the engagement rate 36.87% → <b>33.90%</b>. <b>Key events 1 → 3</b>, all three inside the last 7 days. <b>The backlink spam influx has all but stopped</b>: just +2 domains, +2 backlinks. <b>AI responses stopped falling at 12</b> and cited pages rose 8 → <b>9</b>. <b>ONE FIELD IS NULL TODAY</b>: the GA4 dimension picker would not open, so <b>Session source / medium could not be read</b> — recorded null, not carried forward. <b>The /articles overlay is on day TWENTY-NINE.</b></span>
+    </p>
+    <div class="metastrip">
+      <span class="tag on">✓ Google Search Console (live)</span>
+      <span class="tag on">✓ Google Analytics 4 (live)</span>
+      <span class="tag on">✓ Ahrefs (live)</span>
+      <span class="tag"><span class="vi">🤖 Hiện diện AI (AEO/GEO) · 30/100 (đi ngang lần thứ mười bảy · sẵn sàng kỹ thuật 7/7)</span><span class="en">🤖 AI Visibility (AEO/GEO) · 30/100 (flat for a seventeenth scan · technical readiness 7/7)</span></span>
+      <span class="tag on"><span class="vi">✓ <b>118/118 trang (117 sitemap + /login) trả 200</b>, mỗi trang một H1 + canonical</span><span class="en">✓ <b>118 of 118 pages (117 sitemap + /login) returned 200</b>, each with one H1 + canonical</span></span>
+      <span class="tag" style="background:var(--red-soft);border-color:#f3c9c9;color:var(--red)"><span class="vi">⚠ <b>XÁC MINH “CRAWLED — CURRENTLY NOT INDEXED” VẪN LÀ FAILED</b> — 51 URL bị Google chủ động từ chối index, và bản dựng Page indexing đã đứng yên bốn ngày ở 21/09</span><span class="en">⚠ <b>THE “CRAWLED — CURRENTLY NOT INDEXED” VALIDATION STILL READS FAILED</b> — 51 URLs Google actively declined to index, and the Page indexing build has now been frozen at 21 Sep for four days</span></span>
+      <span class="tag"><span class="vi">🔎 SERP snapshot · location Úc</span><span class="en">🔎 SERP snapshot · AU location</span></span>
+      <span class="tag"><span class="vi">📅 Cập nhật: 25/09/2026</span><span class="en">📅 Updated: 25 Sep 2026</span></span>
+      <a class="tag hist" href="../history.html">🗂 <span class="vi">Lịch sử dữ liệu theo ngày →</span><span class="en">Daily data history →</span></a>
+      <a class="tag hist" href="../weekly/2026-09-18.html">📊 <span class="vi">Báo cáo tuần (12–18/09) →</span><span class="en">Weekly report (12–18 Sep) →</span></a>
+    </div>
+  </header>
+
+  <!-- DATA NOTE -->
+  <section class="card" style="padding:16px 18px">
+    <div class="status">
+      <div class="ic">✓</div>
+      <div class="body">
+        <h4><span class="vi">Nguồn dữ liệu: đọc trực tiếp từ Chrome (GSC + GA4 + Ahrefs) — một lần quét ngày 21/09</span><span class="en">Data source: read directly from Chrome (GSC + GA4 + Ahrefs) — a single scan on 21 Sep</span></h4>
+        <p>
+          <span class="vi"><b>Không dùng OpenSEO, không dùng Supermetrics.</b> Mọi con số 28 ngày trên trang này đều đọc trực tiếp qua Chrome ngày <b>25/09/2026</b> (khung 06:00 quen thuộc), và đây là <b>bước MỘT ngày</b> từ <b>24/09</b>. <b>MỘT — VỊ TRÍ TRUNG BÌNH CẢI THIỆN 2,0 BẬC, 31,1 → 29,1</b>, mức tăng một ngày lớn nhất chuỗi này; nhưng số truy vấn có impression rơi <b>95 → 86</b>, nên phần cải thiện đến từ chín truy vấn yếu rời bảng chứ không phải truy vấn thương mại đi lên. <b>HAI — CLICK GIỮ 34 LẦN THỨ BA LIÊN TIẾP</b>, impressions 1.087 → <b>1.034</b>, CTR 3,1% → <b>3,3%</b>. Thương hiệu nay chiếm <b>29 trên 34 click (85,3%)</b>. <b>BA — TAB DAYS ĐÃ ĐƯỢC LƯU</b>: 28 dòng click/impression theo ngày lần đầu ghi vào <span class="mono">gsc_28d.daily</span>, cộng đúng 34 và 1.034. <b>BỐN — GA4 TĂNG LƯỢNG NHƯNG GIẢM CHẤT</b>: phiên <b>575 → 584</b>, người dùng <b>383 → 399</b>, sự kiện <b>2.776 → 2.841</b>, nhưng phiên có tương tác <b>212 → 198</b> và tỷ lệ tương tác <b>36,87% → 33,90%</b>; theo tuần còn xấu hơn, <b>33,86% → 24,61%</b>, tuần giảm thứ tám. <b>NĂM — KEY EVENT 1 → 3</b>, cả ba thuộc Direct và cả ba nằm trong tuần 18–24/09. <b>SÁU — GA4 TRẢ VỀ BẢY DÒNG KÊNH</b>, có thêm Cross-network (4 phiên), và tổng các dòng vượt tổng phiên 10 đơn vị (594 so với 584); số sự kiện vẫn khớp chính xác 2.841 nên đây là chồng lấn phân bổ. <b>BẢY — KHÔNG ĐỌC ĐƯỢC SESSION SOURCE / MEDIUM</b>: bộ chọn chiều của bảng GA4 không mở sau bốn lần thử, nên trường này ghi <b>null</b> và phần tách theo <span class="mono">m.facebook.com</span> không được nêu lại. <b>TÁM — TRANG WEB NHANH, TRẦN TTFB NHÍCH LÊN</b>: trung bình 328 → <b>336 ms</b>, trung vị 267 → <b>274 ms</b>, chậm nhất 545 → <b>782 ms</b> (<span class="mono">/articles/plan-vs-actual-reporting-construction</span>), <b>118/118 trang dưới 1 giây</b>. <b>CHÍN — KHÔNG CÓ BÀI MỚI</b>: sitemap giữ <b>119 URL</b> và <b>95 bài</b>; orphan <b>0</b>, bài chỉ tới được từ hub <b>25 → 23</b>. <b>MƯỜI — trích dẫn AI ngừng rơi ở 12</b> và trang được trích dẫn <b>8 → 9</b> (Copilot 4 → 5); <b>lớp phủ /articles sang ngày HAI MƯƠI CHÍN</b>. Bảng Crawled pages của Ahrefs lần này đọc <b>cả hai trang</b> và thu được <b>186 dòng trạng thái</b> trên <b>187</b> trang. Không đo lại và ghi <b>null</b>: corpus bên thứ ba, AI share of voice và Core Web Vitals.</span>
+          <span class="en"><b>No OpenSEO, no Supermetrics.</b> Every 28-day figure on this page was read directly through Chrome on <b>25 Sep 2026</b> (the usual 06:00 slot), and this is a <b>ONE-day step</b> from <b>24 Sep</b>. <b>ONE — AVERAGE POSITION IMPROVED 2.0 PLACES, 31.1 → 29.1</b>, the largest single-day gain in this series; but queries with impressions fell <b>95 → 86</b>, so the gain came from nine weak queries leaving the table rather than commercial queries rising. <b>TWO — CLICKS HELD AT 34 FOR A THIRD CONSECUTIVE SCAN</b>, impressions <b>1,087 → 1,034</b> and CTR <b>3.1% → 3.3%</b>. Brand is now <b>29 of 34 clicks (85.3%)</b>. <b>THREE — THE DAYS TAB IS NOW STORED</b>: the 28 per-day clicks/impressions rows are written into <span class="mono">gsc_28d.daily</span> for the first time and sum to exactly 34 and 1,034. <b>FOUR — GA4 GREW IN VOLUME AND FELL IN QUALITY</b>: sessions <b>575 → 584</b>, users <b>383 → 399</b>, events <b>2,776 → 2,841</b>, but engaged sessions <b>212 → 198</b> and the engagement rate <b>36.87% → 33.90%</b>; week over week it is worse still, <b>33.86% → 24.61%</b>, an eighth consecutive weekly decline. <b>FIVE — KEY EVENTS 1 → 3</b>, all three attributed to Direct and all three inside the 18–24 Sep week. <b>SIX — GA4 RETURNED SEVEN CHANNEL ROWS</b>, with Cross-network appearing for the first time at 4 sessions, and the rows overshoot the session total by 10 (594 vs 584); the event counts still reconcile to 2,841 exactly, so this is attribution overlap rather than a read error. <b>SEVEN — SESSION SOURCE / MEDIUM COULD NOT BE READ</b>: the GA4 table dimension picker would not open after four attempts, so the field is recorded <b>null</b> and the <span class="mono">m.facebook.com</span> referral split is not restated. <b>EIGHT — THE SITE IS FAST BUT THE CEILING ROSE</b>: mean TTFB <b>328 → 336 ms</b>, median 267 → <b>274 ms</b>, slowest page <b>545 → 782 ms</b> (<span class="mono">/articles/plan-vs-actual-reporting-construction</span>), <b>all 118 pages under one second</b>. <b>NINE — NO NEW ARTICLE</b>: the sitemap held at <b>119 URLs</b> and <b>95 articles</b>; orphans <b>0</b> and hub-only articles improved <b>25 → 23</b>. <b>TEN — AI responses stopped falling at 12</b> and cited pages rose <b>8 → 9</b> (Copilot 4 → 5); <b>the /articles overlay is on day TWENTY-NINE</b>. The Ahrefs Crawled pages table was read across <b>both pages</b> this cycle and returned <b>186 status rows</b> against <b>187</b> pages. Not re-measured and recorded as <b>null</b>: third-party corpus, AI share of voice and Core Web Vitals.</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- LATEST 28D -->
+  <section class="card">
+    <p class="section-label"><span class="bar"></span> <span class="vi">Cập nhật mới nhất — 28 ngày</span><span class="en">Latest update — last 28 days</span> <span class="snap-badge">LIVE · GSC + GA4 + Ahrefs · 25/09/2026</span></p>
+    <p class="section-sub"><span class="vi">GSC: 25/08 → 21/09 · GA4: 27/08 → 23/09 · cả hai cửa sổ trượt <b>một ngày</b> kể từ lần quét 23/09; xem khối So sánh theo tháng bên dưới để có mốc dài hạn</span><span class="en">GSC: 25 Aug → 21 Sep · GA4: 27 Aug → 23 Sep · both windows rolled <b>one day</b> since the 23 Sep scan; see the month-over-month block below for a longer baseline</span></p>
+    <h3 class="block" style="margin-top:2px"><span class="vi">Tìm kiếm — Google Search Console <span class="snap-badge">✓ đọc trực tiếp 25/09 · 26/08 → 22/09 · 86 truy vấn</span></span><span class="en">Search — Google Search Console <span class="snap-badge">✓ read live 25 Sep · 26 Aug → 22 Sep · 86 queries</span></span></h3>
+    <h3 class="block" style="margin-top:2px"><span class="vi">Tìm kiếm — Google Search Console <span class="snap-badge">✓ đọc trực tiếp 24/09 · 25/08 → 21/09 · 95 truy vấn</span></span><span class="en">Search — Google Search Console <span class="snap-badge">✓ read live 24 Sep · 25 Aug → 21 Sep · 95 queries</span></span></h3>
+    <div class="kpis">
+      <div class="kpi"><div class="k-label">Clicks</div><div class="k-val">34</div><div class="delta flat"><span class="vi">▬ 34 → 34 (24/09→25/09, cửa sổ dịch 1 ngày) · giữ nguyên lần thứ ba liên tiếp · 85,3% là brand</span><span class="en">▬ 34 → 34 vs 24 Sep (window advanced 1 day) · held for a third consecutive scan · 85.3% brand</span></div></div>
+      <div class="kpi"><div class="k-label">Impressions</div><div class="k-val">1,034</div><div class="delta down"><span class="vi">▼ 53 so với 24/09 · cộng đúng 28 dòng của tab DAYS · 28 dòng này nay được lưu vào file ngày</span><span class="en">▼ 53 vs 24 Sep · summed exactly over the 28 DAYS rows · those 28 rows are now stored in the day file</span></div></div>
+      <div class="kpi"><div class="k-label"><span class="vi">CTR trung bình</span><span class="en">Average CTR</span></div><div class="k-val">3.3%</div><div class="delta up"><span class="vi">▲ 3,1% → 3,3% — click giữ nguyên trong khi impressions giảm 53</span><span class="en">▲ 3.1% → 3.3% — clicks held while impressions fell 53</span></div></div>
+      <div class="kpi"><div class="k-label"><span class="vi">Vị trí trung bình</span><span class="en">Average position</span></div><div class="k-val">29.1</div><div class="delta up"><span class="vi">▲ 31,1 → 29,1 — tốt lên 2,0 bậc, mức tăng một ngày lớn nhất chuỗi; do chín truy vấn yếu rời bảng (95 → 86)</span><span class="en">▲ 31.1 → 29.1 — better by 2.0 places, the largest single-day gain in this series; driven by nine weak queries leaving the table (95 → 86)</span></div></div>
+    </div>
+
+    <h3 class="block"><span class="vi">Website — Google Analytics 4 <span class="snap-badge">✓ đọc trực tiếp 25/09 · 28/08 → 24/09 · không phải số thiếu</span></span><span class="en">Website — Google Analytics 4 <span class="snap-badge">✓ read live 25 Sep · 28 Aug → 24 Sep · not an under-count</span></span></h3>
+    <div class="kpis">
+      <div class="kpi"><div class="k-label">Sessions</div><div class="k-val">584</div><div class="delta up"><span class="vi">▲ 575 → 584 · thêm 9 phiên · 191/584 rơi vào 7 ngày cuối (18–24/09)</span><span class="en">▲ 575 → 584 · 9 more sessions · 191 of 584 fall in the last 7 days (18–24 Sep)</span></div></div>
+      <div class="kpi"><div class="k-label">Engaged sessions</div><div class="k-val">198</div><div class="delta down"><span class="vi">▼ 212 → 198 — mất 14 phiên gắn kết dù tổng phiên tăng 9</span><span class="en">▼ 212 → 198 — 14 fewer engaged sessions even as total sessions rose 9</span></div></div>
+      <div class="kpi"><div class="k-label">Engagement rate</div><div class="k-val">33.9%</div><div class="delta down"><span class="vi">▼ 36,87% → 33,90% · Direct +11 (260), Organic Social +5 (165), Organic Search −12 (144), Unassigned 2 → 13 — Search vẫn dẫn về chất lượng với 59,72% tương tác và 1 phút 31 giây, còn Organic Social chỉ 3 giây</span><span class="en">▼ 36.87% → 33.90% · Direct +11 (260), Organic Social +5 (165), Organic Search −12 (144), Unassigned 2 → 13 — Search still leads on quality at 59.72% engagement and 1m 31s, while Organic Social averages three seconds</span></div></div>
+      <div class="kpi"><div class="k-label">Key events</div><div class="k-val">3</div><div class="delta up"><span class="vi">▲ 1 → 3 · cả ba đến từ Direct và cả ba nằm trong 7 ngày gần nhất (18–24/09) · tỷ lệ 0,17% → 0,51%</span><span class="en">▲ 1 → 3 · all three attributed to Direct and all three inside the last 7 days (18–24 Sep) · rate 0.17% → 0.51%</span></div></div>
+    </div>
+
+    <h3 class="block"><span class="vi">Top truy vấn — GSC (28 ngày, 86 truy vấn) <span class="snap-badge">✓ đọc trực tiếp 25/09</span></span><span class="en">Top queries — GSC (28 days, 86 queries) <span class="snap-badge">✓ read live 25 Sep</span></span></h3>
+    <div class="tblwrap">
+    <table>
+      <thead><tr><th><span class="vi">Truy vấn</span><span class="en">Query</span></th><th class="num">Clicks</th><th class="num">Impr.</th><th><span class="vi">Loại</span><span class="en">Type</span></th></tr></thead>
+        <tr><td>dxliving</td><td class="num">14</td><td class="num">22</td><td><span class="brandq">Brand</span></td></tr>
+        <tr><td>dx living</td><td class="num">13</td><td class="num">66</td><td><span class="brandq">Brand</span></td></tr>
+        <tr><td>dx_models</td><td class="num">1</td><td class="num">21</td><td><span class="brandq">Brand</span></td></tr>
+        <tr><td>dx homes</td><td class="num">1</td><td class="num">7</td><td><span class="brandq">Brand</span></td></tr>
+        <tr><td>i want 3 months</td><td class="num">1</td><td class="num">1</td><td><span class="pill builder">Non-brand ✦</span></td></tr>
+        <tr><td>3d renders for property developers melbourne</td><td class="num">0</td><td class="num">52</td><td><span class="pill builder">Non-brand ✦</span></td></tr>
+        <tr><td>3d renders melbourne</td><td class="num">0</td><td class="num">50</td><td><span class="pill builder">Non-brand ✦</span></td></tr>
+        <tr><td>3d interior renders melbourne</td><td class="num">0</td><td class="num">34</td><td><span class="pill builder">Non-brand ✦</span></td></tr>
+        <tr><td>3d renders for real estate melbourne</td><td class="num">0</td><td class="num">29</td><td><span class="pill builder">Non-brand ✦</span></td></tr>
+        <tr><td>custom living space melbourne</td><td class="num">0</td><td class="num">25</td><td><span class="pill builder">Non-brand ✦</span></td></tr>
+        <tr><td>3d renders for builders melbourne</td><td class="num">0</td><td class="num">21</td><td><span class="pill builder">Non-brand ✦</span></td></tr>
+        <tr><td>3d renders for developers melbourne</td><td class="num">0</td><td class="num">21</td><td><span class="pill builder">Non-brand ✦</span></td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="note">
+      <span class="vi"><b>Mọi nguồn đều đọc được hôm nay</b> — GSC, GA4, Ahrefs Site Explorer + Site Audit và Brand Radar; bảng <b>Session source / medium</b> của GA4 mở được bình thường. <b>Cách lấy impressions:</b> tab <b>DAYS</b> mở qua tham số <span class="mono">breakdown=date</span> và cộng đúng 28 dòng được <b>1.087</b> (ô tile làm tròn thành 1,09K); cùng 28 dòng đó cộng ra <b>34 click</b>, khớp với tile. <b>Bảng truy vấn</b> được đọc thẳng từ DOM (GSC phân trang trên giao diện nhưng giữ đủ 95 dòng), trả về <b>30 click / 731 impressions</b> — phần còn lại nằm ở các truy vấn Google ẩn vì quyền riêng tư. <b>Một điểm đọc thiếu:</b> bảng Crawled pages của Ahrefs bắt được 186 dòng trạng thái trên tổng 187 trang — dòng còn lại để trống chứ không đoán.</span>
+      <span class="en"><b>Every source read today</b> — GSC, GA4, Ahrefs Site Explorer + Site Audit and Brand Radar; GA4’s <b>Session source / medium</b> table opened normally. <b>How impressions were obtained:</b> the DAYS tab via the <span class="mono">breakdown=date</span> parameter, summing its 28 rows to exactly <b>1,087</b> (the tile rounds to 1.09K); the same 28 rows sum to <b>34 clicks</b>, matching the tile. <b>The query table</b> was read straight from the table DOM (GSC paginates visually but holds all 95 rows), returning <b>30 clicks / 731 impressions</b> — the remainder sits in queries Google withholds for privacy. <b>The one partial read:</b> the Ahrefs Crawled pages table captured 186 status rows against a reported total of 187 pages, and the unread row is left unassigned rather than guessed.</span>
+    </p>
+  </section>
+
+
+  <!-- TREND CHARTS -->
+  <section class="card" id="sec-trend">
+    <p class="section-label"><span class="bar"></span> <span class="vi">Diễn biến các chỉ số qua từng lần quét</span><span class="en">How each metric has moved, scan by scan</span> <span class="snap-badge" id="trend-range">…</span></p>
+    <p class="section-sub"><span class="vi">Mỗi điểm là <b>một lần quét đã lưu</b>, vẽ theo đúng khoảng cách ngày thật (các ngày không quét để trống, không nội suy). Số dưới mỗi tiêu đề là giá trị mới nhất; huy hiệu bên cạnh là thay đổi so với <b>lần quét trước đó</b>.</span><span class="en">Each point is <b>one stored scan</b>, placed at its true date spacing (unscanned days are left as gaps, never interpolated). The figure under each title is the latest value; the badge beside it is the change against the <b>previous scan</b>.</span></p>
+    <div class="tgrid" id="tgrid"></div>
+    <p class="t-hint" id="trend-hint"></p>
+    <p class="note"><span class="vi"><b>Đọc biểu đồ này thế nào:</b> GSC và GA4 là <b>cửa sổ trượt 28 ngày</b>, nên mỗi điểm là tổng của 28 ngày kết thúc ở ngày quét — đường đi lên nghĩa là cửa sổ đang dày lên, không phải traffic của riêng ngày đó. <b>Vị trí trung bình: thấp hơn là tốt hơn</b>, nên đường đi xuống mới là tin tốt. Ô <b>GA4 Sessions</b> được tô hổ phách vì GA4 ngừng thu thập từ ~29/07 — đường dốc xuống ở đó là <b>số thiếu</b>, không phải traffic giảm. Các chỉ số Ahrefs và AI chỉ có từ ngày bắt đầu đo (backlinks từ 28/07, trích dẫn AI từ 28/07, AI Visibility từ 29/07); trước đó để trống thay vì đoán.</span><span class="en"><b>How to read this:</b> GSC and GA4 are <b>rolling 28-day windows</b>, so each point is the total for the 28 days ending on that scan date — a rising line means the window is filling out, not that a single day spiked. <b>Average position: lower is better</b>, so a falling line is the good news there. The <b>GA4 Sessions</b> tile is tinted amber because GA4 stopped collecting around 29 Jul — its decline is an <b>under-count</b>, not a traffic drop. Ahrefs and AI metrics only start from the day they were first measured (backlinks 28 Jul, AI citations 28 Jul, AI Visibility 29 Jul); earlier points are left blank rather than guessed.</span></p>
+  </section>
+
+  <!-- AHREFS AUTHORITY -->
+  <section class="card">
+    <p class="section-label"><span class="bar"></span> Authority &amp; Backlinks — Ahrefs <span class="snap-badge">LIVE · 24/09/2026</span></p>
+    <p class="section-sub"><span class="vi">Đọc trực tiếp Ahrefs Site Explorer qua Chrome · dxliving.com/ (subdomains)</span><span class="en">Read directly from Ahrefs Site Explorer via Chrome · dxliving.com/ (subdomains)</span></p>
+    <div class="kpis">
+      <div class="kpi"><div class="k-label">Referring domains</div><div class="k-val">663</div><div class="delta up"><span class="vi">▲ 661 → <b>663</b> · all-time 840 → <b>842</b> · followed <b>296</b> (44,6%) — <b>chỉ +2 trong một ngày</b>, dòng spam gần như đã dừng</span><span class="en">▲ 661 → <b>663</b> · all-time 840 → <b>842</b> · followed <b>296</b> (44.6%) — <b>just +2 in one day</b>, the spam influx has all but stopped</span></div></div>
+      <div class="kpi"><div class="k-label">Backlinks</div><div class="k-val">699</div><div class="k-sub"><span class="vi">▲ 697 → <b>699</b> · all-time 903 → <b>905</b> · followed <b>302</b> (43,2%) — +2 trong một ngày, cùng nhịp với domain</span><span class="en">▲ 697 → <b>699</b> · all-time 903 → <b>905</b> · followed <b>302</b> (43.2%) — +2 in one day, the same pace as domains</span></div></div>
+      <div class="kpi"><div class="k-label"><span class="vi">Trích dẫn AI</span><span class="en">AI citations</span></div><div class="k-val">12</div><div class="k-sub"><span class="vi">▬ <b>12 → 12</b> phản hồi trên <b>9</b> trang (8 → 9) — ngừng rơi sau ba lần giảm; Copilot 4 → 5 trang trên cùng 5 phản hồi, ChatGPT giữ 6, Perplexity giữ 1</span><span class="en">▬ <b>12 → 12</b> responses across <b>9</b> pages (8 → 9) — it stopped falling after three declines; Copilot 4 → 5 pages on the same 5 responses, ChatGPT held at 6, Perplexity at 1</span></div></div>
+      <div class="kpi"><div class="k-label"><span class="vi">Trích dẫn AI</span><span class="en">AI citations</span></div><div class="k-val">12</div><div class="k-sub"><span class="vi">▬ <b>12 → 12</b> phản hồi trên <b>9</b> trang (8 → 9) — lần đầu không giảm sau ba lần liên tiếp</span><span class="en">▬ <b>12 → 12</b> responses across <b>9</b> pages (8 → 9) — the first scan in four without a fall</span></div></div>
+    </div>
+    <p class="note"><span class="vi"><b>Lưu ý:</b> Ahrefs vẫn ước tính <b>Organic keywords = 0, Organic traffic = 0</b> — số tìm kiếm thật lấy từ GSC ở khối trên (34 clicks / 1.087 impressions). <b>SPAM BACKLINK VẪN CHẢY VÀO:</b> referring domains <b>648 → 661</b> (+13), backlink live <b>684 → 697</b> (+13) trong một ngày; all-time <b>826 → 840</b> và <b>889 → 903</b>. Tỷ trọng followed nhích lên (44,1% → 44,5% trên domain, 42,7% → 43,0% trên backlink), nên link mới vẫn cùng hình dạng với lô đã bị gắn cờ. Toàn bộ 697 backlink đều có UR &lt; 10. DR và UR vẫn <b>0</b>. <b>Rà soát disavow nêu P0 ngày 19/09 đã treo sáu ngày.</b> Site Audit chạy mới hôm nay 04:28, health 100% nhưng chỉ crawl <b>13 URL</b> (giảm từ 14) — không so sánh được với crawl 118 trang của báo cáo này.</span><span class="en"><b>Note:</b> Ahrefs still estimates <b>Organic keywords = 0, Organic traffic = 0</b> — the real search numbers come from GSC above (34 clicks / 1,087 impressions). <b>THE BACKLINK SPAM IS STILL ARRIVING:</b> referring domains <b>648 → 661</b> (+13) and live backlinks <b>684 → 697</b> (+13) in one day; all-time <b>826 → 840</b> and <b>889 → 903</b>. The followed share edged up (44.1% → 44.5% on domains, 42.7% → 43.0% on backlinks), so the new links are the same shape as the batch already flagged. All 697 backlinks sit at UR &lt; 10. DR and UR are still <b>0</b>. <b>The disavow review raised as P0 on 19 Sep is now six days outstanding.</b> Site Audit ran fresh today at 04:28, health 100% but only <b>13 URLs</b> crawled (down from 14) — not comparable with this report’s 118-page crawl.</span></p>
+  </section>
+
+  <!-- AI VISIBILITY / AEO-GEO -->
+  <section class="card">
+    <p class="section-label"><span class="bar"></span> <span class="vi">Hiện diện trên AI (AEO / GEO)</span><span class="en">AI Visibility (AEO / GEO)</span> <span class="snap-badge">LIVE · 24/09/2026</span></p>
+    <p class="section-sub"><span class="vi">Ahrefs AI index + kênh "AI Assistant" của GA4 + kiểm tra kỹ thuật trực tiếp trên origin (robots.txt · llms.txt · sitemap · schema) + đối chiếu SERP · framework <span class="mono">searchfit-seo:ai-visibility</span></span><span class="en">Ahrefs AI index + the GA4 "AI Assistant" channel + direct on-origin technical checks (robots.txt · llms.txt · sitemap · schema) + SERP cross-check · framework <span class="mono">searchfit-seo:ai-visibility</span></span></p>
+
+    <div class="kpis">
+      <div class="kpi"><div class="k-label"><span class="vi">Điểm AI Visibility</span><span class="en">AI Visibility score</span></div><div class="k-val">30<span style="font-size:15px;color:#9aa0a8">/100</span></div><div class="delta flat"><span class="vi">▬ đi ngang ở 30 lần thứ mười tám · sẵn sàng kỹ thuật 7/7 · trần điểm nằm ở corpus bên thứ ba (0) và đo lường (1)</span><span class="en">▬ flat at 30 for an eighteenth scan · technical readiness 7/7 · the ceiling sits in third-party corpus (0) and measurement (1)</span></div></div>
+      <div class="kpi"><div class="k-label"><span class="vi">Phản hồi AI có trích dẫn</span><span class="en">AI responses citing site</span></div><div class="k-val">12</div><div class="k-sub"><span class="vi">ChatGPT 6 ▬ · Copilot 5 ▬ · Perplexity 1 ▬ · Grok: null (Ahrefs tạm dừng) · <b>ngừng rơi ở 12</b></span><span class="en">ChatGPT 6 ▬ · Copilot 5 ▬ · Perplexity 1 ▬ · Grok: null (Ahrefs paused) · <b>it stopped falling at 12</b></span></div></div>
+      <div class="kpi"><div class="k-label"><span class="vi">Nền tảng có mặt</span><span class="en">Platforms present</span></div><div class="k-val">3<span style="font-size:15px;color:#9aa0a8">/6</span></div><div class="delta flat"><span class="vi">■ giữ 3 · đếm nền tảng chứ không đếm phản hồi · Google vẫn 0</span><span class="en">■ holds at 3 · counts platforms, not responses · Google surfaces still 0</span></div></div>
+      <div class="kpi"><div class="k-label"><span class="vi">Trang được trích dẫn</span><span class="en">Distinct cited pages</span></div><div class="k-val">9</div><div class="k-sub"><span class="vi">số đã khử trùng của Ahrefs · ▲ 8 → 9 · trên <b>95</b> bài — bề mặt trích dẫn nhích <b>8,4% → 9,5%</b>, vẫn làm tròn thành 1/10 nên điểm không đổi</span><span class="en">Ahrefs de-duplicated count · ▲ 8 → 9 · against <b>95</b> articles — the citation surface rises <b>8.4% → 9.5%</b>, still rounding to 1/10 so the score does not move</span></div></div>
+    </div>
+
+    <h3 class="block"><span class="vi">Traffic từ AI — GA4 kênh "AI Assistant" (26/08 → 22/09) <span class="snap-badge">✓ đọc trực tiếp 23/09</span></span><span class="en">Traffic from AI — the GA4 "AI Assistant" channel (26 Aug → 22 Sep) <span class="snap-badge">✓ read live 23 Sep</span></span></h3>
+    <div class="kpis">
+      <div class="kpi"><div class="k-label">Sessions</div><div class="k-val">6</div><div class="delta flat"><span class="vi">▬ giữ 6 · 1,03% tổng phiên · giống hệt hai lần đọc trước</span><span class="en">▬ flat at 6 · 1.03% of sessions · byte-identical to the two previous reads</span></div></div>
+      <div class="kpi"><div class="k-label">Engagement rate</div><div class="k-val">66.7%</div><div class="delta flat"><span class="vi">▬ 4/6 phiên có tương tác · gần gấp đôi mức trung bình site 33,9%</span><span class="en">▬ 4 of 6 sessions engaged · nearly double the 33.9% site average</span></div></div>
+      <div class="kpi"><div class="k-label"><span class="vi">Thời gian TB</span><span class="en">Avg engagement time</span></div><div class="k-val">19s</div><div class="delta flat"><span class="vi">▬ giữ 19s · 25 sự kiện, 4,17 sự kiện/phiên</span><span class="en">▬ flat at 19s · 25 events, 4.17 events per session</span></div></div>
+      <div class="kpi"><div class="k-label">Key events</div><div class="k-val">0</div><div class="delta flat"><span class="vi">▬ vẫn 0 · cả ba key event của kỳ này đều thuộc Direct</span><span class="en">▬ still 0 · all three key events in this window belong to Direct</span></div></div>
+    </div>
+
+    <h3 class="block"><span class="vi">Trích dẫn theo nền tảng — Ahrefs AI index</span><span class="en">Citations by platform — Ahrefs AI index</span></h3>
+    <div class="tblwrap">
+    <table>
+      <thead><tr><th><span class="vi">Nền tảng AI</span><span class="en">AI platform</span></th><th class="num"><span class="vi">Phản hồi</span><span class="en">Responses</span></th><th class="num"><span class="vi">Trang</span><span class="en">Pages</span></th><th><span class="vi">Trạng thái</span><span class="en">Status</span></th></tr></thead>
+      <tbody>
+        <tr><td>ChatGPT</td><td class="num">10</td><td class="num">5</td><td><span class="pill plan"><span class="vi">Có mặt · ■ giữ 10 phản hồi / 5 trang, lần đọc thứ hai</span><span class="en">Present · ■ flat at 10 responses / 5 pages, a second reading</span></span></td></tr>
+        <tr><td>Microsoft Copilot</td><td class="num">6</td><td class="num">5</td><td><span class="pill plan"><span class="vi">Có mặt · ▼ phản hồi 8 → 6 và trang 6 → 5 — toàn bộ mức giảm AI kỳ này nằm ở đây</span><span class="en">Present · ▼ responses 8 → 6 and pages 6 → 5 — the whole AI fall this cycle sits here</span></span></td></tr>
+        <tr><td>Google AI Overviews</td><td class="num">0</td><td class="num">0</td><td><span class="pill media"><span class="vi">Vắng mặt</span><span class="en">Absent</span></span></td></tr>
+        <tr><td>Google AI Mode</td><td class="num">0</td><td class="num">0</td><td><span class="pill media"><span class="vi">Vắng mặt</span><span class="en">Absent</span></span></td></tr>
+        <tr><td>Google Gemini</td><td class="num">0</td><td class="num">0</td><td><span class="pill media"><span class="vi">Vắng mặt</span><span class="en">Absent</span></span></td></tr>
+        <tr><td>Perplexity</td><td class="num">1</td><td class="num">1</td><td><span class="pill plan"><span class="vi">Có mặt · trụ sang ngày thứ hai mươi ba</span><span class="en">Present · holding for a twenty-third day</span></span></td></tr>
+        <tr><td>Grok</td><td class="num">—</td><td class="num">—</td><td><span class="snap-badge"><span class="vi">Ahrefs tạm dừng index · ghi null, không phải 0</span><span class="en">Ahrefs index paused · recorded as null, not 0</span></span></td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3 class="block"><span class="vi">Thẻ điểm 6 chiều (framework AI-visibility)</span><span class="en">Six-dimension scorecard (AI-visibility framework)</span></h3>
+    <div class="tblwrap">
+    <table>
+      <thead><tr><th><span class="vi">Chiều đo</span><span class="en">Dimension</span></th><th class="num"><span class="vi">Điểm</span><span class="en">Score</span></th><th><span class="vi">Bằng chứng thật</span><span class="en">Real evidence</span></th></tr></thead>
+      <tbody>
+        <tr><td><b><span class="vi">Hiện diện</span><span class="en">Presence</span></b></td><td class="num"><b>3/10</b></td><td><span class="vi"><b>Giữ 3/10.</b> Nền tảng có mặt <b>3/6</b> (ChatGPT, Perplexity, Copilot), tổng phản hồi <b>21</b> (12 / 1 / 8). Không nền tảng nào xuất hiện hay biến mất; Google (AI Overviews, AI Mode, Gemini) vẫn <b>0</b>. Đọc tất cả quốc gia.</span><span class="en"><b>Holds at 3/10.</b> Platforms present <b>3 of 6</b> (ChatGPT, Perplexity, Copilot), total responses <b>21</b> (12 / 1 / 8). No platform appeared or disappeared; Google (AI Overviews, AI Mode, Gemini) is still <b>0</b>. Read all countries.</span></td></tr>
+        <tr><td><b><span class="vi">Bề mặt trích dẫn</span><span class="en">Citation surface</span></b></td><td class="num">1/10</td><td><span class="vi"><b>Giữ 1/10.</b> Số trang được trích dẫn ÷ số bài còn sống = <b>10 / 91 = 11,0%</b>. Hai bài mới được xuất bản hôm nay nhưng tử số không đổi, nên tỷ lệ lùi thêm; tử số đứng yên lần đọc thứ mười bốn.</span><span class="en"><b>Holds at 1/10.</b> Cited pages ÷ live articles = <b>10 / 91 = 11.0%</b>. Two more articles today with the numerator unchanged, so the ratio thins again; the numerator is flat for a fourteenth reading.</span></td></tr>
+        <tr><td><b><span class="vi">Sẵn sàng kỹ thuật</span><span class="en">Technical readiness</span></b></td><td class="num"><b>10/10</b></td><td><span class="vi"><b>7/7 tín hiệu đạt.</b> Đo lại <b>22/09</b> từ origin với cache no-store: <b>robots.txt</b> 200 (430 byte, giống hệt từng byte các lần trước), chỉ Disallow /register và /pages/, Allow riêng cho GPTBot / OAI-SearchBot / ChatGPT-User / PerplexityBot / ClaudeBot / Google-Extended; <b>llms.txt</b> 200 (12.678 byte) và <b>llms-full.txt</b> 200 (21.934 byte); <b>sitemap.xml</b> 200, <b>116 URL / 92 bài</b> (tăng từ 115/91), không có /login; trang chủ một khối JSON-LD <span class="mono">@graph</span> có node <span class="mono">["Organization","LocalBusiness","WebSite","WebPage"]</span>; <b>/faq</b> 200 trong 248ms có FAQPage; <b>/articles</b> 200 trong <b>528ms</b> (đọc lại 256–573ms) — trần 2.006ms hôm 19/09 không lặp lại. <b>Crawl toàn bộ: 115/115 trang trả 200.</b> <b>Cảnh báo giữ nguyên:</b> <span class="mono">articles_render</span> chỉ kiểm mã 200, không thấy lớp phủ trên hub.</span><span class="en"><b>7 of 7 signals pass.</b> Re-measured on <b>22 Sep</b> from the origin with cache no-store: <b>robots.txt</b> 200 (430 bytes, byte-identical to every prior read), Disallow only /register and /pages/, with explicit Allow for GPTBot / OAI-SearchBot / ChatGPT-User / PerplexityBot / ClaudeBot / Google-Extended; <b>llms.txt</b> 200 (12,678 bytes) and <b>llms-full.txt</b> 200 (21,934 bytes); <b>sitemap.xml</b> 200, <b>116 URLs / 92 articles</b> (up from 115/91), no /login; the homepage carries one JSON-LD <span class="mono">@graph</span> block with node <span class="mono">["Organization","LocalBusiness","WebSite","WebPage"]</span>; <b>/faq</b> 200 in 248 ms with FAQPage; <b>/articles</b> 200 in <b>528 ms</b> (256–573 ms on re-read) — the 2,006 ms ceiling of 19 Sep did not repeat. <b>Full crawl: 115 of 115 pages return 200.</b> <b>Caveat unchanged:</b> <span class="mono">articles_render</span> only checks for HTTP 200; it does not see the hub overlay.</span></td></tr>
+        <tr><td><b><span class="vi">Corpus bên thứ ba</span><span class="en">Third-party corpus</span></b></td><td class="num">0/10</td><td><span class="vi"><b>0/4</b> bộ truy vấn high-intent đã kiểm có DXL. <b>KHÔNG kiểm lại hôm nay (11/09)</b> — giữ từ lần đối chiếu SERP gần nhất, nên <b>0/10</b> là <b>chưa đo lại</b>.</span><span class="en"><b>0 of 4</b> high-intent query sets checked carry DXL. <b>NOT re-tested today (11 Sep)</b> — held from the last SERP cross-check, so this <b>0/10</b> is <b>not re-measured</b>.</span></td></tr>
+        <tr><td><b><span class="vi">Năng lực đo lường</span><span class="en">Measurement</span></b></td><td class="num">1/10</td><td><span class="vi">Đọc lại <b>22/09</b> trong workspace <span class="mono">Nguyen Thi Thanh Tram</span>: report <b>"Dxliving"</b> vẫn tồn tại nhưng <b>0 prompt</b>, AI SoV là dấu gạch (null) — <b>lần thứ hai mươi lăm</b> không đổi.</span><span class="en">Re-read <b>22 Sep</b> in the <span class="mono">Nguyen Thi Thanh Tram</span> workspace: the <b>"Dxliving"</b> report still exists but tracks <b>0 prompts</b>, AI SoV a dash (null) — a <b>twenty-fifth</b> unchanged scan.</span></td></tr>
+        <tr><td><b><span class="vi">Độ chính xác · Sắc thái · Thứ tự</span><span class="en">Accuracy · Sentiment · Position</span></b></td><td class="num"><span class="snap-badge"><span class="vi">chưa đo</span><span class="en">not measured</span></span></td><td><span class="vi">Không thể kết luận khi chưa bật prompt tracking — <b>không suy đoán số liệu</b>. Bật Brand Radar prompts là điều kiện để đo 3 chiều này.</span><span class="en">Cannot be assessed without prompt tracking — <b>no numbers are guessed here</b>. Enabling Brand Radar prompts is the prerequisite for these three.</span></td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="lead" style="margin:14px 0 0"><span class="vi"><b>ĐIỂM ĐI NGANG Ở 30 LẦN THỨ MƯỜI BẢY — TRẦN ĐIỂM KHÔNG NẰM Ở ON-SITE.</b> Điểm tổng = (<b>3</b>+<b>1</b>+<b>10</b>+<b>0</b>+<b>1</b>)/5 × 10 = <b>30/100</b>. Sẵn sàng kỹ thuật đã <b>10/10</b> suốt chuỗi; chỉ <b>coverage bên thứ ba</b> hoặc <b>bật prompt tracking Brand Radar</b> mới đẩy được điểm. Đáng lưu ý: điểm đứng yên trong khi số phản hồi AI thực tế đã giảm ba lần liên tiếp (17 → 16 → 15 → 12) — thang điểm quá thô để bắt chuyển động đó.</span><span class="en"><b>FLAT AT 30 FOR A SEVENTEENTH SCAN — THE CEILING IS NOT ON-SITE.</b> Total = (<b>3</b>+<b>1</b>+<b>10</b>+<b>0</b>+<b>1</b>)/5 × 10 = <b>30/100</b>. Technical readiness has been <b>10/10</b> throughout; only <b>third-party coverage</b> or <b>switching on Brand Radar prompt tracking</b> will move the score. Worth noting: the score has not moved while actual AI responses have fallen three scans running (17 → 16 → 15 → 12) — the scale is too coarse to register that.</span></p>
+
+    <h3 class="block"><span class="vi">Khoảng trống prompt — AI đang trích ai thay vì DXL</span><span class="en">Prompt gap — who AI cites instead of DXL</span></h3>
+    <div class="tblwrap">
+    <table>
+      <thead><tr><th><span class="vi">Prompt / truy vấn mục tiêu</span><span class="en">Target prompt / query</span></th><th><span class="vi">DXL có mặt?</span><span class="en">DXL present?</span></th><th><span class="vi">Nguồn đang được trích</span><span class="en">Sources being cited</span></th></tr></thead>
+      <tbody>
+        <tr><td class="mono">best 3D rendering services Melbourne</td><td><span class="pill media"><span class="vi">Không</span><span class="en">No</span></span></td><td><span class="vi">myarchitectai ("Best… 2026 List"), 3D Revolution, ArchiCGI, RenderVision, OMEGARENDER, visengine</span><span class="en">myarchitectai ("Best… 2026 List"), 3D Revolution, ArchiCGI, RenderVision, OMEGARENDER, visengine</span></td></tr>
+        <tr><td class="mono">VR / 3D walkthrough before building (AU)</td><td><span class="pill media"><span class="vi">Không</span><span class="en">No</span></span></td><td>planitvr, Before The Slab, Montgomery Homes, CU Design</td></tr>
+        <tr><td class="mono">custom home builders Scoresby / Melbourne</td><td><span class="pill media"><span class="vi">Không</span><span class="en">No</span></span></td><td><span class="vi">Oneflare, xirconhomes "Top 20", Marton, ADIGA</span><span class="en">Oneflare, xirconhomes "Top 20", Marton, ADIGA</span></td></tr>
+        <tr><td class="mono">home design trends australia</td><td><span class="delta down" style="margin:0"><span class="vi">▼ SERP có AI Overview</span><span class="en">▼ SERP has AI Overview</span></span></td><td><span class="vi">DXL xếp hạng trong SERP nhưng Ahrefs ghi <b>0 trích dẫn AI Overview</b> → AI Overview đang lấy nguồn khác</span><span class="en">DXL ranks in the SERP but Ahrefs logs <b>0 AI Overview citations</b> → the AI Overview is sourcing others</span></td></tr>
+        <tr><td class="mono">DX Living <span class="brandq">Brand</span></td><td><span class="pill plan"><span class="vi">Có</span><span class="en">Yes</span></span></td><td><span class="vi">dxliving.com (/studio, /about, /projects) + Instagram, Facebook, LinkedIn · 1 mention bên thứ ba (3D Design Bureau)</span><span class="en">dxliving.com (/studio, /about, /projects) + Instagram, Facebook, LinkedIn · 1 third-party mention (3D Design Bureau)</span></td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="note" style="margin-top:10px"><span class="vi"><b>Đọc kết quả này:</b> với truy vấn brand, AI có đủ nguồn để nói về DX Living. Với mọi truy vấn <b>non-brand có ý định mua</b>, AI không có lý do nào để nhắc DXL — vì DXL không nằm trong tập listicle/directory mà AI lấy làm nguồn. Đây là <b>khoảng trống authority</b>, không phải khoảng trống nội dung.</span><span class="en"><b>How to read this:</b> on brand queries, AI has enough sources to describe DX Living. On every <b>non-brand buy-intent</b> query, AI has no reason to mention DXL — because DXL isn't in the listicle/directory set AI draws from. This is an <b>authority gap</b>, not a content gap.</span></p>
+
+    <h3 class="block"><span class="vi">Kiểm tra sẵn sàng cho AI</span><span class="en">AI-readiness checks</span></h3>
+    <div>
+      <div class="issue"><span class="sev ok">OK</span><div class="it"><h5><span class="vi">ĐẠT — sitemap 119 URL / 95 bài, crawl toàn bộ 118/118 trang trả 200, hub liên kết cả 95 bài</span><span class="en">PASS — sitemap 119 URLs / 95 articles, a full crawl of 118 of 118 pages returned 200, and the hub links all 95 articles</span></h5><p><span class="vi">Đo lại hôm nay trên chính origin với <span class="mono">cache: no-store</span>: sitemap.xml 200 (22.396 byte, <b>119 URL</b>, <b>95 bài</b>), robots.txt 200 (430 byte, giống hệt mọi lần đọc trước), llms.txt 200 (12.678 byte), llms-full.txt 200 (21.940 byte). Cả 118 trang crawl đều trả 200; 116/118 có JSON-LD; 73/95 bài có FAQPage.</span><span class="en">Re-measured today against the origin with <span class="mono">cache: no-store</span>: sitemap.xml 200 (22,396 bytes, <b>119 URLs</b>, <b>95 articles</b>), robots.txt 200 (430 bytes, byte-identical to every prior read), llms.txt 200 (12,678 bytes), llms-full.txt 200 (21,940 bytes). All 118 crawled pages returned 200; 116 of 118 carry JSON-LD; 73 of 95 articles carry FAQPage.</span></p></div></div>
+      <div class="issue"><span class="sev warn">Warning</span><div class="it"><h5><span class="vi">Health 100% trên 13 URL — không phải sức khoẻ của site 95 bài</span><span class="en">Health 100% on 13 URLs — not the health of a 95-article site</span></h5><p><span class="vi">Ahrefs Site Audit chạy mới hôm nay 04:28, hoàn tất, health <b>100%</b>, <b>13 URL</b> crawl (giảm từ 14), 0 URL nội bộ lỗi, lịch kế tiếp 25/09 4–5 AM. Con số này mô tả 13 trang, không phải 118 trang mà báo cáo này crawl — và phạm vi của nó còn <b>hẹp đi</b> một URL trong lần này.</span><span class="en">Ahrefs Site Audit ran fresh today at 04:28, completed, health <b>100%</b>, <b>13 URLs</b> crawled (down from 14), 0 internal URLs with errors, next scheduled 25 Sep 4–5 AM. That number describes 13 pages, not the 118 this report crawls — and its coverage <b>narrowed</b> by one URL this run.</span></p></div></div>
+      <div class="issue"><span class="sev warn">Warning</span><div class="it"><h5><span class="vi">Thu thập GA4 khoẻ — nhưng CHUYỂN ĐỔI thì không: 0 key event suốt 7 ngày (lần thứ MƯỜI SÁU) và 28 ngày rơi 5 → 2</span><span class="en">GA4 collection is healthy — CONVERSION is not: zero key events across 7 days (SIXTEENTH scan) and the 28-day count fell 5 → 2</span></h5><p><span class="vi">7 ngày gần nhất (15–21/09): <b>172 phiên, 660 event, 0 key event</b>, tương tác <b>22,67%</b>, thời gian TB <b>8 giây</b>. Bảy ngày trước đó (08–14/09): 116 phiên, 589 event, 0 key event, 38,79%, 22 giây. Phiên tăng, tương tác giảm tuần thứ NĂM liên tiếp.</span><span class="en">Last 7 days (15–21 Sep): <b>172 sessions, 660 events, 0 key events</b>, engagement <b>22.67%</b>, average time <b>8s</b>. The prior 7 days (8–14 Sep): 116 sessions, 589 events, 0 key events, 38.79%, 22s. Sessions up, engagement down for a FIFTH consecutive week.</span></p></div></div>
+      <div class="issue"><span class="sev crit">Critical</span><div class="it"><h5><span class="vi">Lớp phủ /articles sang ngày thứ HAI MƯƠI SÁU — chặn NGƯỜI ĐỌC, không chặn bot</span><span class="en">The /articles overlay is on day TWENTY-SIX — it blocks READERS, not bots</span></h5><p><span class="vi">Mở <span class="mono">/articles</span> trong Chrome và chờ 15 giây: đúng một div <span class="mono">position:fixed</span> (class <span class="mono">fixed inset-0 flex items-center justify-center bg-white</span>) với <span class="mono">z-index 99999</span>, opacity 1, visibility visible, phủ kín viewport. <span class="mono">elementFromPoint</span> ở tâm trả về BODY. HTML server vẫn liên kết cả 93 bài và mọi bài đều trả 200, nên bot không bị chặn — người đọc thì có.</span><span class="en">Opened <span class="mono">/articles</span> in Chrome and waited 15 s: exactly one <span class="mono">position:fixed</span> div (class <span class="mono">fixed inset-0 flex items-center justify-center bg-white</span>) at <span class="mono">z-index 99999</span>, opacity 1, visibility visible, covering the full viewport. <span class="mono">elementFromPoint</span> at the centre returns BODY. The server HTML still links all 93 articles and every one returned 200, so crawlers are unaffected — human readers are not.</span></p></div></div>
+      <div class="issue"><span class="sev ok">OK</span><div class="it"><h5><span class="vi">ĐÃ GIỮ — node LocalBusiness vẫn ở JSON-LD trang chủ</span><span class="en">STILL HOLDING — the LocalBusiness node remains in the homepage JSON-LD</span></h5><p><span class="vi">Kiểm lại <b>22/09</b>: trang chủ phục vụ <b>một</b> khối JSON-LD, <span class="mono">@graph <b>Đính chính có đo hôm nay:</b> đếm lại LocalBusiness trên toàn bộ 113 trang sitemap hôm nay: node này vẫn chỉ có trên <b>2 trang</b>, không phải toàn site như các ngày trước ghi nhận; Organization có trên 7 trang. Tín hiệu trang chủ vẫn đạt nên điểm sẵn sàng kỹ thuật giữ 10/10.</span> bốn node: <span class="mono">["Organization","LocalBusiness"]</span>, Organization, WebSite, WebPage. Sẵn sàng kỹ thuật giữ <b>7/7</b>. (Kích thước byte không đo lại hôm nay.)</span><span class="en">Re-checked <b>22 Sep</b>: the homepage serves <b>one</b> JSON-LD block, an <span class="mono">@graph <b>A measured correction today:</b> counting LocalBusiness across all 114 sitemap pages shows the node on just <b>2 pages</b>, not sitewide as earlier days recorded; Organization appears on 7. The homepage signal still passes, so technical readiness holds at 10/10.</span> with four nodes: <span class="mono">["Organization","LocalBusiness"]</span>, Organization, WebSite, WebPage. Technical readiness holds at <b>7/7</b>. (Byte size not re-measured today.)</span></p></div></div>
+      <div class="issue"><span class="sev ok">OK</span><div class="it"><h5><span class="vi">ĐÃ SỬA — tracking GA4/GTM vẫn chạy (kiểm DOM hôm nay)</span><span class="en">RESOLVED — GA4/GTM tracking is still firing (DOM checked today)</span></h5><p><span class="vi">Kiểm lại DOM trang chủ hôm nay: <b>13 thẻ script có src</b>, trong đó <b>5 là script tag</b>; <span class="mono">window.google_tag_manager</span> lộ ra <b>GTM-PZ9N8QTR</b>, <b>AW-18039433307</b> và <b>G-43HE633LGK</b>; <span class="mono">dataLayer</span> có <b>3</b> mục. Giống hệt lần đọc 21/09.</span><span class="en">Homepage DOM re-checked today: <b>13 script tags with src</b>, of which <b>5 are tag scripts</b>; <span class="mono">window.google_tag_manager</span> exposes <b>GTM-PZ9N8QTR</b>, <b>AW-18039433307</b> and <b>G-43HE633LGK</b>; <span class="mono">dataLayer</span> holds <b>3</b> entries. Identical to the 21 Sep read.</span></p></div></div>
+      <div class="issue"><span class="sev ok">OK</span><div class="it"><h5><span class="vi">ĐÃ SỬA — llms.txt đang online</span><span class="en">RESOLVED — llms.txt is live</span></h5><p><span class="vi"><span class="mono">/llms.txt</span> trả <b>200 — 12.678 byte</b>, <span class="mono">/llms-full.txt</span> <b>200 — 21.934 byte</b>. Kiểm lại <b>22/09</b>; robots.txt vẫn nêu cả hai ở đầu file và cả hai nằm trong sitemap.</span><span class="en"><span class="mono">/llms.txt</span> returns <b>200 — 12,678 bytes</b>, <span class="mono">/llms-full.txt</span> <b>200 — 21,934 bytes</b>. Re-checked <b>22 Sep</b>; robots.txt still lists both in its header and both are in the sitemap.</span></p></div></div>
+      <div class="issue"><span class="sev warn">Warning</span><div class="it"><h5><span class="vi">0 prompt được track trong Ahrefs Brand Radar — vẫn là đòn bẩy DUY NHẤT còn lại</span><span class="en">Zero prompts tracked in Ahrefs Brand Radar — still the ONLY remaining lever</span></h5><p><span class="vi">Đọc lại Brand Radar hôm nay: report "Dxliving" tồn tại trong workspace "Nguyen Thi Thanh Tram" nhưng <b>AI SoV hiện dấu gạch</b> và <b>Prompts = 0</b>, không đổi lần quét thứ HAI MƯƠI BẢY. Ba chiều Độ chính xác · Sắc thái · Thứ tự vì thế vẫn không đo được, và điểm 30/100 gần như chạm trần framework.</span><span class="en">Brand Radar re-read today: the "Dxliving" report exists in the "Nguyen Thi Thanh Tram" workspace but <b>AI SoV shows a dash</b> and <b>Prompts = 0</b>, unchanged for a TWENTY-SEVENTH scan. Accuracy · Sentiment · Position therefore stay unmeasurable, and 30/100 is close to this framework's ceiling.</span></p></div></div>
+      <div class="issue"><span class="sev warn">Warning</span><div class="it"><h5><span class="vi">Vắng mặt khỏi corpus listicle mà AI trích dẫn — không kiểm lại hôm nay</span><span class="en">Absent from the listicle corpus AI cites — not re-tested today</span></h5><p><span class="vi">Không xuất hiện trong danh sách "best 3D rendering Melbourne" / "top builders Melbourne", chưa có hồ sơ Oneflare / Houzz / Archify hay Google Business Profile có review. <b>Phép đối chiếu SERP này KHÔNG kiểm lại ngày 21/09</b> — điểm <b>0/10</b> là chưa đo lại.</span><span class="en">Not in any "best 3D rendering Melbourne" / "top builders Melbourne" list, no Oneflare / Houzz / Archify profile or reviewed Google Business Profile found. <b>This SERP cross-check was NOT re-run on 21 Sep</b> — the <b>0/10</b> is not re-measured.</span></p></div></div>
+      <div class="issue"><span class="sev ok">OK</span><div class="it"><h5><span class="vi">TỐT — robots.txt cho phép bot AI tường minh</span><span class="en">GOOD — robots.txt allows AI bots explicitly</span></h5><p><span class="vi">Kiểm lại <b>22/09</b>: <b>200, 430 byte</b>, <span class="mono">Allow: /</span> tường minh cho <span class="mono">GPTBot</span>, <span class="mono">OAI-SearchBot</span>, <span class="mono">ChatGPT-User</span>, <span class="mono">PerplexityBot</span>, <span class="mono">ClaudeBot</span>, <span class="mono">Google-Extended</span>; <span class="mono">User-agent: *</span> chỉ chặn <span class="mono">/register</span> và <span class="mono">/pages/</span>.</span><span class="en">Re-checked <b>22 Sep</b>: <b>200, 430 bytes</b>, an explicit <span class="mono">Allow: /</span> for <span class="mono">GPTBot</span>, <span class="mono">OAI-SearchBot</span>, <span class="mono">ChatGPT-User</span>, <span class="mono">PerplexityBot</span>, <span class="mono">ClaudeBot</span> and <span class="mono">Google-Extended</span>; <span class="mono">User-agent: *</span> disallows only <span class="mono">/register</span> and <span class="mono">/pages/</span>.</span></p></div></div>
+      <div class="issue"><span class="sev ok">OK</span><div class="it"><h5><span class="vi">FAQPage JSON-LD đã có trên money page</span><span class="en">FAQPage JSON-LD is present on the money page</span></h5><p><span class="vi">Kiểm lại <b>22/09</b>: <span class="mono">/faq</span> trả 200 trong <b>468ms</b> và có node <span class="mono">FAQPage</span> trong JSON-LD.</span><span class="en">Re-checked <b>22 Sep</b>: <span class="mono">/faq</span> returns 200 in <b>468 ms</b> and carries a <span class="mono">FAQPage</span> JSON-LD node.</span></p></div></div>
+    </div>
+
+    <div class="cols2" style="margin-top:20px">
+      <div>
+        <h3 class="block" style="margin-top:0"><span class="vi">Mở đường cho AI trích dẫn</span><span class="en">Unblock AI citation</span></h3>
+        <ul class="action-list">
+          <li><span class="vi"><s>Sửa tracking GA4/GTM</s> — <b>xong 19/08</b>; kiểm DOM lại <b>23/09</b> và đạt (5 thẻ tag trên 11 script, GTM-PZ9N8QTR + AW-18039433307 + G-43HE633LGK, dataLayer 3 mục); GA4 ghi <b>615 phiên</b> / <b>2.851 event</b> trong 24/08–20/09</span><span class="en"><s>Fix GA4/GTM tracking</s> — <b>done 19 Aug</b>; DOM check re-run <b>22 Sep</b> and passed (5 tag scripts out of 13, GTM-PZ9N8QTR + AW-18039433307 + G-43HE633LGK, dataLayer 3 entries); GA4 recorded <b>615 sessions</b> / <b>2,851 events</b> over 24 Aug – 20 Sep</span> <span class="prio p2">✓</span></li>
+          <li><span class="vi"><s>Sửa render trang bài viết</s> — <b>xong</b>, crawl lại <b>22/09</b>: cả 92 bài trả 200, TTFB TB <b>327ms</b>, mỗi trang 1 H1 + canonical</span><span class="en"><s>Fix article page render</s> — <b>done</b>, re-crawled <b>22 Sep</b>: all 92 articles return 200, average TTFB <b>327 ms</b>, each with 1 H1 + canonical</span> <span class="prio p2">✓</span></li>
+          <li><span class="vi"><s>Organization + LocalBusiness JSON-LD</s> + <s><span class="mono">sameAs</span></s> — <b>xong</b>, xác nhận lại <b>22/09</b>: một khối <span class="mono">@graph</span> có node <span class="mono">["Organization","LocalBusiness"]</span></span><span class="en"><s>Organization + LocalBusiness JSON-LD</s> + <s><span class="mono">sameAs</span></s> — <b>done</b>, re-confirmed <b>22 Sep</b>: one <span class="mono">@graph</span> block with an <span class="mono">["Organization","LocalBusiness"]</span> node</span> <span class="prio p2">✓</span></li>
+          <li><span class="vi"><b>Bật prompt tracking Brand Radar — P0, vẫn là đòn bẩy DUY NHẤT.</b> 15–20 prompt AU để đo SoV, sắc thái, thứ tự. Report <b>"Dxliving"</b> đã có với <b>0 prompt</b> (lần thứ hai mươi lăm). Cần quyết định ngân sách.</span><span class="en"><b>Switch on Brand Radar prompt tracking — P0, still the ONLY lever.</b> 15–20 AU prompts to measure SoV, sentiment and position. The <b>"Dxliving"</b> report exists with <b>0 prompts</b> (a twenty-fifth scan). This needs a budget decision.</span> <span class="prio p0">P0</span></li>
+          <li><span class="vi"><b>Tìm NGUYÊN NHÂN GỐC vụ mất 47 bài — P0, dù bài đã quay lại.</b> Sitemap tụt <b>95 → 48 URL</b> ngày 01/09 và hồi <b>99 URL</b> ngày 03/09; nay <b>116 URL / 92 bài</b>, cả 113 trang trả 200 (21/09). Vẫn chưa ai biết vì sao — cần xác nhận từ chủ site và <b>cảnh báo tự động khi số URL sitemap tụt quá 10%</b>.</span><span class="en"><b>Find the ROOT CAUSE of the 47-article loss — P0, even though the articles are back.</b> The sitemap fell <b>95 → 48 URLs</b> on 1 Sep and recovered to <b>99 URLs</b> on 3 Sep; now <b>116 URLs / 92 articles</b>, all 113 pages returning 200 (21 Sep). Nobody yet knows why — needs site-owner confirmation and <b>an automated alert when the sitemap URL count drops more than 10%</b>.</span> <span class="prio p0">P0</span></li>
+          <li><span class="vi"><s><b>Submit lại sitemap.xml trong GSC</b></s> — <b>ĐÃ ĐÓNG 04/09.</b> <b>Đã giải quyết 13/09:</b> Google đọc lại sitemap và phát hiện đủ <b>116 trang</b>, khớp origin.</span><span class="en"><s><b>Resubmit sitemap.xml in GSC</b></s> — <b>CLOSED 4 Sep.</b> <b>Resolved 13 Sep:</b> Google re-read the sitemap and discovered all <b>116 pages</b>, matching the origin.</span> <span class="prio p2">✓</span></li>
+          <li><span class="vi"><b>Health 100% trên 13 URL không nói gì về toàn site — P1.</b> Ahrefs crawl 04:04 hôm nay: <b>13 URL</b> (giảm từ 15), <b>0 lỗi</b>; crawl toàn bộ của báo cáo này đi <b>114 URL</b>. Nên mở rộng phạm vi crawl của project Ahrefs.</span><span class="en"><b>Health 100% on 13 URLs says nothing about the whole site — P1.</b> Ahrefs crawled at 04:04 today: <b>13 URLs</b> (down from 15), <b>0 errors</b>; this report’s full crawl reached <b>114 URLs</b>. Widen the Ahrefs project crawl scope.</span> <span class="prio p1">P1</span></li>
+          <li><span class="vi"><s>Khôi phục quyền GSC và GA4</s> — <b>ổn định từ 01/09</b>; hôm nay cả bốn nguồn đọc được ngay lần đầu.</span><span class="en"><s>Restore GSC and GA4 access</s> — <b>stable since 1 Sep</b>; all four sources read on the first pass today.</span> <span class="prio p2">✓</span></li>
+          <li><span class="vi"><b>MỌI truy vấn non-brand vẫn 0 click.</b> Đọc <b>22/09</b>: <span class="mono">3d renders for builders melbourne</span> <b>13,3</b> (tụt từ 12,6→13,1→13,3) · <span class="mono">3d renders for real estate melbourne</span> <b>15,3</b> · <span class="mono">architectural rendering melbourne</span> <b>23,1</b> · property developers <b>28,8</b> · developers <b>35,0</b> · services <b>34,8</b> · <span class="mono">3d rendering melbourne</span> <b>37,3</b> · <span class="mono">3d renders melbourne</span> <b>57,7</b> · <span class="mono">3d interior renders melbourne</span> <b>76,1</b>.</span><span class="en"><b>EVERY non-brand query still earns zero clicks.</b> Read <b>22 Sep</b>: <span class="mono">3d renders for builders melbourne</span> <b>13.1</b> (slipping 11.5→12.6→13.1) · <span class="mono">3d renders for real estate melbourne</span> <b>15.3</b> · <span class="mono">architectural rendering melbourne</span> <b>23.1</b> · property developers <b>28.8</b> · developers <b>35.0</b> · services <b>34.8</b> · <span class="mono">3d rendering melbourne</span> <b>37.3</b> · <span class="mono">3d renders melbourne</span> <b>57.7</b> · <span class="mono">3d interior renders melbourne</span> <b>76.1</b>.</span> <span class="prio p1">P1</span></li>
+          <li><span class="vi"><s>Thêm llms.txt ở root</s> — <b>xong 18/08</b>, kiểm lại <b>22/09</b>: 200 (<b>12.678 byte</b>) kèm llms-full.txt; đã có trong sitemap</span><span class="en"><s>Add llms.txt at root</s> — <b>done 18 Aug</b>, re-checked <b>22 Sep</b>: 200 (<b>12,678 bytes</b>) with llms-full.txt; listed in the sitemap</span> <span class="prio p2">✓</span></li>
+          <li><span class="vi"><b>Article + BreadcrumbList schema</b> — crawl toàn bộ 21/09: cả 92 bài có Article + BreadcrumbList + BlogPosting; <b>69/91</b> có FAQPage (75,8%), <b>22 bài thiếu</b> — cả hai bài mới hôm nay đều đã có sẵn FAQPage.</span><span class="en"><b>Article + BreadcrumbList schema</b> — full crawl 21 Sep: all 92 articles carry Article + BreadcrumbList + BlogPosting; <b>69 of 91</b> carry FAQPage (75.8%), <b>22 lack it</b> — both of today's new articles shipped with FAQPage.</span> <span class="prio p2">P2</span></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="block" style="margin-top:0"><span class="vi">Nội dung &amp; authority cho AI</span><span class="en">Content &amp; authority for AI</span></h3>
+        <ul class="action-list">
+          <li><span class="vi"><b>Khối trả lời trực tiếp 40–60 từ</b> ở đầu 9 money page + top article (định nghĩa, chi phí, quy trình) — LLM trích nguyên khối</span><span class="en"><b>40–60 word direct-answer block</b> atop the 9 money pages + top articles (definition, cost, process) — LLMs lift it whole</span> <span class="prio p1">P1</span></li>
+          <li><span class="vi"><b>Vào corpus bên thứ ba:</b> listicle "best 3D rendering Melbourne", Google Business Profile + review, Houzz AU / Archify / Oneflare</span><span class="en"><b>Enter the third-party corpus:</b> "best 3D rendering Melbourne" listicles, Google Business Profile + reviews, Houzz AU / Archify / Oneflare</span> <span class="prio p1">P1</span></li>
+          <li><span class="vi"><b>Trang so sánh:</b> "3D rendering vs VR walkthrough", "BIM vs 3D rendering" — bảng so sánh là format AI trích nhiều nhất</span><span class="en"><b>Comparison pages:</b> "3D rendering vs VR walkthrough", "BIM vs 3D rendering" — comparison tables are the most-cited format</span> <span class="prio p2">P2</span></li>
+          <li><span class="vi"><b>Data asset gốc:</b> benchmark chi phí visualisation/rendering tại Úc — số liệu gốc là thứ AI buộc phải dẫn nguồn</span><span class="en"><b>Original data asset:</b> an AU visualisation/rendering cost benchmark — original figures force AI to attribute</span> <span class="prio p2">P2</span></li>
+          <li><span class="vi"><b>Cộng đồng:</b> trả lời thật trên r/AusRenovation, r/melbourne, Whirlpool, Quora AU</span><span class="en"><b>Community:</b> genuine answers on r/AusRenovation, r/melbourne, Whirlpool, Quora AU</span> <span class="prio p2">P2</span></li>
+          <li><span class="vi"><b>Theo dõi 6 nền tảng hằng tháng</b> trong báo cáo này + thêm vào check 6AM</span><span class="en"><b>Track all 6 platforms monthly</b> in this report + add to the 6AM daily check</span> <span class="prio p2">P2</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="note"><span class="vi"><b>Nguồn (đọc trực tiếp, 25/09/2026):</b> Ahrefs Site Explorer → AI responses (New index), <span class="mono">mode=subdomains</span>, dxliving.com/ · Ahrefs Site Audit · Ahrefs Brand Radar · GA4 kênh AI Assistant · trên chính origin: <span class="mono">robots.txt</span>, <span class="mono">/llms.txt</span>, <span class="mono">sitemap.xml</span>, JSON-LD trang chủ, <span class="mono">/faq</span>, hub <span class="mono">/articles</span> (HTML thô và render thật) và crawl toàn bộ 118 trang. Ba chiều Độ chính xác · Sắc thái · Thứ tự cần prompt tracking nên <b>cố ý không đoán</b> — báo cáo Brand Radar “Dxliving” vẫn 0 prompt, lần quét thứ ba mươi. Mô hình AI làm mới theo chu kỳ — thay đổi tuần này thường phải vài tuần tới vài tháng mới hiện ra.</span><span class="en"><b>Sources (read live, 25 Sep 2026):</b> Ahrefs Site Explorer → AI responses (New index), <span class="mono">mode=subdomains</span>, dxliving.com/ · Ahrefs Site Audit · Ahrefs Brand Radar · the GA4 AI Assistant channel · and on the origin: <span class="mono">robots.txt</span>, <span class="mono">/llms.txt</span>, <span class="mono">sitemap.xml</span>, the homepage JSON-LD, <span class="mono">/faq</span>, the <span class="mono">/articles</span> hub (raw HTML and rendered) and a full crawl of all 118 pages. Accuracy · Sentiment · Position require prompt tracking and are <b>deliberately not estimated</b> — the “Dxliving” Brand Radar report still tracks 0 prompts, a thirtieth scan. AI models refresh on their own cycle — a change made this week usually takes weeks to months to appear.</span></p>
+  </section>
+
+  <!-- EXECUTIVE SUMMARY -->
+  <section class="card">
+    <p class="section-label"><span class="bar"></span> <span class="vi">Tóm tắt điều hành</span><span class="en">Executive summary</span></p>
+    <div class="exec">
+      <p class="big"><span class="vi"><b>VỊ TRÍ TỐT LÊN 2 BẬC — NHƯNG VÌ TRUY VẤN YẾU RỜI BẢNG, KHÔNG PHẢI VÌ TRUY VẤN THƯƠNG MẠI ĐI LÊN.</b> <b>(1)</b> Bước một ngày so với 24/09. GSC: vị trí <b>31,1 → 29,1</b>, click giữ <b>34</b>, impressions <b>1.087 → 1.034</b>, truy vấn <b>95 → 86</b>. <b>(2)</b> GA4 tăng lượng giảm chất: phiên <b>575 → 584</b>, người dùng <b>383 → 399</b>, nhưng phiên có tương tác <b>212 → 198</b> và tỷ lệ <b>36,87% → 33,90%</b>. <b>(3)</b> Key event <b>1 → 3</b>, cả ba thuộc Direct và nằm trong tuần 18–24/09. <b>(4)</b> Trích dẫn AI ngừng rơi ở <b>12</b>, trang được trích dẫn <b>8 → 9</b>. <b>(5)</b> Không đọc được <b>Session source / medium</b> — ghi null. <b>(6)</b> Lớp phủ <span class="mono">/articles</span> sang <b>ngày thứ 29</b>.</span><span class="en"><b>POSITION IMPROVED TWO PLACES — BUT BECAUSE WEAK QUERIES LEFT THE TABLE, NOT BECAUSE COMMERCIAL QUERIES ROSE.</b> <b>(1)</b> A one-day step from 24 Sep. GSC: position <b>31.1 → 29.1</b>, clicks held at <b>34</b>, impressions <b>1,087 → 1,034</b>, queries <b>95 → 86</b>. <b>(2)</b> GA4 grew in volume and fell in quality: sessions <b>575 → 584</b>, users <b>383 → 399</b>, but engaged sessions <b>212 → 198</b> and the rate <b>36.87% → 33.90%</b>. <b>(3)</b> Key events <b>1 → 3</b>, all three Direct and all three inside the 18–24 Sep week. <b>(4)</b> AI responses stopped falling at <b>12</b> and cited pages rose <b>8 → 9</b>. <b>(5)</b> <b>Session source / medium</b> could not be read — recorded null. <b>(6)</b> The <span class="mono">/articles</span> overlay is on <b>day 29</b>.</span></p>
+      <p>
+        <span class="vi"><b>GA4: MỘT KÊNH ĐÃ TẠO ĐƯỢC CHUYỂN ĐỔI.</b> Sessions <b>563 → 575</b>, users <b>373 → 383</b>. Direct thêm 11 phiên (249), Organic Social thêm 4 (160), Organic Search bớt 3 (156), AI Assistant giữ 6. Chất lượng vẫn khác biệt rõ: Organic Search <b>61,54%</b> tương tác, <b>1 phút 26 giây</b>; Organic Social <b>25,62%</b>, <b>4 giây</b>; Direct <b>27,31%</b>, <b>46 giây</b>. Kỳ này <b>Direct mang về key event duy nhất</b>. Bảng Session source/medium chỉ thẳng điểm rò: <span class="mono">m.facebook.com / referral</span> gửi <b>81 phiên</b> ở <b>4,94%</b> tương tác và <b>0 giây</b>, tăng từ 77. Việc cần làm vẫn là: gỡ lớp phủ hub, <b>xác nhận cấu hình key event thực sự đúng</b>, và gộp cụm trùng ý định để truy vấn non-brand có click.</span>
+        <span class="en"><b>GA4: ONE CHANNEL FINALLY CONVERTED.</b> Sessions <b>563 → 575</b>, users <b>373 → 383</b>. Direct added 11 sessions (249), Organic Social 4 (160), Organic Search lost 3 (156), AI Assistant held at 6. The quality gap is still stark: Organic Search at <b>61.54%</b> engagement and <b>1m 26s</b>; Organic Social at <b>25.62%</b> and <b>4 seconds</b>; Direct at <b>27.31%</b> and <b>46 seconds</b>. This cycle <b>Direct carried the single key event</b>. The Session source/medium table points straight at the leak: <span class="mono">m.facebook.com / referral</span> sends <b>81 sessions</b> at <b>4.94%</b> engagement and <b>zero seconds</b>, up from 77. The work is unchanged: fix the hub overlay, <b>confirm the key-event configuration is genuinely correct</b>, and consolidate intent clusters so non-brand queries start earning clicks.</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- MONTHLY COMPARISON (auto-rolled) -->
+  <section class="card">
+    <p class="section-label"><span class="bar"></span> <span class="vi">So sánh theo tháng — Tháng 8/2026 so với Tháng 7/2026</span><span class="en">Month over month — August 2026 vs July 2026</span> <span class="snap-badge"><span class="vi">THÁNG TRỌN VẸN GẦN NHẤT · kiểm lại 24/09</span><span class="en">LAST COMPLETE MONTH · re-verified 24 Sep</span></span></p>
+    <p class="section-sub"><span class="vi">Đọc trực tiếp từ GSC và GA4 qua Chrome, dùng khoảng ngày tuỳ chỉnh 01–31/08 so với 01–31/07. Khối này <b>cuộn sang tháng mới mỗi đầu tháng</b> — không còn là mốc tham chiếu cố định. <b>Kiểm lại 25/09/2026:</b> tháng trọn vẹn gần nhất vẫn là T8/2026 nên khối này vẫn đúng và <b>không đọc lại</b>; nó sẽ cuộn sang T9 vs T8 vào ngày 01/10.</span><span class="en">Read directly from GSC and GA4 via Chrome using custom ranges 1–31 Aug against 1–31 Jul. This block <b>rolls forward at the start of each month</b> — it is no longer a frozen reference point. <b>Re-verified 25 Sep 2026:</b> the latest complete month is still August 2026, so this block is still correct and was <b>not re-read</b>; it rolls to September vs August on 1 October.</span></p>
+
+    <h3 class="block" style="margin-top:2px"><span class="vi">Tìm kiếm — Google Search Console</span><span class="en">Search — Google Search Console</span> <span class="snap-badge"><span class="vi">T8: 158 truy vấn · T7: 102 truy vấn</span><span class="en">Aug: 158 queries · Jul: 102 queries</span></span></h3>
+    <div class="kpis">
+      <div class="kpi"><div class="k-label">Clicks</div><div class="k-val">71</div><div class="delta flat"><span class="vi">■ gần như đứng yên, từ 73 (T7) · brand 59/71 = 83,1%</span><span class="en">■ essentially flat, from 73 (Jul) · brand 59 of 71 = 83.1%</span></div></div>
+      <div class="kpi"><div class="k-label">Impressions</div><div class="k-val">1,872</div><div class="delta up"><span class="vi">▲ từ 1.211 (T7) · +55% · cộng tay 31 dòng</span><span class="en">▲ from 1,211 (Jul) · +55% · summed over 31 days</span></div></div>
+      <div class="kpi"><div class="k-label"><span class="vi">CTR trung bình</span><span class="en">Average CTR</span></div><div class="k-val">3.8%</div><div class="delta down"><span class="vi">▼ từ 6,0% (T7) · giảm gần một nửa</span><span class="en">▼ from 6.0% (Jul) · roughly halved</span></div></div>
+      <div class="kpi"><div class="k-label"><span class="vi">Vị trí trung bình</span><span class="en">Average position</span></div><div class="k-val">30.2</div><div class="delta down"><span class="vi">▼ từ 24,8 (T7) · cao hơn là xấu hơn</span><span class="en">▼ from 24.8 (Jul) · higher is worse</span></div></div>
+    </div>
+
+    <h3 class="block"><span class="vi">Website — Google Analytics 4</span><span class="en">Website — Google Analytics 4</span> <span class="snap-badge"><span class="vi">T8 THIẾU SỐ · T7 cũng bị cắt 3 ngày cuối</span><span class="en">Aug is UNDERCOUNTED · Jul is also clipped by 3 days</span></span></h3>
+    <div class="kpis">
+      <div class="kpi"><div class="k-label">Sessions</div><div class="k-val">405</div><div class="delta flat"><span class="vi">■ từ 425 (T7) — <b>KHÔNG được đọc là giảm thật</b>, xem cảnh báo bên dưới</span><span class="en">■ from 425 (Jul) — <b>do NOT read as a real decline</b>, see the caveat below</span></div></div>
+      <div class="kpi"><div class="k-label">Engagement rate</div><div class="k-val">41.98%</div><div class="delta down"><span class="vi">▼ từ 64,0% (T7) · thời gian TB 35 giây so với 1 phút 44 giây</span><span class="en">▼ from 64.0% (Jul) · avg time 35s against 1m 44s</span></div></div>
+      <div class="kpi"><div class="k-label">Events</div><div class="k-val">2,087</div><div class="delta down"><span class="vi">▼ từ 3.538 (T7) · 5,15 event/session so với 8,32</span><span class="en">▼ from 3,538 (Jul) · 5.15 events/session against 8.32</span></div></div>
+      <div class="kpi"><div class="k-label">Key events</div><div class="k-val">7</div><div class="k-sub"><span class="vi">▼ từ 42 (T7) · sụt nặng nhất trong khối</span><span class="en">▼ from 42 (Jul) · the sharpest drop in this block</span></div></div>
+    </div>
+
+    <h3 class="block"><span class="vi">Kênh theo session</span><span class="en">Sessions by channel</span></h3>
+    <div class="tblwrap">
+    <table>
+      <thead><tr><th><span class="vi">Kênh</span><span class="en">Channel</span></th><th class="num"><span class="vi">Tháng 7</span><span class="en">July</span></th><th class="num"><span class="vi">Tháng 8</span><span class="en">August</span></th><th class="num"><span class="vi">Thay đổi</span><span class="en">Change</span></th></tr></thead>
+      <tbody>
+        <tr><td>Direct</td><td class="num">196</td><td class="num">144</td><td class="num">−52</td></tr>
+        <tr><td>Organic Search</td><td class="num">145</td><td class="num">124</td><td class="num">−21</td></tr>
+        <tr><td>Organic Social</td><td class="num">78</td><td class="num">132</td><td class="num">+54</td></tr>
+        <tr><td>AI Assistant</td><td class="num">2</td><td class="num">3</td><td class="num">+1</td></tr>
+        <tr><td>Referral</td><td class="num">2</td><td class="num">0</td><td class="num">−2</td></tr>
+        <tr><td>Unassigned</td><td class="num">2</td><td class="num">1</td><td class="num">−1</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <p class="note">
+      <span class="vi"><b>Đọc khối này thế nào.</b> Đây là <b>tháng trọn vẹn gần nhất</b>, không phải cửa sổ trượt 28 ngày ở đầu trang — hai khối trả lời hai câu hỏi khác nhau và <b>không so sánh trực tiếp được với nhau</b>. <b>CẢNH BÁO BẮT BUỘC — GA4 THÁNG 8 LÀ SỐ THIẾU.</b> Bằng chứng đọc hôm nay: lấy trọn tháng <b>01–31/08</b> thì GA4 trả về <b>đúng từng chữ số</b> cùng tổng với cửa sổ <b>04–31/08</b> (<b>405 session</b>, <b>2.087 event</b>) — chứng minh ngày <b>1, 2 và 3 tháng 8 ghi nhận ZERO session</b>. Vùng hỏng thu thập từ 29/07 đến khoảng 12/08 vẫn thò sang tháng 8, tức <b>thiếu khoảng mười hai ngày</b>. <b>KHÔNG được trình bày 425 → 405 session như một mức giảm thật.</b> Tháng 7 cũng bị cắt <b>3 ngày cuối</b>. <b>GSC thì KHÔNG cần cảnh báo đó — cả hai tháng đều trọn vẹn.</b> Impressions tăng <b>55%</b> (1.211 → 1.872) trong khi vị trí trung bình xấu đi <b>24,8 → 30,2</b> và CTR giảm gần một nửa <b>6,0% → 3,8%</b>: đó là <b>hệ quả số học</b> của việc số truy vấn tăng <b>102 → 158</b> — <b>56 truy vấn non-brand mới xếp hạng thấp</b> vừa thêm hiển thị vừa kéo trung bình xuống. <b>Đây KHÔNG phải một cú sập thứ hạng.</b> Clicks gần như đứng yên <b>73 → 71</b>. Phụ thuộc brand giảm nhẹ: T7 66/73 = 90,4% → T8 59/71 = <b>83,1%</b>. <b>Nhưng cú tụt chất lượng T7 → T8 của GA4 thì nghiêm trọng trên mọi thước đo sống sót qua cảnh báo trên:</b> engagement <b>64,0% → 41,98%</b>, thời gian <b>1 phút 44 giây → 35 giây</b>, key events <b>42 → 7</b> — chủ yếu do <b>cơ cấu kênh</b>: Organic Social tăng 78 → 132 và vượt Organic Search (145 → 124), trong khi Organic Social gần như không chuyển đổi.</span>
+      <span class="en"><b>How to read this block.</b> This is the <b>last complete calendar month</b>, not the rolling 28-day window at the top of the page — the two answer different questions and <b>are not directly comparable</b>. <b>A MANDATORY CAVEAT — AUGUST GA4 IS UNDERCOUNTED.</b> Proof read today: querying the full month <b>1–31 Aug</b> returns <b>byte-for-byte</b> the same totals as the <b>4–31 Aug</b> window (<b>405 sessions</b>, <b>2,087 events</b>) — proving that <b>1, 2 and 3 August recorded ZERO sessions</b>. The 29 Jul → ~12 Aug outage still reached into August, so roughly <b>twelve days are missing</b>. <b>Do NOT present 425 → 405 sessions as a real decline.</b> July is also clipped by its <b>last 3 days</b>. <b>GSC needs no such caveat — both months are complete.</b> Impressions rose <b>55%</b> (1,211 → 1,872) while average position worsened <b>24.8 → 30.2</b> and CTR roughly halved <b>6.0% → 3.8%</b>: that is the <b>arithmetic consequence</b> of queries growing <b>102 → 158</b> — <b>56 new low-ranking non-brand terms</b> both add impressions and drag the average down. <b>It is NOT a ranking collapse.</b> Clicks are essentially flat <b>73 → 71</b>. Brand dependence eased slightly: Jul 66 of 73 = 90.4% → Aug 59 of 71 = <b>83.1%</b>. <b>But the July → August GA4 quality drop is severe on every measure that survives the outage caveat:</b> engagement <b>64.0% → 41.98%</b>, time <b>1m 44s → 35s</b>, key events <b>42 → 7</b> — driven mainly by <b>channel mix</b>: Organic Social rose 78 → 132 and overtook Organic Search (145 → 124), while Organic Social converts almost nothing.</span>
+    </p>
+  </section>
+
+  <!-- TECHNICAL HEALTH (re-measured) -->
+  <section class="card">
+    <p class="section-label"><span class="bar"></span> <span class="vi">Sức khỏe kỹ thuật</span><span class="en">Technical health</span> <span class="snap-badge"><span class="vi">ĐO LẠI 24/09/2026 · GSC + crawl toàn bộ origin</span><span class="en">RE-MEASURED 24 Sep 2026 · GSC + full origin crawl</span></span></p>
+    <p class="section-sub"><span class="vi">Đọc lại <b>25/09</b>: Page indexing (<b>VẪN LÀ BẢN 21/09 — ngày thứ tư không dựng lại</b>), Sitemaps (<b>Google vẫn chưa đọc lại từ 21/09, Discovered giữ 116</b> trong khi sitemap sống đã 119 URL), Core Web Vitals (<b>đã dựng lại sang 23/09</b> nhưng vẫn “không đủ dữ liệu”), HTTPS (<b>đã dựng lại sang 17/09</b>, 0 URL không HTTPS) và <b>một lần crawl toàn bộ 118 trang</b> — chính bản crawl này cũng tạo ra báo cáo audit website hôm nay, nên hai báo cáo khớp nhau theo cấu trúc.</span><span class="en">Re-read <b>25 Sep</b>: Page indexing (<b>STILL THE 21 SEP BUILD — a fourth day without a rebuild</b>), Sitemaps (<b>Google has still not re-read since 21 Sep, Discovered holds at 116</b> while the live sitemap carries 119 URLs), Core Web Vitals (<b>rebuilt to 23 Sep</b> but still “not enough data”), HTTPS (<b>rebuilt to 17 Sep</b>, 0 non-HTTPS URLs) and <b>one full crawl of all 118 pages</b> — the same crawl that produced today’s website audit, so the two reports agree by construction.</span></p>
+
+    <div class="kpis">
+      <div class="kpi"><div class="k-label"><span class="vi">Trang đã index</span><span class="en">Pages indexed</span></div><div class="k-val">83</div><div class="delta flat"><span class="vi">▬ giữ <b>83</b> — bản dựng GSC vẫn đề <b>21/09</b>, ngày thứ tư không dựng lại</span><span class="en">▬ flat at <b>83</b> — the GSC build is still dated <b>21 Sep</b>, a fourth day without a rebuild</span></div></div>
+      <div class="kpi"><div class="k-label"><span class="vi">Chưa index</span><span class="en">Not indexed</span></div><div class="k-val">148</div><div class="k-sub"><span class="vi">▬ giữ <b>148</b> · tám lý do cộng đúng 148 · giống hệt 24/09 vì bản dựng chưa đổi · xác minh “Crawled” vẫn <b>FAILED</b></span><span class="en">▬ flat at <b>148</b> · the eight reasons sum to exactly 148 · byte-identical to 24 Sep because the build has not moved · validation on “Crawled” still reads <b>FAILED</b></span></div></div>
+      <div class="kpi"><div class="k-label"><span class="vi">Google đọc được từ sitemap</span><span class="en">Discovered from sitemap</span></div><div class="k-val">116</div><div class="delta flat"><span class="vi">▬ giữ <b>116</b> · Google <b>chưa đọc lại</b> sitemap kể từ 21/09, ngày thứ tư, trong khi sitemap sống đã <b>119 URL</b></span><span class="en">▬ flat at <b>116</b> · Google <b>has not re-read</b> the sitemap since 21 Sep, a fourth day, while the live sitemap carries <b>119 URLs</b></span></div></div>
+      <div class="kpi"><div class="k-label"><span class="vi">TTFB TB bài viết (cả 95 bài)</span><span class="en">Avg article TTFB (all 95)</span></div><div class="k-val">333ms</div><div class="k-sub"><span class="vi">▲ 324 → 333 ms · chậm nhất toàn site <b>782 ms</b> (<span class="mono">/articles/plan-vs-actual-reporting-construction</span>, tăng từ 545) · <b>cả 118 trang dưới 1 giây</b></span><span class="en">▲ 324 → 333 ms · slowest page site-wide <b>782 ms</b> (<span class="mono">/articles/plan-vs-actual-reporting-construction</span>, up from 545) · <b>all 118 pages under 1 second</b></span></div></div>
+    </div>
+
+    <h3 class="block"><span class="vi">148 trang chưa index — theo lý do (GSC, bản <b>21/09</b> — <b>ĐÃ DỰNG LẠI</b> sau hai ngày đứng yên)</span><span class="en">148 pages not indexed — by reason (GSC, the <b>21 Sep</b> build — <b>REBUILT</b> after two stale days)</span></h3>
+    <div class="tblwrap">
+    <table>
+      <thead><tr><th><span class="vi">Lý do</span><span class="en">Reason</span></th><th class="num"><span class="vi">Số trang</span><span class="en">Pages</span></th><th><span class="vi">Đánh giá</span><span class="en">Assessment</span></th></tr></thead>
+      <tbody>
+        <tr><td><span class="vi">Đã crawl — hiện chưa index</span><span class="en">Crawled — currently not indexed</span></td><td class="num">51</td><td><span class="vi">▲ 48 → <b>51</b>. Trạng thái xác minh chuyển từ Started sang <b>FAILED</b> — Google chủ động từ chối index, không phải chưa kịp. Đây là tín hiệu sắc nhất của lần quét này.</span><span class="en">▲ 48 → <b>51</b>. Validation moved from Started to <b>FAILED</b> — Google is actively declining to index these, not merely lagging. This is the sharpest signal in this scan.</span></td></tr>
+        <tr><td><span class="vi">Bị loại bởi thẻ ‘noindex’</span><span class="en">Excluded by ‘noindex’ tag</span></td><td class="num">36</td><td><span class="vi">▬ giữ <b>36</b> qua lần dựng mới. Vẫn là nhóm lớn thứ hai.</span><span class="en">▬ flat at <b>36</b> across the rebuild. Still the second-largest bucket.</span></td></tr>
+        <tr><td><span class="vi">Bị chặn bởi robots.txt</span><span class="en">Blocked by robots.txt</span></td><td class="num">23</td><td><span class="vi">▬ giữ <b>23</b>, so với 6 ở bản dựng 04/09. robots.txt đọc lại hôm nay vẫn 430 byte, giống hệt — đây là Google phân loại lại, không phải robots.txt đổi.</span><span class="en">▬ flat at <b>23</b>, against 6 in the 4 Sep build. robots.txt re-read today at 430 bytes, byte-identical — this is Google re-classifying, not a robots.txt change.</span></td></tr>
+        <tr><td><span class="vi">Đã phát hiện — chưa crawl</span><span class="en">Discovered — currently not indexed</span></td><td class="num">21</td><td><span class="vi">▲ 18 → <b>21</b>. Trạng thái xác minh là <b>Started</b>.</span><span class="en">▲ 18 → <b>21</b>. Validation reads <b>Started</b>.</span></td></tr>
+        <tr><td><span class="vi">Không tìm thấy (404)</span><span class="en">Not found (404)</span></td><td class="num">9</td><td><span class="vi">■ giữ <b>9</b>.</span><span class="en">■ flat at <b>9</b>.</span></td></tr>
+        <tr><td><span class="vi">Trang có chuyển hướng</span><span class="en">Page with redirect</span></td><td class="num">4</td><td><span class="vi">■ giữ 4 — bình thường, không phải lỗi.</span><span class="en">■ flat at 4 — normal, not an error.</span></td></tr>
+        <tr><td><span class="vi">Trùng lặp — Google chọn canonical khác</span><span class="en">Duplicate — Google chose a different canonical</span></td><td class="num">3</td><td><span class="vi">■ giữ 3.</span><span class="en">■ flat at 3.</span></td></tr>
+        <tr><td><span class="vi">Lỗi chuyển hướng</span><span class="en">Redirect error</span></td><td class="num">1</td><td><span class="vi">■ giữ 1 — cần sửa, số lượng nhỏ.</span><span class="en">■ flat at 1 — worth fixing, small in number.</span></td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3 class="block"><span class="vi">Kiểm tra kỹ thuật hôm nay (23/09)</span><span class="en">Today's technical checks (23 Sep)</span></h3>
+    <h3 class="block"><span class="vi">Kiểm tra kỹ thuật hôm nay (25/09)</span><span class="en">Today’s technical checks (25 Sep)</span></h3>
+      <div class="issue"><span class="sev ok">OK</span><div class="it"><h5><span class="vi">HUB /articles LIÊN KẾT CẢ 95 BÀI — bài mồ côi 0 lần thứ mười ba, bài chỉ có liên kết từ hub tăng nhẹ 24 → 25</span><span class="en">THE /articles HUB LINKS ALL 95 ARTICLES — orphans 0 for a thirteenth crawl, hub-only articles slipped 24 → 25</span></h5><p><span class="vi">Đồ thị liên kết nội bộ dựng trên cả 118 trang crawl: mọi bài trong số 95 bài đều có ít nhất một liên kết vào. Hub trả về <b>112 đường dẫn nội bộ riêng biệt</b> và đã lớn lên 276.667 → <b>279.515 byte</b>. Điểm yếu tập trung nhích lại — <b>25 bài</b> chỉ tới được qua hub (24 → 25), và hub vẫn là trang đang có lớp phủ 28 ngày. Trung bình liên kết nội bộ mỗi trang 23,7 → 22,7.</span><span class="en">The inbound-link graph computed over all 118 crawled pages: every one of the 95 articles has at least one inbound internal link. The hub returns <b>112 distinct internal paths</b> and grew 276,667 → <b>279,515 bytes</b>. The concentration weakness edged back — <b>25 articles</b> are reachable only through the hub (24 → 25), and the hub is still the page carrying the 28-day overlay. Average internal links per page 23.7 → 22.7.</span></p></div></div>
+      <div class="issue"><span class="sev warn">Warning</span><div class="it"><h5><span class="vi">Sitemap lệch một URL — Google vẫn ở 116 trang (đọc 21/09), origin nay khai báo 117 trang</span><span class="en">The sitemap is one URL ahead — Google is still on 116 pages (read 21 Sep), the origin now declares 117</span></h5><p><span class="vi">Sitemap sống trả <b>119 URL</b> (117 trang + 2 file .txt) sau khi thêm bài mới hôm nay. GSC → Sitemaps vẫn ghi Last read <b>21/09</b> và Discovered <b>116</b>, ngày thứ ba không đọc lại. Đây là độ trễ báo cáo, không phải lỗi sitemap — trạng thái vẫn Success.</span><span class="en">The live sitemap returns <b>119 URLs</b> (117 pages + 2 .txt files) after today’s new article. GSC → Sitemaps still reads Last read <b>21 Sep</b> and Discovered <b>116</b>, a third day without a re-read. This is reporting lag, not a sitemap fault — status is still Success.</span></p></div></div>
+      <div class="issue"><span class="sev crit">Critical</span><div class="it"><h5><span class="vi">NGHIÊM TRỌNG — lớp phủ toàn màn hình vẫn che /articles, ngày thứ HAI MƯƠI TÁM</span><span class="en">CRITICAL — a full-viewport overlay still covers /articles, day TWENTY-EIGHT</span></h5><p><span class="vi">Mở /articles trong Chrome và chờ 18 giây: đúng một <span class="mono">div</span> fixed phủ kín viewport, class <span class="mono">fixed inset-0 flex items-center justify-center bg-white</span>, z-index <b>99999</b>, opacity 1, nền trắng đặc. <span class="mono">elementFromPoint</span> giữa màn hình trả về BODY chứ không phải nội dung bài. <b>Nó chặn NGƯỜI ĐỌC, không chặn crawler</b> — HTML phía server của /articles vẫn liên kết đủ 95 bài và được parse thành công trong chính lần chạy này. Đã mở 28 ngày.</span><span class="en">Opened /articles in Chrome and waited 18 s: exactly one fixed <span class="mono">div</span> covering the full viewport, class <span class="mono">fixed inset-0 flex items-center justify-center bg-white</span>, z-index <b>99999</b>, opacity 1, solid white. <span class="mono">elementFromPoint</span> at the viewport centre returns BODY, not article content. <b>It blocks HUMAN READERS, not crawlers</b> — the server HTML for /articles still links all 95 articles and parsed successfully in this same run. Twenty-eight days open.</span></p></div></div>
+      <div class="issue"><span class="sev ok">OK</span><div class="it"><h5><span class="vi">Trang và schema đều lành — 118/118 trang một H1, canonical tự trỏ, meta 83–189 ký tự</span><span class="en">Pages and schema are sound — 118 of 118 with one H1, a self-referencing canonical and a meta description 83–189 chars</span></h5><p><span class="vi">Crawl toàn bộ 118 trang: <b>118 trang có đúng một H1</b>, <b>118 canonical tự trỏ</b>, <b>118 meta description</b> (83–189 ký tự). <b>116/118 trang có JSON-LD</b> — chỉ <span class="mono">/start-interactive</span> và <span class="mono">/login</span> không có. <b>Hết lỗi nhảy cấp heading</b> ngày thứ hai liên tiếp (0/118). 73 trong 95 bài có FAQPage (76,8%). Mười URL slug dài cũ đều vẫn 200 + self-canonical.</span><span class="en">Full 118-page crawl: <b>118 pages with exactly one H1</b>, <b>118 self-referencing canonicals</b>, <b>118 meta descriptions</b> (83–189 chars). <b>116 of 118 carry JSON-LD</b> — only <span class="mono">/start-interactive</span> and <span class="mono">/login</span> do not. <b>No heading-level skips</b> for a second consecutive day (0 of 118). 73 of 95 articles carry FAQPage (76.8%). All ten legacy long-slug URLs still return 200 with a self-referencing canonical.</span></p></div></div>
+      <div class="issue"><span class="sev warn">Warning</span><div class="it"><h5><span class="vi">36 trang noindex + 51 trang đã crawl chưa index — 87 trang, và xác minh nay là FAILED</span><span class="en">36 noindex + 51 crawled-not-indexed — 87 pages, and the validation now reads FAILED</span></h5><p><span class="vi">Bản dựng 21/09 đưa nhóm “Đã crawl — hiện chưa index” lên <b>51</b> (từ 48) và đổi trạng thái xác minh từ Started sang <b>FAILED</b>. Cộng với 36 trang <span class="mono">noindex</span>, có <b>87 trang</b> Google biết nhưng không đưa vào chỉ mục. Việc cần làm không đổi: xuất danh sách từng nhóm từ GSC và quyết định giữ hay bỏ từng URL.</span><span class="en">The 21 Sep build lifted “Crawled — currently not indexed” to <b>51</b> (from 48) and flipped its validation from Started to <b>FAILED</b>. Together with 36 <span class="mono">noindex</span> pages, <b>87 pages</b> are known to Google and kept out of the index. The work is unchanged: export each bucket from GSC and decide per URL whether it should exist.</span></p></div></div>
+      <div class="issue"><span class="sev ok">OK</span><div class="it"><h5><span class="vi">TỐC ĐỘ SIẾT THÊM — TTFB trung bình 331 → 328 ms, trần 698 → 545 ms</span><span class="en">SPEED TIGHTENED FURTHER — mean TTFB 331 → 328 ms, ceiling 698 → 545 ms</span></h5><p><span class="vi">Crawl tuần tự 118 trang từ origin (cache no-store): trung bình <b>328 ms</b>, trung vị <b>267 ms</b>, nhanh nhất 235 ms, chậm nhất <b>545 ms</b> (<span class="mono">/studio</span>). <b>Cả 118 trang dưới 1 giây</b>, không trang nào trong dải 1–3 giây, ngày thứ ba liên tiếp. Theo nhóm: core 386 → <b>365 ms</b>, bài viết 321 → <b>324 ms</b>, dự án 323 → <b>292 ms</b>. Đọc lại có cache-buster vẫn chậm hơn (trang chủ 531–820 ms, /articles 668–889 ms) — đúng như kỳ vọng khi bỏ qua cache biên.</span><span class="en">Sequential 118-page crawl from the origin (cache no-store): mean <b>328 ms</b>, median <b>267 ms</b>, fastest 235 ms, slowest <b>545 ms</b> (<span class="mono">/studio</span>). <b>All 118 pages under 1 second</b>, nothing in the 1–3 s band, a third consecutive day. By group: core 386 → <b>365 ms</b>, articles 321 → <b>324 ms</b>, projects 323 → <b>292 ms</b>. Cache-busted re-reads remain slower (homepage 531–820 ms, /articles 668–889 ms) — the expected cost of bypassing the edge cache.</span></p></div></div>
+      <div class="issue"><span class="sev ok">OK</span><div class="it"><h5><span class="vi">HTTPS sạch — bảng đã dựng lại, 14 → 17 URL HTTPS</span><span class="en">HTTPS clean — the report rebuilt, 14 → 17 HTTPS URLs</span></h5><p><span class="vi">GSC → HTTPS (kiểm lại <b>24/09</b>): <b>0 URL non-HTTPS</b>, <b>17 URL HTTPS</b> (tăng từ 14), không có vấn đề nghiêm trọng. Ngày cập nhật của chính bảng đã chuyển 11/09 → <b>15/09</b>.</span><span class="en">GSC → HTTPS (re-checked <b>24 Sep</b>): <b>0 non-HTTPS URLs</b>, <b>17 HTTPS URLs</b> (up from 14), no critical issues. The report’s own last-update date moved 11 Sep → <b>15 Sep</b>.</span></p></div></div>
+      <div class="issue"><span class="sev warn">Warning</span><div class="it"><h5><span class="vi">Core Web Vitals: null — chưa đo được, KHÔNG phải “fail”</span><span class="en">Core Web Vitals: null — not measurable, NOT a “fail”</span></h5><p><span class="vi">Chrome UX Report trả “Not enough usage data in the last 90 days” cho <b>cả hai</b> loại thiết bị; cả hai ô đều được mở và đọc trong lần chạy này. Ngày cập nhật của chính ô đã dịch 20/09 → <b>21/09</b>. Site còn quá ít lưu lượng thật để CrUX có mẫu — ghi <b>null</b>, không đoán.</span><span class="en">Chrome UX Report returns “Not enough usage data in the last 90 days” for <b>both</b> device types; both tiles were opened and read this run. The tile’s own last-updated date moved 20 Sep → <b>21 Sep</b>. The site still has too little real traffic for CrUX to form a sample — recorded as <b>null</b>, not estimated.</span></p></div></div>
+    </div>
+    <p class="note"><span class="vi"><b>Kết luận:</b> nền kỹ thuật on-site vẫn tốt và còn siết thêm — <b>118/118 trang trả 200</b>, mỗi trang một H1 + canonical tự trỏ + meta, không còn lỗi nhảy cấp heading, toàn bộ dưới 1 giây và trần tốc độ hạ 698 → 545 ms. <b>Nhưng phía Google thì xấu đi:</b> bản dựng Page indexing mới đưa số trang chưa index 142 → 148 và chuyển xác minh của nhóm “Đã crawl — hiện chưa index” sang <b>FAILED</b>. Đó không phải vấn đề tốc độ hay markup — đó là vấn đề <b>giá trị nội dung</b>. Hai việc quan trọng nhất vẫn chưa làm: <b>gỡ lớp phủ /articles</b> (28 ngày) và <b>nộp hồ sơ disavow</b> (6 ngày).</span><span class="en"><b>Conclusion:</b> the on-site technical base is still good and tightened further — <b>118 of 118 pages return 200</b>, each with one H1 + self-referencing canonical + meta description, no heading-level skips left, everything under one second and the speed ceiling down 698 → 545 ms. <b>But the Google-side picture worsened:</b> the new Page indexing build took not-indexed 142 → 148 and flipped the validation on “Crawled — currently not indexed” to <b>FAILED</b>. That is not a speed or markup problem — it is a <b>content-value</b> problem. The two most important jobs are still undone: <b>remove the /articles overlay</b> (28 days) and <b>file the disavow</b> (6 days).</span></p>
+  </section>
+
+
+  <!-- KEYWORD & CONTENT STRATEGY -->
+  <section class="card">
+    <p class="section-label"><span class="bar"></span> <span class="vi">Chiến lược từ khóa &amp; nội dung</span><span class="en">Keyword &amp; content strategy</span> <span class="snap-badge"><span class="vi">NHU CẦU THẬT TỪ GSC · 17/08 → 13/09</span><span class="en">REAL DEMAND FROM GSC · 17 Aug → 13 Sep</span></span></p>
+    <p class="section-sub"><span class="vi">Bảng volume Keyword Planner (AU, 23/07) đã được <b>gỡ bỏ</b> vì là ước lượng không kiểm lại được hằng ngày. Thay bằng <b>nhu cầu đo được</b> — truy vấn non-brand thật trong GSC, đọc ngày <b>22/09</b>.</span><span class="en">The Keyword Planner volume table (AU, 23 Jul) was <b>removed</b> because it is an estimate that cannot be re-checked daily. It is replaced by <b>measured demand</b> — real non-brand GSC queries, read on <b>22 Sep</b>.</span></p>
+
+    <h3 class="block"><span class="vi">Truy vấn non-brand đang có hiển thị — và trang tương ứng</span><span class="en">Non-brand queries already drawing impressions — and the page behind them</span></h3>
+    <div class="tblwrap">
+    <table>
+      <thead><tr><th><span class="vi">Truy vấn</span><span class="en">Query</span></th><th class="num">Impr.</th><th class="num"><span class="vi">Vị trí</span><span class="en">Pos.</span></th><th><span class="vi">Trang phục vụ truy vấn</span><span class="en">Page serving it</span></th></tr></thead>
+      <tbody>
+        <tr><td>3d renders for property developers melbourne</td><td class="num">58</td><td class="num">30.0</td><td><span class="vi"><span class="mono">/articles/photorealistic-rendering-melbourne-developers</span> · <b>TỤT 28,8 → 30,0</b> và hiển thị <b>62 → 58</b> — vẫn là truy vấn Melbourne nhiều hiển thị nhất</span><span class="en"><span class="mono">/articles/photorealistic-rendering-melbourne-developers</span> · <b>SLIPPED 28.8 → 30.0</b> with impressions <b>62 → 58</b> — still the highest-impression Melbourne query</span></td></tr>
+        <tr><td>3d renders melbourne</td><td class="num">50</td><td class="num">57.7</td><td><span class="vi">Xếp rất sâu, <b>đứng yên</b> 57,7 / 50 — sâu nhất trong nhóm Melbourne</span><span class="en">Ranks very deep, <b>flat</b> at 57.7 / 50 — the deepest of the Melbourne set</span></td></tr>
+        <tr><td>3d renders for builders melbourne</td><td class="num">39</td><td class="num"><b>13.1</b></td><td><span class="vi"><b>HỒI 13,3 → 13,1</b> nhưng hiển thị <b>46 → 39</b> — vẫn là truy vấn non-brand gần trang 1 nhất và vẫn chưa từng có click</span><span class="en"><b>RECOVERED 13.3 → 13.1</b> but impressions fell <b>46 → 39</b> — still the non-brand query closest to page one, and still never clicked</span></td></tr>
+        <tr><td>3d rendering melbourne</td><td class="num">38</td><td class="num">39.6</td><td><span class="vi"><b>TỤT 37,2 → 39,6</b> và hiển thị <b>51 → 38</b> — mức mất hiển thị lớn nhất của nhóm. Cụm 12 bài rendering Melbourne vẫn tranh cùng ý định.</span><span class="en"><b>SLIPPED 37.2 → 39.6</b> with impressions <b>51 → 38</b> — the biggest impression loss of the set. The 12-article Melbourne rendering cluster still competes for this intent.</span></td></tr>
+        <tr><td>3d interior renders melbourne</td><td class="num">34</td><td class="num">76.1</td><td><span class="vi">Rất sâu (76,1) nhưng vẫn gom được 34 hiển thị — nhu cầu có thật, trang chưa đủ mạnh</span><span class="en">Very deep (76.1) yet still collecting 34 impressions — the demand is real, the page is not strong enough</span></td></tr>
+        <tr><td>3d renders for developers melbourne</td><td class="num">33</td><td class="num">34.1</td><td><span class="vi"><b>Nhích 35,0 → 34,1</b> nhưng hiển thị <b>46 → 33</b> · vẫn 0 click</span><span class="en"><b>Improved 35.0 → 34.1</b> but impressions fell <b>46 → 33</b> · still zero clicks</span></td></tr>
+        <tr><td>3d rendering services melbourne</td><td class="num">—</td><td class="num">—</td><td><span class="vi"><b>BIẾN MẤT KHỎI BẢNG TRUY VẤN</b> (trước đó 34,8 / 16 hiển thị) — dấu hiệu rõ nhất của việc cụm Melbourne tự ăn thịt nhau</span><span class="en"><b>DROPPED OUT OF THE QUERY TABLE</b> (previously 34.8 / 16 impressions) — the clearest sign yet that the Melbourne cluster is cannibalising itself</span></td></tr>
+        <tr><td>architectural rendering melbourne</td><td class="num">21</td><td class="num">25.7</td><td><span class="vi"><b>TỤT 23,1 → 25,7</b> và hiển thị <b>27 → 21</b></span><span class="en"><b>SLIPPED 23.1 → 25.7</b> with impressions <b>27 → 21</b></span></td></tr>
+        <tr><td>best house builders adelaide</td><td class="num">1</td><td class="num">38.0</td><td><span class="vi">Truy vấn Adelaide <b>duy nhất</b> còn trong bảng — cụm 5 bài Adelaide gần như vô hình</span><span class="en">The <b>only</b> Adelaide query left in the table — the 5-article Adelaide cluster is all but invisible</span></td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="note"><span class="vi"><b>ĐIỀU BẢNG NÀY NÓI RA HÔM NAY:</b> <b>tám</b> truy vấn đứng yên, <b>một</b> tụt — và <b>không truy vấn nào có click</b>. Truy vấn tụt lại đúng là truy vấn gần trang 1 nhất: <span class="mono">3d renders for builders melbourne</span> <b>13,1 → 13,3</b>. Nhu cầu non-brand vẫn tập trung ở cụm dịch vụ × Melbourne, nơi 12 bài tranh cùng ý định; Adelaide vẫn chưa trở lại. Ưu tiên vẫn là <b>gộp</b> cụm Melbourne và đưa hai truy vấn gần nhất (13,1 và 15,3) lên trang 1.</span><span class="en"><b>WHAT THIS TABLE SAYS TODAY:</b> <b>eight</b> queries flat, <b>one</b> slipped — and <b>none has a click</b>. The one that slipped is the closest to page one: <span class="mono">3d renders for builders melbourne</span> <b>13.1 → 13.3</b>. Non-brand demand still concentrates in service × Melbourne, where 12 articles compete for one intent; Adelaide has not returned. The priority remains to <b>consolidate</b> the Melbourne cluster and push the two closest queries (13.1 and 15.3) onto page one.</span></p>
+
+    
+
+    <div class="issue" style="margin-top:14px"><span class="sev warn">Warning</span><div class="it"><h5><span class="vi">TRÙNG LẶP Ý ĐỊNH — cụm Adelaide lên BẢY bài cho đúng một truy vấn</span><span class="en">CANNIBALISATION — the Adelaide cluster rises to SEVEN articles for exactly one query</span></h5><p><span class="vi">Sitemap 21/09 có <b>116 URL / 92 bài</b>. Một trong hai bài mới (<span class="mono">house-renovation-3d-design-adelaide</span>) đẩy cụm Adelaide <b>6 → 7 bài</b>, trong khi GSC chỉ hiện <b>một</b> truy vấn Adelaide (<span class="mono">best house builders adelaide</span>, vị trí 38,0, một impression). Bài còn lại (<span class="mono">3d-rendering-for-home-renovation-australia</span>) mở góc renovation toàn quốc nên không làm dày cụm thành phố nào. Các nhóm khác giữ nguyên: <b>17 bài</b> nhắc Melbourne, <b>12 bài</b> trong cụm rendering Melbourne, <b>13 bài</b> trong cụm builder.</span><span class="en">The 21 Sep sitemap carries <b>116 URLs / 92 articles</b>. One of the two new pieces (<span class="mono">house-renovation-3d-design-adelaide</span>) takes the Adelaide cluster <b>6 → 7 articles</b>, while GSC surfaces exactly <b>one</b> Adelaide query (<span class="mono">best house builders adelaide</span>, position 38.0, one impression). The other (<span class="mono">3d-rendering-for-home-renovation-australia</span>) opens a national renovation angle rather than deepening a city cluster. The other groups hold: <b>17 articles</b> mention Melbourne, <b>12</b> sit in the Melbourne rendering cluster, <b>13</b> in the builder cluster.</span></p></div></div>
+
+    <h3 class="block"><span class="vi">Mô hình 3 lớp (giữ nguyên — đây là chiến lược, không phải số liệu)</span><span class="en">The 3-layer model (unchanged — this is strategy, not data)</span></h3>
+    <div class="tblwrap">
+    <table>
+      <thead><tr><th><span class="vi">Lớp</span><span class="en">Layer</span></th><th><span class="vi">Nội dung</span><span class="en">What it covers</span></th><th><span class="vi">Trạng thái hôm nay</span><span class="en">Status today</span></th></tr></thead>
+      <tbody>
+        <tr><td><b>1 · Volume anchors</b></td><td><span class="vi">Head cạnh tranh cao (renovation, home design). DR 0 chưa thắng được → pillar dài hạn.</span><span class="en">High-competition heads (renovation, home design). DR 0 cannot win them yet → long-term pillars.</span></td><td><span class="vi">Chưa ưu tiên — DR vẫn 0</span><span class="en">Not a priority — DR is still 0</span></td></tr>
+        <tr><td><b>2 · Mid winnable — ĐỘNG CƠ</b></td><td><span class="vi">Ghép geo × element × material × style: "3D rendering Sydney", "bathroom remodel cost". Comp thấp, thắng được ở DR 0.</span><span class="en">Combine geo × element × material × style: “3D rendering Sydney”, “bathroom remodel cost”. Low competition, winnable at DR 0.</span></td><td><span class="vi"><b>Đúng nơi đang có hiển thị</b> — các trang lớp này đều trả 200 (kiểm lại 22/09: 91/92 bài), nhưng mọi truy vấn non-brand vẫn 0 click; truy vấn gần trang 1 nhất là <span class="mono">3d renders for builders melbourne</span> ở <b>13,6</b> (tụt từ 13,1)</span><span class="en"><b>Exactly where impressions are</b> — this layer's pages all return 200 (re-checked 21 Sep: 91 of 92 articles), but every non-brand query still earns zero clicks; the closest to page one is <span class="mono">3d renders for builders melbourne</span> at <b>13.6</b> (down from 13.1)</span></td></tr>
+        <tr><td><b>3 · Niche / 0-volume</b></td><td><span class="vi">Materials cụ thể, Project 251 → gộp vào pillar Lớp 2, dùng làm asset. Giá trị qua internal link + AI-citation.</span><span class="en">Specific materials, Project 251 → fold into layer-2 pillars as assets. Value comes via internal links + AI citation.</span></td><td><span class="vi"><b>10</b> trang được AI trích dẫn (số đã khử trùng của Ahrefs), trên <b>88</b> bài còn sống = 11,6% — tử số đứng yên lần đọc thứ mười</span><span class="en"><b>10</b> pages are cited by AI (Ahrefs’ de-duplicated figure), out of <b>86</b> live articles = 11.6% — the numerator is flat for a tenth reading</span></td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="note"><span class="vi"><b>Nguyên tắc:</b> KHÔNG viết bài SEO riêng nhắm keyword 0-volume — mỗi chủ đề 0-volume phải "có việc" (nuôi pillar / AI-citation / chuyển đổi). <b>Bổ sung từ dữ liệu 21/09:</b> thư viện <b>92 bài</b>, cả 92 trả 200, nhưng chỉ 10 trang được AI trích dẫn và mọi truy vấn non-brand vẫn 0 click — gộp và nâng chất lượng bài hiện có đáng giá hơn viết thêm.</span><span class="en"><b>Rule:</b> do NOT write standalone SEO articles for 0-volume keywords — every 0-volume topic must "do a job" (feed a pillar / AI citation / conversion). <b>Added from 21 Sep data:</b> the library is <b>92 articles</b>, all 92 return 200, yet only 10 pages are cited by AI and every non-brand query has zero clicks — consolidating and improving existing articles is worth more than writing more.</span></p>
+  </section>
+
+  <!-- STRATEGY & ACTION -->
+  <section class="card">
+    <p class="section-label"><span class="bar"></span> <span class="vi">Hướng đi &amp; kế hoạch hành động</span><span class="en">Direction &amp; action plan</span> <span class="snap-badge"><span class="vi">RÀ LẠI 24/09/2026</span><span class="en">RE-REVIEWED 24 Sep 2026</span></span></p>
+    <p class="section-sub"><span class="vi">Rà lại ngày <b>25/09</b>. <b>Tốt:</b> vị trí trung bình tốt lên 2,0 bậc (31,1 → 29,1), click giữ 34 lần thứ ba, key event 1 → 3, trích dẫn AI ngừng rơi và trang được trích dẫn 8 → 9, dòng spam backlink gần như dừng (chỉ +2), bài chỉ tới được từ hub 25 → 23. <b>Xấu:</b> phiên có tương tác GA4 giảm 212 → 198 dù tổng phiên tăng, tỷ lệ tương tác theo tuần rơi tiếp 33,86% → 24,61%, Organic Search mất 12 phiên, Page indexing và sitemap đứng yên bốn ngày, và <b>lớp phủ /articles sang ngày thứ 29</b>. <b>Chưa đọc được:</b> Session source / medium của GA4.</span><span class="en">Re-reviewed <b>25 Sep</b>. <b>Good:</b> average position improved 2.0 places (31.1 → 29.1), clicks held at 34 for a third scan, key events 1 → 3, AI responses stopped falling and cited pages rose 8 → 9, the backlink spam influx all but stopped (just +2), and hub-only articles improved 25 → 23. <b>Bad:</b> GA4 engaged sessions fell 212 → 198 even as total sessions rose, the weekly engagement rate fell again 33.86% → 24.61%, Organic Search lost 12 sessions, Page indexing and the sitemap have been frozen for four days, and <b>the /articles overlay is on day 29</b>. <b>Could not be read:</b> GA4 Session source / medium.</span></p>
+
+    <div class="cols2">
+      <div>
+        <h3 class="block" style="margin-top:0"><span class="vi">Ba hướng chiến lược</span><span class="en">Three strategic directions</span></h3>
+        <ul class="action-list">
+          <li><span class="vi"><b>1 · Giảm phụ thuộc brand.</b> Hôm nay brand <b>85,1%</b> (40/47 clicks), <b>giữ nguyên</b> vì clicks non-brand vẫn bằng 0. Không truy vấn non-brand nào có click; <span class="mono">3d renders for builders melbourne</span> <b>tụt 13,1 → 13,3</b> nhưng vẫn là ứng viên gần trang 1 nhất, theo sau là <span class="mono">3d renders for real estate melbourne</span> (15,3). Cả 17 truy vấn trang một đều là brand.</span><span class="en"><b>1 · Reduce brand dependence.</b> Brand is <b>85.1%</b> today (40 of 47 clicks), <b>unchanged</b> because non-brand clicks are still zero. No non-brand query has produced a click; <span class="mono">3d renders for builders melbourne</span> <b>slipped 13.1 → 13.3</b> but is still the closest candidate to page one, followed by <span class="mono">3d renders for real estate melbourne</span> (15.3). All 17 page-one queries are brand terms.</span></li>
+          <li><span class="vi"><b>2 · Gộp trước, viết sau.</b> Thư viện lên <b>92 bài</b> với hai bài mới hôm nay. Cụm Melbourne rendering 12 bài vẫn kẹt ở vị trí 28–76 và cụm Adelaide nay <b>bảy bài</b> cho đúng một truy vấn ở vị trí 38; gộp cụm và dồn liên kết nội bộ về một trang đích mỗi ý định — việc xuất bản thêm không làm giảm chồng lấn.</span><span class="en"><b>2 · Consolidate before writing more.</b> The library rose to <b>92 articles</b> with two new pieces today. The 12-article Melbourne rendering cluster is still stuck at positions 28–76 and the Adelaide cluster is now <b>seven articles</b> deep for exactly one query at position 38; merge the clusters and point internal links at one target page per intent — publishing more does not reduce the overlap.</span> <span class="prio p1">P1</span></li>
+          <li><span class="vi"><b>3 · Đón đầu AEO — nền kỹ thuật đã kịch trần.</b> 18 phản hồi AI trên 10 trang, điểm 30/100 lần thứ mười; sẵn sàng kỹ thuật 7/7. Bề mặt trích dẫn còn mỏng đi (11,6% → 11,4%) vì thư viện lớn lên mà trích dẫn không tăng. Đòn bẩy còn lại là prompt tracking Brand Radar và corpus bên thứ ba.</span><span class="en"><b>3 · Get ahead on AEO — the technical base is maxed out.</b> 18 AI responses across 10 pages, score 30/100 for a tenth scan; technical readiness 7/7. The citation surface keeps thinning (11.6% → 11.4%) as the library grows without new citations. The remaining levers are Brand Radar prompt tracking and the third-party corpus.</span></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="block" style="margin-top:0"><span class="vi">Đã hoàn thành — gỡ khỏi danh sách</span><span class="en">Completed — removed from the list</span></h3>
+        <ul class="action-list">
+          <li><span class="vi"><s>Sửa render trang bài viết (SSG/ISR + CDN)</s> — crawl lại <b>22/09</b>: <b>cả 92</b> bài trả 200</span><span class="en"><s>Fix article page rendering (SSG/ISR + CDN)</s> — re-crawled <b>22 Sep</b>: <b>all 92</b> articles return 200</span> <span class="prio p2">✓</span></li>
+          <li><span class="vi"><s>Cache toàn site đưa response &lt;2s</s> — crawl <b>22/09</b>: TB toàn site <b>330ms</b>, trang chủ <b>618ms</b>, <b>115/115 trang dưới 1 giây</b>; chậm nhất là bài <span class="mono">/articles/plan-vs-actual-reporting-construction</span> ở <b>919ms</b></span><span class="en"><s>Site-wide cache for &lt;2 s responses</s> — crawl <b>22 Sep</b>: site mean <b>330 ms</b>, homepage <b>618 ms</b>, <b>115 of 115 pages under one second</b>; the slowest is the article <span class="mono">/articles/plan-vs-actual-reporting-construction</span> at <b>919 ms</b></span> <span class="prio p2">✓</span></li>
+          <li><span class="vi"><s>Dev sửa double-H1 template article</s> — crawl <b>115 trang (21/09)</b>, <b>mỗi trang đúng 1 H1</b>, đều có canonical</span><span class="en"><s>Fix the double-H1 article template</s> — crawled <b>115 pages (21 Sep)</b>, <b>exactly one H1 each</b>, all with canonicals</span> <span class="prio p2">✓</span></li>
+          <li><span class="vi"><s>Geo-expand: 3D rendering Sydney/Brisbane/Perth/Adelaide</s> — cả bốn trả 200 (11/09); <b>sáu</b> truy vấn Adelaide ở trang 1 (7,0–9,7)</span><span class="en"><s>Geo-expand: 3D rendering Sydney/Brisbane/Perth/Adelaide</s> — all four return 200 (11 Sep); <b>six</b> Adelaide queries on page one (7.0–9.7)</span> <span class="prio p2">✓</span></li>
+          <li><span class="vi"><s>Thêm llms.txt ở root</s> — <b>xong 18/08</b>, kiểm lại <b>22/09</b>: 200, <b>12.678 byte</b>; llms-full.txt 200, <b>21.934 byte</b></span><span class="en"><s>Add llms.txt at root</s> — <b>done 18 Aug</b>, re-checked <b>22 Sep</b>: 200, <b>12,678 bytes</b>; llms-full.txt 200, <b>21,934 bytes</b></span> <span class="prio p2">✓</span></li>
+          <li><span class="vi"><s><b>Dựng lại sitemap.xml đầy đủ</b></s> — kiểm lại <b>22/09</b>: <b>116 URL / 92 bài</b>, không có <span class="mono">/login</span></span><span class="en"><s><b>Rebuild a complete sitemap.xml</b></s> — re-checked <b>22 Sep</b>: <b>116 URLs / 92 articles</b>, no <span class="mono">/login</span></span> <span class="prio p2">✓</span></li>
+          <li><span class="vi"><s><b>Khôi phục 47 bài bị mất</b></s> — <b>xong 03/09</b>; kiểm lại <b>22/09</b>: 92 bài, cả 92 trả 200. Nguyên nhân gốc vẫn mở.</span><span class="en"><s><b>Restore the 47 lost articles</b></s> — <b>done 3 Sep</b>; re-checked <b>22 Sep</b>: 92 articles, all 92 return 200. The root cause remains open.</span> <span class="prio p2">✓</span></li>
+          <li><span class="vi"><s><b>Submit lại sitemap trong GSC</b></s> — <b>ĐÓNG 04/09</b>: Google tự đọc lại 03/09 (99 trang); <b>đã đọc lại 13/09 với đủ 116 trang</b>.</span><span class="en"><s><b>Resubmit the sitemap in GSC</b></s> — <b>CLOSED 4 Sep</b>: Google re-read on 3 Sep (99 pages); <b>re-read again on 13 Sep with all 116 pages</b>.</span> <span class="prio p2">✓</span></li>
+          <li><span class="vi"><s><b>Job tự động làm mới dashboard Social</b></s> — <b>ĐÓNG LẠI 21/09</b>: dashboard ghi snapshot 21/09, cả bốn kênh đọc live, 40 ngày lưu trữ.</span><span class="en"><s><b>Social dashboard auto-refresh job</b></s> — <b>CLOSED AGAIN 21 Sep</b>: the dashboard shows the 21 Sep snapshot, all four channels read live, 40 stored days.</span> <span class="prio p2">✓</span></li>
+          <li><span class="vi"><s><b>Đưa cả thư viện lên hub /articles</b></s> — <b>ĐÓNG 09/09, GIỮ VỮNG 21/09</b>: hub liên kết cả 92 bài, mồ côi 0 lần thứ chín.</span><span class="en"><s><b>Put the whole library on the /articles hub</b></s> — <b>CLOSED 9 Sep, HOLDING 21 Sep</b>: the hub links all 92 articles, orphans 0 for a ninth reading.</span> <span class="prio p2">✓</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 class="block"><span class="vi">Ưu tiên tháng 9–10 <span class="snap-badge">cập nhật 22/09</span></span><span class="en">September–October priorities <span class="snap-badge">updated 22 Sep</span></span></h3>
+    <ul class="action-list">
+          <li><span class="vi"><s><b>Trả node LocalBusiness về JSON-LD trang chủ</b></s> — <b>XONG 04/09, GIỮ 21/09</b>: node <span class="mono">["Organization","LocalBusiness"]</span> vẫn trong <span class="mono">@graph</span>, sẵn sàng kỹ thuật 7/7.</span><span class="en"><s><b>Restore the LocalBusiness node to the homepage JSON-LD</b></s> — <b>DONE 4 Sep, HOLDING 21 Sep</b>: the <span class="mono">["Organization","LocalBusiness"]</span> node is still in the <span class="mono">@graph</span>, technical readiness 7/7.</span> <span class="prio p2">✓</span></li>
+          <li><span class="vi"><b>P0 #1 · Sửa lớp phủ splash/loader trên hub /articles — ngày thứ HAI MƯƠI LĂM.</b> Đo lại 21/09: div <span class="mono">fixed inset-0 … bg-white</span> phủ kín viewport với opacity 1; người đọc bấm Articles chỉ thấy màn hình trắng, trong khi <b>25 bài</b> chỉ có đường vào từ chính hub này.</span><span class="en"><b>P0 #1 · Fix the splash/loader overlay on the /articles hub — day TWENTY-FIVE.</b> Re-measured 21 Sep: a <span class="mono">fixed inset-0 … bg-white</span> div covers the viewport at opacity 1; a reader clicking Articles sees a blank white screen, while <b>25 articles</b> have no way in other than this hub.</span> <span class="prio p0">P0</span></li>
+          <li><span class="vi"><b>P0 #2 · Tìm nguyên nhân gốc vụ mất 47 bài và đặt cảnh báo sitemap.</b> Thư viện 92 bài, cả 92 trả 200 (21/09), nhưng chưa ai giải thích sự cố 01–03/09.</span><span class="en"><b>P0 #2 · Find the root cause of the 47-article loss and set a sitemap alert.</b> The library is 92 articles, all 92 returning 200 (21 Sep), but nobody has explained the 1–3 Sep incident.</span> <span class="prio p0">P0</span></li>
+          <li><span class="vi"><b>P0 #3 · Sửa theo dõi chuyển đổi GA4 — 0 key event suốt 7 ngày, lần thứ MƯỜI LĂM.</b> Cửa sổ 12/09–18/09: <b>133 phiên</b>, <b>503 event</b>, <b>0 key event</b>; cửa sổ 05/09–11/09 cũng 0 (111 phiên, 565 event). Key event 28 ngày còn giảm <b>7 → 5</b>. Kiểm lại cấu hình key event và các form/nút liên hệ.</span><span class="en"><b>P0 #3 · Fix GA4 conversion tracking — zero key events across 7 days, a FIFTEENTH scan.</b> 12–18 Sep: <b>133 sessions</b>, <b>503 events</b>, <b>0 key events</b>; 5–11 Sep zero too (111 sessions, 565 events). The 28-day key-event count also fell <b>7 → 5</b>. Re-check the key-event configuration and the contact forms/buttons.</span> <span class="prio p0">P0</span></li>
+          <li><span class="vi"><b>P0 #4 · MỚI — rà hồ sơ backlink Ahrefs và quyết định disavow.</b> Referring domains <b>573 → 621</b> và backlink <b>607 → 656</b> chỉ sau một đêm, followed <b>246 → 271</b>; anchor toàn câu chào bán dịch vụ SEO ("Rank SEO Masters", "Site Rank Academy"). DR/UR vẫn 0 nên chưa gây hại đo được, nhưng cần người thật xem danh sách referring domains và quyết định.</span><span class="en"><b>P0 #4 · NEW — review the Ahrefs backlink profile and decide on disavowal.</b> Referring domains <b>573 → 621</b> and backlinks <b>607 → 656</b> overnight, followed <b>246 → 271</b>; the anchors are SEO-service sales copy ("Rank SEO Masters", "Site Rank Academy"). DR/UR are still 0 so there is no measurable damage yet, but a human needs to look at the referring-domain list and decide.</span> <span class="prio p0">P0</span></li>
+          <li><span class="vi"><b>P1 · Gộp cụm trùng ý định.</b> Đếm 21/09: <b>12 bài</b> cụm rendering Melbourne, <b>13 bài</b> cụm builder, <b>7 bài</b> cụm Adelaide. Truy vấn Melbourne rendering kẹt ở 30–58, 0 click.</span><span class="en"><b>P1 · Consolidate intent clusters.</b> Count 21 Sep: <b>12 articles</b> in Melbourne rendering, <b>13</b> in the builder cluster, <b>7</b> in the Adelaide cluster. Melbourne rendering queries stuck at 30–58 with zero clicks.</span> <span class="prio p1">P1</span></li>
+          <li><span class="vi"><s><b>P1 · Nối 10 bài mồ côi vào hub</b></s> — <b>ĐÓNG 07/09, GIỮ 21/09</b>: đồ thị liên kết toàn site cho thấy 0 bài mồ côi.</span><span class="en"><s><b>P1 · Connect the 10 orphan articles to the hub</b></s> — <b>CLOSED 7 Sep, HOLDING 21 Sep</b>: the site-wide link graph shows 0 orphans.</span> <span class="prio p2">✓</span></li>
+          <li><span class="vi"><b>P1 · Bật prompt tracking Brand Radar (15–20 prompt AU).</b> Report "Dxliving" có sẵn, <b>0 prompt</b>, AI SoV là dấu gạch — lần thứ hai mươi mốt.</span><span class="en"><b>P1 · Switch on Brand Radar prompt tracking (15–20 AU prompts).</b> The "Dxliving" report exists with <b>0 prompts</b> and an AI SoV dash — a twenty-first scan.</span> <span class="prio p1">P1</span></li>
+          <li><span class="vi"><b>P1 · Sửa phần xảy ra sau cú click từ social.</b> GA4: Organic Social <b>192 phiên</b>, tương tác <b>25%</b>, thời gian TB <b>4 giây</b>, <b>0 key event</b>; Organic Search <b>196 phiên</b>, <b>66,84%</b>, <b>1 phút 37 giây</b>, <b>5/7 key event</b>.</span><span class="en"><b>P1 · Fix what happens after a social click.</b> GA4: Organic Social <b>192 sessions</b>, <b>25%</b> engagement, <b>4 seconds</b> average, <b>0 key events</b>; Organic Search <b>196 sessions</b>, <b>66.84%</b>, <b>1m 37s</b>, <b>5 of 7 key events</b>.</span> <span class="prio p1">P1</span></li>
+          <li><span class="vi"><b>P2 · Theo dõi 404 của Ahrefs tụt khỏi 15.</b> Đứng yên <b>15</b> lần đọc thứ MƯỜI MỘT; mã 200 giữ <b>159</b> trên 177, các nhóm HTTP cộng khớp đúng 177.</span><span class="en"><b>P2 · Watch for Ahrefs 404s to fall below 15.</b> Flat at <b>15</b> for an ELEVENTH reading; 200s holding at <b>159</b> of 177, the HTTP buckets summing exactly to 177.</span> <span class="prio p2">P2</span></li>
+          <li><span class="vi"><b>P2 · Rà 91 trang chưa index.</b> <b>34</b> noindex + <b>57</b> đã crawl chưa index, vẫn chưa kiểm (bản GSC 14/09, đọc lần năm — không đổi so 18/09).</span><span class="en"><b>P2 · Review the 91 non-indexed pages.</b> <b>34</b> noindex + <b>57</b> crawled-not-indexed, still unreviewed (the 14 Sep GSC build, read a fifth time — unchanged since 18 Sep).</span> <span class="prio p2">P2</span></li>
+          <li><span class="vi"><b>P2 · Vào corpus bên thứ ba</b> — listicle "best 3D rendering Melbourne", Google Business Profile + review, Houzz AU / Archify / Oneflare. <b>Không kiểm lại 22/09.</b></span><span class="en"><b>P2 · Enter the third-party corpus</b> — "best 3D rendering Melbourne" listicles, Google Business Profile + reviews, Houzz AU / Archify / Oneflare. <b>Not re-tested 21 Sep.</b></span> <span class="prio p2">P2</span></li>
+        </ul>
+    <p class="note"><span class="vi"><b>Lưu ý về thứ tự (21/09):</b> hôm nay <b>mở thêm một P0</b> — rà hồ sơ backlink Ahrefs sau khi số link tăng vọt với anchor kiểu spam; job làm mới dashboard Social lại chạy đúng hẹn. Thứ tự bốn P0: lớp phủ hub, nguyên nhân gốc vụ mất bài, theo dõi chuyển đổi, rà backlink. <b>Một việc rẻ đã xong:</b> template bài viết nay có FAQPage — cả hai bài mới hôm nay đều có.</span><span class="en"><b>Note on ordering (21 Sep):</b> <b>one new P0 opened</b> today — review the Ahrefs backlink profile after the link count jumped with spam-shaped anchors; the social dashboard refresh ran on schedule again. The four P0s in order: hub overlay, root cause of the article loss, conversion tracking, backlink review. <b>One cheap item is done:</b> the article template now carries FAQPage — both of today's new articles have it.</span></p>
+  </section>
+
+  <!-- SOCIAL SNAPSHOT -->
+  <section class="card">
+    <p class="section-label"><span class="bar"></span> <span class="vi">Snapshot Social (bổ trợ)</span><span class="en">Social snapshot (supporting)</span> <span class="snap-badge"><span class="vi">ĐỌC TỪ DASHBOARD SOCIAL · 24/09/2026 — DASHBOARD TƯƠI</span><span class="en">READ FROM THE SOCIAL DASHBOARD · 24 Sep 2026 — DASHBOARD FRESH</span></span></p>
+    <p class="section-sub"><span class="vi"><b>DASHBOARD ĐÃ TƯƠI:</b> “Snapshot 25 Sep 2026 — cả bốn kênh đọc live”, 45 ngày lưu trữ, làm mới trong cùng lần chạy này. Cửa sổ Meta và YouTube <b>27/08–23/09</b>; LinkedIn <b>24/08–22/09</b>. Mọi cửa sổ dịch đúng một ngày.</span><span class="en"><b>THE DASHBOARD IS FRESH:</b> “Snapshot 25 Sep 2026 — all four channels read live”, 45 stored days, refreshed in this same run. Meta and YouTube window <b>27 Aug – 23 Sep</b>; LinkedIn <b>24 Aug – 22 Sep</b>. Every window advanced exactly one day.</span></p>
+
+    <div class="kpis">
+      <div class="kpi"><div class="k-label"><span class="vi">Tổng follower 4 kênh</span><span class="en">Total followers, 4 channels</span></div><div class="k-val">271</div><div class="delta flat"><span class="vi">▬ giữ 271 · FB 116 · LI 102 · IG 49 · YT 4 — lần quét thứ bảy liên tiếp không thêm được một follower nào</span><span class="en">▬ flat at 271 · FB 116 · LI 102 · IG 49 · YT 4 — a seventh consecutive scan without a single follower added</span></div></div>
+      <div class="kpi"><div class="k-label"><span class="vi">Facebook — views 28 ngày</span><span class="en">Facebook — 28-day views</span></div><div class="k-val">4,560</div><div class="k-sub"><span class="vi">▲ 4.514 → 4.560 và so sánh cải thiện ▼5,3% → ▼2,6% · người xem 275 · <b>135 tương tác (▼27,4%)</b> · 354 view 3 giây · <b>486 lượt ghé (▲104,2%)</b></span><span class="en">▲ 4,514 → 4,560 and the comparison improved ▼5.3% → ▼2.6% · 275 viewers · <b>135 interactions (▼27.4%)</b> · 354 three-second views · <b>486 visits (▲104.2%)</b></span></div></div>
+      <div class="kpi"><div class="k-label">LinkedIn — impressions</div><div class="k-val">1,328</div><div class="k-sub"><span class="vi">▲ 1.320 → 1.328 và so sánh cải thiện mạnh ▼20,5% → ▼16,8% · <b>59 reaction (▲9,3%)</b> — quay lại dương · 0 comment · 0 repost · 33 page view · 16 khách duy nhất — lần dịu đầu tiên sau sáu cửa sổ giảm</span><span class="en">▲ 1,320 → 1,328 and the comparison improved sharply ▼20.5% → ▼16.8% · <b>59 reactions (▲9.3%)</b> — back to positive · 0 comments · 0 reposts · 33 page views · 16 unique visitors — the first easing after six declining windows</span></div></div>
+      <div class="kpi"><div class="k-label"><span class="vi">Instagram — reach 28 ngày</span><span class="en">Instagram — 28-day reach</span></div><div class="k-val">86</div><div class="k-sub"><span class="vi">▬ giữ 86 lần thứ hai, so sánh cải thiện ▼69,6% → ▼68,7% · <b>2.422 views</b> (▲163,5%) · 72/86 từ người chưa follow · 15 tương tác · bài giữ <b>130</b></span><span class="en">▬ flat at 86 for a second read, the comparison improved ▼69.6% → ▼68.7% · <b>2,422 views</b> (▲163.5%) · 72 of 86 from non-followers · 15 interactions · posts held at <b>130</b></span></div></div>
+    </div>
+
+    <h3 class="block"><span class="vi">Bốn kênh — theo bản dashboard <b>25/09</b></span><span class="en">Four channels — from the <b>25 Sep</b> dashboard build</span></h3>
+    <div class="tblwrap">
+    <table>
+      <thead><tr><th><span class="vi">Kênh</span><span class="en">Channel</span></th><th class="num"><span class="vi">Follower</span><span class="en">Followers</span></th><th class="num"><span class="vi">Chỉ số chính (28 ngày)</span><span class="en">Headline metric (28d)</span></th><th><span class="vi">Ghi chú</span><span class="en">Note</span></th></tr></thead>
+      <tbody>
+        <tr><td>Facebook</td><td class="num">116</td><td class="num"><span class="vi">4.514 views</span><span class="en">4,514 views</span></td><td><span class="vi">Người xem 273 · <b>455 lượt ghé (▲81,3%)</b> · 137 tương tác (▼24,7%) · <b>351 view 3 giây (▲132,5%)</b> · thời gian xem 2 giờ 3 phút · 4 click liên kết, lần thứ chín không đổi</span><span class="en">273 viewers · <b>455 visits (▲81.3%)</b> · 137 interactions (▼24.7%) · <b>351 three-second views (▲132.5%)</b> · 2h 3m watch time · 4 link clicks, unchanged for a ninth read</span></td></tr>
+        <tr><td>LinkedIn</td><td class="num">102</td><td class="num"><span class="vi">1.320 impressions</span><span class="en">1,320 impressions</span></td><td><span class="vi"><b>58 reaction (▼1,7%)</b> — không còn chỉ số nào vượt kỳ trước · 1 follower mới/30 ngày · 0 comment và 0 repost sang tháng thứ ba · 36 page view, 17 khách duy nhất</span><span class="en"><b>58 reactions (▼1.7%)</b> — no metric on the Page now beats its prior period · 1 new follower in 30 days · 0 comments and 0 reposts into a third month · 36 page views, 17 unique visitors</span></td></tr>
+        <tr><td>Instagram</td><td class="num">49</td><td class="num"><span class="vi">2.485 views · reach 86</span><span class="en">2,485 views · 86 reach</span></td><td><span class="vi">72 reach từ người chưa follow (<b>83,7%</b>) · 13 tương tác — mức thấp mới · đăng tiếp ngày 23/9, bài 129 → 130, mở màn 5 reach</span><span class="en">72 reach from non-followers (<b>83.7%</b>) · 13 interactions — a new low · posted again on 23 Sep, posts 129 → 130, opening at 5 reach</span></td></tr>
+        <tr><td>YouTube</td><td class="num">4</td><td class="num"><span class="vi">634 views</span><span class="en">634 views</span></td><td><span class="vi">32 video · watch time 0,5 giờ (▲530%) · Studio điều chỉnh kênh 642 → 634 nhưng video 18/9 <b>132 → 140</b> · view realtime 48 giờ vẫn 0</span><span class="en">32 videos · 0.5 hrs watch time (▲530%) · Studio restated the channel 642 → 634 but the 18 Sep video <b>132 → 140</b> · realtime 48-hour views still 0</span></td></tr>
+        <tr><td>TikTok / X</td><td class="num">—</td><td class="num">—</td><td><span class="vi">Chưa có tài khoản</span><span class="en">No account</span></td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="note"><span class="vi"><b>ĐỐI CHIẾU VỚI GA4:</b> GA4 (27/08 → 23/09) ghi <b>Organic Social 160 phiên</b> (▲4), tương tác <b>25,62%</b>, thời gian TB <b>4 giây</b>, 0 key event. Bảng Session source/medium chỉ rõ nguồn: <span class="mono">m.facebook.com/referral</span> một mình gửi <b>81</b> trong số đó ở <b>4,94%</b> tương tác và <b>0 giây</b>. Social đang đẩy lưu lượng về site nhưng người đến không đọc gì.</span><span class="en"><b>CROSS-CHECK AGAINST GA4:</b> GA4 (27 Aug → 23 Sep) records <b>Organic Social at 160 sessions</b> (▲4), <b>25.62%</b> engagement, <b>4 seconds</b> average time, 0 key events. The Session source/medium table names the source: <span class="mono">m.facebook.com/referral</span> alone sends <b>81</b> of them at <b>4.94%</b> engagement and <b>zero seconds</b>. Social is delivering volume to the site that does not read anything.</span></p>
+    <p class="note"><span class="vi"><b>ĐỐI CHIẾU VỚI GA4:</b> GA4 (26/08 → 22/09) ghi <b>Organic Social 156 phiên</b> (▲8), tương tác <b>25,64%</b>, thời gian TB <b>4 giây</b>, 0 key event. Bảng Session source/medium chỉ thẳng nguyên nhân: <span class="mono">m.facebook.com / referral</span> gửi <b>81 phiên</b> với <b>4,94%</b> tương tác và <b>0 giây</b>. Facebook qua bốn dòng nguồn gửi <b>142 phiên</b>, nhiều hơn cả <span class="mono">google / organic</span> (141), nhưng gần như không mang lại chút chú ý nào: <b>0 key event</b>. Social vẫn đẩy được lượng, chưa đẩy được người đọc.</span><span class="en"><b>GA4 CROSS-CHECK:</b> GA4 (26 Aug → 22 Sep) records <b>Organic Social at 156 sessions</b> (▲8), engagement <b>25.64%</b>, average time <b>4 seconds</b>, 0 key events. The Session source/medium table points straight at the cause: <span class="mono">m.facebook.com / referral</span> sends <b>81 sessions</b> at <b>4.94%</b> engagement and <b>zero seconds</b>. Facebook across four source rows sends <b>142 sessions</b>, more than <span class="mono">google / organic</span> (141), but brings almost no attention with it: <b>0 key events</b>. Social still moves volume, not readers.</span></p>
+  </section>
+
+
+<style id="dxr-css">
+#dxr{margin:18px 0}
+#dxr .dxr-h{display:flex;align-items:center;gap:9px;font-weight:700;font-size:15px;margin:0 0 4px}
+#dxr .dxr-badge{font-size:10.5px;font-weight:700;letter-spacing:.04em;padding:3px 7px;border-radius:5px;background:#eef1f5;color:#5b6472}
+#dxr .dxr-tabs{display:flex;gap:6px;margin:10px 0 8px;flex-wrap:wrap}
+#dxr .dxr-tab{font:inherit;font-size:12.5px;font-weight:600;padding:6px 12px;border:1px solid #cfd4da;background:#fff;color:#454c56;border-radius:7px;cursor:pointer}
+#dxr .dxr-tab.on{background:#2c3440;border-color:#2c3440;color:#fff}
+#dxr .dxr-ctrl{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin:0 0 6px}
+#dxr .dxr-ctrl label{font-size:12.5px;font-weight:600;color:#454c56;display:flex;align-items:center;gap:6px}
+#dxr .dxr-ctrl select{font:inherit;font-size:12.5px;padding:5px 8px;border:1px solid #cfd4da;border-radius:6px;background:#fff;color:#22262c}
+#dxr .dxr-hint{font-size:11.5px;color:#7b828c;font-weight:400}
+#dxr .dxr-note{font-size:11.5px;line-height:1.6;color:#5b6472;background:#f7f8fa;border:1px solid #e6e9ee;border-radius:7px;padding:9px 11px;margin:8px 0 12px}
+#dxr .dxr-warn{font-size:12.5px;line-height:1.6;color:#8a5a12;background:#fdf6e7;border:1px solid #f0e0bc;border-radius:7px;padding:10px 12px;margin:4px 0 0}
+#dxr .dxr-rangelbl{font-size:12px;font-weight:700;color:#5b6472;margin:2px 0 7px}
+#dxr .dxr-tbl{width:100%;border-collapse:collapse;font-size:12.5px}
+#dxr .dxr-tbl th{text-align:left;font-weight:700;font-size:11px;letter-spacing:.03em;text-transform:uppercase;color:#7b828c;border-bottom:1px solid #e6e9ee;padding:7px 9px}
+#dxr .dxr-tbl td{padding:7px 9px;border-bottom:1px solid #f0f2f5;vertical-align:middle}
+#dxr .dxr-tbl .dxr-n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+#dxr .dxr-tbl tr:last-child td{border-bottom:none}
+#dxr .dxr-up{color:#0b7a53;font-weight:600}
+#dxr .dxr-down{color:#b4231c;font-weight:600}
+#dxr .dxr-flat{color:#7b828c}
+#dxr .dxr-sparkcell{width:130px;text-align:right}
+#dxr .dxr-spark{width:120px;height:28px;display:block;margin-left:auto}
+#dxr .dxr-nospark{font-size:11px;color:#a4abb4}
+@media(max-width:620px){#dxr .dxr-sparkcell,#dxr .dxr-tbl th:last-child{display:none}}
+#dxr .dxr-grp{margin:16px 0 0}
+#dxr .dxr-grpt{font-size:11px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;padding:5px 9px;border-radius:6px;display:inline-block}
+#dxr .dxr-g-day{background:#e6f5ed;color:#0b6b49}
+#dxr .dxr-g-window28{background:#fdf1e3;color:#8a5a12}
+#dxr .dxr-g-state{background:#eef1f5;color:#4a5260}
+#dxr .dxr-grpn{font-size:11.5px;line-height:1.55;color:#6b727c;margin:6px 0 4px}
+#dxr .dxr-strong{font-weight:800;color:#12161c}
+</style>
+
+<section class="card" id="dxr" style="display:none">
+  <div class="dxr-h"><span id="dxr-title"></span><span class="dxr-badge" id="dxr-badge"></span></div>
+  <div id="dxr-body"></div>
+</section>
+<script>
+(function(){var h=document.getElementById("dxr-title"),b=document.getElementById("dxr-badge");
+var L=function(){return document.body.classList.contains("lang-en")?"en":"vi";};
+function up(){if(h)h.textContent=(L()==="en")?"Range explorer":"Xem theo kho\u1ea3ng th\u1eddi gian";
+if(b)b.textContent=(L()==="en")?"DERIVED FROM STORED DAYS":"D\u1eaaN XU\u1ea4T T\u1eea C\u00c1C NG\u00c0Y \u0110\u00c3 L\u01afU";}
+up();setInterval(up,400);})();
+window.__DXR_CFG={rollup:"../data/rollup.json",lang:function(){return document.body.classList.contains("lang-en")?"en":"vi";}};
+/* ==== DX RANGE EXPLORER v2 =====================================
+   Đọc data/rollup.json (FILE DẪN XUẤT, dựng lại mỗi sáng từ các
+   file ngày bất biến). Mỗi chuỗi có nhãn grain và chỉ được phép
+   làm đúng phép tính hợp lệ với nhãn đó:
+     day       -> cộng dồn được trong khoảng
+     window28  -> KHÔNG cộng (các ngày chồng nhau), chỉ đầu->cuối
+     state     -> trung bình / giá trị cuối kỳ
+   Tự ẩn nếu không đọc được rollup (bản archive).
+   ================================================================ */
+(function(){
+  var CFG=window.__DXR_CFG; if(!CFG) return;
+  var S={ser:null,dates:[],mode:'trend',from:null,to:null,a:null,b:null,lang:null,ready:false};
+  function L(){ try{return CFG.lang();}catch(e){return 'vi';} }
+  function t(vi,en){ return L()==='en'?en:vi; }
+  function esc(s){ return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); }
+  function nf(v,dp){ if(v===null||v===undefined||!isFinite(v)) return '—';
+    return v.toLocaleString(L()==='en'?'en-US':'vi-VN',{minimumFractionDigits:dp||0,maximumFractionDigits:dp||0}); }
+  function fd(d){ if(L()==='en') return d; var p=d.split('-'); return p[2]+'/'+p[1]+'/'+p[0]; }
+  function dp(k){ return /pct|ctr|position/.test(k)?(/position/.test(k)?1:2):0; }
+  function lower(k){ return /position|ttfb/.test(k); }
+
+  function spark(vals){
+    var nums=vals.filter(function(v){return v!==null;});
+    if(nums.length<2) return '<span class="dxr-nospark">'+t('chưa đủ điểm','too few points')+'</span>';
+    var mn=Math.min.apply(null,nums),mx=Math.max.apply(null,nums),rg=(mx-mn)||1,W=120,H=28,n=vals.length;
+    var seg=[],cur=[],i;
+    for(i=0;i<n;i++){ if(vals[i]===null){ if(cur.length){seg.push(cur);cur=[];} continue; }
+      cur.push(((n===1?0:i/(n-1)*W)).toFixed(1)+','+(H-2-((vals[i]-mn)/rg)*(H-6)).toFixed(1)); }
+    if(cur.length) seg.push(cur);
+    var g=seg.map(function(s){ return s.length===1
+      ?'<circle cx="'+s[0].split(',')[0]+'" cy="'+s[0].split(',')[1]+'" r="1.7" fill="currentColor"/>'
+      :'<polyline points="'+s.join(' ')+'" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>';}).join('');
+    var last=null; for(i=n-1;i>=0;i--){ if(vals[i]!==null){last=i;break;} }
+    if(last!==null) g+='<circle cx="'+((n===1?0:last/(n-1)*W)).toFixed(1)+'" cy="'+(H-2-((vals[last]-mn)/rg)*(H-6)).toFixed(1)+'" r="2.4" fill="currentColor"/>';
+    return '<svg class="dxr-spark" viewBox="0 0 '+W+' '+H+'" preserveAspectRatio="none" aria-hidden="true">'+g+'</svg>';
+  }
+  function deltaCell(key,a,b){
+    if(a===null||b===null) return {txt:'—',cls:'dxr-flat'};
+    var diff=b-a,better=lower(key)?diff<0:diff>0,d=dp(key);
+    var cls=diff===0?'dxr-flat':(better?'dxr-up':'dxr-down');
+    var txt=(diff===0?'▬':(diff>0?'▲':'▼'))+' '+(diff>0?'+':'')+nf(diff,d);
+    if(a!==0) txt+=' ('+(diff/Math.abs(a)*100>0?'+':'')+(diff/Math.abs(a)*100).toFixed(1)+'%)';
+    return {txt:txt,cls:cls};
+  }
+  function inR(d){ return d>=S.from && d<=S.to; }
+  function opts(sel,list){ return list.map(function(d){
+    return '<option value="'+d+'"'+(d===sel?' selected':'')+'>'+fd(d)+'</option>';}).join(''); }
+
+  var GRAINS=[
+    {g:'day',  vi:'Số theo ngày thật — cộng dồn được',      en:'True daily figures — summable'},
+    {g:'window28',vi:'Ảnh chụp cửa sổ 28 ngày — KHÔNG cộng được', en:'28-day rolling snapshots — NOT summable'},
+    {g:'state',vi:'Chỉ số trạng thái — lấy đầu kỳ / cuối kỳ',en:'State metrics — first / last of range'}
+  ];
+  function grainNote(g){
+    if(g==='day') return t('Mỗi điểm là số đo của đúng ngày đó, nên tổng trong khoảng là con số thật.',
+                           'Each point is that day’s own measurement, so the range total is a real number.');
+    if(g==='window28') return t('Mỗi điểm đã là tổng của 28 ngày trước đó; hai ngày liền nhau chồng nhau 27 ngày. Cộng lại sẽ đếm trùng, nên chỉ so đầu kỳ với cuối kỳ.',
+                           'Each point is already a 28-day total; consecutive days overlap by 27. Summing would double-count, so only the first and last are compared.');
+    return t('Giá trị tại thời điểm quét (không phải luỹ kế), nên chỉ so đầu kỳ với cuối kỳ.',
+             'A value at the moment of the scan, not a cumulative figure, so only first and last are compared.');
+  }
+
+  function render(){
+    var el=document.getElementById('dxr-body'); if(!el) return; S.lang=L();
+    var head='<div class="dxr-tabs">'+
+      '<button class="dxr-tab'+(S.mode==='trend'?' on':'')+'" data-m="trend">'+t('Xu hướng theo khoảng','Trend over a range')+'</button>'+
+      '<button class="dxr-tab'+(S.mode==='cmp'?' on':'')+'" data-m="cmp">'+t('So sánh hai ngày','Compare two days')+'</button></div>';
+    var ctrl = S.mode==='trend'
+      ? '<div class="dxr-ctrl"><label>'+t('Từ','From')+' <select id="dxr-from">'+opts(S.from,S.dates)+'</select></label>'+
+        '<label>'+t('Đến','To')+' <select id="dxr-to">'+opts(S.to,S.dates)+'</select></label>'+
+        '<span class="dxr-hint" id="dxr-count"></span></div>'
+      : '<div class="dxr-ctrl"><label>'+t('Ngày A','Day A')+' <select id="dxr-a">'+opts(S.a,S.dates)+'</select></label>'+
+        '<label>'+t('Ngày B','Day B')+' <select id="dxr-b">'+opts(S.b,S.dates)+'</select></label></div>';
+    var note='<p class="dxr-note">'+t(
+      '<b>Đọc từ <code>data/rollup.json</code></b> — file dẫn xuất dựng lại mỗi sáng từ các file ngày bất biến, không sửa tay. Mỗi chỉ số mang một <b>nhãn grain</b> và bảng dưới chỉ làm đúng phép tính hợp lệ với nhãn đó. Ngày không quét <b>không bao giờ được nội suy</b>; ô “—” nghĩa là ngày đó không đo chỉ số này.',
+      '<b>Read from <code>data/rollup.json</code></b> — a derived file rebuilt each morning from the immutable day files, never hand-edited. Every metric carries a <b>grain label</b>, and the table below only performs the arithmetic that label allows. Unscanned days are <b>never interpolated</b>; a “—” means that metric was not measured that day.')+'</p>';
+    el.innerHTML=head+ctrl+note+'<div id="dxr-out"></div>';
+    el.querySelectorAll('.dxr-tab').forEach(function(b){ b.onclick=function(){S.mode=b.dataset.m;render();};});
+    var f=document.getElementById('dxr-from'),to=document.getElementById('dxr-to'),
+        a=document.getElementById('dxr-a'),b2=document.getElementById('dxr-b');
+    if(f) f.onchange=function(){S.from=f.value; if(S.from>S.to)S.to=S.from; render();};
+    if(to) to.onchange=function(){S.to=to.value; if(S.to<S.from)S.from=S.to; render();};
+    if(a) a.onchange=function(){S.a=a.value;draw();};
+    if(b2) b2.onchange=function(){S.b=b2.value;draw();};
+    draw();
+  }
+
+  function draw(){
+    var out=document.getElementById('dxr-out'); if(!out) return;
+    var keys=Object.keys(S.ser), html='';
+    if(S.mode==='trend'){
+      var span=S.dates.filter(inR).length;
+      var c=document.getElementById('dxr-count');
+      if(c) c.innerHTML=span+' '+t('ngày có dữ liệu trong khoảng','days with data in range');
+      html='<div class="dxr-rangelbl">'+fd(S.from)+' → '+fd(S.to)+'</div>';
+      GRAINS.forEach(function(G){
+        var ks=keys.filter(function(k){return S.ser[k].grain===G.g;});
+        if(!ks.length) return;
+        var any=false, rows='';
+        ks.forEach(function(k){
+          var s=S.ser[k], pts=s.points.filter(function(p){return inR(p.d);});
+          if(!pts.length){ rows+='<tr><td>'+esc(s.label)+'</td><td class="dxr-n" colspan="4">—</td></tr>'; return; }
+          any=true; var vals=pts.map(function(p){return p.v;}), d=dp(k);
+          if(G.g==='day'){
+            var sum=vals.reduce(function(x,y){return x+y;},0);
+            var avg=sum/vals.length, mx=Math.max.apply(null,vals);
+            var mxd=pts[vals.indexOf(mx)].d;
+            rows+='<tr><td>'+esc(s.label)+'</td><td class="dxr-n dxr-strong">'+nf(sum,d)+'</td><td class="dxr-n">'+nf(avg,1)+
+              '</td><td class="dxr-n">'+nf(mx,d)+' <span class="dxr-hint">'+fd(mxd)+'</span></td>'+
+              '<td class="dxr-sparkcell">'+spark(vals)+'</td></tr>';
+          } else {
+            var va=vals[0],vb=vals[vals.length-1],dd=deltaCell(k,va,vb);
+            rows+='<tr><td>'+esc(s.label)+'</td><td class="dxr-n">'+nf(va,d)+'</td><td class="dxr-n">'+nf(vb,d)+
+              '</td><td class="dxr-n '+dd.cls+'">'+dd.txt+'</td><td class="dxr-sparkcell '+dd.cls+'">'+spark(vals)+'</td></tr>';
+          }
+        });
+        var hdr = G.g==='day'
+          ? '<th>'+t('Chỉ số','Metric')+'</th><th class="dxr-n">'+t('Tổng trong khoảng','Range total')+'</th><th class="dxr-n">'+t('TB/ngày','Per day')+'</th><th class="dxr-n">'+t('Ngày cao nhất','Peak day')+'</th><th>'+t('Đường đi','Path')+'</th>'
+          : '<th>'+t('Chỉ số','Metric')+'</th><th class="dxr-n">'+t('Đầu kỳ','First')+'</th><th class="dxr-n">'+t('Cuối kỳ','Last')+'</th><th class="dxr-n">'+t('Chênh lệch','Change')+'</th><th>'+t('Đường đi','Path')+'</th>';
+        html+='<div class="dxr-grp"><div class="dxr-grpt dxr-g-'+G.g+'">'+t(G.vi,G.en)+'</div>'+
+              '<p class="dxr-grpn">'+grainNote(G.g)+'</p>'+
+              '<table class="dxr-tbl"><thead><tr>'+hdr+'</tr></thead><tbody>'+rows+'</tbody></table></div>';
+      });
+      if(!html) html='<p class="dxr-warn">'+t('Không có chỉ số nào trong khoảng này.','No metrics in this range.')+'</p>';
+    } else {
+      html='<div class="dxr-rangelbl">'+fd(S.a)+' → '+fd(S.b)+(S.a===S.b?' <span class="dxr-hint">('+t('cùng một ngày','same day')+')</span>':'')+'</div>';
+      GRAINS.forEach(function(G){
+        var ks=keys.filter(function(k){return S.ser[k].grain===G.g;});
+        if(!ks.length) return; var rows='';
+        ks.forEach(function(k){
+          var s=S.ser[k],d=dp(k);
+          function at(dt){ var p=s.points.filter(function(x){return x.d===dt;})[0]; return p?p.v:null; }
+          var va=at(S.a),vb=at(S.b),dd=deltaCell(k,va,vb);
+          rows+='<tr><td>'+esc(s.label)+'</td><td class="dxr-n">'+nf(va,d)+'</td><td class="dxr-n">'+nf(vb,d)+
+                '</td><td class="dxr-n '+dd.cls+'">'+dd.txt+'</td></tr>';
+        });
+        html+='<div class="dxr-grp"><div class="dxr-grpt dxr-g-'+G.g+'">'+t(G.vi,G.en)+'</div>'+
+              '<table class="dxr-tbl"><thead><tr><th>'+t('Chỉ số','Metric')+'</th><th class="dxr-n">'+fd(S.a)+
+              '</th><th class="dxr-n">'+fd(S.b)+'</th><th class="dxr-n">'+t('Chênh lệch','Change')+'</th></tr></thead><tbody>'+rows+'</tbody></table></div>';
+      });
+    }
+    out.innerHTML=html;
+  }
+
+  function hide(){ var s=document.getElementById('dxr'); if(s) s.style.display='none'; }
+  function start(){
+    fetch(CFG.rollup,{cache:'no-store'}).then(function(r){ if(!r.ok) throw 0; return r.json(); })
+    .then(function(j){
+      if(!j || !j.series) throw 0;
+      S.ser=j.series;
+      var set={};
+      Object.keys(S.ser).forEach(function(k){ S.ser[k].points.forEach(function(p){ set[p.d]=1; }); });
+      S.dates=Object.keys(set).sort();
+      if(S.dates.length<2){ hide(); return; }
+      var n=S.dates.length;
+      S.to=S.dates[n-1]; S.from=S.dates[Math.max(0,n-15)];
+      S.b=S.dates[n-1]; S.a=S.dates[n-2];
+      S.ready=true;
+      var sec=document.getElementById('dxr'); if(sec) sec.style.display='';
+      render();
+      setInterval(function(){ if(S.ready&&L()!==S.lang) render(); },400);
+    }).catch(hide);
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',start); else start();
+})();
+
+</script>
+
+  <footer class="foot">
+    <b>DX Living — <span class="vi">Báo cáo Hiệu suất SEO</span><span class="en">SEO Performance Report</span></b> · dxliving.com<br>
+      <span class="vi">Số 28 ngày đọc trực tiếp từ GSC + GA4 + Ahrefs (25/09/2026) · <b>bước một ngày, mọi so sánh là với 24/09</b> · <b>VỊ TRÍ TRUNG BÌNH 31,1 → 29,1 (tốt lên 2,0 bậc, nhưng do 9 truy vấn yếu rời bảng: 95 → 86)</b> · <b>click giữ 34 lần thứ ba, impressions 1.087 → 1.034, CTR 3,1% → 3,3%</b> · <b>tab DAYS của GSC lần đầu được lưu vào file ngày</b> · <b>GA4 584 phiên (▲9) nhưng phiên có tương tác 212 → 198 và tỷ lệ 36,87% → 33,90%; theo tuần 33,86% → 24,61%</b> · <b>key event 1 → 3, cả ba thuộc Direct</b> · <b>không đọc được Session source / medium — ghi null</b> · <b>backlink 697 → 699, referring domain 661 → 663, chỉ +2 — dòng spam gần như dừng</b> · <b>Page indexing và sitemap đứng yên ngày thứ tư (bản 21/09), Discovered giữ 116 trong khi sitemap sống 119 URL</b> · TTFB TB 328 → 336 ms, trần 545 → 782 ms, 118/118 trang dưới 1 giây · <b>không có bài mới</b> · lớp phủ /articles ngày thứ 29 · <b>trích dẫn AI giữ 12, trang được trích dẫn 8 → 9</b></span><span class="en">28-day figures read directly from GSC + GA4 + Ahrefs (25 Sep 2026) · <b>a one-day step, so every comparison is against 24 Sep</b> · <b>AVERAGE POSITION 31.1 → 29.1 (better by 2.0 places, but driven by 9 weak queries leaving the table: 95 → 86)</b> · <b>clicks held at 34 for a third scan, impressions 1,087 → 1,034, CTR 3.1% → 3.3%</b> · <b>the GSC DAYS tab is stored in the day file for the first time</b> · <b>GA4 584 sessions (▲9) but engaged sessions 212 → 198 and the rate 36.87% → 33.90%; week over week 33.86% → 24.61%</b> · <b>key events 1 → 3, all three Direct</b> · <b>Session source / medium could not be read — recorded null</b> · <b>backlinks 697 → 699, referring domains 661 → 663, just +2 — the spam influx has all but stopped</b> · <b>Page indexing and the sitemap are frozen for a fourth day (21 Sep build), Discovered holds at 116 while the live sitemap is 119 URLs</b> · mean TTFB 328 → 336 ms, ceiling 545 → 782 ms, 118 of 118 pages under 1 second · <b>no new article</b> · the /articles overlay is on day 29 · <b>AI responses held at 12, cited pages 8 → 9</b></span>
+      <span class="vi">Đã bỏ Supermetrics &amp; OpenSEO theo yêu cầu · Cập nhật: 25/09/2026</span><span class="en">Supermetrics &amp; OpenSEO removed as requested · Updated: 25 Sep 2026</span>
+    <a href="../history.html" style="color:var(--accent);font-weight:700;text-decoration:none"><span class="vi">🗂 Xem lịch sử dữ liệu từng ngày (mỗi ngày một bản lưu, không mất data cũ)</span><span class="en">🗂 Open the day-by-day data history (one frozen snapshot per day, no old data lost)</span></a>
+  </footer>
+
+</div>
+
+<script>
+  function setLang(l){
+    document.body.className = (l === 'en') ? 'lang-en' : '';
+    document.documentElement.lang = l;
+    document.getElementById('bvi').classList.toggle('active', l === 'vi');
+    document.getElementById('ben').classList.toggle('active', l === 'en');
+    if (window.__redraw) window.__redraw();
+    if (window.__redraws) window.__redraws.forEach(function(f){ try { f(); } catch (e) {} });
+  }
+  function lang(){ return document.body.classList.contains('lang-en') ? 'en' : 'vi'; }
+  function t(vi, en){ return lang() === 'en' ? en : vi; }
+
+/* =====================================================================
+   DATE PICKER — same control as history.html, but here it NAVIGATES.
+   This page is the report of the newest scan; picking an older day opens
+   that day's frozen report instead of re-rendering this one, so the
+   numbers on screen are always the numbers that were actually measured
+   on the chosen date. Nothing is interpolated.
+   ===================================================================== */
+(function(){
+  /* A frozen archive copy of this page has the picker section stripped out (it
+     lives one folder down, where data/index.json 404s and every relative target
+     would be wrong). Bail out before anything here touches a missing node. */
+  if (!document.getElementById('sec-filter')) return;
+
+  let ALL = [];                 /* [{date, report, label_vi, label_en}] ascending */
+  let LATEST = null;            /* the day this page reports on */
+  let DATASET = new Set();      /* stored days, for O(1) calendar lookups */
+  let SEL = {from: null, to: null, preset: 'custom'};
+  let DRAFT = {from: null, to: null, preset: 'custom'};
+  let calM = null;
+
+  const MN_VI = ['Tháng 1','Tháng 2','Tháng 3','Tháng 4','Tháng 5','Tháng 6','Tháng 7','Tháng 8','Tháng 9','Tháng 10','Tháng 11','Tháng 12'];
+  const MN_EN = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  const DOW_VI = ['CN','T2','T3','T4','T5','T6','T7'];
+  const DOW_EN = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+
+  function iso(y, m, d){ return y + '-' + String(m + 1).padStart(2, '0') + '-' + String(d).padStart(2, '0'); }
+  function todayISO(){ const n = new Date(); return iso(n.getFullYear(), n.getMonth(), n.getDate()); }
+  function shiftISO(s, days){ const d = new Date(s + 'T00:00:00Z'); d.setUTCDate(d.getUTCDate() + days); return d.toISOString().slice(0, 10); }
+  function monthAdd(o, n){ const d = new Date(Date.UTC(o.y, o.m + n, 1)); return {y: d.getUTCFullYear(), m: d.getUTCMonth()}; }
+  function monthKey(o){ return o.y * 12 + o.m; }
+  function monthOf(s){ return {y: Number(s.slice(0, 4)), m: Number(s.slice(5, 7)) - 1}; }
+  function dmy(s){ const p = s.split('-'); return p[2] + '/' + p[1] + '/' + p[0]; }
+  function el(id){ return document.getElementById(id); }
+
+  /* presets resolve against the client clock; `all` spans the whole archive */
+  const PRESETS = [
+    {id:'yesterday', vi:'Hôm qua', en:'Yesterday', calc:td => ({from: shiftISO(td, -1), to: shiftISO(td, -1)})},
+    {id:'d7',  vi:'7 ngày qua',  en:'Last 7 days',  calc:td => ({from: shiftISO(td, -6),  to: td})},
+    {id:'d28', vi:'28 ngày qua', en:'Last 28 days', calc:td => ({from: shiftISO(td, -27), to: td})},
+    {id:'d90', vi:'90 ngày qua', en:'Last 90 days', calc:td => ({from: shiftISO(td, -89), to: td})},
+    {id:'wk',  vi:'Tuần này',    en:'This week',    calc:function(td){ const d = new Date(td + 'T00:00:00Z'); return {from: shiftISO(td, -d.getUTCDay()), to: td}; }},
+    {id:'mo',  vi:'Tháng này',   en:'This month',   calc:td => ({from: td.slice(0, 8) + '01', to: td})},
+    {id:'yr',  vi:'Năm nay',     en:'This year',    calc:td => ({from: td.slice(0, 4) + '-01-01', to: td})},
+    {id:'lwk', vi:'Tuần trước',  en:'Last week',    calc:function(td){ const d = new Date(td + 'T00:00:00Z'); const s = shiftISO(td, -d.getUTCDay() - 7); return {from: s, to: shiftISO(s, 6)}; }},
+    {id:'lmo', vi:'Tháng trước', en:'Last month',   calc:function(td){ const mo = monthAdd(monthOf(td), -1); const last = new Date(Date.UTC(mo.y, mo.m + 1, 0)).getUTCDate(); return {from: iso(mo.y, mo.m, 1), to: iso(mo.y, mo.m, last)}; }},
+    {id:'all', vi:'Toàn bộ dữ liệu đã lưu', en:'All stored data', calc:function(){ return {from: ALL[0].date, to: ALL[ALL.length - 1].date}; }}
+  ];
+  function presetById(id){ return PRESETS.filter(p => p.id === id)[0] || null; }
+  function inRange(dt, from, to){ return (!from || dt >= from) && (!to || dt <= to); }
+  function daysIn(from, to){ return ALL.filter(r => inRange(r.date, from, to)); }
+  function countIn(from, to){ return daysIn(from, to).length; }
+  function rowFor(d){ return ALL.filter(r => r.date === d)[0] || null; }
+
+  function rangeText(r){
+    if (!r.from) return t('Chưa chọn ngày', 'No day picked yet');
+    if (!r.to || r.from === r.to) return dmy(r.from);
+    return dmy(r.from) + ' – ' + dmy(r.to);
+  }
+  function labelFor(r){
+    const p = r.preset && r.preset !== 'custom' ? presetById(r.preset) : null;
+    if (p) return '<span class="vi">' + p.vi + '</span><span class="en">' + p.en + '</span>';
+    if (!r.from) return '<span class="vi">Chọn ngày</span><span class="en">Pick a date</span>';
+    if (!r.to || r.from === r.to) return '<span class="vi">Ngày ' + dmy(r.from) + '</span><span class="en">' + dmy(r.from) + '</span>';
+    return dmy(r.from) + ' – ' + dmy(r.to);
+  }
+
+  function renderPresets(){
+    const td = todayISO();
+    el('dppresets').innerHTML = PRESETS.map(function(p){
+      const rg = p.calc(td);
+      const n = countIn(rg.from, rg.to);
+      return '<button class="dp-preset' + (DRAFT.preset === p.id ? ' sel' : '') + '" type="button" data-p="' + p.id + '"' + (n === 0 ? ' disabled' : '') + '>'
+        + '<span class="rad"></span>'
+        + '<span><span class="vi">' + p.vi + '</span><span class="en">' + p.en + '</span></span>'
+        + '<span class="pc">' + n + '</span>'
+        + '</button>';
+    }).join('');
+  }
+
+  function renderCals(){
+    const minM = monthKey(monthOf(ALL[0].date));
+    const maxM = monthKey(monthOf(todayISO()));
+    /* keep the two visible months inside [earliest stored month … current month] */
+    if (monthKey(calM) < minM) calM = {y: Math.floor(minM / 12), m: minM % 12};
+    if (monthKey(monthAdd(calM, 1)) > maxM) calM = monthAdd({y: Math.floor(maxM / 12), m: maxM % 12}, -1);
+    if (monthKey(calM) < minM) calM = {y: Math.floor(minM / 12), m: minM % 12};
+
+    const months = [calM, monthAdd(calM, 1)];
+    el('dpcals').innerHTML = months.map(function(mo, side){
+      const first = new Date(Date.UTC(mo.y, mo.m, 1)).getUTCDay();
+      const days = new Date(Date.UTC(mo.y, mo.m + 1, 0)).getUTCDate();
+      const canPrev = side === 0 && monthKey(mo) > minM;
+      const canNext = side === 1 && monthKey(mo) < maxM;
+      let head = '<div class="dp-mhead">'
+        + (side === 0 ? '<button class="dp-nav" type="button" data-nav="-1"' + (canPrev ? '' : ' disabled') + ' aria-label="Previous month">‹</button>' : '<span></span>')
+        + '<span class="dp-mname"><span class="vi">' + MN_VI[mo.m] + ' ' + mo.y + '</span><span class="en">' + MN_EN[mo.m] + ' ' + mo.y + '</span></span>'
+        + (side === 1 ? '<button class="dp-nav" type="button" data-nav="1"' + (canNext ? '' : ' disabled') + ' aria-label="Next month">›</button>' : '<span></span>')
+        + '</div>';
+      let cells = DOW_VI.map((v, i) => '<div class="dp-dow"><span class="vi">' + v + '</span><span class="en">' + DOW_EN[i] + '</span></div>').join('');
+      for (let i = 0; i < first; i++) cells += '<button class="dp-day blank" type="button" disabled tabindex="-1"></button>';
+      for (let d = 1; d <= days; d++){
+        const s = iso(mo.y, mo.m, d);
+        const stored = DATASET.has(s);
+        const edge = DRAFT.from && (s === DRAFT.from || s === DRAFT.to);
+        const inr = !edge && DRAFT.from && DRAFT.to && s > DRAFT.from && s < DRAFT.to;
+        const cls = ['dp-day', stored ? 'has' : 'off', edge ? 'edge' : '', inr ? 'inr' : ''].filter(Boolean).join(' ');
+        cells += '<button class="' + cls + '" type="button" data-d="' + s + '"'
+          + ' title="' + (stored ? dmy(s) : dmy(s) + ' — ' + t('chưa quét, chỉ dùng làm đầu/cuối khoảng', 'never scanned; usable only as a range edge')) + '">'
+          + d + (stored ? '<span class="dot"></span>' : '') + '</button>';
+      }
+      return '<div>' + head + '<div class="dp-grid">' + cells + '</div></div>';
+    }).join('');
+  }
+
+  function renderPanel(){
+    renderPresets(); renderCals();
+    el('dprng').textContent = rangeText(DRAFT);
+    const n = DRAFT.from ? countIn(DRAFT.from, DRAFT.to || DRAFT.from) : 0;
+    /* when the draft holds no stored day, say why Update is dead instead of
+       leaving the reader to guess at a greyed-out button */
+    el('dphint').innerHTML = (DRAFT.from && n === 0)
+      ? '<span class="vi">Khoảng này chưa có ngày nào được quét — không có báo cáo để mở. Chọn ngày có dấu chấm.</span>'
+      + '<span class="en">No day in this range was ever scanned — there is no report to open. Pick a day with a dot.</span>'
+      : '<span class="vi">' + n + ' ngày đã lưu trong khoảng này · ngày theo giờ Việt Nam (Asia/Ho_Chi_Minh), là giờ lúc quét</span>'
+      + '<span class="en">' + n + ' stored day(s) in this range · dates are in Vietnam time (Asia/Ho_Chi_Minh), the scan timezone</span>';
+    el('dpupdate').disabled = !DRAFT.from || n === 0;
+  }
+
+  function renderBar(){
+    el('dplabel').innerHTML = labelFor(SEL);
+    /* the collapsed header still has to answer "which day am I looking at?" */
+    el('accmeta').innerHTML = '<span class="vi">Đang xem ' + dmy(LATEST) + ' (mới nhất) · ' + ALL.length + ' ngày đã lưu</span>'
+      + '<span class="en">Showing ' + dmy(LATEST) + ' (latest) · ' + ALL.length + ' stored days</span>';
+    el('dpchip').innerHTML = (SEL.from === LATEST && SEL.to === LATEST)
+      ? '<span class="chip"><span class="vi">Đang xem báo cáo ngày ' + dmy(LATEST) + ' (mới nhất)</span><span class="en">Now showing the ' + dmy(LATEST) + ' report (latest)</span></span>'
+      : '';
+    el('daylinks').innerHTML = '<span class="daylinks-lb"><span class="vi">Mở nhanh</span><span class="en">Jump to</span></span>'
+      + ALL.slice().reverse().map(function(r){
+          const cur = r.date === LATEST;
+          const label = '<span class="vi">' + dmy(r.date) + '</span><span class="en">' + dmy(r.date) + '</span>'
+            + ' <small><span class="vi">' + r.label_vi + '</span><span class="en">' + r.label_en + '</span></small>';
+          if (cur) return '<span class="daylink cur">' + label + '</span>';
+          return '<a class="daylink" href="' + targetFor(r.date, r.date) + '">' + label + '</a>';
+        }).join('');
+  }
+
+  /* Where a chosen range should take the reader.
+     - the newest day  -> this page, which already is that report
+     - a day with a frozen HTML report -> that exact archived report
+     - a stored day with no frozen HTML (the June baseline) -> the history browser, focused on it
+     - a real range -> the history browser, filtered to the range (that page draws trends) */
+  function targetFor(from, to){
+    const rows = daysIn(from, to);
+    if (rows.length === 1){
+      const r = rows[0];
+      if (r.date === LATEST) return 'index.html';
+      if (r.report) return r.report;
+      return 'history.html?day=' + r.date;
+    }
+    return 'history.html?from=' + from + '&to=' + to;
+  }
+
+  function openPanel(open){
+    if (open){
+      DRAFT = {from: SEL.from, to: SEL.to, preset: SEL.preset};
+      calM = monthAdd(monthOf(DRAFT.to || ALL[ALL.length - 1].date), -1);
+      renderPanel();
+    }
+    el('dppanel').hidden = !open;
+    el('dpbtn').setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+
+  function wire(){
+    el('dpbtn').addEventListener('click', function(e){
+      e.stopPropagation();
+      openPanel(el('dppanel').hidden);
+    });
+    el('dppanel').addEventListener('click', function(e){
+      e.stopPropagation();
+      const pb = e.target.closest('.dp-preset');
+      if (pb && !pb.disabled){
+        const p = presetById(pb.dataset.p), rg = p.calc(todayISO());
+        DRAFT = {from: rg.from, to: rg.to, preset: p.id};
+        renderPanel(); return;
+      }
+      const nav = e.target.closest('.dp-nav');
+      if (nav && !nav.disabled){ calM = monthAdd(calM, Number(nav.dataset.nav)); renderCals(); return; }
+      const day = e.target.closest('.dp-day');
+      if (day && !day.disabled){
+        const s = day.dataset.d;
+        if (!DRAFT.from || DRAFT.to) DRAFT = {from: s, to: null, preset: 'custom'};
+        else if (s >= DRAFT.from) DRAFT = {from: DRAFT.from, to: s, preset: 'custom'};
+        else DRAFT = {from: s, to: DRAFT.from, preset: 'custom'};
+        renderPanel();
+      }
+    });
+    el('acctoggle').addEventListener('click', function(e){
+      e.stopPropagation();
+      const body = el('acc-body'), open = body.hidden;
+      body.hidden = !open;
+      el('acctoggle').setAttribute('aria-expanded', open ? 'true' : 'false');
+      if (!open) openPanel(false);          /* collapsing also shuts the calendar */
+    });
+    el('dpcancel').addEventListener('click', function(){ openPanel(false); });
+    el('dpupdate').addEventListener('click', function(){
+      if (!DRAFT.from) return;
+      const from = DRAFT.from, to = DRAFT.to || DRAFT.from;
+      if (!countIn(from, to)) return;
+      const url = targetFor(from, to);
+      if (url === 'index.html'){
+        /* already here — say so instead of reloading the same page */
+        SEL = {from: LATEST, to: LATEST, preset: 'custom'};
+        renderBar(); openPanel(false); return;
+      }
+      window.location.href = url;
+    });
+    document.addEventListener('click', function(){ if (!el('dppanel').hidden) openPanel(false); });
+    document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && !el('dppanel').hidden) openPanel(false); });
+  }
+
+  fetch('data/index.json', {cache: 'no-store'})
+    .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+    .then(function(ix){
+      ALL = (ix.snapshots || []).slice().sort((a, b) => a.date < b.date ? -1 : 1);
+      if (!ALL.length) throw new Error('no snapshots');
+      LATEST = ix.latest || ALL[ALL.length - 1].date;
+      DATASET = new Set(ALL.map(r => r.date));
+      SEL = {from: LATEST, to: LATEST, preset: 'custom'};
+      el('sec-filter').style.display = '';
+      renderBar();
+      wire();
+      window.__redraw = renderBar;
+    })
+    .catch(function(){
+      /* no manifest -> no honest way to offer dates; leave the control hidden
+         rather than showing a picker that cannot open anything */
+      el('sec-filter').style.display = 'none';
+    });
+})();
+
+/* =====================================================================
+   TREND CHARTS — one small multiple per metric, drawn from the same
+   data/*.json files the rest of the report is built on. Nothing is
+   interpolated: a scan that never measured a metric leaves a gap.
+   Works from /archive/ too, where it clips the series at the archived
+   date so a frozen report never shows numbers from after it was frozen.
+   ===================================================================== */
+(function(){
+  const host = document.getElementById('tgrid');
+  if (!host) return;
+
+  const BASE = /\/archive\//.test(location.pathname) ? '../' : '';
+  const CUT  = (location.pathname.match(/\/archive\/(\d{4}-\d{2}-\d{2})\.html/) || [])[1] || null;
+
+  function dmy(s){ const p = s.split('-'); return p[2] + '/' + p[1] + '/' + p[0]; }
+  function pick(o){ let v = o; for (let i = 1; i < arguments.length; i++){ if (v == null) return null; v = v[arguments[i]]; } return (typeof v === 'number' && isFinite(v)) ? v : null; }
+  function group(n){ return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, lang() === 'en' ? ',' : '.'); }
+  function fmt(v, dec, unit){
+    if (v == null) return '—';
+    const body = dec ? v.toFixed(dec) : group(Math.round(v));
+    return body + (unit || '');
+  }
+
+  const METRICS = [
+    {id:'clicks', vi:'GSC · Clicks',              en:'GSC · Clicks',              good:'up',   get:d=>pick(d,'gsc_28d','clicks')},
+    {id:'impr',   vi:'GSC · Impressions',         en:'GSC · Impressions',         good:'up',   get:d=>pick(d,'gsc_28d','impressions')},
+    {id:'ctr',    vi:'GSC · CTR trung bình',      en:'GSC · Average CTR',         good:'up',   dec:1, unit:'%', get:d=>pick(d,'gsc_28d','ctr_pct')},
+    {id:'pos',    vi:'GSC · Vị trí trung bình',   en:'GSC · Average position',    good:'down', dec:1, get:d=>pick(d,'gsc_28d','avg_position'),
+     noteVi:'thấp hơn là tốt hơn', noteEn:'lower is better'},
+    {id:'q',      vi:'GSC · Truy vấn có hiển thị',en:'GSC · Queries with impr.',  good:'up',   get:d=>pick(d,'gsc_28d','queries_with_impressions')},
+    {id:'rd',     vi:'Ahrefs · Referring domains',en:'Ahrefs · Referring domains',good:'up',   get:d=>pick(d,'ahrefs','referring_domains')},
+    {id:'bl',     vi:'Ahrefs · Backlinks',        en:'Ahrefs · Backlinks',        good:'up',   get:d=>pick(d,'ahrefs','backlinks')},
+    {id:'aic',    vi:'Trích dẫn AI',              en:'AI citations',              good:'up',   get:d=>pick(d,'ahrefs','ai_citations')},
+    {id:'aiv',    vi:'Điểm AI Visibility',        en:'AI Visibility score',       good:'up',   get:d=>pick(d,'ai_visibility','score'),
+     noteVi:'trên thang 100', noteEn:'out of 100'},
+    {id:'ses',    vi:'GA4 · Sessions',            en:'GA4 · Sessions',            good:'up',   flagged:true, get:d=>pick(d,'ga4_28d','sessions'),
+     noteVi:'số thiếu từ ~29/07', noteEn:'under-count since ~29 Jul'}
+  ];
+
+  let ROWS = [];   /* [{date, ms, data}] ascending */
+
+  function delta(cur, prev, good, dec, unit){
+    if (cur == null || prev == null)
+      return '<span class="delta flat"><span class="vi">■ chưa có mốc trước</span><span class="en">■ no prior scan</span></span>';
+    const d = cur - prev;
+    if (Math.abs(d) < 1e-9) return '<span class="delta flat"><span class="vi">■ đứng yên</span><span class="en">■ flat</span></span>';
+    const better = (good === 'down') ? d < 0 : d > 0;
+    return '<span class="delta ' + (better ? 'up' : 'down') + '">' + (d > 0 ? '▲ +' : '▼ −') + fmt(Math.abs(d), dec, unit) + '</span>';
+  }
+
+  function chart(pts, m){
+    if (pts.length < 2)
+      return '<div class="t-empty"><span class="vi">Chưa đủ điểm để vẽ</span><span class="en">Not enough points to plot</span></div>';
+    const W = 240, H = 56, PT = 7, PB = 7, PX = 4;
+    const xs = pts.map(p => p.ms), ys = pts.map(p => p.y);
+    const x0 = Math.min.apply(null, xs), x1 = Math.max.apply(null, xs);
+    let y0 = Math.min.apply(null, ys), y1 = Math.max.apply(null, ys);
+    if (y1 === y0){ y0 -= 1; y1 += 1; }
+    const pad = (y1 - y0) * 0.15; y0 -= pad; y1 += pad;
+    const X = v => x1 === x0 ? W / 2 : PX + ((v - x0) / (x1 - x0)) * (W - PX * 2);
+    const Y = v => H - PB - ((v - y0) / (y1 - y0)) * (H - PT - PB);
+    const col = m.flagged ? 'var(--amber)' : 'var(--accent)';
+    const line = pts.map((p, i) => (i ? 'L' : 'M') + X(p.ms).toFixed(1) + ' ' + Y(p.y).toFixed(1)).join(' ');
+    const area = line + ' L' + X(pts[pts.length - 1].ms).toFixed(1) + ' ' + H + ' L' + X(pts[0].ms).toFixed(1) + ' ' + H + ' Z';
+    const dots = pts.map(function(p, i){
+      const last = i === pts.length - 1;
+      return '<circle cx="' + X(p.ms).toFixed(1) + '" cy="' + Y(p.y).toFixed(1) + '" r="' + (last ? 3 : 1.7)
+        + '" fill="' + (last ? col : '#fff') + '" stroke="' + col + '" stroke-width="1.2" vector-effect="non-scaling-stroke">'
+        + '<title>' + dmy(p.date) + ' · ' + fmt(p.y, m.dec, m.unit) + '</title></circle>';
+    }).join('');
+    return '<svg class="t-svg" viewBox="0 0 ' + W + ' ' + H + '" preserveAspectRatio="none" role="img" aria-hidden="true">'
+      + '<path d="' + area + '" fill="' + col + '" opacity=".08"></path>'
+      + '<path d="' + line + '" fill="none" stroke="' + col + '" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>'
+      + dots + '</svg>';
+  }
+
+  function draw(){
+    host.innerHTML = METRICS.map(function(m){
+      const pts = [];
+      ROWS.forEach(function(r){ const v = m.get(r.data); if (v != null) pts.push({ms: r.ms, y: v, date: r.date}); });
+      const last = pts.length ? pts[pts.length - 1] : null;
+      const prev = pts.length > 1 ? pts[pts.length - 2] : null;
+      const lo = pts.length ? Math.min.apply(null, pts.map(p => p.y)) : null;
+      const hi = pts.length ? Math.max.apply(null, pts.map(p => p.y)) : null;
+      const note = m.noteVi ? ' <span class="vi">(' + m.noteVi + ')</span><span class="en">(' + m.noteEn + ')</span>' : '';
+      return '<div class="tcard' + (m.flagged ? ' flagged' : '') + '">'
+        + '<div class="t-lb"><span class="vi">' + m.vi + '</span><span class="en">' + m.en + '</span>' + note + '</div>'
+        + '<div class="t-top"><span class="t-val">' + fmt(last ? last.y : null, m.dec, m.unit) + '</span>'
+        + delta(last ? last.y : null, prev ? prev.y : null, m.good, m.dec, m.unit) + '</div>'
+        + chart(pts, m)
+        + '<div class="t-foot"><span>' + (pts.length ? fmt(lo, m.dec, m.unit) + ' – ' + fmt(hi, m.dec, m.unit) : '—') + '</span>'
+        + '<span><span class="vi">' + pts.length + ' lần quét</span><span class="en">' + pts.length + ' scans</span></span></div>'
+        + '</div>';
+    }).join('');
+
+    const first = ROWS[0], lastR = ROWS[ROWS.length - 1];
+    document.getElementById('trend-range').textContent = ROWS.length + (lang() === 'en' ? ' scans · ' : ' lần quét · ') + dmy(first.date) + ' → ' + dmy(lastR.date);
+    document.getElementById('trend-hint').innerHTML =
+      '<span class="vi">Di chuột lên từng điểm để xem ngày quét và giá trị chính xác của điểm đó.</span>'
+      + '<span class="en">Hover any point to read the exact scan date and value behind it.</span>';
+  }
+
+  function fail(){
+    host.innerHTML = '<div class="t-empty" style="grid-column:1/-1">'
+      + '<span class="vi">Không tải được dữ liệu lịch sử — biểu đồ để trống thay vì hiển thị số phỏng đoán.</span>'
+      + '<span class="en">The history data could not be loaded — the charts are left empty rather than showing guessed numbers.</span></div>';
+    document.getElementById('trend-range').textContent = '—';
+  }
+
+  fetch(BASE + 'data/index.json', {cache: 'no-store'})
+    .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+    .then(function(ix){
+      let snaps = (ix.snapshots || []).slice().sort((a, b) => a.date < b.date ? -1 : 1);
+      if (CUT) snaps = snaps.filter(sn => sn.date <= CUT);
+      if (!snaps.length) throw new Error('no snapshots');
+      return Promise.all(snaps.map(function(sn){
+        return fetch(BASE + sn.data, {cache: 'no-store'})
+          .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status + ' ' + sn.data); return r.json(); })
+          .then(j => ({date: sn.date, ms: Date.parse(sn.date + 'T00:00:00Z'), data: j}));
+      }));
+    })
+    .then(function(rows){
+      ROWS = rows.sort((a, b) => a.date < b.date ? -1 : 1);
+      draw();
+      (window.__redraws = window.__redraws || []).push(draw);
+    })
+    .catch(fail);
+})();
+</script>
+</body>
+</html>
