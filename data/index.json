@@ -1,315 +1,322 @@
 {
-  "site": "dxliving.com",
   "description": "Lịch sử snapshot dữ liệu SEO theo ngày / Daily SEO data snapshot history. Mỗi ngày một file data/YYYY-MM-DD.json + bản HTML đóng băng archive/YYYY-MM-DD.html.",
-  "latest": "2026-09-24",
+  "latest": "2026-09-25",
+  "site": "dxliving.com",
   "snapshots": [
     {
-      "date": "2026-06-30",
       "data": "data/2026-06-30.json",
-      "report": null,
+      "date": "2026-06-30",
+      "label_en": "June 2026 baseline",
       "label_vi": "Baseline Tháng 6/2026",
-      "label_en": "June 2026 baseline"
+      "report": null
     },
     {
-      "date": "2026-07-27",
       "data": "data/2026-07-27.json",
-      "report": "archive/2026-07-27.html",
+      "date": "2026-07-27",
+      "label_en": "Bilingual report published",
       "label_vi": "Publish báo cáo song ngữ",
-      "label_en": "Bilingual report published"
+      "report": "archive/2026-07-27.html"
     },
     {
-      "date": "2026-07-28",
       "data": "data/2026-07-28.json",
-      "report": "archive/2026-07-28.html",
+      "date": "2026-07-28",
+      "label_en": "Live Ahrefs added",
       "label_vi": "Thêm Ahrefs live",
-      "label_en": "Live Ahrefs added"
+      "report": "archive/2026-07-28.html"
     },
     {
-      "date": "2026-07-29",
       "data": "data/2026-07-29.json",
-      "report": "archive/2026-07-29.html",
+      "date": "2026-07-29",
+      "label_en": "AI Visibility added (16/100)",
       "label_vi": "Thêm Hiện diện trên AI (16/100)",
-      "label_en": "AI Visibility added (16/100)"
+      "report": "archive/2026-07-29.html"
     },
     {
-      "date": "2026-07-30",
       "data": "data/2026-07-30.json",
-      "report": "archive/2026-07-30.html",
+      "date": "2026-07-30",
+      "label_en": "Ahrefs Health 88→100; GSC clicks 63→65, impressions 952→1006",
       "label_vi": "Ahrefs Health 88→100; GSC clicks 63→65, impressions 952→1006",
-      "label_en": "Ahrefs Health 88→100; GSC clicks 63→65, impressions 952→1006"
+      "report": "archive/2026-07-30.html"
     },
     {
-      "date": "2026-07-31",
       "data": "data/2026-07-31.json",
-      "report": "archive/2026-07-31.html",
+      "date": "2026-07-31",
+      "label_en": "GSC clicks 65→67, impressions 1006→1032; Ahrefs ref domains 339→341, backlinks 344→346",
       "label_vi": "GSC clicks 65→67, impressions 1006→1032; Ahrefs ref domains 339→341, backlinks 344→346",
-      "label_en": "GSC clicks 65→67, impressions 1006→1032; Ahrefs ref domains 339→341, backlinks 344→346"
+      "report": "archive/2026-07-31.html"
     },
     {
-      "date": "2026-08-03",
       "data": "data/2026-08-03.json",
-      "report": "archive/2026-08-03.html",
+      "date": "2026-08-03",
+      "label_en": "GSC impressions 1,032→1,189, queries 92→105; AI citations 14→19 (ChatGPT 6→11)",
       "label_vi": "GSC impressions 1.032→1.189, truy vấn 92→105; AI citations 14→19 (ChatGPT 6→11)",
-      "label_en": "GSC impressions 1,032→1,189, queries 92→105; AI citations 14→19 (ChatGPT 6→11)"
+      "report": "archive/2026-08-03.html"
     },
     {
-      "date": "2026-08-07",
       "data": "data/2026-08-07.json",
-      "report": "archive/2026-08-07.html",
+      "date": "2026-08-07",
+      "label_en": "GSC impressions 1,288, queries 128; Ahrefs RD 366/BL 372; AI Visibility 16→26; GA4 collection failing since ~29 Jul",
       "label_vi": "GSC impressions 1.288, truy vấn 128; Ahrefs RD 366/BL 372; AI Visibility 16→26; GA4 lỗi thu thập từ ~29/07",
-      "label_en": "GSC impressions 1,288, queries 128; Ahrefs RD 366/BL 372; AI Visibility 16→26; GA4 collection failing since ~29 Jul"
+      "report": "archive/2026-08-07.html"
     },
     {
-      "date": "2026-08-10",
       "data": "data/2026-08-10.json",
-      "report": "archive/2026-08-10.html",
+      "date": "2026-08-10",
+      "label_en": "GSC 1,337 impressions / 74 clicks, avg position improved 29.6→29.2; Ahrefs RD 366→395, BL 372→401; AI citations 19→18; AI Visibility flat at 26; GA4 still broken (day 12)",
       "label_vi": "GSC 1.337 impressions / 74 clicks, vị trí TB cải thiện 29,6→29,2; Ahrefs RD 366→395, BL 372→401; trích dẫn AI 19→18; AI Visibility giữ 26; GA4 vẫn hỏng (ngày 12)",
-      "label_en": "GSC 1,337 impressions / 74 clicks, avg position improved 29.6→29.2; Ahrefs RD 366→395, BL 372→401; AI citations 19→18; AI Visibility flat at 26; GA4 still broken (day 12)"
+      "report": "archive/2026-08-10.html"
     },
     {
-      "date": "2026-08-11",
       "data": "data/2026-08-11.json",
-      "report": "archive/2026-08-11.html",
+      "date": "2026-08-11",
+      "label_en": "GSC 1,371 impressions / 140 queries but clicks 74→72 and avg position 29.2→29.4; Ahrefs RD 395→397, BL 401→404 (growth stalled); AI citations flat at 18; AI Visibility flat at 26; GA4 still broken (day 13), GTM snippets back up 3→4",
       "label_vi": "GSC 1.371 impressions / 140 truy vấn nhưng clicks 74→72 và vị trí TB 29,2→29,4; Ahrefs RD 395→397, BL 401→404 (chậm hẳn); trích dẫn AI giữ 18; AI Visibility giữ 26; GA4 vẫn hỏng (ngày 13), snippet GTM tăng lại 3→4",
-      "label_en": "GSC 1,371 impressions / 140 queries but clicks 74→72 and avg position 29.2→29.4; Ahrefs RD 395→397, BL 401→404 (growth stalled); AI citations flat at 18; AI Visibility flat at 26; GA4 still broken (day 13), GTM snippets back up 3→4"
+      "report": "archive/2026-08-11.html"
     },
     {
-      "date": "2026-08-12",
       "data": "data/2026-08-12.json",
-      "report": "archive/2026-08-12.html",
+      "date": "2026-08-12",
+      "label_en": "GSC 1,415 impressions / 148 queries but clicks flat at 72 and avg position 29.4→30.6; Ahrefs RD 397→404, BL 404→415 (re-accelerating); AI citations flat at 18; AI Visibility flat at 26; GA4 still broken (day 14), latest 7-day window at 0 sessions",
       "label_vi": "GSC 1.415 impressions / 148 truy vấn nhưng clicks đứng yên 72 và vị trí TB 29,4→30,6; Ahrefs RD 397→404, BL 404→415 (tăng tốc lại); trích dẫn AI giữ 18; AI Visibility giữ 26; GA4 vẫn hỏng (ngày 14), 7 ngày gần nhất về 0 session",
-      "label_en": "GSC 1,415 impressions / 148 queries but clicks flat at 72 and avg position 29.4→30.6; Ahrefs RD 397→404, BL 404→415 (re-accelerating); AI citations flat at 18; AI Visibility flat at 26; GA4 still broken (day 14), latest 7-day window at 0 sessions"
+      "report": "archive/2026-08-12.html"
     },
     {
-      "date": "2026-08-13",
       "data": "data/2026-08-13.json",
-      "report": "archive/2026-08-13.html",
+      "date": "2026-08-13",
+      "label_en": "GSC 1,521 impressions / 79 clicks, avg position improved 30.6→30.4 but the 7 extra clicks are almost all brand; Ahrefs RD 404→406, BL 415→418 (slowing); AI citations flat at 18; AI Visibility flat at 26; GA4 still broken (day 15), sitemap 78→79 URLs",
       "label_vi": "GSC 1.521 impressions / 79 clicks, vị trí TB cải thiện 30,6→30,4 nhưng 7 click tăng thêm gần như toàn brand; Ahrefs RD 404→406, BL 415→418 (chậm lại); trích dẫn AI giữ 18; AI Visibility giữ 26; GA4 vẫn hỏng (ngày 15), sitemap 78→79 URL",
-      "label_en": "GSC 1,521 impressions / 79 clicks, avg position improved 30.6→30.4 but the 7 extra clicks are almost all brand; Ahrefs RD 404→406, BL 415→418 (slowing); AI citations flat at 18; AI Visibility flat at 26; GA4 still broken (day 15), sitemap 78→79 URLs"
+      "report": "archive/2026-08-13.html"
     },
     {
-      "date": "2026-08-14",
       "data": "data/2026-08-14.json",
-      "report": "archive/2026-08-14.html",
+      "date": "2026-08-14",
+      "label_en": "GSC 1,604 impressions / 87 clicks, avg position 30.4→29.6 — the strongest window yet, but queries-with-impressions fell for the first time 153→147 and brand is 86.2% of clicks; Ahrefs RD 406→410, BL 418→422, followed backlinks doubled 3→6; AI citations flat at 18; AI Visibility flat at 26; GA4 still broken (day 16)",
       "label_vi": "GSC 1.604 impressions / 87 clicks, vị trí TB 30,4→29,6 — cửa sổ mạnh nhất từ trước tới nay, nhưng truy vấn có hiển thị giảm lần đầu 153→147 và brand chiếm 86,2% clicks; Ahrefs RD 406→410, BL 418→422, backlink followed nhân đôi 3→6; trích dẫn AI giữ 18; AI Visibility giữ 26; GA4 vẫn hỏng (ngày 16)",
-      "label_en": "GSC 1,604 impressions / 87 clicks, avg position 30.4→29.6 — the strongest window yet, but queries-with-impressions fell for the first time 153→147 and brand is 86.2% of clicks; Ahrefs RD 406→410, BL 418→422, followed backlinks doubled 3→6; AI citations flat at 18; AI Visibility flat at 26; GA4 still broken (day 16)"
+      "report": "archive/2026-08-14.html"
     },
     {
-      "date": "2026-08-17",
       "data": "data/2026-08-17.json",
-      "report": "archive/2026-08-17.html",
+      "date": "2026-08-17",
+      "label_en": "GSC 1,749 impressions / avg position 29.2 (best yet) and queries 147→154, but clicks 87→77 on the rolling window; Ahrefs RD 410→422, BL 422→438 (+16, largest since 10 Aug), followed 6→8; AI citations flat at 18 but ChatGPT 10→12 / Copilot 8→6; AI Visibility flat at 26; GA4 hits resumed ~13 Aug (10–16 Aug = 13 sessions) but the homepage is still broken",
       "label_vi": "GSC 1.749 impressions / vị trí TB 29,2 (tốt nhất từ trước tới nay) và truy vấn 147→154, nhưng clicks 87→77 do cửa sổ trượt; Ahrefs RD 410→422, BL 422→438 (+16, mạnh nhất từ 10/08), followed 6→8; trích dẫn AI giữ 18 nhưng ChatGPT 10→12 / Copilot 8→6; AI Visibility giữ 26; GA4 có hit trở lại từ ~13/08 (10–16/08 = 13 session) nhưng trang chủ vẫn hỏng y nguyên",
-      "label_en": "GSC 1,749 impressions / avg position 29.2 (best yet) and queries 147→154, but clicks 87→77 on the rolling window; Ahrefs RD 410→422, BL 422→438 (+16, largest since 10 Aug), followed 6→8; AI citations flat at 18 but ChatGPT 10→12 / Copilot 8→6; AI Visibility flat at 26; GA4 hits resumed ~13 Aug (10–16 Aug = 13 sessions) but the homepage is still broken"
+      "report": "archive/2026-08-17.html"
     },
     {
-      "date": "2026-08-18",
       "data": "data/2026-08-18.json",
-      "report": "archive/2026-08-18.html",
+      "date": "2026-08-18",
+      "label_en": "llms.txt live → technical 10/10, AI 26→28; impressions peak 1,761; GA4 collection steady",
       "label_vi": "llms.txt lên sóng → kỹ thuật 10/10, AI 26→28; impressions đỉnh mới 1.761; GA4 thu thập lại ổn định",
-      "label_en": "llms.txt live → technical 10/10, AI 26→28; impressions peak 1,761; GA4 collection steady"
+      "report": "archive/2026-08-18.html"
     },
     {
-      "date": "2026-08-19",
       "data": "data/2026-08-19.json",
-      "report": "archive/2026-08-19.html",
+      "date": "2026-08-19",
+      "label_en": "GA4/GTM tracking FIXED (dedupe script removed, 4 tag scripts load, G-43HE633LGK); GSC unreadable — property access lost; Ahrefs RD 423->425, BL 439->440; AI Visibility flat at 28",
       "label_vi": "Tracking GA4/GTM ĐÃ SỬA (dedupe script gỡ bỏ, 4 thẻ tag tải thật, G-43HE633LGK); GSC không đọc được — mất quyền tài sản; Ahrefs RD 423→425, BL 439→440; AI Visibility giữ 28",
-      "label_en": "GA4/GTM tracking FIXED (dedupe script removed, 4 tag scripts load, G-43HE633LGK); GSC unreadable — property access lost; Ahrefs RD 423->425, BL 439->440; AI Visibility flat at 28"
+      "report": "archive/2026-08-19.html"
     },
     {
-      "date": "2026-08-20",
       "data": "data/2026-08-20.json",
-      "report": "archive/2026-08-20.html",
+      "date": "2026-08-20",
+      "label_en": "Google access restored same day: GSC 65 clicks / 1,829 impressions (new peak) / position 29.2, brand 83.1%; GA4 112->120 sessions; Ahrefs flat 425/440, Health 100; AI citations 18->17; sitemap collapsed 81->16 URLs; AI Visibility 28->26",
       "label_vi": "Quyền Google cấp lại trong ngày: GSC 65 clicks / 1.829 impressions (đỉnh mới) / vị trí 29,2, brand 83,1%; GA4 112→120 session; Ahrefs đứng yên 425/440, Health 100; trích dẫn AI 18→17; sitemap sập 81→16 URL; AI Visibility 28→26",
-      "label_en": "Google access restored same day: GSC 65 clicks / 1,829 impressions (new peak) / position 29.2, brand 83.1%; GA4 112->120 sessions; Ahrefs flat 425/440, Health 100; AI citations 18->17; sitemap collapsed 81->16 URLs; AI Visibility 28->26"
+      "report": "archive/2026-08-20.html"
     },
     {
-      "date": "2026-08-21",
       "data": "data/2026-08-21.json",
-      "report": "archive/2026-08-21.html",
+      "date": "2026-08-21",
+      "label_en": "GSC 63 clicks / 1,824 impressions, avg position 29.1 (best yet) but only 2 of 150 queries drew clicks, both brand (82.5%); GA4 120->133 sessions; Ahrefs RD 425->426, BL 440->441, AI citations flat at 17; AI Visibility flat at 26. FULL STATIC-BLOCK SWEEP: removed 3 Jun/SERP reference blocks frozen since 27 Jul, replaced with a rolling Jul-vs-Jun comparison; rebuilt the remaining 4 blocks (Technical, Keywords, Action plan, Social) from fresh measurements - GSC 109 indexed/68 not, Google discovers only 16 sitemap URLs, all 4 faults from the 21 Jul audit resolved, social 197->266 followers. Corrected the article count 63->60 (counted by href)",
       "label_vi": "GSC 63 clicks / 1.824 impressions, vị trí TB 29,1 (tốt nhất từ trước tới nay) nhưng chỉ 2/150 truy vấn có click, cả hai đều brand (82,5%); GA4 120→133 session; Ahrefs RD 425→426, BL 440→441, trích dẫn AI giữ 17; AI Visibility giữ 26. RÀ TOÀN BỘ KHỐI TĨNH: gỡ 3 khối tham chiếu T6/SERP đóng băng từ 27/07, thay bằng So sánh theo tháng T7 vs T6 tự cuộn; dựng lại 4 khối còn lại (Kỹ thuật, Từ khoá, Kế hoạch, Social) bằng số đo mới — GSC 109 index/68 chưa index, sitemap Google chỉ đọc 16 URL, 4 lỗi audit 21/07 đều đã hết, social 197→266 follower. Sửa số bài viết 63→60 (đếm theo href)",
-      "label_en": "GSC 63 clicks / 1,824 impressions, avg position 29.1 (best yet) but only 2 of 150 queries drew clicks, both brand (82.5%); GA4 120->133 sessions; Ahrefs RD 425->426, BL 440->441, AI citations flat at 17; AI Visibility flat at 26. FULL STATIC-BLOCK SWEEP: removed 3 Jun/SERP reference blocks frozen since 27 Jul, replaced with a rolling Jul-vs-Jun comparison; rebuilt the remaining 4 blocks (Technical, Keywords, Action plan, Social) from fresh measurements - GSC 109 indexed/68 not, Google discovers only 16 sitemap URLs, all 4 faults from the 21 Jul audit resolved, social 197->266 followers. Corrected the article count 63->60 (counted by href)"
+      "report": "archive/2026-08-21.html"
     },
     {
-      "date": "2026-08-24",
       "data": "data/2026-08-24.json",
-      "report": "archive/2026-08-24.html",
+      "date": "2026-08-24",
+      "label_en": "sitemap.xml FIXED and RE-READ BY GOOGLE: Discovered pages 16 → 86, all 62 articles; GSC clicks 63→68, avg position 29.1→28.0; AI Visibility 26→28; AI citations 17→19",
       "label_vi": "sitemap.xml ĐÃ SỬA và Google ĐÃ ĐỌC LẠI: Discovered pages 16 → 86, đủ 62 bài viết; GSC clicks 63→68, vị trí TB 29,1→28,0; AI Visibility 26→28; trích dẫn AI 17→19",
-      "label_en": "sitemap.xml FIXED and RE-READ BY GOOGLE: Discovered pages 16 → 86, all 62 articles; GSC clicks 63→68, avg position 29.1→28.0; AI Visibility 26→28; AI citations 17→19"
+      "report": "archive/2026-08-24.html"
     },
     {
-      "date": "2026-08-25",
       "data": "data/2026-08-25.json",
-      "report": "archive/2026-08-25.html",
+      "date": "2026-08-25",
+      "label_en": "Google read the sitemap: Discovered pages 16 → 86; first-ever Perplexity citation; AI Visibility 28 → 30",
       "label_vi": "Google đã đọc sitemap: Discovered pages 16 → 86; Perplexity trích dẫn lần đầu; AI Visibility 28 → 30",
-      "label_en": "Google read the sitemap: Discovered pages 16 → 86; first-ever Perplexity citation; AI Visibility 28 → 30"
+      "report": "archive/2026-08-25.html"
     },
     {
-      "date": "2026-08-26",
       "data": "data/2026-08-26.json",
-      "report": "archive/2026-08-26.html",
+      "date": "2026-08-26",
+      "label_en": "GA4 key events 5 → 9 (7 of 9 from Organic Search); GSC clicks 68 → 70 but both extra clicks are brand (81.4%) and avg position 27.9 → 28.1; origin sitemap 86 → 88 URLs / 62 → 64 articles, Google has read only 86; homepage JSON-LD changed Organization+LocalBusiness → LocalBusiness+WebSite, adding sameAs for 4 channels; Ahrefs followed RDs 14 → 16 but Site Audit went backwards 15 → 14 URLs; AI Visibility flat at 30, the Perplexity citation persisted a second day; Social dashboard one day stale",
       "label_vi": "Key event GA4 5 → 9 (7/9 từ Organic Search); GSC clicks 68 → 70 nhưng cả hai click tăng thêm đều là brand (81,4%) và vị trí TB 27,9 → 28,1; sitemap origin 86 → 88 URL / 62 → 64 bài, Google mới đọc tới 86; JSON-LD trang chủ đổi Organization+LocalBusiness → LocalBusiness+WebSite, thêm sameAs 4 kênh; Ahrefs followed RD 14 → 16 nhưng Site Audit lùi 15 → 14 URL; AI Visibility giữ 30, trích dẫn Perplexity trụ ngày thứ hai; dashboard Social cũ một ngày",
-      "label_en": "GA4 key events 5 → 9 (7 of 9 from Organic Search); GSC clicks 68 → 70 but both extra clicks are brand (81.4%) and avg position 27.9 → 28.1; origin sitemap 86 → 88 URLs / 62 → 64 articles, Google has read only 86; homepage JSON-LD changed Organization+LocalBusiness → LocalBusiness+WebSite, adding sameAs for 4 channels; Ahrefs followed RDs 14 → 16 but Site Audit went backwards 15 → 14 URLs; AI Visibility flat at 30, the Perplexity citation persisted a second day; Social dashboard one day stale"
+      "report": "archive/2026-08-26.html"
     },
     {
-      "date": "2026-08-27",
       "data": "data/2026-08-27.json",
-      "report": "archive/2026-08-27.html",
+      "date": "2026-08-27",
+      "label_en": "GSC fell across the board, GA4 rose against it; Organic Social and Organic Search now level at 82 sessions",
       "label_vi": "GSC giảm toàn bảng, GA4 tăng ngược chiều; Organic Social và Organic Search bằng nhau ở 82 session",
-      "label_en": "GSC fell across the board, GA4 rose against it; Organic Social and Organic Search now level at 82 sessions"
+      "report": "archive/2026-08-27.html"
     },
     {
-      "date": "2026-08-28",
       "data": "data/2026-08-28.json",
-      "report": "archive/2026-08-28.html",
+      "date": "2026-08-28",
+      "label_en": "Sitemap P0 CLOSED (92 URLs matching 68 articles) · GSC 65 clicks / 1,836 impr / 158 queries · GA4 306 sessions · cannibalisation worsened: 9 Melbourne pages, 0 clicks",
       "label_vi": "P0 sitemap ĐÓNG (92 URL khớp 68 bài) · GSC 65 clicks / 1.836 impr / 158 truy vấn · GA4 306 session · cannibalisation xấu đi: cụm Melbourne 9 trang, 0 click",
-      "label_en": "Sitemap P0 CLOSED (92 URLs matching 68 articles) · GSC 65 clicks / 1,836 impr / 158 queries · GA4 306 sessions · cannibalisation worsened: 9 Melbourne pages, 0 clicks"
+      "report": "archive/2026-08-28.html"
     },
     {
-      "date": "2026-08-29",
       "data": "data/2026-08-29.json",
-      "report": "archive/2026-08-29.html",
+      "date": "2026-08-29",
+      "label_en": "REGRESSION: the /articles hub links only 35 of 70 articles, 9 orphaned (68/68 yesterday) · GSC 65 clicks / 1,820 impr / 154 queries · GA4 357 sessions, Organic Social overtook Organic Search for the first time (114 vs 109) but at 2 seconds and 0 key events · Ahrefs RD 385→368, BL 399→382 · AI Visibility flat at 30",
       "label_vi": "THỤT LÙI: hub /articles chỉ dẫn tới 35/70 bài, 9 bài mồ côi (hôm qua 68/68) · GSC 65 clicks / 1.820 impr / 154 truy vấn · GA4 357 session, Organic Social lần đầu vượt Organic Search (114 vs 109) nhưng 2 giây, 0 key event · Ahrefs RD 385→368, BL 399→382 · AI Visibility giữ 30",
-      "label_en": "REGRESSION: the /articles hub links only 35 of 70 articles, 9 orphaned (68/68 yesterday) · GSC 65 clicks / 1,820 impr / 154 queries · GA4 357 sessions, Organic Social overtook Organic Search for the first time (114 vs 109) but at 2 seconds and 0 key events · Ahrefs RD 385→368, BL 399→382 · AI Visibility flat at 30"
+      "report": "archive/2026-08-29.html"
     },
     {
-      "date": "2026-08-31",
       "data": "data/2026-08-31.json",
-      "report": "archive/2026-08-31.html",
+      "date": "2026-08-31",
+      "label_en": "CORRECTION: the /articles hub is NOT fixed — 35 of 71 articles, orphans 9→10 (the newly published 71st article went live orphaned, no category); the earlier build counted strings in the JSON payload and reported 71/71 · the white overlay still covers the page at second 38 · GSC 67 clicks / 1,757 impr / 151 queries, position flat at 29.4 · GA4 375 sessions but key events stuck at 7 · Ahrefs RD 368→349, BL 382→364 · AI 20→21 · AI Visibility flat at 30",
       "label_vi": "ĐÍNH CHÍNH: hub /articles CHƯA sửa — 35/71 bài, mồ côi 9→10 (bài thứ 71 vừa publish đã mồ côi sẵn vì thiếu chuyên mục); bản trước đếm nhầm chuỗi trong payload JSON nên báo 71/71 · lớp phủ trắng vẫn che kín ở giây 38 · GSC 67 clicks / 1.757 impr / 151 truy vấn, vị trí giữ 29,4 · GA4 375 session nhưng key event dính 7 · Ahrefs RD 368→349, BL 382→364 · AI 20→21 · AI Visibility giữ 30",
-      "label_en": "CORRECTION: the /articles hub is NOT fixed — 35 of 71 articles, orphans 9→10 (the newly published 71st article went live orphaned, no category); the earlier build counted strings in the JSON payload and reported 71/71 · the white overlay still covers the page at second 38 · GSC 67 clicks / 1,757 impr / 151 queries, position flat at 29.4 · GA4 375 sessions but key events stuck at 7 · Ahrefs RD 368→349, BL 382→364 · AI 20→21 · AI Visibility flat at 30"
+      "report": "archive/2026-08-31.html"
     },
     {
-      "date": "2026-09-01",
       "data": "data/2026-09-01.json",
-      "report": "archive/2026-09-01.html",
+      "date": "2026-09-01",
+      "label_en": "47 of 71 articles gone; sitemap 95→48 URLs; AI 30→36 (like-for-like 30)",
       "label_vi": "47/71 bài viết biến mất; sitemap 95→48 URL; AI 30→36 (tương đương 30)",
-      "label_en": "47 of 71 articles gone; sitemap 95→48 URLs; AI 30→36 (like-for-like 30)"
+      "report": "archive/2026-09-01.html"
     },
     {
-      "date": "2026-09-03",
       "data": "data/2026-09-03.json",
-      "report": "archive/2026-09-03.html",
+      "date": "2026-09-03",
+      "label_en": "FIXED: the 47 articles are back — the sitemap was rebuilt at 05:37 UTC today with 99 URLs / 75 articles, all 75 returning 200 (caught mid-scan during the second pass at 12:30) · But the measurement systems lag: Ahrefs still shows 15 404s and its Site Audit ran at 04:16, ninety minutes before the fix, while GSC is still on its 28 Aug build at 101 indexed / 88 not indexed · GSC re-read byte-for-byte identical: 65 clicks / 1,657 impressions / 28.7 / 136 queries · GA4 440 sessions but zero key events in 7 days · The /articles overlay is into a seventh day and is upgraded to CRITICAL because it now hides 75 articles rather than 24 · Cannibalisation returned: 12 Melbourne rendering pages, 8 home-builder pages · The social dashboard is no longer stale · AI Visibility 36 → 30 because the denominator was restored; like-for-like it is flat",
       "label_vi": "KHẮC PHỤC: 47 bài viết đã quay lại — sitemap dựng lại 05:37 UTC hôm nay với 99 URL / 75 bài, cả 75 đều trả 200 (bắt được ngay giữa lần quét thứ hai lúc 12:30) · Nhưng các hệ thống đo còn tụt hậu: Ahrefs vẫn 15 lỗi 404 và Site Audit chạy 04:16 trước bản sửa 90 phút, GSC vẫn ở bản 28/08 với 101 index / 88 chưa index · GSC đọc lại khớp từng chữ: 65 clicks / 1.657 impressions / 28,7 / 136 truy vấn · GA4 440 phiên nhưng 0 key event trong 7 ngày · Lớp phủ /articles sang ngày thứ bảy, nay NGHIÊM TRỌNG vì che 75 bài chứ không phải 24 · Trùng lặp nội dung quay lại: 12 trang rendering Melbourne, 8 trang home builders · Dashboard Social đã hết cũ · AI Visibility 36 → 30 vì mẫu số được khôi phục, đo tương đương thì đi ngang",
-      "label_en": "FIXED: the 47 articles are back — the sitemap was rebuilt at 05:37 UTC today with 99 URLs / 75 articles, all 75 returning 200 (caught mid-scan during the second pass at 12:30) · But the measurement systems lag: Ahrefs still shows 15 404s and its Site Audit ran at 04:16, ninety minutes before the fix, while GSC is still on its 28 Aug build at 101 indexed / 88 not indexed · GSC re-read byte-for-byte identical: 65 clicks / 1,657 impressions / 28.7 / 136 queries · GA4 440 sessions but zero key events in 7 days · The /articles overlay is into a seventh day and is upgraded to CRITICAL because it now hides 75 articles rather than 24 · Cannibalisation returned: 12 Melbourne rendering pages, 8 home-builder pages · The social dashboard is no longer stale · AI Visibility 36 → 30 because the denominator was restored; like-for-like it is flat"
+      "report": "archive/2026-09-03.html"
     },
     {
-      "date": "2026-09-04",
       "data": "data/2026-09-04.json",
-      "report": "archive/2026-09-04.html",
+      "date": "2026-09-04",
+      "label_en": "RE-SCANNED 13:00 — THREE GOOD THINGS IN ONE DAY: (1) Google re-read the sitemap, Discovered pages 86 → 99; (2) this morning's regression was FIXED the same day — the LocalBusiness node is back on the homepage with @type [\"Organization\",\"LocalBusiness\"], more correct than the 3 Sep form, taking technical readiness 6/7 → 7/7 and AI Visibility 28 → 30; (3) a new article shipped, sitemap 99 → 100 URLs / 75 → 76 articles, all 76 return 200 and the new one is NOT orphaned (hub 36 → 37, category union 65 → 66) · The social dashboard refreshed, so every social figure is a real 4 Sep measurement · Ahrefs kept pruning: RD 322 → 317, BL 339 → 334 across the day · BUT the /articles overlay is into an EIGHTH day and unmoved — only 7 of 76 articles render, now the ONLY one of this morning's three findings still open · GSC and GA4 re-read byte-for-byte identical: 62 clicks / 1,679 impr / 29.1 / 134 queries; 462 sessions, zero key events in 7 days",
       "label_vi": "QUÉT LẠI 13:00 — BA VIỆC TỐT TRONG MỘT NGÀY: (1) Google đã đọc lại sitemap, Discovered pages 86 → 99; (2) bước lùi buổi sáng ĐÃ ĐƯỢC SỬA trong ngày — node LocalBusiness quay lại trang chủ với @type [\"Organization\",\"LocalBusiness\"], tức đúng hơn cả bản 03/09, kéo sẵn sàng kỹ thuật 6/7 → 7/7 và AI Visibility 28 → 30; (3) có bài viết mới, sitemap 99 → 100 URL / 75 → 76 bài, cả 76 trả 200 và bài mới KHÔNG mồ côi (hub 36 → 37, hợp chuyên mục 65 → 66) · Dashboard Social đã làm mới, mọi số social là đo thật 04/09 · Ahrefs tiếp tục cắt tỉa: RD 322 → 317, BL 339 → 334 trong ngày · NHƯNG lớp phủ /articles sang ngày thứ TÁM và không nhúc nhích — chỉ 7/76 bài render, nay là lỗi DUY NHẤT còn mở trong ba việc nêu sáng nay · GSC và GA4 đọc lại khớp từng chữ: 62 clicks / 1.679 impr / 29,1 / 134 truy vấn; 462 phiên, 0 key event trong 7 ngày",
-      "label_en": "RE-SCANNED 13:00 — THREE GOOD THINGS IN ONE DAY: (1) Google re-read the sitemap, Discovered pages 86 → 99; (2) this morning's regression was FIXED the same day — the LocalBusiness node is back on the homepage with @type [\"Organization\",\"LocalBusiness\"], more correct than the 3 Sep form, taking technical readiness 6/7 → 7/7 and AI Visibility 28 → 30; (3) a new article shipped, sitemap 99 → 100 URLs / 75 → 76 articles, all 76 return 200 and the new one is NOT orphaned (hub 36 → 37, category union 65 → 66) · The social dashboard refreshed, so every social figure is a real 4 Sep measurement · Ahrefs kept pruning: RD 322 → 317, BL 339 → 334 across the day · BUT the /articles overlay is into an EIGHTH day and unmoved — only 7 of 76 articles render, now the ONLY one of this morning's three findings still open · GSC and GA4 re-read byte-for-byte identical: 62 clicks / 1,679 impr / 29.1 / 134 queries; 462 sessions, zero key events in 7 days"
+      "report": "archive/2026-09-04.html"
     },
     {
-      "date": "2026-09-05",
       "data": "data/2026-09-05.json",
-      "report": "archive/2026-09-05.html",
+      "date": "2026-09-05",
+      "label_en": "A NEW ARTICLE FOR A SECOND CONSECUTIVE DAY — sitemap 100 → 101 URLs / 76 → 77 articles, all 77 returning 200, and the new one is NOT orphaned (off-the-plan-sales 3 → 4, category union 66 → 67) · TRAFFIC MIX IMPROVED FOR A SECOND SCAN: Organic Search +11 sessions (141 → 152) has OVERTAKEN Organic Social +3 (145 → 148) for the first time since the outage, average engagement time 36s → 51s · Yesterday's LocalBusiness fix HELD for a full day (JSON-LD byte-identical at 5,205 bytes) so technical readiness stays 7/7 and AI Visibility holds at 30 · BUT the /articles overlay is into a NINTH day with not one measured quantity changed — only 7 of 77 articles render and the hub still carries exactly 696 characters · 10 orphans on a TENTH static day, full list recorded: SEVEN of the ten are a single VR cluster, which makes it one small job · zero key events across 7 days for a THIRD consecutive scan (at least eight days) · GSC 64 clicks / 1,704 impressions / 3.8% / 29.4 / 134 queries · Ahrefs RD 317 → 314, BL 334 → 329, 404s flat at 15 for a third day · The social dashboard is STALE, so every social figure is a labelled 4 Sep carry-forward",
       "label_vi": "BÀI MỚI NGÀY THỨ HAI LIÊN TIẾP — sitemap 100 → 101 URL / 76 → 77 bài, cả 77 trả 200, và bài mới KHÔNG mồ côi (off-the-plan-sales 3 → 4, hợp chuyên mục 66 → 67) · CƠ CẤU TRAFFIC CẢI THIỆN LẦN THỨ HAI: Organic Search +11 phiên (141 → 152) đã VƯỢT Organic Social +3 (145 → 148) lần đầu kể từ sự cố, thời gian tương tác TB 36s → 51s · Bản sửa LocalBusiness hôm qua GIỮ ĐƯỢC trọn một ngày (JSON-LD giống hệt từng byte 5.205 byte) nên sẵn sàng kỹ thuật 7/7 và AI Visibility giữ 30 · NHƯNG lớp phủ /articles sang NGÀY THỨ CHÍN và không đổi một chỉ số nào — chỉ 7/77 bài render, hub vẫn đúng 696 ký tự · 10 bài mồ côi ngày thứ MƯỜI, ghi cả danh sách: BẢY trong mười là một cụm VR duy nhất, tức một đầu việc gọn · 0 key event suốt 7 ngày lần thứ BA liên tiếp (ít nhất tám ngày) · GSC 64 clicks / 1.704 impressions / 3,8% / 29,4 / 134 truy vấn · Ahrefs RD 317 → 314, BL 334 → 329, 404 giữ 15 ngày thứ ba · Dashboard Social BỊ CŨ, mọi số social là số 04/09 mang sang",
-      "label_en": "A NEW ARTICLE FOR A SECOND CONSECUTIVE DAY — sitemap 100 → 101 URLs / 76 → 77 articles, all 77 returning 200, and the new one is NOT orphaned (off-the-plan-sales 3 → 4, category union 66 → 67) · TRAFFIC MIX IMPROVED FOR A SECOND SCAN: Organic Search +11 sessions (141 → 152) has OVERTAKEN Organic Social +3 (145 → 148) for the first time since the outage, average engagement time 36s → 51s · Yesterday's LocalBusiness fix HELD for a full day (JSON-LD byte-identical at 5,205 bytes) so technical readiness stays 7/7 and AI Visibility holds at 30 · BUT the /articles overlay is into a NINTH day with not one measured quantity changed — only 7 of 77 articles render and the hub still carries exactly 696 characters · 10 orphans on a TENTH static day, full list recorded: SEVEN of the ten are a single VR cluster, which makes it one small job · zero key events across 7 days for a THIRD consecutive scan (at least eight days) · GSC 64 clicks / 1,704 impressions / 3.8% / 29.4 / 134 queries · Ahrefs RD 317 → 314, BL 334 → 329, 404s flat at 15 for a third day · The social dashboard is STALE, so every social figure is a labelled 4 Sep carry-forward"
+      "report": "archive/2026-09-05.html"
     },
     {
-      "date": "2026-09-07",
       "data": "data/2026-09-07.json",
-      "report": "archive/2026-09-07.html",
+      "date": "2026-09-07",
+      "label_en": "ORPHANS 10 → 0 — after TEN static days a new \"Immersive design & VR technology\" category (immersive-design-vr-technology, 11 articles) absorbed exactly all ten former orphans; the hub-plus-category union now covers 78 of 78 articles · A new article shipped: sitemap 101 → 102 URLs / 77 → 78 articles, all 78 returning 200, and the new one (4D construction sequencing, 6 Sep) is not orphaned · GSC FINALLY REBUILT ITS INDEX REPORT from 28 Aug to 4 Sep after nine frozen days — and it got worse: indexed 101 → 87, not indexed 88 → 119, with the biggest rises in crawled-not-indexed 26 → 38 and discovered-not-indexed 13 → 25; the old build predates the 3 Sep restoration, so a second reading is needed · A CORRECTION: the /articles overlay is still there on day ELEVEN but it blocks HUMAN READERS, not crawlers — the server HTML carries real anchors and all 78 articles were reached through them · Ahrefs reversed after four days of pruning: RD 314 → 317, BL 329 → 333 · GSC 62 clicks / 1,713 impressions / 3.6% / 29.6 / 133 queries · GA4 499 sessions but zero key events across 7 days, a FOURTH consecutive scan · Organic Search and Organic Social are TIED at 155 each · There is no 6 Sep scan · The social dashboard is stale for a third day",
       "label_vi": "BÀI MỒ CÔI 10 → 0 — sau MƯỜI ngày đứng yên, một chuyên mục mới \"Immersive design & VR technology\" (immersive-design-vr-technology, 11 bài) đã hấp thụ đúng cả mười bài từng mồ côi; hợp hub + chuyên mục nay phủ 78/78 bài · Có bài mới: sitemap 101 → 102 URL / 77 → 78 bài, cả 78 trả 200, bài mới (4D construction sequencing, 06/09) không mồ côi · GSC CUỐI CÙNG DỰNG LẠI BẢN INDEX từ 28/08 sang 04/09 sau chín ngày đông băng — và xấu đi: đã index 101 → 87, chưa index 88 → 119, tăng mạnh nhất ở \"đã crawl chưa index\" 26 → 38 và \"đã phát hiện chưa index\" 13 → 25; bản cũ có trước đợt khôi phục 03/09 nên cần đọc lần hai · SỬA LẠI NHẬN ĐỊNH: lớp phủ /articles vẫn còn nguyên ngày thứ MƯỜI MỘT nhưng nó chặn NGƯỜI ĐỌC chứ không chặn bot — HTML máy chủ có anchor thật và cả 78 bài đọc được qua đó · Ahrefs đảo chiều sau bốn ngày cắt tỉa: RD 314 → 317, BL 329 → 333 · GSC 62 clicks / 1.713 impressions / 3,6% / 29,6 / 133 truy vấn · GA4 499 phiên nhưng 0 key event trong 7 ngày, lần thứ TƯ liên tiếp · Organic Search và Organic Social HOÀ 155–155 · Không có bản quét 06/09 · Dashboard Social bị cũ ngày thứ ba",
-      "label_en": "ORPHANS 10 → 0 — after TEN static days a new \"Immersive design & VR technology\" category (immersive-design-vr-technology, 11 articles) absorbed exactly all ten former orphans; the hub-plus-category union now covers 78 of 78 articles · A new article shipped: sitemap 101 → 102 URLs / 77 → 78 articles, all 78 returning 200, and the new one (4D construction sequencing, 6 Sep) is not orphaned · GSC FINALLY REBUILT ITS INDEX REPORT from 28 Aug to 4 Sep after nine frozen days — and it got worse: indexed 101 → 87, not indexed 88 → 119, with the biggest rises in crawled-not-indexed 26 → 38 and discovered-not-indexed 13 → 25; the old build predates the 3 Sep restoration, so a second reading is needed · A CORRECTION: the /articles overlay is still there on day ELEVEN but it blocks HUMAN READERS, not crawlers — the server HTML carries real anchors and all 78 articles were reached through them · Ahrefs reversed after four days of pruning: RD 314 → 317, BL 329 → 333 · GSC 62 clicks / 1,713 impressions / 3.6% / 29.6 / 133 queries · GA4 499 sessions but zero key events across 7 days, a FOURTH consecutive scan · Organic Search and Organic Social are TIED at 155 each · There is no 6 Sep scan · The social dashboard is stale for a third day"
+      "report": "archive/2026-09-07.html"
     },
     {
-      "date": "2026-09-08",
       "data": "data/2026-09-08.json",
-      "report": "archive/2026-09-08.html",
+      "date": "2026-09-08",
+      "label_en": "THE GA4 UNDER-COUNT LABEL IS RETIRED FOR THE FIRST TIME — the 28-day window now starts 11 Aug, clear of the 29 Jul-12 Aug data loss, so GA4 figures from this scan onward need no under-count caveat · THE SOCIAL DASHBOARD IS RUNNING AGAIN after three missed days (snapshot 8 Sep, all four channels read live, 31 stored days), closing the 7 Sep flag · A third new article in four days: sitemap 102 -> 103 URLs / 78 -> 79 articles, all 79 returning 200, the new /articles/development-application-3d-render (7 Sep) not orphaned · Orphans HOLD at zero for a second day, the hub-plus-category union covering exactly 79 of 79, verified both ways · GSC 61 clicks / 1,681 impressions / 3.6% / position 29.2 (BETTER by 0.4 after three consecutive slips) / 133 queries; the fall is fully explained by the window dropping 8 Aug and adding 5 Sep · SEVEN OF EIGHT non-brand queries are byte-identical to yesterday and the slide on \"3d rendering melbourne\" has stopped at 32.1 · GA4 514 sessions (+15), Organic Search 163 BROKE THE 155-155 TIE against Organic Social 157 · BUT zero key events across 7 days for a FIFTH consecutive scan, and 7-day session volume fell 153 -> 110 · GSC has NOT rebuilt its index report - still 87/119 from the 4 Sep build with every cell identical to yesterday, so the second reading is STILL outstanding · Google has not re-read the sitemap for a FIFTH day, four URLs behind · The /articles overlay is on day TWELVE with not one measured quantity changed (still exactly 696 characters) · Speed regressed: articles 892ms -> 1,045ms, homepage 2,261ms -> 2,769ms · Ahrefs RD flat at 317, BL 333 -> 338, 404s flat at 15 for a sixth reading · AI responses 20 -> 21 but still 10 pages, AI score holds at 30/100",
       "label_vi": "GA4 GỠ ĐƯỢC NHÃN \"SỐ THIẾU\" LẦN ĐẦU TIÊN — cửa sổ 28 ngày nay bắt đầu 11/08, đã vượt hẳn vùng mất dữ liệu 29/07–12/08, nên số GA4 từ lần quét này không còn phải dán nhãn under-count · DASHBOARD SOCIAL CHẠY LẠI sau ba ngày nghỉ (snapshot 08/09, cả bốn kênh đọc live, 31 ngày lưu trữ), cảnh báo 07/09 đã đóng · Bài mới ngày thứ ba trong bốn ngày: sitemap 102 → 103 URL / 78 → 79 bài, cả 79 trả 200, bài mới /articles/development-application-3d-render (07/09) không mồ côi · Bài mồ côi GIỮ 0 ngày thứ hai, hợp hub + chuyên mục phủ đúng 79/79, kiểm chứng hai chiều · GSC 61 clicks / 1.681 impressions / 3,6% / vị trí 29,2 (TỐT LÊN 0,4 sau ba lần trượt) / 133 truy vấn; mức giảm được giải thích trọn vẹn bằng việc cửa sổ bỏ 08/08 và thêm 05/09 · BẢY TRONG TÁM truy vấn non-brand đứng yên y hệt từng chữ, chuỗi rơi của \"3d rendering melbourne\" đã dừng ở 32,1 · GA4 514 phiên (+15), Organic Search 163 đã PHÁ THẾ HOÀ 155–155 với Organic Social 157 · NHƯNG 0 key event suốt 7 ngày lần thứ NĂM liên tiếp, và lượng phiên 7 ngày giảm 153 → 110 · GSC CHƯA dựng lại bản index — vẫn 87/119 của bản 04/09, mọi ô y hệt hôm qua, nên lần đọc thứ hai VẪN CHƯA CÓ · Google chưa đọc lại sitemap sang ngày thứ NĂM, lệch 4 URL · Lớp phủ /articles sang ngày thứ MƯỜI HAI, không đổi một chỉ số nào (vẫn đúng 696 ký tự) · Tốc độ tụt lại: bài viết 892ms → 1.045ms, trang chủ 2.261ms → 2.769ms · Ahrefs RD đứng yên 317, BL 333 → 338, 404 giữ 15 lần thứ sáu · Phản hồi AI 20 → 21 nhưng vẫn 10 trang, điểm AI giữ 30/100",
-      "label_en": "THE GA4 UNDER-COUNT LABEL IS RETIRED FOR THE FIRST TIME — the 28-day window now starts 11 Aug, clear of the 29 Jul-12 Aug data loss, so GA4 figures from this scan onward need no under-count caveat · THE SOCIAL DASHBOARD IS RUNNING AGAIN after three missed days (snapshot 8 Sep, all four channels read live, 31 stored days), closing the 7 Sep flag · A third new article in four days: sitemap 102 -> 103 URLs / 78 -> 79 articles, all 79 returning 200, the new /articles/development-application-3d-render (7 Sep) not orphaned · Orphans HOLD at zero for a second day, the hub-plus-category union covering exactly 79 of 79, verified both ways · GSC 61 clicks / 1,681 impressions / 3.6% / position 29.2 (BETTER by 0.4 after three consecutive slips) / 133 queries; the fall is fully explained by the window dropping 8 Aug and adding 5 Sep · SEVEN OF EIGHT non-brand queries are byte-identical to yesterday and the slide on \"3d rendering melbourne\" has stopped at 32.1 · GA4 514 sessions (+15), Organic Search 163 BROKE THE 155-155 TIE against Organic Social 157 · BUT zero key events across 7 days for a FIFTH consecutive scan, and 7-day session volume fell 153 -> 110 · GSC has NOT rebuilt its index report - still 87/119 from the 4 Sep build with every cell identical to yesterday, so the second reading is STILL outstanding · Google has not re-read the sitemap for a FIFTH day, four URLs behind · The /articles overlay is on day TWELVE with not one measured quantity changed (still exactly 696 characters) · Speed regressed: articles 892ms -> 1,045ms, homepage 2,261ms -> 2,769ms · Ahrefs RD flat at 317, BL 333 -> 338, 404s flat at 15 for a sixth reading · AI responses 20 -> 21 but still 10 pages, AI score holds at 30/100"
+      "report": "archive/2026-09-08.html"
     },
     {
-      "date": "2026-09-09",
       "data": "data/2026-09-09.json",
-      "report": "archive/2026-09-09.html",
+      "date": "2026-09-09",
+      "label_en": "THE /articles HUB NOW LINKS ALL 80 ARTICLES IN ONE RESPONSE — the hub HTML is 242 KB with 94 anchors to 80 article URLs; every ?page= / ?category= variant (including an invalid slug) returns the same 80, so the category filter is no longer measurable; orphans 0 for a third day, for the first time without any category · A fourth new article in five days: sitemap 103 -> 104 URLs / 79 -> 80 articles, all 80 returning 200, the new /articles/vr-walkthrough-services-australia (8 Sep) is the first card on the hub · GSC 61 clicks / 1,596 impressions / 3.8% / position 28.5 (BETTER by 0.7, a second day) / 122 queries; the window dropping 9 Aug (1 click, 114 impr) and adding 6 Sep (1 click, 29 impr) fully explains the fall · Six of eight non-brand queries moved (four up, two down), builders melbourne 11.2 its best of the series · GA4 538 sessions (+24), Organic Search 171 widened its lead over Organic Social 161 · BUT zero key events across 7 days for a SIXTH scan, and the prior 7-day window (26 Aug-1 Sep) is zero too - at least fourteen days without a conversion; 7-day sessions 156 -> 117 · GSC has still not rebuilt its index report - a third reading of the 4 Sep build (87/119) · Google has not re-read the sitemap for a sixth day, five URLs behind · The /articles overlay is on day THIRTEEN - the content beneath it changed (696 -> 5,513 characters), the overlay did not · Speed mixed: articles 1,045 -> 1,000 ms, homepage 2,769 -> 2,000 ms, hub 1,467 -> 1,717 ms · Ahrefs RD 317 -> 315, BL 338 -> 336, followed re-read at 27 / 29 (8.6%), 404s flat at 15 for a seventh reading, HTTP buckets sum exactly to 169 for the first time · AI 21 responses / 10 pages unchanged, score holds at 30/100 for a fifth scan · Social dashboard fresh for a second day, followers 266 -> 267",
       "label_vi": "HUB /articles NAY LIÊN KẾT CẢ 80 BÀI TRONG MỘT PHẢN HỒI — HTML hub 242 KB mang 94 anchor tới 80 URL bài; mọi biến thể ?page= / ?category= (kể cả slug giả) đều trả cùng 80 bài nên bộ lọc chuyên mục không còn đo được; bài mồ côi 0 ngày thứ ba, lần đầu không cần chuyên mục · Bài mới thứ tư trong năm ngày: sitemap 103 → 104 URL / 79 → 80 bài, cả 80 trả 200, bài mới /articles/vr-walkthrough-services-australia (08/09) là thẻ đầu hub · GSC 61 clicks / 1.596 impressions / 3,8% / vị trí 28,5 (TỐT LÊN 0,7, ngày thứ hai) / 122 truy vấn; cửa sổ bỏ 09/08 (1 click, 114 impr) thêm 06/09 (1 click, 29 impr) giải thích trọn mức giảm · Sáu trong tám truy vấn non-brand đã nhúc nhích (bốn lên, hai xuống), builders melbourne 11,2 tốt nhất chuỗi · GA4 538 phiên (+24), Organic Search 171 nới khoảng cách với Organic Social 161 · NHƯNG 0 key event suốt 7 ngày lần thứ SÁU, và cửa sổ 7 ngày trước đó (26/08–01/09) cũng 0 — ít nhất mười bốn ngày không có chuyển đổi; phiên 7 ngày 156 → 117 · GSC vẫn chưa dựng lại bản index — lần đọc thứ ba cùng bản 04/09 (87/119) · Google chưa đọc lại sitemap ngày thứ sáu, lệch 5 URL · Lớp phủ /articles sang ngày thứ MƯỜI BA — nội dung bên dưới đã đổi (696 → 5.513 ký tự), lớp phủ thì không · Tốc độ lẫn lộn: bài 1.045 → 1.000ms, trang chủ 2.769 → 2.000ms, hub 1.467 → 1.717ms · Ahrefs RD 317 → 315, BL 338 → 336, đọc lại followed 27 / 29 (8,6%), 404 giữ 15 lần thứ bảy, bốn nhóm HTTP lần đầu cộng đúng 169 · AI 21 phản hồi / 10 trang không đổi, điểm giữ 30/100 lần thứ năm · Dashboard Social tươi ngày thứ hai, follower 266 → 267",
-      "label_en": "THE /articles HUB NOW LINKS ALL 80 ARTICLES IN ONE RESPONSE — the hub HTML is 242 KB with 94 anchors to 80 article URLs; every ?page= / ?category= variant (including an invalid slug) returns the same 80, so the category filter is no longer measurable; orphans 0 for a third day, for the first time without any category · A fourth new article in five days: sitemap 103 -> 104 URLs / 79 -> 80 articles, all 80 returning 200, the new /articles/vr-walkthrough-services-australia (8 Sep) is the first card on the hub · GSC 61 clicks / 1,596 impressions / 3.8% / position 28.5 (BETTER by 0.7, a second day) / 122 queries; the window dropping 9 Aug (1 click, 114 impr) and adding 6 Sep (1 click, 29 impr) fully explains the fall · Six of eight non-brand queries moved (four up, two down), builders melbourne 11.2 its best of the series · GA4 538 sessions (+24), Organic Search 171 widened its lead over Organic Social 161 · BUT zero key events across 7 days for a SIXTH scan, and the prior 7-day window (26 Aug-1 Sep) is zero too - at least fourteen days without a conversion; 7-day sessions 156 -> 117 · GSC has still not rebuilt its index report - a third reading of the 4 Sep build (87/119) · Google has not re-read the sitemap for a sixth day, five URLs behind · The /articles overlay is on day THIRTEEN - the content beneath it changed (696 -> 5,513 characters), the overlay did not · Speed mixed: articles 1,045 -> 1,000 ms, homepage 2,769 -> 2,000 ms, hub 1,467 -> 1,717 ms · Ahrefs RD 317 -> 315, BL 338 -> 336, followed re-read at 27 / 29 (8.6%), 404s flat at 15 for a seventh reading, HTTP buckets sum exactly to 169 for the first time · AI 21 responses / 10 pages unchanged, score holds at 30/100 for a fifth scan · Social dashboard fresh for a second day, followers 266 -> 267"
+      "report": "archive/2026-09-09.html"
     },
     {
-      "date": "2026-09-10",
       "data": "data/2026-09-10.json",
-      "report": "archive/2026-09-10.html",
+      "date": "2026-09-10",
+      "label_en": "TWO NEW ARTICLES IN ONE DAY — a first for this series: sitemap 104 → 106 URLs / 80 → 82 articles, all 82 returning 200, orphans hold at zero for a fourth day · The backlink profile had its best day of the week: referring domains 315 → 320, backlinks 336 → 344, followed share up for the first time since 26 Aug (30 domains / 32 backlinks) · BUT GSC FELL ON EVERY METRIC ON A ROLLED WINDOW: 53 clicks (down 8), 1,546 impressions (down 50), CTR 3.4%, position 29.4 (worse by 0.9), 107 queries — the window dropped 10 Aug and added 7 Sep (0 clicks / 85 impressions) · GA4 rose: 557 sessions, 2,830 events, 307 users, and DROPS ITS UNDER-COUNT LABEL from today · zero key events for 7 days for a SEVENTH scan, with the prior 7 days at zero too · Google has not re-read the sitemap for a SEVENTH day, seven URLs behind · The /articles overlay is into a FOURTEENTH day · The social dashboard is one day stale (still the 9 Sep snapshot)",
       "label_vi": "HAI BÀI MỚI TRONG MỘT NGÀY — lần đầu trong chuỗi: sitemap 104 → 106 URL / 80 → 82 bài, cả 82 trả 200, bài mồ côi giữ 0 ngày thứ tư · Hồ sơ backlink có ngày tốt nhất tuần: referring domains 315 → 320, backlinks 336 → 344, tỷ lệ followed tăng lần đầu từ 26/08 (30 domain / 32 backlink) · NHƯNG GSC TỤT TRÊN MỌI CHỈ SỐ VÌ CỬA SỔ TRƯỢT: 53 clicks (−8), 1.546 impressions (−50), CTR 3,4%, vị trí 29,4 (xấu đi 0,9), 107 truy vấn — cửa sổ bỏ ngày 10/08 và thêm ngày 07/09 (0 click / 85 impressions) · GA4 tăng: 557 session, 2.830 event, 307 user, và HẾT NHÃN SỐ THIẾU từ hôm nay · 0 key event suốt 7 ngày lần thứ BẢY, cả 7 ngày trước đó cũng 0 · Google chưa đọc lại sitemap ngày thứ BẢY, lệch 7 URL · Lớp phủ /articles sang ngày thứ MƯỜI BỐN · Dashboard Social chậm một ngày (vẫn snapshot 09/09)",
-      "label_en": "TWO NEW ARTICLES IN ONE DAY — a first for this series: sitemap 104 → 106 URLs / 80 → 82 articles, all 82 returning 200, orphans hold at zero for a fourth day · The backlink profile had its best day of the week: referring domains 315 → 320, backlinks 336 → 344, followed share up for the first time since 26 Aug (30 domains / 32 backlinks) · BUT GSC FELL ON EVERY METRIC ON A ROLLED WINDOW: 53 clicks (down 8), 1,546 impressions (down 50), CTR 3.4%, position 29.4 (worse by 0.9), 107 queries — the window dropped 10 Aug and added 7 Sep (0 clicks / 85 impressions) · GA4 rose: 557 sessions, 2,830 events, 307 users, and DROPS ITS UNDER-COUNT LABEL from today · zero key events for 7 days for a SEVENTH scan, with the prior 7 days at zero too · Google has not re-read the sitemap for a SEVENTH day, seven URLs behind · The /articles overlay is into a FOURTEENTH day · The social dashboard is one day stale (still the 9 Sep snapshot)"
+      "report": "archive/2026-09-10.html"
     },
     {
-      "date": "2026-09-11",
       "data": "data/2026-09-11.json",
-      "report": "archive/2026-09-11.html",
+      "date": "2026-09-11",
+      "label_en": "Backlinks rose for a second day: referring domains 320 → 329, backlinks 344 → 354, followed 35 / 37 · GA4 571 sessions (up 14), Organic Search 188 ahead of Organic Social 168, AI Assistant 7 → 8 · No new article: sitemap holds at 106 URLs / 82 articles; full crawl 105 of 105 pages return 200, each with one H1 + canonical + meta, orphans 0 for a fifth day · GSC slipped again on the window: 48 clicks (down 5), 1,468 impressions (down 78), CTR 3.3%, position 30.3 (worse by 0.9), 107 queries · Zero key events across 7 days for an EIGHTH scan, the prior 7 days zero too · GSC still shows the 4 Sep index build (fifth reading), Google has not re-read the sitemap for an eighth day · Ahrefs crawled pages sum exactly to 173, 404s flat at 15 for a ninth reading · Speed measured by full crawl (method change): articles avg 982 ms · The /articles overlay is on day FIFTEEN · Social dashboard fresh again (11 Sep)",
       "label_vi": "Backlink tăng ngày thứ hai: referring domains 320 → 329, backlinks 344 → 354, followed 35 / 37 · GA4 571 phiên (+14), Organic Search 188 dẫn Organic Social 168, AI Assistant 7 → 8 · Không có bài mới: sitemap giữ 106 URL / 82 bài; crawl toàn bộ 105/105 trang trả 200, mỗi trang 1 H1 + canonical + meta, mồ côi 0 ngày thứ năm · GSC lùi tiếp do cửa sổ: 48 clicks (−5), 1.468 impressions (−78), CTR 3,3%, vị trí 30,3 (xấu đi 0,9), 107 truy vấn · 0 key event suốt 7 ngày lần thứ TÁM, cả 7 ngày trước đó cũng 0 · GSC vẫn bản index 04/09 (lần đọc thứ năm), Google chưa đọc lại sitemap ngày thứ tám · Crawled pages Ahrefs cộng khớp đúng 173, 404 giữ 15 lần thứ chín · Tốc độ đo bằng crawl toàn bộ (đổi phương pháp): bài viết TB 982ms · Lớp phủ /articles ngày thứ MƯỜI LĂM · Dashboard Social tươi lại (11/09)",
-      "label_en": "Backlinks rose for a second day: referring domains 320 → 329, backlinks 344 → 354, followed 35 / 37 · GA4 571 sessions (up 14), Organic Search 188 ahead of Organic Social 168, AI Assistant 7 → 8 · No new article: sitemap holds at 106 URLs / 82 articles; full crawl 105 of 105 pages return 200, each with one H1 + canonical + meta, orphans 0 for a fifth day · GSC slipped again on the window: 48 clicks (down 5), 1,468 impressions (down 78), CTR 3.3%, position 30.3 (worse by 0.9), 107 queries · Zero key events across 7 days for an EIGHTH scan, the prior 7 days zero too · GSC still shows the 4 Sep index build (fifth reading), Google has not re-read the sitemap for an eighth day · Ahrefs crawled pages sum exactly to 173, 404s flat at 15 for a ninth reading · Speed measured by full crawl (method change): articles avg 982 ms · The /articles overlay is on day FIFTEEN · Social dashboard fresh again (11 Sep)"
+      "report": "archive/2026-09-11.html"
     },
     {
-      "date": "2026-09-14",
       "data": "data/2026-09-14.json",
-      "report": "archive/2026-09-14.html",
+      "date": "2026-09-14",
+      "label_en": "Site-wide speed recovery (all 108 pages <1s); Google re-read the sitemap 13 Sep (109 pages); 3 new articles; but the Adelaide page-one cluster vanished, GSC 46 clicks / position 30.8",
       "label_vi": "Tốc độ toàn site hồi phục (cả 108 trang <1s); Google đọc lại sitemap 13/09 (109 trang); 3 bài mới; nhưng cụm Adelaide trang một biến mất, GSC 46 clicks / vị trí 30,8",
-      "label_en": "Site-wide speed recovery (all 108 pages <1s); Google re-read the sitemap 13 Sep (109 pages); 3 new articles; but the Adelaide page-one cluster vanished, GSC 46 clicks / position 30.8"
+      "report": "archive/2026-09-14.html"
     },
     {
-      "date": "2026-09-15",
       "data": "data/2026-09-15.json",
-      "report": "archive/2026-09-15.html",
+      "date": "2026-09-15",
+      "label_en": "Speed improved again (TTFB 571→350ms, all 109 pages under 1s); GSC 46 clicks / 1,318 impressions / position 30.8 (flat); GA4 614 sessions, 7-day 110→116; backlinks 368→376; the new article again lacks FAQPage",
       "label_vi": "Tốc độ tốt lên lần nữa (TTFB 571→350ms, cả 109 trang dưới 1s); GSC 46 clicks / 1.318 impressions / vị trí 30,8 (đứng yên); GA4 614 phiên, 7 ngày 110→116; backlink 368→376; bài mới lại thiếu FAQPage",
-      "label_en": "Speed improved again (TTFB 571→350ms, all 109 pages under 1s); GSC 46 clicks / 1,318 impressions / position 30.8 (flat); GA4 614 sessions, 7-day 110→116; backlinks 368→376; the new article again lacks FAQPage"
+      "report": "archive/2026-09-15.html"
     },
     {
-      "date": "2026-09-16",
       "data": "data/2026-09-16.json",
-      "report": "archive/2026-09-16.html",
+      "date": "2026-09-16",
+      "label_en": "GSC 47 clicks / 1,299 impr / position 30.6 (improved); two new articles, the Adelaide one DOES carry FAQPage, a first in five (75.0%); TTFB 350 → 344 ms, /articles hub 920 → 558 ms; AI citations 21 → 18",
       "label_vi": "GSC 47 clicks / 1.299 impr / vị trí 30,6 (nhích lên); hai bài mới, bài Adelaide CÓ FAQPage lần đầu sau năm bài (75,0%); TTFB 350 → 344 ms, hub /articles 920 → 558 ms; trích dẫn AI 21 → 18",
-      "label_en": "GSC 47 clicks / 1,299 impr / position 30.6 (improved); two new articles, the Adelaide one DOES carry FAQPage, a first in five (75.0%); TTFB 350 → 344 ms, /articles hub 920 → 558 ms; AI citations 21 → 18"
+      "report": "archive/2026-09-16.html"
     },
     {
-      "date": "2026-09-17",
       "data": "data/2026-09-17.json",
-      "report": "archive/2026-09-17.html",
+      "date": "2026-09-17",
+      "label_en": "GSC index report rebuilt 4 Sep → 14 Sep: indexed 87 → 76, Blocked by robots.txt 6 → 20; GSC 43 clicks / 1,192 impressions, position 31.1; GA4 599 sessions, 7-day engagement 50.00% → 29.46%; site TTFB 344 → 315 ms and no page above 600 ms; nothing published",
       "label_vi": "GSC dựng lại bản index 04/09 → 14/09: trang index 87 → 76, Blocked by robots.txt 6 → 20; GSC 43 click / 1.192 hiển thị, vị trí 31,1; GA4 599 phiên, engagement 7 ngày 50,00% → 29,46%; TTFB toàn site 344 → 315 ms, lần đầu không trang nào vượt 600 ms; không xuất bản bài nào",
-      "label_en": "GSC index report rebuilt 4 Sep → 14 Sep: indexed 87 → 76, Blocked by robots.txt 6 → 20; GSC 43 clicks / 1,192 impressions, position 31.1; GA4 599 sessions, 7-day engagement 50.00% → 29.46%; site TTFB 344 → 315 ms and no page above 600 ms; nothing published"
+      "report": "archive/2026-09-17.html"
     },
     {
-      "date": "2026-09-18",
       "data": "data/2026-09-18.json",
-      "report": "archive/2026-09-18.html",
+      "date": "2026-09-18",
+      "label_en": "GSC improved on all four headline metrics for the first time (44 clicks · 1,203 impr · CTR 3.7% · position 30.8); one new article (sitemap 112→113 URLs, 88→89 articles, words 222,873→224,773) but it lands in an Adelaide cluster now six deep; speed set a new best (mean 315→309 ms, slowest 584→500 ms, all 112 pages under 1s); Page indexing did NOT rebuild (still the 14 Sep build); GA4 599→606 sessions but 7-day engagement 47.27%→33.86% and zero key events for a 13th scan; backlinks 386→392; AI citations flat at 18 across 10 pages; /articles overlay on day 22; correction: LocalBusiness is on only 2 of 111 pages",
       "label_vi": "GSC cải thiện cả bốn chỉ số lần đầu (44 click · 1.203 impr · CTR 3,7% · vị trí 30,8); một bài mới (sitemap 112→113 URL, 88→89 bài, từ 222.873→224.773) nhưng rơi vào cụm Adelaide nay sáu bài; tốc độ lập kỷ lục (TB 315→309 ms, chậm nhất 584→500 ms, cả 112 trang <1s); Page indexing KHÔNG dựng lại (vẫn bản 14/09); GA4 599→606 phiên nhưng 7 ngày engagement 47,27%→33,86% và 0 key event lần thứ 13; backlink 386→392; trích dẫn AI giữ 18/10 trang; lớp phủ /articles ngày 22; đính chính: LocalBusiness chỉ có trên 2/111 trang",
-      "label_en": "GSC improved on all four headline metrics for the first time (44 clicks · 1,203 impr · CTR 3.7% · position 30.8); one new article (sitemap 112→113 URLs, 88→89 articles, words 222,873→224,773) but it lands in an Adelaide cluster now six deep; speed set a new best (mean 315→309 ms, slowest 584→500 ms, all 112 pages under 1s); Page indexing did NOT rebuild (still the 14 Sep build); GA4 599→606 sessions but 7-day engagement 47.27%→33.86% and zero key events for a 13th scan; backlinks 386→392; AI citations flat at 18 across 10 pages; /articles overlay on day 22; correction: LocalBusiness is on only 2 of 111 pages"
+      "report": "archive/2026-09-18.html"
     },
     {
-      "date": "2026-09-19",
       "data": "data/2026-09-19.json",
-      "report": "archive/2026-09-19.html",
+      "date": "2026-09-19",
+      "label_en": "GSC gives back the gain (43 clicks · 1,188 impr · CTR 3.6%); two new articles take the library to 91; Ahrefs backlinks explode 392 → 607, spam-shaped",
       "label_vi": "GSC trả lại mức tăng (43 click · 1.188 impr · CTR 3,6%); hai bài mới lên 91 bài; backlink Ahrefs bùng nổ 392 → 607 kiểu spam",
-      "label_en": "GSC gives back the gain (43 clicks · 1,188 impr · CTR 3.6%); two new articles take the library to 91; Ahrefs backlinks explode 392 → 607, spam-shaped"
+      "report": "archive/2026-09-19.html"
     },
     {
-      "date": "2026-09-21",
       "data": "data/2026-09-21.json",
-      "report": "archive/2026-09-21.html",
+      "date": "2026-09-21",
+      "label_en": "No 20 Sep scan; weakest GSC in the series (36 clicks · 1,146 impr · CTR 3.1% · position 31.3) but Page indexing rebuilt (indexed 76→83) and Google re-read the sitemap (Discovered 109→116); 115 of 115 pages under 1s; backlinks 607→656; one new article",
       "label_vi": "Không có bản quét 20/9; GSC yếu nhất chuỗi (36 click · 1.146 impr · CTR 3,1% · vị trí 31,3) nhưng Page indexing dựng lại (index 76→83) và Google đọc lại sitemap (Discovered 109→116); 115/115 trang dưới 1 giây; backlink 607→656; một bài mới",
-      "label_en": "No 20 Sep scan; weakest GSC in the series (36 clicks · 1,146 impr · CTR 3.1% · position 31.3) but Page indexing rebuilt (indexed 76→83) and Google re-read the sitemap (Discovered 109→116); 115 of 115 pages under 1s; backlinks 607→656; one new article"
+      "report": "archive/2026-09-21.html"
     },
     {
-      "date": "2026-09-22",
       "data": "data/2026-09-22.json",
-      "report": "archive/2026-09-22.html",
+      "date": "2026-09-22",
+      "label_en": "GSC steadied (clicks flat at 36, CTR 3.1→3.2%, position 31.3→31.1) but GA4 lost 63 sessions (615→552) and key events 5→2; the whole site slowed, TTFB 330→536 ms (still 116/116 pages under 1s); one new article (92→93); backlink spam slowing at +12",
       "label_vi": "GSC ổn lại (click giữ 36, CTR 3,1→3,2%, vị trí 31,3→31,1) nhưng GA4 mất 63 phiên (615→552) và key event 5→2; toàn site chậm lại TTFB 330→536 ms (vẫn 116/116 trang dưới 1 giây); một bài mới (92→93 bài); spam backlink chậm lại +12",
-      "label_en": "GSC steadied (clicks flat at 36, CTR 3.1→3.2%, position 31.3→31.1) but GA4 lost 63 sessions (615→552) and key events 5→2; the whole site slowed, TTFB 330→536 ms (still 116/116 pages under 1s); one new article (92→93); backlink spam slowing at +12"
+      "report": "archive/2026-09-22.html"
     },
     {
-      "date": "2026-09-23",
       "data": "data/2026-09-23.json",
-      "report": "archive/2026-09-23.html",
+      "date": "2026-09-23",
+      "label_en": "Key events hit zero (2→0) on the 28-day window; GSC 36→34 clicks, 1,130→1,104 impressions; speed fully recovered 536→331 ms; backlinks 668→684; /articles overlay day 27",
       "label_vi": "Key event về 0 (2→0) trên cả 28 ngày; GSC 36→34 click, 1.130→1.104 impressions; tốc độ hồi hoàn toàn 536→331 ms; backlink 668→684; lớp phủ /articles ngày 27",
-      "label_en": "Key events hit zero (2→0) on the 28-day window; GSC 36→34 clicks, 1,130→1,104 impressions; speed fully recovered 536→331 ms; backlinks 668→684; /articles overlay day 27"
+      "report": "archive/2026-09-23.html"
     },
     {
-      "date": "2026-09-24",
       "data": "data/2026-09-24.json",
-      "report": "archive/2026-09-24.html",
+      "date": "2026-09-24",
+      "label_en": "One-day step · the first key event in eighteen scans (0 to 1); Page indexing rebuilt (21 Sep build) and the validation on 'Crawled - currently not indexed' now reads FAILED across 51 URLs; GSC held clicks at 34 but impressions 1,104 to 1,087; mean TTFB 331 to 328 ms, ceiling 698 to 545 ms; sitemap 118 to 119 URLs; AI citations 15 to 12",
       "label_vi": "Bước một ngày · key event đầu tiên sau 18 lần quét (0 → 1); Page indexing dựng lại (bản 21/09) và xác minh 'Crawled — currently not indexed' bật FAILED trên 51 URL; GSC giữ click 34 nhưng impressions 1.104 → 1.087; TTFB TB 331 → 328 ms, trần 698 → 545 ms; sitemap 118 → 119 URL; trích dẫn AI 15 → 12",
-      "label_en": "One-day step · the first key event in eighteen scans (0 to 1); Page indexing rebuilt (21 Sep build) and the validation on 'Crawled - currently not indexed' now reads FAILED across 51 URLs; GSC held clicks at 34 but impressions 1,104 to 1,087; mean TTFB 331 to 328 ms, ceiling 698 to 545 ms; sitemap 118 to 119 URLs; AI citations 15 to 12"
+      "report": "archive/2026-09-24.html"
+    },
+    {
+      "date": "2026-09-25",
+      "data": "data/2026-09-25.json",
+      "report": "archive/2026-09-25.html",
+      "label_vi": "25/09/2026",
+      "label_en": "25 Sep 2026"
     }
   ]
 }
