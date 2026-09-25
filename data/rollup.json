@@ -1,6 +1,6 @@
 {
  "derived": true,
- "generated_at": "2026-09-24",
+ "generated_at": "2026-09-25",
  "grain_legend": {
   "day": "Số đo của đúng ngày đó. CỘNG DỒN ĐƯỢC trong khoảng.",
   "state": "Chỉ số trạng thái tại thời điểm quét. Lấy trung bình hoặc giá trị cuối kỳ, không cộng.",
