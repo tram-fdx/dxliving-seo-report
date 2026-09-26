@@ -1,13 +1,13 @@
 {
  "derived": true,
- "generated_at": "2026-09-25",
+ "generated_at": "2026-09-26",
  "grain_legend": {
   "day": "Số đo của đúng ngày đó. CỘNG DỒN ĐƯỢC trong khoảng.",
   "state": "Chỉ số trạng thái tại thời điểm quét. Lấy trung bình hoặc giá trị cuối kỳ, không cộng.",
   "window28": "Ảnh chụp cửa sổ 28 ngày trượt. KHÔNG cộng được (các ngày chồng nhau) — chỉ so đầu kỳ với cuối kỳ và vẽ xu hướng."
  },
  "kind": "rollup",
- "scanned_count": 45,
+ "scanned_count": 46,
  "scanned_days": [
   "2026-06-30",
   "2026-07-27",
@@ -53,14 +53,15 @@
   "2026-09-22",
   "2026-09-23",
   "2026-09-24",
-  "2026-09-25"
+  "2026-09-25",
+  "2026-09-26"
  ],
  "series": {
   "ahrefs_ai_citations": {
    "grain": "state",
    "label": "Ahrefs — trích dẫn AI",
-   "measured": 43,
-   "of_days": 45,
+   "measured": 44,
+   "of_days": 46,
    "points": [
     {
      "d": "2026-07-28",
@@ -233,14 +234,18 @@
     {
      "d": "2026-09-25",
      "v": 12
+    },
+    {
+     "d": "2026-09-26",
+     "v": 14
     }
    ]
   },
   "ahrefs_backlinks": {
    "grain": "state",
    "label": "Ahrefs — backlinks",
-   "measured": 43,
-   "of_days": 45,
+   "measured": 44,
+   "of_days": 46,
    "points": [
     {
      "d": "2026-07-28",
@@ -413,14 +418,18 @@
     {
      "d": "2026-09-25",
      "v": 699
+    },
+    {
+     "d": "2026-09-26",
+     "v": 701
     }
    ]
   },
   "ahrefs_refdomains": {
    "grain": "state",
    "label": "Ahrefs — referring domains",
-   "measured": 45,
-   "of_days": 45,
+   "measured": 46,
+   "of_days": 46,
    "points": [
     {
      "d": "2026-06-30",
@@ -601,14 +610,18 @@
     {
      "d": "2026-09-25",
      "v": 663
+    },
+    {
+     "d": "2026-09-26",
+     "v": 665
     }
    ]
   },
   "ga4_engagement_pct": {
    "grain": "window28",
    "label": "GA4 — engagement %",
-   "measured": 45,
-   "of_days": 45,
+   "measured": 46,
+   "of_days": 46,
    "points": [
     {
      "d": "2026-06-30",
@@ -789,14 +802,18 @@
     {
      "d": "2026-09-25",
      "v": 33.9
+    },
+    {
+     "d": "2026-09-26",
+     "v": 34.59
     }
    ]
   },
   "ga4_key_events": {
    "grain": "window28",
    "label": "GA4 — key events",
-   "measured": 44,
-   "of_days": 45,
+   "measured": 45,
+   "of_days": 46,
    "points": [
     {
      "d": "2026-07-27",
@@ -973,14 +990,18 @@
     {
      "d": "2026-09-25",
      "v": 3
+    },
+    {
+     "d": "2026-09-26",
+     "v": 3
     }
    ]
   },
   "ga4_sessions": {
    "grain": "window28",
    "label": "GA4 — sessions",
-   "measured": 45,
-   "of_days": 45,
+   "measured": 46,
+   "of_days": 46,
    "points": [
     {
      "d": "2026-06-30",
@@ -1161,14 +1182,18 @@
     {
      "d": "2026-09-25",
      "v": 584
+    },
+    {
+     "d": "2026-09-26",
+     "v": 558
     }
    ]
   },
   "ga4_users": {
    "grain": "window28",
    "label": "GA4 — users",
-   "measured": 39,
-   "of_days": 45,
+   "measured": 40,
+   "of_days": 46,
    "points": [
     {
      "d": "2026-06-30",
@@ -1325,14 +1350,18 @@
     {
      "d": "2026-09-25",
      "v": 399
+    },
+    {
+     "d": "2026-09-26",
+     "v": 387
     }
    ]
   },
   "gsc_clicks": {
    "grain": "window28",
    "label": "GSC — clicks",
-   "measured": 44,
-   "of_days": 45,
+   "measured": 45,
+   "of_days": 46,
    "points": [
     {
      "d": "2026-06-30",
@@ -1509,14 +1538,18 @@
     {
      "d": "2026-09-25",
      "v": 34
+    },
+    {
+     "d": "2026-09-26",
+     "v": 34
     }
    ]
   },
   "gsc_ctr_pct": {
    "grain": "window28",
    "label": "GSC — CTR %",
-   "measured": 44,
-   "of_days": 45,
+   "measured": 45,
+   "of_days": 46,
    "points": [
     {
      "d": "2026-06-30",
@@ -1693,14 +1726,18 @@
     {
      "d": "2026-09-25",
      "v": 3.3
+    },
+    {
+     "d": "2026-09-26",
+     "v": 3.4
     }
    ]
   },
   "gsc_impressions": {
    "grain": "window28",
    "label": "GSC — impressions",
-   "measured": 44,
-   "of_days": 45,
+   "measured": 45,
+   "of_days": 46,
    "points": [
     {
      "d": "2026-06-30",
@@ -1877,14 +1914,18 @@
     {
      "d": "2026-09-25",
      "v": 1034
+    },
+    {
+     "d": "2026-09-26",
+     "v": 1013
     }
    ]
   },
   "gsc_position": {
    "grain": "window28",
    "label": "GSC — vị trí TB",
-   "measured": 44,
-   "of_days": 45,
+   "measured": 45,
+   "of_days": 46,
    "points": [
     {
      "d": "2026-06-30",
@@ -2061,14 +2102,18 @@
     {
      "d": "2026-09-25",
      "v": 29.1
+    },
+    {
+     "d": "2026-09-26",
+     "v": 28.0
     }
    ]
   },
   "gsc_queries": {
    "grain": "window28",
    "label": "GSC — số truy vấn",
-   "measured": 41,
-   "of_days": 45,
+   "measured": 42,
+   "of_days": 46,
    "points": [
     {
      "d": "2026-07-29",
@@ -2233,14 +2278,18 @@
     {
      "d": "2026-09-25",
      "v": 86
+    },
+    {
+     "d": "2026-09-26",
+     "v": 81
     }
    ]
   },
   "sitemap_urls": {
    "grain": "state",
    "label": "Sitemap — số URL",
-   "measured": 38,
-   "of_days": 45,
+   "measured": 39,
+   "of_days": 46,
    "points": [
     {
      "d": "2026-08-07",
@@ -2393,14 +2442,18 @@
     {
      "d": "2026-09-25",
      "v": 119
+    },
+    {
+     "d": "2026-09-26",
+     "v": 119
     }
    ]
   },
   "ttfb_mean_ms": {
    "grain": "state",
    "label": "TTFB trung bình (ms)",
-   "measured": 23,
-   "of_days": 45,
+   "measured": 24,
+   "of_days": 46,
    "points": [
     {
      "d": "2026-08-28",
@@ -2493,6 +2546,10 @@
     {
      "d": "2026-09-25",
      "v": 336
+    },
+    {
+     "d": "2026-09-26",
+     "v": 337
     }
    ]
   }

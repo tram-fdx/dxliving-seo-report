@@ -1,6 +1,6 @@
 {
   "description": "Lịch sử snapshot dữ liệu SEO theo ngày / Daily SEO data snapshot history. Mỗi ngày một file data/YYYY-MM-DD.json + bản HTML đóng băng archive/YYYY-MM-DD.html.",
-  "latest": "2026-09-25",
+  "latest": "2026-09-26",
   "site": "dxliving.com",
   "snapshots": [
     {
@@ -317,6 +317,13 @@
       "report": "archive/2026-09-25.html",
       "label_vi": "RE-RUN · Bước một ngày · GSC 26/8–22/9: click giữ 34, impressions 1.087 → 1.034, vị trí 31,1 → 29,1 (do 9 truy vấn yếu rời bảng), tab DAYS nay lưu theo ngày; GA4 28/8–24/9: key event 1 → 3 nhưng tương tác 36,87% → 33,90%, và bảng Session source/medium lần này ĐỌC ĐƯỢC (lần đăng trước để null); Ahrefs spam gần như dừng (+2/+2), trang được AI trích dẫn 8 → 9; URL ngoài sitemap 2 → 0, bài chỉ qua hub 25 → 23; lớp phủ /articles ngày thứ 29",
       "label_en": "RE-RUN · One-day step · GSC 26 Aug–22 Sep: clicks held at 34, impressions 1,087 to 1,034, position 31.1 to 29.1 (9 weak queries left the table), the DAYS tab is now stored as day-grain; GA4 28 Aug–24 Sep: key events 1 to 3 but engagement 36.87% to 33.90%, and Session source/medium WAS read this time (the earlier publish left it null); Ahrefs spam almost stopped (+2/+2), AI-cited pages 8 to 9; URLs absent from sitemap 2 to 0, hub-only articles 25 to 23; the /articles overlay is on day 29"
+    },
+    {
+      "date": "2026-09-26",
+      "data": "data/2026-09-26.json",
+      "report": "archive/2026-09-26.html",
+      "label_vi": "Health audit 93→95 · bài chỉ vào được qua hub 23→0 và FAQPage 73→82/95 (86,3%) · click ghim 34 lần thứ tư, impressions 1.034→1.013, vị trí 29,1→28,0 · GA4 sessions 584→558 nhưng tương tác 33,90%→34,59%, key event giữ 3 · trích dẫn AI 12→14 · lớp phủ /articles ngày thứ 30",
+      "label_en": "Audit Health 93→95 · hub-only articles 23→0 and FAQPage 73→82 of 95 (86.3%) · clicks pinned at 34 for a fourth scan, impressions 1,034→1,013, position 29.1→28.0 · GA4 sessions 584→558 but engagement 33.90%→34.59%, key events held at 3 · AI citations 12→14 · /articles overlay day 30"
     }
   ]
 }
