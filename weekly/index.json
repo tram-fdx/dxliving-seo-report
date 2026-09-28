@@ -1,7 +1,24 @@
 {
   "kind": "weekly",
-  "latest": "2026-09-18",
+  "latest": "2026-09-25",
   "weeks": [
+    {
+      "id": "2026-09-25",
+      "vi": "19–25/09/2026",
+      "en": "19–25 Sep 2026",
+      "start": "2026-09-19",
+      "end": "2026-09-25",
+      "compare_start": "2026-09-12",
+      "compare_end": "2026-09-18",
+      "scanned_on": "2026-09-28",
+      "sources": [
+        "Google Search Console (Chrome)",
+        "Google Analytics 4 (Chrome)",
+        "Ahrefs snapshot (dxliving-seo-report)"
+      ],
+      "notes_vi": "Chay theo lich 28/09. GSC clicks 3 len 7, impressions 184 xuong 177; vi tri TB 17,2 len 12,8 chu yeu do /login va truy van thuong hieu, khong phai thu hang khong thuong hieu. GA4 186 session, 3 generate_lead dau tien (2 nguoi dung, deu Direct, chua xac minh). Organic Search GA4 37 xuong 16 nguoc chieu GSC. Trich dan AI 18 xuong 12. Ahrefs va trich dan AI lay tu snapshot 25/09.",
+      "notes_en": "Scheduled run on 28 Sep. GSC clicks 3 to 7, impressions 184 to 177; average position 17.2 to 12.8 driven mainly by /login and branded queries, not non-brand rankings. GA4 186 sessions and the first 3 generate_lead key events (2 users, all Direct, unverified). GA4 Organic Search 37 to 16, opposite to GSC. AI citations 18 to 12. Ahrefs and AI citations come from the 25 Sep snapshot."
+    },
     {
       "id": "2026-09-18",
       "vi": "12–18/09/2026",
