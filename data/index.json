@@ -1,6 +1,6 @@
 {
   "description": "Lịch sử snapshot dữ liệu SEO theo ngày / Daily SEO data snapshot history. Mỗi ngày một file data/YYYY-MM-DD.json + bản HTML đóng băng archive/YYYY-MM-DD.html.",
-  "latest": "2026-09-26",
+  "latest": "2026-09-28",
   "site": "dxliving.com",
   "snapshots": [
     {
@@ -324,6 +324,13 @@
       "report": "archive/2026-09-26.html",
       "label_vi": "Health audit 93→95 · bài chỉ vào được qua hub 23→0 và FAQPage 73→82/95 (86,3%) · click ghim 34 lần thứ tư, impressions 1.034→1.013, vị trí 29,1→28,0 · GA4 sessions 584→558 nhưng tương tác 33,90%→34,59%, key event giữ 3 · trích dẫn AI 12→14 · lớp phủ /articles ngày thứ 30",
       "label_en": "Audit Health 93→95 · hub-only articles 23→0 and FAQPage 73→82 of 95 (86.3%) · clicks pinned at 34 for a fourth scan, impressions 1,034→1,013, position 29.1→28.0 · GA4 sessions 584→558 but engagement 33.90%→34.59%, key events held at 3 · AI citations 12→14 · /articles overlay day 30"
+    },
+    {
+      "date": "2026-09-28",
+      "data": "data/2026-09-28.json",
+      "report": "archive/2026-09-28.html",
+      "label_vi": "Click 34→31 · vị trí 26,6 · backlink rác +44 · trích dẫn AI 17",
+      "label_en": "Clicks 34→31 · position 26.6 · +44 spam backlinks · AI citations 17"
     }
   ]
 }
