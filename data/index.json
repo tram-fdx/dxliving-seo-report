@@ -1,6 +1,6 @@
 {
   "description": "Lịch sử snapshot dữ liệu SEO theo ngày / Daily SEO data snapshot history. Mỗi ngày một file data/YYYY-MM-DD.json + bản HTML đóng băng archive/YYYY-MM-DD.html.",
-  "latest": "2026-09-29",
+  "latest": "2026-09-30",
   "site": "dxliving.com",
   "snapshots": [
     {
@@ -338,6 +338,13 @@
       "report": "archive/2026-09-29.html",
       "label_vi": "Lớp phủ /articles đã gỡ sau 32 ngày · GSC 32 click / 1.051 impression / vị trí 26,0 · AI visibility 30 → 28",
       "label_en": "/articles overlay removed after 32 days · GSC 32 clicks / 1,051 impressions / position 26.0 · AI visibility 30 → 28"
+    },
+    {
+      "date": "2026-09-30",
+      "data": "data/2026-09-30.json",
+      "report": "archive/2026-09-30.html",
+      "label_vi": "30/09/2026 — GSC 31/08→27/09 · GA4 02/09→29/09",
+      "label_en": "30 Sep 2026 — GSC 31 Aug→27 Sep · GA4 2 Sep→29 Sep"
     }
   ]
 }
