@@ -1,13 +1,13 @@
 {
  "derived": true,
- "generated_at": "2026-09-29",
+ "generated_at": "2026-09-30",
  "grain_legend": {
   "day": "Số đo của đúng ngày đó. CỘNG DỒN ĐƯỢC trong khoảng.",
   "state": "Chỉ số trạng thái tại thời điểm quét. Lấy trung bình hoặc giá trị cuối kỳ, không cộng.",
   "window28": "Ảnh chụp cửa sổ 28 ngày trượt. KHÔNG cộng được (các ngày chồng nhau) — chỉ so đầu kỳ với cuối kỳ và vẽ xu hướng."
  },
  "kind": "rollup",
- "scanned_count": 49,
+ "scanned_count": 50,
  "scanned_days": [
   "2026-06-30",
   "2026-07-27",
@@ -57,14 +57,15 @@
   "2026-09-26",
   "2026-09-28",
   "2026-09-29",
-  "2026-09-30"
+  "2026-09-30",
+  "2026-10-01"
  ],
  "series": {
   "ahrefs_ai_citations": {
    "grain": "state",
    "label": "Ahrefs — trích dẫn AI",
-   "measured": 47,
-   "of_days": 49,
+   "measured": 48,
+   "of_days": 50,
    "points": [
     {
      "d": "2026-07-28",
@@ -253,14 +254,18 @@
     {
      "d": "2026-09-30",
      "v": 16
+    },
+    {
+     "d": "2026-10-01",
+     "v": 18
     }
    ]
   },
   "ahrefs_backlinks": {
    "grain": "state",
    "label": "Ahrefs — backlinks",
-   "measured": 47,
-   "of_days": 49,
+   "measured": 48,
+   "of_days": 50,
    "points": [
     {
      "d": "2026-07-28",
@@ -449,14 +454,18 @@
     {
      "d": "2026-09-30",
      "v": 918
+    },
+    {
+     "d": "2026-10-01",
+     "v": 918
     }
    ]
   },
   "ahrefs_refdomains": {
    "grain": "state",
    "label": "Ahrefs — referring domains",
-   "measured": 49,
-   "of_days": 49,
+   "measured": 50,
+   "of_days": 50,
    "points": [
     {
      "d": "2026-06-30",
@@ -653,6 +662,10 @@
     {
      "d": "2026-09-30",
      "v": 882
+    },
+    {
+     "d": "2026-10-01",
+     "v": 882
     }
    ]
   },
@@ -660,7 +673,7 @@
    "grain": "window28",
    "label": "GA4 — engagement %",
    "measured": 49,
-   "of_days": 49,
+   "of_days": 50,
    "points": [
     {
      "d": "2026-06-30",
@@ -864,7 +877,7 @@
    "grain": "window28",
    "label": "GA4 — key events",
    "measured": 48,
-   "of_days": 49,
+   "of_days": 50,
    "points": [
     {
      "d": "2026-07-27",
@@ -1064,7 +1077,7 @@
    "grain": "window28",
    "label": "GA4 — sessions",
    "measured": 49,
-   "of_days": 49,
+   "of_days": 50,
    "points": [
     {
      "d": "2026-06-30",
@@ -1268,7 +1281,7 @@
    "grain": "window28",
    "label": "GA4 — users",
    "measured": 43,
-   "of_days": 49,
+   "of_days": 50,
    "points": [
     {
      "d": "2026-06-30",
@@ -1448,7 +1461,7 @@
    "grain": "window28",
    "label": "GSC — clicks",
    "measured": 48,
-   "of_days": 49,
+   "of_days": 50,
    "points": [
     {
      "d": "2026-06-30",
@@ -1648,7 +1661,7 @@
    "grain": "window28",
    "label": "GSC — CTR %",
    "measured": 48,
-   "of_days": 49,
+   "of_days": 50,
    "points": [
     {
      "d": "2026-06-30",
@@ -1848,7 +1861,7 @@
    "grain": "window28",
    "label": "GSC — impressions",
    "measured": 48,
-   "of_days": 49,
+   "of_days": 50,
    "points": [
     {
      "d": "2026-06-30",
@@ -2048,7 +2061,7 @@
    "grain": "window28",
    "label": "GSC — vị trí TB",
    "measured": 48,
-   "of_days": 49,
+   "of_days": 50,
    "points": [
     {
      "d": "2026-06-30",
@@ -2248,7 +2261,7 @@
    "grain": "window28",
    "label": "GSC — số truy vấn",
    "measured": 45,
-   "of_days": 49,
+   "of_days": 50,
    "points": [
     {
      "d": "2026-07-29",
@@ -2435,8 +2448,8 @@
   "sitemap_urls": {
    "grain": "state",
    "label": "Sitemap — số URL",
-   "measured": 42,
-   "of_days": 49,
+   "measured": 43,
+   "of_days": 50,
    "points": [
     {
      "d": "2026-08-07",
@@ -2605,14 +2618,18 @@
     {
      "d": "2026-09-30",
      "v": 119
+    },
+    {
+     "d": "2026-10-01",
+     "v": 119
     }
    ]
   },
   "ttfb_mean_ms": {
    "grain": "state",
    "label": "TTFB trung bình (ms)",
-   "measured": 27,
-   "of_days": 49,
+   "measured": 28,
+   "of_days": 50,
    "points": [
     {
      "d": "2026-08-28",
@@ -2721,6 +2738,10 @@
     {
      "d": "2026-09-30",
      "v": 342
+    },
+    {
+     "d": "2026-10-01",
+     "v": 331
     }
    ]
   }

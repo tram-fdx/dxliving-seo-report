@@ -1,0 +1,451 @@
+{
+ "date": "2026-10-01",
+ "site": "dxliving.com",
+ "source_commit": "",
+ "provenance": "Read on 2026-10-01 (~06:10-07:10 ICT) from Chrome on macOS. GOOGLE SEARCH CONSOLE AND GA4 COULD NOT BE READ: Google signed the tram@feeldx.com.au session out and both properties redirected to an accounts.google.com \"Verify it's you - Please sign in again\" screen. This unattended run is not permitted to enter a password or complete a sign-in, so NO GSC or GA4 figure was obtained today. Every field under gsc_28d and ga4_28d is null; nothing is carried forward from 2026-09-30. The same sign-out also blocked YouTube Studio, so today's social report has a null YouTube card. READ LIVE AND UNAFFECTED: Ahrefs (Site Explorer overview and Backlink profile tab, Crawled pages, Site Audit, Brand Radar - Ahrefs authenticates separately), one full sequential origin crawl of all 117 sitemap page URLs plus /login through Chrome with cache no-store, the /articles overlay check, the homepage DOM tag check, and the social snapshot from the DX Living social dashboard updated earlier in this same run.",
+ "scan_note": "A PARTIAL SCAN. Ahrefs, the origin crawl and the social snapshot stepped one day normally. GSC and GA4 did not step at all because they could not be opened - their windows are null rather than advanced. Remedy: sign Chrome on the Mac back in as tram@feeldx.com.au and re-run this task for 2026-10-01.",
+ "windows": {
+  "gsc": null,
+  "ga4": null
+ },
+ "gsc_28d": {
+  "clicks": null,
+  "impressions": null,
+  "ctr_pct": null,
+  "avg_position": null,
+  "queries_with_impressions": null,
+  "impressions_method": null,
+  "queries_table_sums": null,
+  "brand_clicks": null,
+  "brand_clicks_share_pct": null,
+  "brand_clicks_note": null,
+  "clicked_queries": [],
+  "daily": [],
+  "daily_note": "NOT READ. The 28 GSC day rows normally come from the DAYS tab (breakdown=date); Search Console was behind a Google re-verification screen today, so no row was obtained. This appears in the rollup as a missing day for every GSC series, not as a repeated value.",
+  "unavailable": true,
+  "unavailable_reason": "Google Search Console redirected to accounts.google.com \"Verify it's you - Please sign in again to continue to Google Search Console\" for tram@feeldx.com.au. No password may be entered by this unattended run, so every GSC metric is null for 2026-10-01. Last good read: 2026-09-30 (30 clicks, 1,056 impressions, CTR 2.8 pct, average position 25.8, 80 queries).",
+  "delta_vs_2026_09_30": null
+ },
+ "gsc_rank_movement": {
+  "note": "NOT READ on 2026-10-01. The tracked non-brand query board is derived from the GSC query table, which was unreachable behind the Google re-verification screen. No position or impression figure is recorded today and none is carried forward from 2026-09-30.",
+  "unavailable": true
+ },
+ "ga4_28d": {
+  "sessions": null,
+  "engaged_sessions": null,
+  "engagement_rate_pct": null,
+  "key_events": null,
+  "session_key_event_rate_pct": null,
+  "users": null,
+  "new_users": null,
+  "returning_users": null,
+  "avg_engagement_time": null,
+  "avg_engagement_time_per_active_user": null,
+  "avg_engagement_time_per_active_user_note": null,
+  "events_per_session": null,
+  "total_events": null,
+  "ai_assistant_channel": null,
+  "channel_breakdown": null,
+  "channel_breakdown_note": "NOT READ. GA4 was behind a Google re-verification screen; no channel row was obtained and nothing is carried forward.",
+  "source_medium_top": [],
+  "source_medium_note": null,
+  "channel_quality": null,
+  "first_user_channel": null,
+  "tracking_health": {
+   "verdict": "UNKNOWN for 2026-10-01 - GA4 could not be opened, so collection could not be confirmed either way today. The last confirmed read (2026-09-30) showed GA4 collecting normally with 152 sessions and 776 events in the most recent 7 days.",
+   "unavailable": true
+  },
+  "undercount_note": null,
+  "unavailable": true,
+  "unavailable_reason": "Google Analytics redirected to accounts.google.com \"Verify it's you - Please sign in again to continue to Google Analytics\" for tram@feeldx.com.au on property a375259331p513249954 (DX LIVING). No password may be entered by this unattended run, so every GA4 metric is null for 2026-10-01. Last good read: 2026-09-30 (559 sessions, 394 users, 2,578 events, engagement rate 33.99 pct, 4 key events).",
+  "delta_vs_2026_09_30": null
+ },
+ "ahrefs": {
+  "read_at": "2026-10-01 ICT",
+  "workspace": "Nguyen Thi Thanh Tram",
+  "country_filter": "All countries, matching every prior day in this series.",
+  "domain_rating": 0,
+  "url_rating": 0,
+  "ahrefs_rank": 222626517,
+  "referring_domains": 882,
+  "referring_domains_all_time": 1100,
+  "referring_domains_followed": 301,
+  "referring_domains_followed_pct": 34.1,
+  "backlinks": 918,
+  "backlinks_all_time": null,
+  "backlinks_all_time_display": "1.1K",
+  "backlinks_all_time_note": "The overview tile rounds the all-time backlink count to \"1.1K\" and Ahrefs exposes no exact figure on this plan.",
+  "backlinks_followed": 307,
+  "backlinks_followed_pct": 33.4,
+  "followed_note": "READ TODAY from the Backlink profile tab: referring domains followed 301 of 882 (34.1 pct) against 581 not followed, and backlinks followed 307 of 918 (33.4 pct) against 611 not followed. Every one of these six figures is BYTE-IDENTICAL to 2026-09-30.",
+  "authority_direction_note": "THE SPAM INFLUX STOPPED DEAD. After weeks of steady growth, live referring domains held at exactly 882 and backlinks at exactly 918 - the first fully flat read in this series. Followed counts are unchanged too. DR and UR both remain 0. Ahrefs Rank moved 195,773,819 -> 222,626,517, which is a relative-position change across Ahrefs' whole index rather than a change in this domain's own profile.",
+  "health_score": 100,
+  "site_audit_crawl": "FRESH CRAWL TODAY 04:27 AM. Completed. Health 100 percent, 14 URLs crawled (DOWN from 15), 0 internal URLs with errors.",
+  "site_audit_caveat": "Health 100 on a 14-URL crawl does not describe a 118-page site with 95 articles. The Ahrefs project is still crawling only a fraction of the site, and the URL count fell 15 -> 14 this run, so the sample narrowed further. The origin crawl in technical_health below is the authoritative view of this site.",
+  "crawled_pages_site_explorer": 187,
+  "crawled_pages_404": 10,
+  "crawled_pages_http_breakdown": {
+   "200": 173,
+   "3xx": 3,
+   "404": 10,
+   "4xx_other": 0,
+   "5xx": 0
+  },
+  "crawled_pages_http_breakdown_note": "Counted row by row from the Crawled pages table DOM across both pages of 100, matching only cells whose entire text is a three-digit status code (the 'Project 251' strings in URLs otherwise contaminate a looser match). The two pages hold 186 rows against a tile reading 187, the same one-row discrepancy as every previous scan.",
+  "crawled_pages_404_note": "404s FELL AGAIN 11 -> 10 and 200s ROSE 172 -> 173, while the crawled-pages total held at 187. A fourth consecutive scan of improvement.",
+  "organic_keywords": 0,
+  "organic_traffic": 0,
+  "top_3_keywords": 0,
+  "ai_citations": 18,
+  "ai_by_platform": {
+   "ai_overviews": 0,
+   "ai_mode": 0,
+   "chatgpt": 7,
+   "gemini": 0,
+   "perplexity": 0,
+   "copilot": 11,
+   "grok": null
+  },
+  "cited_pages": 11,
+  "cited_pages_by_platform": {
+   "ai_overviews": 0,
+   "ai_mode": 0,
+   "chatgpt": 5,
+   "gemini": 0,
+   "perplexity": 0,
+   "copilot": 8,
+   "grok": null
+  },
+  "cited_pages_note": "AI RESPONSES ROSE 16 -> 18 and CITED PAGES ROSE 10 -> 11, reversing yesterday's fall. ChatGPT recovered 6 -> 7 responses (5 pages) and Copilot rose 10 -> 11 responses (7 -> 8 pages). AI Overviews, AI Mode, Gemini and Perplexity all remain at zero; Grok is paused on this plan."
+ },
+ "ai_visibility": {
+  "score": 28,
+  "score_max": 100,
+  "framework": "searchfit-seo:ai-visibility",
+  "platforms_present": 2,
+  "platforms_total": 6,
+  "cited_pages": 11,
+  "dimensions_measured": {
+   "presence": 2,
+   "citation_surface": 1,
+   "technical_readiness": 10,
+   "third_party_corpus": 0,
+   "measurement": 1
+  },
+  "dimensions_not_measured": [
+   "accuracy",
+   "sentiment",
+   "position"
+  ],
+  "not_measured_reason": "Requires Brand Radar prompt tracking. The 'Dxliving' report EXISTS in the 'Nguyen Thi Thanh Tram' workspace but tracks 0 prompts, so accuracy, sentiment and position cannot be measured. / Can theo doi prompt trong Brand Radar.",
+  "score_method": "Average of the 5 measurable dimensions x 10 = (2+1+10+0+1)/5 x 10 = 28.",
+  "score_change_explanation": "The score HOLDS at 28 for a third scan. Ahrefs cited pages rose 10 -> 11, but 11 of 95 articles is 11.6 percent, which still rounds to 1 on the citation-surface dimension, and platforms present held at 2 of 6 (ChatGPT and Copilot). No dimension moved.",
+  "score_caveat": "The score is capped by two dimensions no on-site work will move: third_party_corpus at 0 and measurement at 1. Technical readiness is already maxed at 10/10, so the only lever left on site is citation surface - currently 11 cited pages against 95 live articles.",
+  "citation_surface_note": "11 cited pages against 95 live articles = 11.6 percent, which still rounds to 1/10, unchanged.",
+  "third_party_corpus_note": "Held at 0 and NOT re-checked today. Flagged explicitly rather than silently carried.",
+  "technical_readiness_method": "7 signals checked; score = share passing x 10. All 7 pass -> 10.",
+  "brand_radar": {
+   "report_exists": true,
+   "prompts_tracked": 0,
+   "ai_share_of_voice": null,
+   "reread_today": true,
+   "workspace": "Nguyen Thi Thanh Tram's workspace",
+   "note": "Re-read today: the Dxliving report still exists, still tracks 0 prompts and still shows AI share of voice as \"-\". Until prompts are added, the accuracy, sentiment and competitive dimensions cannot be measured."
+  },
+  "readiness": {
+   "measured_at": "2026-10-01 ICT",
+   "robots_txt_blocks_ai_bots": false,
+   "sitemap_complete": true,
+   "sitemap_url_count": 119,
+   "sitemap_article_count": 95,
+   "llms_txt": true,
+   "faq_schema_on_money_pages": true,
+   "organization_schema": true,
+   "localbusiness_schema_homepage": true,
+   "localbusiness_schema_sitewide": false,
+   "articles_render": true,
+   "signals_passing": 7,
+   "signals_total": 7,
+   "reread_today": true,
+   "evidence": "Re-measured from the dxliving.com origin with cache no-store: robots.txt 200 (430 bytes, sitemap directive present), sitemap.xml 200 (119 URLs, 117 pages + 2 .txt), llms.txt 200 (12,678 bytes) and llms-full.txt 200 (21,940 bytes). All 118 crawled pages returned 200 and 116 carry JSON-LD.",
+   "sitemap_note": "Sitemap HELD at 119 URLs and 95 articles - no new article since the 24 Sep scan, a SEVENTH consecutive day. Whether Google has re-read it since 29 Sep could not be checked today because Search Console was unreachable.",
+   "articles_render_caveat": "RESOLVED. This caveat existed because articles_render passed on HTTP 200 only and the method did not see the full-viewport overlay that blocked human readers of the hub. The overlay is GONE as of this crawl: zero elements at z-index >= 9999, zero full-viewport fixed elements and four viewport probe points all resolving to ordinary content. The signal and the lived experience now agree.",
+   "jsonld_note": "116 of 118 crawled pages carry at least one JSON-LD block (394 blocks in total), unchanged. The two without are /start-interactive and /login."
+  }
+ },
+ "technical_health": {
+  "measured_at": "2026-10-01 ICT",
+  "source": "ONE full sequential origin crawl of all 117 sitemap page URLs plus /login through Chrome with cache no-store and a 15-second AbortController - the SAME crawl that produced today's website-audit report, so the two agree by construction. GSC Page indexing, Sitemaps, Core Web Vitals and HTTPS COULD NOT BE READ today (Google re-verification screen).",
+  "gsc_page_indexing": {
+   "indexed": null,
+   "not_indexed": null,
+   "build_dated": null,
+   "reasons": null,
+   "unavailable": true,
+   "unavailable_reason": "Search Console unreachable on 2026-10-01. Last read (2026-09-30): 83 indexed, 148 not indexed, build dated 2026-09-21."
+  },
+  "gsc_sitemap": {
+   "submitted": null,
+   "last_read_by_google": null,
+   "status": null,
+   "discovered_pages": null,
+   "unavailable": true,
+   "unavailable_reason": "Search Console unreachable on 2026-10-01. Last read (2026-09-30): submitted 2026-08-24, last read by Google 2026-09-29, Success, 119 discovered pages."
+  },
+  "gsc_core_web_vitals": {
+   "mobile": null,
+   "desktop": null,
+   "last_updated": null,
+   "unavailable": true,
+   "unavailable_reason": "Search Console unreachable on 2026-10-01. Last read (2026-09-30): not enough usable data in the Chrome UX Report, tile dated 2026-09-28."
+  },
+  "gsc_https": {
+   "non_https_urls": null,
+   "https_urls": null,
+   "last_update": null,
+   "verdict": null,
+   "unavailable": true,
+   "unavailable_reason": "Search Console unreachable on 2026-10-01. Last read (2026-09-30): 0 non-HTTPS URLs, 15 HTTPS URLs, clean, tile dated 2026-09-24."
+  },
+  "response_times": {
+   "measurement_note": "TTFB measured with performance.now() around a sequential same-origin fetch of each URL with cache no-store and a 15-second abort, run once for all 118 pages.",
+   "articles_sampled": 95,
+   "articles_avg_ms": 328,
+   "articles_max_ms": 654,
+   "articles_min_ms": 242,
+   "core_pages_sampled": 17,
+   "core_pages_avg_ms": 350,
+   "project_pages_sampled": 6,
+   "project_pages_avg_ms": 328,
+   "slowest_page": {
+    "url": "/articles/custom-home-builders-melbourne-3d-visualisation",
+    "ms": 654
+   },
+   "homepage_ms": 528,
+   "articles_hub_ms": 321,
+   "homepage_rereads_ms": [
+    622,
+    550,
+    302,
+    568
+   ],
+   "studio_rereads_ms": [
+    527,
+    574,
+    321,
+    397
+   ],
+   "articles_rereads_ms": [
+    319,
+    521,
+    315,
+    308
+   ],
+   "homepage_navigation_ttfb_ms": 446,
+   "articles_navigation_ttfb_ms": 463,
+   "site_mean_ms": 331,
+   "site_median_ms": 268,
+   "under_1s": 118,
+   "between_1s_3s": 0,
+   "over_3s": 0,
+   "max_ms": 654,
+   "navigation_timing": {
+    "/": {
+     "ttfb_ms": 446,
+     "domcontentloaded_ms": 673,
+     "load_ms": 3818
+    },
+    "/articles": {
+     "ttfb_ms": 463,
+     "load_ms": 1473
+    }
+   },
+   "slowest": [
+    {
+     "url": "/articles/custom-home-builders-melbourne-3d-visualisation",
+     "ms": 654
+    },
+    {
+     "url": "/articles/landscape-design-melbourne",
+     "ms": 594
+    },
+    {
+     "url": "/",
+     "ms": 528
+    },
+    {
+     "url": "/suppliers",
+     "ms": 526
+    },
+    {
+     "url": "/articles/3d-floor-plan-melbourne-home-design-clarity",
+     "ms": 518
+    }
+   ],
+   "note": "THE CEILING IS EFFECTIVELY FLAT, 650 -> 654 ms, and the slowest page is an article again (/articles/custom-home-builders-melbourne-3d-visualisation). The distribution nonetheless improved: site mean 342 -> 331 ms and median 276 -> 268 ms. Core sped up 381 -> 350 ms and articles 340 -> 328 ms, while projects slowed 264 -> 328 ms. All 118 pages remain under one second for a seventh consecutive scan."
+  },
+  "h1_and_canonical": {
+   "pages_checked": 118,
+   "pages_with_exactly_one_h1": 118,
+   "pages_with_canonical": 118,
+   "pages_self_canonical": 118,
+   "note": "All 118 crawled pages (117 sitemap pages + /login) carry exactly one h1, a canonical link, and a canonical that points at themselves. Unchanged."
+  },
+  "meta_descriptions": {
+   "pages_checked": 118,
+   "min_len": 83,
+   "max_len": 189,
+   "note": "All 118 pages carry a meta description; lengths 83-189 characters, identical bounds to 30 Sep."
+  },
+  "headings_and_images": {
+   "pages_with_heading_before_h1": 96,
+   "pages_with_level_skips": 0,
+   "level_skip_page": null,
+   "images_total": 1387,
+   "images_with_alt": 1269,
+   "images_lazy": 773,
+   "note": "118 images across the site still have no alt text (1,269 of 1,387 carry one, 91.5 pct) - byte-identical to 30 Sep, and confirmed again to be exactly one template image per page."
+  },
+  "schema_from_crawl": {
+   "pages_with_schema": 116,
+   "pages_without": [
+    "/start-interactive",
+    "/login"
+   ],
+   "json_ld_blocks_total": 394,
+   "faqpage_articles": 82,
+   "articles_total": 95,
+   "faqpage_pct": 86.3,
+   "note": "FAQPage coverage HELD at 82 of 95 articles (86.3 pct) for a FIFTH consecutive scan - the same 13 articles are still without one."
+  },
+  "legacy_long_slug_recheck": {
+   "urls_checked": 10,
+   "all_200": true,
+   "all_self_canonical": true,
+   "note": "The ten legacy long-slug article URLs were re-fetched today from the origin at /articles/<slug>: ten of ten returned 200 with a self-referencing canonical."
+  }
+ },
+ "internal_linking": {
+  "measured_at": "2026-10-01 ICT",
+  "status": "HEALTHY. The /articles overlay remains gone on a third consecutive check, every article has inbound links, and there are no orphans.",
+  "method": "Fetched every sitemap page from the origin (cache no-store) and computed the inbound-link graph over all 118 crawled pages.",
+  "sitemap_articles": 95,
+  "hub_articles_unfiltered": 95,
+  "hub_html_bytes": 278843,
+  "hub_distinct_articles": 95,
+  "hub_change": "The hub still lists all 95 articles and 109 article links are present in its DOM. Hub HTML measured 278,843 bytes (279,515 on 30 Sep).",
+  "hub_categories_note": "Category slugs still return the identical full article set, so category pages add no segmentation value.",
+  "orphan_articles_count": 0,
+  "orphan_articles": [],
+  "verification": "Counted from the same 118-page crawl as technical_health: every one of the 118 pages has at least TWO inbound internal links.",
+  "new_articles": [],
+  "new_articles_note": "No new article since 24 Sep - a seventh consecutive day. The sitemap, the hub and the article count are all flat at 95.",
+  "articles_overlay": {
+   "day": 0,
+   "status": "RESOLVED",
+   "resolved_on": "2026-09-29",
+   "days_present": 32,
+   "evidence": "Re-checked today: opened /articles in Chrome and waited 15 s. ZERO elements at z-index >= 9999, ZERO fixed elements covering 95 pct or more of the viewport, and elementFromPoint at the viewport centre resolved to an ordinary content div. 109 article links clickable in the DOM.",
+   "severity_note": "Closed for a THIRD consecutive day after 32 days present."
+  },
+  "hub_distinct_internal_paths": 112,
+  "articles_linked_only_from_hub": 0,
+  "hub_dependency_note": "ZERO articles depend on the hub alone. Every one of the 95 articles carries at least one inbound link from a page other than /articles.",
+  "avg_internal_links_per_page": 23.0,
+  "template_link_regression": {
+   "status": "UNRESOLVED",
+   "day": 3,
+   "detail": "Total distinct internal links held at 2,711 for a THIRD consecutive crawl against 2,802 before the 28 Sep regression - still 91 short. The featured block promotes three articles where it used to promote four."
+  }
+ },
+ "cannibalisation": {
+  "measured_at": "2026-10-01 ICT",
+  "method": "Counted /articles/<slug> URLs in the 119-URL sitemap and grouped by slug substring: melbourne; melbourne + render/visualisation/3d; builder; builder + melbourne; adelaide.",
+  "melbourne_articles_total": 18,
+  "melbourne_rendering_cluster_size": 12,
+  "builder_cluster_size": 14,
+  "builder_cluster_melbourne_subset": 4,
+  "adelaide_cluster_size": 7,
+  "verdict": "Every cluster is byte-identical to 30 Sep - no article was added or removed. The 12-article Melbourne rendering cluster is unchanged."
+ },
+ "social_snapshot": {
+  "measured_at": "2026-10-01 ICT",
+  "source": "https://tram-fdx.github.io/dxl-social-dashboard-site/",
+  "dashboard_last_refreshed": "2026-10-01",
+  "is_stale": false,
+  "stale_note": "Read from the DX Living social dashboard updated earlier in this same run on 1 Oct. Facebook, Instagram and LinkedIn were read live; YouTube could not be read (same Google sign-out) and is null there too.",
+  "window": "Meta 2 - 29 Sep 2026; LinkedIn 30 Aug - 28 Sep 2026; YouTube not read",
+  "total_followers": null,
+  "total_followers_note": "Facebook 116 + Instagram 49 + LinkedIn 102 = 267 on the three readable channels. The YouTube subscriber count could not be read, so the all-channel total is null today rather than restated at 271.",
+  "facebook": {
+   "followers": 116,
+   "views": 4427,
+   "views_change_pct": 5.6,
+   "visits": 421,
+   "interactions": 132,
+   "video_3s": 352,
+   "link_clicks": 4,
+   "net_new_followers": 1,
+   "watch_time": "2h 2m"
+  },
+  "linkedin": {
+   "followers": 102,
+   "impressions": 1219,
+   "impressions_change_pct": -25.7,
+   "reactions": 37,
+   "comments": 0,
+   "reposts": 0,
+   "page_views": 26,
+   "unique_visitors": 11
+  },
+  "instagram": {
+   "followers": 49,
+   "views": 2297,
+   "reach": 87,
+   "interactions": 23,
+   "posts_total": 134,
+   "following": 36
+  },
+  "youtube": {
+   "subscribers": null,
+   "views_28d": null,
+   "watch_time_hours": null,
+   "videos": null,
+   "unavailable_reason": "YouTube Studio was behind the same Google re-verification screen as GSC and GA4."
+  },
+  "movement_note": "A THIRD CONSECUTIVE SUPPLIER-CREDIT POST ran on both Meta channels on 30 Sep 16:12 - hand carving on the Project 251 teak detail. Facebook openings across the three: 28, then 41, now 89 views at 14 hours.",
+  "ga4_cross_check": "NOT AVAILABLE today - GA4 could not be read, so the usual Organic Social cross-check against the social dashboard could not be performed."
+ },
+ "notes": {
+  "en": [
+   "GOOGLE SIGNED THE ACCOUNT OUT. Search Console, GA4 and YouTube Studio all redirected to an accounts.google.com \"Verify it's you\" screen for tram@feeldx.com.au, so NONE of them was read today. Every GSC and GA4 field in this report is null; nothing has been carried forward from 30 Sep.",
+   "WHAT THIS REPORT STILL CONTAINS: Ahrefs (separate login, read live in full), one complete origin crawl of all 118 pages, the /articles overlay check, the homepage tag check, the internal-link graph, the cannibalisation clusters, and the social snapshot. Roughly half the usual report is intact.",
+   "REMEDY: sign Chrome on the Mac back in as tram@feeldx.com.au, then re-run this task for 1 Oct. The day JSON is immutable, so the correction must be a re-run of this date rather than a patch tomorrow.",
+   "AHREFS BACKLINKS WENT COMPLETELY FLAT for the first time in this series: referring domains held at exactly 882 and backlinks at exactly 918, with followed counts unchanged at 301 (34.1 pct) and 307 (33.4 pct). After weeks of steady spam accumulation, that is a meaningful break in the pattern.",
+   "AHREFS AI CITATIONS RECOVERED: AI responses 16 -> 18 and cited pages 10 -> 11, reversing yesterday's fall. ChatGPT went 6 -> 7 responses and Copilot 10 -> 11. AI Overviews, AI Mode, Gemini and Perplexity all remain at zero.",
+   "THE AHREFS SITE AUDIT SAMPLE NARROWED AGAIN, 15 -> 14 URLs crawled, still reporting health 100 percent. That figure describes 14 URLs, not the 118-page site; the origin crawl below is the authoritative view.",
+   "THE ORIGIN CRAWL IS CLEAN: 118 of 118 pages returned 200, all under one second for a seventh consecutive scan. Site mean TTFB improved 342 -> 331 ms and the median 276 -> 268 ms, while the ceiling held effectively flat at 650 -> 654 ms.",
+   "ON-PAGE AND SCHEMA ARE BYTE-IDENTICAL to 30 Sep: 118/118 for one h1, title, meta description, canonical and self-canonical; zero heading-level skips; 116 of 118 pages carry schema across 394 JSON-LD blocks; FAQPage frozen at 82 of 95 articles (86.3 pct) for a fifth scan.",
+   "THE /ARTICLES OVERLAY IS STILL GONE for a third consecutive day - zero elements at z-index >= 9999, zero fixed full-viewport covers, and 109 article links clickable in the hub DOM.",
+   "THE 28 SEP TEMPLATE LINK REGRESSION IS UNRESOLVED ON DAY THREE: total distinct internal links held at 2,711 against 2,802 before the regression, 91 links short. Zero orphans and zero hub-only articles for a twentieth day.",
+   "NO NEW ARTICLE SINCE 24 SEP - a seventh consecutive day. The sitemap holds at 119 URLs and 95 articles. Whether Google has re-read the sitemap since 29 Sep could not be checked today.",
+   "THE TEN LEGACY LONG-SLUG URLS all still return 200 with a self-referencing canonical, and robots.txt, llms.txt and llms-full.txt all returned 200.",
+   "SOCIAL: Facebook views 4,427 (up 5.6 pct), Instagram views 2,297 (up 108.1 pct) but reach frozen at 87 for a fourth read, LinkedIn impressions 1,219 (up from 1,193, the first rise in this run). A third consecutive supplier-credit post ran on both Meta channels on 30 Sep."
+  ],
+  "vi": [
+   "GOOGLE ĐÃ ĐĂNG XUẤT TÀI KHOẢN. Search Console, GA4 và YouTube Studio đều chuyển hướng sang màn hình \"Verify it's you\" trên accounts.google.com cho tram@feeldx.com.au, nên KHÔNG nguồn nào được đọc hôm nay. Mọi trường GSC và GA4 trong báo cáo này là null; không số nào được lấy lại từ ngày 30/9.",
+   "BÁO CÁO NÀY VẪN CÒN NHỮNG GÌ: Ahrefs (đăng nhập riêng, đọc trực tiếp đầy đủ), một lần crawl gốc trọn vẹn cả 118 trang, kiểm tra lớp phủ /articles, kiểm tra thẻ trang chủ, đồ thị liên kết nội bộ, các cụm trùng lặp từ khóa, và snapshot social. Khoảng một nửa báo cáo thường lệ vẫn nguyên vẹn.",
+   "CÁCH KHẮC PHỤC: đăng nhập lại Chrome trên máy Mac bằng tram@feeldx.com.au, rồi chạy lại tác vụ này cho ngày 1/10. File JSON của ngày là bất biến, nên việc sửa phải là chạy lại đúng ngày này chứ không phải vá vào ngày mai.",
+   "BACKLINK AHREFS ĐỨNG YÊN HOÀN TOÀN lần đầu tiên trong chuỗi này: referring domains giữ đúng 882 và backlinks giữ đúng 918, số followed không đổi ở 301 (34,1%) và 307 (33,4%). Sau nhiều tuần spam tích tụ đều đặn, đây là một điểm gãy đáng chú ý.",
+   "TRÍCH DẪN AI TRÊN AHREFS HỒI PHỤC: AI responses 16 -> 18 và số trang được trích dẫn 10 -> 11, đảo chiều mức giảm hôm qua. ChatGPT tăng 6 -> 7 phản hồi và Copilot 10 -> 11. AI Overviews, AI Mode, Gemini và Perplexity đều vẫn bằng 0.",
+   "MẪU SITE AUDIT CỦA AHREFS LẠI THU HẸP, 15 -> 14 URL được crawl, vẫn báo health 100%. Con số đó mô tả 14 URL chứ không phải site 118 trang; lần crawl gốc bên dưới mới là góc nhìn chuẩn.",
+   "LẦN CRAWL GỐC SẠCH SẼ: 118/118 trang trả 200, tất cả dưới một giây ở kỳ thứ bảy liên tiếp. TTFB trung bình cả site cải thiện 342 -> 331 ms và trung vị 276 -> 268 ms, còn trần gần như đứng yên 650 -> 654 ms.",
+   "ON-PAGE VÀ SCHEMA TRÙNG KHỚP TUYỆT ĐỐI với ngày 30/9: 118/118 có đúng một h1, title, meta description, canonical và canonical tự trỏ; 0 bước nhảy cấp tiêu đề; 116/118 trang có schema với tổng 394 khối JSON-LD; FAQPage đứng yên ở 82/95 bài (86,3%) kỳ thứ năm.",
+   "LỚP PHỦ /ARTICLES VẪN ĐÃ ĐƯỢC GỠ sang ngày thứ ba liên tiếp — 0 phần tử ở z-index >= 9999, 0 phần tử fixed che toàn khung nhìn, và 109 liên kết bài vẫn bấm được trong DOM của hub.",
+   "LỖI SỤT LIÊN KẾT TEMPLATE NGÀY 28/9 CHƯA ĐƯỢC SỬA SANG NGÀY THỨ BA: tổng liên kết nội bộ riêng biệt giữ ở 2.711 so với 2.802 trước khi sụt, thiếu 91 liên kết. Không có trang mồ côi và không bài nào chỉ phụ thuộc hub, sang ngày thứ hai mươi.",
+   "CHƯA CÓ BÀI MỚI TỪ 24/9 — ngày thứ bảy liên tiếp. Sitemap giữ 119 URL và 95 bài. Hôm nay không kiểm tra được Google đã đọc lại sitemap sau ngày 29/9 hay chưa.",
+   "MƯỜI URL LEGACY SLUG DÀI đều vẫn trả 200 với canonical tự trỏ, và robots.txt, llms.txt, llms-full.txt đều trả 200.",
+   "SOCIAL: lượt xem Facebook 4.427 (tăng 5,6%), lượt xem Instagram 2.297 (tăng 108,1%) nhưng số người tiếp cận đứng yên ở 87 lần đọc thứ tư, impressions LinkedIn 1.219 (tăng từ 1.193, lần tăng đầu tiên trong đợt này). Bài ghi công nhà cung cấp thứ ba liên tiếp đã lên cả hai kênh Meta ngày 30/9."
+  ]
+ }
+}
