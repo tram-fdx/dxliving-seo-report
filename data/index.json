@@ -1,6 +1,6 @@
 {
   "description": "Lịch sử snapshot dữ liệu SEO theo ngày / Daily SEO data snapshot history. Mỗi ngày một file data/YYYY-MM-DD.json + bản HTML đóng băng archive/YYYY-MM-DD.html.",
-  "latest": "2026-10-01",
+  "latest": "2026-10-02",
   "site": "dxliving.com",
   "snapshots": [
     {
@@ -352,6 +352,13 @@
       "report": "archive/2026-10-01.html",
       "label_vi": "1/10/2026 — GSC & GA4 không đọc được (Google đăng xuất); Ahrefs + crawl gốc đọc trực tiếp",
       "label_en": "1 Oct 2026 — GSC & GA4 not readable (Google sign-out); Ahrefs + origin crawl read live"
+    },
+    {
+      "date": "2026-10-02",
+      "data": "data/2026-10-02.json",
+      "report": "archive/2026-10-02.html",
+      "label_vi": "2/10/2026 — GSC 01/09→28/09 · GA4 04/09→01/10 (Google đăng nhập lại, bước hai ngày)",
+      "label_en": "2 Oct 2026 — GSC 1 Sep→28 Sep · GA4 4 Sep→1 Oct (Google signed back in, two-day step)"
     }
   ]
 }
