@@ -1,6 +1,6 @@
 {
   "description": "Lịch sử snapshot dữ liệu SEO theo ngày / Daily SEO data snapshot history. Mỗi ngày một file data/YYYY-MM-DD.json + bản HTML đóng băng archive/YYYY-MM-DD.html.",
-  "latest": "2026-10-02",
+  "latest": "2026-10-03",
   "site": "dxliving.com",
   "snapshots": [
     {
@@ -359,6 +359,13 @@
       "report": "archive/2026-10-02.html",
       "label_vi": "2/10/2026 — GSC 01/09→28/09 · GA4 04/09→01/10 (Google đăng nhập lại, bước hai ngày)",
       "label_en": "2 Oct 2026 — GSC 1 Sep→28 Sep · GA4 4 Sep→1 Oct (Google signed back in, two-day step)"
+    },
+    {
+      "date": "2026-10-03",
+      "data": "data/2026-10-03.json",
+      "report": "archive/2026-10-03.html",
+      "label_vi": "3/10/2026 — GSC 02/09→29/09 · GA4 05/09→02/10 (mọi nguồn đọc được, bước một ngày; FAQPage 95/95, TTFB nhanh hơn)",
+      "label_en": "3 Oct 2026 — GSC 2 Sep→29 Sep · GA4 5 Sep→2 Oct (every source readable, one-day step; FAQPage 95/95, faster TTFB)"
     }
   ]
 }
