@@ -1,7 +1,24 @@
 {
   "kind": "weekly",
-  "latest": "2026-09-25",
+  "latest": "2026-10-02",
   "weeks": [
+    {
+      "id": "2026-10-02",
+      "vi": "26/09–02/10/2026",
+      "en": "26 Sep – 2 Oct 2026",
+      "start": "2026-09-26",
+      "end": "2026-10-02",
+      "compare_start": "2026-09-19",
+      "compare_end": "2026-09-25",
+      "scanned_on": "2026-10-05",
+      "sources": [
+        "Google Search Console (Chrome)",
+        "Google Analytics 4 (Chrome)",
+        "Ahrefs snapshot (dxliving-seo-report)"
+      ],
+      "notes_vi": "Chay theo lich 05/10. GSC clicks 7 xuong 4, impressions 177 xuong 144, 0 click tu 29/09 den 02/10; vi tri TB 12,8 len 8,5 do 22 truy van sau (44 impressions, vi tri 32,3) roi khoi mau, khong phai thu hang tang. GA4 154 session; google / organic 13 len 28 nguoc chieu GSC; 4 key event, 2 tu Organic Search (ten su kien chua doc lai duoc). Trich dan AI 12 len 18 nho Copilot 5 len 11. Ahrefs va trich dan AI lay tu snapshot 02/10.",
+      "notes_en": "Scheduled run on 5 Oct. GSC clicks 7 to 4, impressions 177 to 144, no clicks from 29 Sep to 2 Oct; average position 12.8 to 8.5 because 22 deep queries (44 impressions at 32.3) left the sample, not because rankings improved. GA4 154 sessions; google / organic 13 to 28, opposite to GSC; 4 key events, 2 from Organic Search (event name not re-read). AI citations 12 to 18 on Copilot 5 to 11. Ahrefs and AI citations come from the 2 Oct snapshot."
+    },
     {
       "id": "2026-09-25",
       "vi": "19–25/09/2026",
