@@ -1,7 +1,24 @@
 {
   "kind": "weekly",
-  "latest": "2026-10-02",
+  "latest": "2026-10-09",
   "weeks": [
+    {
+      "id": "2026-10-09",
+      "vi": "03–09/10/2026",
+      "en": "3 – 9 Oct 2026",
+      "start": "2026-10-03",
+      "end": "2026-10-09",
+      "compare_start": "2026-09-26",
+      "compare_end": "2026-10-02",
+      "scanned_on": "2026-10-12",
+      "sources": [
+        "Google Search Console (Chrome)",
+        "Google Analytics 4 (Chrome)",
+        "Ahrefs snapshot (dxliving-seo-report)"
+      ],
+      "notes_vi": "Chạy theo lịch 12/10. GSC clicks 4 lên 8, impressions 144 lên 168, nhưng 7/8 click là truy vấn thương hiệu (dxliving 4, dx living 3); vị trí TB phẳng 8,5. Vị trí 28 ngày 30,8 xuống 12,0 do impressions sâu rơi khỏi cửa sổ, không phải thứ hạng tăng. GA4 160 session; key events 4 xuống 0; 726 lượt xem bị kéo bởi vài người dùng (/about-new 222 lượt từ 3 người). Trích dẫn AI 18 xuống 12 (ChatGPT 7 xuống 4, Copilot 11 xuống 8); GA4 AI 5 session. Ahrefs và trích dẫn AI lấy từ snapshot 09/10.",
+      "notes_en": "Scheduled run on 12 Oct. GSC clicks 4 to 8 and impressions 144 to 168, but 7 of 8 clicks were brand queries (dxliving 4, dx living 3); average position flat at 8.5. 28-day position 30.8 to 12.0 because deep-position impressions rolled out of the window, not because rankings improved. GA4 160 sessions; key events 4 to 0; 726 page views inflated by a few users (/about-new 222 views from 3 users). AI citations 18 to 12 (ChatGPT 7 to 4, Copilot 11 to 8); GA4 AI 5 sessions. Ahrefs and AI citations come from the 9 Oct snapshot."
+    },
     {
       "id": "2026-10-02",
       "vi": "26/09–02/10/2026",
