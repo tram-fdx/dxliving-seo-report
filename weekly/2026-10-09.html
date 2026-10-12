@@ -669,7 +669,7 @@ function buildTable(el,cols,rows,sortIdx){
     const sorted=[...rows].sort((a,b)=>{
       const x=a.sort[idx],y=b.sort[idx];
       if(x==null)return 1; if(y==null)return -1;
-      return x<y?dir:x>y?-dir:0;
+      return x<y?-dir:x>y?dir:0;
     });
     el.innerHTML='<thead><tr>'+cols.map((c,i)=>
       `<th class="${c.num?'num':''}" data-i="${i}">${esc(c.label)}${i===idx?(dir===-1?' ▼':' ▲'):''}</th>`).join('')+'</tr></thead><tbody>'+
