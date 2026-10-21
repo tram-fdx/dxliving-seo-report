@@ -1,7 +1,24 @@
 {
   "kind": "weekly",
-  "latest": "2026-10-09",
+  "latest": "2026-10-16",
   "weeks": [
+    {
+      "id": "2026-10-16",
+      "vi": "10–16/10/2026",
+      "en": "10 – 16 Oct 2026",
+      "start": "2026-10-10",
+      "end": "2026-10-16",
+      "compare_start": "2026-10-03",
+      "compare_end": "2026-10-09",
+      "scanned_on": "2026-10-21",
+      "sources": [
+        "Google Search Console (Chrome)",
+        "Google Analytics 4 (Chrome)",
+        "Ahrefs web UI (read 21 Oct)"
+      ],
+      "notes_vi": "Chạy 21/10. GSC clicks giữ 8 → 8 (6/8 là thương hiệu: dx living 4, dxliving 2); impressions 168 lên 396 nhưng vị trí TB 8,5 xuống 26,7 vì phần tăng nằm ở vị trí sâu (3d-rendering-services-melbourne 144 impressions ở vị trí 46,2). 28 ngày: 27 click, 885 impressions. GA4 204 session (160), key events 0 lên 2 (cả hai từ Direct, chưa xác minh); AI session 5 xuống 2. Ahrefs đọc trực tiếp 21/10 (không có snapshot 16/10): trích dẫn AI 12 lên 20 (ChatGPT 4 lên 8, Copilot 8 lên 10, AI Overviews và AI Mode mỗi nền tảng 1), backlinks 911, referring domains 875.",
+      "notes_en": "Run on 21 Oct. GSC clicks held 8 to 8 (6 of 8 brand: dx living 4, dxliving 2); impressions 168 to 396 but average position fell 8.5 to 26.7 because the gain sits at deep positions (3d-rendering-services-melbourne 144 impressions at position 46.2). 28 days: 27 clicks, 885 impressions. GA4 204 sessions (160), key events 0 to 2 (both Direct, not verified); AI sessions 5 to 2. Ahrefs read live on 21 Oct (no 16 Oct snapshot): AI citations 12 to 20 (ChatGPT 4 to 8, Copilot 8 to 10, AI Overviews and AI Mode 1 each), backlinks 911, referring domains 875."
+    },
     {
       "id": "2026-10-09",
       "vi": "03–09/10/2026",
