@@ -1,6 +1,6 @@
 {
   "description": "Lịch sử snapshot dữ liệu SEO theo ngày / Daily SEO data snapshot history. Mỗi ngày một file data/YYYY-MM-DD.json + bản HTML đóng băng archive/YYYY-MM-DD.html.",
-  "latest": "2026-10-26",
+  "latest": "2026-10-27",
   "site": "dxliving.com",
   "snapshots": [
     {
@@ -478,6 +478,13 @@
       "report": "archive/2026-10-26.html",
       "label_vi": "GSC 24 click · 1.411 impression · GA4 699 phiên · AI 26 phản hồi",
       "label_en": "GSC 24 clicks · 1,411 impressions · GA4 699 sessions · AI 26 responses"
+    },
+    {
+      "date": "2026-10-27",
+      "data": "data/2026-10-27.json",
+      "report": "archive/2026-10-27.html",
+      "label_vi": "GSC 23 click · 1.424 impression · GA4 689 phiên · AI 29 phản hồi · 2 bài mới",
+      "label_en": "GSC 23 clicks · 1,424 impressions · GA4 689 sessions · AI 29 responses · 2 new articles"
     }
   ]
 }
