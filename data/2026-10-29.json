@@ -1,0 +1,752 @@
+{
+  "date": "2026-10-29",
+  "site": "dxliving.com",
+  "source_commit": "",
+  "provenance": "Read on 2026-10-29 (ICT) from Chrome on macOS. GSC (sc-domain:dxliving.com Performance: DAYS and QUERIES tables, CTR and position tiles on), GA4 (property DX LIVING, window 1-28 Oct, Reports snapshot, Traffic acquisition and Engagement overview, plus 22-28 Oct and 15-21 Oct comparison windows) and the Ahrefs web UI (Site Explorer overview, AI responses, Traffic analytics, Site Audit project list, Brand Radar). No OpenSEO, no Supermetrics, no Ahrefs API. After these reads Google asked the account to verify its sign-in again, so GA4 per-channel detail (channel quality, source/medium, first-user channels, key events by channel, AI Assistant engagement) could not be re-read and is null.",
+  "scan_note": "ONE-DAY STEP from the 28 Oct read: GSC slid from 2026-09-28 -> 2026-10-25 to 2026-09-29 -> 2026-10-26 and GA4 from 2026-09-30 -> 2026-10-27 to 2026-10-01 -> 2026-10-28. Anything not readable today is null and no figure is carried forward as today's.",
+  "windows": {
+    "gsc": "2026-09-29 → 2026-10-26",
+    "ga4": "2026-10-01 → 2026-10-28"
+  },
+  "gsc_28d": {
+    "clicks": 21,
+    "impressions": 1580,
+    "ctr_pct": 1.3,
+    "avg_position": 21.1,
+    "queries_with_impressions": 139,
+    "impressions_method": "Summed the 28 rows of the DAYS tab (2026-09-29 to 2026-10-26): 21 clicks and 1,580 impressions. CTR 1.3 pct and average position 21.1 are the tile values.",
+    "queries_table_sums": {
+      "rows": 139,
+      "clicks": 18,
+      "impressions": 1172,
+      "note": "The 139-query table sums to 18 clicks and 1,172 impressions against 21 and 1,580 on the totals; the remaining 3 clicks and 408 impressions sit in queries Google withholds for privacy."
+    },
+    "brand_clicks": 18,
+    "brand_clicks_share_pct": 85.7,
+    "brand_clicks_note": "18 of 21 clicks (85.7 pct) come from navigational brand queries: dx living 9, dxliving 8, model dx 1. The other 3 clicks are anonymised and cannot be classified.",
+    "clicked_queries": [
+      {
+        "q": "dx living",
+        "clicks": 9,
+        "impressions": 64,
+        "position": 2.8
+      },
+      {
+        "q": "dxliving",
+        "clicks": 8,
+        "impressions": 10,
+        "position": 1.4
+      },
+      {
+        "q": "model dx",
+        "clicks": 1,
+        "impressions": 5,
+        "position": 5.0
+      }
+    ],
+    "daily": [
+      {
+        "d": "2026-09-29",
+        "clicks": 0,
+        "impressions": 23
+      },
+      {
+        "d": "2026-09-30",
+        "clicks": 0,
+        "impressions": 11
+      },
+      {
+        "d": "2026-10-01",
+        "clicks": 0,
+        "impressions": 20
+      },
+      {
+        "d": "2026-10-02",
+        "clicks": 0,
+        "impressions": 17
+      },
+      {
+        "d": "2026-10-03",
+        "clicks": 0,
+        "impressions": 9
+      },
+      {
+        "d": "2026-10-04",
+        "clicks": 1,
+        "impressions": 14
+      },
+      {
+        "d": "2026-10-05",
+        "clicks": 1,
+        "impressions": 33
+      },
+      {
+        "d": "2026-10-06",
+        "clicks": 1,
+        "impressions": 16
+      },
+      {
+        "d": "2026-10-07",
+        "clicks": 1,
+        "impressions": 30
+      },
+      {
+        "d": "2026-10-08",
+        "clicks": 2,
+        "impressions": 24
+      },
+      {
+        "d": "2026-10-09",
+        "clicks": 2,
+        "impressions": 42
+      },
+      {
+        "d": "2026-10-10",
+        "clicks": 2,
+        "impressions": 11
+      },
+      {
+        "d": "2026-10-11",
+        "clicks": 0,
+        "impressions": 17
+      },
+      {
+        "d": "2026-10-12",
+        "clicks": 2,
+        "impressions": 74
+      },
+      {
+        "d": "2026-10-13",
+        "clicks": 2,
+        "impressions": 27
+      },
+      {
+        "d": "2026-10-14",
+        "clicks": 1,
+        "impressions": 147
+      },
+      {
+        "d": "2026-10-15",
+        "clicks": 0,
+        "impressions": 22
+      },
+      {
+        "d": "2026-10-16",
+        "clicks": 1,
+        "impressions": 98
+      },
+      {
+        "d": "2026-10-17",
+        "clicks": 0,
+        "impressions": 84
+      },
+      {
+        "d": "2026-10-18",
+        "clicks": 2,
+        "impressions": 70
+      },
+      {
+        "d": "2026-10-19",
+        "clicks": 1,
+        "impressions": 178
+      },
+      {
+        "d": "2026-10-20",
+        "clicks": 0,
+        "impressions": 86
+      },
+      {
+        "d": "2026-10-21",
+        "clicks": 0,
+        "impressions": 109
+      },
+      {
+        "d": "2026-10-22",
+        "clicks": 0,
+        "impressions": 74
+      },
+      {
+        "d": "2026-10-23",
+        "clicks": 1,
+        "impressions": 102
+      },
+      {
+        "d": "2026-10-24",
+        "clicks": 0,
+        "impressions": 37
+      },
+      {
+        "d": "2026-10-25",
+        "clicks": 1,
+        "impressions": 103
+      },
+      {
+        "d": "2026-10-26",
+        "clicks": 0,
+        "impressions": 102
+      }
+    ],
+    "daily_note": "The 28 GSC day rows behind this window (2026-09-29 to 2026-10-26), read on 29 Oct; the click rows sum to 21 and the impression rows to 1,580.",
+    "clicked_queries_note": "Clicks, impressions and position of the three brand queries were read today.",
+    "delta_vs_2026_10_28": {
+      "clicks": "22 -> 21 (down 1)",
+      "impressions": "1,501 -> 1,580 (up 79)",
+      "ctr_pct": "1.5 -> 1.3",
+      "avg_position": "20.9 -> 21.1",
+      "queries": "138 -> 139 (up 1)",
+      "note": "One-day window slide (28 Sep - 25 Oct became 29 Sep - 26 Oct). 26 Oct (0 clicks, 102 impressions) came in; 28 Sep (1 click, 23 impressions) left."
+    }
+  },
+  "gsc_rank_movement": {
+    "note": "Position and impressions on the tracked queries, 29 Oct (GSC window 29 Sep - 26 Oct). Every row below has zero clicks. Queries not in the readable part of the table are null.",
+    "warning": "Every commercial non-brand query in the table remains at ZERO clicks, and no non-brand click is visible in the query table (the 3 anonymised clicks cannot be classified).",
+    "3d house visualisation adelaide": "9.2 (impressions 184), zero clicks",
+    "3d rendering company adelaide": "14.5 (impressions 83), zero clicks",
+    "3d visualisation adelaide": "17.1 (impressions 81), zero clicks",
+    "3d architectural rendering adelaide": "18.0 (impressions 78), zero clicks",
+    "3d architectural visualisation adelaide": "21.3 (impressions 39), zero clicks",
+    "3d rendering melbourne": "33.5 (impressions 35), zero clicks",
+    "architectural rendering melbourne": "55.0 (impressions 24), zero clicks",
+    "3d renders for property developers sydney": "10.6 (impressions 23), zero clicks",
+    "3d architectural rendering melbourne": "68.6 (impressions 23), zero clicks",
+    "3d rendering services melbourne": "24.3 (impressions 16), zero clicks",
+    "dx model": "6.7 (impressions 15), zero clicks",
+    "3d renders for developers sydney": "9.4 (impressions 13), zero clicks",
+    "3d renders melbourne": "49.2 (impressions 9), zero clicks",
+    "architectural rendering adelaide": "10.0 (impressions 7), zero clicks",
+    "adelaide property developers": "11.7 (impressions 7), zero clicks",
+    "3d renders for property developers melbourne": "25.1 (impressions 7), zero clicks",
+    "developers adelaide": "28.4 (impressions 7), zero clicks",
+    "knock down rebuild melbourne": "36.7 (impressions 7), zero clicks",
+    "3d renders for real estate melbourne": "24.5 (impressions 6), zero clicks",
+    "3d renders for builders melbourne": null,
+    "3d renders for developers melbourne": null,
+    "3d interior renders melbourne": null,
+    "custom living space melbourne": null,
+    "interior finishing": null,
+    "page_one_composition": "36 of the 139 queries sit at position 10 or better (table filter count), 6 of them at 3 or better (unchanged). The brand queries dx living (2.8), dxliving (1.4) and model dx (5.0) are among them; 3d house visualisation adelaide (9.2) and 3d renders for developers sydney (9.4) are the non-brand ones read today."
+  },
+  "ga4_28d": {
+    "sessions": 683,
+    "engaged_sessions": 267,
+    "engagement_rate_pct": 39.09,
+    "key_events": 4,
+    "session_key_event_rate_pct": 0.59,
+    "users": 434,
+    "new_users": 410,
+    "returning_users": 34,
+    "avg_engagement_time": "3m 02s",
+    "avg_engagement_time_per_active_user": null,
+    "avg_engagement_time_per_active_user_note": "Per-active-user time was not re-read after the Google sign-out prompt (null). 3m 02s is the per-session average from the Reports snapshot. Key-event rate 0.59 pct is computed here as 4 / 683.",
+    "events_per_session": 6.35,
+    "total_events": 4337,
+    "ai_assistant_channel": {
+      "sessions": 14,
+      "share_of_sessions_pct": 2.0,
+      "engaged_sessions": null,
+      "engagement_rate_pct": null,
+      "avg_time": null,
+      "events_per_session": null,
+      "events": null,
+      "key_events": null,
+      "referrer": null,
+      "note": "AI Assistant channel 15 -> 14 sessions vs 28 Oct. Engagement, time, events and referrer were not re-read today (null).",
+      "key_events_note": null,
+      "referrer_note": "Source/medium was not re-read today (null); 11 chatgpt.com sessions were read on 28 Oct."
+    },
+    "channel_breakdown": {
+      "direct": 395,
+      "organic_social": 176,
+      "organic_search": 93,
+      "ai_assistant": 14,
+      "unassigned": 5,
+      "referral": 3
+    },
+    "channel_breakdown_note": "Direct 395, Organic Social 176, Organic Search 93, AI Assistant 14, Unassigned 5, Referral 3. The six rows add to 686 against 683 on the GA4 total row.",
+    "source_medium_top": null,
+    "source_medium_note": "Source/medium was not re-read today (null).",
+    "channel_quality": {
+      "note": "Per-channel quality could not be re-read today after the Google sign-out prompt (null).",
+      "direct": null,
+      "organic_social": null,
+      "organic_search": null,
+      "ai_assistant": null,
+      "referral": null
+    },
+    "first_user_channel": {
+      "direct": null,
+      "organic_social": null,
+      "organic_search": null,
+      "ai_assistant": null,
+      "referral": null,
+      "unassigned": null,
+      "note": "First-touch channels were not re-read today (null)."
+    },
+    "tracking_health": {
+      "verdict": "GA4 IS COLLECTING - 184 sessions and 1,021 events in the most recent 7 days (22-28 Oct) against 170 sessions and 796 events the 7 days before (15-21 Oct).",
+      "concern": "Sessions rose 170 -> 184 and events rose 796 -> 1,021, but the engagement rate fell 35.29% -> 33.7% while average engagement time rose 2m 26s -> 3m 05s. Key events: 2 in the latest week against 0.",
+      "last_7_days_2026_10_22_to_10_28": {
+        "sessions": 184,
+        "engaged_sessions": 62,
+        "engagement_rate_pct": 33.7,
+        "avg_time": "3m 05s",
+        "events": 1021,
+        "key_events": 2
+      },
+      "prior_7_days_2026_10_15_to_10_21": {
+        "sessions": 170,
+        "engaged_sessions": 60,
+        "engagement_rate_pct": 35.29,
+        "avg_time": "2m 26s",
+        "events": 796,
+        "key_events": 0
+      }
+    },
+    "undercount_note": "The 29 Jul - 12 Aug data loss does not overlap this window. The newest day (28 Oct, read on 29 Oct) may still be processing in GA4.",
+    "ai_assistant": {
+      "sessions": 14,
+      "share_of_sessions_pct": 2.0,
+      "engaged_sessions": null,
+      "engagement_rate_pct": null,
+      "avg_time": null,
+      "events_per_session": null,
+      "events": null,
+      "key_events": null,
+      "referrer": null,
+      "note": "AI Assistant channel 15 -> 14 sessions vs 28 Oct. Engagement, time, events and referrer were not re-read today (null).",
+      "key_events_note": null,
+      "referrer_note": "Source/medium was not re-read today (null); 11 chatgpt.com sessions were read on 28 Oct."
+    },
+    "delta_vs_2026_10_28": {
+      "sessions": "698 -> 683 (down 15)",
+      "total_events": "4,438 -> 4,337 (down 101)",
+      "users": "439 -> 434 (down 5)",
+      "key_events": "7 -> 4 (down 3)",
+      "engagement_rate_pct": "39.4 -> 39.09 - engaged sessions 275 -> 267",
+      "channel_note": "Direct 398 -> 395, Organic Social 179 -> 176, Organic Search 100 -> 93, AI Assistant 15 -> 14, Unassigned 8 -> 5, Referral 3 -> 3."
+    }
+  },
+  "ahrefs": {
+    "read_at": "2026-10-29 ICT",
+    "workspace": "Nguyen Thi Thanh Tram",
+    "country_filter": "All countries, matching every prior day in this series.",
+    "domain_rating": 0,
+    "url_rating": 0,
+    "ahrefs_rank": 110310194,
+    "referring_domains": 870,
+    "referring_domains_all_time": null,
+    "referring_domains_followed": null,
+    "referring_domains_followed_pct": null,
+    "backlinks": 906,
+    "backlinks_all_time": null,
+    "backlinks_all_time_display": "1.1K",
+    "backlinks_all_time_note": "Ahrefs overview shows All time 1.1K for both backlinks and referring domains (rounded display only); an exact all-time count was not read (null).",
+    "backlinks_followed": null,
+    "backlinks_followed_pct": null,
+    "followed_note": "The followed / nofollow split was not re-read today (null); on 28 Oct it was 301 followed / 569 not followed referring domains.",
+    "authority_direction_note": "Backlink counts unchanged: 870 referring domains / 906 backlinks (same as 28 Oct). Ahrefs Rank 110,310,194 (from 226,300,999 on 28 Oct; a smaller number is a better rank - the size of the move is as Ahrefs displayed it).",
+    "health_score": null,
+    "site_audit_crawl": "Ahrefs Site Audit project list (Dxliving): latest crawl 'Today 04:02 AM' shows status Failed, so Health, URLs and error counts are null; next crawl 30 Oct 4-5 AM.",
+    "site_audit_caveat": "No Ahrefs Site Audit figure is carried forward: the failed crawl published none.",
+    "crawled_pages_site_explorer": null,
+    "crawled_pages_404": null,
+    "crawled_pages_http_breakdown": null,
+    "crawled_pages_http_breakdown_note": null,
+    "crawled_pages_404_note": "Site Explorer Crawled pages and the 404 count were not re-read on 29 Oct (null).",
+    "organic_keywords": 0,
+    "organic_traffic": 0,
+    "top_3_keywords": 0,
+    "ai_citations": 29,
+    "ai_by_platform": {
+      "ai_overviews": 3,
+      "ai_mode": 1,
+      "chatgpt": 11,
+      "gemini": 1,
+      "perplexity": 0,
+      "copilot": 13,
+      "grok": null
+    },
+    "cited_pages": 10,
+    "cited_pages_by_platform": {
+      "ai_overviews": 1,
+      "ai_mode": 1,
+      "chatgpt": 6,
+      "gemini": 1,
+      "perplexity": 0,
+      "copilot": 8,
+      "grok": null
+    },
+    "cited_pages_note": "AI RESPONSES hold at 29 across 10 pages (AI Overviews 3, AI Mode 1, ChatGPT 11, Gemini 1, Perplexity 0, Copilot 13), unchanged from 28 Oct.",
+    "web_analytics_visits": 139,
+    "site_audit_issues": {
+      "errors": null,
+      "warnings": null,
+      "notices": null,
+      "total": null,
+      "issue_types": null
+    },
+    "referring_domains_all_time_display": "1.1K",
+    "site_explorer_traffic_estimate_30d": null,
+    "traffic_analytics_estimate_visits": 139,
+    "traffic_analytics_estimate_note": "Ahrefs Traffic analytics (beta) read today: 139 visits, 88 visitors, 99 page views. A modelled estimate only, not comparable with GA4 sessions."
+  },
+  "ai_visibility": {
+    "score": 34,
+    "score_max": 100,
+    "framework": "searchfit-seo:ai-visibility",
+    "platforms_present": 5,
+    "platforms_total": 6,
+    "cited_pages": 10,
+    "dimensions_measured": {
+      "presence": 5,
+      "citation_surface": 1,
+      "technical_readiness": 10,
+      "third_party_corpus": 0,
+      "measurement": 1
+    },
+    "dimensions_not_measured": [
+      "accuracy",
+      "sentiment",
+      "position"
+    ],
+    "not_measured_reason": "Requires Brand Radar prompt tracking. The 'Dxliving' report EXISTS but its tiles show a dash again today, so the tracked-prompt count was not read (null; 0 on 20 Oct) and accuracy, sentiment and position cannot be assessed.",
+    "score_method": "Average of the 5 measurable dimensions x 10 = (5+1+10+0+1)/5 x 10 = 34.",
+    "score_change_explanation": "The score is UNCHANGED at 34. AI responses hold at 29 on the same 10 cited pages; 10 of 98 articles (10.2 pct) still rounds to 1/10.",
+    "score_caveat": "The score is capped by two dimensions no on-site work will move: third_party_corpus at 0 and measurement at 1. Technical readiness is held at 10/10; the only on-site lever left is citation surface - currently 10 cited pages of 98 articles.",
+    "citation_surface_note": "10 cited pages against 98 live articles = 10.2 percent, which rounds to 1/10, unchanged.",
+    "third_party_corpus_note": "Held at 0 and NOT re-checked today (29 Oct): no third-party SERP cross-check was run (last checked 11 Sep).",
+    "technical_readiness_method": "Held at 10/10. Re-measured on 29 Oct from the origin crawl: robots.txt 200 (430 bytes, unchanged; per-bot rules not re-read), sitemap 122 declared URLs / 98 articles, llms.txt 12,678 bytes and llms-full.txt 21,940 bytes both 200, FAQPage 98/98, /articles without an overlay. Homepage Organization + LocalBusiness types not re-measured (last confirmed 14 Oct).",
+    "brand_radar": {
+      "report_exists": null,
+      "prompts_tracked": null,
+      "ai_share_of_voice": null,
+      "reread_today": true,
+      "workspace": "Nguyen Thi Thanh Tram's workspace",
+      "note": "Brand Radar re-read on 29 Oct: the plan shows no tracked prompts, so prompt count and share of voice are null (0 on 20 Oct)."
+    },
+    "readiness": {
+      "measured_at": "2026-10-29 ICT",
+      "robots_txt_blocks_ai_bots": false,
+      "sitemap_complete": true,
+      "sitemap_url_count": 122,
+      "sitemap_article_count": 98,
+      "llms_txt": true,
+      "faq_schema_on_money_pages": true,
+      "organization_schema": true,
+      "localbusiness_schema_homepage": true,
+      "localbusiness_schema_sitewide": false,
+      "articles_render": true,
+      "signals_passing": null,
+      "signals_total": 7,
+      "reread_today": true,
+      "evidence": "Re-measured from the dxliving.com origin with cache no-store on 29 Oct: robots.txt 200 (430 bytes, per-bot rules not re-read), sitemap 22,978 bytes / 122 URLs, llms.txt 12,678 bytes, llms-full.txt 21,940 bytes, 121 of 121 pages 200, FAQPage on 98 of 98 articles.",
+      "sitemap_note": "Sitemap unchanged at 122 declared URLs / 98 articles (22,978 bytes).",
+      "articles_render_caveat": "RESOLVED. Re-checked on /articles: zero site overlays, the centre element is an ordinary SECTION.",
+      "jsonld_note": "119 of 121 crawled pages carry JSON-LD (413 blocks, unchanged). The two without are /login and /start-interactive.",
+      "signals_re_measured_today": 5,
+      "localbusiness_schema_homepage_note": "Not re-measured on 27 Oct (the crawl counts blocks only); last confirmed 14 Oct."
+    }
+  },
+  "technical_health": {
+    "measured_at": "2026-10-29 ICT",
+    "source": "ONE full sequential origin crawl of 120 sitemap pages plus /login through Chrome with cache no-store, shared with the website-audit report of the same day.",
+    "gsc_page_indexing": {
+      "indexed": 82,
+      "not_indexed": 152,
+      "build_dated": "2026-10-23",
+      "reasons": {
+        "Crawled - currently not indexed": 63,
+        "Excluded by noindex tag": 34,
+        "Blocked by robots.txt": 28,
+        "Not found (404)": 11,
+        "Page with redirect": 6,
+        "Blocked due to unauthorized request (401)": 5,
+        "Redirect error": 1,
+        "Duplicate, Google chose different canonical than user": 3,
+        "Discovered - currently not indexed": 1
+      },
+      "reasons_note": "The nine reasons sum to 152 (63+34+28+11+6+5+1+3+1), matching the tile exactly.",
+      "staleness_flag": "The Page-indexing report is unchanged: 'Last update 10/23/26', so these counts are six days old.",
+      "delta_note": "vs 28 Oct: unchanged (indexed 82, not indexed 152, same nine reasons); the report has not refreshed since 23 Oct."
+    },
+    "gsc_sitemap": {
+      "submitted": "2026-08-24",
+      "last_read_by_google": "2026-10-28",
+      "status": "Success",
+      "discovered_pages": 122,
+      "note": "Google last read sitemap.xml on 28 Oct (not re-read since); status Success, 122 discovered pages, matching the live sitemap of 122 URLs."
+    },
+    "gsc_core_web_vitals": {
+      "mobile": null,
+      "desktop": null,
+      "last_updated": "10/26/26",
+      "note": "Mobile and desktop both read 'Not enough usage data' (null, not 0). Last updated 10/26/26."
+    },
+    "gsc_https": {
+      "non_https_urls": 0,
+      "https_urls": 18,
+      "last_update": "10/28/26",
+      "verdict": "No critical issues",
+      "last_update_note": "GSC HTTPS report read on 29 Oct: 0 non-HTTPS URLs, 18 HTTPS URLs (19 on 28 Oct), no issues (report update 10/28/26)."
+    },
+    "response_times": {
+      "measurement_note": "TTFB measured with performance.now() around a sequential same-origin fetch of each URL with cache no-store, from the full 121-page crawl run today.",
+      "articles_sampled": 98,
+      "articles_avg_ms": 312.4,
+      "articles_max_ms": null,
+      "articles_min_ms": null,
+      "core_pages_sampled": 17,
+      "core_pages_avg_ms": 367.9,
+      "project_pages_sampled": 6,
+      "project_pages_avg_ms": 271.5,
+      "slowest_page": {
+        "url": "/articles",
+        "ms": 554
+      },
+      "homepage_ms": 371,
+      "articles_hub_ms": 554,
+      "homepage_rereads_ms": [
+        824,
+        561,
+        362,
+        644
+      ],
+      "studio_rereads_ms": [
+        647,
+        447,
+        704,
+        565
+      ],
+      "articles_rereads_ms": [
+        920,
+        756,
+        691,
+        659
+      ],
+      "homepage_navigation_ttfb_ms": 438,
+      "articles_navigation_ttfb_ms": 430,
+      "site_mean_ms": 318.2,
+      "site_median_ms": 258,
+      "under_1s": 121,
+      "between_1s_3s": 0,
+      "over_3s": 0,
+      "max_ms": 554,
+      "navigation_timing": {
+        "/": {
+          "ttfb_ms": 438,
+          "domcontentloaded_ms": 657,
+          "load_ms": 1465
+        },
+        "/articles": {
+          "ttfb_ms": 430,
+          "domcontentloaded_ms": 817,
+          "load_ms": 4009
+        }
+      },
+      "slowest": [
+        {
+          "url": "/articles",
+          "ms": 554
+        },
+        {
+          "url": "/terms-of-service",
+          "ms": 538
+        },
+        {
+          "url": "/articles/3d-rendering-company-melbourne",
+          "ms": 504
+        },
+        {
+          "url": "/articles/living-room-trends-australia",
+          "ms": 489
+        },
+        {
+          "url": "/articles/program-for-construction-estimates-explained",
+          "ms": 489
+        }
+      ],
+      "note": "Single sequential pass, same method. Site mean 318.4 -> 318.2 ms, median 257 -> 258 ms, ceiling 677 -> 554 ms. The repeats ran while a second tab was loading Search Console and read higher."
+    },
+    "h1_and_canonical": {
+      "pages_checked": 121,
+      "pages_with_exactly_one_h1": 121,
+      "pages_with_canonical": 121,
+      "pages_self_canonical": 120,
+      "note": "All 121 crawled pages carry exactly one h1 and a canonical link; 120 are self-referencing. /articles/3d-rendering-company-melbourne canonicalises to another article."
+    },
+    "meta_descriptions": {
+      "pages_checked": 121,
+      "min_len": 83,
+      "max_len": 177,
+      "note": "All 121 pages carry a meta description; lengths 83-177 characters."
+    },
+    "headings_and_images": {
+      "pages_with_heading_before_h1": 1,
+      "pages_with_level_skips": 0,
+      "level_skip_page": null,
+      "images_total": 1306,
+      "images_with_alt": 1306,
+      "images_lazy": 700,
+      "note": "1,306 of 1,306 images carry alt text (0 missing); visible images only, noscript and tracking pixels excluded."
+    },
+    "schema_from_crawl": {
+      "pages_with_schema": 119,
+      "pages_without": [
+        "/login",
+        "/start-interactive"
+      ],
+      "json_ld_blocks_total": 413,
+      "faqpage_articles": 98,
+      "articles_total": 98,
+      "faqpage_pct": 100.0,
+      "note": "FAQPage holds on ALL 98 of 98 articles (100 pct); JSON-LD blocks 413, unchanged."
+    },
+    "legacy_long_slug_recheck": {
+      "urls_checked": 10,
+      "all_200": true,
+      "all_self_canonical": true,
+      "note": "The ten legacy long-slug article URLs re-fetched on 29 Oct: ten of ten 200 with a self-canonical."
+    },
+    "content": {
+      "words_total": 249426,
+      "words_total_prev": 249426,
+      "avg_words_per_article": 2444,
+      "avg_words_core": 519,
+      "avg_words_project": 178,
+      "thin_pages_under_300": 13,
+      "note": "Total words 249,426, identical to 28 Oct: no new article and no change in any page's word count.",
+      "changes_vs_2026_10_28": "0 words (unchanged)."
+    },
+    "canonical_conflict": {
+      "url": "/articles/3d-rendering-company-melbourne",
+      "canonical_to": "/articles/3d-rendering-melbourne-pre-construction-planning",
+      "in_sitemap": true,
+      "body_words": 3196,
+      "note": "Persists since 14 Oct: the page is still listed in the sitemap but declares another URL as canonical and carries a duplicate body."
+    }
+  },
+  "internal_linking": {
+    "measured_at": "2026-10-29 ICT",
+    "status": "Internal links FALL 2,879 -> 2,782 (22.99 per page): roughly one link fewer on each of 97 pages; the cause was not isolated.",
+    "method": "Fetched every sitemap page from the origin (cache no-store) and computed the inbound-link graph over all 121 crawled pages.",
+    "sitemap_articles": 98,
+    "hub_articles_unfiltered": 98,
+    "hub_html_bytes": null,
+    "hub_distinct_articles": 98,
+    "hub_change": "The hub exposes all 98 articles as distinct links (115 links on the hub).",
+    "hub_categories_note": "Category slugs were not re-tested today; on the last test they returned the identical full article set.",
+    "orphan_articles_count": 0,
+    "orphan_articles": [],
+    "verification": "Counted from the same 121-page crawl as technical_health: orphans 0 for the 98 articles, 3 hub-only articles.",
+    "new_articles": [],
+    "new_articles_note": "No new article appeared in the 29 Oct crawl (98 articles, 122 sitemap URLs).",
+    "articles_overlay": {
+      "day": 0,
+      "status": "RESOLVED",
+      "resolved_on": "2026-09-29",
+      "days_present": 32,
+      "evidence": "Re-checked on /articles after 15 s: zero site overlays, the centre element is an ordinary SECTION.",
+      "severity_note": "Closed for a twenty-fourth scan day after 32 days present."
+    },
+    "hub_distinct_internal_paths": null,
+    "articles_linked_only_from_hub": 3,
+    "hub_dependency_note": "THREE articles are linked only from the hub: /articles/3d-rendering-services-melbourne, /articles/architectural-visualisation-adelaide and /articles/3d-rendering-company-melbourne.",
+    "avg_internal_links_per_page": 22.99,
+    "template_link_regression": {
+      "status": "NOT ISOLATED",
+      "day": 0,
+      "detail": "Total distinct internal links 2,879 -> 2,782 (-97): about one link less on each of 97 pages. No new article, so this is a template-level change; the exact element was not isolated."
+    },
+    "hub_only_articles": [
+      "/articles/3d-rendering-services-melbourne",
+      "/articles/architectural-visualisation-adelaide",
+      "/articles/3d-rendering-company-melbourne"
+    ],
+    "linked_urls_absent_from_sitemap": [],
+    "avg_internal_links_per_page_exact": 22.99,
+    "total_distinct_internal_links": 2782
+  },
+  "cannibalisation": {
+    "measured_at": "2026-10-18 ICT",
+    "method": "Counted /articles/<slug> URLs in the 119-URL sitemap and grouped by slug substring: melbourne; melbourne + render/visualisation/3d; builder; builder + melbourne; adelaide.",
+    "melbourne_articles_total": null,
+    "melbourne_rendering_cluster_size": null,
+    "builder_cluster_size": null,
+    "builder_cluster_melbourne_subset": null,
+    "adelaide_cluster_size": null,
+    "verdict": "Cluster counts were NOT recomputed from the slugs today (null). The sitemap now lists 97 articles, including /articles/custom-living-spaces-melbourne, so the 9 Oct counts are a lower bound for the Melbourne cluster, not a current figure.",
+    "last_counted": {
+      "date": "2026-10-09",
+      "melbourne_articles_total": 18,
+      "melbourne_rendering_cluster_size": 12,
+      "builder_cluster_size": 14,
+      "builder_cluster_melbourne_subset": 4,
+      "adelaide_cluster_size": 7
+    },
+    "recount_note": "Cluster article counts were NOT recounted on 27 Oct (null); the 9 Oct counts are retained for reference. measured_at is the last count."
+  },
+  "social_snapshot": {
+    "measured_at": "2026-10-29 ICT",
+    "source": "Live Chrome reads on 29 Oct 2026: Meta Business Suite (Facebook page DX Living and Instagram dxliving.au), YouTube Studio and LinkedIn page analytics.",
+    "dashboard_last_refreshed": null,
+    "is_stale": false,
+    "stale_note": "Facebook, Instagram, YouTube and LinkedIn all read directly in Chrome today (29 Oct).",
+    "window": "Meta 30 Sep - 27 Oct 2026; YouTube per Studio 30 Sep - 27 Oct; LinkedIn 28 Sep - 27 Oct",
+    "total_followers": 315,
+    "total_followers_note": "Facebook 117 + Instagram 50 + YouTube 7 + LinkedIn 141 = 315 (four channels read).",
+    "facebook": {
+      "followers": 117,
+      "views": 4199,
+      "views_change_pct": -5.2,
+      "visits": 653,
+      "interactions": 167,
+      "video_3s": 434,
+      "link_clicks": 5,
+      "watch_time": "2h 58m"
+    },
+    "linkedin": {
+      "followers": 141,
+      "impressions": 1268,
+      "impressions_change_pct": 6.6,
+      "reactions": 39,
+      "comments": 0,
+      "reposts": 0,
+      "page_views": 82,
+      "unique_visitors": 35
+    },
+    "instagram": {
+      "followers": 50,
+      "views": 1916,
+      "reach": 337,
+      "interactions": 66,
+      "posts_total": 152,
+      "following": 37
+    },
+    "youtube": {
+      "subscribers": 7,
+      "views_28d": 869,
+      "watch_time_hours": 1.5,
+      "videos": 37
+    },
+    "movement_note": "Against the 28 Oct block (one-day window slide): Facebook views 4,255 -> 4,199, Instagram followers 49 -> 50, Instagram views 1,968 -> 1,916, LinkedIn impressions 1,256 -> 1,268, total followers 314 -> 315.",
+    "ga4_cross_check": "GA4 attributes 176 sessions to Organic Social over 1-28 Oct; its engagement and time were not re-read today (null). The Meta window records only 5 Facebook link clicks, so the two systems count different things."
+  },
+  "notes": {
+    "vi": [
+      "MỌI NGUỒN SEO ĐỌC TRỰC TIẾP NGÀY 29/10 (bước một ngày so với 28/10). Cửa sổ GSC 29/09→26/10, GA4 01/10→28/10. Mục nào chưa đọc được là null.",
+      "Tìm kiếm: click 22 → 21, impression 1.501 → 1.580, CTR 1,5% → 1,3%, vị trí 20,9 → 21,1; vẫn 0 click thương mại non-brand.",
+      "GA4: sessions 698 → 683, key event 7 → 4; Google yêu cầu xác minh đăng nhập sau khi đọc xong nên chi tiết theo kênh, nguồn/medium và kênh AI là null.",
+      "Site: không có bài mới (98 bài, 122 URL sitemap), 121/121 trang trả 200 và dưới 1 giây, TTFB TB 318,2 ms; liên kết nội bộ giảm 2.879 → 2.782 (chưa tách được nguyên nhân).",
+      "Ahrefs: 29 phản hồi AI trên 10 trang (không đổi), backlink 906 / 870 domain, Ahrefs Rank 110.310.194; Site Audit báo Failed (null); Brand Radar chưa có prompt theo dõi (null).",
+      "Điểm AI Visibility giữ 34/100; Page indexing vẫn 82/152 (cập nhật 23/10)."
+    ],
+    "en": [
+      "EVERY SEO SOURCE WAS READ LIVE ON 29 OCT (a one-day step from 28 Oct). GSC window 29 Sep→26 Oct, GA4 1 Oct→28 Oct. Anything not readable is null.",
+      "Search: clicks 22 → 21, impressions 1,501 → 1,580, CTR 1.5% → 1.3%, position 20.9 → 21.1; still zero commercial non-brand clicks.",
+      "GA4: sessions 698 → 683, key events 7 → 4; Google asked for a sign-in verification after the reads, so per-channel detail, source/medium and AI-channel detail are null.",
+      "On-site: no new article (98 articles, 122 sitemap URLs), 121 of 121 pages return 200 and under 1 s, mean TTFB 318.2 ms; internal links fall 2,879 → 2,782 (cause not isolated).",
+      "Ahrefs: 29 AI responses across 10 pages (unchanged), 906 backlinks / 870 domains, Ahrefs Rank 110,310,194; Site Audit shows Failed (null); Brand Radar has no tracked prompts (null).",
+      "The AI Visibility score holds at 34/100; Page indexing is still 82/152 (dated 23 Oct)."
+    ]
+  }
+}
