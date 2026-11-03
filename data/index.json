@@ -1,6 +1,6 @@
 {
   "description": "Lịch sử snapshot dữ liệu SEO theo ngày / Daily SEO data snapshot history. Mỗi ngày một file data/YYYY-MM-DD.json + bản HTML đóng băng archive/YYYY-MM-DD.html.",
-  "latest": "2026-10-29",
+  "latest": "2026-11-04",
   "site": "dxliving.com",
   "snapshots": [
     {
@@ -499,6 +499,13 @@
       "report": "archive/2026-10-29.html",
       "label_vi": "SEO 29/10/2026 · GSC + Ahrefs đọc trực tiếp, GA4 chỉ tổng quan",
       "label_en": "SEO 29 Oct 2026 · GSC + Ahrefs read live, GA4 overview only"
+    },
+    {
+      "date": "2026-11-04",
+      "data": "data/2026-11-04.json",
+      "report": "archive/2026-11-04.html",
+      "label_vi": "SEO 04/11/2026 · GSC + GA4 đọc trực tiếp; Ahrefs không đọc được",
+      "label_en": "SEO 4 Nov 2026 · GSC + GA4 read live; Ahrefs not readable"
     }
   ]
 }
