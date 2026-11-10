@@ -1,6 +1,6 @@
 {
   "description": "Lịch sử snapshot dữ liệu SEO theo ngày / Daily SEO data snapshot history. Mỗi ngày một file data/YYYY-MM-DD.json + bản HTML đóng băng archive/YYYY-MM-DD.html.",
-  "latest": "2026-11-05",
+  "latest": "2026-11-11",
   "site": "dxliving.com",
   "snapshots": [
     {
@@ -513,6 +513,13 @@
       "report": "archive/2026-11-05.html",
       "label_vi": "GSC 25 click · GA4 666 phiên · Ahrefs đọc được (DR 0, 867 RD) · LinkedIn không đọc được",
       "label_en": "GSC 25 clicks · GA4 666 sessions · Ahrefs readable (DR 0, 867 RD) · LinkedIn not readable"
+    },
+    {
+      "date": "2026-11-11",
+      "data": "data/2026-11-11.json",
+      "report": "archive/2026-11-11.html",
+      "label_vi": "Ahrefs và LinkedIn không đọc được",
+      "label_en": "Ahrefs and LinkedIn unreadable"
     }
   ]
 }
