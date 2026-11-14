@@ -1,13 +1,13 @@
 {
  "derived": true,
- "generated_at": "2026-11-15",
+ "generated_at": "2026-11-14",
  "grain_legend": {
   "day": "Số đo của đúng ngày đó. CỘNG DỒN ĐƯỢC trong khoảng.",
   "state": "Chỉ số trạng thái tại thời điểm quét. Lấy trung bình hoặc giá trị cuối kỳ, không cộng.",
   "window28": "Ảnh chụp cửa sổ 28 ngày trượt. KHÔNG cộng được (các ngày chồng nhau) — chỉ so đầu kỳ với cuối kỳ và vẽ xu hướng."
  },
  "kind": "rollup",
- "scanned_count": 77,
+ "scanned_count": 78,
  "scanned_days": [
   "2026-06-30",
   "2026-07-27",
@@ -85,14 +85,15 @@
   "2026-11-11",
   "2026-11-12",
   "2026-11-13",
-  "2026-11-15"
+  "2026-11-15",
+  "series"
  ],
  "series": {
   "ahrefs_ai_citations": {
    "grain": "state",
    "label": "Ahrefs — trích dẫn AI",
-   "measured": 71,
-   "of_days": 77,
+   "measured": 70,
+   "of_days": 78,
    "points": [
     {
      "d": "2026-07-28",
@@ -373,18 +374,14 @@
     {
      "d": "2026-11-05",
      "v": 27
-    },
-    {
-     "d": "2026-11-15",
-     "v": 34
     }
    ]
   },
   "ahrefs_backlinks": {
    "grain": "state",
    "label": "Ahrefs — backlinks",
-   "measured": 71,
-   "of_days": 77,
+   "measured": 70,
+   "of_days": 78,
    "points": [
     {
      "d": "2026-07-28",
@@ -665,18 +662,14 @@
     {
      "d": "2026-11-05",
      "v": 902
-    },
-    {
-     "d": "2026-11-15",
-     "v": 895
     }
    ]
   },
   "ahrefs_cited_pages": {
    "grain": "state",
    "label": "Ahrefs — trang được AI trích",
-   "measured": 70,
-   "of_days": 77,
+   "measured": 69,
+   "of_days": 78,
    "points": [
     {
      "d": "2026-07-29",
@@ -953,18 +946,14 @@
     {
      "d": "2026-11-05",
      "v": 11
-    },
-    {
-     "d": "2026-11-15",
-     "v": 12
     }
    ]
   },
   "ahrefs_dr": {
    "grain": "state",
    "label": "Ahrefs — Domain Rating",
-   "measured": 73,
-   "of_days": 77,
+   "measured": 72,
+   "of_days": 78,
    "points": [
     {
      "d": "2026-06-30",
@@ -1253,18 +1242,14 @@
     {
      "d": "2026-11-05",
      "v": 0
-    },
-    {
-     "d": "2026-11-15",
-     "v": 0
     }
    ]
   },
   "ahrefs_org_keywords": {
    "grain": "state",
    "label": "Ahrefs — organic keywords",
-   "measured": 71,
-   "of_days": 77,
+   "measured": 70,
+   "of_days": 78,
    "points": [
     {
      "d": "2026-07-28",
@@ -1545,18 +1530,14 @@
     {
      "d": "2026-11-05",
      "v": 0
-    },
-    {
-     "d": "2026-11-15",
-     "v": 0
     }
    ]
   },
   "ahrefs_refdomains": {
    "grain": "state",
    "label": "Ahrefs — referring domains",
-   "measured": 73,
-   "of_days": 77,
+   "measured": 72,
+   "of_days": 78,
    "points": [
     {
      "d": "2026-06-30",
@@ -1845,10 +1826,6 @@
     {
      "d": "2026-11-05",
      "v": 867
-    },
-    {
-     "d": "2026-11-15",
-     "v": 862
     }
    ]
   },
@@ -1856,7 +1833,7 @@
    "grain": "window28",
    "label": "GA4 — engagement %",
    "measured": 76,
-   "of_days": 77,
+   "of_days": 78,
    "points": [
     {
      "d": "2026-06-30",
@@ -2168,7 +2145,7 @@
    "grain": "window28",
    "label": "GA4 — key events",
    "measured": 75,
-   "of_days": 77,
+   "of_days": 78,
    "points": [
     {
      "d": "2026-07-27",
@@ -2476,7 +2453,7 @@
    "grain": "window28",
    "label": "GA4 — sessions",
    "measured": 76,
-   "of_days": 77,
+   "of_days": 78,
    "points": [
     {
      "d": "2026-06-30",
@@ -2788,7 +2765,7 @@
    "grain": "window28",
    "label": "GA4 — users",
    "measured": 70,
-   "of_days": 77,
+   "of_days": 78,
    "points": [
     {
      "d": "2026-06-30",
@@ -3076,7 +3053,7 @@
    "grain": "window28",
    "label": "GSC — clicks",
    "measured": 75,
-   "of_days": 77,
+   "of_days": 78,
    "points": [
     {
      "d": "2026-06-30",
@@ -3384,7 +3361,7 @@
    "grain": "window28",
    "label": "GSC — CTR %",
    "measured": 75,
-   "of_days": 77,
+   "of_days": 78,
    "points": [
     {
      "d": "2026-06-30",
@@ -3692,7 +3669,7 @@
    "grain": "window28",
    "label": "GSC — impressions",
    "measured": 75,
-   "of_days": 77,
+   "of_days": 78,
    "points": [
     {
      "d": "2026-06-30",
@@ -4000,7 +3977,7 @@
    "grain": "window28",
    "label": "GSC — vị trí TB",
    "measured": 75,
-   "of_days": 77,
+   "of_days": 78,
    "points": [
     {
      "d": "2026-06-30",
@@ -4308,7 +4285,7 @@
    "grain": "window28",
    "label": "GSC — số truy vấn",
    "measured": 72,
-   "of_days": 77,
+   "of_days": 78,
    "points": [
     {
      "d": "2026-07-29",
@@ -4604,7 +4581,7 @@
    "grain": "state",
    "label": "Sitemap — số URL",
    "measured": 70,
-   "of_days": 77,
+   "of_days": 78,
    "points": [
     {
      "d": "2026-08-07",
@@ -4892,7 +4869,7 @@
    "grain": "state",
    "label": "TTFB trung bình (ms)",
    "measured": 55,
-   "of_days": 77,
+   "of_days": 78,
    "points": [
     {
      "d": "2026-08-28",
@@ -5112,7 +5089,7 @@
     },
     {
      "d": "2026-11-15",
-     "v": 226.6
+     "v": 278.0
     }
    ]
   }
