@@ -1,6 +1,6 @@
 {
  "derived": true,
- "generated_at": "2026-11-14",
+ "generated_at": "2026-11-15",
  "grain_legend": {
   "day": "Số đo của đúng ngày đó. CỘNG DỒN ĐƯỢC trong khoảng.",
   "state": "Chỉ số trạng thái tại thời điểm quét. Lấy trung bình hoặc giá trị cuối kỳ, không cộng.",
@@ -91,7 +91,7 @@
   "ahrefs_ai_citations": {
    "grain": "state",
    "label": "Ahrefs — trích dẫn AI",
-   "measured": 70,
+   "measured": 71,
    "of_days": 77,
    "points": [
     {
@@ -373,13 +373,17 @@
     {
      "d": "2026-11-05",
      "v": 27
+    },
+    {
+     "d": "2026-11-15",
+     "v": 34
     }
    ]
   },
   "ahrefs_backlinks": {
    "grain": "state",
    "label": "Ahrefs — backlinks",
-   "measured": 70,
+   "measured": 71,
    "of_days": 77,
    "points": [
     {
@@ -661,13 +665,17 @@
     {
      "d": "2026-11-05",
      "v": 902
+    },
+    {
+     "d": "2026-11-15",
+     "v": 895
     }
    ]
   },
   "ahrefs_refdomains": {
    "grain": "state",
    "label": "Ahrefs — referring domains",
-   "measured": 72,
+   "measured": 73,
    "of_days": 77,
    "points": [
     {
@@ -957,6 +965,10 @@
     {
      "d": "2026-11-05",
      "v": 867
+    },
+    {
+     "d": "2026-11-15",
+     "v": 862
     }
    ]
   },

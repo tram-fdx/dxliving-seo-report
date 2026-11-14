@@ -948,47 +948,25 @@
   ]
  },
  "ahrefs": {
-  "read_at": null,
-  "workspace": null,
-  "country_filter": null,
-  "domain_rating": null,
-  "url_rating": null,
-  "ahrefs_rank": null,
-  "referring_domains": null,
-  "referring_domains_all_time": null,
-  "referring_domains_followed": null,
-  "referring_domains_followed_pct": null,
-  "backlinks": null,
-  "backlinks_all_time": null,
-  "backlinks_all_time_display": null,
-  "backlinks_all_time_note": null,
-  "backlinks_followed": null,
-  "backlinks_followed_pct": null,
-  "followed_note": null,
-  "authority_direction_note": null,
-  "health_score": null,
-  "site_audit_crawl": null,
-  "site_audit_caveat": null,
-  "crawled_pages_site_explorer": null,
-  "crawled_pages_404": null,
-  "crawled_pages_http_breakdown": null,
-  "crawled_pages_http_breakdown_note": null,
-  "crawled_pages_404_note": null,
-  "organic_keywords": null,
-  "organic_traffic": null,
-  "top_3_keywords": null,
-  "ai_citations": null,
-  "ai_by_platform": null,
-  "cited_pages": null,
-  "cited_pages_by_platform": null,
-  "cited_pages_note": null,
-  "web_analytics_visits": null,
-  "site_audit_issues": null,
-  "referring_domains_all_time_display": null,
-  "site_explorer_traffic_estimate_30d": null,
-  "traffic_analytics_estimate_visits": null,
-  "traffic_analytics_estimate_note": null,
-  "read_note": "Ahrefs NOT READ on 13 Nov: Chrome is signed out of Ahrefs (app.ahrefs.com redirects to the login page; no credentials entered). Every Ahrefs value is null; earlier values are not reused as today's."
+  "read_at": "2026-11-15 (Ahrefs web)",
+  "domain_rating": 0,
+  "ahrefs_rank": 114147553,
+  "backlinks": 895,
+  "backlinks_all_time": 1100,
+  "referring_domains": 862,
+  "referring_domains_all_time": 1100,
+  "organic_keywords": 0,
+  "organic_traffic": 0,
+  "ai_citations": 34,
+  "cited_pages": 12,
+  "ai_by_platform": {
+   "ChatGPT": 14,
+   "Copilot": 9,
+   "AI Mode": 4,
+   "Gemini": 3,
+   "Perplexity": 0
+  },
+  "source": "Ahrefs (MCP, Claude trên Mac)"
  },
  "ai_visibility": {
   "score": null,
@@ -1372,13 +1350,13 @@
   }
  },
  "commentary": {
-  "vi": "clicks 24 → 23; impressions 3905 → 3822; ctr_pct 0.6 → 0.6; avg_position 22.1 → 21.1; queries_with_impressions 331 → 323; brand_clicks 11 → 9; page_one_queries 86; ga4_sessions 640 → 632.",
-  "en": "clicks 24 → 23; impressions 3905 → 3822; ctr_pct 0.6 → 0.6; avg_position 22.1 → 21.1; queries_with_impressions 331 → 323; brand_clicks 11 → 9; page_one_queries 86; ga4_sessions 640 → 632.",
-  "by": "template"
+  "vi": "GSC 28 ngày gần như đi ngang: 23 click (trước đó 24), 3.822 lượt hiển thị, vị trí trung bình cải thiện từ 22,1 lên 21,1 với 86 truy vấn ở trang 1. GA4 có 632 phiên, 3 key event, nhưng tìm kiếm tự nhiên chỉ mang về 61 phiên. Ahrefs: 862 domain trỏ về nhưng DR vẫn 0 và AI nhắc tới trang 34 lần. Việc nên làm: tối ưu title/meta cho các truy vấn trang 1 để tăng CTR (đang 0,6%).",
+  "en": "GSC 28-day traffic is flat: 23 clicks (24 before), 3,822 impressions, average position improved from 22.1 to 21.1 with 86 page-one queries. GA4 shows 632 sessions and 3 key events, but organic search brought only 61 sessions. Ahrefs: 862 referring domains yet DR is still 0, with 34 AI citations. Next: rewrite titles/meta for page-one queries to lift the 0.6% CTR.",
+  "by": "Claude (Mac)"
  },
  "notes": {
-  "vi": "clicks 24 → 23; impressions 3905 → 3822; ctr_pct 0.6 → 0.6; avg_position 22.1 → 21.1; queries_with_impressions 331 → 323; brand_clicks 11 → 9; page_one_queries 86; ga4_sessions 640 → 632.",
-  "en": "clicks 24 → 23; impressions 3905 → 3822; ctr_pct 0.6 → 0.6; avg_position 22.1 → 21.1; queries_with_impressions 331 → 323; brand_clicks 11 → 9; page_one_queries 86; ga4_sessions 640 → 632."
+  "vi": "GSC 28 ngày gần như đi ngang: 23 click (trước đó 24), 3.822 lượt hiển thị, vị trí trung bình cải thiện từ 22,1 lên 21,1 với 86 truy vấn ở trang 1. GA4 có 632 phiên, 3 key event, nhưng tìm kiếm tự nhiên chỉ mang về 61 phiên. Ahrefs: 862 domain trỏ về nhưng DR vẫn 0 và AI nhắc tới trang 34 lần. Việc nên làm: tối ưu title/meta cho các truy vấn trang 1 để tăng CTR (đang 0,6%).",
+  "en": "GSC 28-day traffic is flat: 23 clicks (24 before), 3,822 impressions, average position improved from 22.1 to 21.1 with 86 page-one queries. GA4 shows 632 sessions and 3 key events, but organic search brought only 61 sessions. Ahrefs: 862 referring domains yet DR is still 0, with 34 AI citations. Next: rewrite titles/meta for page-one queries to lift the 0.6% CTR."
  },
  "commentary_input": {
   "report": "SEO (GSC + GA4)",
@@ -1435,7 +1413,15 @@
       "project cost control",
       1
      ]
-    ]
+    ],
+    "ahrefs": {
+     "domain_rating": 0,
+     "referring_domains": 862,
+     "backlinks": 895,
+     "organic_keywords": 0,
+     "organic_traffic": 0,
+     "ai_citations": 34
+    }
    },
    "previous": {
     "clicks": 24,
