@@ -171,8 +171,8 @@ window.__DXR_CFG={rollup:"data/rollup.json",lang:function(){try{return (typeof L
       : '<div class="dxr-ctrl"><label>'+t('Ngày A','Day A')+' <select id="dxr-a">'+opts(S.a,S.dates)+'</select></label>'+
         '<label>'+t('Ngày B','Day B')+' <select id="dxr-b">'+opts(S.b,S.dates)+'</select></label></div>';
     var note='<p class="dxr-note">'+t(
-      '<b>Đọc từ <code>data/rollup.json</code></b> — file dẫn xuất dựng lại mỗi sáng từ các file ngày bất biến, không sửa tay. Mỗi chỉ số mang một <b>nhãn grain</b> và bảng dưới chỉ làm đúng phép tính hợp lệ với nhãn đó. Ngày không quét <b>không bao giờ được nội suy</b>; ô “—” nghĩa là ngày đó không đo chỉ số này.',
-      '<b>Read from <code>data/rollup.json</code></b> — a derived file rebuilt each morning from the immutable day files, never hand-edited. Every metric carries a <b>grain label</b>, and the table below only performs the arithmetic that label allows. Unscanned days are <b>never interpolated</b>; a “—” means that metric was not measured that day.')+'</p>';
+      '<b>Số theo ngày lấy thẳng từ API nguồn</b> (<code>data/series.json</code>: Search Console 16 tháng, GA4 toàn bộ, Facebook/Instagram ~2 năm), cộng với số đọc mỗi lần quét cho các nguồn không có API (<code>data/rollup.json</code>) — file dẫn xuất dựng lại mỗi sáng từ các file ngày bất biến, không sửa tay. Mỗi chỉ số mang một <b>nhãn grain</b> và bảng dưới chỉ làm đúng phép tính hợp lệ với nhãn đó. Ngày không quét <b>không bao giờ được nội suy</b>; ô “—” nghĩa là ngày đó không đo chỉ số này.',
+      '<b>Daily numbers come straight from the source APIs</b> (<code>data/series.json</code>: Search Console 16 months, GA4 all time, Facebook/Instagram ~2 years), plus per-scan readings for sources without an API (<code>data/rollup.json</code>) — a derived file rebuilt each morning from the immutable day files, never hand-edited. Every metric carries a <b>grain label</b>, and the table below only performs the arithmetic that label allows. Unscanned days are <b>never interpolated</b>; a “—” means that metric was not measured that day.')+'</p>';
     el.innerHTML=head+ctrl+note+'<div id="dxr-out"></div>';
     el.querySelectorAll('.dxr-tab[data-m]').forEach(function(b){ b.onclick=function(){S.mode=b.dataset.m;render();};});
     el.querySelectorAll('.dxr-tab[data-p]').forEach(function(b){ b.onclick=function(){
@@ -205,6 +205,7 @@ window.__DXR_CFG={rollup:"data/rollup.json",lang:function(){try{return (typeof L
           if(G.g==='day'){
             var sum=vals.reduce(function(x,y){return x+y;},0);
             var avg=sum/vals.length, mx=Math.max.apply(null,vals);
+            if(s.agg==='avg') sum=avg;   // tỷ lệ / vị trí: lấy trung bình, không cộng
             var mxd=pts[vals.indexOf(mx)].d;
             rows+='<tr><td>'+esc(s.label)+'</td><td class="dxr-n dxr-strong">'+nf(sum,d)+'</td><td class="dxr-n">'+nf(avg,1)+
               '</td><td class="dxr-n">'+nf(mx,d)+' <span class="dxr-hint">'+fd(mxd)+'</span></td>'+
@@ -245,10 +246,14 @@ window.__DXR_CFG={rollup:"data/rollup.json",lang:function(){try{return (typeof L
 
   function hide(){ var s=document.getElementById('dxr'); if(s) s.style.display='none'; }
   function start(){
-    fetch(CFG.rollup,{cache:'no-store'}).then(function(r){ if(!r.ok) throw 0; return r.json(); })
-    .then(function(j){
-      if(!j || !j.series) throw 0;
-      S.ser=j.series;
+    var get=function(u){ return fetch(u,{cache:'no-store'}).then(function(r){ return r.ok?r.json():null; }).catch(function(){return null;}); };
+    // series.json = số theo ngày lấy thẳng từ API nguồn (GSC 16 tháng, GA4 toàn bộ, Meta ~2 năm); rollup.json = số đọc mỗi lần quét
+    Promise.all([get(CFG.rollup.replace('rollup.json','series.json')), get(CFG.rollup)])
+    .then(function(r){
+      var api=(r[0]&&r[0].series)||{}, roll=(r[1]&&r[1].series)||{};
+      if(!Object.keys(api).length && !Object.keys(roll).length) throw 0;
+      S.ser={}; Object.keys(api).forEach(function(k){S.ser[k]=api[k];}); Object.keys(roll).forEach(function(k){ if(!S.ser[k]) S.ser[k]=roll[k]; });
+      var j={series:S.ser};
       var set={};
       Object.keys(S.ser).forEach(function(k){ S.ser[k].points.forEach(function(p){ set[p.d]=1; }); });
       S.dates=Object.keys(set).sort();
