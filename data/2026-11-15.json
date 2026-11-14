@@ -1352,7 +1352,20 @@
  "commentary": {
   "vi": "GSC 28 ngày gần như đi ngang: 23 click (trước đó 24), 3.822 lượt hiển thị, vị trí trung bình cải thiện từ 22,1 lên 21,1 với 86 truy vấn ở trang 1. GA4 có 632 phiên, 3 key event, nhưng tìm kiếm tự nhiên chỉ mang về 61 phiên. Ahrefs: 862 domain trỏ về nhưng DR vẫn 0 và AI nhắc tới trang 34 lần. Việc nên làm: tối ưu title/meta cho các truy vấn trang 1 để tăng CTR (đang 0,6%).",
   "en": "GSC 28-day traffic is flat: 23 clicks (24 before), 3,822 impressions, average position improved from 22.1 to 21.1 with 86 page-one queries. GA4 shows 632 sessions and 3 key events, but organic search brought only 61 sessions. Ahrefs: 862 referring domains yet DR is still 0, with 34 AI citations. Next: rewrite titles/meta for page-one queries to lift the 0.6% CTR.",
-  "by": "Claude (Mac)"
+  "by": "Claude (Mac)",
+  "rating": "bad",
+  "verdict_vi": "Hiển thị có nhưng không ra click: CTR 0,6% và organic chỉ 61 phiên trong 28 ngày.",
+  "verdict_en": "Visibility is not turning into clicks: 0.6% CTR and only 61 organic sessions in 28 days.",
+  "actions_vi": [
+   "Viết lại title/meta cho các truy vấn đang ở trang 1 (86 truy vấn) để kéo CTR lên.",
+   "Đẩy các truy vấn vị trí 11-20 lên trang 1 bằng liên kết nội bộ và bổ sung nội dung.",
+   "Tăng backlink chất lượng: 862 domain trỏ về nhưng DR vẫn 0, nên ưu tiên link dofollow từ site ngành xây dựng/BĐS."
+  ],
+  "actions_en": [
+   "Rewrite titles/meta for the 86 page-one queries to lift CTR.",
+   "Push position 11-20 queries onto page one with internal links and fuller content.",
+   "Earn quality backlinks: 862 referring domains but DR is still 0, so prioritise dofollow links from construction/property sites."
+  ]
  },
  "notes": {
   "vi": "GSC 28 ngày gần như đi ngang: 23 click (trước đó 24), 3.822 lượt hiển thị, vị trí trung bình cải thiện từ 22,1 lên 21,1 với 86 truy vấn ở trang 1. GA4 có 632 phiên, 3 key event, nhưng tìm kiếm tự nhiên chỉ mang về 61 phiên. Ahrefs: 862 domain trỏ về nhưng DR vẫn 0 và AI nhắc tới trang 34 lần. Việc nên làm: tối ưu title/meta cho các truy vấn trang 1 để tăng CTR (đang 0,6%).",
