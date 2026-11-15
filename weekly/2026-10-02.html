@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -797,7 +797,7 @@ function setLang(l){
   document.getElementById('btn-en').classList.toggle('active',l==='en');
   document.body.classList.toggle('lang-vi',l==='vi');
   document.body.classList.toggle('lang-en',l==='en');
-  try{localStorage.setItem('dxl-report-lang',l);}catch(e){}
+  try{localStorage.setItem('dxl-lang-v2',l);}catch(e){}
   renderKPIs();renderCharts();renderTables();renderRecs();renderPicker();renderAI();
 }
 
@@ -807,7 +807,7 @@ document.querySelectorAll('#qTabs button').forEach(b=>b.onclick=()=>{
 });
 
 let saved='vi';
-try{saved=localStorage.getItem('dxl-report-lang')||'vi';}catch(e){}
+try{saved=localStorage.getItem('dxl-lang-v2')||'en';}catch(e){}
 setLang(saved==='en'?'en':'vi');
 </script>
 </body>
