@@ -92,7 +92,7 @@
   "ahrefs_ai_citations": {
    "grain": "state",
    "label": "Ahrefs — trích dẫn AI",
-   "measured": 71,
+   "measured": 70,
    "of_days": 78,
    "points": [
     {
@@ -374,17 +374,13 @@
     {
      "d": "2026-11-05",
      "v": 27
-    },
-    {
-     "d": "2026-11-15",
-     "v": 34
     }
    ]
   },
   "ahrefs_backlinks": {
    "grain": "state",
    "label": "Ahrefs — backlinks",
-   "measured": 71,
+   "measured": 70,
    "of_days": 78,
    "points": [
     {
@@ -666,17 +662,13 @@
     {
      "d": "2026-11-05",
      "v": 902
-    },
-    {
-     "d": "2026-11-15",
-     "v": 895
     }
    ]
   },
   "ahrefs_cited_pages": {
    "grain": "state",
    "label": "Ahrefs — trang được AI trích",
-   "measured": 70,
+   "measured": 69,
    "of_days": 78,
    "points": [
     {
@@ -954,17 +946,13 @@
     {
      "d": "2026-11-05",
      "v": 11
-    },
-    {
-     "d": "2026-11-15",
-     "v": 12
     }
    ]
   },
   "ahrefs_dr": {
    "grain": "state",
    "label": "Ahrefs — Domain Rating",
-   "measured": 73,
+   "measured": 72,
    "of_days": 78,
    "points": [
     {
@@ -1254,17 +1242,13 @@
     {
      "d": "2026-11-05",
      "v": 0
-    },
-    {
-     "d": "2026-11-15",
-     "v": 0
     }
    ]
   },
   "ahrefs_org_keywords": {
    "grain": "state",
    "label": "Ahrefs — organic keywords",
-   "measured": 71,
+   "measured": 70,
    "of_days": 78,
    "points": [
     {
@@ -1546,17 +1530,13 @@
     {
      "d": "2026-11-05",
      "v": 0
-    },
-    {
-     "d": "2026-11-15",
-     "v": 0
     }
    ]
   },
   "ahrefs_refdomains": {
    "grain": "state",
    "label": "Ahrefs — referring domains",
-   "measured": 73,
+   "measured": 72,
    "of_days": 78,
    "points": [
     {
@@ -1846,10 +1826,6 @@
     {
      "d": "2026-11-05",
      "v": 867
-    },
-    {
-     "d": "2026-11-15",
-     "v": 862
     }
    ]
   },
@@ -3377,7 +3353,7 @@
     },
     {
      "d": "2026-11-15",
-     "v": 23
+     "v": 25
     }
    ]
   },
@@ -3993,7 +3969,7 @@
     },
     {
      "d": "2026-11-15",
-     "v": 3822
+     "v": 4018
     }
    ]
   },
@@ -4301,7 +4277,7 @@
     },
     {
      "d": "2026-11-15",
-     "v": 21.1
+     "v": 20.9
     }
    ]
   },
@@ -4597,7 +4573,7 @@
     },
     {
      "d": "2026-11-15",
-     "v": 323
+     "v": 327
     }
    ]
   },
@@ -5113,7 +5089,7 @@
     },
     {
      "d": "2026-11-15",
-     "v": 278.0
+     "v": 220.0
     }
    ]
   }

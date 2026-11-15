@@ -7,19 +7,19 @@
   "ga4": "2026-10-18 → 2026-11-14"
  },
  "gsc_28d": {
-  "clicks": 23,
-  "impressions": 3822,
+  "clicks": 25,
+  "impressions": 4018,
   "ctr_pct": 0.6,
-  "avg_position": 21.1,
-  "queries_with_impressions": 323,
-  "brand_clicks": 9,
-  "brand_clicks_share_pct": 39.1,
+  "avg_position": 20.9,
+  "queries_with_impressions": 327,
+  "brand_clicks": 10,
+  "brand_clicks_share_pct": 40.0,
   "clicked_queries": [
    {
     "q": "dx living",
-    "clicks": 5,
-    "impressions": 44,
-    "ctr_pct": 11.36,
+    "clicks": 6,
+    "impressions": 46,
+    "ctr_pct": 13.04,
     "position": 3.5
    },
    {
@@ -48,9 +48,9 @@
    {
     "q": "how to interior design for developers",
     "clicks": 0,
-    "impressions": 133,
+    "impressions": 143,
     "ctr_pct": 0,
-    "position": 5.3
+    "position": 5.2
    },
    {
     "q": "3d house visualisation adelaide",
@@ -62,16 +62,16 @@
    {
     "q": "31 mcilwain drive mermaid waters",
     "clicks": 0,
-    "impressions": 109,
+    "impressions": 113,
     "ctr_pct": 0,
     "position": 8.9
    },
    {
     "q": "media room renovation cost",
     "clicks": 0,
-    "impressions": 97,
+    "impressions": 109,
     "ctr_pct": 0,
-    "position": 2.9
+    "position": 3.0
    },
    {
     "q": "3d visualisation adelaide",
@@ -97,22 +97,22 @@
    {
     "q": "living room ideas australia",
     "clicks": 0,
-    "impressions": 59,
+    "impressions": 60,
     "ctr_pct": 0,
-    "position": 23.0
+    "position": 22.9
    },
    {
     "q": "interior design for property developers",
     "clicks": 0,
-    "impressions": 50,
+    "impressions": 56,
     "ctr_pct": 0,
-    "position": 8.4
+    "position": 8.2
    },
    {
     "q": "dx living",
-    "clicks": 5,
-    "impressions": 44,
-    "ctr_pct": 11.36,
+    "clicks": 6,
+    "impressions": 46,
+    "ctr_pct": 13.04,
     "position": 3.5
    },
    {
@@ -123,6 +123,13 @@
     "position": 15.3
    },
    {
+    "q": "design coordination",
+    "clicks": 0,
+    "impressions": 39,
+    "ctr_pct": 0,
+    "position": 79.3
+   },
+   {
     "q": "3d architectural visualisation adelaide",
     "clicks": 0,
     "impressions": 37,
@@ -130,11 +137,11 @@
     "position": 21.0
    },
    {
-    "q": "design coordination",
+    "q": "developers adelaide",
     "clicks": 0,
-    "impressions": 36,
+    "impressions": 35,
     "ctr_pct": 0,
-    "position": 78.2
+    "position": 25.8
    },
    {
     "q": "3d rendering cost",
@@ -144,18 +151,18 @@
     "position": 44.1
    },
    {
-    "q": "developers adelaide",
+    "q": "interior design for developers",
     "clicks": 0,
     "impressions": 33,
     "ctr_pct": 0,
-    "position": 25.1
+    "position": 10.1
    },
    {
-    "q": "interior design for developers",
+    "q": "rendering apartment community",
     "clicks": 0,
     "impressions": 32,
     "ctr_pct": 0,
-    "position": 10.2
+    "position": 19.1
    },
    {
     "q": "architectural rendering cost",
@@ -165,18 +172,25 @@
     "position": 65.0
    },
    {
-    "q": "rendering apartment community",
+    "q": "living room designs australia",
     "clicks": 0,
     "impressions": 29,
     "ctr_pct": 0,
-    "position": 17.1
+    "position": 11.9
    },
    {
-    "q": "living room designs australia",
+    "q": "home theater renovation cost",
     "clicks": 0,
-    "impressions": 27,
+    "impressions": 28,
     "ctr_pct": 0,
-    "position": 12.0
+    "position": 4
+   },
+   {
+    "q": "interior design for property development",
+    "clicks": 0,
+    "impressions": 26,
+    "ctr_pct": 0,
+    "position": 8.8
    },
    {
     "q": "which builders offer the best combination of quality and value?",
@@ -205,29 +219,15 @@
     "impressions": 23,
     "ctr_pct": 0,
     "position": 86.0
-   },
-   {
-    "q": "3d rendering melbourne",
-    "clicks": 0,
-    "impressions": 20,
-    "ctr_pct": 0,
-    "position": 19.3
-   },
-   {
-    "q": "living room trends australia 2026",
-    "clicks": 0,
-    "impressions": 20,
-    "ctr_pct": 0,
-    "position": 10.1
    }
   ],
   "top_pages": [
    {
     "page": "/",
-    "clicks": 14,
-    "impressions": 133,
-    "ctr_pct": 10.53,
-    "position": 3.2
+    "clicks": 16,
+    "impressions": 140,
+    "ctr_pct": 11.43,
+    "position": 3.3
    },
    {
     "page": "/articles/project-251-visualisation-overview",
@@ -239,16 +239,16 @@
    {
     "page": "/model",
     "clicks": 2,
-    "impressions": 73,
-    "ctr_pct": 2.74,
-    "position": 6.7
+    "impressions": 75,
+    "ctr_pct": 2.67,
+    "position": 6.6
    },
    {
     "page": "/about",
     "clicks": 1,
-    "impressions": 79,
-    "ctr_pct": 1.27,
-    "position": 4.4
+    "impressions": 83,
+    "ctr_pct": 1.2,
+    "position": 4.5
    },
    {
     "page": "/apply",
@@ -260,23 +260,23 @@
    {
     "page": "/articles/bim-3d-4d-5d-explained-what-s-the-real-difference",
     "clicks": 1,
-    "impressions": 15,
-    "ctr_pct": 6.67,
-    "position": 7.7
+    "impressions": 17,
+    "ctr_pct": 5.88,
+    "position": 8.8
    },
    {
     "page": "/articles/home-cinema-cost-australia",
     "clicks": 1,
-    "impressions": 269,
-    "ctr_pct": 0.37,
-    "position": 6.8
+    "impressions": 302,
+    "ctr_pct": 0.33,
+    "position": 6.4
    },
    {
     "page": "/articles/interior-design-for-property-developers",
     "clicks": 1,
-    "impressions": 305,
-    "ctr_pct": 0.33,
-    "position": 7.3
+    "impressions": 347,
+    "ctr_pct": 0.29,
+    "position": 7.4
    },
    {
     "page": "/articles/project-management-and-cost-control",
@@ -302,9 +302,9 @@
    {
     "page": "/articles/virtual-reality-interior-design",
     "clicks": 1,
-    "impressions": 3,
-    "ctr_pct": 33.33,
-    "position": 5
+    "impressions": 4,
+    "ctr_pct": 25.0,
+    "position": 6
    },
    {
     "page": "/contact",
@@ -330,16 +330,16 @@
    {
     "page": "/projects",
     "clicks": 1,
-    "impressions": 23,
-    "ctr_pct": 4.35,
-    "position": 12.7
+    "impressions": 25,
+    "ctr_pct": 4.0,
+    "position": 12.5
    },
    {
     "page": "/studio",
     "clicks": 1,
-    "impressions": 28,
-    "ctr_pct": 3.57,
-    "position": 12.2
+    "impressions": 29,
+    "ctr_pct": 3.45,
+    "position": 12.7
    },
    {
     "page": "/suppliers",
@@ -351,7 +351,7 @@
    {
     "page": "/articles",
     "clicks": 0,
-    "impressions": 48,
+    "impressions": 50,
     "ctr_pct": 0,
     "position": 16.5
    },
@@ -386,19 +386,19 @@
    {
     "page": "/articles/3d-rendering-brief-checklist-australia",
     "clicks": 0,
-    "impressions": 7,
+    "impressions": 8,
     "ctr_pct": 0,
-    "position": 7.4
+    "position": 6.9
    },
    {
     "page": "/articles/3d-rendering-brisbane",
     "clicks": 0,
-    "impressions": 38,
+    "impressions": 39,
     "ctr_pct": 0,
-    "position": 14.6
+    "position": 14.4
    }
   ],
-  "page_one_queries": 86,
+  "page_one_queries": 87,
   "top3_queries": 15,
   "daily": [
    {
@@ -530,6 +530,11 @@
     "d": "2026-11-11",
     "clicks": 1,
     "impressions": 184
+   },
+   {
+    "d": "2026-11-12",
+    "clicks": 2,
+    "impressions": 196
    }
   ]
  },
@@ -623,9 +628,9 @@
    },
    "developers adelaide": {
     "clicks": 0,
-    "impressions": 33,
+    "impressions": 35,
     "ctr_pct": 0,
-    "position": 25.1
+    "position": 25.8
    },
    "knock down rebuild melbourne": {
     "clicks": 0,
@@ -948,25 +953,47 @@
   ]
  },
  "ahrefs": {
-  "read_at": "2026-11-15 (Ahrefs web)",
-  "domain_rating": 0,
-  "ahrefs_rank": 114147553,
-  "backlinks": 895,
-  "backlinks_all_time": 1100,
-  "referring_domains": 862,
-  "referring_domains_all_time": 1100,
-  "organic_keywords": 0,
-  "organic_traffic": 0,
-  "ai_citations": 34,
-  "cited_pages": 12,
-  "ai_by_platform": {
-   "ChatGPT": 14,
-   "Copilot": 9,
-   "AI Mode": 4,
-   "Gemini": 3,
-   "Perplexity": 0
-  },
-  "source": "Ahrefs (MCP, Claude trên Mac)"
+  "read_at": null,
+  "workspace": null,
+  "country_filter": null,
+  "domain_rating": null,
+  "url_rating": null,
+  "ahrefs_rank": null,
+  "referring_domains": null,
+  "referring_domains_all_time": null,
+  "referring_domains_followed": null,
+  "referring_domains_followed_pct": null,
+  "backlinks": null,
+  "backlinks_all_time": null,
+  "backlinks_all_time_display": null,
+  "backlinks_all_time_note": null,
+  "backlinks_followed": null,
+  "backlinks_followed_pct": null,
+  "followed_note": null,
+  "authority_direction_note": null,
+  "health_score": null,
+  "site_audit_crawl": null,
+  "site_audit_caveat": null,
+  "crawled_pages_site_explorer": null,
+  "crawled_pages_404": null,
+  "crawled_pages_http_breakdown": null,
+  "crawled_pages_http_breakdown_note": null,
+  "crawled_pages_404_note": null,
+  "organic_keywords": null,
+  "organic_traffic": null,
+  "top_3_keywords": null,
+  "ai_citations": null,
+  "ai_by_platform": null,
+  "cited_pages": null,
+  "cited_pages_by_platform": null,
+  "cited_pages_note": null,
+  "web_analytics_visits": null,
+  "site_audit_issues": null,
+  "referring_domains_all_time_display": null,
+  "site_explorer_traffic_estimate_30d": null,
+  "traffic_analytics_estimate_visits": null,
+  "traffic_analytics_estimate_note": null,
+  "read_note": "Ahrefs NOT READ on 13 Nov: Chrome is signed out of Ahrefs (app.ahrefs.com redirects to the login page; no credentials entered). Every Ahrefs value is null; earlier values are not reused as today's."
  },
  "ai_visibility": {
   "score": null,
@@ -1021,11 +1048,11 @@
  "technical_health": {
   "measured_at": "2026-11-15",
   "source": "dxl-seo-audit",
-  "health": 97,
-  "pages_crawled": 127,
-  "ttfb_mean_ms": 278.0,
+  "health": 98,
+  "pages_crawled": 128,
+  "ttfb_mean_ms": 220.0,
   "response_times": {
-   "site_mean_ms": 278.0
+   "site_mean_ms": 220.0
   },
   "orphan_articles": 0,
   "thin_pages": 10
@@ -1350,38 +1377,25 @@
   }
  },
  "commentary": {
-  "vi": "GSC 28 ngày gần như đi ngang: 23 click (trước đó 24), 3.822 lượt hiển thị, vị trí trung bình cải thiện từ 22,1 lên 21,1 với 86 truy vấn ở trang 1. GA4 có 632 phiên, 3 key event, nhưng tìm kiếm tự nhiên chỉ mang về 61 phiên. Ahrefs: 862 domain trỏ về nhưng DR vẫn 0 và AI nhắc tới trang 34 lần. Việc nên làm: tối ưu title/meta cho các truy vấn trang 1 để tăng CTR (đang 0,6%).",
-  "en": "GSC 28-day traffic is flat: 23 clicks (24 before), 3,822 impressions, average position improved from 22.1 to 21.1 with 86 page-one queries. GA4 shows 632 sessions and 3 key events, but organic search brought only 61 sessions. Ahrefs: 862 referring domains yet DR is still 0, with 34 AI citations. Next: rewrite titles/meta for page-one queries to lift the 0.6% CTR.",
-  "by": "Claude (Mac)",
-  "rating": "bad",
-  "verdict_vi": "Hiển thị có nhưng không ra click: CTR 0,6% và organic chỉ 61 phiên trong 28 ngày.",
-  "verdict_en": "Visibility is not turning into clicks: 0.6% CTR and only 61 organic sessions in 28 days.",
-  "actions_vi": [
-   "Viết lại title/meta cho các truy vấn đang ở trang 1 (86 truy vấn) để kéo CTR lên.",
-   "Đẩy các truy vấn vị trí 11-20 lên trang 1 bằng liên kết nội bộ và bổ sung nội dung.",
-   "Tăng backlink chất lượng: 862 domain trỏ về nhưng DR vẫn 0, nên ưu tiên link dofollow từ site ngành xây dựng/BĐS."
-  ],
-  "actions_en": [
-   "Rewrite titles/meta for the 86 page-one queries to lift CTR.",
-   "Push position 11-20 queries onto page one with internal links and fuller content.",
-   "Earn quality backlinks: 862 referring domains but DR is still 0, so prioritise dofollow links from construction/property sites."
-  ]
+  "vi": "clicks 24 → 25; impressions 3905 → 4018; ctr_pct 0.6 → 0.6; avg_position 22.1 → 20.9; queries_with_impressions 331 → 327; brand_clicks 11 → 10; page_one_queries 87; ga4_sessions 640 → 632.",
+  "en": "clicks 24 → 25; impressions 3905 → 4018; ctr_pct 0.6 → 0.6; avg_position 22.1 → 20.9; queries_with_impressions 331 → 327; brand_clicks 11 → 10; page_one_queries 87; ga4_sessions 640 → 632.",
+  "by": "template"
  },
  "notes": {
-  "vi": "GSC 28 ngày gần như đi ngang: 23 click (trước đó 24), 3.822 lượt hiển thị, vị trí trung bình cải thiện từ 22,1 lên 21,1 với 86 truy vấn ở trang 1. GA4 có 632 phiên, 3 key event, nhưng tìm kiếm tự nhiên chỉ mang về 61 phiên. Ahrefs: 862 domain trỏ về nhưng DR vẫn 0 và AI nhắc tới trang 34 lần. Việc nên làm: tối ưu title/meta cho các truy vấn trang 1 để tăng CTR (đang 0,6%).",
-  "en": "GSC 28-day traffic is flat: 23 clicks (24 before), 3,822 impressions, average position improved from 22.1 to 21.1 with 86 page-one queries. GA4 shows 632 sessions and 3 key events, but organic search brought only 61 sessions. Ahrefs: 862 referring domains yet DR is still 0, with 34 AI citations. Next: rewrite titles/meta for page-one queries to lift the 0.6% CTR."
+  "vi": "clicks 24 → 25; impressions 3905 → 4018; ctr_pct 0.6 → 0.6; avg_position 22.1 → 20.9; queries_with_impressions 331 → 327; brand_clicks 11 → 10; page_one_queries 87; ga4_sessions 640 → 632.",
+  "en": "clicks 24 → 25; impressions 3905 → 4018; ctr_pct 0.6 → 0.6; avg_position 22.1 → 20.9; queries_with_impressions 331 → 327; brand_clicks 11 → 10; page_one_queries 87; ga4_sessions 640 → 632."
  },
  "commentary_input": {
   "report": "SEO (GSC + GA4)",
   "summary": {
    "today": {
-    "clicks": 23,
-    "impressions": 3822,
+    "clicks": 25,
+    "impressions": 4018,
     "ctr_pct": 0.6,
-    "avg_position": 21.1,
-    "queries_with_impressions": 323,
-    "brand_clicks": 9,
-    "page_one_queries": 86,
+    "avg_position": 20.9,
+    "queries_with_impressions": 327,
+    "brand_clicks": 10,
+    "page_one_queries": 87,
     "ga4_sessions": 632,
     "ga4_users": 481,
     "ga4_engagement_rate_pct": 27.53,
@@ -1412,7 +1426,7 @@
     "top_clicked": [
      [
       "dx living",
-      5
+      6
      ],
      [
       "dxliving",
