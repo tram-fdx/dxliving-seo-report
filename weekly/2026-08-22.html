@@ -750,7 +750,7 @@ document.querySelectorAll('#qTabs button').forEach(b=>b.onclick=()=>{
 });
 
 let saved='vi';
-try{saved=localStorage.getItem('dxl-lang-v2')||'en';}catch(e){}
+try{saved='en';}catch(e){}
 setLang(saved==='en'?'en':'vi');
 </script>
 </body>
