@@ -93,7 +93,7 @@
   "ahrefs_ai_citations": {
    "grain": "state",
    "label": "Ahrefs — AI citations",
-   "measured": 70,
+   "measured": 71,
    "of_days": 79,
    "points": [
     {
@@ -375,13 +375,17 @@
     {
      "d": "2026-11-05",
      "v": 27
+    },
+    {
+     "d": "2026-11-15",
+     "v": 34
     }
    ]
   },
   "ahrefs_backlinks": {
    "grain": "state",
    "label": "Ahrefs — backlinks",
-   "measured": 70,
+   "measured": 71,
    "of_days": 79,
    "points": [
     {
@@ -663,13 +667,17 @@
     {
      "d": "2026-11-05",
      "v": 902
+    },
+    {
+     "d": "2026-11-15",
+     "v": 895
     }
    ]
   },
   "ahrefs_cited_pages": {
    "grain": "state",
    "label": "Ahrefs — pages cited by AI",
-   "measured": 69,
+   "measured": 70,
    "of_days": 79,
    "points": [
     {
@@ -947,13 +955,17 @@
     {
      "d": "2026-11-05",
      "v": 11
+    },
+    {
+     "d": "2026-11-15",
+     "v": 12
     }
    ]
   },
   "ahrefs_dr": {
    "grain": "state",
    "label": "Ahrefs — Domain Rating",
-   "measured": 72,
+   "measured": 73,
    "of_days": 79,
    "points": [
     {
@@ -1243,13 +1255,17 @@
     {
      "d": "2026-11-05",
      "v": 0
+    },
+    {
+     "d": "2026-11-15",
+     "v": 0
     }
    ]
   },
   "ahrefs_org_keywords": {
    "grain": "state",
    "label": "Ahrefs — organic keywords",
-   "measured": 70,
+   "measured": 71,
    "of_days": 79,
    "points": [
     {
@@ -1531,13 +1547,17 @@
     {
      "d": "2026-11-05",
      "v": 0
+    },
+    {
+     "d": "2026-11-15",
+     "v": 0
     }
    ]
   },
   "ahrefs_refdomains": {
    "grain": "state",
    "label": "Ahrefs — referring domains",
-   "measured": 72,
+   "measured": 73,
    "of_days": 79,
    "points": [
     {
@@ -1827,6 +1847,10 @@
     {
      "d": "2026-11-05",
      "v": 867
+    },
+    {
+     "d": "2026-11-15",
+     "v": 862
     }
    ]
   },
