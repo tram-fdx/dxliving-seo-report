@@ -2,9 +2,9 @@
  "derived": true,
  "generated_at": "2026-11-15",
  "grain_legend": {
-  "day": "Số đo của đúng ngày đó. CỘNG DỒN ĐƯỢC trong khoảng.",
-  "state": "Chỉ số trạng thái tại thời điểm quét. Lấy trung bình hoặc giá trị cuối kỳ, không cộng.",
-  "window28": "Ảnh chụp cửa sổ 28 ngày trượt. KHÔNG cộng được (các ngày chồng nhau) — chỉ so đầu kỳ với cuối kỳ và vẽ xu hướng."
+  "day": "The measurement for that exact day. Can be summed over a range.",
+  "state": "A state metric at scan time. Average or take the end value, never sum.",
+  "window28": "A rolling 28-day window snapshot. Cannot be summed (days overlap) — compare start vs end and draw the trend."
  },
  "kind": "rollup",
  "scanned_count": 79,
@@ -92,7 +92,7 @@
  "series": {
   "ahrefs_ai_citations": {
    "grain": "state",
-   "label": "Ahrefs — trích dẫn AI",
+   "label": "Ahrefs — AI citations",
    "measured": 71,
    "of_days": 79,
    "points": [
@@ -676,7 +676,7 @@
   },
   "ahrefs_cited_pages": {
    "grain": "state",
-   "label": "Ahrefs — trang được AI trích",
+   "label": "Ahrefs — pages cited by AI",
    "measured": 70,
    "of_days": 79,
    "points": [
@@ -4000,7 +4000,7 @@
   },
   "gsc_position": {
    "grain": "window28",
-   "label": "GSC — vị trí TB",
+   "label": "GSC — avg position",
    "measured": 75,
    "of_days": 79,
    "points": [
@@ -4308,7 +4308,7 @@
   },
   "gsc_queries": {
    "grain": "window28",
-   "label": "GSC — số truy vấn",
+   "label": "GSC — queries with impressions",
    "measured": 72,
    "of_days": 79,
    "points": [
@@ -4604,7 +4604,7 @@
   },
   "sitemap_urls": {
    "grain": "state",
-   "label": "Sitemap — số URL",
+   "label": "Sitemap — URLs",
    "measured": 70,
    "of_days": 79,
    "points": [
@@ -4892,7 +4892,7 @@
   },
   "ttfb_mean_ms": {
    "grain": "state",
-   "label": "TTFB trung bình (ms)",
+   "label": "TTFB mean (ms)",
    "measured": 55,
    "of_days": 79,
    "points": [
@@ -5120,5 +5120,5 @@
   }
  },
  "site": "dxliving-seo-report",
- "source_of_truth": "data/YYYY-MM-DD.json — bất biến. File này là DẪN XUẤT, dựng lại hoàn toàn mỗi lần chạy, không sửa tay."
+ "source_of_truth": "data/YYYY-MM-DD.json — immutable. This file is DERIVED, rebuilt on every run, never hand-edited."
 }
