@@ -108,8 +108,8 @@ function render() {
 }
 
 Promise.all([get('data/series.json'), get('data/rollup.json'), get('data/days.json'), get('data/index.json')]).then(([se, ro, dy, ix]) => {
-  const api = (se && se.series) || {}, pre = new Set(Object.keys(api).map(k => k.split('_')[0]));
-  const ros = {}; Object.entries((ro && ro.series) || {}).forEach(([k, s]) => { if (!(s.grain === 'day' && pre.has(k.split('_')[0]))) ros[k] = s; });  // API wins over old daily scrapes
+  const api = (se && se.series) || {}, nk = k => k.replace(/_api$/, '').replace(/_/g, ''), have = new Set(Object.keys(api).map(nk));
+  const ros = {}; Object.entries((ro && ro.series) || {}).forEach(([k, s]) => { if (!(s.grain === 'day' && have.has(nk(k)))) ros[k] = s; });  // same metric from the API wins
   const all = Object.assign({}, ros, api);
   Object.entries(all).forEach(([k, s]) => { if (!s || !s.points) return; s.idx = {}; s.points.forEach(p => { if (p.v != null) s.idx[p.d] = p.v; }); S[k] = s; });
   DAYS = (dy && dy.days) || {};
