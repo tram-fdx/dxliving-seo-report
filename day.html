@@ -81,7 +81,9 @@ function render() {
     return `<div class="k"><div class="l">${E(s.label)}</div><div class="v">${F(v)}</div>` +
       (s.grain === 'day' ? `<div class="c">${L('so với hôm trước', 'vs prev day')} ${pc(v, p) || '—'} · ${L('so với TB 7 ngày', 'vs 7-day avg')} ${pc(v, a) || '—'}</div>` : '') + '</div>';
   }).join('') + '</div>' : `<p class="none">${L('Không có số đo cho ngày này.', 'No readings for this day.')}</p>`;
-  const x = DAYS[d] || {};
+  const x = Object.assign({}, DAYS[d] || {});
+  const srt = (a, k1, k2) => a && a.slice().sort((p, q) => (q[k1] || 0) - (p[k1] || 0) || (q[k2] || 0) - (p[k2] || 0));
+  x.queries = srt(x.queries, 'clicks', 'impressions'); x.pages = srt(x.pages, 'clicks', 'impressions');
   let h = '';
   if (SNAP.has(d)) h += `<section class="card">📄 ${L('Có báo cáo đầy đủ cho ngày này:', 'A full report exists for this day:')} <a href="archive/${d}.html">archive/${d}.html</a></section>`;
   h += `<section class="card"><h2>${L('Chỉ số trong ngày', 'Daily metrics')} <span class="muted">· ${d}</span></h2>${tiles(groups.day)}</section>`;
