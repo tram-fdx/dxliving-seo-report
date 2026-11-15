@@ -138,8 +138,13 @@ function val(s, d) { const p = s.idx[d]; return p == null ? null : p; }
 function avg7(s, d) { let t = 0, n = 0; for (let i = 1; i <= 7; i++) { const v = s.idx[shift(d, -i)]; if (v != null) { t += v; n++; } } return n ? t / n : null; }
 function pc(a, b) { if (a == null || b == null || !b) return ''; const p = (a - b) / b * 100; return `<span class="${p >= 0 ? 'up' : 'dn'}">${p >= 0 ? '+' : ''}${p.toFixed(1)}%</span>`; }
 
-function table(rows, cols) {
-  if (!rows || !rows.length) return `<p class="none">${L('Không có dữ liệu cho ngày này.', 'No data for this day.')}</p>`;
+let FIRST = {};
+function table(rows, cols, src) {
+  if (!rows || !rows.length) {
+    const d = document.getElementById('d').value, f = src && FIRST[src];
+    if (f && d < f) return `<p class="none">${L('Nguồn này chỉ có dữ liệu từ', 'This source only has data from')} ${f}.</p>`;
+    return `<p class="none">${L('Không có dữ liệu cho ngày này.', 'No data for this day.')}</p>`;
+  }
   return `<div class="scroll"><table><tr>${cols.map(c => `<th class="${c[2] || ''}">${c[0]}</th>`).join('')}</tr>` +
     rows.map(r => `<tr>${cols.map(c => `<td class="${c[2] || ''}">${c[3] ? c[3](r) : F(r[c[1]])}</td>`).join('')}</tr>`).join('') + '</table></div>';
 }
@@ -148,7 +153,7 @@ const link = (u, t) => u ? `<a href="${E(u)}" target="_blank" rel="noopener">${E
 function render() {
   const d = document.getElementById('d').value;
   document.documentElement.lang = LANG;
-  document.getElementById('title').textContent = SITE + ' — ' + L('Xem theo ngày', 'Daily view');
+  document.getElementById('title').textContent = SITE + ' — ' + L('Xem theo ngày · mọi kênh', 'Daily view · all channels');
   document.getElementById('sub').textContent = L('Số theo ngày lấy thẳng từ API của từng nguồn', 'Daily numbers straight from each source API') + ' · ' + d;
   const groups = {day: [], state: [], window28: []};
   Object.entries(S).forEach(([k, s]) => { if (groups[s.grain] && val(s, d) != null) groups[s.grain].push([k, s]); });
@@ -159,26 +164,26 @@ function render() {
   }).join('') + '</div>' : `<p class="none">${L('Không có số đo cho ngày này.', 'No readings for this day.')}</p>`;
   const x = Object.assign({}, DAYS[d] || {});
   const srt = (a, k1, k2) => a && a.slice().sort((p, q) => (q[k1] || 0) - (p[k1] || 0) || (q[k2] || 0) - (p[k2] || 0));
-  x.queries = srt(x.queries, 'clicks', 'impressions'); x.pages = srt(x.pages, 'clicks', 'impressions');
+  if (x.queries) x.queries = srt(x.queries, 'clicks', 'impressions'); if (x.pages) x.pages = srt(x.pages, 'clicks', 'impressions');
   let h = '';
   if (SNAP.has(d)) h += `<section class="card">📄 ${L('Có báo cáo đầy đủ cho ngày này:', 'A full report exists for this day:')} <a href="archive/${d}.html">archive/${d}.html</a></section>`;
   h += `<section class="card"><h2>${L('Chỉ số trong ngày', 'Daily metrics')} <span class="muted">· ${d}</span></h2>${tiles(groups.day)}</section>`;
   if (groups.state.length || groups.window28.length)
     h += `<section class="card"><h2>${L('Số đọc trong ngày (tổng / 28 ngày)', 'Readings taken this day (totals / 28-day windows)')}</h2>${tiles(groups.state.concat(groups.window28))}</section>`;
   const qc = [['Query', 'q'], ['Clicks', 'clicks', 'n'], [L('Hiển thị', 'Impr.'), 'impressions', 'n'], ['CTR %', 'ctr_pct', 'n'], [L('Vị trí', 'Pos.'), 'position', 'n']];
-  if ('queries' in x || 'pages' in x || S.gsc_clicks_day) {
-    h += `<section class="card"><h2>Google Search Console — ${L('top truy vấn', 'top queries')}</h2>${table(x.queries, qc)}</section>`;
-    h += `<section class="card"><h2>Google Search Console — ${L('top trang', 'top pages')}</h2>${table(x.pages, [[L('Trang', 'Page'), 'page', 't', r => link(r.page, r.page.replace(/^https?:\/\/[^/]+/, '') || '/')]].concat(qc.slice(1)))}</section>`;
+  {
+    h += `<section class="card"><h2>Google Search Console — ${L('top truy vấn', 'top queries')}</h2>${table(x.queries, qc, 'gsc')}</section>`;
+    h += `<section class="card"><h2>Google Search Console — ${L('top trang', 'top pages')}</h2>${table(x.pages, [[L('Trang', 'Page'), 'page', 't', r => link(r.page, r.page.replace(/^https?:\/\/[^/]+/, '') || '/')]].concat(qc.slice(1)), 'gsc')}</section>`;
   }
   const gc = [['Sessions', 'sessions', 'n'], ['Engaged', 'engaged', 'n'], [L('Người dùng', 'Users'), 'users', 'n'], ['Key events', 'key_events', 'n']];
-  if ('channels' in x || S.ga4_sessions_day) {
-    h += `<section class="card"><h2>GA4 — ${L('kênh', 'channels')}</h2>${table(x.channels, [[L('Kênh', 'Channel'), 'name']].concat(gc))}</section>`;
-    h += `<section class="card"><h2>GA4 — ${L('trang đích', 'landing pages')}</h2>${table(x.landing, [[L('Trang', 'Page'), 'name', 't']].concat(gc))}</section>`;
+  {
+    h += `<section class="card"><h2>GA4 — ${L('kênh', 'channels')}</h2>${table(x.channels, [[L('Kênh', 'Channel'), 'name']].concat(gc), 'ga4')}</section>`;
+    h += `<section class="card"><h2>GA4 — ${L('trang đích', 'landing pages')}</h2>${table(x.landing, [[L('Trang', 'Page'), 'name', 't']].concat(gc), 'ga4')}</section>`;
   }
   const pcols = [[L('Giờ (UTC)', 'Time (UTC)'), 'time'], [L('Nội dung', 'Post'), 't', 't', r => link(r.url, r.t || L('(không có chữ)', '(no text)'))],
                  ['Reactions', 'react', 'n'], ['Comments', 'com', 'n']];
-  if ('fb_posts' in x || S.fb_views_day) h += `<section class="card"><h2>Facebook — ${L('bài đăng trong ngày', 'posts published this day')}</h2>${table(x.fb_posts, pcols.concat([['Shares', 'sh', 'n']]))}</section>`;
-  if ('ig_posts' in x || S.ig_reach_day_api) h += `<section class="card"><h2>Instagram — ${L('bài đăng trong ngày', 'posts published this day')}</h2>${table(x.ig_posts, pcols.slice(0, 1).concat([[L('Loại', 'Type'), 'type']], pcols.slice(1)))}</section>`;
+  h += `<section class="card"><h2>Facebook — ${L('bài đăng trong ngày', 'posts published this day')}</h2>${table(x.fb_posts, pcols.concat([['Shares', 'sh', 'n']]), 'fb')}</section>`;
+  h += `<section class="card"><h2>Instagram — ${L('bài đăng trong ngày', 'posts published this day')}</h2>${table(x.ig_posts, pcols.slice(0, 1).concat([[L('Loại', 'Type'), 'type']], pcols.slice(1)), 'ig')}</section>`;
   h += `<p class="muted">${L('Dữ liệu có từ', 'Data available from')} ${MIN} ${L('đến', 'to')} ${MAX}. ${L('YouTube, LinkedIn, Ahrefs không có API theo ngày nên chỉ có số đọc từng ngày.', 'YouTube, LinkedIn and Ahrefs have no daily API, so only the readings taken each day appear.')}</p>`;
   document.getElementById('main').innerHTML = h;
   document.querySelectorAll('.lb').forEach(b => b.classList.toggle('on', b.dataset.l === LANG));
@@ -186,15 +191,23 @@ function render() {
   history.replaceState(null, '', '?d=' + d);
 }
 
-Promise.all([get('data/series.json'), get('data/rollup.json'), get('data/days.json'), get('data/index.json')]).then(([se, ro, dy, ix]) => {
+const R1 = '../dxliving-seo-report/data/', R2 = '../dxl-social-dashboard-site/data/';   // một trang ngày cho mọi kênh
+Promise.all([get(R1 + 'series.json'), get(R2 + 'series.json'), get(R1 + 'rollup.json'), get(R2 + 'rollup.json'),
+             get(R1 + 'days.json'), get(R2 + 'days.json'), get('data/index.json'), get('data/rollup.json')]).then(([s1, s2, r1, r2, d1, d2, ix, own]) => {
+  const se = {series: Object.assign({}, (s1 && s1.series) || {}, (s2 && s2.series) || {})};
+  const ro = {site: own && own.site, series: Object.assign({}, (r1 && r1.series) || {}, (r2 && r2.series) || {})};
+  const dy = {days: {}};
+  [d1, d2].forEach(x => Object.entries((x && x.days) || {}).forEach(([d, v]) => Object.assign(dy.days[d] = dy.days[d] || {}, v)));
+  const first = a => { const k = Object.keys(a).filter(Boolean); return k.length ? k.sort()[0] : ''; };
+  const fp = k => ((se.series[k] || {}).points || [{}])[0].d || '';
+  FIRST = {gsc: fp('gsc_clicks_day'), ga4: fp('ga4_sessions_day'), fb: fp('fb_views_day'), ig: fp('ig_reach_day_api')};
   const api = (se && se.series) || {}, nk = k => k.replace(/_api$/, '').replace(/_/g, ''), have = new Set(Object.keys(api).map(nk));
   const ros = {}; Object.entries((ro && ro.series) || {}).forEach(([k, s]) => { if (!(s.grain === 'day' && have.has(nk(k)))) ros[k] = s; });  // same metric from the API wins
   const all = Object.assign({}, ros, api);
   Object.entries(all).forEach(([k, s]) => { if (!s || !s.points) return; s.idx = {}; s.points.forEach(p => { if (p.v != null) s.idx[p.d] = p.v; }); S[k] = s; });
   DAYS = (dy && dy.days) || {};
   ((ix && ix.snapshots) || []).forEach(s => SNAP.add(s.date));
-  const NM = {'dxliving-seo-report': 'DX Living — SEO', 'dxl-social-dashboard-site': 'DX Living — Social'};
-  SITE = NM[ro && ro.site] || (ro && ro.site) || 'DX Living';
+  SITE = 'DX Living';
   const dates = Object.values(S).filter(s => s.grain === 'day').flatMap(s => s.points.map(p => p.d)).concat(Object.keys(DAYS)).sort();
   MIN = dates[0] || ''; MAX = dates[dates.length - 1] || '';
   const inp = document.getElementById('d');
