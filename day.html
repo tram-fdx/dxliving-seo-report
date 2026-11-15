@@ -15,7 +15,7 @@
   .sub{font-size:12px;opacity:.8;margin-top:4px}
   header a{color:#e5dcc7;font-size:12px}
   .ctl{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
-  .ctl button,.ctl input{font:inherit;font-size:13px;border:0;border-radius:20px;padding:5px 11px;cursor:pointer}
+  .ctl button:not(.dxcal),.ctl input{font:inherit;font-size:13px;border:0;border-radius:20px;padding:5px 11px;cursor:pointer}
   .ctl input{background:var(--accent);color:#2c2620;font-weight:700}
   .ctl button{background:#3d3a34;color:#e5dcc7}
   .ctl button.on{background:#e5dcc7;color:#2c2620}
@@ -42,13 +42,89 @@
   <div><h1 id="title">Daily view</h1><div class="sub" id="sub"></div></div>
   <div class="ctl">
     <button id="prev" title="Previous day">‹</button>
-    <input type="date" id="d" style="color-scheme:light" onclick="try{this.showPicker()}catch(e){}">
+    <input type="hidden" id="d"><button class="dxcal" id="dc" title="Pick any day"></button>
     <button id="next" title="Next day">›</button>
     <button data-l="en" class="lb on">EN</button><button data-l="vi" class="lb">VI</button>
     <a href="index.html" id="latest">Latest report</a> · <a href="history.html">History</a>
   </div>
 </div></header>
 <div class="wrap" id="main"><p class="muted">Loading…</p></div>
+<script>
+/* dxCal: lịch bật ra cho ô ngày (Mon-first, mũi tên lên/xuống đổi tháng, Clear / Today).
+   Dùng: <button class="dxcal" data-value="YYYY-MM-DD" data-min=".." data-max=".."></button>
+   el.dxPick = function(dateStr){...}  (gọi khi chọn ngày) */
+(function () {
+  if (window.dxCal) return;
+  var css = '.dxcal{background:#c9a46a;color:#2c2620;border:0;border-radius:20px;padding:4px 12px;font:inherit;font-size:12px;font-weight:700;cursor:pointer}' +
+    '.dxcal:after{content:" \\25BE"}' +
+    '.dxpop{position:absolute;z-index:9999;background:#fff;color:#222;border:1px solid #d9d9d9;border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,.18);padding:12px;width:268px;font:13px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;text-align:left}' +
+    '.dxpop .hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}' +
+    '.dxpop .hd b{font-size:14px;cursor:pointer}.dxpop .hd button{border:0;background:none;font-size:18px;cursor:pointer;padding:2px 8px;color:#444}' +
+    '.dxpop table{width:100%;border-collapse:collapse}.dxpop th{font-weight:600;color:#555;padding:4px 0;text-align:center;font-size:12px}' +
+    '.dxpop td{text-align:center;padding:1px}.dxpop td span{display:block;padding:6px 0;border-radius:4px;cursor:pointer;border:1px solid transparent}' +
+    '.dxpop td span:hover{background:#eef3ff}.dxpop td.o span{color:#aaa}.dxpop td.x span{color:#ccc;cursor:not-allowed;background:none}' +
+    '.dxpop td.t span{border-color:#555}.dxpop td.s span{background:#1a73e8;color:#fff}' +
+    '.dxpop .ft{display:flex;justify-content:space-between;margin-top:8px}.dxpop .ft a{color:#1a73e8;cursor:pointer;text-decoration:none}' +
+    '.dxpop select{font:inherit;margin-left:6px}';
+  var st = document.createElement('style'); st.textContent = css; document.head.appendChild(st);
+  var M = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  var pad = function (n) { return (n < 10 ? '0' : '') + n; };
+  var iso = function (d) { return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()); };
+  var show = function (v) { return v ? v.slice(8, 10) + '/' + v.slice(5, 7) + '/' + v.slice(0, 4) : 'Pick a date'; };
+  var pop = null;
+  function close() { if (pop) { pop.remove(); pop = null; } }
+  document.addEventListener('mousedown', function (e) { if (pop && !pop.contains(e.target) && !e.target.classList.contains('dxcal')) close(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+  function open(el) {
+    close();
+    var val = el.dataset.value, mn = el.dataset.min || '', mx = el.dataset.max || '';
+    var cur = new Date((val || iso(new Date())) + 'T00:00:00'); cur.setDate(1);
+    pop = document.createElement('div'); pop.className = 'dxpop';
+    document.body.appendChild(pop);
+    var r = el.getBoundingClientRect();
+    pop.style.top = (window.scrollY + r.bottom + 6) + 'px';
+    pop.style.left = Math.max(8, Math.min(window.scrollX + r.right - 268, window.scrollX + document.documentElement.clientWidth - 284)) + 'px';
+    function pick(v) { el.dataset.value = v; el.textContent = show(v); close(); if (el.dxPick) el.dxPick(v); }
+    function draw() {
+      var y = cur.getFullYear(), m = cur.getMonth(), today = iso(new Date());
+      var start = new Date(y, m, 1), off = (start.getDay() + 6) % 7; start.setDate(1 - off);
+      var yrs = '', y0 = mn ? +mn.slice(0, 4) : y - 5, y1 = mx ? +mx.slice(0, 4) : y + 1;
+      for (var k = y1; k >= y0; k--) yrs += '<option' + (k === y ? ' selected' : '') + '>' + k + '</option>';
+      var h = '<div class="hd"><b>' + M[m] + '<select>' + yrs + '</select></b><span><button data-n="-1" title="Previous month">&#8593;</button><button data-n="1" title="Next month">&#8595;</button></span></div><table><tr>' +
+        ['M','T','W','T','F','S','S'].map(function (x) { return '<th>' + x + '</th>'; }).join('') + '</tr>';
+      for (var w = 0; w < 6; w++) {
+        h += '<tr>';
+        for (var i = 0; i < 7; i++) {
+          var d = new Date(start); d.setDate(start.getDate() + w * 7 + i);
+          var v = iso(d), c = [];
+          if (d.getMonth() !== m) c.push('o');
+          if ((mn && v < mn) || (mx && v > mx)) c.push('x');
+          if (v === today) c.push('t');
+          if (v === el.dataset.value) c.push('s');
+          h += '<td class="' + c.join(' ') + '"><span data-v="' + v + '">' + d.getDate() + '</span></td>';
+        }
+        h += '</tr>';
+      }
+      h += '</table><div class="ft"><a data-a="clear">Clear</a><a data-a="today">Today</a></div>';
+      pop.innerHTML = h;
+      pop.querySelector('select').onchange = function () { cur.setFullYear(+this.value); draw(); };
+      pop.querySelectorAll('.hd button').forEach(function (b) { b.onclick = function () { cur.setMonth(cur.getMonth() + (+b.dataset.n)); draw(); }; });
+      pop.querySelectorAll('td span').forEach(function (s) { s.onclick = function () { if (!s.parentNode.classList.contains('x')) pick(s.dataset.v); }; });
+      pop.querySelector('[data-a=clear]').onclick = function () { el.dataset.value = ''; el.textContent = show(''); close(); };
+      pop.querySelector('[data-a=today]').onclick = function () {
+        var t = iso(new Date()); if (mx && t > mx) t = mx; if (mn && t < mn) t = mn; pick(t);
+      };
+    }
+    draw();
+  }
+  window.dxCal = function (el) {
+    el.textContent = show(el.dataset.value);
+    el.onclick = function (e) { e.preventDefault(); pop ? close() : open(el); };
+  };
+  document.querySelectorAll('.dxcal').forEach(window.dxCal);
+})();
+
+</script>
 <script>
 let LANG = 'en';
 const L = (vi, en) => LANG === 'vi' ? vi : en;
@@ -106,6 +182,7 @@ function render() {
   h += `<p class="muted">${L('Dữ liệu có từ', 'Data available from')} ${MIN} ${L('đến', 'to')} ${MAX}. ${L('YouTube, LinkedIn, Ahrefs không có API theo ngày nên chỉ có số đọc từng ngày.', 'YouTube, LinkedIn and Ahrefs have no daily API, so only the readings taken each day appear.')}</p>`;
   document.getElementById('main').innerHTML = h;
   document.querySelectorAll('.lb').forEach(b => b.classList.toggle('on', b.dataset.l === LANG));
+  const dc = document.getElementById('dc'); dc.dataset.value = d; dc.textContent = d.slice(8) + '/' + d.slice(5, 7) + '/' + d.slice(0, 4);
   history.replaceState(null, '', '?d=' + d);
 }
 
@@ -124,7 +201,8 @@ Promise.all([get('data/series.json'), get('data/rollup.json'), get('data/days.js
   inp.min = MIN; inp.max = MAX;
   const q = new URLSearchParams(location.search).get('d');
   inp.value = q && q >= MIN && q <= MAX ? q : MAX;
-  inp.onchange = render;
+  const dc = document.getElementById('dc'); dc.dataset.min = MIN; dc.dataset.max = MAX; dc.dataset.value = inp.value; dxCal(dc);
+  dc.dxPick = v => { inp.value = v; render(); };
   document.getElementById('prev').onclick = () => { if (inp.value > MIN) { inp.value = shift(inp.value, -1); render(); } };
   document.getElementById('next').onclick = () => { if (inp.value < MAX) { inp.value = shift(inp.value, 1); render(); } };
   document.querySelectorAll('.lb').forEach(b => b.onclick = () => { LANG = b.dataset.l; render(); });
