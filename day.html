@@ -28,7 +28,7 @@
   .k .v{font-size:22px;font-weight:700;margin-top:4px}
   .k .c{font-size:12px;margin-top:2px}
   .up{color:var(--green)} .dn{color:var(--red)}
-  .scroll{overflow-x:auto}
+  .scroll{overflow:auto;max-height:440px}
   table{width:100%;border-collapse:collapse;font-size:13px}
   th,td{text-align:left;padding:7px 8px;border-bottom:1px solid var(--line);vertical-align:top}
   th{font-size:11px;color:var(--muted);text-transform:uppercase}
@@ -172,13 +172,13 @@ function render() {
     h += `<section class="card"><h2>${L('Số đọc trong ngày (tổng / 28 ngày)', 'Readings taken this day (totals / 28-day windows)')}</h2>${tiles(groups.state.concat(groups.window28))}</section>`;
   const qc = [['Query', 'q'], ['Clicks', 'clicks', 'n'], [L('Hiển thị', 'Impr.'), 'impressions', 'n'], ['CTR %', 'ctr_pct', 'n'], [L('Vị trí', 'Pos.'), 'position', 'n']];
   {
-    h += `<section class="card"><h2>Google Search Console — ${L('top truy vấn', 'top queries')}</h2>${table(x.queries, qc, 'gsc')}</section>`;
-    h += `<section class="card"><h2>Google Search Console — ${L('top trang', 'top pages')}</h2>${table(x.pages, [[L('Trang', 'Page'), 'page', 't', r => link(r.page, r.page.replace(/^https?:\/\/[^/]+/, '') || '/')]].concat(qc.slice(1)), 'gsc')}</section>`;
+    h += `<section class="card"><h2>Google Search Console — ${L('truy vấn', 'queries')} <span class="muted">(${(x.queries || []).length})</span></h2>${table(x.queries, qc, 'gsc')}</section>`;
+    h += `<section class="card"><h2>Google Search Console — ${L('trang', 'pages')} <span class="muted">(${(x.pages || []).length})</span></h2>${table(x.pages, [[L('Trang', 'Page'), 'page', 't', r => link(r.page, r.page.replace(/^https?:\/\/[^/]+/, '') || '/')]].concat(qc.slice(1)), 'gsc')}</section>`;
   }
   const gc = [['Sessions', 'sessions', 'n'], ['Engaged', 'engaged', 'n'], [L('Người dùng', 'Users'), 'users', 'n'], ['Key events', 'key_events', 'n']];
   {
     h += `<section class="card"><h2>GA4 — ${L('kênh', 'channels')}</h2>${table(x.channels, [[L('Kênh', 'Channel'), 'name']].concat(gc), 'ga4')}</section>`;
-    h += `<section class="card"><h2>GA4 — ${L('trang đích', 'landing pages')}</h2>${table(x.landing, [[L('Trang', 'Page'), 'name', 't']].concat(gc), 'ga4')}</section>`;
+    h += `<section class="card"><h2>GA4 — ${L('trang đích', 'landing pages')} <span class="muted">(${(x.landing || []).length})</span></h2>${table(x.landing, [[L('Trang', 'Page'), 'name', 't']].concat(gc), 'ga4')}</section>`;
   }
   const pcols = [[L('Giờ (UTC)', 'Time (UTC)'), 'time'], [L('Nội dung', 'Post'), 't', 't', r => link(r.url, r.t || L('(không có chữ)', '(no text)'))],
                  ['Reactions', 'react', 'n'], ['Comments', 'com', 'n']];
