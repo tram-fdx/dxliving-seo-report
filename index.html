@@ -235,14 +235,14 @@ window.__DXR_CFG={rollup:"data/rollup.json",lang:function(){try{return (typeof L
       '<button class="dxr-tab'+(S.mode==='trend'?' on':'')+'" data-m="trend">'+t('Xu hướng theo khoảng','Trend over a range')+'</button>'+
       '<button class="dxr-tab'+(S.mode==='cmp'?' on':'')+'" data-m="cmp">'+t('So sánh hai ngày','Compare two days')+'</button></div>';
     var ctrl = S.mode==='trend'
-      ? '<div class="dxr-ctrl"><label>'+t('Từ','From')+' <select id="dxr-from">'+opts(S.from,S.dates)+'</select></label>'+
-        '<label>'+t('Đến','To')+' <select id="dxr-to">'+opts(S.to,S.dates)+'</select></label>'+
+      ? '<div class="dxr-ctrl"><label>'+t('Từ','From')+' <button class="dxcal" id="dxr-from" data-value="'+S.from+'" data-min="'+S.dates[0]+'" data-max="'+S.dates[S.dates.length-1]+'">'+S.from+'</button></label>'+
+        '<label>'+t('Đến','To')+' <button class="dxcal" id="dxr-to" data-value="'+S.to+'" data-min="'+S.dates[0]+'" data-max="'+S.dates[S.dates.length-1]+'">'+S.to+'</button></label>'+
         '<span class="dxr-hint" id="dxr-count"></span></div>'+
         '<div class="dxr-tabs">'+[[7,t('7 ngày','7 days')],[30,t('30 ngày','30 days')],[90,t('90 ngày','90 days')],[0,t('Tất cả thời gian','All time')]]
           .map(function(p){var on=presetFrom(p[0])===S.from&&S.to===S.dates[S.dates.length-1];
             return '<button class="dxr-tab'+(on?' on':'')+'" data-p="'+p[0]+'">'+p[1]+'</button>';}).join('')+'</div>'
-      : '<div class="dxr-ctrl"><label>'+t('Ngày A','Day A')+' <select id="dxr-a">'+opts(S.a,S.dates)+'</select></label>'+
-        '<label>'+t('Ngày B','Day B')+' <select id="dxr-b">'+opts(S.b,S.dates)+'</select></label></div>';
+      : '<div class="dxr-ctrl"><label>'+t('Ngày A','Day A')+' <button class="dxcal" id="dxr-a" data-value="'+S.a+'" data-min="'+S.dates[0]+'" data-max="'+S.dates[S.dates.length-1]+'">'+S.a+'</button></label>'+
+        '<label>'+t('Ngày B','Day B')+' <button class="dxcal" id="dxr-b" data-value="'+S.b+'" data-min="'+S.dates[0]+'" data-max="'+S.dates[S.dates.length-1]+'">'+S.b+'</button></label></div>';
     var note='<p class="dxr-note">'+t(
       '<b>Số theo ngày lấy thẳng từ API nguồn</b> (<code>data/series.json</code>: Search Console 16 tháng, GA4 toàn bộ, Facebook/Instagram ~2 năm), cộng với số đọc mỗi lần quét cho các nguồn không có API (<code>data/rollup.json</code>) — file dẫn xuất dựng lại mỗi sáng từ các file ngày bất biến, không sửa tay. Mỗi chỉ số mang một <b>nhãn grain</b> và bảng dưới chỉ làm đúng phép tính hợp lệ với nhãn đó. Ngày không quét <b>không bao giờ được nội suy</b>; ô “—” nghĩa là ngày đó không đo chỉ số này.',
       '<b>Daily numbers come straight from the source APIs</b> (<code>data/series.json</code>: Search Console 16 months, GA4 all time, Facebook/Instagram ~2 years), plus per-scan readings for sources without an API (<code>data/rollup.json</code>) — a derived file rebuilt each morning from the immutable day files, never hand-edited. Every metric carries a <b>grain label</b>, and the table below only performs the arithmetic that label allows. Unscanned days are <b>never interpolated</b>; a “—” means that metric was not measured that day.')+'</p>';
@@ -252,10 +252,13 @@ window.__DXR_CFG={rollup:"data/rollup.json",lang:function(){try{return (typeof L
       S.to=S.dates[S.dates.length-1]; S.from=presetFrom(+b.dataset.p); render();};});
     var f=document.getElementById('dxr-from'),to=document.getElementById('dxr-to'),
         a=document.getElementById('dxr-a'),b2=document.getElementById('dxr-b');
-    if(f) f.onchange=function(){S.from=f.value; if(S.from>S.to)S.to=S.from; render();};
-    if(to) to.onchange=function(){S.to=to.value; if(S.to<S.from)S.from=S.to; render();};
-    if(a) a.onchange=function(){S.a=a.value;draw();};
-    if(b2) b2.onchange=function(){S.b=b2.value;draw();};
+    // lịch bật ra (dxCal); ngày không có số -> lấy ngày có số gần nhất
+    function near(v,up){var r=null;S.dates.forEach(function(d){if(up?(d>=v&&r===null):(d<=v))r=d;});return r||(up?S.dates[S.dates.length-1]:S.dates[0]);}
+    function hook(el,fn){if(!el)return;if(window.dxCal)window.dxCal(el);el.dxPick=fn;}
+    hook(f,function(v){S.from=near(v,true); if(S.from>S.to)S.to=S.from; render();});
+    hook(to,function(v){S.to=near(v,false); if(S.to<S.from)S.from=S.to; render();});
+    hook(a,function(v){S.a=near(v,false);render();});
+    hook(b2,function(v){S.b=near(v,false);render();});
     draw();
   }
 
