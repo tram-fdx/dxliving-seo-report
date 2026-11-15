@@ -7,20 +7,20 @@
   "ga4": "2026-10-18 → 2026-11-14"
  },
  "gsc_28d": {
-  "clicks": 25,
-  "impressions": 4018,
+  "clicks": 26,
+  "impressions": 4230,
   "ctr_pct": 0.6,
-  "avg_position": 20.9,
-  "queries_with_impressions": 327,
+  "avg_position": 20.5,
+  "queries_with_impressions": 336,
   "brand_clicks": 10,
-  "brand_clicks_share_pct": 40.0,
+  "brand_clicks_share_pct": 38.5,
   "clicked_queries": [
    {
     "q": "dx living",
     "clicks": 6,
-    "impressions": 46,
-    "ctr_pct": 13.04,
-    "position": 3.5
+    "impressions": 47,
+    "ctr_pct": 12.77,
+    "position": 3.4
    },
    {
     "q": "dxliving",
@@ -48,9 +48,23 @@
    {
     "q": "how to interior design for developers",
     "clicks": 0,
-    "impressions": 143,
+    "impressions": 146,
     "ctr_pct": 0,
-    "position": 5.2
+    "position": 5.3
+   },
+   {
+    "q": "31 mcilwain drive mermaid waters",
+    "clicks": 0,
+    "impressions": 127,
+    "ctr_pct": 0,
+    "position": 8.9
+   },
+   {
+    "q": "media room renovation cost",
+    "clicks": 0,
+    "impressions": 122,
+    "ctr_pct": 0,
+    "position": 3.4
    },
    {
     "q": "3d house visualisation adelaide",
@@ -58,20 +72,6 @@
     "impressions": 119,
     "ctr_pct": 0,
     "position": 7.9
-   },
-   {
-    "q": "31 mcilwain drive mermaid waters",
-    "clicks": 0,
-    "impressions": 113,
-    "ctr_pct": 0,
-    "position": 8.9
-   },
-   {
-    "q": "media room renovation cost",
-    "clicks": 0,
-    "impressions": 109,
-    "ctr_pct": 0,
-    "position": 3.0
    },
    {
     "q": "3d visualisation adelaide",
@@ -97,23 +97,44 @@
    {
     "q": "living room ideas australia",
     "clicks": 0,
-    "impressions": 60,
+    "impressions": 62,
     "ctr_pct": 0,
-    "position": 22.9
+    "position": 22.8
    },
    {
     "q": "interior design for property developers",
     "clicks": 0,
-    "impressions": 56,
+    "impressions": 61,
     "ctr_pct": 0,
     "position": 8.2
    },
    {
+    "q": "home theater renovation cost",
+    "clicks": 0,
+    "impressions": 48,
+    "ctr_pct": 0,
+    "position": 5.3
+   },
+   {
     "q": "dx living",
     "clicks": 6,
-    "impressions": 46,
-    "ctr_pct": 13.04,
-    "position": 3.5
+    "impressions": 47,
+    "ctr_pct": 12.77,
+    "position": 3.4
+   },
+   {
+    "q": "interior design for developers",
+    "clicks": 0,
+    "impressions": 44,
+    "ctr_pct": 0,
+    "position": 10.1
+   },
+   {
+    "q": "design coordination",
+    "clicks": 0,
+    "impressions": 41,
+    "ctr_pct": 0,
+    "position": 79.6
    },
    {
     "q": "adelaide property developers",
@@ -121,13 +142,6 @@
     "impressions": 40,
     "ctr_pct": 0,
     "position": 15.3
-   },
-   {
-    "q": "design coordination",
-    "clicks": 0,
-    "impressions": 39,
-    "ctr_pct": 0,
-    "position": 79.3
    },
    {
     "q": "3d architectural visualisation adelaide",
@@ -151,13 +165,6 @@
     "position": 44.1
    },
    {
-    "q": "interior design for developers",
-    "clicks": 0,
-    "impressions": 33,
-    "ctr_pct": 0,
-    "position": 10.1
-   },
-   {
     "q": "rendering apartment community",
     "clicks": 0,
     "impressions": 32,
@@ -165,25 +172,18 @@
     "position": 19.1
    },
    {
+    "q": "living room designs australia",
+    "clicks": 0,
+    "impressions": 30,
+    "ctr_pct": 0,
+    "position": 11.5
+   },
+   {
     "q": "architectural rendering cost",
     "clicks": 0,
     "impressions": 29,
     "ctr_pct": 0,
     "position": 65.0
-   },
-   {
-    "q": "living room designs australia",
-    "clicks": 0,
-    "impressions": 29,
-    "ctr_pct": 0,
-    "position": 11.9
-   },
-   {
-    "q": "home theater renovation cost",
-    "clicks": 0,
-    "impressions": 28,
-    "ctr_pct": 0,
-    "position": 4
    },
    {
     "q": "interior design for property development",
@@ -207,26 +207,26 @@
     "position": 33.4
    },
    {
+    "q": "property development interior design",
+    "clicks": 0,
+    "impressions": 25,
+    "ctr_pct": 0,
+    "position": 9.6
+   },
+   {
     "q": "project cost control",
     "clicks": 1,
     "impressions": 24,
     "ctr_pct": 4.17,
     "position": 83.9
-   },
-   {
-    "q": "duplex building design",
-    "clicks": 0,
-    "impressions": 23,
-    "ctr_pct": 0,
-    "position": 86.0
    }
   ],
   "top_pages": [
    {
     "page": "/",
     "clicks": 16,
-    "impressions": 140,
-    "ctr_pct": 11.43,
+    "impressions": 146,
+    "ctr_pct": 10.96,
     "position": 3.3
    },
    {
@@ -239,16 +239,16 @@
    {
     "page": "/model",
     "clicks": 2,
-    "impressions": 75,
-    "ctr_pct": 2.67,
-    "position": 6.6
+    "impressions": 80,
+    "ctr_pct": 2.5,
+    "position": 8.2
    },
    {
     "page": "/about",
     "clicks": 1,
-    "impressions": 83,
-    "ctr_pct": 1.2,
-    "position": 4.5
+    "impressions": 85,
+    "ctr_pct": 1.18,
+    "position": 4.4
    },
    {
     "page": "/apply",
@@ -260,23 +260,30 @@
    {
     "page": "/articles/bim-3d-4d-5d-explained-what-s-the-real-difference",
     "clicks": 1,
-    "impressions": 17,
-    "ctr_pct": 5.88,
+    "impressions": 18,
+    "ctr_pct": 5.56,
     "position": 8.8
    },
    {
     "page": "/articles/home-cinema-cost-australia",
     "clicks": 1,
-    "impressions": 302,
-    "ctr_pct": 0.33,
-    "position": 6.4
+    "impressions": 339,
+    "ctr_pct": 0.29,
+    "position": 6.5
    },
    {
     "page": "/articles/interior-design-for-property-developers",
     "clicks": 1,
-    "impressions": 347,
-    "ctr_pct": 0.29,
+    "impressions": 381,
+    "ctr_pct": 0.26,
     "position": 7.4
+   },
+   {
+    "page": "/articles/modern-house-design-2026-10-trends-shaping-homes",
+    "clicks": 1,
+    "impressions": 42,
+    "ctr_pct": 2.38,
+    "position": 20.4
    },
    {
     "page": "/articles/project-management-and-cost-control",
@@ -316,30 +323,30 @@
    {
     "page": "/faq",
     "clicks": 1,
-    "impressions": 12,
-    "ctr_pct": 8.33,
-    "position": 6.6
+    "impressions": 13,
+    "ctr_pct": 7.69,
+    "position": 11.8
    },
    {
     "page": "/modules",
     "clicks": 1,
-    "impressions": 56,
-    "ctr_pct": 1.79,
-    "position": 3.9
+    "impressions": 58,
+    "ctr_pct": 1.72,
+    "position": 3.8
    },
    {
     "page": "/projects",
     "clicks": 1,
-    "impressions": 25,
-    "ctr_pct": 4.0,
-    "position": 12.5
+    "impressions": 26,
+    "ctr_pct": 3.85,
+    "position": 12.2
    },
    {
     "page": "/studio",
     "clicks": 1,
-    "impressions": 29,
-    "ctr_pct": 3.45,
-    "position": 12.7
+    "impressions": 31,
+    "ctr_pct": 3.23,
+    "position": 13.2
    },
    {
     "page": "/suppliers",
@@ -372,9 +379,9 @@
    {
     "page": "/articles/3d-house-design-guide-from-sketch-to-walkthrough",
     "clicks": 0,
-    "impressions": 16,
+    "impressions": 17,
     "ctr_pct": 0,
-    "position": 6
+    "position": 5.9
    },
    {
     "page": "/articles/3d-rendering-adelaide",
@@ -389,17 +396,10 @@
     "impressions": 8,
     "ctr_pct": 0,
     "position": 6.9
-   },
-   {
-    "page": "/articles/3d-rendering-brisbane",
-    "clicks": 0,
-    "impressions": 39,
-    "ctr_pct": 0,
-    "position": 14.4
    }
   ],
-  "page_one_queries": 87,
-  "top3_queries": 15,
+  "page_one_queries": 92,
+  "top3_queries": 16,
   "daily": [
    {
     "d": "2026-10-17",
@@ -535,6 +535,11 @@
     "d": "2026-11-12",
     "clicks": 2,
     "impressions": 196
+   },
+   {
+    "d": "2026-11-13",
+    "clicks": 1,
+    "impressions": 212
    }
   ]
  },
@@ -622,9 +627,9 @@
    },
    "3d renders for property developers melbourne": {
     "clicks": 0,
-    "impressions": 2,
+    "impressions": 3,
     "ctr_pct": 0,
-    "position": 37
+    "position": 39.7
    },
    "developers adelaide": {
     "clicks": 0,
@@ -657,37 +662,37 @@
   }
  },
  "ga4_28d": {
-  "sessions": 632,
-  "engaged_sessions": 174,
-  "engagement_rate_pct": 27.53,
-  "key_events": 3,
-  "session_key_event_rate_pct": 0.47,
-  "users": 481,
-  "new_users": 459,
+  "sessions": 617,
+  "engaged_sessions": 173,
+  "engagement_rate_pct": 28.04,
+  "key_events": 2,
+  "session_key_event_rate_pct": 0.32,
+  "users": 474,
+  "new_users": 452,
   "returning_users": 26,
-  "avg_engagement_time": "1m 35s",
-  "events_per_session": 4.32,
-  "total_events": 2729,
+  "avg_engagement_time": "1m 37s",
+  "events_per_session": 4.34,
+  "total_events": 2679,
   "channel_breakdown": [
    {
     "name": "Direct",
-    "sessions": 401,
-    "engaged_sessions": 82,
+    "sessions": 388,
+    "engaged_sessions": 79,
     "engagement_rate_pct": 20.4,
-    "key_events": 2
+    "key_events": 1
    },
    {
     "name": "Organic Social",
-    "sessions": 157,
-    "engaged_sessions": 52,
-    "engagement_rate_pct": 33.1,
+    "sessions": 159,
+    "engaged_sessions": 54,
+    "engagement_rate_pct": 34.0,
     "key_events": 0
    },
    {
     "name": "Organic Search",
-    "sessions": 61,
+    "sessions": 58,
     "engaged_sessions": 36,
-    "engagement_rate_pct": 59.0,
+    "engagement_rate_pct": 62.1,
     "key_events": 1
    },
    {
@@ -699,7 +704,7 @@
    },
    {
     "name": "Unassigned",
-    "sessions": 6,
+    "sessions": 5,
     "engaged_sessions": 0,
     "engagement_rate_pct": 0.0,
     "key_events": 0
@@ -715,23 +720,23 @@
   "source_medium_top": [
    {
     "name": "(direct) / (none)",
-    "sessions": 401,
-    "engaged_sessions": 82,
+    "sessions": 388,
+    "engaged_sessions": 79,
     "engagement_rate_pct": 20.4,
-    "key_events": 2
+    "key_events": 1
    },
    {
     "name": "facebook / social",
-    "sessions": 51,
-    "engaged_sessions": 11,
-    "engagement_rate_pct": 21.6,
+    "sessions": 50,
+    "engaged_sessions": 13,
+    "engagement_rate_pct": 26.0,
     "key_events": 0
    },
    {
     "name": "google / organic",
-    "sessions": 47,
-    "engaged_sessions": 26,
-    "engagement_rate_pct": 55.3,
+    "sessions": 45,
+    "engaged_sessions": 25,
+    "engagement_rate_pct": 55.6,
     "key_events": 1
    },
    {
@@ -743,7 +748,7 @@
    },
    {
     "name": "linkedin / social",
-    "sessions": 21,
+    "sessions": 23,
     "engaged_sessions": 0,
     "engagement_rate_pct": 0.0,
     "key_events": 0
@@ -764,9 +769,9 @@
    },
    {
     "name": "bing / organic",
-    "sessions": 9,
+    "sessions": 7,
     "engaged_sessions": 6,
-    "engagement_rate_pct": 66.7,
+    "engagement_rate_pct": 85.7,
     "key_events": 0
    },
    {
@@ -774,6 +779,13 @@
     "sessions": 6,
     "engaged_sessions": 3,
     "engagement_rate_pct": 50.0,
+    "key_events": 0
+   },
+   {
+    "name": "youtube / social",
+    "sessions": 5,
+    "engaged_sessions": 0,
+    "engagement_rate_pct": 0.0,
     "key_events": 0
    },
    {
@@ -789,18 +801,11 @@
     "engaged_sessions": 3,
     "engagement_rate_pct": 75.0,
     "key_events": 0
-   },
-   {
-    "name": "youtube / social",
-    "sessions": 4,
-    "engaged_sessions": 0,
-    "engagement_rate_pct": 0.0,
-    "key_events": 0
    }
   ],
   "ai_assistant_channel": {
    "sessions": 6,
-   "share_of_sessions_pct": 0.95,
+   "share_of_sessions_pct": 0.97,
    "engaged_sessions": 3,
    "engagement_rate_pct": 50.0,
    "key_events": 0,
@@ -941,9 +946,9 @@
     "users": 30
    },
    {
-    "d": "2026-11-13",
-    "sessions": 50,
-    "users": 45
+    "d": "2026-11-12",
+    "sessions": 36,
+    "users": 36
    },
    {
     "d": "2026-11-14",
@@ -953,16 +958,47 @@
   ]
  },
  "ahrefs": {
-  "read_at": "2026-11-15 (Ahrefs web)",
-  "domain_rating": 0,
-  "ahrefs_rank": 114147553,
-  "backlinks": 895,
-  "referring_domains": 862,
-  "organic_keywords": 0,
-  "organic_traffic": 0,
-  "ai_citations": 34,
-  "cited_pages": 12,
-  "source": "Ahrefs (MCP, Claude trên Mac)"
+  "read_at": null,
+  "workspace": null,
+  "country_filter": null,
+  "domain_rating": null,
+  "url_rating": null,
+  "ahrefs_rank": null,
+  "referring_domains": null,
+  "referring_domains_all_time": null,
+  "referring_domains_followed": null,
+  "referring_domains_followed_pct": null,
+  "backlinks": null,
+  "backlinks_all_time": null,
+  "backlinks_all_time_display": null,
+  "backlinks_all_time_note": null,
+  "backlinks_followed": null,
+  "backlinks_followed_pct": null,
+  "followed_note": null,
+  "authority_direction_note": null,
+  "health_score": null,
+  "site_audit_crawl": null,
+  "site_audit_caveat": null,
+  "crawled_pages_site_explorer": null,
+  "crawled_pages_404": null,
+  "crawled_pages_http_breakdown": null,
+  "crawled_pages_http_breakdown_note": null,
+  "crawled_pages_404_note": null,
+  "organic_keywords": null,
+  "organic_traffic": null,
+  "top_3_keywords": null,
+  "ai_citations": null,
+  "ai_by_platform": null,
+  "cited_pages": null,
+  "cited_pages_by_platform": null,
+  "cited_pages_note": null,
+  "web_analytics_visits": null,
+  "site_audit_issues": null,
+  "referring_domains_all_time_display": null,
+  "site_explorer_traffic_estimate_30d": null,
+  "traffic_analytics_estimate_visits": null,
+  "traffic_analytics_estimate_note": null,
+  "read_note": "Ahrefs NOT READ on 13 Nov: Chrome is signed out of Ahrefs (app.ahrefs.com redirects to the login page; no credentials entered). Every Ahrefs value is null; earlier values are not reused as today's."
  },
  "ai_visibility": {
   "score": null,
@@ -1017,11 +1053,11 @@
  "technical_health": {
   "measured_at": "2026-11-15",
   "source": "dxl-seo-audit",
-  "health": 98,
+  "health": 97,
   "pages_crawled": 128,
-  "ttfb_mean_ms": 220.0,
+  "ttfb_mean_ms": 282.5,
   "response_times": {
-   "site_mean_ms": 220.0
+   "site_mean_ms": 282.5
   },
   "orphan_articles": 0,
   "thin_pages": 10
@@ -1346,55 +1382,42 @@
   }
  },
  "commentary": {
-  "vi": "Trong 28 ngày, GSC có 25 click (trước 24) và 4.018 lượt hiển thị (trước 3.905); vị trí trung bình cải thiện từ 22,1 lên 20,9. CTR vẫn 0,6% và 10/25 click đến từ từ khoá thương hiệu. GA4 có 632 phiên, tỷ lệ tương tác giảm còn 27,53%, key events tăng lên 3. Ahrefs ghi nhận 34 lượt trích dẫn AI từ 862 referring domains.",
-  "en": "Over 28 days GSC logged 25 clicks (from 24) and 4,018 impressions (from 3,905); average position improved from 22.1 to 20.9. CTR stays at 0.6% and 10 of 25 clicks are branded. GA4 recorded 632 sessions, engagement slipped to 27.53% and key events rose to 3. Ahrefs shows 34 AI citations and 862 referring domains.",
-  "by": "Claude (Mac)",
-  "rating": "ok",
-  "verdict_vi": "Hiển thị và thứ hạng nhích lên nhưng click hầu như không đổi do CTR thấp.",
-  "verdict_en": "Visibility and rankings edged up, but clicks barely moved because CTR is low.",
-  "actions_vi": [
-   "Viết lại title/meta cho 87 truy vấn đang ở trang 1 để kéo CTR lên trên 0,6%",
-   "Đẩy các bài có từ khoá không thương hiệu như 'home cinema cost', 'project cost control' bằng link nội bộ",
-   "Kiểm tra trang đích của 632 phiên để cải thiện tỷ lệ tương tác 27,53%"
-  ],
-  "actions_en": [
-   "Rewrite titles/meta for the 87 page-one queries to lift CTR above 0.6%",
-   "Boost non-brand pages like 'home cinema cost' and 'project cost control' with internal links",
-   "Review landing pages behind the 632 sessions to raise the 27.53% engagement rate"
-  ]
+  "vi": "clicks 24 → 26; impressions 3905 → 4230; ctr_pct 0.6 → 0.6; avg_position 22.1 → 20.5; queries_with_impressions 331 → 336; brand_clicks 11 → 10; page_one_queries 92; ga4_sessions 640 → 617.",
+  "en": "clicks 24 → 26; impressions 3905 → 4230; ctr_pct 0.6 → 0.6; avg_position 22.1 → 20.5; queries_with_impressions 331 → 336; brand_clicks 11 → 10; page_one_queries 92; ga4_sessions 640 → 617.",
+  "by": "template"
  },
  "notes": {
-  "vi": "Trong 28 ngày, GSC có 25 click (trước 24) và 4.018 lượt hiển thị (trước 3.905); vị trí trung bình cải thiện từ 22,1 lên 20,9. CTR vẫn 0,6% và 10/25 click đến từ từ khoá thương hiệu. GA4 có 632 phiên, tỷ lệ tương tác giảm còn 27,53%, key events tăng lên 3. Ahrefs ghi nhận 34 lượt trích dẫn AI từ 862 referring domains.",
-  "en": "Over 28 days GSC logged 25 clicks (from 24) and 4,018 impressions (from 3,905); average position improved from 22.1 to 20.9. CTR stays at 0.6% and 10 of 25 clicks are branded. GA4 recorded 632 sessions, engagement slipped to 27.53% and key events rose to 3. Ahrefs shows 34 AI citations and 862 referring domains."
+  "vi": "clicks 24 → 26; impressions 3905 → 4230; ctr_pct 0.6 → 0.6; avg_position 22.1 → 20.5; queries_with_impressions 331 → 336; brand_clicks 11 → 10; page_one_queries 92; ga4_sessions 640 → 617.",
+  "en": "clicks 24 → 26; impressions 3905 → 4230; ctr_pct 0.6 → 0.6; avg_position 22.1 → 20.5; queries_with_impressions 331 → 336; brand_clicks 11 → 10; page_one_queries 92; ga4_sessions 640 → 617."
  },
  "commentary_input": {
   "report": "SEO (GSC + GA4)",
   "summary": {
    "today": {
-    "clicks": 25,
-    "impressions": 4018,
+    "clicks": 26,
+    "impressions": 4230,
     "ctr_pct": 0.6,
-    "avg_position": 20.9,
-    "queries_with_impressions": 327,
+    "avg_position": 20.5,
+    "queries_with_impressions": 336,
     "brand_clicks": 10,
-    "page_one_queries": 87,
-    "ga4_sessions": 632,
-    "ga4_users": 481,
-    "ga4_engagement_rate_pct": 27.53,
-    "ga4_key_events": 3,
+    "page_one_queries": 92,
+    "ga4_sessions": 617,
+    "ga4_users": 474,
+    "ga4_engagement_rate_pct": 28.04,
+    "ga4_key_events": 2,
     "ai_sessions": 6,
     "top_channels": [
      [
       "Direct",
-      401
+      388
      ],
      [
       "Organic Social",
-      157
+      159
      ],
      [
       "Organic Search",
-      61
+      58
      ],
      [
       "AI Assistant",
@@ -1402,7 +1425,7 @@
      ],
      [
       "Unassigned",
-      6
+      5
      ]
     ],
     "top_clicked": [
@@ -1422,15 +1445,7 @@
       "project cost control",
       1
      ]
-    ],
-    "ahrefs": {
-     "domain_rating": 0,
-     "referring_domains": 862,
-     "backlinks": 895,
-     "organic_keywords": 0,
-     "organic_traffic": 0,
-     "ai_citations": 34
-    }
+    ]
    },
    "previous": {
     "clicks": 24,
