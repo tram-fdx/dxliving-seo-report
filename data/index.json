@@ -1,6 +1,6 @@
 {
  "description": "Lịch sử snapshot dữ liệu SEO theo ngày / Daily SEO data snapshot history. Mỗi ngày một file data/YYYY-MM-DD.json + bản HTML đóng băng archive/YYYY-MM-DD.html.",
- "latest": "2026-11-15",
+ "latest": "2026-11-16",
  "site": "dxliving.com",
  "snapshots": [
   {
@@ -541,6 +541,13 @@
    "report": "archive/2026-11-15.html",
    "label_vi": "Hiển thị và vị trí tăng, CTR vẫn 0,6%",
    "label_en": "Impressions and position up, CTR stuck at 0.6%"
+  },
+  {
+   "date": "2026-11-16",
+   "data": "data/2026-11-16.json",
+   "report": "archive/2026-11-16.html",
+   "label_vi": "GSC 26 click, 4,146 hiển thị · GA4 676 session",
+   "label_en": "GSC 26 clicks, 4,146 impressions · GA4 676 sessions"
   }
  ]
 }
