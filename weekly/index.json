@@ -1,7 +1,24 @@
 {
   "kind": "weekly",
-  "latest": "2026-10-16",
+  "latest": "2026-11-13",
   "weeks": [
+    {
+      "id": "2026-11-13",
+      "vi": "07–13/11/2026",
+      "en": "7 – 13 Nov 2026",
+      "start": "2026-11-07",
+      "end": "2026-11-13",
+      "compare_start": "2026-10-31",
+      "compare_end": "2026-11-06",
+      "scanned_on": "2026-11-16",
+      "sources": [
+        "Google Search Console (browser)",
+        "Google Analytics 4 (browser)",
+        "Ahrefs snapshot 2026-11-13 (no Ahrefs figures)"
+      ],
+      "notes_vi": "Chạy theo lịch 16/11. GSC clicks 10 xuống 9, impressions 1.522 xuống 1.308; vị trí TB 20,4 lên 18,2 chủ yếu do cơ cấu impressions (interior-design-for-property-developers 79 lên 258 ở vị trí 7,4; nhiều impressions sâu rơi khỏi mẫu), không phải thứ hạng tăng đồng loạt. 28 ngày: 26 click, 4.230 impressions (27 và 885). GA4 201 session (134), Organic Social 28 lên 67, key events 0 lên 1 (Direct), AI 2 xuống 0. Ahrefs và trích dẫn AI không đọc được: snapshot 13/11 không có số Ahrefs, không có snapshot 06/11.",
+      "notes_en": "Scheduled run on 16 Nov. GSC clicks 10 to 9, impressions 1,522 to 1,308; average position 20.4 to 18.2 mainly from the impression mix (interior-design-for-property-developers 79 to 258 at position 7.4; deep impressions left the sample), not a broad ranking gain. 28 days: 26 clicks, 4,230 impressions (27 and 885). GA4 201 sessions (134), Organic Social 28 to 67, key events 0 to 1 (Direct), AI 2 to 0. Ahrefs and AI citations could not be read: the 13 Nov snapshot holds no Ahrefs figures and there is no 6 Nov snapshot."
+    },
     {
       "id": "2026-10-16",
       "vi": "10–16/10/2026",
