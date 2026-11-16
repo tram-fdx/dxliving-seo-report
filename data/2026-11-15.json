@@ -958,16 +958,16 @@
   ]
  },
  "ahrefs": {
-  "read_at": "2026-11-15 (Ahrefs web)",
+  "read_at": "2026-11-16 (Ahrefs web)",
   "domain_rating": 0,
-  "ahrefs_rank": 114147553,
+  "ahrefs_rank": 114285037,
   "backlinks": 895,
   "referring_domains": 862,
   "organic_keywords": 0,
   "organic_traffic": 0,
-  "ai_citations": 34,
-  "cited_pages": 12,
-  "source": "Ahrefs (Chrome on Mac)"
+  "ai_citations": 33,
+  "cited_pages": 11,
+  "source": "Ahrefs web (Chrome on Mac)"
  },
  "ai_visibility": {
   "score": null,
@@ -1351,26 +1351,26 @@
   }
  },
  "commentary": {
-  "vi": "Trong 28 ngày, GSC có 25 click (trước 24) và 4.018 lượt hiển thị (trước 3.905); vị trí trung bình cải thiện từ 22,1 lên 20,9. CTR vẫn 0,6% và 10/25 click đến từ từ khoá thương hiệu. GA4 có 632 phiên, tỷ lệ tương tác giảm còn 27,53%, key events tăng lên 3. Ahrefs ghi nhận 34 lượt trích dẫn AI từ 862 referring domains.",
-  "en": "Over 28 days GSC logged 25 clicks (from 24) and 4,018 impressions (from 3,905); average position improved from 22.1 to 20.9. CTR stays at 0.6% and 10 of 25 clicks are branded. GA4 recorded 632 sessions, engagement slipped to 27.53% and key events rose to 3. Ahrefs shows 34 AI citations and 862 referring domains.",
+  "vi": "Search Console tăng nhẹ: 26 click (từ 24), 4.230 lượt hiển thị (từ 3.905) và vị trí trung bình cải thiện từ 22,1 lên 20,5, với 92 truy vấn ở trang một. CTR vẫn chỉ 0,6% và gần một nửa click đến từ tên thương hiệu. GA4 giảm nhẹ còn 617 phiên (từ 640), 6 phiên từ AI; Ahrefs ghi nhận 33 lượt trích dẫn trong câu trả lời AI. Nên tối ưu title/meta cho các truy vấn trang một để kéo CTR lên.",
+  "en": "Search Console edged up: 26 clicks (from 24), 4,230 impressions (from 3,905) and average position improved from 22.1 to 20.5, with 92 queries on page one. CTR is still only 0.6% and nearly half the clicks are branded. GA4 dipped to 617 sessions (from 640) with 6 from AI assistants; Ahrefs records 33 AI-response citations. Rewrite titles and meta for page-one queries to lift CTR.",
   "by": "Claude (Mac)",
   "rating": "ok",
-  "verdict_vi": "Hiển thị và thứ hạng nhích lên nhưng click hầu như không đổi do CTR thấp.",
-  "verdict_en": "Visibility and rankings edged up, but clicks barely moved because CTR is low.",
+  "verdict_vi": "Khả năng hiển thị trên Google đang cải thiện nhưng chưa chuyển thành nhiều click hay phiên truy cập.",
+  "verdict_en": "Google visibility is improving but not yet turning into more clicks or sessions.",
   "actions_vi": [
-   "Viết lại title/meta cho 87 truy vấn đang ở trang 1 để kéo CTR lên trên 0,6%",
-   "Đẩy các bài có từ khoá không thương hiệu như 'home cinema cost', 'project cost control' bằng link nội bộ",
-   "Kiểm tra trang đích của 632 phiên để cải thiện tỷ lệ tương tác 27,53%"
+   "Viết lại title/meta cho 92 truy vấn đang ở trang một để nâng CTR từ 0,6%.",
+   "Mở rộng nội dung quanh các truy vấn không thương hiệu như \"home cinema cost\" và \"project cost control\".",
+   "Theo dõi tỷ lệ tương tác GA4 (28,04%) và thêm CTA rõ hơn để tăng key events từ 2."
   ],
   "actions_en": [
-   "Rewrite titles/meta for the 87 page-one queries to lift CTR above 0.6%",
-   "Boost non-brand pages like 'home cinema cost' and 'project cost control' with internal links",
-   "Review landing pages behind the 632 sessions to raise the 27.53% engagement rate"
+   "Rewrite titles and meta for the 92 page-one queries to lift CTR above 0.6%.",
+   "Expand content around non-brand queries such as \"home cinema cost\" and \"project cost control\".",
+   "Watch the 28.04% GA4 engagement rate and add clearer CTAs to grow key events beyond 2."
   ]
  },
  "notes": {
-  "vi": "Trong 28 ngày, GSC có 25 click (trước 24) và 4.018 lượt hiển thị (trước 3.905); vị trí trung bình cải thiện từ 22,1 lên 20,9. CTR vẫn 0,6% và 10/25 click đến từ từ khoá thương hiệu. GA4 có 632 phiên, tỷ lệ tương tác giảm còn 27,53%, key events tăng lên 3. Ahrefs ghi nhận 34 lượt trích dẫn AI từ 862 referring domains.",
-  "en": "Over 28 days GSC logged 25 clicks (from 24) and 4,018 impressions (from 3,905); average position improved from 22.1 to 20.9. CTR stays at 0.6% and 10 of 25 clicks are branded. GA4 recorded 632 sessions, engagement slipped to 27.53% and key events rose to 3. Ahrefs shows 34 AI citations and 862 referring domains."
+  "vi": "Search Console tăng nhẹ: 26 click (từ 24), 4.230 lượt hiển thị (từ 3.905) và vị trí trung bình cải thiện từ 22,1 lên 20,5, với 92 truy vấn ở trang một. CTR vẫn chỉ 0,6% và gần một nửa click đến từ tên thương hiệu. GA4 giảm nhẹ còn 617 phiên (từ 640), 6 phiên từ AI; Ahrefs ghi nhận 33 lượt trích dẫn trong câu trả lời AI. Nên tối ưu title/meta cho các truy vấn trang một để kéo CTR lên.",
+  "en": "Search Console edged up: 26 clicks (from 24), 4,230 impressions (from 3,905) and average position improved from 22.1 to 20.5, with 92 queries on page one. CTR is still only 0.6% and nearly half the clicks are branded. GA4 dipped to 617 sessions (from 640) with 6 from AI assistants; Ahrefs records 33 AI-response citations. Rewrite titles and meta for page-one queries to lift CTR."
  },
  "commentary_input": {
   "report": "SEO (GSC + GA4)",
@@ -1434,7 +1434,7 @@
      "backlinks": 895,
      "organic_keywords": 0,
      "organic_traffic": 0,
-     "ai_citations": 34
+     "ai_citations": 33
     }
    },
    "previous": {
