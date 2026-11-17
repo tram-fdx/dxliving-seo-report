@@ -7,7 +7,7 @@
   "window28": "A rolling 28-day window snapshot. Cannot be summed (days overlap) — compare start vs end and draw the trend."
  },
  "kind": "rollup",
- "scanned_count": 80,
+ "scanned_count": 81,
  "scanned_days": [
   "2026-06-30",
   "2026-07-27",
@@ -87,6 +87,7 @@
   "2026-11-13",
   "2026-11-15",
   "2026-11-16",
+  "2026-11-17",
   "days",
   "series"
  ],
@@ -94,8 +95,8 @@
   "ahrefs_ai_citations": {
    "grain": "state",
    "label": "Ahrefs — AI citations",
-   "measured": 72,
-   "of_days": 80,
+   "measured": 73,
+   "of_days": 81,
    "points": [
     {
      "d": "2026-07-28",
@@ -384,14 +385,18 @@
     {
      "d": "2026-11-16",
      "v": 36
+    },
+    {
+     "d": "2026-11-17",
+     "v": 36
     }
    ]
   },
   "ahrefs_backlinks": {
    "grain": "state",
    "label": "Ahrefs — backlinks",
-   "measured": 72,
-   "of_days": 80,
+   "measured": 73,
+   "of_days": 81,
    "points": [
     {
      "d": "2026-07-28",
@@ -680,14 +685,18 @@
     {
      "d": "2026-11-16",
      "v": 895
+    },
+    {
+     "d": "2026-11-17",
+     "v": 895
     }
    ]
   },
   "ahrefs_cited_pages": {
    "grain": "state",
    "label": "Ahrefs — pages cited by AI",
-   "measured": 71,
-   "of_days": 80,
+   "measured": 72,
+   "of_days": 81,
    "points": [
     {
      "d": "2026-07-29",
@@ -972,14 +981,18 @@
     {
      "d": "2026-11-16",
      "v": 11
+    },
+    {
+     "d": "2026-11-17",
+     "v": 11
     }
    ]
   },
   "ahrefs_dr": {
    "grain": "state",
    "label": "Ahrefs — Domain Rating",
-   "measured": 74,
-   "of_days": 80,
+   "measured": 75,
+   "of_days": 81,
    "points": [
     {
      "d": "2026-06-30",
@@ -1276,14 +1289,18 @@
     {
      "d": "2026-11-16",
      "v": 0
+    },
+    {
+     "d": "2026-11-17",
+     "v": 0
     }
    ]
   },
   "ahrefs_org_keywords": {
    "grain": "state",
    "label": "Ahrefs — organic keywords",
-   "measured": 72,
-   "of_days": 80,
+   "measured": 73,
+   "of_days": 81,
    "points": [
     {
      "d": "2026-07-28",
@@ -1572,14 +1589,18 @@
     {
      "d": "2026-11-16",
      "v": 0
+    },
+    {
+     "d": "2026-11-17",
+     "v": 0
     }
    ]
   },
   "ahrefs_refdomains": {
    "grain": "state",
    "label": "Ahrefs — referring domains",
-   "measured": 74,
-   "of_days": 80,
+   "measured": 75,
+   "of_days": 81,
    "points": [
     {
      "d": "2026-06-30",
@@ -1876,14 +1897,18 @@
     {
      "d": "2026-11-16",
      "v": 862
+    },
+    {
+     "d": "2026-11-17",
+     "v": 862
     }
    ]
   },
   "ga4_engagement_pct": {
    "grain": "window28",
    "label": "GA4 — engagement %",
-   "measured": 77,
-   "of_days": 80,
+   "measured": 78,
+   "of_days": 81,
    "points": [
     {
      "d": "2026-06-30",
@@ -2192,14 +2217,18 @@
     {
      "d": "2026-11-16",
      "v": 26.78
+    },
+    {
+     "d": "2026-11-17",
+     "v": 25.19
     }
    ]
   },
   "ga4_key_events": {
    "grain": "window28",
    "label": "GA4 — key events",
-   "measured": 76,
-   "of_days": 80,
+   "measured": 77,
+   "of_days": 81,
    "points": [
     {
      "d": "2026-07-27",
@@ -2504,14 +2533,18 @@
     {
      "d": "2026-11-16",
      "v": 3
+    },
+    {
+     "d": "2026-11-17",
+     "v": 3
     }
    ]
   },
   "ga4_sessions": {
    "grain": "window28",
    "label": "GA4 — sessions",
-   "measured": 77,
-   "of_days": 80,
+   "measured": 78,
+   "of_days": 81,
    "points": [
     {
      "d": "2026-06-30",
@@ -2820,14 +2853,18 @@
     {
      "d": "2026-11-16",
      "v": 676
+    },
+    {
+     "d": "2026-11-17",
+     "v": 667
     }
    ]
   },
   "ga4_users": {
    "grain": "window28",
    "label": "GA4 — users",
-   "measured": 71,
-   "of_days": 80,
+   "measured": 72,
+   "of_days": 81,
    "points": [
     {
      "d": "2026-06-30",
@@ -3112,14 +3149,18 @@
     {
      "d": "2026-11-16",
      "v": 522
+    },
+    {
+     "d": "2026-11-17",
+     "v": 519
     }
    ]
   },
   "gsc_clicks": {
    "grain": "window28",
    "label": "GSC — clicks",
-   "measured": 76,
-   "of_days": 80,
+   "measured": 77,
+   "of_days": 81,
    "points": [
     {
      "d": "2026-06-30",
@@ -3424,14 +3465,18 @@
     {
      "d": "2026-11-16",
      "v": 26
+    },
+    {
+     "d": "2026-11-17",
+     "v": 27
     }
    ]
   },
   "gsc_ctr_pct": {
    "grain": "window28",
    "label": "GSC — CTR %",
-   "measured": 76,
-   "of_days": 80,
+   "measured": 77,
+   "of_days": 81,
    "points": [
     {
      "d": "2026-06-30",
@@ -3736,14 +3781,18 @@
     {
      "d": "2026-11-16",
      "v": 0.6
+    },
+    {
+     "d": "2026-11-17",
+     "v": 0.6
     }
    ]
   },
   "gsc_impressions": {
    "grain": "window28",
    "label": "GSC — impressions",
-   "measured": 76,
-   "of_days": 80,
+   "measured": 77,
+   "of_days": 81,
    "points": [
     {
      "d": "2026-06-30",
@@ -4048,14 +4097,18 @@
     {
      "d": "2026-11-16",
      "v": 4146
+    },
+    {
+     "d": "2026-11-17",
+     "v": 4255
     }
    ]
   },
   "gsc_position": {
    "grain": "window28",
    "label": "GSC — avg position",
-   "measured": 76,
-   "of_days": 80,
+   "measured": 77,
+   "of_days": 81,
    "points": [
     {
      "d": "2026-06-30",
@@ -4360,14 +4413,18 @@
     {
      "d": "2026-11-16",
      "v": 20.5
+    },
+    {
+     "d": "2026-11-17",
+     "v": 19.8
     }
    ]
   },
   "gsc_queries": {
    "grain": "window28",
    "label": "GSC — queries with impressions",
-   "measured": 73,
-   "of_days": 80,
+   "measured": 74,
+   "of_days": 81,
    "points": [
     {
      "d": "2026-07-29",
@@ -4660,14 +4717,18 @@
     {
      "d": "2026-11-16",
      "v": 332
+    },
+    {
+     "d": "2026-11-17",
+     "v": 338
     }
    ]
   },
   "sitemap_urls": {
    "grain": "state",
    "label": "Sitemap — URLs",
-   "measured": 71,
-   "of_days": 80,
+   "measured": 72,
+   "of_days": 81,
    "points": [
     {
      "d": "2026-08-07",
@@ -4952,14 +5013,18 @@
     {
      "d": "2026-11-16",
      "v": 122
+    },
+    {
+     "d": "2026-11-17",
+     "v": 122
     }
    ]
   },
   "ttfb_mean_ms": {
    "grain": "state",
    "label": "TTFB mean (ms)",
-   "measured": 56,
-   "of_days": 80,
+   "measured": 57,
+   "of_days": 81,
    "points": [
     {
      "d": "2026-08-28",
@@ -5184,6 +5249,10 @@
     {
      "d": "2026-11-16",
      "v": 281.0
+    },
+    {
+     "d": "2026-11-17",
+     "v": 278.9
     }
    ]
   }

@@ -182,8 +182,8 @@ function render() {
   }
   const pcols = [[L('Giờ (UTC)', 'Time (UTC)'), 'time'], [L('Nội dung', 'Post'), 't', 't', r => link(r.url, r.t || L('(không có chữ)', '(no text)'))],
                  ['Reactions', 'react', 'n'], ['Comments', 'com', 'n']];
-  h += `<section class="card"><h2>Facebook — ${L('bài đăng trong ngày', 'posts published this day')}</h2>${table(x.fb_posts, pcols.concat([['Shares', 'sh', 'n']]), 'fb')}</section>`;
-  h += `<section class="card"><h2>Instagram — ${L('bài đăng trong ngày', 'posts published this day')}</h2>${table(x.ig_posts, pcols.slice(0, 1).concat([[L('Loại', 'Type'), 'type']], pcols.slice(1)), 'ig')}</section>`;
+  if (FIRST.fb || FIRST.ig) h += `<section class="card"><h2>Facebook — ${L('bài đăng trong ngày', 'posts published this day')}</h2>${table(x.fb_posts, pcols.concat([['Shares', 'sh', 'n']]), 'fb')}</section>`;
+  if (FIRST.fb || FIRST.ig) h += `<section class="card"><h2>Instagram — ${L('bài đăng trong ngày', 'posts published this day')}</h2>${table(x.ig_posts, pcols.slice(0, 1).concat([[L('Loại', 'Type'), 'type']], pcols.slice(1)), 'ig')}</section>`;
   h += `<p class="muted">${L('Dữ liệu có từ', 'Data available from')} ${MIN} ${L('đến', 'to')} ${MAX}. ${L('YouTube, LinkedIn, Ahrefs không có API theo ngày nên chỉ có số đọc từng ngày.', 'YouTube, LinkedIn and Ahrefs have no daily API, so only the readings taken each day appear.')}</p>`;
   document.getElementById('main').innerHTML = h;
   document.querySelectorAll('.lb').forEach(b => b.classList.toggle('on', b.dataset.l === LANG));
