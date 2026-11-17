@@ -958,14 +958,14 @@
   ]
  },
  "ahrefs": {
-  "read_at": "2026-11-16 (Ahrefs web)",
+  "read_at": "2026-11-17 (Ahrefs web)",
   "domain_rating": 0,
-  "ahrefs_rank": 114285037,
+  "ahrefs_rank": 114330302,
   "backlinks": 895,
   "referring_domains": 862,
   "organic_keywords": 0,
   "organic_traffic": 0,
-  "ai_citations": 33,
+  "ai_citations": 36,
   "cited_pages": 11,
   "source": "Ahrefs web (Chrome on Mac)"
  },
@@ -1869,13 +1869,26 @@
   }
  },
  "commentary": {
-  "vi": "clicks 26 → 26; impressions 4230 → 4146; ctr_pct 0.6 → 0.6; avg_position 20.5 → 20.5; queries_with_impressions 336 → 332; brand_clicks 10 → 10; page_one_queries 92 → 92; ga4_sessions 617 → 676.",
-  "en": "clicks 26 → 26; impressions 4230 → 4146; ctr_pct 0.6 → 0.6; avg_position 20.5 → 20.5; queries_with_impressions 336 → 332; brand_clicks 10 → 10; page_one_queries 92 → 92; ga4_sessions 617 → 676.",
-  "by": "template"
+  "vi": "Google giữ 26 click và vị trí trung bình 20,5, nhưng lượt hiển thị giảm nhẹ từ 4.230 xuống 4.146. GA4 tăng từ 617 lên 676 phiên và từ 2 lên 3 sự kiện chính, tuy tỷ lệ tương tác giảm từ 28,04% xuống 26,78%. 10/26 click vẫn đến từ tìm thương hiệu, và Ahrefs ghi nhận 36 trích dẫn trong câu trả lời AI. Có 92 truy vấn ở trang 1 với CTR chỉ 0,6% — nên viết lại title/meta cho các trang này.",
+  "en": "Google held at 26 clicks and an average position of 20.5, while impressions dipped from 4,230 to 4,146. GA4 rose from 617 to 676 sessions and from 2 to 3 key events, though engagement fell from 28.04% to 26.78%. 10 of 26 clicks are still brand searches, and Ahrefs counts 36 AI-response citations. 92 queries sit on page one at only 0.6% CTR — rewrite titles and metas for those pages.",
+  "by": "Claude (Mac)",
+  "rating": "ok",
+  "verdict_vi": "Lưu lượng website tăng nhờ kênh trực tiếp và mạng xã hội, còn tìm kiếm tự nhiên chưa nhích.",
+  "verdict_en": "Site traffic grew via direct and social, but organic search has not moved.",
+  "actions_vi": [
+   "Viết lại title/meta cho các trang có truy vấn ở trang 1 để nâng CTR 0,6%.",
+   "Làm trang dịch vụ Melbourne cho từ khoá render để có click ngoài thương hiệu (hiện 16/26 click).",
+   "Xem lý do tỷ lệ tương tác giảm còn 26,78% trên các trang nhận traffic Organic Social."
+  ],
+  "actions_en": [
+   "Rewrite titles/metas on pages with page-one queries to lift the 0.6% CTR.",
+   "Build a Melbourne rendering service page to grow non-brand clicks (currently 16 of 26).",
+   "Check why engagement dropped to 26.78% on pages receiving Organic Social traffic."
+  ]
  },
  "notes": {
-  "vi": "clicks 26 → 26; impressions 4230 → 4146; ctr_pct 0.6 → 0.6; avg_position 20.5 → 20.5; queries_with_impressions 336 → 332; brand_clicks 10 → 10; page_one_queries 92 → 92; ga4_sessions 617 → 676.",
-  "en": "clicks 26 → 26; impressions 4230 → 4146; ctr_pct 0.6 → 0.6; avg_position 20.5 → 20.5; queries_with_impressions 336 → 332; brand_clicks 10 → 10; page_one_queries 92 → 92; ga4_sessions 617 → 676."
+  "vi": "Google giữ 26 click và vị trí trung bình 20,5, nhưng lượt hiển thị giảm nhẹ từ 4.230 xuống 4.146. GA4 tăng từ 617 lên 676 phiên và từ 2 lên 3 sự kiện chính, tuy tỷ lệ tương tác giảm từ 28,04% xuống 26,78%. 10/26 click vẫn đến từ tìm thương hiệu, và Ahrefs ghi nhận 36 trích dẫn trong câu trả lời AI. Có 92 truy vấn ở trang 1 với CTR chỉ 0,6% — nên viết lại title/meta cho các trang này.",
+  "en": "Google held at 26 clicks and an average position of 20.5, while impressions dipped from 4,230 to 4,146. GA4 rose from 617 to 676 sessions and from 2 to 3 key events, though engagement fell from 28.04% to 26.78%. 10 of 26 clicks are still brand searches, and Ahrefs counts 36 AI-response citations. 92 queries sit on page one at only 0.6% CTR — rewrite titles and metas for those pages."
  },
  "commentary_input": {
   "report": "SEO (GSC + GA4)",
@@ -1932,7 +1945,15 @@
       "project cost control",
       1
      ]
-    ]
+    ],
+    "ahrefs": {
+     "domain_rating": 0,
+     "referring_domains": 862,
+     "backlinks": 895,
+     "organic_keywords": 0,
+     "organic_traffic": 0,
+     "ai_citations": 36
+    }
    },
    "previous": {
     "clicks": 26,
