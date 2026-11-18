@@ -1,175 +1,174 @@
 {
-  "kind": "weekly",
-  "latest": "2026-11-13",
-  "weeks": [
-    {
-      "id": "2026-11-13",
-      "vi": "07–13/11/2026",
-      "en": "7 – 13 Nov 2026",
-      "start": "2026-11-07",
-      "end": "2026-11-13",
-      "compare_start": "2026-10-31",
-      "compare_end": "2026-11-06",
-      "scanned_on": "2026-11-16",
-      "sources": [
-        "Google Search Console (browser)",
-        "Google Analytics 4 (browser)",
-        "Ahrefs snapshot 2026-11-13 (no Ahrefs figures)"
-      ],
-      "notes_vi": "Chạy theo lịch 16/11. GSC clicks 10 xuống 9, impressions 1.522 xuống 1.308; vị trí TB 20,4 lên 18,2 chủ yếu do cơ cấu impressions (interior-design-for-property-developers 79 lên 258 ở vị trí 7,4; nhiều impressions sâu rơi khỏi mẫu), không phải thứ hạng tăng đồng loạt. 28 ngày: 26 click, 4.230 impressions (27 và 885). GA4 201 session (134), Organic Social 28 lên 67, key events 0 lên 1 (Direct), AI 2 xuống 0. Ahrefs và trích dẫn AI không đọc được: snapshot 13/11 không có số Ahrefs, không có snapshot 06/11.",
-      "notes_en": "Scheduled run on 16 Nov. GSC clicks 10 to 9, impressions 1,522 to 1,308; average position 20.4 to 18.2 mainly from the impression mix (interior-design-for-property-developers 79 to 258 at position 7.4; deep impressions left the sample), not a broad ranking gain. 28 days: 26 clicks, 4,230 impressions (27 and 885). GA4 201 sessions (134), Organic Social 28 to 67, key events 0 to 1 (Direct), AI 2 to 0. Ahrefs and AI citations could not be read: the 13 Nov snapshot holds no Ahrefs figures and there is no 6 Nov snapshot."
-    },
-    {
-      "id": "2026-10-16",
-      "vi": "10–16/10/2026",
-      "en": "10 – 16 Oct 2026",
-      "start": "2026-10-10",
-      "end": "2026-10-16",
-      "compare_start": "2026-10-03",
-      "compare_end": "2026-10-09",
-      "scanned_on": "2026-10-21",
-      "sources": [
-        "Google Search Console (Chrome)",
-        "Google Analytics 4 (Chrome)",
-        "Ahrefs web UI (read 21 Oct)"
-      ],
-      "notes_vi": "Chạy 21/10. GSC clicks giữ 8 → 8 (6/8 là thương hiệu: dx living 4, dxliving 2); impressions 168 lên 396 nhưng vị trí TB 8,5 xuống 26,7 vì phần tăng nằm ở vị trí sâu (3d-rendering-services-melbourne 144 impressions ở vị trí 46,2). 28 ngày: 27 click, 885 impressions. GA4 204 session (160), key events 0 lên 2 (cả hai từ Direct, chưa xác minh); AI session 5 xuống 2. Ahrefs đọc trực tiếp 21/10 (không có snapshot 16/10): trích dẫn AI 12 lên 20 (ChatGPT 4 lên 8, Copilot 8 lên 10, AI Overviews và AI Mode mỗi nền tảng 1), backlinks 911, referring domains 875.",
-      "notes_en": "Run on 21 Oct. GSC clicks held 8 to 8 (6 of 8 brand: dx living 4, dxliving 2); impressions 168 to 396 but average position fell 8.5 to 26.7 because the gain sits at deep positions (3d-rendering-services-melbourne 144 impressions at position 46.2). 28 days: 27 clicks, 885 impressions. GA4 204 sessions (160), key events 0 to 2 (both Direct, not verified); AI sessions 5 to 2. Ahrefs read live on 21 Oct (no 16 Oct snapshot): AI citations 12 to 20 (ChatGPT 4 to 8, Copilot 8 to 10, AI Overviews and AI Mode 1 each), backlinks 911, referring domains 875."
-    },
-    {
-      "id": "2026-10-09",
-      "vi": "03–09/10/2026",
-      "en": "3 – 9 Oct 2026",
-      "start": "2026-10-03",
-      "end": "2026-10-09",
-      "compare_start": "2026-09-26",
-      "compare_end": "2026-10-02",
-      "scanned_on": "2026-10-12",
-      "sources": [
-        "Google Search Console (Chrome)",
-        "Google Analytics 4 (Chrome)",
-        "Ahrefs snapshot (dxliving-seo-report)"
-      ],
-      "notes_vi": "Chạy theo lịch 12/10. GSC clicks 4 lên 8, impressions 144 lên 168, nhưng 7/8 click là truy vấn thương hiệu (dxliving 4, dx living 3); vị trí TB phẳng 8,5. Vị trí 28 ngày 30,8 xuống 12,0 do impressions sâu rơi khỏi cửa sổ, không phải thứ hạng tăng. GA4 160 session; key events 4 xuống 0; 726 lượt xem bị kéo bởi vài người dùng (/about-new 222 lượt từ 3 người). Trích dẫn AI 18 xuống 12 (ChatGPT 7 xuống 4, Copilot 11 xuống 8); GA4 AI 5 session. Ahrefs và trích dẫn AI lấy từ snapshot 09/10.",
-      "notes_en": "Scheduled run on 12 Oct. GSC clicks 4 to 8 and impressions 144 to 168, but 7 of 8 clicks were brand queries (dxliving 4, dx living 3); average position flat at 8.5. 28-day position 30.8 to 12.0 because deep-position impressions rolled out of the window, not because rankings improved. GA4 160 sessions; key events 4 to 0; 726 page views inflated by a few users (/about-new 222 views from 3 users). AI citations 18 to 12 (ChatGPT 7 to 4, Copilot 11 to 8); GA4 AI 5 sessions. Ahrefs and AI citations come from the 9 Oct snapshot."
-    },
-    {
-      "id": "2026-10-02",
-      "vi": "26/09–02/10/2026",
-      "en": "26 Sep – 2 Oct 2026",
-      "start": "2026-09-26",
-      "end": "2026-10-02",
-      "compare_start": "2026-09-19",
-      "compare_end": "2026-09-25",
-      "scanned_on": "2026-10-05",
-      "sources": [
-        "Google Search Console (Chrome)",
-        "Google Analytics 4 (Chrome)",
-        "Ahrefs snapshot (dxliving-seo-report)"
-      ],
-      "notes_vi": "Chay theo lich 05/10. GSC clicks 7 xuong 4, impressions 177 xuong 144, 0 click tu 29/09 den 02/10; vi tri TB 12,8 len 8,5 do 22 truy van sau (44 impressions, vi tri 32,3) roi khoi mau, khong phai thu hang tang. GA4 154 session; google / organic 13 len 28 nguoc chieu GSC; 4 key event, 2 tu Organic Search (ten su kien chua doc lai duoc). Trich dan AI 12 len 18 nho Copilot 5 len 11. Ahrefs va trich dan AI lay tu snapshot 02/10.",
-      "notes_en": "Scheduled run on 5 Oct. GSC clicks 7 to 4, impressions 177 to 144, no clicks from 29 Sep to 2 Oct; average position 12.8 to 8.5 because 22 deep queries (44 impressions at 32.3) left the sample, not because rankings improved. GA4 154 sessions; google / organic 13 to 28, opposite to GSC; 4 key events, 2 from Organic Search (event name not re-read). AI citations 12 to 18 on Copilot 5 to 11. Ahrefs and AI citations come from the 2 Oct snapshot."
-    },
-    {
-      "id": "2026-09-25",
-      "vi": "19–25/09/2026",
-      "en": "19–25 Sep 2026",
-      "start": "2026-09-19",
-      "end": "2026-09-25",
-      "compare_start": "2026-09-12",
-      "compare_end": "2026-09-18",
-      "scanned_on": "2026-09-28",
-      "sources": [
-        "Google Search Console (Chrome)",
-        "Google Analytics 4 (Chrome)",
-        "Ahrefs snapshot (dxliving-seo-report)"
-      ],
-      "notes_vi": "Chay theo lich 28/09. GSC clicks 3 len 7, impressions 184 xuong 177; vi tri TB 17,2 len 12,8 chu yeu do /login va truy van thuong hieu, khong phai thu hang khong thuong hieu. GA4 186 session, 3 generate_lead dau tien (2 nguoi dung, deu Direct, chua xac minh). Organic Search GA4 37 xuong 16 nguoc chieu GSC. Trich dan AI 18 xuong 12. Ahrefs va trich dan AI lay tu snapshot 25/09.",
-      "notes_en": "Scheduled run on 28 Sep. GSC clicks 3 to 7, impressions 184 to 177; average position 17.2 to 12.8 driven mainly by /login and branded queries, not non-brand rankings. GA4 186 sessions and the first 3 generate_lead key events (2 users, all Direct, unverified). GA4 Organic Search 37 to 16, opposite to GSC. AI citations 18 to 12. Ahrefs and AI citations come from the 25 Sep snapshot."
-    },
-    {
-      "id": "2026-09-18",
-      "vi": "12–18/09/2026",
-      "en": "12–18 Sep 2026",
-      "start": "2026-09-12",
-      "end": "2026-09-18",
-      "compare_start": "2026-09-05",
-      "compare_end": "2026-09-11",
-      "scanned_on": "2026-09-21",
-      "sources": [
-        "Google Search Console (Chrome)",
-        "Google Analytics 4 (Chrome)",
-        "Ahrefs snapshot (dxliving-seo-report)"
-      ],
-      "notes_vi": "Dung bu ngay 21/09. Toan bo cum truy van melbourne ve 0 impression, thay bang Sydney/Brisbane/Adelaide va cap quoc gia — vi the vi tri TB nhay 30,7 xuong 17,2 trong khi impressions va clicks cung giam. Direct tang 37 len 63 session voi thoi luong 2 giay, can kiem tra bot. Khong con session AI nao. Ahrefs va trich dan AI lay tu snapshot 18/09.",
-      "notes_en": "Backfilled on 21 Sep. The whole melbourne query cluster went to zero impressions, replaced by Sydney/Brisbane/Adelaide and national variants — which is why average position jumped 30.7 to 17.2 while impressions and clicks both fell. Direct rose 37 to 63 sessions at 2 seconds each and needs a bot check. No AI sessions at all. Ahrefs and AI citations come from the 18 Sep snapshot."
-    },
-    {
-      "id": "2026-09-11",
-      "vi": "05–11/09/2026",
-      "en": "5–11 Sep 2026",
-      "start": "2026-09-05",
-      "end": "2026-09-11",
-      "compare_start": "2026-08-29",
-      "compare_end": "2026-09-04",
-      "scanned_on": "2026-09-21",
-      "sources": [
-        "Google Search Console (Chrome)",
-        "Google Analytics 4 (Chrome)",
-        "Ahrefs snapshot (dxliving-seo-report)"
-      ],
-      "notes_vi": "Dung bu ngay 21/09 — tuan nay le ra duoc quet 14/09 nhung bao cao tuan khi do chi tra ket qua ra chat, khong tao file. GSC va GA4 doc lai truc tiep cho dung cua so; Ahrefs va trich dan AI lay tu snapshot 11/09. Nam bai moi lot thang vao top 10 nhung moi bai chi 2-12 impressions. stage.dxliving.com van chua sua.",
-      "notes_en": "Backfilled on 21 Sep — this week should have been scanned on 14 Sep, but the weekly report then only returned its result to chat without writing a file. GSC and GA4 were re-read directly for the exact window; Ahrefs and AI citations come from the 11 Sep snapshot. Five new articles landed straight in the top 10 but each drew only 2-12 impressions. stage.dxliving.com is still unfixed."
-    },
-    {
-      "id": "2026-09-04",
-      "vi": "29/08–04/09/2026",
-      "en": "29 Aug – 4 Sep 2026",
-      "start": "2026-08-29",
-      "end": "2026-09-04",
-      "compare_start": "2026-08-22",
-      "compare_end": "2026-08-28",
-      "scanned_on": "2026-09-07",
-      "sources": [
-        "Google Search Console (Chrome)",
-        "Google Analytics 4 (Chrome)",
-        "Ahrefs Site Explorer (Chrome)"
-      ],
-      "notes_vi": "GSC trễ 3 ngày, mới nhất 04/09. Su co 404 tuan truoc da khac phuc: ca 16 URL bai viet tro lai HTTP 200. Phan lon bien dong tuan nay la hau qua cua viec Google index lai cac trang do. stage.dxliving.com van chua sua.",
-      "notes_en": "GSC lags 3 days; latest data 4 Sep. The 404 incident is resolved: all 16 article URLs return HTTP 200 again. Most of this week's movement is fallout from Google re-indexing those pages. stage.dxliving.com is still unfixed."
-    },
-    {
-      "id": "2026-08-28",
-      "vi": "22–28/08/2026",
-      "en": "22–28 Aug 2026",
-      "start": "2026-08-22",
-      "end": "2026-08-28",
-      "compare_start": "2026-08-15",
-      "compare_end": "2026-08-21",
-      "scanned_on": "2026-08-31",
-      "sources": [
-        "Google Search Console (Chrome)",
-        "Google Analytics 4 (Chrome)",
-        "Ahrefs Site Explorer (Chrome)"
-      ],
-      "notes_vi": "GSC trễ 3 ngày, mới nhất 28/08. Cửa sổ chồng 1 ngày (22/08) với tuần trước. GA4 đã so sánh được vì cả hai tuần đều sau khi tracking khôi phục 15/08. Ahrefs cảnh báo 'Google keyword ranking data disruption' ngày 28/08.",
-      "notes_en": "GSC lags 3 days; latest data 28 Aug. The window overlaps the prior week by one day (22 Aug). GA4 is comparable because both weeks sit after tracking was restored on 15 Aug. Ahrefs posted a 'Google keyword ranking data disruption' notice on 28 Aug."
-    },
-    {
-      "id": "2026-08-22",
-      "vi": "16–22/08/2026",
-      "en": "16–22 Aug 2026",
-      "start": "2026-08-16",
-      "end": "2026-08-22",
-      "compare_start": "2026-08-09",
-      "compare_end": "2026-08-15",
-      "scanned_on": "2026-08-25",
-      "sources": [
-        "Google Search Console (Chrome)",
-        "Google Analytics 4 (Chrome)"
-      ],
-      "notes_vi": "GSC trễ 2 ngày nên dùng cửa sổ 7 ngày trượt kết thúc 22/08. GA4 mất tracking 27/07–14/08 nên không so sánh WoW.",
-      "notes_en": "GSC lags 2 days, so a rolling 7-day window ending 22 Aug is used. GA4 tracking was down 27 Jul–14 Aug, so week-over-week is not comparable."
-    }
-  ]
+ "kind": "weekly",
+ "latest": "2026-11-13",
+ "weeks": [
+  {
+   "id": "2026-11-13",
+   "vi": "7–13/11/2026",
+   "en": "7 – 13 Nov 2026",
+   "start": "2026-11-07",
+   "end": "2026-11-13",
+   "compare_start": "2026-10-31",
+   "compare_end": "2026-11-06",
+   "scanned_on": "2026-11-18",
+   "sources": [
+    "Google Search Console API",
+    "GA4 Data API"
+   ],
+   "notes_vi": "clicks 10 → 9; impressions 1522 → 1308; ctr_pct 0.7 → 0.7; avg_position 20.4 → 18.2; queries_with_impressions 195 → 158; brand_clicks 3 → 2; page_one_queries 60 → 55; ga4_sessions 134 → 201.",
+   "notes_en": "clicks 10 → 9; impressions 1522 → 1308; ctr_pct 0.7 → 0.7; avg_position 20.4 → 18.2; queries_with_impressions 195 → 158; brand_clicks 3 → 2; page_one_queries 60 → 55; ga4_sessions 134 → 201."
+  },
+  {
+   "id": "2026-10-16",
+   "vi": "10–16/10/2026",
+   "en": "10 – 16 Oct 2026",
+   "start": "2026-10-10",
+   "end": "2026-10-16",
+   "compare_start": "2026-10-03",
+   "compare_end": "2026-10-09",
+   "scanned_on": "2026-10-21",
+   "sources": [
+    "Google Search Console (Chrome)",
+    "Google Analytics 4 (Chrome)",
+    "Ahrefs web UI (read 21 Oct)"
+   ],
+   "notes_vi": "Chạy 21/10. GSC clicks giữ 8 → 8 (6/8 là thương hiệu: dx living 4, dxliving 2); impressions 168 lên 396 nhưng vị trí TB 8,5 xuống 26,7 vì phần tăng nằm ở vị trí sâu (3d-rendering-services-melbourne 144 impressions ở vị trí 46,2). 28 ngày: 27 click, 885 impressions. GA4 204 session (160), key events 0 lên 2 (cả hai từ Direct, chưa xác minh); AI session 5 xuống 2. Ahrefs đọc trực tiếp 21/10 (không có snapshot 16/10): trích dẫn AI 12 lên 20 (ChatGPT 4 lên 8, Copilot 8 lên 10, AI Overviews và AI Mode mỗi nền tảng 1), backlinks 911, referring domains 875.",
+   "notes_en": "Run on 21 Oct. GSC clicks held 8 to 8 (6 of 8 brand: dx living 4, dxliving 2); impressions 168 to 396 but average position fell 8.5 to 26.7 because the gain sits at deep positions (3d-rendering-services-melbourne 144 impressions at position 46.2). 28 days: 27 clicks, 885 impressions. GA4 204 sessions (160), key events 0 to 2 (both Direct, not verified); AI sessions 5 to 2. Ahrefs read live on 21 Oct (no 16 Oct snapshot): AI citations 12 to 20 (ChatGPT 4 to 8, Copilot 8 to 10, AI Overviews and AI Mode 1 each), backlinks 911, referring domains 875."
+  },
+  {
+   "id": "2026-10-09",
+   "vi": "03–09/10/2026",
+   "en": "3 – 9 Oct 2026",
+   "start": "2026-10-03",
+   "end": "2026-10-09",
+   "compare_start": "2026-09-26",
+   "compare_end": "2026-10-02",
+   "scanned_on": "2026-10-12",
+   "sources": [
+    "Google Search Console (Chrome)",
+    "Google Analytics 4 (Chrome)",
+    "Ahrefs snapshot (dxliving-seo-report)"
+   ],
+   "notes_vi": "Chạy theo lịch 12/10. GSC clicks 4 lên 8, impressions 144 lên 168, nhưng 7/8 click là truy vấn thương hiệu (dxliving 4, dx living 3); vị trí TB phẳng 8,5. Vị trí 28 ngày 30,8 xuống 12,0 do impressions sâu rơi khỏi cửa sổ, không phải thứ hạng tăng. GA4 160 session; key events 4 xuống 0; 726 lượt xem bị kéo bởi vài người dùng (/about-new 222 lượt từ 3 người). Trích dẫn AI 18 xuống 12 (ChatGPT 7 xuống 4, Copilot 11 xuống 8); GA4 AI 5 session. Ahrefs và trích dẫn AI lấy từ snapshot 09/10.",
+   "notes_en": "Scheduled run on 12 Oct. GSC clicks 4 to 8 and impressions 144 to 168, but 7 of 8 clicks were brand queries (dxliving 4, dx living 3); average position flat at 8.5. 28-day position 30.8 to 12.0 because deep-position impressions rolled out of the window, not because rankings improved. GA4 160 sessions; key events 4 to 0; 726 page views inflated by a few users (/about-new 222 views from 3 users). AI citations 18 to 12 (ChatGPT 7 to 4, Copilot 11 to 8); GA4 AI 5 sessions. Ahrefs and AI citations come from the 9 Oct snapshot."
+  },
+  {
+   "id": "2026-10-02",
+   "vi": "26/09–02/10/2026",
+   "en": "26 Sep – 2 Oct 2026",
+   "start": "2026-09-26",
+   "end": "2026-10-02",
+   "compare_start": "2026-09-19",
+   "compare_end": "2026-09-25",
+   "scanned_on": "2026-10-05",
+   "sources": [
+    "Google Search Console (Chrome)",
+    "Google Analytics 4 (Chrome)",
+    "Ahrefs snapshot (dxliving-seo-report)"
+   ],
+   "notes_vi": "Chay theo lich 05/10. GSC clicks 7 xuong 4, impressions 177 xuong 144, 0 click tu 29/09 den 02/10; vi tri TB 12,8 len 8,5 do 22 truy van sau (44 impressions, vi tri 32,3) roi khoi mau, khong phai thu hang tang. GA4 154 session; google / organic 13 len 28 nguoc chieu GSC; 4 key event, 2 tu Organic Search (ten su kien chua doc lai duoc). Trich dan AI 12 len 18 nho Copilot 5 len 11. Ahrefs va trich dan AI lay tu snapshot 02/10.",
+   "notes_en": "Scheduled run on 5 Oct. GSC clicks 7 to 4, impressions 177 to 144, no clicks from 29 Sep to 2 Oct; average position 12.8 to 8.5 because 22 deep queries (44 impressions at 32.3) left the sample, not because rankings improved. GA4 154 sessions; google / organic 13 to 28, opposite to GSC; 4 key events, 2 from Organic Search (event name not re-read). AI citations 12 to 18 on Copilot 5 to 11. Ahrefs and AI citations come from the 2 Oct snapshot."
+  },
+  {
+   "id": "2026-09-25",
+   "vi": "19–25/09/2026",
+   "en": "19–25 Sep 2026",
+   "start": "2026-09-19",
+   "end": "2026-09-25",
+   "compare_start": "2026-09-12",
+   "compare_end": "2026-09-18",
+   "scanned_on": "2026-09-28",
+   "sources": [
+    "Google Search Console (Chrome)",
+    "Google Analytics 4 (Chrome)",
+    "Ahrefs snapshot (dxliving-seo-report)"
+   ],
+   "notes_vi": "Chay theo lich 28/09. GSC clicks 3 len 7, impressions 184 xuong 177; vi tri TB 17,2 len 12,8 chu yeu do /login va truy van thuong hieu, khong phai thu hang khong thuong hieu. GA4 186 session, 3 generate_lead dau tien (2 nguoi dung, deu Direct, chua xac minh). Organic Search GA4 37 xuong 16 nguoc chieu GSC. Trich dan AI 18 xuong 12. Ahrefs va trich dan AI lay tu snapshot 25/09.",
+   "notes_en": "Scheduled run on 28 Sep. GSC clicks 3 to 7, impressions 184 to 177; average position 17.2 to 12.8 driven mainly by /login and branded queries, not non-brand rankings. GA4 186 sessions and the first 3 generate_lead key events (2 users, all Direct, unverified). GA4 Organic Search 37 to 16, opposite to GSC. AI citations 18 to 12. Ahrefs and AI citations come from the 25 Sep snapshot."
+  },
+  {
+   "id": "2026-09-18",
+   "vi": "12–18/09/2026",
+   "en": "12–18 Sep 2026",
+   "start": "2026-09-12",
+   "end": "2026-09-18",
+   "compare_start": "2026-09-05",
+   "compare_end": "2026-09-11",
+   "scanned_on": "2026-09-21",
+   "sources": [
+    "Google Search Console (Chrome)",
+    "Google Analytics 4 (Chrome)",
+    "Ahrefs snapshot (dxliving-seo-report)"
+   ],
+   "notes_vi": "Dung bu ngay 21/09. Toan bo cum truy van melbourne ve 0 impression, thay bang Sydney/Brisbane/Adelaide va cap quoc gia — vi the vi tri TB nhay 30,7 xuong 17,2 trong khi impressions va clicks cung giam. Direct tang 37 len 63 session voi thoi luong 2 giay, can kiem tra bot. Khong con session AI nao. Ahrefs va trich dan AI lay tu snapshot 18/09.",
+   "notes_en": "Backfilled on 21 Sep. The whole melbourne query cluster went to zero impressions, replaced by Sydney/Brisbane/Adelaide and national variants — which is why average position jumped 30.7 to 17.2 while impressions and clicks both fell. Direct rose 37 to 63 sessions at 2 seconds each and needs a bot check. No AI sessions at all. Ahrefs and AI citations come from the 18 Sep snapshot."
+  },
+  {
+   "id": "2026-09-11",
+   "vi": "05–11/09/2026",
+   "en": "5–11 Sep 2026",
+   "start": "2026-09-05",
+   "end": "2026-09-11",
+   "compare_start": "2026-08-29",
+   "compare_end": "2026-09-04",
+   "scanned_on": "2026-09-21",
+   "sources": [
+    "Google Search Console (Chrome)",
+    "Google Analytics 4 (Chrome)",
+    "Ahrefs snapshot (dxliving-seo-report)"
+   ],
+   "notes_vi": "Dung bu ngay 21/09 — tuan nay le ra duoc quet 14/09 nhung bao cao tuan khi do chi tra ket qua ra chat, khong tao file. GSC va GA4 doc lai truc tiep cho dung cua so; Ahrefs va trich dan AI lay tu snapshot 11/09. Nam bai moi lot thang vao top 10 nhung moi bai chi 2-12 impressions. stage.dxliving.com van chua sua.",
+   "notes_en": "Backfilled on 21 Sep — this week should have been scanned on 14 Sep, but the weekly report then only returned its result to chat without writing a file. GSC and GA4 were re-read directly for the exact window; Ahrefs and AI citations come from the 11 Sep snapshot. Five new articles landed straight in the top 10 but each drew only 2-12 impressions. stage.dxliving.com is still unfixed."
+  },
+  {
+   "id": "2026-09-04",
+   "vi": "29/08–04/09/2026",
+   "en": "29 Aug – 4 Sep 2026",
+   "start": "2026-08-29",
+   "end": "2026-09-04",
+   "compare_start": "2026-08-22",
+   "compare_end": "2026-08-28",
+   "scanned_on": "2026-09-07",
+   "sources": [
+    "Google Search Console (Chrome)",
+    "Google Analytics 4 (Chrome)",
+    "Ahrefs Site Explorer (Chrome)"
+   ],
+   "notes_vi": "GSC trễ 3 ngày, mới nhất 04/09. Su co 404 tuan truoc da khac phuc: ca 16 URL bai viet tro lai HTTP 200. Phan lon bien dong tuan nay la hau qua cua viec Google index lai cac trang do. stage.dxliving.com van chua sua.",
+   "notes_en": "GSC lags 3 days; latest data 4 Sep. The 404 incident is resolved: all 16 article URLs return HTTP 200 again. Most of this week's movement is fallout from Google re-indexing those pages. stage.dxliving.com is still unfixed."
+  },
+  {
+   "id": "2026-08-28",
+   "vi": "22–28/08/2026",
+   "en": "22–28 Aug 2026",
+   "start": "2026-08-22",
+   "end": "2026-08-28",
+   "compare_start": "2026-08-15",
+   "compare_end": "2026-08-21",
+   "scanned_on": "2026-08-31",
+   "sources": [
+    "Google Search Console (Chrome)",
+    "Google Analytics 4 (Chrome)",
+    "Ahrefs Site Explorer (Chrome)"
+   ],
+   "notes_vi": "GSC trễ 3 ngày, mới nhất 28/08. Cửa sổ chồng 1 ngày (22/08) với tuần trước. GA4 đã so sánh được vì cả hai tuần đều sau khi tracking khôi phục 15/08. Ahrefs cảnh báo 'Google keyword ranking data disruption' ngày 28/08.",
+   "notes_en": "GSC lags 3 days; latest data 28 Aug. The window overlaps the prior week by one day (22 Aug). GA4 is comparable because both weeks sit after tracking was restored on 15 Aug. Ahrefs posted a 'Google keyword ranking data disruption' notice on 28 Aug."
+  },
+  {
+   "id": "2026-08-22",
+   "vi": "16–22/08/2026",
+   "en": "16–22 Aug 2026",
+   "start": "2026-08-16",
+   "end": "2026-08-22",
+   "compare_start": "2026-08-09",
+   "compare_end": "2026-08-15",
+   "scanned_on": "2026-08-25",
+   "sources": [
+    "Google Search Console (Chrome)",
+    "Google Analytics 4 (Chrome)"
+   ],
+   "notes_vi": "GSC trễ 2 ngày nên dùng cửa sổ 7 ngày trượt kết thúc 22/08. GA4 mất tracking 27/07–14/08 nên không so sánh WoW.",
+   "notes_en": "GSC lags 2 days, so a rolling 7-day window ending 22 Aug is used. GA4 tracking was down 27 Jul–14 Aug, so week-over-week is not comparable."
+  }
+ ]
 }
