@@ -1,6 +1,6 @@
 {
  "derived": true,
- "generated_at": "2026-11-17",
+ "generated_at": "2026-11-18",
  "grain_legend": {
   "day": "The measurement for that exact day. Can be summed over a range.",
   "state": "A state metric at scan time. Average or take the end value, never sum.",

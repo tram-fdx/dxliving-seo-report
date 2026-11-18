@@ -958,9 +958,9 @@
   ]
  },
  "ahrefs": {
-  "read_at": "2026-11-17 (Ahrefs web)",
+  "read_at": "2026-11-18 (Ahrefs web)",
   "domain_rating": 0,
-  "ahrefs_rank": 114330302,
+  "ahrefs_rank": 114400107,
   "backlinks": 895,
   "referring_domains": 862,
   "organic_keywords": 0,
@@ -1869,13 +1869,26 @@
   }
  },
  "commentary": {
-  "vi": "clicks 26 → 27; impressions 4146 → 4255; ctr_pct 0.6 → 0.6; avg_position 20.5 → 19.8; queries_with_impressions 332 → 338; brand_clicks 10 → 11; page_one_queries 92 → 97; ga4_sessions 676 → 667.",
-  "en": "clicks 26 → 27; impressions 4146 → 4255; ctr_pct 0.6 → 0.6; avg_position 20.5 → 19.8; queries_with_impressions 332 → 338; brand_clicks 10 → 11; page_one_queries 92 → 97; ga4_sessions 676 → 667.",
-  "by": "template"
+  "vi": "Lượt hiển thị tăng từ 4.146 lên 4.255, click từ 26 lên 27, vị trí trung bình cải thiện từ 20,5 lên 19,8; số truy vấn trang 1 tăng từ 92 lên 97. CTR vẫn chỉ 0,6% và Ahrefs ghi nhận 0 từ khoá organic dù có 862 domain trỏ về. GA4 có 667 phiên (từ 676), tỉ lệ tương tác giảm từ 26,78% xuống 25,19%.",
+  "en": "Impressions rose from 4,146 to 4,255, clicks from 26 to 27, and average position improved from 20.5 to 19.8; page-one queries grew from 92 to 97. CTR is still 0.6% and Ahrefs shows 0 organic keywords despite 862 referring domains. GA4 had 667 sessions (from 676) and engagement fell from 26.78% to 25.19%.",
+  "by": "Claude (Mac)",
+  "rating": "ok",
+  "verdict_vi": "Hiển thị và thứ hạng nhích lên đều nhưng chưa chuyển thành click.",
+  "verdict_en": "Visibility and rankings are inching up but not yet turning into clicks.",
+  "actions_vi": [
+   "Viết lại title/meta cho 97 truy vấn trang 1 để nâng CTR 0,6%.",
+   "Kiểm tra vì sao Ahrefs ghi 0 từ khoá organic trong khi GSC có 338 truy vấn.",
+   "Cải thiện tỉ lệ tương tác GA4 (25,19%) ở các trang nhận traffic Direct."
+  ],
+  "actions_en": [
+   "Rewrite titles/meta for the 97 page-one queries to lift the 0.6% CTR.",
+   "Check why Ahrefs shows 0 organic keywords while GSC has 338 queries.",
+   "Improve GA4 engagement (25.19%) on pages receiving Direct traffic."
+  ]
  },
  "notes": {
-  "vi": "clicks 26 → 27; impressions 4146 → 4255; ctr_pct 0.6 → 0.6; avg_position 20.5 → 19.8; queries_with_impressions 332 → 338; brand_clicks 10 → 11; page_one_queries 92 → 97; ga4_sessions 676 → 667.",
-  "en": "clicks 26 → 27; impressions 4146 → 4255; ctr_pct 0.6 → 0.6; avg_position 20.5 → 19.8; queries_with_impressions 332 → 338; brand_clicks 10 → 11; page_one_queries 92 → 97; ga4_sessions 676 → 667."
+  "vi": "Lượt hiển thị tăng từ 4.146 lên 4.255, click từ 26 lên 27, vị trí trung bình cải thiện từ 20,5 lên 19,8; số truy vấn trang 1 tăng từ 92 lên 97. CTR vẫn chỉ 0,6% và Ahrefs ghi nhận 0 từ khoá organic dù có 862 domain trỏ về. GA4 có 667 phiên (từ 676), tỉ lệ tương tác giảm từ 26,78% xuống 25,19%.",
+  "en": "Impressions rose from 4,146 to 4,255, clicks from 26 to 27, and average position improved from 20.5 to 19.8; page-one queries grew from 92 to 97. CTR is still 0.6% and Ahrefs shows 0 organic keywords despite 862 referring domains. GA4 had 667 sessions (from 676) and engagement fell from 26.78% to 25.19%."
  },
  "commentary_input": {
   "report": "SEO (GSC + GA4)",
@@ -1932,7 +1945,15 @@
       "project cost control",
       1
      ]
-    ]
+    ],
+    "ahrefs": {
+     "domain_rating": 0,
+     "referring_domains": 862,
+     "backlinks": 895,
+     "organic_keywords": 0,
+     "organic_traffic": 0,
+     "ai_citations": 36
+    }
    },
    "previous": {
     "clicks": 26,
