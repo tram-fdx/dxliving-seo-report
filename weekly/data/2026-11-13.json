@@ -1261,9 +1261,9 @@
    }
   ]
  },
- "notes_vi": "clicks 10 → 9; impressions 1522 → 1308; ctr_pct 0.7 → 0.7; avg_position 20.4 → 18.2; queries_with_impressions 195 → 158; brand_clicks 3 → 2; page_one_queries 60 → 55; ga4_sessions 134 → 201.",
- "notes_en": "clicks 10 → 9; impressions 1522 → 1308; ctr_pct 0.7 → 0.7; avg_position 20.4 → 18.2; queries_with_impressions 195 → 158; brand_clicks 3 → 2; page_one_queries 60 → 55; ga4_sessions 134 → 201.",
- "notes_by": "template",
+ "notes_vi": "Tuần 07–13/11: 9 click (từ 10) và 1.308 lượt hiển thị (từ 1.522), nhưng vị trí trung bình cải thiện từ 20,4 lên 18,2. Phiên GA4 tăng từ 134 lên 201 nhờ Organic Social (67), tuy tỷ lệ tương tác giảm từ 25,37% xuống 17,91%.",
+ "notes_en": "Week 7–13 Nov: 9 clicks (from 10) and 1,308 impressions (from 1,522), but average position improved from 20.4 to 18.2. GA4 sessions rose from 134 to 201 on Organic Social (67), though engagement fell from 25.37% to 17.91%.",
+ "notes_by": "Claude (Mac)",
  "commentary_input": {
   "report": "SEO weekly",
   "summary": {
@@ -1364,5 +1364,18 @@
     ]
    }
   }
+ },
+ "notes_extra": {
+  "rating": "ok",
+  "verdict_vi": "Tuần lẫn lộn: lưu lượng tăng nhưng chất lượng phiên và hiển thị tìm kiếm giảm.",
+  "verdict_en": "A mixed week: traffic grew but session quality and search impressions fell.",
+  "actions_vi": [
+   "Kiểm tra trang đích của lượt truy cập từ social để cải thiện tỷ lệ tương tác 17,91%.",
+   "Tìm nguyên nhân số truy vấn có hiển thị giảm từ 195 xuống 158."
+  ],
+  "actions_en": [
+   "Review landing pages for social traffic to improve the 17.91% engagement rate.",
+   "Investigate why queries with impressions fell from 195 to 158."
+  ]
  }
 }
