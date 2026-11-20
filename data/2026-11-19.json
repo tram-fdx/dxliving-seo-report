@@ -958,14 +958,14 @@
   ]
  },
  "ahrefs": {
-  "read_at": "2026-11-19 (Ahrefs web)",
+  "read_at": "2026-11-20 (Ahrefs web)",
   "domain_rating": 0,
   "ahrefs_rank": 114805806,
   "backlinks": 896,
   "referring_domains": 863,
   "organic_keywords": 1,
   "organic_traffic": 1,
-  "ai_citations": 34,
+  "ai_citations": 33,
   "cited_pages": 11,
   "source": "Ahrefs web (Chrome on Mac)"
  },
@@ -1869,26 +1869,26 @@
   }
  },
  "commentary": {
-  "vi": "28 ngày qua GSC ghi 29 click (từ 27) và 4.467 lượt hiển thị (từ 4.327); vị trí trung bình cải thiện từ 19,5 lên 18,8 và số truy vấn trang 1 tăng từ 106 lên 112. CTR vẫn chỉ 0,6% và 11 click là từ khoá thương hiệu. GA4 có 654 phiên, tỷ lệ tương tác 24,46%; Ahrefs ghi 34 lượt trích dẫn trong câu trả lời AI.",
-  "en": "Over 28 days GSC shows 29 clicks (from 27) and 4,467 impressions (from 4,327); average position improved from 19.5 to 18.8 and page-one queries rose from 106 to 112. CTR is still only 0.6%, and 11 clicks are branded. GA4 logged 654 sessions at 24.46% engagement; Ahrefs records 34 AI-response citations.",
+  "vi": "Google mang về 29 click (từ 27) và 4.467 lượt hiển thị (từ 4.327); vị trí trung bình cải thiện lên 18,8 và số truy vấn trang 1 tăng lên 112. GA4 gần như đi ngang với 654 phiên, tỉ lệ tương tác 24,46% và 3 key event. Ahrefs vẫn ghi DR 0 dù có 863 domain trỏ về, và 33 lượt trích dẫn AI. CTR chỉ 0,6% nên ưu tiên viết lại title/meta cho các truy vấn đã lên trang 1.",
+  "en": "Google delivered 29 clicks (from 27) and 4,467 impressions (from 4,327); average position improved to 18.8 and page-one queries rose to 112. GA4 was flat at 654 sessions, 24.46% engagement and 3 key events. Ahrefs still shows DR 0 despite 863 referring domains, plus 33 AI citations. CTR is only 0.6%, so rewrite titles and metas for queries already on page one.",
   "by": "Claude (Mac)",
   "rating": "ok",
-  "verdict_vi": "Hiển thị và thứ hạng nhích lên nhưng lượt click còn rất ít so với hiển thị.",
-  "verdict_en": "Visibility and rankings are edging up, but clicks remain very low relative to impressions.",
+  "verdict_vi": "Hiển thị và thứ hạng tăng chậm nhưng đều; chuyển đổi từ hiển thị sang click còn yếu.",
+  "verdict_en": "Visibility and rankings are growing slowly but steadily; turning impressions into clicks is still weak.",
   "actions_vi": [
-   "Viết lại title/meta cho các trang trong 112 truy vấn trang 1 để nâng CTR 0,6%.",
-   "Tăng tương tác trang đích (24,46%) bằng CTA rõ và liên kết nội bộ.",
-   "Xây backlink chất lượng vì DR vẫn 0 dù có 863 domain trỏ về."
+   "Viết lại title/meta cho 112 truy vấn trang 1 để kéo CTR lên trên 0,6%",
+   "Kiểm tra chất lượng 863 domain trỏ về vì DR vẫn là 0, disavow nếu là spam",
+   "Tăng tỉ lệ tương tác GA4 (24,46%) bằng CTA rõ hơn trên các trang có traffic"
   ],
   "actions_en": [
-   "Rewrite titles/metas for pages behind the 112 page-one queries to lift the 0.6% CTR.",
-   "Raise landing-page engagement (24.46%) with clearer CTAs and internal links.",
-   "Build quality backlinks, as DR is still 0 despite 863 referring domains."
+   "Rewrite titles/metas for the 112 page-one queries to lift CTR above 0.6%",
+   "Review the 863 referring domains since DR is still 0; disavow spam if needed",
+   "Lift GA4 engagement (24.46%) with clearer CTAs on pages that get traffic"
   ]
  },
  "notes": {
-  "vi": "28 ngày qua GSC ghi 29 click (từ 27) và 4.467 lượt hiển thị (từ 4.327); vị trí trung bình cải thiện từ 19,5 lên 18,8 và số truy vấn trang 1 tăng từ 106 lên 112. CTR vẫn chỉ 0,6% và 11 click là từ khoá thương hiệu. GA4 có 654 phiên, tỷ lệ tương tác 24,46%; Ahrefs ghi 34 lượt trích dẫn trong câu trả lời AI.",
-  "en": "Over 28 days GSC shows 29 clicks (from 27) and 4,467 impressions (from 4,327); average position improved from 19.5 to 18.8 and page-one queries rose from 106 to 112. CTR is still only 0.6%, and 11 clicks are branded. GA4 logged 654 sessions at 24.46% engagement; Ahrefs records 34 AI-response citations."
+  "vi": "Google mang về 29 click (từ 27) và 4.467 lượt hiển thị (từ 4.327); vị trí trung bình cải thiện lên 18,8 và số truy vấn trang 1 tăng lên 112. GA4 gần như đi ngang với 654 phiên, tỉ lệ tương tác 24,46% và 3 key event. Ahrefs vẫn ghi DR 0 dù có 863 domain trỏ về, và 33 lượt trích dẫn AI. CTR chỉ 0,6% nên ưu tiên viết lại title/meta cho các truy vấn đã lên trang 1.",
+  "en": "Google delivered 29 clicks (from 27) and 4,467 impressions (from 4,327); average position improved to 18.8 and page-one queries rose to 112. GA4 was flat at 654 sessions, 24.46% engagement and 3 key events. Ahrefs still shows DR 0 despite 863 referring domains, plus 33 AI citations. CTR is only 0.6%, so rewrite titles and metas for queries already on page one."
  },
  "commentary_input": {
   "report": "SEO (GSC + GA4)",
@@ -1952,7 +1952,7 @@
      "backlinks": 896,
      "organic_keywords": 1,
      "organic_traffic": 1,
-     "ai_citations": 34
+     "ai_citations": 33
     }
    },
    "previous": {
