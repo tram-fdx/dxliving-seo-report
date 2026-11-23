@@ -967,14 +967,14 @@
   ]
  },
  "ahrefs": {
-  "read_at": "2026-11-20 (Ahrefs web)",
+  "read_at": "2026-11-23 (Ahrefs web)",
   "domain_rating": 0,
   "ahrefs_rank": 114805806,
-  "backlinks": 896,
-  "referring_domains": 863,
+  "backlinks": 892,
+  "referring_domains": 860,
   "organic_keywords": 1,
   "organic_traffic": 1,
-  "ai_citations": 33,
+  "ai_citations": 32,
   "cited_pages": 11,
   "source": "Ahrefs web (Chrome on Mac)"
  },
@@ -1885,13 +1885,26 @@
   }
  },
  "commentary": {
-  "vi": "clicks 35 → 37; impressions 4904 → 5091; ctr_pct 0.7 → 0.7; avg_position 17.1 → 16.6; queries_with_impressions 379 → 389; brand_clicks 13 → 13; page_one_queries 122 → 133; ga4_sessions 620 → 619.",
-  "en": "clicks 35 → 37; impressions 4904 → 5091; ctr_pct 0.7 → 0.7; avg_position 17.1 → 16.6; queries_with_impressions 379 → 389; brand_clicks 13 → 13; page_one_queries 122 → 133; ga4_sessions 620 → 619.",
-  "by": "template"
+  "vi": "Lượt nhấp GSC tăng từ 35 lên 37, hiển thị từ 4.904 lên 5.091 và vị trí trung bình cải thiện từ 17,1 lên 16,6; số truy vấn trang 1 tăng từ 122 lên 133. CTR vẫn 0,7% và 13 lượt nhấp là từ thương hiệu. GA4 giữ khoảng 619 phiên nhưng sự kiện chính giảm từ 3 xuống 1 và phiên từ AI giảm từ 6 xuống 5. Ahrefs ghi nhận 32 lượt AI trích dẫn nhưng chỉ 1 từ khoá organic.",
+  "en": "GSC clicks rose from 35 to 37, impressions from 4,904 to 5,091 and average position improved from 17.1 to 16.6; page-one queries grew from 122 to 133. CTR stays at 0.7% and 13 clicks are branded. GA4 held near 619 sessions but key events fell from 3 to 1 and AI sessions from 6 to 5. Ahrefs shows 32 AI citations but only 1 organic keyword.",
+  "by": "Claude (Mac)",
+  "rating": "ok",
+  "verdict_vi": "Thứ hạng và hiển thị tiến đều, nhưng CTR 0,7% và sự kiện chính giảm cho thấy chưa chuyển thành khách.",
+  "verdict_en": "Rankings and impressions keep climbing, but a 0.7% CTR and fewer key events show it is not yet converting.",
+  "actions_vi": [
+   "Viết lại title/meta cho các truy vấn hiển thị cao trong 133 truy vấn trang 1 để nâng CTR 0,7%",
+   "Kiểm tra form/CTA vì sự kiện chính GA4 giảm từ 3 xuống 1",
+   "Bổ sung FAQ và số liệu cho 11 trang được AI trích dẫn"
+  ],
+  "actions_en": [
+   "Rewrite titles/meta for high-impression queries among the 133 page-one queries to lift the 0.7% CTR",
+   "Check forms and CTAs since GA4 key events fell from 3 to 1",
+   "Add FAQs and figures to the 11 pages cited by AI"
+  ]
  },
  "notes": {
-  "vi": "clicks 35 → 37; impressions 4904 → 5091; ctr_pct 0.7 → 0.7; avg_position 17.1 → 16.6; queries_with_impressions 379 → 389; brand_clicks 13 → 13; page_one_queries 122 → 133; ga4_sessions 620 → 619.",
-  "en": "clicks 35 → 37; impressions 4904 → 5091; ctr_pct 0.7 → 0.7; avg_position 17.1 → 16.6; queries_with_impressions 379 → 389; brand_clicks 13 → 13; page_one_queries 122 → 133; ga4_sessions 620 → 619."
+  "vi": "Lượt nhấp GSC tăng từ 35 lên 37, hiển thị từ 4.904 lên 5.091 và vị trí trung bình cải thiện từ 17,1 lên 16,6; số truy vấn trang 1 tăng từ 122 lên 133. CTR vẫn 0,7% và 13 lượt nhấp là từ thương hiệu. GA4 giữ khoảng 619 phiên nhưng sự kiện chính giảm từ 3 xuống 1 và phiên từ AI giảm từ 6 xuống 5. Ahrefs ghi nhận 32 lượt AI trích dẫn nhưng chỉ 1 từ khoá organic.",
+  "en": "GSC clicks rose from 35 to 37, impressions from 4,904 to 5,091 and average position improved from 17.1 to 16.6; page-one queries grew from 122 to 133. CTR stays at 0.7% and 13 clicks are branded. GA4 held near 619 sessions but key events fell from 3 to 1 and AI sessions from 6 to 5. Ahrefs shows 32 AI citations but only 1 organic keyword."
  },
  "commentary_input": {
   "report": "SEO (GSC + GA4)",
@@ -1952,7 +1965,15 @@
       "project cost control",
       1
      ]
-    ]
+    ],
+    "ahrefs": {
+     "domain_rating": 0,
+     "referring_domains": 860,
+     "backlinks": 892,
+     "organic_keywords": 1,
+     "organic_traffic": 1,
+     "ai_citations": 32
+    }
    },
    "previous": {
     "clicks": 35,
