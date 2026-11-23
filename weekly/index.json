@@ -1,7 +1,24 @@
 {
  "kind": "weekly",
- "latest": "2026-11-13",
+ "latest": "2026-11-21",
  "weeks": [
+  {
+   "id": "2026-11-21",
+   "vi": "15–21/11/2026",
+   "en": "15 – 21 Nov 2026",
+   "start": "2026-11-15",
+   "end": "2026-11-21",
+   "compare_start": "2026-11-08",
+   "compare_end": "2026-11-14",
+   "scanned_on": "2026-11-23",
+   "sources": [
+    "Google Search Console (Chrome)",
+    "Google Analytics 4 (Chrome)",
+    "Ahrefs snapshot data/2026-11-21.json (dxliving-seo-report)"
+   ],
+   "notes_vi": "Chạy theo lịch 23/11. GSC clicks 11 lên 12, impressions 1.310 lên 1.680; vị trí TB 16,6 lên 8,3 chủ yếu do truy vấn vị trí sâu (duplex, project management) rơi khỏi mẫu, không phải thứ hạng tăng. home-cinema-cost-australia 571 impressions ở vị trí 5,3 nhưng 1 click. 28 ngày: 37 click, 5.349 impressions. GA4 sessions 215 xuống 108 (Direct 127 xuống 58, Organic Social 70 xuống 16), Organic Search 18 lên 19, key events 1 xuống 0, AI 0 lên 2. Trích dẫn AI 33 xuống 32 trên 11 trang (snapshot 21/11 vs 15/11), backlinks 892, referring domains 860.",
+   "notes_en": "Scheduled run on 23 Nov. GSC clicks 11 to 12, impressions 1,310 to 1,680; average position 16.6 to 8.3 mostly because deep-position queries (duplex, project management) left the sample, not a ranking gain. home-cinema-cost-australia had 571 impressions at position 5.3 but 1 click. 28 days: 37 clicks, 5,349 impressions. GA4 sessions 215 to 108 (Direct 127 to 58, Organic Social 70 to 16), Organic Search 18 to 19, key events 1 to 0, AI 0 to 2. AI citations 33 to 32 across 11 pages (21 Nov snapshot vs 15 Nov), backlinks 892, referring domains 860."
+  },
   {
    "id": "2026-11-13",
    "vi": "7–13/11/2026",
