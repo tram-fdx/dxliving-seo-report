@@ -960,14 +960,14 @@
   ]
  },
  "ahrefs": {
-  "read_at": "2026-11-20 (Ahrefs web)",
+  "read_at": "2026-11-23 (Ahrefs web)",
   "domain_rating": 0,
   "ahrefs_rank": 114805806,
-  "backlinks": 896,
-  "referring_domains": 863,
+  "backlinks": 892,
+  "referring_domains": 860,
   "organic_keywords": 1,
   "organic_traffic": 1,
-  "ai_citations": 33,
+  "ai_citations": 32,
   "cited_pages": 11,
   "source": "Ahrefs web (Chrome on Mac)"
  },
@@ -1871,13 +1871,26 @@
   }
  },
  "commentary": {
-  "vi": "clicks 32 → 34; impressions 4572 → 4724; ctr_pct 0.7 → 0.7; avg_position 18.3 → 17.5; queries_with_impressions 369 → 373; brand_clicks 11 → 13; page_one_queries 113 → 117; ga4_sessions 633 → 623.",
-  "en": "clicks 32 → 34; impressions 4572 → 4724; ctr_pct 0.7 → 0.7; avg_position 18.3 → 17.5; queries_with_impressions 369 → 373; brand_clicks 11 → 13; page_one_queries 113 → 117; ga4_sessions 633 → 623.",
-  "by": "template"
+  "vi": "Click GSC tăng từ 32 lên 34, hiển thị từ 4.572 lên 4.724 và vị trí trung bình cải thiện từ 18,3 lên 17,5; số truy vấn trang 1 lên 117. GA4 có 623 phiên (giảm nhẹ từ 633), tỷ lệ tương tác 23,76%, phiên từ AI tăng từ 6 lên 8. CTR vẫn 0,7% và Ahrefs chỉ ghi nhận 1 từ khoá organic. Nên viết lại title/meta cho các trang đang ở trang 1 nhưng ít click.",
+  "en": "GSC clicks rose from 32 to 34, impressions from 4,572 to 4,724, and average position improved from 18.3 to 17.5; page-one queries reached 117. GA4 logged 623 sessions (slightly down from 633) at 23.76% engagement, while AI sessions rose from 6 to 8. CTR remains 0.7% and Ahrefs still sees only 1 organic keyword. Rewrite titles and metas for page-one pages that earn few clicks.",
+  "by": "Claude (Mac)",
+  "rating": "ok",
+  "verdict_vi": "Hiển thị và thứ hạng tiến chậm nhưng đều, chưa chuyển thành nhiều click.",
+  "verdict_en": "Visibility and rankings are improving slowly but steadily, not yet turning into many clicks.",
+  "actions_vi": [
+   "Viết lại title/meta cho 117 truy vấn trang 1 có CTR thấp để nâng CTR 0,7%.",
+   "Tăng tương tác GA4 (23,76%) bằng CTA rõ ở các trang nhận traffic Direct và Social.",
+   "Theo dõi 32 trích dẫn AI và bổ sung FAQ cho các trang được trích."
+  ],
+  "actions_en": [
+   "Rewrite titles/metas for low-CTR page-one queries (117) to lift the 0.7% CTR.",
+   "Lift GA4 engagement (23.76%) with clear CTAs on pages receiving Direct and Social traffic.",
+   "Track the 32 AI citations and add FAQs to the cited pages."
+  ]
  },
  "notes": {
-  "vi": "clicks 32 → 34; impressions 4572 → 4724; ctr_pct 0.7 → 0.7; avg_position 18.3 → 17.5; queries_with_impressions 369 → 373; brand_clicks 11 → 13; page_one_queries 113 → 117; ga4_sessions 633 → 623.",
-  "en": "clicks 32 → 34; impressions 4572 → 4724; ctr_pct 0.7 → 0.7; avg_position 18.3 → 17.5; queries_with_impressions 369 → 373; brand_clicks 11 → 13; page_one_queries 113 → 117; ga4_sessions 633 → 623."
+  "vi": "Click GSC tăng từ 32 lên 34, hiển thị từ 4.572 lên 4.724 và vị trí trung bình cải thiện từ 18,3 lên 17,5; số truy vấn trang 1 lên 117. GA4 có 623 phiên (giảm nhẹ từ 633), tỷ lệ tương tác 23,76%, phiên từ AI tăng từ 6 lên 8. CTR vẫn 0,7% và Ahrefs chỉ ghi nhận 1 từ khoá organic. Nên viết lại title/meta cho các trang đang ở trang 1 nhưng ít click.",
+  "en": "GSC clicks rose from 32 to 34, impressions from 4,572 to 4,724, and average position improved from 18.3 to 17.5; page-one queries reached 117. GA4 logged 623 sessions (slightly down from 633) at 23.76% engagement, while AI sessions rose from 6 to 8. CTR remains 0.7% and Ahrefs still sees only 1 organic keyword. Rewrite titles and metas for page-one pages that earn few clicks."
  },
  "commentary_input": {
   "report": "SEO (GSC + GA4)",
@@ -1934,7 +1947,15 @@
       "project cost control",
       1
      ]
-    ]
+    ],
+    "ahrefs": {
+     "domain_rating": 0,
+     "referring_domains": 860,
+     "backlinks": 892,
+     "organic_keywords": 1,
+     "organic_traffic": 1,
+     "ai_citations": 32
+    }
    },
    "previous": {
     "clicks": 32,
