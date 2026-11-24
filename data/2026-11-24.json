@@ -1,0 +1,2023 @@
+{
+ "date": "2026-11-24",
+ "site": "dxliving.com",
+ "provenance": "Automated: Google Search Console API + GA4 Data API (GitHub Actions, pipeline v1).",
+ "windows": {
+  "gsc": "2026-10-26 → 2026-11-22",
+  "ga4": "2026-10-27 → 2026-11-23"
+ },
+ "gsc_28d": {
+  "clicks": 36,
+  "impressions": 5246,
+  "ctr_pct": 0.7,
+  "avg_position": 16.0,
+  "queries_with_impressions": 392,
+  "brand_clicks": 12,
+  "brand_clicks_share_pct": 33.3,
+  "clicked_queries": [
+   {
+    "q": "dx living",
+    "clicks": 7,
+    "impressions": 37,
+    "ctr_pct": 18.92,
+    "position": 2.8
+   },
+   {
+    "q": "dxliving",
+    "clicks": 5,
+    "impressions": 15,
+    "ctr_pct": 33.33,
+    "position": 4.5
+   },
+   {
+    "q": "dx company",
+    "clicks": 1,
+    "impressions": 2,
+    "ctr_pct": 50.0,
+    "position": 6
+   },
+   {
+    "q": "home cinema cost",
+    "clicks": 1,
+    "impressions": 7,
+    "ctr_pct": 14.29,
+    "position": 10.4
+   },
+   {
+    "q": "project cost control",
+    "clicks": 1,
+    "impressions": 24,
+    "ctr_pct": 4.17,
+    "position": 83.9
+   }
+  ],
+  "top_queries": [
+   {
+    "q": "media room renovation cost",
+    "clicks": 0,
+    "impressions": 386,
+    "ctr_pct": 0,
+    "position": 5.6
+   },
+   {
+    "q": "home theater renovation cost",
+    "clicks": 0,
+    "impressions": 336,
+    "ctr_pct": 0,
+    "position": 4.8
+   },
+   {
+    "q": "how to interior design for developers",
+    "clicks": 0,
+    "impressions": 210,
+    "ctr_pct": 0,
+    "position": 5.6
+   },
+   {
+    "q": "31 mcilwain drive mermaid waters",
+    "clicks": 0,
+    "impressions": 147,
+    "ctr_pct": 0,
+    "position": 9.1
+   },
+   {
+    "q": "interior design for property developers",
+    "clicks": 0,
+    "impressions": 121,
+    "ctr_pct": 0,
+    "position": 7.4
+   },
+   {
+    "q": "interior design for developers",
+    "clicks": 0,
+    "impressions": 70,
+    "ctr_pct": 0,
+    "position": 9.7
+   },
+   {
+    "q": "design coordination",
+    "clicks": 0,
+    "impressions": 68,
+    "ctr_pct": 0,
+    "position": 58.6
+   },
+   {
+    "q": "living room ideas australia",
+    "clicks": 0,
+    "impressions": 61,
+    "ctr_pct": 0,
+    "position": 20.4
+   },
+   {
+    "q": "interior design tips for developers",
+    "clicks": 0,
+    "impressions": 52,
+    "ctr_pct": 0,
+    "position": 5.3
+   },
+   {
+    "q": "interior design for property development",
+    "clicks": 0,
+    "impressions": 51,
+    "ctr_pct": 0,
+    "position": 8.3
+   },
+   {
+    "q": "property development interior design",
+    "clicks": 0,
+    "impressions": 44,
+    "ctr_pct": 0,
+    "position": 8
+   },
+   {
+    "q": "adelaide property developers",
+    "clicks": 0,
+    "impressions": 42,
+    "ctr_pct": 0,
+    "position": 15.0
+   },
+   {
+    "q": "rendering apartment community",
+    "clicks": 0,
+    "impressions": 40,
+    "ctr_pct": 0,
+    "position": 23.1
+   },
+   {
+    "q": "which builder offers better value for square footage?",
+    "clicks": 0,
+    "impressions": 40,
+    "ctr_pct": 0,
+    "position": 3.6
+   },
+   {
+    "q": "dx living",
+    "clicks": 7,
+    "impressions": 37,
+    "ctr_pct": 18.92,
+    "position": 2.8
+   },
+   {
+    "q": "3d coordination",
+    "clicks": 0,
+    "impressions": 35,
+    "ctr_pct": 0,
+    "position": 12.3
+   },
+   {
+    "q": "living room designs australia",
+    "clicks": 0,
+    "impressions": 30,
+    "ctr_pct": 0,
+    "position": 5.2
+   },
+   {
+    "q": "developers adelaide",
+    "clicks": 0,
+    "impressions": 28,
+    "ctr_pct": 0,
+    "position": 25.1
+   },
+   {
+    "q": "3d house visualisation adelaide",
+    "clicks": 0,
+    "impressions": 26,
+    "ctr_pct": 0,
+    "position": 9.8
+   },
+   {
+    "q": "interior design equipment for developers",
+    "clicks": 0,
+    "impressions": 26,
+    "ctr_pct": 0,
+    "position": 4.3
+   },
+   {
+    "q": "which builders offer the best combination of quality and value?",
+    "clicks": 0,
+    "impressions": 26,
+    "ctr_pct": 0,
+    "position": 5.7
+   },
+   {
+    "q": "3d rendering cost",
+    "clicks": 0,
+    "impressions": 25,
+    "ctr_pct": 0,
+    "position": 42.8
+   },
+   {
+    "q": "contemporary house designs",
+    "clicks": 0,
+    "impressions": 25,
+    "ctr_pct": 0,
+    "position": 33.4
+   },
+   {
+    "q": "property developer interior design",
+    "clicks": 0,
+    "impressions": 25,
+    "ctr_pct": 0,
+    "position": 8.6
+   },
+   {
+    "q": "project cost control",
+    "clicks": 1,
+    "impressions": 24,
+    "ctr_pct": 4.17,
+    "position": 83.9
+   }
+  ],
+  "top_pages": [
+   {
+    "page": "/",
+    "clicks": 21,
+    "impressions": 171,
+    "ctr_pct": 12.28,
+    "position": 3.2
+   },
+   {
+    "page": "/articles/modern-house-design-2026-10-trends-shaping-homes",
+    "clicks": 3,
+    "impressions": 62,
+    "ctr_pct": 4.84,
+    "position": 15.7
+   },
+   {
+    "page": "/model",
+    "clicks": 3,
+    "impressions": 86,
+    "ctr_pct": 3.49,
+    "position": 9.1
+   },
+   {
+    "page": "/about",
+    "clicks": 2,
+    "impressions": 100,
+    "ctr_pct": 2.0,
+    "position": 4.0
+   },
+   {
+    "page": "/apply",
+    "clicks": 2,
+    "impressions": 6,
+    "ctr_pct": 33.33,
+    "position": 8.2
+   },
+   {
+    "page": "/articles/home-cinema-cost-australia",
+    "clicks": 2,
+    "impressions": 918,
+    "ctr_pct": 0.22,
+    "position": 5.6
+   },
+   {
+    "page": "/articles/living-room-trends-australia",
+    "clicks": 2,
+    "impressions": 464,
+    "ctr_pct": 0.43,
+    "position": 11.0
+   },
+   {
+    "page": "/articles/project-251-visualisation-overview",
+    "clicks": 2,
+    "impressions": 3,
+    "ctr_pct": 66.67,
+    "position": 4.7
+   },
+   {
+    "page": "/contact",
+    "clicks": 2,
+    "impressions": 22,
+    "ctr_pct": 9.09,
+    "position": 25.0
+   },
+   {
+    "page": "/faq",
+    "clicks": 2,
+    "impressions": 19,
+    "ctr_pct": 10.53,
+    "position": 11.5
+   },
+   {
+    "page": "/modules",
+    "clicks": 2,
+    "impressions": 67,
+    "ctr_pct": 2.99,
+    "position": 4.6
+   },
+   {
+    "page": "/projects",
+    "clicks": 2,
+    "impressions": 27,
+    "ctr_pct": 7.41,
+    "position": 16.9
+   },
+   {
+    "page": "/studio",
+    "clicks": 2,
+    "impressions": 38,
+    "ctr_pct": 5.26,
+    "position": 12.6
+   },
+   {
+    "page": "/suppliers",
+    "clicks": 2,
+    "impressions": 31,
+    "ctr_pct": 6.45,
+    "position": 34.2
+   },
+   {
+    "page": "/articles/interior-design-for-property-developers",
+    "clicks": 1,
+    "impressions": 689,
+    "ctr_pct": 0.15,
+    "position": 7.1
+   },
+   {
+    "page": "/articles/pre-construction-visualisation-construction-readiness",
+    "clicks": 1,
+    "impressions": 22,
+    "ctr_pct": 4.55,
+    "position": 9.1
+   },
+   {
+    "page": "/articles/project-management-and-cost-control",
+    "clicks": 1,
+    "impressions": 44,
+    "ctr_pct": 2.27,
+    "position": 60.0
+   },
+   {
+    "page": "/articles/virtual-reality-home-walkthrough",
+    "clicks": 1,
+    "impressions": 18,
+    "ctr_pct": 5.56,
+    "position": 9.9
+   },
+   {
+    "page": "/articles/virtual-reality-in-australia-home-design",
+    "clicks": 1,
+    "impressions": 14,
+    "ctr_pct": 7.14,
+    "position": 33.6
+   },
+   {
+    "page": "/articles/virtual-reality-interior-design",
+    "clicks": 1,
+    "impressions": 5,
+    "ctr_pct": 20.0,
+    "position": 7
+   },
+   {
+    "page": "/articles",
+    "clicks": 0,
+    "impressions": 41,
+    "ctr_pct": 0,
+    "position": 17.6
+   },
+   {
+    "page": "/articles/3d-floor-plan-melbourne-home-design-clarity",
+    "clicks": 0,
+    "impressions": 3,
+    "ctr_pct": 0,
+    "position": 7
+   },
+   {
+    "page": "/articles/3d-house-design-guide",
+    "clicks": 0,
+    "impressions": 3,
+    "ctr_pct": 0,
+    "position": 8.3
+   },
+   {
+    "page": "/articles/3d-house-design-guide-from-sketch-to-walkthrough",
+    "clicks": 0,
+    "impressions": 26,
+    "ctr_pct": 0,
+    "position": 5.7
+   },
+   {
+    "page": "/articles/3d-rendering-adelaide",
+    "clicks": 0,
+    "impressions": 31,
+    "ctr_pct": 0,
+    "position": 9.0
+   }
+  ],
+  "page_one_queries": 137,
+  "top3_queries": 38,
+  "daily": [
+   {
+    "d": "2026-10-26",
+    "clicks": 0,
+    "impressions": 102
+   },
+   {
+    "d": "2026-10-27",
+    "clicks": 1,
+    "impressions": 115
+   },
+   {
+    "d": "2026-10-28",
+    "clicks": 0,
+    "impressions": 95
+   },
+   {
+    "d": "2026-10-29",
+    "clicks": 1,
+    "impressions": 67
+   },
+   {
+    "d": "2026-10-30",
+    "clicks": 0,
+    "impressions": 178
+   },
+   {
+    "d": "2026-10-31",
+    "clicks": 1,
+    "impressions": 170
+   },
+   {
+    "d": "2026-11-01",
+    "clicks": 1,
+    "impressions": 257
+   },
+   {
+    "d": "2026-11-02",
+    "clicks": 0,
+    "impressions": 247
+   },
+   {
+    "d": "2026-11-03",
+    "clicks": 3,
+    "impressions": 205
+   },
+   {
+    "d": "2026-11-04",
+    "clicks": 4,
+    "impressions": 233
+   },
+   {
+    "d": "2026-11-05",
+    "clicks": 1,
+    "impressions": 194
+   },
+   {
+    "d": "2026-11-06",
+    "clicks": 0,
+    "impressions": 216
+   },
+   {
+    "d": "2026-11-07",
+    "clicks": 1,
+    "impressions": 177
+   },
+   {
+    "d": "2026-11-08",
+    "clicks": 0,
+    "impressions": 180
+   },
+   {
+    "d": "2026-11-09",
+    "clicks": 3,
+    "impressions": 219
+   },
+   {
+    "d": "2026-11-10",
+    "clicks": 1,
+    "impressions": 140
+   },
+   {
+    "d": "2026-11-11",
+    "clicks": 1,
+    "impressions": 184
+   },
+   {
+    "d": "2026-11-12",
+    "clicks": 2,
+    "impressions": 196
+   },
+   {
+    "d": "2026-11-13",
+    "clicks": 1,
+    "impressions": 212
+   },
+   {
+    "d": "2026-11-14",
+    "clicks": 3,
+    "impressions": 179
+   },
+   {
+    "d": "2026-11-15",
+    "clicks": 1,
+    "impressions": 250
+   },
+   {
+    "d": "2026-11-16",
+    "clicks": 2,
+    "impressions": 226
+   },
+   {
+    "d": "2026-11-17",
+    "clicks": 3,
+    "impressions": 214
+   },
+   {
+    "d": "2026-11-18",
+    "clicks": 2,
+    "impressions": 226
+   },
+   {
+    "d": "2026-11-19",
+    "clicks": 2,
+    "impressions": 282
+   },
+   {
+    "d": "2026-11-20",
+    "clicks": 2,
+    "impressions": 224
+   },
+   {
+    "d": "2026-11-21",
+    "clicks": 0,
+    "impressions": 258
+   }
+  ]
+ },
+ "gsc_rank_movement": {
+  "tracked": {
+   "3d house visualisation adelaide": {
+    "clicks": 0,
+    "impressions": 26,
+    "ctr_pct": 0,
+    "position": 9.8
+   },
+   "3d rendering company adelaide": {
+    "clicks": 0,
+    "impressions": 11,
+    "ctr_pct": 0,
+    "position": 18.2
+   },
+   "3d visualisation adelaide": {
+    "clicks": 0,
+    "impressions": 14,
+    "ctr_pct": 0,
+    "position": 21.1
+   },
+   "3d architectural rendering adelaide": {
+    "clicks": 0,
+    "impressions": 17,
+    "ctr_pct": 0,
+    "position": 10.5
+   },
+   "3d architectural visualisation adelaide": {
+    "clicks": 0,
+    "impressions": 6,
+    "ctr_pct": 0,
+    "position": 20.8
+   },
+   "3d rendering melbourne": {
+    "clicks": 0,
+    "impressions": 18,
+    "ctr_pct": 0,
+    "position": 17.9
+   },
+   "architectural rendering melbourne": {
+    "clicks": 0,
+    "impressions": 4,
+    "ctr_pct": 0,
+    "position": 21.5
+   },
+   "3d renders for property developers sydney": {
+    "clicks": 0,
+    "impressions": 3,
+    "ctr_pct": 0,
+    "position": 10.7
+   },
+   "3d architectural rendering melbourne": {
+    "clicks": 0,
+    "impressions": 3,
+    "ctr_pct": 0,
+    "position": 39.7
+   },
+   "3d rendering services melbourne": {
+    "clicks": 0,
+    "impressions": 1,
+    "ctr_pct": 0,
+    "position": 20
+   },
+   "dx model": {
+    "clicks": 0,
+    "impressions": 10,
+    "ctr_pct": 0,
+    "position": 4.7
+   },
+   "3d renders for developers sydney": null,
+   "3d renders melbourne": null,
+   "architectural rendering adelaide": null,
+   "adelaide property developers": {
+    "clicks": 0,
+    "impressions": 42,
+    "ctr_pct": 0,
+    "position": 15.0
+   },
+   "3d renders for property developers melbourne": {
+    "clicks": 0,
+    "impressions": 4,
+    "ctr_pct": 0,
+    "position": 41.8
+   },
+   "developers adelaide": {
+    "clicks": 0,
+    "impressions": 28,
+    "ctr_pct": 0,
+    "position": 25.1
+   },
+   "knock down rebuild melbourne": null,
+   "3d renders for real estate melbourne": null,
+   "3d renders for builders melbourne": null,
+   "3d renders for developers melbourne": {
+    "clicks": 0,
+    "impressions": 6,
+    "ctr_pct": 0,
+    "position": 42.2
+   },
+   "3d interior renders melbourne": {
+    "clicks": 0,
+    "impressions": 2,
+    "ctr_pct": 0,
+    "position": 86
+   },
+   "custom living space melbourne": null,
+   "interior finishing": null
+  }
+ },
+ "ga4_28d": {
+  "sessions": 609,
+  "engaged_sessions": 144,
+  "engagement_rate_pct": 23.65,
+  "key_events": 1,
+  "session_key_event_rate_pct": 0.16,
+  "users": 493,
+  "new_users": 475,
+  "returning_users": 26,
+  "avg_engagement_time": "0m 52s",
+  "events_per_session": 3.92,
+  "total_events": 2390,
+  "channel_breakdown": [
+   {
+    "name": "Direct",
+    "sessions": 375,
+    "engaged_sessions": 60,
+    "engagement_rate_pct": 16.0,
+    "key_events": 1
+   },
+   {
+    "name": "Organic Social",
+    "sessions": 135,
+    "engaged_sessions": 29,
+    "engagement_rate_pct": 21.5,
+    "key_events": 0
+   },
+   {
+    "name": "Organic Search",
+    "sessions": 78,
+    "engaged_sessions": 48,
+    "engagement_rate_pct": 61.5,
+    "key_events": 0
+   },
+   {
+    "name": "Unassigned",
+    "sessions": 9,
+    "engaged_sessions": 0,
+    "engagement_rate_pct": 0.0,
+    "key_events": 0
+   },
+   {
+    "name": "Referral",
+    "sessions": 7,
+    "engaged_sessions": 4,
+    "engagement_rate_pct": 57.1,
+    "key_events": 0
+   },
+   {
+    "name": "AI Assistant",
+    "sessions": 5,
+    "engaged_sessions": 3,
+    "engagement_rate_pct": 60.0,
+    "key_events": 0
+   }
+  ],
+  "source_medium_top": [
+   {
+    "name": "(direct) / (none)",
+    "sessions": 375,
+    "engaged_sessions": 60,
+    "engagement_rate_pct": 16.0,
+    "key_events": 1
+   },
+   {
+    "name": "facebook / social",
+    "sessions": 61,
+    "engaged_sessions": 14,
+    "engagement_rate_pct": 23.0,
+    "key_events": 0
+   },
+   {
+    "name": "google / organic",
+    "sessions": 61,
+    "engaged_sessions": 36,
+    "engagement_rate_pct": 59.0,
+    "key_events": 0
+   },
+   {
+    "name": "linkedin / social",
+    "sessions": 32,
+    "engaged_sessions": 0,
+    "engagement_rate_pct": 0.0,
+    "key_events": 0
+   },
+   {
+    "name": "m.facebook.com / referral",
+    "sessions": 14,
+    "engaged_sessions": 0,
+    "engagement_rate_pct": 0.0,
+    "key_events": 0
+   },
+   {
+    "name": "l.facebook.com / referral",
+    "sessions": 13,
+    "engaged_sessions": 9,
+    "engagement_rate_pct": 69.2,
+    "key_events": 0
+   },
+   {
+    "name": "bing / organic",
+    "sessions": 10,
+    "engaged_sessions": 6,
+    "engagement_rate_pct": 60.0,
+    "key_events": 0
+   },
+   {
+    "name": "(not set) / (not set)",
+    "sessions": 9,
+    "engaged_sessions": 0,
+    "engagement_rate_pct": 0.0,
+    "key_events": 0
+   },
+   {
+    "name": "facebook.com / referral",
+    "sessions": 8,
+    "engaged_sessions": 5,
+    "engagement_rate_pct": 62.5,
+    "key_events": 0
+   },
+   {
+    "name": "youtube / social",
+    "sessions": 5,
+    "engaged_sessions": 0,
+    "engagement_rate_pct": 0.0,
+    "key_events": 0
+   },
+   {
+    "name": "chatgpt.com / ai-assistant",
+    "sessions": 4,
+    "engaged_sessions": 3,
+    "engagement_rate_pct": 75.0,
+    "key_events": 0
+   },
+   {
+    "name": "creative-hub-eight-gray.vercel.app / referral",
+    "sessions": 4,
+    "engaged_sessions": 3,
+    "engagement_rate_pct": 75.0,
+    "key_events": 0
+   }
+  ],
+  "ai_assistant_channel": {
+   "sessions": 5,
+   "share_of_sessions_pct": 0.82,
+   "engaged_sessions": 3,
+   "engagement_rate_pct": 60.0,
+   "key_events": 0,
+   "sources": [
+    {
+     "name": "chatgpt.com",
+     "sessions": 4,
+     "engaged_sessions": 3,
+     "engagement_rate_pct": 75.0,
+     "key_events": 0
+    },
+    {
+     "name": "gemini.google.com",
+     "sessions": 1,
+     "engaged_sessions": 0,
+     "engagement_rate_pct": 0.0,
+     "key_events": 0
+    }
+   ]
+  },
+  "daily": [
+   {
+    "d": "2026-10-27",
+    "sessions": 30,
+    "users": 23
+   },
+   {
+    "d": "2026-10-28",
+    "sessions": 28,
+    "users": 17
+   },
+   {
+    "d": "2026-10-29",
+    "sessions": 23,
+    "users": 21
+   },
+   {
+    "d": "2026-10-30",
+    "sessions": 28,
+    "users": 23
+   },
+   {
+    "d": "2026-10-31",
+    "sessions": 10,
+    "users": 10
+   },
+   {
+    "d": "2026-11-01",
+    "sessions": 8,
+    "users": 8
+   },
+   {
+    "d": "2026-11-02",
+    "sessions": 32,
+    "users": 31
+   },
+   {
+    "d": "2026-11-03",
+    "sessions": 19,
+    "users": 16
+   },
+   {
+    "d": "2026-11-04",
+    "sessions": 14,
+    "users": 13
+   },
+   {
+    "d": "2026-11-05",
+    "sessions": 26,
+    "users": 24
+   },
+   {
+    "d": "2026-11-06",
+    "sessions": 25,
+    "users": 24
+   },
+   {
+    "d": "2026-11-07",
+    "sessions": 5,
+    "users": 5
+   },
+   {
+    "d": "2026-11-08",
+    "sessions": 10,
+    "users": 9
+   },
+   {
+    "d": "2026-11-09",
+    "sessions": 24,
+    "users": 24
+   },
+   {
+    "d": "2026-11-10",
+    "sessions": 45,
+    "users": 43
+   },
+   {
+    "d": "2026-11-11",
+    "sessions": 31,
+    "users": 30
+   },
+   {
+    "d": "2026-11-12",
+    "sessions": 36,
+    "users": 36
+   },
+   {
+    "d": "2026-11-13",
+    "sessions": 50,
+    "users": 45
+   },
+   {
+    "d": "2026-11-14",
+    "sessions": 19,
+    "users": 19
+   },
+   {
+    "d": "2026-11-15",
+    "sessions": 13,
+    "users": 13
+   },
+   {
+    "d": "2026-11-16",
+    "sessions": 16,
+    "users": 15
+   },
+   {
+    "d": "2026-11-17",
+    "sessions": 17,
+    "users": 15
+   },
+   {
+    "d": "2026-11-18",
+    "sessions": 17,
+    "users": 16
+   },
+   {
+    "d": "2026-11-19",
+    "sessions": 17,
+    "users": 17
+   },
+   {
+    "d": "2026-11-20",
+    "sessions": 16,
+    "users": 16
+   },
+   {
+    "d": "2026-11-21",
+    "sessions": 12,
+    "users": 11
+   },
+   {
+    "d": "2026-11-22",
+    "sessions": 23,
+    "users": 18
+   },
+   {
+    "d": "2026-11-23",
+    "sessions": 15,
+    "users": 14
+   }
+  ]
+ },
+ "ahrefs": {
+  "read_at": "2026-11-23 (Ahrefs web)",
+  "domain_rating": 0,
+  "ahrefs_rank": 114805806,
+  "backlinks": 892,
+  "referring_domains": 860,
+  "organic_keywords": 1,
+  "organic_traffic": 1,
+  "ai_citations": 32,
+  "cited_pages": 11,
+  "source": "Ahrefs web (Chrome on Mac)"
+ },
+ "ai_visibility": {
+  "score": null,
+  "score_max": 100,
+  "framework": "searchfit-seo:ai-visibility",
+  "platforms_present": null,
+  "platforms_total": 6,
+  "cited_pages": null,
+  "dimensions_measured": null,
+  "dimensions_not_measured": [
+   "accuracy",
+   "sentiment",
+   "position"
+  ],
+  "not_measured_reason": "Requires Brand Radar prompt tracking; Ahrefs is signed out in Chrome on 13 Nov, so the tracked-prompt count was not read (null).",
+  "score_method": "Average of the 5 measurable dimensions x 10 = (5+1+10+0+1)/5 x 10 = 34.",
+  "score_change_explanation": "Not recomputed on 12 Nov: it needs the Ahrefs Brand Radar and AI-index reads (Ahrefs signed out). Last computed score on record: 34 on 29 Oct. null here, not carried forward.",
+  "score_caveat": "The score is capped by two dimensions no on-site work will move: third_party_corpus at 0 and measurement at 1. Technical readiness is held at 10/10; the only on-site lever left is citation surface - currently 10 cited pages of 98 articles.",
+  "citation_surface_note": "Not re-read (Ahrefs signed out).",
+  "third_party_corpus_note": "Held at 0 and NOT re-checked today (29 Oct): no third-party SERP cross-check was run (last checked 11 Sep).",
+  "technical_readiness_method": "Held at 10/10. Re-measured on 29 Oct from the origin crawl: robots.txt 200 (430 bytes, unchanged; per-bot rules not re-read), sitemap 122 declared URLs / 98 articles, llms.txt 12,678 bytes and llms-full.txt 21,940 bytes both 200, FAQPage 98/98, /articles without an overlay. Homepage Organization + LocalBusiness types not re-measured (last confirmed 14 Oct).",
+  "brand_radar": {
+   "report_exists": null,
+   "prompts_tracked": null,
+   "ai_share_of_voice": null,
+   "reread_today": false,
+   "note": "Brand Radar not read on 13 Nov (Ahrefs signed out)."
+  },
+  "readiness": {
+   "measured_at": "2026-11-13 ICT",
+   "robots_txt_blocks_ai_bots": false,
+   "sitemap_complete": true,
+   "sitemap_url_count": 122,
+   "sitemap_article_count": 98,
+   "llms_txt": true,
+   "faq_schema_on_money_pages": true,
+   "organization_schema": true,
+   "localbusiness_schema_homepage": true,
+   "localbusiness_schema_sitewide": false,
+   "articles_render": true,
+   "signals_passing": null,
+   "signals_total": 7,
+   "reread_today": true,
+   "evidence": "Re-measured from the dxliving.com origin with cache no-store on 12 Nov: robots.txt 200 (430 bytes), sitemap 122 URLs / 98 articles. llms.txt and llms-full.txt were not re-fetched on 12 Nov (null).",
+   "sitemap_note": "Sitemap unchanged at 122 declared URLs / 98 articles (22,978 bytes).",
+   "articles_render_caveat": "RESOLVED. Re-checked on /articles after 15 s: zero site overlays, the centre element is an ordinary SECTION.",
+   "jsonld_note": "119 of 121 crawled pages carry JSON-LD (416 blocks, unchanged). The two without are /login and /start-interactive.",
+   "signals_re_measured_today": 5,
+   "localbusiness_schema_homepage_note": "Not re-measured on 27 Oct (the crawl counts blocks only); last confirmed 14 Oct."
+  }
+ },
+ "technical_health": {
+  "measured_at": "2026-11-24",
+  "source": "dxl-seo-audit",
+  "health": 97,
+  "pages_crawled": 137,
+  "ttfb_mean_ms": 264.2,
+  "response_times": {
+   "site_mean_ms": 264.2
+  },
+  "orphan_articles": 0,
+  "thin_pages": 10
+ },
+ "errors": [],
+ "previous": {
+  "date": "2026-11-23",
+  "gsc_28d": {
+   "clicks": 37,
+   "impressions": 5091,
+   "ctr_pct": 0.7,
+   "avg_position": 16.6,
+   "queries_with_impressions": 389,
+   "brand_clicks": 13,
+   "brand_clicks_share_pct": 35.1,
+   "clicked_queries": [
+    {
+     "q": "dx living",
+     "clicks": 8,
+     "impressions": 46,
+     "ctr_pct": 17.39,
+     "position": 3.6
+    },
+    {
+     "q": "dxliving",
+     "clicks": 5,
+     "impressions": 13,
+     "ctr_pct": 38.46,
+     "position": 3.9
+    },
+    {
+     "q": "dx company",
+     "clicks": 1,
+     "impressions": 2,
+     "ctr_pct": 50.0,
+     "position": 6
+    },
+    {
+     "q": "home cinema cost",
+     "clicks": 1,
+     "impressions": 8,
+     "ctr_pct": 12.5,
+     "position": 11.6
+    },
+    {
+     "q": "project cost control",
+     "clicks": 1,
+     "impressions": 24,
+     "ctr_pct": 4.17,
+     "position": 83.9
+    }
+   ],
+   "top_queries": [
+    {
+     "q": "media room renovation cost",
+     "clicks": 0,
+     "impressions": 345,
+     "ctr_pct": 0,
+     "position": 5.6
+    },
+    {
+     "q": "home theater renovation cost",
+     "clicks": 0,
+     "impressions": 281,
+     "ctr_pct": 0,
+     "position": 5.5
+    },
+    {
+     "q": "how to interior design for developers",
+     "clicks": 0,
+     "impressions": 193,
+     "ctr_pct": 0,
+     "position": 5.6
+    },
+    {
+     "q": "31 mcilwain drive mermaid waters",
+     "clicks": 0,
+     "impressions": 147,
+     "ctr_pct": 0,
+     "position": 9.1
+    },
+    {
+     "q": "interior design for property developers",
+     "clicks": 0,
+     "impressions": 114,
+     "ctr_pct": 0,
+     "position": 7.3
+    },
+    {
+     "q": "design coordination",
+     "clicks": 0,
+     "impressions": 68,
+     "ctr_pct": 0,
+     "position": 58.6
+    },
+    {
+     "q": "interior design for developers",
+     "clicks": 0,
+     "impressions": 66,
+     "ctr_pct": 0,
+     "position": 9.6
+    },
+    {
+     "q": "living room ideas australia",
+     "clicks": 0,
+     "impressions": 59,
+     "ctr_pct": 0,
+     "position": 21
+    },
+    {
+     "q": "interior design for property development",
+     "clicks": 0,
+     "impressions": 51,
+     "ctr_pct": 0,
+     "position": 8.3
+    },
+    {
+     "q": "interior design tips for developers",
+     "clicks": 0,
+     "impressions": 47,
+     "ctr_pct": 0,
+     "position": 5.3
+    },
+    {
+     "q": "dx living",
+     "clicks": 8,
+     "impressions": 46,
+     "ctr_pct": 17.39,
+     "position": 3.6
+    },
+    {
+     "q": "adelaide property developers",
+     "clicks": 0,
+     "impressions": 41,
+     "ctr_pct": 0,
+     "position": 15.0
+    },
+    {
+     "q": "rendering apartment community",
+     "clicks": 0,
+     "impressions": 40,
+     "ctr_pct": 0,
+     "position": 23.1
+    },
+    {
+     "q": "which builder offers better value for square footage?",
+     "clicks": 0,
+     "impressions": 40,
+     "ctr_pct": 0,
+     "position": 3.6
+    },
+    {
+     "q": "property development interior design",
+     "clicks": 0,
+     "impressions": 39,
+     "ctr_pct": 0,
+     "position": 8.4
+    },
+    {
+     "q": "3d coordination",
+     "clicks": 0,
+     "impressions": 33,
+     "ctr_pct": 0,
+     "position": 12.5
+    },
+    {
+     "q": "3d house visualisation adelaide",
+     "clicks": 0,
+     "impressions": 28,
+     "ctr_pct": 0,
+     "position": 9.7
+    },
+    {
+     "q": "developers adelaide",
+     "clicks": 0,
+     "impressions": 28,
+     "ctr_pct": 0,
+     "position": 25.1
+    },
+    {
+     "q": "living room designs australia",
+     "clicks": 0,
+     "impressions": 28,
+     "ctr_pct": 0,
+     "position": 5.5
+    },
+    {
+     "q": "3d rendering cost",
+     "clicks": 0,
+     "impressions": 27,
+     "ctr_pct": 0,
+     "position": 43.3
+    },
+    {
+     "q": "which builders offer the best combination of quality and value?",
+     "clicks": 0,
+     "impressions": 26,
+     "ctr_pct": 0,
+     "position": 5.7
+    },
+    {
+     "q": "contemporary house designs",
+     "clicks": 0,
+     "impressions": 25,
+     "ctr_pct": 0,
+     "position": 33.4
+    },
+    {
+     "q": "living room trends australia 2026",
+     "clicks": 0,
+     "impressions": 25,
+     "ctr_pct": 0,
+     "position": 14.4
+    },
+    {
+     "q": "project cost control",
+     "clicks": 1,
+     "impressions": 24,
+     "ctr_pct": 4.17,
+     "position": 83.9
+    },
+    {
+     "q": "interior design equipment for developers",
+     "clicks": 0,
+     "impressions": 24,
+     "ctr_pct": 0,
+     "position": 4.3
+    }
+   ],
+   "top_pages": [
+    {
+     "page": "/",
+     "clicks": 22,
+     "impressions": 174,
+     "ctr_pct": 12.64,
+     "position": 3.2
+    },
+    {
+     "page": "/articles/modern-house-design-2026-10-trends-shaping-homes",
+     "clicks": 3,
+     "impressions": 62,
+     "ctr_pct": 4.84,
+     "position": 15.7
+    },
+    {
+     "page": "/model",
+     "clicks": 3,
+     "impressions": 89,
+     "ctr_pct": 3.37,
+     "position": 9.1
+    },
+    {
+     "page": "/about",
+     "clicks": 2,
+     "impressions": 107,
+     "ctr_pct": 1.87,
+     "position": 4.5
+    },
+    {
+     "page": "/apply",
+     "clicks": 2,
+     "impressions": 6,
+     "ctr_pct": 33.33,
+     "position": 8.2
+    },
+    {
+     "page": "/articles/home-cinema-cost-australia",
+     "clicks": 2,
+     "impressions": 821,
+     "ctr_pct": 0.24,
+     "position": 6.0
+    },
+    {
+     "page": "/articles/living-room-trends-australia",
+     "clicks": 2,
+     "impressions": 429,
+     "ctr_pct": 0.47,
+     "position": 11.2
+    },
+    {
+     "page": "/articles/project-251-visualisation-overview",
+     "clicks": 2,
+     "impressions": 3,
+     "ctr_pct": 66.67,
+     "position": 4.7
+    },
+    {
+     "page": "/contact",
+     "clicks": 2,
+     "impressions": 22,
+     "ctr_pct": 9.09,
+     "position": 25.0
+    },
+    {
+     "page": "/faq",
+     "clicks": 2,
+     "impressions": 19,
+     "ctr_pct": 10.53,
+     "position": 11.5
+    },
+    {
+     "page": "/modules",
+     "clicks": 2,
+     "impressions": 68,
+     "ctr_pct": 2.94,
+     "position": 4.7
+    },
+    {
+     "page": "/projects",
+     "clicks": 2,
+     "impressions": 29,
+     "ctr_pct": 6.9,
+     "position": 16.4
+    },
+    {
+     "page": "/studio",
+     "clicks": 2,
+     "impressions": 38,
+     "ctr_pct": 5.26,
+     "position": 12.6
+    },
+    {
+     "page": "/suppliers",
+     "clicks": 2,
+     "impressions": 30,
+     "ctr_pct": 6.67,
+     "position": 33.6
+    },
+    {
+     "page": "/articles/interior-design-for-property-developers",
+     "clicks": 1,
+     "impressions": 642,
+     "ctr_pct": 0.16,
+     "position": 7.2
+    },
+    {
+     "page": "/articles/pre-construction-visualisation-construction-readiness",
+     "clicks": 1,
+     "impressions": 22,
+     "ctr_pct": 4.55,
+     "position": 9.1
+    },
+    {
+     "page": "/articles/project-management-and-cost-control",
+     "clicks": 1,
+     "impressions": 44,
+     "ctr_pct": 2.27,
+     "position": 60.0
+    },
+    {
+     "page": "/articles/virtual-reality-home-walkthrough",
+     "clicks": 1,
+     "impressions": 18,
+     "ctr_pct": 5.56,
+     "position": 9.9
+    },
+    {
+     "page": "/articles/virtual-reality-in-australia-home-design",
+     "clicks": 1,
+     "impressions": 14,
+     "ctr_pct": 7.14,
+     "position": 33.6
+    },
+    {
+     "page": "/articles/virtual-reality-interior-design",
+     "clicks": 1,
+     "impressions": 5,
+     "ctr_pct": 20.0,
+     "position": 7
+    },
+    {
+     "page": "/articles",
+     "clicks": 0,
+     "impressions": 42,
+     "ctr_pct": 0,
+     "position": 17.4
+    },
+    {
+     "page": "/articles/3d-floor-plan-melbourne-home-design-clarity",
+     "clicks": 0,
+     "impressions": 2,
+     "ctr_pct": 0,
+     "position": 7.5
+    },
+    {
+     "page": "/articles/3d-house-design-guide",
+     "clicks": 0,
+     "impressions": 4,
+     "ctr_pct": 0,
+     "position": 7
+    },
+    {
+     "page": "/articles/3d-house-design-guide-from-sketch-to-walkthrough",
+     "clicks": 0,
+     "impressions": 23,
+     "ctr_pct": 0,
+     "position": 5.6
+    },
+    {
+     "page": "/articles/3d-rendering-adelaide",
+     "clicks": 0,
+     "impressions": 40,
+     "ctr_pct": 0,
+     "position": 9.0
+    }
+   ],
+   "page_one_queries": 133,
+   "top3_queries": 37,
+   "daily": [
+    {
+     "d": "2026-10-25",
+     "clicks": 1,
+     "impressions": 103
+    },
+    {
+     "d": "2026-10-26",
+     "clicks": 0,
+     "impressions": 102
+    },
+    {
+     "d": "2026-10-27",
+     "clicks": 1,
+     "impressions": 115
+    },
+    {
+     "d": "2026-10-28",
+     "clicks": 0,
+     "impressions": 95
+    },
+    {
+     "d": "2026-10-29",
+     "clicks": 1,
+     "impressions": 67
+    },
+    {
+     "d": "2026-10-30",
+     "clicks": 0,
+     "impressions": 178
+    },
+    {
+     "d": "2026-10-31",
+     "clicks": 1,
+     "impressions": 170
+    },
+    {
+     "d": "2026-11-01",
+     "clicks": 1,
+     "impressions": 257
+    },
+    {
+     "d": "2026-11-02",
+     "clicks": 0,
+     "impressions": 247
+    },
+    {
+     "d": "2026-11-03",
+     "clicks": 3,
+     "impressions": 205
+    },
+    {
+     "d": "2026-11-04",
+     "clicks": 4,
+     "impressions": 233
+    },
+    {
+     "d": "2026-11-05",
+     "clicks": 1,
+     "impressions": 194
+    },
+    {
+     "d": "2026-11-06",
+     "clicks": 0,
+     "impressions": 216
+    },
+    {
+     "d": "2026-11-07",
+     "clicks": 1,
+     "impressions": 177
+    },
+    {
+     "d": "2026-11-08",
+     "clicks": 0,
+     "impressions": 180
+    },
+    {
+     "d": "2026-11-09",
+     "clicks": 3,
+     "impressions": 219
+    },
+    {
+     "d": "2026-11-10",
+     "clicks": 1,
+     "impressions": 140
+    },
+    {
+     "d": "2026-11-11",
+     "clicks": 1,
+     "impressions": 184
+    },
+    {
+     "d": "2026-11-12",
+     "clicks": 2,
+     "impressions": 196
+    },
+    {
+     "d": "2026-11-13",
+     "clicks": 1,
+     "impressions": 212
+    },
+    {
+     "d": "2026-11-14",
+     "clicks": 3,
+     "impressions": 179
+    },
+    {
+     "d": "2026-11-15",
+     "clicks": 1,
+     "impressions": 250
+    },
+    {
+     "d": "2026-11-16",
+     "clicks": 2,
+     "impressions": 226
+    },
+    {
+     "d": "2026-11-17",
+     "clicks": 3,
+     "impressions": 214
+    },
+    {
+     "d": "2026-11-18",
+     "clicks": 2,
+     "impressions": 226
+    },
+    {
+     "d": "2026-11-19",
+     "clicks": 2,
+     "impressions": 282
+    },
+    {
+     "d": "2026-11-20",
+     "clicks": 2,
+     "impressions": 224
+    }
+   ]
+  },
+  "ga4_28d": {
+   "sessions": 619,
+   "engaged_sessions": 145,
+   "engagement_rate_pct": 23.42,
+   "key_events": 1,
+   "session_key_event_rate_pct": 0.16,
+   "users": 499,
+   "new_users": 481,
+   "returning_users": 25,
+   "avg_engagement_time": "0m 52s",
+   "events_per_session": 3.91,
+   "total_events": 2419,
+   "channel_breakdown": [
+    {
+     "name": "Direct",
+     "sessions": 382,
+     "engaged_sessions": 59,
+     "engagement_rate_pct": 15.4,
+     "key_events": 1
+    },
+    {
+     "name": "Organic Social",
+     "sessions": 141,
+     "engaged_sessions": 34,
+     "engagement_rate_pct": 24.1,
+     "key_events": 0
+    },
+    {
+     "name": "Organic Search",
+     "sessions": 75,
+     "engaged_sessions": 45,
+     "engagement_rate_pct": 60.0,
+     "key_events": 0
+    },
+    {
+     "name": "Unassigned",
+     "sessions": 9,
+     "engaged_sessions": 0,
+     "engagement_rate_pct": 0.0,
+     "key_events": 0
+    },
+    {
+     "name": "Referral",
+     "sessions": 7,
+     "engaged_sessions": 4,
+     "engagement_rate_pct": 57.1,
+     "key_events": 0
+    },
+    {
+     "name": "AI Assistant",
+     "sessions": 5,
+     "engaged_sessions": 3,
+     "engagement_rate_pct": 60.0,
+     "key_events": 0
+    }
+   ],
+   "source_medium_top": [
+    {
+     "name": "(direct) / (none)",
+     "sessions": 382,
+     "engaged_sessions": 59,
+     "engagement_rate_pct": 15.4,
+     "key_events": 1
+    },
+    {
+     "name": "facebook / social",
+     "sessions": 61,
+     "engaged_sessions": 14,
+     "engagement_rate_pct": 23.0,
+     "key_events": 0
+    },
+    {
+     "name": "google / organic",
+     "sessions": 59,
+     "engaged_sessions": 34,
+     "engagement_rate_pct": 57.6,
+     "key_events": 0
+    },
+    {
+     "name": "linkedin / social",
+     "sessions": 32,
+     "engaged_sessions": 0,
+     "engagement_rate_pct": 0.0,
+     "key_events": 0
+    },
+    {
+     "name": "l.facebook.com / referral",
+     "sessions": 17,
+     "engaged_sessions": 13,
+     "engagement_rate_pct": 76.5,
+     "key_events": 0
+    },
+    {
+     "name": "m.facebook.com / referral",
+     "sessions": 14,
+     "engaged_sessions": 0,
+     "engagement_rate_pct": 0.0,
+     "key_events": 0
+    },
+    {
+     "name": "bing / organic",
+     "sessions": 10,
+     "engaged_sessions": 6,
+     "engagement_rate_pct": 60.0,
+     "key_events": 0
+    },
+    {
+     "name": "facebook.com / referral",
+     "sessions": 10,
+     "engaged_sessions": 6,
+     "engagement_rate_pct": 60.0,
+     "key_events": 0
+    },
+    {
+     "name": "(not set) / (not set)",
+     "sessions": 9,
+     "engaged_sessions": 0,
+     "engagement_rate_pct": 0.0,
+     "key_events": 0
+    },
+    {
+     "name": "youtube / social",
+     "sessions": 5,
+     "engaged_sessions": 0,
+     "engagement_rate_pct": 0.0,
+     "key_events": 0
+    },
+    {
+     "name": "chatgpt.com / ai-assistant",
+     "sessions": 4,
+     "engaged_sessions": 3,
+     "engagement_rate_pct": 75.0,
+     "key_events": 0
+    },
+    {
+     "name": "creative-hub-eight-gray.vercel.app / referral",
+     "sessions": 4,
+     "engaged_sessions": 3,
+     "engagement_rate_pct": 75.0,
+     "key_events": 0
+    }
+   ],
+   "ai_assistant_channel": {
+    "sessions": 5,
+    "share_of_sessions_pct": 0.81,
+    "engaged_sessions": 3,
+    "engagement_rate_pct": 60.0,
+    "key_events": 0,
+    "sources": [
+     {
+      "name": "chatgpt.com",
+      "sessions": 4,
+      "engaged_sessions": 3,
+      "engagement_rate_pct": 75.0,
+      "key_events": 0
+     },
+     {
+      "name": "gemini.google.com",
+      "sessions": 1,
+      "engaged_sessions": 0,
+      "engagement_rate_pct": 0.0,
+      "key_events": 0
+     }
+    ]
+   },
+   "daily": [
+    {
+     "d": "2026-10-26",
+     "sessions": 24,
+     "users": 21
+    },
+    {
+     "d": "2026-10-27",
+     "sessions": 30,
+     "users": 23
+    },
+    {
+     "d": "2026-10-28",
+     "sessions": 28,
+     "users": 17
+    },
+    {
+     "d": "2026-10-29",
+     "sessions": 23,
+     "users": 21
+    },
+    {
+     "d": "2026-10-30",
+     "sessions": 28,
+     "users": 23
+    },
+    {
+     "d": "2026-10-31",
+     "sessions": 10,
+     "users": 10
+    },
+    {
+     "d": "2026-11-01",
+     "sessions": 8,
+     "users": 8
+    },
+    {
+     "d": "2026-11-02",
+     "sessions": 32,
+     "users": 31
+    },
+    {
+     "d": "2026-11-03",
+     "sessions": 19,
+     "users": 16
+    },
+    {
+     "d": "2026-11-04",
+     "sessions": 14,
+     "users": 13
+    },
+    {
+     "d": "2026-11-05",
+     "sessions": 26,
+     "users": 24
+    },
+    {
+     "d": "2026-11-06",
+     "sessions": 25,
+     "users": 24
+    },
+    {
+     "d": "2026-11-07",
+     "sessions": 5,
+     "users": 5
+    },
+    {
+     "d": "2026-11-08",
+     "sessions": 10,
+     "users": 9
+    },
+    {
+     "d": "2026-11-09",
+     "sessions": 24,
+     "users": 24
+    },
+    {
+     "d": "2026-11-10",
+     "sessions": 45,
+     "users": 43
+    },
+    {
+     "d": "2026-11-11",
+     "sessions": 31,
+     "users": 30
+    },
+    {
+     "d": "2026-11-12",
+     "sessions": 36,
+     "users": 36
+    },
+    {
+     "d": "2026-11-13",
+     "sessions": 50,
+     "users": 45
+    },
+    {
+     "d": "2026-11-14",
+     "sessions": 19,
+     "users": 19
+    },
+    {
+     "d": "2026-11-15",
+     "sessions": 13,
+     "users": 13
+    },
+    {
+     "d": "2026-11-16",
+     "sessions": 16,
+     "users": 15
+    },
+    {
+     "d": "2026-11-17",
+     "sessions": 17,
+     "users": 15
+    },
+    {
+     "d": "2026-11-18",
+     "sessions": 17,
+     "users": 16
+    },
+    {
+     "d": "2026-11-19",
+     "sessions": 17,
+     "users": 17
+    },
+    {
+     "d": "2026-11-20",
+     "sessions": 16,
+     "users": 16
+    },
+    {
+     "d": "2026-11-21",
+     "sessions": 12,
+     "users": 11
+    },
+    {
+     "d": "2026-11-22",
+     "sessions": 23,
+     "users": 18
+    }
+   ]
+  }
+ },
+ "commentary": {
+  "vi": "clicks 37 → 36; impressions 5091 → 5246; ctr_pct 0.7 → 0.7; avg_position 16.6 → 16.0; queries_with_impressions 389 → 392; brand_clicks 13 → 12; page_one_queries 133 → 137; ga4_sessions 619 → 609.",
+  "en": "clicks 37 → 36; impressions 5091 → 5246; ctr_pct 0.7 → 0.7; avg_position 16.6 → 16.0; queries_with_impressions 389 → 392; brand_clicks 13 → 12; page_one_queries 133 → 137; ga4_sessions 619 → 609.",
+  "by": "template"
+ },
+ "notes": {
+  "vi": "clicks 37 → 36; impressions 5091 → 5246; ctr_pct 0.7 → 0.7; avg_position 16.6 → 16.0; queries_with_impressions 389 → 392; brand_clicks 13 → 12; page_one_queries 133 → 137; ga4_sessions 619 → 609.",
+  "en": "clicks 37 → 36; impressions 5091 → 5246; ctr_pct 0.7 → 0.7; avg_position 16.6 → 16.0; queries_with_impressions 389 → 392; brand_clicks 13 → 12; page_one_queries 133 → 137; ga4_sessions 619 → 609."
+ },
+ "commentary_input": {
+  "report": "SEO (GSC + GA4)",
+  "summary": {
+   "today": {
+    "clicks": 36,
+    "impressions": 5246,
+    "ctr_pct": 0.7,
+    "avg_position": 16.0,
+    "queries_with_impressions": 392,
+    "brand_clicks": 12,
+    "page_one_queries": 137,
+    "ga4_sessions": 609,
+    "ga4_users": 493,
+    "ga4_engagement_rate_pct": 23.65,
+    "ga4_key_events": 1,
+    "ai_sessions": 5,
+    "top_channels": [
+     [
+      "Direct",
+      375
+     ],
+     [
+      "Organic Social",
+      135
+     ],
+     [
+      "Organic Search",
+      78
+     ],
+     [
+      "Unassigned",
+      9
+     ],
+     [
+      "Referral",
+      7
+     ]
+    ],
+    "top_clicked": [
+     [
+      "dx living",
+      7
+     ],
+     [
+      "dxliving",
+      5
+     ],
+     [
+      "dx company",
+      1
+     ],
+     [
+      "home cinema cost",
+      1
+     ],
+     [
+      "project cost control",
+      1
+     ]
+    ]
+   },
+   "previous": {
+    "clicks": 37,
+    "impressions": 5091,
+    "ctr_pct": 0.7,
+    "avg_position": 16.6,
+    "queries_with_impressions": 389,
+    "brand_clicks": 13,
+    "page_one_queries": 133,
+    "ga4_sessions": 619,
+    "ga4_users": 499,
+    "ga4_engagement_rate_pct": 23.42,
+    "ga4_key_events": 1,
+    "ai_sessions": 5,
+    "top_channels": [
+     [
+      "Direct",
+      382
+     ],
+     [
+      "Organic Social",
+      141
+     ],
+     [
+      "Organic Search",
+      75
+     ],
+     [
+      "Unassigned",
+      9
+     ],
+     [
+      "Referral",
+      7
+     ]
+    ],
+    "top_clicked": [
+     [
+      "dx living",
+      8
+     ],
+     [
+      "dxliving",
+      5
+     ],
+     [
+      "dx company",
+      1
+     ],
+     [
+      "home cinema cost",
+      1
+     ],
+     [
+      "project cost control",
+      1
+     ]
+    ]
+   },
+   "windows": {
+    "gsc": "2026-10-26 → 2026-11-22",
+    "ga4": "2026-10-27 → 2026-11-23"
+   }
+  }
+ }
+}
