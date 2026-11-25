@@ -1,0 +1,1363 @@
+{
+ "id": "2026-11-20",
+ "vi": "14–20/11/2026",
+ "en": "14 – 20 Nov 2026",
+ "start": "2026-11-14",
+ "end": "2026-11-20",
+ "compare_start": "2026-11-07",
+ "compare_end": "2026-11-13",
+ "scanned_on": "2026-11-25",
+ "sources": [
+  "Google Search Console API",
+  "GA4 Data API"
+ ],
+ "gsc": {
+  "clicks": 15,
+  "impressions": 1601,
+  "ctr_pct": 0.9,
+  "avg_position": 8.8,
+  "queries_with_impressions": 160,
+  "brand_clicks": 6,
+  "brand_clicks_share_pct": 40.0,
+  "clicked_queries": [
+   {
+    "q": "dx living",
+    "clicks": 3,
+    "impressions": 9,
+    "ctr_pct": 33.33,
+    "position": 2.7
+   },
+   {
+    "q": "dxliving",
+    "clicks": 3,
+    "impressions": 7,
+    "ctr_pct": 42.86,
+    "position": 2.6
+   },
+   {
+    "q": "dx company",
+    "clicks": 1,
+    "impressions": 1,
+    "ctr_pct": 100,
+    "position": 3
+   }
+  ],
+  "top_queries": [
+   {
+    "q": "home theater renovation cost",
+    "clicks": 0,
+    "impressions": 233,
+    "ctr_pct": 0,
+    "position": 5.5
+   },
+   {
+    "q": "media room renovation cost",
+    "clicks": 0,
+    "impressions": 223,
+    "ctr_pct": 0,
+    "position": 6.9
+   },
+   {
+    "q": "interior design for property developers",
+    "clicks": 0,
+    "impressions": 53,
+    "ctr_pct": 0,
+    "position": 6.4
+   },
+   {
+    "q": "how to interior design for developers",
+    "clicks": 0,
+    "impressions": 47,
+    "ctr_pct": 0,
+    "position": 6.7
+   },
+   {
+    "q": "interior design tips for developers",
+    "clicks": 0,
+    "impressions": 37,
+    "ctr_pct": 0,
+    "position": 6.3
+   },
+   {
+    "q": "design coordination",
+    "clicks": 0,
+    "impressions": 27,
+    "ctr_pct": 0,
+    "position": 26.8
+   },
+   {
+    "q": "interior design for property development",
+    "clicks": 0,
+    "impressions": 25,
+    "ctr_pct": 0,
+    "position": 7.8
+   },
+   {
+    "q": "interior design for developers",
+    "clicks": 0,
+    "impressions": 22,
+    "ctr_pct": 0,
+    "position": 8.6
+   },
+   {
+    "q": "31 mcilwain drive mermaid waters",
+    "clicks": 0,
+    "impressions": 20,
+    "ctr_pct": 0,
+    "position": 10.8
+   },
+   {
+    "q": "interior design equipment for developers",
+    "clicks": 0,
+    "impressions": 20,
+    "ctr_pct": 0,
+    "position": 3.8
+   },
+   {
+    "q": "living room ideas australia",
+    "clicks": 0,
+    "impressions": 19,
+    "ctr_pct": 0,
+    "position": 14.3
+   },
+   {
+    "q": "modern living room",
+    "clicks": 0,
+    "impressions": 19,
+    "ctr_pct": 0,
+    "position": 25.4
+   },
+   {
+    "q": "living room design ideas 2026",
+    "clicks": 0,
+    "impressions": 16,
+    "ctr_pct": 0,
+    "position": 8.7
+   },
+   {
+    "q": "which builder offers better value for square footage?",
+    "clicks": 0,
+    "impressions": 16,
+    "ctr_pct": 0,
+    "position": 1
+   },
+   {
+    "q": "property development interior design",
+    "clicks": 0,
+    "impressions": 14,
+    "ctr_pct": 0,
+    "position": 6.1
+   },
+   {
+    "q": "3d coordination",
+    "clicks": 0,
+    "impressions": 13,
+    "ctr_pct": 0,
+    "position": 13
+   },
+   {
+    "q": "living room designs australia",
+    "clicks": 0,
+    "impressions": 12,
+    "ctr_pct": 0,
+    "position": 2.8
+   },
+   {
+    "q": "dx living",
+    "clicks": 3,
+    "impressions": 9,
+    "ctr_pct": 33.33,
+    "position": 2.7
+   },
+   {
+    "q": "modern living room ideas australia",
+    "clicks": 0,
+    "impressions": 9,
+    "ctr_pct": 0,
+    "position": 1.1
+   },
+   {
+    "q": "dxliving.com",
+    "clicks": 0,
+    "impressions": 8,
+    "ctr_pct": 0,
+    "position": 1
+   },
+   {
+    "q": "living room trends australia 2026",
+    "clicks": 0,
+    "impressions": 8,
+    "ctr_pct": 0,
+    "position": 24
+   },
+   {
+    "q": "lounge room ideas australia",
+    "clicks": 0,
+    "impressions": 8,
+    "ctr_pct": 0,
+    "position": 11.4
+   },
+   {
+    "q": "rendering apartment community",
+    "clicks": 0,
+    "impressions": 8,
+    "ctr_pct": 0,
+    "position": 39.1
+   },
+   {
+    "q": "dxliving",
+    "clicks": 3,
+    "impressions": 7,
+    "ctr_pct": 42.86,
+    "position": 2.6
+   },
+   {
+    "q": "adelaide property developers",
+    "clicks": 0,
+    "impressions": 7,
+    "ctr_pct": 0,
+    "position": 10.6
+   }
+  ],
+  "top_pages": [
+   {
+    "page": "/",
+    "clicks": 9,
+    "impressions": 48,
+    "ctr_pct": 18.75,
+    "position": 2.8
+   },
+   {
+    "page": "/articles/living-room-trends-australia",
+    "clicks": 2,
+    "impressions": 177,
+    "ctr_pct": 1.13,
+    "position": 11.3
+   },
+   {
+    "page": "/articles/modern-house-design-2026-10-trends-shaping-homes",
+    "clicks": 2,
+    "impressions": 20,
+    "ctr_pct": 10.0,
+    "position": 5.8
+   },
+   {
+    "page": "/about",
+    "clicks": 1,
+    "impressions": 27,
+    "ctr_pct": 3.7,
+    "position": 5.0
+   },
+   {
+    "page": "/apply",
+    "clicks": 1,
+    "impressions": 1,
+    "ctr_pct": 100,
+    "position": 9
+   },
+   {
+    "page": "/articles/home-cinema-cost-australia",
+    "clicks": 1,
+    "impressions": 525,
+    "ctr_pct": 0.19,
+    "position": 6.2
+   },
+   {
+    "page": "/articles/pre-construction-visualisation-construction-readiness",
+    "clicks": 1,
+    "impressions": 6,
+    "ctr_pct": 16.67,
+    "position": 7.2
+   },
+   {
+    "page": "/contact",
+    "clicks": 1,
+    "impressions": 5,
+    "ctr_pct": 20.0,
+    "position": 5.8
+   },
+   {
+    "page": "/faq",
+    "clicks": 1,
+    "impressions": 6,
+    "ctr_pct": 16.67,
+    "position": 10.8
+   },
+   {
+    "page": "/model",
+    "clicks": 1,
+    "impressions": 26,
+    "ctr_pct": 3.85,
+    "position": 10.1
+   },
+   {
+    "page": "/modules",
+    "clicks": 1,
+    "impressions": 20,
+    "ctr_pct": 5.0,
+    "position": 8.7
+   },
+   {
+    "page": "/projects",
+    "clicks": 1,
+    "impressions": 9,
+    "ctr_pct": 11.11,
+    "position": 31.1
+   },
+   {
+    "page": "/studio",
+    "clicks": 1,
+    "impressions": 11,
+    "ctr_pct": 9.09,
+    "position": 7.7
+   },
+   {
+    "page": "/suppliers",
+    "clicks": 1,
+    "impressions": 8,
+    "ctr_pct": 12.5,
+    "position": 25.5
+   },
+   {
+    "page": "/articles",
+    "clicks": 0,
+    "impressions": 7,
+    "ctr_pct": 0,
+    "position": 15.9
+   },
+   {
+    "page": "/articles/3d-house-design-guide-from-sketch-to-walkthrough",
+    "clicks": 0,
+    "impressions": 6,
+    "ctr_pct": 0,
+    "position": 4.8
+   },
+   {
+    "page": "/articles/3d-rendering-adelaide",
+    "clicks": 0,
+    "impressions": 10,
+    "ctr_pct": 0,
+    "position": 7.2
+   },
+   {
+    "page": "/articles/3d-rendering-brief-checklist-australia",
+    "clicks": 0,
+    "impressions": 4,
+    "ctr_pct": 0,
+    "position": 5
+   },
+   {
+    "page": "/articles/3d-rendering-brisbane",
+    "clicks": 0,
+    "impressions": 3,
+    "ctr_pct": 0,
+    "position": 8.7
+   },
+   {
+    "page": "/articles/3d-rendering-cost-australia",
+    "clicks": 0,
+    "impressions": 9,
+    "ctr_pct": 0,
+    "position": 9.1
+   },
+   {
+    "page": "/articles/3d-rendering-for-architects-australia",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr_pct": 0,
+    "position": 5
+   },
+   {
+    "page": "/articles/3d-rendering-for-home-renovation-australia",
+    "clicks": 0,
+    "impressions": 4,
+    "ctr_pct": 0,
+    "position": 11.8
+   },
+   {
+    "page": "/articles/3d-rendering-services-melbourne",
+    "clicks": 0,
+    "impressions": 4,
+    "ctr_pct": 0,
+    "position": 17.8
+   },
+   {
+    "page": "/articles/3d-rendering-vs-vr-walkthrough",
+    "clicks": 0,
+    "impressions": 39,
+    "ctr_pct": 0,
+    "position": 12.5
+   },
+   {
+    "page": "/articles/3d-renders-for-property-developers-melbourne",
+    "clicks": 0,
+    "impressions": 2,
+    "ctr_pct": 0,
+    "position": 7.5
+   }
+  ],
+  "page_one_queries": 82,
+  "top3_queries": 31,
+  "daily": [
+   {
+    "d": "2026-11-14",
+    "clicks": 3,
+    "impressions": 179
+   },
+   {
+    "d": "2026-11-15",
+    "clicks": 1,
+    "impressions": 250
+   },
+   {
+    "d": "2026-11-16",
+    "clicks": 2,
+    "impressions": 226
+   },
+   {
+    "d": "2026-11-17",
+    "clicks": 3,
+    "impressions": 214
+   },
+   {
+    "d": "2026-11-18",
+    "clicks": 2,
+    "impressions": 226
+   },
+   {
+    "d": "2026-11-19",
+    "clicks": 2,
+    "impressions": 282
+   },
+   {
+    "d": "2026-11-20",
+    "clicks": 2,
+    "impressions": 224
+   }
+  ],
+  "tracked": {
+   "3d house visualisation adelaide": {
+    "clicks": 0,
+    "impressions": 2,
+    "ctr_pct": 0,
+    "position": 9
+   },
+   "3d rendering company adelaide": null,
+   "3d visualisation adelaide": null,
+   "3d architectural rendering adelaide": {
+    "clicks": 0,
+    "impressions": 3,
+    "ctr_pct": 0,
+    "position": 8.7
+   },
+   "3d architectural visualisation adelaide": {
+    "clicks": 0,
+    "impressions": 1,
+    "ctr_pct": 0,
+    "position": 20
+   },
+   "3d rendering melbourne": null,
+   "architectural rendering melbourne": null,
+   "3d renders for property developers sydney": null,
+   "3d architectural rendering melbourne": null,
+   "3d rendering services melbourne": {
+    "clicks": 0,
+    "impressions": 1,
+    "ctr_pct": 0,
+    "position": 20
+   },
+   "dx model": {
+    "clicks": 0,
+    "impressions": 3,
+    "ctr_pct": 0,
+    "position": 4
+   },
+   "3d renders for developers sydney": null,
+   "3d renders melbourne": null,
+   "architectural rendering adelaide": null,
+   "adelaide property developers": {
+    "clicks": 0,
+    "impressions": 7,
+    "ctr_pct": 0,
+    "position": 10.6
+   },
+   "3d renders for property developers melbourne": {
+    "clicks": 0,
+    "impressions": 1,
+    "ctr_pct": 0,
+    "position": 48
+   },
+   "developers adelaide": null,
+   "knock down rebuild melbourne": null,
+   "3d renders for real estate melbourne": null,
+   "3d renders for builders melbourne": null,
+   "3d renders for developers melbourne": null,
+   "3d interior renders melbourne": {
+    "clicks": 0,
+    "impressions": 1,
+    "ctr_pct": 0,
+    "position": 82
+   },
+   "custom living space melbourne": null,
+   "interior finishing": null
+  }
+ },
+ "ga4": {
+  "sessions": 115,
+  "engaged_sessions": 19,
+  "engagement_rate_pct": 16.52,
+  "key_events": 0,
+  "session_key_event_rate_pct": 0.0,
+  "users": 101,
+  "new_users": 95,
+  "returning_users": 5,
+  "avg_engagement_time": "0m 12s",
+  "events_per_session": 3.4,
+  "total_events": 391,
+  "channel_breakdown": [
+   {
+    "name": "Direct",
+    "sessions": 65,
+    "engaged_sessions": 4,
+    "engagement_rate_pct": 6.2,
+    "key_events": 0
+   },
+   {
+    "name": "Organic Social",
+    "sessions": 19,
+    "engaged_sessions": 3,
+    "engagement_rate_pct": 15.8,
+    "key_events": 0
+   },
+   {
+    "name": "Organic Search",
+    "sessions": 17,
+    "engaged_sessions": 9,
+    "engagement_rate_pct": 52.9,
+    "key_events": 0
+   },
+   {
+    "name": "Unassigned",
+    "sessions": 8,
+    "engaged_sessions": 0,
+    "engagement_rate_pct": 0.0,
+    "key_events": 0
+   },
+   {
+    "name": "Referral",
+    "sessions": 4,
+    "engaged_sessions": 3,
+    "engagement_rate_pct": 75.0,
+    "key_events": 0
+   },
+   {
+    "name": "AI Assistant",
+    "sessions": 2,
+    "engaged_sessions": 0,
+    "engagement_rate_pct": 0.0,
+    "key_events": 0
+   }
+  ],
+  "source_medium_top": [
+   {
+    "name": "(direct) / (none)",
+    "sessions": 65,
+    "engaged_sessions": 4,
+    "engagement_rate_pct": 6.2,
+    "key_events": 0
+   },
+   {
+    "name": "google / organic",
+    "sessions": 15,
+    "engaged_sessions": 8,
+    "engagement_rate_pct": 53.3,
+    "key_events": 0
+   },
+   {
+    "name": "linkedin / social",
+    "sessions": 15,
+    "engaged_sessions": 0,
+    "engagement_rate_pct": 0.0,
+    "key_events": 0
+   },
+   {
+    "name": "(not set) / (not set)",
+    "sessions": 8,
+    "engaged_sessions": 0,
+    "engagement_rate_pct": 0.0,
+    "key_events": 0
+   },
+   {
+    "name": "creative-hub-eight-gray.vercel.app / referral",
+    "sessions": 4,
+    "engaged_sessions": 3,
+    "engagement_rate_pct": 75.0,
+    "key_events": 0
+   },
+   {
+    "name": "facebook.com / referral",
+    "sessions": 3,
+    "engaged_sessions": 2,
+    "engagement_rate_pct": 66.7,
+    "key_events": 0
+   },
+   {
+    "name": "bing / organic",
+    "sessions": 2,
+    "engaged_sessions": 1,
+    "engagement_rate_pct": 50.0,
+    "key_events": 0
+   },
+   {
+    "name": "chatgpt.com / ai-assistant",
+    "sessions": 1,
+    "engaged_sessions": 0,
+    "engagement_rate_pct": 0.0,
+    "key_events": 0
+   },
+   {
+    "name": "gemini.google.com / ai-assistant",
+    "sessions": 1,
+    "engaged_sessions": 0,
+    "engagement_rate_pct": 0.0,
+    "key_events": 0
+   },
+   {
+    "name": "linkedin.com / referral",
+    "sessions": 1,
+    "engaged_sessions": 1,
+    "engagement_rate_pct": 100.0,
+    "key_events": 0
+   }
+  ],
+  "ai_assistant_channel": {
+   "sessions": 2,
+   "share_of_sessions_pct": 1.74,
+   "engaged_sessions": 0,
+   "engagement_rate_pct": 0.0,
+   "key_events": 0,
+   "sources": [
+    {
+     "name": "chatgpt.com",
+     "sessions": 1,
+     "engaged_sessions": 0,
+     "engagement_rate_pct": 0.0,
+     "key_events": 0
+    },
+    {
+     "name": "gemini.google.com",
+     "sessions": 1,
+     "engaged_sessions": 0,
+     "engagement_rate_pct": 0.0,
+     "key_events": 0
+    }
+   ]
+  },
+  "daily": [
+   {
+    "d": "2026-11-14",
+    "sessions": 19,
+    "users": 19
+   },
+   {
+    "d": "2026-11-15",
+    "sessions": 13,
+    "users": 13
+   },
+   {
+    "d": "2026-11-16",
+    "sessions": 16,
+    "users": 15
+   },
+   {
+    "d": "2026-11-17",
+    "sessions": 17,
+    "users": 15
+   },
+   {
+    "d": "2026-11-18",
+    "sessions": 17,
+    "users": 16
+   },
+   {
+    "d": "2026-11-19",
+    "sessions": 17,
+    "users": 17
+   },
+   {
+    "d": "2026-11-20",
+    "sessions": 16,
+    "users": 16
+   }
+  ]
+ },
+ "gsc_prev": {
+  "clicks": 9,
+  "impressions": 1308,
+  "ctr_pct": 0.7,
+  "avg_position": 18.2,
+  "queries_with_impressions": 158,
+  "brand_clicks": 2,
+  "brand_clicks_share_pct": 22.2,
+  "clicked_queries": [
+   {
+    "q": "dx living",
+    "clicks": 2,
+    "impressions": 11,
+    "ctr_pct": 18.18,
+    "position": 2
+   },
+   {
+    "q": "home cinema cost",
+    "clicks": 1,
+    "impressions": 1,
+    "ctr_pct": 100,
+    "position": 1
+   }
+  ],
+  "top_queries": [
+   {
+    "q": "how to interior design for developers",
+    "clicks": 0,
+    "impressions": 90,
+    "ctr_pct": 0,
+    "position": 5.3
+   },
+   {
+    "q": "media room renovation cost",
+    "clicks": 0,
+    "impressions": 78,
+    "ctr_pct": 0,
+    "position": 3.7
+   },
+   {
+    "q": "31 mcilwain drive mermaid waters",
+    "clicks": 0,
+    "impressions": 46,
+    "ctr_pct": 0,
+    "position": 8.5
+   },
+   {
+    "q": "interior design for property developers",
+    "clicks": 0,
+    "impressions": 45,
+    "ctr_pct": 0,
+    "position": 7.8
+   },
+   {
+    "q": "home theater renovation cost",
+    "clicks": 0,
+    "impressions": 42,
+    "ctr_pct": 0,
+    "position": 5.3
+   },
+   {
+    "q": "interior design for developers",
+    "clicks": 0,
+    "impressions": 35,
+    "ctr_pct": 0,
+    "position": 9.9
+   },
+   {
+    "q": "property development interior design",
+    "clicks": 0,
+    "impressions": 21,
+    "ctr_pct": 0,
+    "position": 9.5
+   },
+   {
+    "q": "design coordination",
+    "clicks": 0,
+    "impressions": 19,
+    "ctr_pct": 0,
+    "position": 81.1
+   },
+   {
+    "q": "duplex designs",
+    "clicks": 0,
+    "impressions": 18,
+    "ctr_pct": 0,
+    "position": 80.1
+   },
+   {
+    "q": "interior design for property development",
+    "clicks": 0,
+    "impressions": 18,
+    "ctr_pct": 0,
+    "position": 7.1
+   },
+   {
+    "q": "duplex design",
+    "clicks": 0,
+    "impressions": 16,
+    "ctr_pct": 0,
+    "position": 62.4
+   },
+   {
+    "q": "duplex building design",
+    "clicks": 0,
+    "impressions": 13,
+    "ctr_pct": 0,
+    "position": 85.5
+   },
+   {
+    "q": "project management for residential construction",
+    "clicks": 0,
+    "impressions": 12,
+    "ctr_pct": 0,
+    "position": 75.4
+   },
+   {
+    "q": "dx living",
+    "clicks": 2,
+    "impressions": 11,
+    "ctr_pct": 18.18,
+    "position": 2
+   },
+   {
+    "q": "living room designs australia",
+    "clicks": 0,
+    "impressions": 11,
+    "ctr_pct": 0,
+    "position": 5.5
+   },
+   {
+    "q": "31 mcilwain drive, mermaid waters",
+    "clicks": 0,
+    "impressions": 10,
+    "ctr_pct": 0,
+    "position": 9.3
+   },
+   {
+    "q": "3d coordination",
+    "clicks": 0,
+    "impressions": 10,
+    "ctr_pct": 0,
+    "position": 14.1
+   },
+   {
+    "q": "benefits of vr",
+    "clicks": 0,
+    "impressions": 10,
+    "ctr_pct": 0,
+    "position": 43.7
+   },
+   {
+    "q": "3d home renders brisbane",
+    "clicks": 0,
+    "impressions": 9,
+    "ctr_pct": 0,
+    "position": 10
+   },
+   {
+    "q": "duplex designs australia",
+    "clicks": 0,
+    "impressions": 9,
+    "ctr_pct": 0,
+    "position": 57.4
+   },
+   {
+    "q": "duplex house design",
+    "clicks": 0,
+    "impressions": 9,
+    "ctr_pct": 0,
+    "position": 33.6
+   },
+   {
+    "q": "interior design tips for developers",
+    "clicks": 0,
+    "impressions": 9,
+    "ctr_pct": 0,
+    "position": 1.7
+   },
+   {
+    "q": "living room ideas australia",
+    "clicks": 0,
+    "impressions": 9,
+    "ctr_pct": 0,
+    "position": 21.9
+   },
+   {
+    "q": "developers adelaide",
+    "clicks": 0,
+    "impressions": 8,
+    "ctr_pct": 0,
+    "position": 39
+   },
+   {
+    "q": "living room trends australia 2026",
+    "clicks": 0,
+    "impressions": 8,
+    "ctr_pct": 0,
+    "position": 10
+   }
+  ],
+  "top_pages": [
+   {
+    "page": "/",
+    "clicks": 3,
+    "impressions": 32,
+    "ctr_pct": 9.38,
+    "position": 3.9
+   },
+   {
+    "page": "/articles/project-251-visualisation-overview",
+    "clicks": 2,
+    "impressions": 2,
+    "ctr_pct": 100,
+    "position": 3
+   },
+   {
+    "page": "/articles/home-cinema-cost-australia",
+    "clicks": 1,
+    "impressions": 150,
+    "ctr_pct": 0.67,
+    "position": 4.4
+   },
+   {
+    "page": "/articles/interior-design-for-property-developers",
+    "clicks": 1,
+    "impressions": 258,
+    "ctr_pct": 0.39,
+    "position": 7.4
+   },
+   {
+    "page": "/articles/modern-house-design-2026-10-trends-shaping-homes",
+    "clicks": 1,
+    "impressions": 23,
+    "ctr_pct": 4.35,
+    "position": 25.6
+   },
+   {
+    "page": "/model",
+    "clicks": 1,
+    "impressions": 15,
+    "ctr_pct": 6.67,
+    "position": 14.2
+   },
+   {
+    "page": "/about",
+    "clicks": 0,
+    "impressions": 15,
+    "ctr_pct": 0,
+    "position": 4.1
+   },
+   {
+    "page": "/articles",
+    "clicks": 0,
+    "impressions": 8,
+    "ctr_pct": 0,
+    "position": 17.9
+   },
+   {
+    "page": "/articles/3d-floor-plan-melbourne-home-design-clarity",
+    "clicks": 0,
+    "impressions": 2,
+    "ctr_pct": 0,
+    "position": 7.5
+   },
+   {
+    "page": "/articles/3d-house-design-guide-from-sketch-to-walkthrough",
+    "clicks": 0,
+    "impressions": 3,
+    "ctr_pct": 0,
+    "position": 5.7
+   },
+   {
+    "page": "/articles/3d-rendering-adelaide",
+    "clicks": 0,
+    "impressions": 7,
+    "ctr_pct": 0,
+    "position": 9.1
+   },
+   {
+    "page": "/articles/3d-rendering-brief-checklist-australia",
+    "clicks": 0,
+    "impressions": 2,
+    "ctr_pct": 0,
+    "position": 7
+   },
+   {
+    "page": "/articles/3d-rendering-brisbane",
+    "clicks": 0,
+    "impressions": 13,
+    "ctr_pct": 0,
+    "position": 12.4
+   },
+   {
+    "page": "/articles/3d-rendering-company-adelaide",
+    "clicks": 0,
+    "impressions": 3,
+    "ctr_pct": 0,
+    "position": 19
+   },
+   {
+    "page": "/articles/3d-rendering-cost-australia",
+    "clicks": 0,
+    "impressions": 10,
+    "ctr_pct": 0,
+    "position": 18
+   },
+   {
+    "page": "/articles/3d-rendering-for-home-renovation-australia",
+    "clicks": 0,
+    "impressions": 33,
+    "ctr_pct": 0,
+    "position": 46.2
+   },
+   {
+    "page": "/articles/3d-rendering-services-melbourne",
+    "clicks": 0,
+    "impressions": 4,
+    "ctr_pct": 0,
+    "position": 22.8
+   },
+   {
+    "page": "/articles/3d-renders-for-property-developers-sydney",
+    "clicks": 0,
+    "impressions": 2,
+    "ctr_pct": 0,
+    "position": 11.5
+   },
+   {
+    "page": "/articles/3d-renders-for-real-estate-melbourne",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr_pct": 0,
+    "position": 21
+   },
+   {
+    "page": "/articles/6-benefits-of-using-vr-technology",
+    "clicks": 0,
+    "impressions": 59,
+    "ctr_pct": 0,
+    "position": 50.7
+   },
+   {
+    "page": "/articles/apartment-rendering-community-developments",
+    "clicks": 0,
+    "impressions": 16,
+    "ctr_pct": 0,
+    "position": 23
+   },
+   {
+    "page": "/articles/architectural-visualisation-adelaide",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr_pct": 0,
+    "position": 7
+   },
+   {
+    "page": "/articles/architectural-visualisation-australia",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr_pct": 0,
+    "position": 6
+   },
+   {
+    "page": "/articles/before-you-sign-with-a-builder-checklist",
+    "clicks": 0,
+    "impressions": 2,
+    "ctr_pct": 0,
+    "position": 36.5
+   },
+   {
+    "page": "/articles/best-practices-for-project-and-quality-management-in-2026",
+    "clicks": 0,
+    "impressions": 18,
+    "ctr_pct": 0,
+    "position": 5
+   }
+  ],
+  "page_one_queries": 55,
+  "top3_queries": 11,
+  "daily": [
+   {
+    "d": "2026-11-07",
+    "clicks": 1,
+    "impressions": 177
+   },
+   {
+    "d": "2026-11-08",
+    "clicks": 0,
+    "impressions": 180
+   },
+   {
+    "d": "2026-11-09",
+    "clicks": 3,
+    "impressions": 219
+   },
+   {
+    "d": "2026-11-10",
+    "clicks": 1,
+    "impressions": 140
+   },
+   {
+    "d": "2026-11-11",
+    "clicks": 1,
+    "impressions": 184
+   },
+   {
+    "d": "2026-11-12",
+    "clicks": 2,
+    "impressions": 196
+   },
+   {
+    "d": "2026-11-13",
+    "clicks": 1,
+    "impressions": 212
+   }
+  ],
+  "tracked": {}
+ },
+ "ga4_prev": {
+  "sessions": 201,
+  "engaged_sessions": 36,
+  "engagement_rate_pct": 17.91,
+  "key_events": 1,
+  "session_key_event_rate_pct": 0.5,
+  "users": 183,
+  "new_users": 177,
+  "returning_users": 5,
+  "avg_engagement_time": "0m 15s",
+  "events_per_session": 3.75,
+  "total_events": 754,
+  "channel_breakdown": [
+   {
+    "name": "Direct",
+    "sessions": 116,
+    "engaged_sessions": 15,
+    "engagement_rate_pct": 12.9,
+    "key_events": 1
+   },
+   {
+    "name": "Organic Social",
+    "sessions": 67,
+    "engaged_sessions": 12,
+    "engagement_rate_pct": 17.9,
+    "key_events": 0
+   },
+   {
+    "name": "Organic Search",
+    "sessions": 17,
+    "engaged_sessions": 9,
+    "engagement_rate_pct": 52.9,
+    "key_events": 0
+   },
+   {
+    "name": "Referral",
+    "sessions": 1,
+    "engaged_sessions": 0,
+    "engagement_rate_pct": 0.0,
+    "key_events": 0
+   }
+  ],
+  "source_medium_top": [
+   {
+    "name": "(direct) / (none)",
+    "sessions": 116,
+    "engaged_sessions": 15,
+    "engagement_rate_pct": 12.9,
+    "key_events": 1
+   },
+   {
+    "name": "facebook / social",
+    "sessions": 52,
+    "engaged_sessions": 12,
+    "engagement_rate_pct": 23.1,
+    "key_events": 0
+   },
+   {
+    "name": "google / organic",
+    "sessions": 14,
+    "engaged_sessions": 8,
+    "engagement_rate_pct": 57.1,
+    "key_events": 0
+   },
+   {
+    "name": "linkedin / social",
+    "sessions": 12,
+    "engaged_sessions": 0,
+    "engagement_rate_pct": 0.0,
+    "key_events": 0
+   },
+   {
+    "name": "youtube / social",
+    "sessions": 3,
+    "engaged_sessions": 0,
+    "engagement_rate_pct": 0.0,
+    "key_events": 0
+   },
+   {
+    "name": "bing / organic",
+    "sessions": 2,
+    "engaged_sessions": 0,
+    "engagement_rate_pct": 0.0,
+    "key_events": 0
+   },
+   {
+    "name": "creative-hub-03mw.onrender.com / referral",
+    "sessions": 1,
+    "engaged_sessions": 0,
+    "engagement_rate_pct": 0.0,
+    "key_events": 0
+   },
+   {
+    "name": "yahoo / organic",
+    "sessions": 1,
+    "engaged_sessions": 1,
+    "engagement_rate_pct": 100.0,
+    "key_events": 0
+   }
+  ],
+  "ai_assistant_channel": {
+   "sessions": 0,
+   "share_of_sessions_pct": 0.0,
+   "engaged_sessions": 0,
+   "engagement_rate_pct": null,
+   "key_events": 0,
+   "sources": []
+  },
+  "daily": [
+   {
+    "d": "2026-11-07",
+    "sessions": 5,
+    "users": 5
+   },
+   {
+    "d": "2026-11-08",
+    "sessions": 10,
+    "users": 9
+   },
+   {
+    "d": "2026-11-09",
+    "sessions": 24,
+    "users": 24
+   },
+   {
+    "d": "2026-11-10",
+    "sessions": 45,
+    "users": 43
+   },
+   {
+    "d": "2026-11-11",
+    "sessions": 31,
+    "users": 30
+   },
+   {
+    "d": "2026-11-12",
+    "sessions": 36,
+    "users": 36
+   },
+   {
+    "d": "2026-11-13",
+    "sessions": 50,
+    "users": 45
+   }
+  ]
+ },
+ "notes_vi": "clicks 9 → 15; impressions 1308 → 1601; ctr_pct 0.7 → 0.9; avg_position 18.2 → 8.8; queries_with_impressions 158 → 160; brand_clicks 2 → 6; page_one_queries 55 → 82; ga4_sessions 201 → 115.",
+ "notes_en": "clicks 9 → 15; impressions 1308 → 1601; ctr_pct 0.7 → 0.9; avg_position 18.2 → 8.8; queries_with_impressions 158 → 160; brand_clicks 2 → 6; page_one_queries 55 → 82; ga4_sessions 201 → 115.",
+ "notes_by": "template",
+ "commentary_input": {
+  "report": "SEO weekly",
+  "summary": {
+   "week": [
+    "2026-11-14",
+    "2026-11-20"
+   ],
+   "this_week": {
+    "clicks": 15,
+    "impressions": 1601,
+    "ctr_pct": 0.9,
+    "avg_position": 8.8,
+    "queries_with_impressions": 160,
+    "brand_clicks": 6,
+    "page_one_queries": 82,
+    "ga4_sessions": 115,
+    "ga4_users": 101,
+    "ga4_engagement_rate_pct": 16.52,
+    "ga4_key_events": 0,
+    "ai_sessions": 2,
+    "top_channels": [
+     [
+      "Direct",
+      65
+     ],
+     [
+      "Organic Social",
+      19
+     ],
+     [
+      "Organic Search",
+      17
+     ],
+     [
+      "Unassigned",
+      8
+     ],
+     [
+      "Referral",
+      4
+     ]
+    ],
+    "top_clicked": [
+     [
+      "dx living",
+      3
+     ],
+     [
+      "dxliving",
+      3
+     ],
+     [
+      "dx company",
+      1
+     ]
+    ]
+   },
+   "previous_week": {
+    "clicks": 9,
+    "impressions": 1308,
+    "ctr_pct": 0.7,
+    "avg_position": 18.2,
+    "queries_with_impressions": 158,
+    "brand_clicks": 2,
+    "page_one_queries": 55,
+    "ga4_sessions": 201,
+    "ga4_users": 183,
+    "ga4_engagement_rate_pct": 17.91,
+    "ga4_key_events": 1,
+    "ai_sessions": 0,
+    "top_channels": [
+     [
+      "Direct",
+      116
+     ],
+     [
+      "Organic Social",
+      67
+     ],
+     [
+      "Organic Search",
+      17
+     ],
+     [
+      "Referral",
+      1
+     ]
+    ],
+    "top_clicked": [
+     [
+      "dx living",
+      2
+     ],
+     [
+      "home cinema cost",
+      1
+     ]
+    ]
+   }
+  }
+ }
+}

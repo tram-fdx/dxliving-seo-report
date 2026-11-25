@@ -20,6 +20,22 @@
    "notes_en": "Scheduled run on 23 Nov. GSC clicks 11 to 12, impressions 1,310 to 1,680; average position 16.6 to 8.3 mostly because deep-position queries (duplex, project management) left the sample, not a ranking gain. home-cinema-cost-australia had 571 impressions at position 5.3 but 1 click. 28 days: 37 clicks, 5,349 impressions. GA4 sessions 215 to 108 (Direct 127 to 58, Organic Social 70 to 16), Organic Search 18 to 19, key events 1 to 0, AI 0 to 2. AI citations 33 to 32 across 11 pages (21 Nov snapshot vs 15 Nov), backlinks 892, referring domains 860."
   },
   {
+   "id": "2026-11-20",
+   "vi": "14–20/11/2026",
+   "en": "14 – 20 Nov 2026",
+   "start": "2026-11-14",
+   "end": "2026-11-20",
+   "compare_start": "2026-11-07",
+   "compare_end": "2026-11-13",
+   "scanned_on": "2026-11-25",
+   "sources": [
+    "Google Search Console API",
+    "GA4 Data API"
+   ],
+   "notes_vi": "clicks 9 → 15; impressions 1308 → 1601; ctr_pct 0.7 → 0.9; avg_position 18.2 → 8.8; queries_with_impressions 158 → 160; brand_clicks 2 → 6; page_one_queries 55 → 82; ga4_sessions 201 → 115.",
+   "notes_en": "clicks 9 → 15; impressions 1308 → 1601; ctr_pct 0.7 → 0.9; avg_position 18.2 → 8.8; queries_with_impressions 158 → 160; brand_clicks 2 → 6; page_one_queries 55 → 82; ga4_sessions 201 → 115."
+  },
+  {
    "id": "2026-11-13",
    "vi": "7–13/11/2026",
    "en": "7 – 13 Nov 2026",
