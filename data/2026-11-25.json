@@ -849,44 +849,15 @@
   "daily_note": "GA4 per-day sessions were not read cleanly today (the Date table in the GA4 UI did not reconcile with the 626 total), so the daily series is null, not carried forward."
  },
  "ahrefs": {
-  "read_at": "2026-11-25 (Ahrefs web, Chrome on Mac)",
+  "read_at": "2026-11-25 (Ahrefs web)",
   "domain_rating": 0,
-  "url_rating": 0,
   "ahrefs_rank": 114805806,
   "backlinks": 892,
-  "backlinks_all_time": "1.1K",
   "referring_domains": 860,
-  "referring_domains_all_time": "1.1K",
   "organic_keywords": 1,
   "organic_traffic": 1,
   "ai_citations": 31,
   "cited_pages": 11,
-  "ai_by_platform": {
-   "ai_mode": 7,
-   "chatgpt": 10,
-   "gemini": 3,
-   "perplexity": 0,
-   "copilot_paused": 9,
-   "grok_paused": 0
-  },
-  "ai_overviews_prompts": 2,
-  "ai_overviews_pages": 2,
-  "crawled_pages": 163,
-  "crawled_http": {
-   "ok_200": 154,
-   "redirect_3xx": 4,
-   "not_found_404": 5,
-   "other_4xx": 0,
-   "server_5xx": 0
-  },
-  "site_audit": {
-   "project": "Dxliving",
-   "health_score": 99,
-   "ai_score": 100,
-   "last_crawl": "2026-11-25 04:53 (Ahrefs time)",
-   "urls_crawled": 228,
-   "internal_urls_with_errors": 7
-  },
   "source": "Ahrefs web (Chrome on Mac)"
  },
  "ai_visibility": {
@@ -2126,13 +2097,26 @@
   }
  },
  "commentary": {
-  "vi": "clicks 36 → 40; impressions 5246 → 5506; ctr_pct 0.7 → 0.7; avg_position 16.0 → 15.7; queries_with_impressions 392 → 402; brand_clicks 12 → 14; page_one_queries 137 → 142; ga4_sessions 609 → 626. GSC window unchanged (26 Oct–22 Nov); GA4 window moved one day (28 Oct–24 Nov). GA4 daily series and Brand Radar not read (null).",
-  "en": "clicks 36 → 40; impressions 5246 → 5506; ctr_pct 0.7 → 0.7; avg_position 16.0 → 15.7; queries_with_impressions 392 → 402; brand_clicks 12 → 14; page_one_queries 137 → 142; ga4_sessions 609 → 626. GSC window unchanged (26 Oct–22 Nov); GA4 window moved one day (28 Oct–24 Nov). GA4 daily series and Brand Radar not read (null).",
-  "by": "Claude on Mac (scheduled routine)"
+  "vi": "Click Google tăng từ 36 lên 40, hiển thị từ 5.246 lên 5.506, vị trí trung bình cải thiện từ 16,0 lên 15,7. Số truy vấn trang 1 tăng từ 137 lên 142. GA4 có 626 phiên (trước 609) nhưng chỉ 1 sự kiện chính; CTR vẫn 0,7%.",
+  "en": "Google clicks rose from 36 to 40, impressions from 5,246 to 5,506, and average position improved from 16.0 to 15.7. Page-one queries grew from 137 to 142. GA4 shows 626 sessions (from 609) but only 1 key event; CTR remains 0.7%.",
+  "by": "Claude (Mac)",
+  "rating": "ok",
+  "verdict_vi": "Tăng trưởng nhẹ nhưng đều, chuyển đổi vẫn gần như bằng 0.",
+  "verdict_en": "Small but steady growth; conversions remain near zero.",
+  "actions_vi": [
+   "Viết lại title/meta cho các truy vấn trang 1 có hiển thị cao để nâng CTR 0,7%.",
+   "Thêm CTA đặt lịch tư vấn trên các trang nhận traffic để tăng từ 1 sự kiện chính.",
+   "Xây backlink chất lượng: 860 domain trỏ về nhưng DR vẫn 0."
+  ],
+  "actions_en": [
+   "Rewrite titles/meta for high-impression page-one queries to lift the 0.7% CTR.",
+   "Add a consultation CTA on traffic-receiving pages to move beyond 1 key event.",
+   "Earn quality backlinks: 860 referring domains but DR is still 0."
+  ]
  },
  "notes": {
-  "vi": "clicks 36 → 40; impressions 5246 → 5506; ctr_pct 0.7 → 0.7; avg_position 16.0 → 15.7; queries_with_impressions 392 → 402; brand_clicks 12 → 14; page_one_queries 137 → 142; ga4_sessions 609 → 626. GSC window unchanged (26 Oct–22 Nov); GA4 window moved one day (28 Oct–24 Nov). GA4 daily series and Brand Radar not read (null).",
-  "en": "clicks 36 → 40; impressions 5246 → 5506; ctr_pct 0.7 → 0.7; avg_position 16.0 → 15.7; queries_with_impressions 392 → 402; brand_clicks 12 → 14; page_one_queries 137 → 142; ga4_sessions 609 → 626. GSC window unchanged (26 Oct–22 Nov); GA4 window moved one day (28 Oct–24 Nov). GA4 daily series and Brand Radar not read (null)."
+  "vi": "Click Google tăng từ 36 lên 40, hiển thị từ 5.246 lên 5.506, vị trí trung bình cải thiện từ 16,0 lên 15,7. Số truy vấn trang 1 tăng từ 137 lên 142. GA4 có 626 phiên (trước 609) nhưng chỉ 1 sự kiện chính; CTR vẫn 0,7%.",
+  "en": "Google clicks rose from 36 to 40, impressions from 5,246 to 5,506, and average position improved from 16.0 to 15.7. Page-one queries grew from 137 to 142. GA4 shows 626 sessions (from 609) but only 1 key event; CTR remains 0.7%."
  },
  "commentary_input": {
   "report": "SEO (GSC + GA4)",
@@ -2149,7 +2133,15 @@
     "ga4_users": 508,
     "ga4_engagement_rate_pct": 23.96,
     "ga4_key_events": 1,
-    "ai_sessions": 5
+    "ai_sessions": 5,
+    "ahrefs": {
+     "domain_rating": 0,
+     "referring_domains": 860,
+     "backlinks": 892,
+     "organic_keywords": 1,
+     "organic_traffic": 1,
+     "ai_citations": 31
+    }
    },
    "previous": {
     "clicks": 36,
