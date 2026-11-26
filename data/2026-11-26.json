@@ -999,24 +999,7 @@
   "organic_traffic": 1,
   "ai_citations": null,
   "cited_pages": null,
-  "source": "Ahrefs web (Chrome on Mac)",
-  "crawled_pages_http": {
-   "total": 164,
-   "ok_200": 155,
-   "redirect_3xx": 4,
-   "not_found_404": 5
-  },
-  "backlinks_followed": {
-   "followed": 311,
-   "not_followed": 581
-  },
-  "ref_domains_followed": {
-   "followed": 305,
-   "not_followed": 555
-  },
-  "backlinks_all_time": "1.1K",
-  "ref_domains_all_time": "1.1K",
-  "note": "Ahrefs overview read live (signed in). The AI-responses-by-platform widget is not on the overview page today, so ai_citations/cited_pages are null (not carried over). Ahrefs \"AR\" shown on page = 114,471,198."
+  "source": "Ahrefs web (Chrome on Mac)"
  },
  "ai_visibility": {
   "score": null,
@@ -1939,13 +1922,26 @@
   }
  },
  "commentary": {
-  "vi": "clicks 40 → 41; impressions 5404 → 5797; ctr_pct 0.7 → 0.7; avg_position 15.6 → 15.3; queries_with_impressions 396 → 426; brand_clicks 14 → 14; page_one_queries 139 → 148; ga4_sessions 626 → 624. Cửa sổ GA4 nay là 29/10 – 25/11 (gồm ngày 25/11 chưa đủ); thời gian tương tác TB GA4 là số theo người dùng hoạt động (20 giây). Trích dẫn AI của Ahrefs hôm nay không đọc được (null).",
-  "en": "clicks 40 → 41; impressions 5404 → 5797; ctr_pct 0.7 → 0.7; avg_position 15.6 → 15.3; queries_with_impressions 396 → 426; brand_clicks 14 → 14; page_one_queries 139 → 148; ga4_sessions 626 → 624. GA4 window now 29 Oct – 25 Nov (includes the partial day of 25 Nov); GA4 avg engagement time is now the per-active-user figure (20 s). Ahrefs AI citations not readable today (null).",
-  "by": "template"
+  "vi": "Lượt hiển thị Google tăng từ 5.404 lên 5.797, vị trí trung bình cải thiện từ 15,6 lên 15,3 và số truy vấn trang 1 lên 148 (từ 139). Click nhích lên 41 nhưng CTR vẫn 0,7%, và 14 click là tìm theo thương hiệu. GA4 đi ngang ở 624 phiên, tỷ lệ tương tác giảm từ 23,96% xuống 22,6%. Ahrefs vẫn chỉ ghi nhận 1 từ khoá organic dù có 860 referring domains.",
+  "en": "Google impressions rose from 5,404 to 5,797, average position improved from 15.6 to 15.3 and page-one queries reached 148 (from 139). Clicks edged up to 41 but CTR stays at 0.7%, and 14 clicks are branded. GA4 was flat at 624 sessions while engagement rate slipped from 23.96% to 22.6%. Ahrefs still records only 1 organic keyword despite 860 referring domains.",
+  "by": "Claude (Mac)",
+  "rating": "ok",
+  "verdict_vi": "Hiển thị và thứ hạng đang đi lên, nhưng chưa chuyển thành click và tương tác.",
+  "verdict_en": "Visibility and rankings are rising but not yet turning into clicks or engagement.",
+  "actions_vi": [
+   "Viết lại title/meta cho các trang trong 148 truy vấn trang 1 để kéo CTR khỏi 0,7%.",
+   "Kiểm tra trang đích của 373 phiên Direct để tìm vì sao tỷ lệ tương tác chỉ 22,6%.",
+   "Thêm CTA rõ trên các trang có traffic để tăng key event từ 1."
+  ],
+  "actions_en": [
+   "Rewrite titles/meta on pages behind the 148 page-one queries to lift CTR above 0.7%.",
+   "Check landing pages for the 373 Direct sessions to see why engagement is only 22.6%.",
+   "Add clear CTAs on traffic pages to grow key events beyond 1."
+  ]
  },
  "notes": {
-  "vi": "clicks 40 → 41; impressions 5404 → 5797; ctr_pct 0.7 → 0.7; avg_position 15.6 → 15.3; queries_with_impressions 396 → 426; brand_clicks 14 → 14; page_one_queries 139 → 148; ga4_sessions 626 → 624. Cửa sổ GA4 nay là 29/10 – 25/11 (gồm ngày 25/11 chưa đủ); thời gian tương tác TB GA4 là số theo người dùng hoạt động (20 giây). Trích dẫn AI của Ahrefs hôm nay không đọc được (null).",
-  "en": "clicks 40 → 41; impressions 5404 → 5797; ctr_pct 0.7 → 0.7; avg_position 15.6 → 15.3; queries_with_impressions 396 → 426; brand_clicks 14 → 14; page_one_queries 139 → 148; ga4_sessions 626 → 624. GA4 window now 29 Oct – 25 Nov (includes the partial day of 25 Nov); GA4 avg engagement time is now the per-active-user figure (20 s). Ahrefs AI citations not readable today (null)."
+  "vi": "Lượt hiển thị Google tăng từ 5.404 lên 5.797, vị trí trung bình cải thiện từ 15,6 lên 15,3 và số truy vấn trang 1 lên 148 (từ 139). Click nhích lên 41 nhưng CTR vẫn 0,7%, và 14 click là tìm theo thương hiệu. GA4 đi ngang ở 624 phiên, tỷ lệ tương tác giảm từ 23,96% xuống 22,6%. Ahrefs vẫn chỉ ghi nhận 1 từ khoá organic dù có 860 referring domains.",
+  "en": "Google impressions rose from 5,404 to 5,797, average position improved from 15.6 to 15.3 and page-one queries reached 148 (from 139). Clicks edged up to 41 but CTR stays at 0.7%, and 14 clicks are branded. GA4 was flat at 624 sessions while engagement rate slipped from 23.96% to 22.6%. Ahrefs still records only 1 organic keyword despite 860 referring domains."
  },
  "commentary_input": {
   "report": "SEO (GSC + GA4)",
@@ -2006,7 +2002,15 @@
       "home cinema cost",
       1
      ]
-    ]
+    ],
+    "ahrefs": {
+     "domain_rating": 0,
+     "referring_domains": 860,
+     "backlinks": 892,
+     "organic_keywords": 1,
+     "organic_traffic": 1,
+     "ai_citations": null
+    }
    },
    "previous": {
     "clicks": 40,
