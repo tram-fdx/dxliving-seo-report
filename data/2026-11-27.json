@@ -874,50 +874,13 @@
  "ahrefs": {
   "read_at": "2026-11-27 (Ahrefs web)",
   "domain_rating": 0,
-  "url_rating": 4.5,
   "ahrefs_rank": 114471198,
   "backlinks": 892,
-  "backlinks_all_time": "1.1K",
   "referring_domains": 860,
-  "referring_domains_all_time": "1.1K",
-  "backlinks_followed": 311,
-  "referring_domains_followed": 305,
   "organic_keywords": 1,
   "organic_traffic": 1,
   "ai_citations": 30,
   "cited_pages": 11,
-  "ai_platforms": {
-   "AI Mode": {
-    "prompts": 7,
-    "pages": 3
-   },
-   "ChatGPT": {
-    "prompts": 10,
-    "pages": 6
-   },
-   "Gemini": {
-    "prompts": 3,
-    "pages": 1
-   },
-   "Perplexity": {
-    "prompts": 0,
-    "pages": 0
-   },
-   "Copilot (paused)": {
-    "prompts": 9,
-    "pages": 8
-   },
-   "Grok (paused)": {
-    "prompts": 0,
-    "pages": 0
-   }
-  },
-  "crawled_pages": {
-   "total": 165,
-   "ok_200": 156,
-   "redirect_3xx": 4,
-   "not_found_404": 5
-  },
   "source": "Ahrefs web (Chrome on Mac)"
  },
  "ai_visibility": {
@@ -1843,13 +1806,26 @@
   }
  },
  "commentary": {
-  "vi": "clicks 40 → 40; impressions 5682 → 6022; ctr_pct 0.7 → 0.7; avg_position 14.9 → 15; queries_with_impressions 421 → 437; brand_clicks 14 → 14; page_one_queries 149 → 154; ga4_sessions 624 → 616; ga4_users 522 → 516. Method note: today's GSC/GA4 figures are read from the web UI (previous days came from the API), so small differences in query counts and position are partly method.",
-  "en": "clicks 40 → 40; impressions 5682 → 6022; ctr_pct 0.7 → 0.7; avg_position 14.9 → 15; queries_with_impressions 421 → 437; brand_clicks 14 → 14; page_one_queries 149 → 154; ga4_sessions 624 → 616; ga4_users 522 → 516. Method note: today's GSC/GA4 figures are read from the web UI (previous days came from the API), so small differences in query counts and position are partly method.",
-  "by": "daily run"
+  "vi": "Lượt hiển thị Google tăng lên 6.022 (trước 5.682), số truy vấn có hiển thị lên 437 và truy vấn trang 1 lên 154, nhưng click giữ 40 và CTR 0,7%. GA4 có 616 phiên, tỷ lệ tương tác giảm còn 21,43%. Ahrefs ghi 30 lượt AI trích dẫn và 860 domain giới thiệu. Nên viết lại title/meta cho các truy vấn trang 1 để biến hiển thị thành click.",
+  "en": "Google impressions rose to 6,022 (from 5,682), queries with impressions to 437 and page-one queries to 154, but clicks held at 40 with a 0.7% CTR. GA4 recorded 616 sessions and engagement dipped to 21.43%. Ahrefs shows 30 AI citations and 860 referring domains. Rewrite titles and meta descriptions on page-one queries to turn impressions into clicks.",
+  "by": "Claude (Mac)",
+  "rating": "ok",
+  "verdict_vi": "Độ phủ tìm kiếm tăng đều nhưng chưa chuyển thành click hay tương tác.",
+  "verdict_en": "Search visibility is growing steadily but not yet converting into clicks or engagement.",
+  "actions_vi": [
+   "Viết lại title/meta cho 154 truy vấn trang 1 để nâng CTR 0,7%.",
+   "Kiểm tra trang đích của kênh Direct (367 phiên) vì tỷ lệ tương tác chỉ 21,43%.",
+   "Tận dụng 30 lượt AI trích dẫn: thêm FAQ và dữ liệu có cấu trúc cho các trang được trích."
+  ],
+  "actions_en": [
+   "Rewrite titles/meta for the 154 page-one queries to lift the 0.7% CTR.",
+   "Review landing pages for Direct traffic (367 sessions) given 21.43% engagement.",
+   "Build on the 30 AI citations: add FAQs and structured data to the cited pages."
+  ]
  },
  "notes": {
-  "vi": "clicks 40 → 40; impressions 5682 → 6022; ctr_pct 0.7 → 0.7; avg_position 14.9 → 15; queries_with_impressions 421 → 437; brand_clicks 14 → 14; page_one_queries 149 → 154; ga4_sessions 624 → 616; ga4_users 522 → 516. Method note: today's GSC/GA4 figures are read from the web UI (previous days came from the API), so small differences in query counts and position are partly method.",
-  "en": "clicks 40 → 40; impressions 5682 → 6022; ctr_pct 0.7 → 0.7; avg_position 14.9 → 15; queries_with_impressions 421 → 437; brand_clicks 14 → 14; page_one_queries 149 → 154; ga4_sessions 624 → 616; ga4_users 522 → 516. Method note: today's GSC/GA4 figures are read from the web UI (previous days came from the API), so small differences in query counts and position are partly method."
+  "vi": "Lượt hiển thị Google tăng lên 6.022 (trước 5.682), số truy vấn có hiển thị lên 437 và truy vấn trang 1 lên 154, nhưng click giữ 40 và CTR 0,7%. GA4 có 616 phiên, tỷ lệ tương tác giảm còn 21,43%. Ahrefs ghi 30 lượt AI trích dẫn và 860 domain giới thiệu. Nên viết lại title/meta cho các truy vấn trang 1 để biến hiển thị thành click.",
+  "en": "Google impressions rose to 6,022 (from 5,682), queries with impressions to 437 and page-one queries to 154, but clicks held at 40 with a 0.7% CTR. GA4 recorded 616 sessions and engagement dipped to 21.43%. Ahrefs shows 30 AI citations and 860 referring domains. Rewrite titles and meta descriptions on page-one queries to turn impressions into clicks."
  },
  "commentary_input": {
   "report": "SEO (GSC + GA4)",
@@ -1910,7 +1886,15 @@
       "home cinema cost",
       1
      ]
-    ]
+    ],
+    "ahrefs": {
+     "domain_rating": 0,
+     "referring_domains": 860,
+     "backlinks": 892,
+     "organic_keywords": 1,
+     "organic_traffic": 1,
+     "ai_citations": 30
+    }
    },
    "previous": {
     "clicks": 40,
